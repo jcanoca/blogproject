@@ -1,0 +1,1079 @@
+/* 
+   First - CSS RESET
+   see http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*--------------*/
+
+
+@font-face {
+    font-family: 'PFTempestaFive';
+    src: url('pf_tempesta_five-webfont_numerals.eot');
+    src: url('pf_tempesta_five-webfont_numerals.eot?#iefix') format('embedded-opentype'),
+         url('pf_tempesta_five-webfont_numerals.woff') format('woff'),
+         url('pf_tempesta_five-webfont_numerals.ttf') format('truetype'),
+         url('pf_tempesta_five-webfont_numerals.svg#PFTempestaFiveBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*---------------*/
+
+
+html, body{        	
+	height: 100%;
+}
+
+body {            	
+       margin: 0;
+       padding: 0;
+       text-align: center; 
+       background: #0096C8; 
+}
+#wrapper {
+	height: auto;
+	width: 100%;
+	background: #FAFAFA url(../../images/politilines/header_bg3.gif) repeat-x top left;	
+}
+
+#stage {
+	
+	height: 945px; /*978px;*//*1128px;*/  	     	
+    margin: 0 auto;
+    text-align: left;
+    width: 940px;       
+    position: relative;                                  
+}      
+  
+   
+#logo{
+	position: absolute;
+	top: 32px;
+    left: 8px;
+}
+
+#star{
+	position: absolute;
+	top: 25px;
+    left: 933px;
+}
+
+#describe{
+    position: absolute;
+    width:400px;
+    height: 45px;
+    top: 48px;
+    left: 530px;/*574px;*/  
+    
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+	
+	font-size: 1.2em;
+    text-align: right;
+    line-height: 1.3em;
+	color: #B3B3B3;	
+        
+    font-smoothing: always;
+    -webkit-font-smoothing: antialiased;
+}
+
+#describe span{
+    color: #515151;
+    font-size: 1.2em;
+}
+
+#describe span strong{
+    font-family: 'Cabin', sans-serif;
+    font-weight: 700;
+}
+
+#categories{
+    position: absolute;
+    top: 119px;
+   
+    margin-left: 164px;
+    
+}
+
+#categories span{
+	
+	font-family: 'Podkova', serif;
+	font-size: 1.55em;    	
+    
+    text-transform: uppercase;
+    color: #2A2A2A;
+    text-align: center;    
+    display: inline-block;    	
+    
+    font-smoothing: always;
+    -webkit-font-smoothing: antialiased;
+}
+
+#cat_one{
+	width: 203px;
+}
+
+#cat_two{
+	width: 374px;
+}
+
+#cat_three{
+	width: 197px;
+}
+
+
+/* MIDDLE OF APP */
+#waist{
+    position: absolute;
+    top: 145px;
+    left: 1px;
+    height: 796px; /*946px;*/   
+    background: #FAFAFA;
+}
+
+
+
+
+#viz{
+	width: 771px;
+    height: 100%;
+    margin-left: 167px;/*211px;*/
+    position: relative;
+    background: #FCFCFC url(../../images/politilines/stage_bg_narrow.png) repeat-y top left; /*url(../../images/politilines/stage_bg.jpg)*/
+    outline: solid 1px #E0E0E0;
+}
+#viz .shell{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	
+	opacity: 0;    
+ 	transition:opacity 0.3s ease-in-out;
+ 	-o-transition:opacity 0.3s ease-in-out;
+ 	-ms-transition:opacity 0.3s ease-in-out;
+	-moz-transition:opacity 0.3s ease-in-out;
+	-webkit-transition:opacity 0.3s ease-in-out; 	
+}
+
+#viz .opaque {
+ opacity: 1;     
+}
+
+#text_layer{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+
+
+/* SIDE MARGIN ITEMS */
+#debates{   
+    float: left;
+    width: 166px;/*210px;*/
+    height: 100%;
+    /*padding-top:17px;*/
+    background-color: #FFFFFF;
+    outline: solid 1px #E0E0E0;
+}
+/* div */
+#event_info{
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	font-size: 0.75em;
+	line-height: 1.2em;
+    color: #354F58;
+    
+    min-height: 97px;
+    
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-right: 6px;
+    
+    padding-left: 7px;
+    padding-top: 14px;
+    padding-bottom: 9px;
+    width: 142px;/*186px;*/
+    background-color: #FAFAFA;
+    border: solid 1px #EFEFEF;
+    border-radius: 4px;
+    
+    font-smoothing: always;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* span */
+#event_date{
+	font-size: 2.55em;
+}
+
+#event_info strong{
+    display: block;
+    margin-top: 2px;
+	margin-bottom: -14px;
+    font-weight: 700;
+    
+	text-transform: uppercase;	
+}
+
+/*adjust space before */
+#event_sponsors{
+    display: block;
+	color: #4E7582;
+	margin-top: 2px;
+}
+
+
+
+
+/* Dates of Debates */
+.submenu { }
+
+
+.submenu li{
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+    font-size: 0.9em;
+	color: #0395C5;
+    list-style-type: none;
+    line-height: 1.22em;
+	
+	padding-top: 4px;
+	padding-left: 16px;
+    
+    font-smoothing: always;
+    -webkit-font-smoothing: antialiased;
+    
+    background: url(../../images/politilines/transparent.gif) no-repeat 10px 6px;
+    
+    transition:all 0.15s ease-out;
+	-o-transition:all 0.15s ease-out;
+	-ms-transition:all 0.15s ease-out;
+	-moz-transition:all 0.15s ease-out;
+	-webkit-transition:all 0.15s ease-out;
+    
+}
+
+.submenu li.inactive, .submenu li.inactive:hover {
+	color: #CCC;
+}
+
+.submenu_list {
+	padding-bottom: 5px;
+}
+
+.submenu li:hover{
+	color: #03779E;
+	
+	transition:all 0.15s ease-out;
+	-o-transition:all 0.15s ease-out;
+	-ms-transition:all 0.15s ease-out;
+	-moz-transition:all 0.15s ease-out;
+	-webkit-transition:all 0.15s ease-out;
+}
+
+
+.submenu li.selected{
+	color: #4E7582;
+	background: url(../../images/politilines/selected_icon.gif) no-repeat 8px 9px;
+}
+
+div.divider{
+    
+    background-image: url(../../images/politilines/divider.gif);
+    width: 100%;
+    height: 3px;
+    margin-top: 4px;
+}
+
+
+/* div */
+#fut_event_infos div div div{
+	font-family: 'Cabin', sans-serif;
+	font-weight: 700;
+	font-size: 0.6em;
+	line-height: 1.4em;
+    color: #6A6A6A;
+    
+
+    padding-left: 14px;
+    
+    padding-bottom: 9px;
+    width: 184px;   
+    
+    font-smoothing: always;
+    -webkit-font-smoothing: antialiased;
+}
+
+.submenu_title{
+    font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	font-size: 0.9em;    
+    padding-top: 10px;
+    padding-left: 16px;
+    padding-bottom: 5px;
+    color: #0395C5;
+    cursor: pointer;   
+ 
+}
+
+.collapseable .submenu_title {
+	background: url(../../images/politilines/plus_icon.gif) no-repeat 7px 14px;
+}
+
+.collapseable .submenu_shell{
+	height: 0px;
+	overflow:hidden;
+	
+	transition:all 0.35s ease-in-out;
+	-o-transition:all 0.35s ease-in-out;
+	-ms-transition:all 0.35s ease-in-out;
+	-moz-transition:all 0.35s ease-in-out;
+	-webkit-transition:all 0.35s ease-in-out;	
+}
+
+.collapseable .submenu_title.toggled{
+    color: #4E7582;    
+    background: url(../../images/politilines/minus_icon.gif) no-repeat 7px 16px;
+}
+
+/* span */
+#fut_event_infos div span.fut_date{
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-bottom: 1px;
+	font-size: 1.6em;
+    display: block;
+}
+
+#fut_event_info strong{
+    display: block;
+    margin-top: 10px;
+	margin-bottom: -14px;
+    
+	text-transform: uppercase;	
+}
+
+/*adjust space before */
+#fut_event_infos div span.fut_sponsors{
+    display: block;
+	color: #9A9A9A;
+}
+
+#sidehead, #sideheadSub{
+    
+    font-family: 'Podkova', serif;
+	font-size: 1.1em;    	
+    
+    text-transform: uppercase;
+    color: #2A2A2A;
+    padding-top: 17px;
+    
+    text-align: left;
+    padding-left: 16px;     	
+        
+    font-smoothing: always;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+#sideheadSub {
+	padding-left: 16px;
+	text-align: left;	
+	padding-top: 7px;
+	position: relative;
+	top: 5px;
+}
+
+/* MAIN VIZ ITEMS */
+
+.node{
+
+	position: absolute;
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	font-size: 0.8em;
+	color: #4A4A4A;
+	padding-left: 15px;	
+	padding-right: 15px;
+	padding-top: 4px;
+	padding-bottom: 9px;	
+	width: auto;
+	
+	background-color: rgba(0,0,0,0);
+	
+	
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	
+	font-smoothing: always;
+    
+
+	-webkit-font-smoothing: antialiased;	
+	
+
+	white-space: nowrap;
+
+}
+.word_node{
+
+	position: absolute;
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	
+	color: #4A4A4A;
+	padding-left: 15px;	
+	padding-right: 15px;
+	padding-top: 1px;
+	padding-bottom: 4px;	
+	width: auto;
+	
+	
+	
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	
+	font-smoothing: always;
+    -webkit-font-smoothing: antialiased;	
+}
+
+.word_node .text {
+	font-size: 0.8em;
+	display:inline-block;
+}
+
+.word_node .count {
+	font-family: PFTempestaFive;	
+	font-size: 8px;
+	display: inline-block;
+	position: relative;
+	top: -6px;
+	margin-left: 2px;
+	color: #D0D0D0;
+	padding-left: 1px;
+	padding-right: 1px;
+	text-align: center;
+	
+	/*
+	font-smoothing: none;
+	-o-font-smoothing: none;
+	-ms-font-smoothing: none;
+	-moz-font-smoothing: none;
+	-webkit-font-smoothing: none;*/
+	
+}
+
+
+.word_select.word_node .count,
+.word_connect.word_node .count {
+	color: #FFFFFF;
+	transition:color 0.2s ease-out;
+	-o-transition:color 0.2s ease-out;
+	-ms-transition:color 0.2s ease-out;
+	-moz-transition:color 0.2s ease-out;
+	-webkit-transition:color 0.2s ease-out;	
+	background: url(../../images/politilines/fraction.png) 0 7px repeat-x;
+	top: 2px;
+	
+}
+
+
+.node_disconnect.word_node .count {
+	color: #D0D0D0;
+	transition:all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	-ms-transition:all 0.2s ease-out;
+	-moz-transition:all 0.2s ease-out;
+	-webkit-transition: all 0.2s ease-out;
+}
+
+
+.node_disconnect{
+		
+	transition:all 0.2s ease-out;
+	/** no -o-transition: it miscalculates previous sizes **/
+	-ms-transition:all 0.2s ease-out;
+	-moz-transition:all 0.2s ease-out;
+	-webkit-transition:all 0.2s ease-out;
+	white-space: nowrap;
+	
+}
+
+
+.issue_connect_instant{
+	font-size	: 1.2em;
+	padding-top : 3px;
+}
+
+.issue_connect_wrap_instant{
+	font-size	: 1.2em;
+	padding-top : 3px;
+}
+
+.issue_connect{
+	font-size	: 1.2em;
+	padding-top : 3px;
+	
+	transition:all 0.2s ease-out;
+	/** no -o-transition: it miscalculates previous sizes **/
+	-ms-transition:all 0.2s ease-out;
+	-moz-transition:all 0.2s ease-out;
+	-webkit-transition:all 0.2s ease-out;
+}
+
+.issue_connect_wrap{
+	font-size	: 1.0em;
+	padding-top : 3px;
+	
+	transition:all 0.2s ease-out;
+	/** no -o-transition: it miscalculates previous sizes **/
+	-ms-transition:all 0.2s ease-out;
+	-moz-transition:all 0.2s ease-out;
+	-webkit-transition:all 0.2s ease-out;
+}
+
+.issue_connect_wrap2{
+	font-size	: 0.95em;
+	padding-top : 2px;
+	
+	transition:all 0.2s ease-out;
+	/** no -o-transition: it miscalculates previous sizes **/
+	-ms-transition:all 0.2s ease-out;
+	-moz-transition:all 0.2s ease-out;
+	-webkit-transition:all 0.2s ease-out;
+}
+
+
+.word_connect{
+	color: #FFFFFF;
+	
+	transition:all 0.2s ease-out;
+	/** no -o-transition: it miscalculates previous sizes **/
+	-ms-transition:all 0.2s ease-out;
+	-moz-transition:all 0.2s ease-out;
+	-webkit-transition:all 0.2s ease-out;
+}
+
+
+
+
+.candidate_connect{
+	font-size	: 1.25em;
+	padding-top : 1px;
+	
+	transition:all 0.2s ease-out;
+	/** no -o-transition: it miscalculates previous sizes **/
+	-ms-transition:all 0.2s ease-out;
+	-moz-transition:all 0.2s ease-out;
+	-webkit-transition:all 0.2s ease-out;
+}
+
+
+
+.node_select{
+	color: #FFFFFF;
+	font-size : 1.25em;
+	margin-top: -1px;
+	
+	transition:all 0.25s ease-out;
+	/** no -o-transition: it miscalculates previous sizes **/
+	-ms-transition:all 0.25s ease-out;
+	-moz-transition:all 0.25s ease-out;
+	-webkit-transition: all 0.25s ease-out;
+	white-space: nowrap;
+}
+.node_select_instant{
+	color: #FFFFFF;
+	font-size : 1.25em;	
+	margin-top: -2px;
+}
+
+.node_select_wrap{
+	color: #FFFFFF;
+	font-size : 1.0em;
+	margin-top: -2px;
+	
+	transition:all 0.25s ease-out;
+	/** no -o-transition: it miscalculates previous sizes **/
+	-ms-transition:all 0.25s ease-out;
+	-moz-transition:all 0.25s ease-out;
+	-webkit-transition: all 0.25s ease-out;
+	white-space:nowrap;
+}
+.node_select_wrap_instant{
+	color: #FFFFFF;
+	font-size : 1.0em;	
+	margin-top: -3px;
+	white-space:nowrap;
+}
+
+
+
+.node_select_wrap2{
+	color: #FFFFFF;
+	font-size : 0.95em;
+	margin-top: 0px;
+	
+	transition:all 0.25s ease-out;
+	/** no -o-transition: it miscalculates previous sizes **/
+	-ms-transition:all 0.25s ease-out;
+	-moz-transition:all 0.25s ease-out;
+	-webkit-transition: all 0.25s ease-out;
+	white-space:nowrap;
+}
+.node_select_wrap2_instant{
+	color: #FFFFFF;
+	font-size : 0.95em;	
+	margin-top: -1px;
+	white-space:nowrap;
+}
+
+
+
+.word_select{
+	color: #FFFFFF;
+	
+	
+	transition:all 0.25s ease-out;
+	/** no -o-transition: it miscalculates previous sizes **/
+	-ms-transition:all 0.25s ease-out;
+	-moz-transition:all 0.25s ease-out;
+	-webkit-transition:all 0.25s ease-out;
+}
+
+/** FOOTER **/
+
+#footer{
+	position: absolute;
+    top: 945px; /*1085px;*/
+    width: 100%;
+    height: auto; 
+	background-color: #0096C8;
+}
+
+#footer_block{
+	min-height: 100px;  
+	max-height: 1000px;     	
+    margin: 0 auto;
+    text-align: left;
+    width: 934px;/*978px;*/             
+    position: relative;  
+}
+
+#footer_credit{
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	font-size: 0.8em;
+	color: #FFFFFF;
+	
+	
+	position: absolute;
+	top: 24px;
+	left: 15px;
+	
+	font-smoothing: always;
+    -webkit-font-smoothing: antialiased;	
+}
+
+#footer_credit a{
+	color: #FFFFFF;	
+	text-decoration: none;
+}
+
+
+
+#footer_tag{
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	font-size: 0.8em;
+	color: #0395C5;
+	background-color: #E6f5FA;
+	
+	
+	position: absolute;
+	top: 20px;
+	left: 662px;/*706px;*/
+	width:196px;
+	height:19px;
+	padding-left:7px;
+	padding-top: 4px;
+	padding-bottom: 1px;
+	overflow: hidden; 
+	
+	font-smoothing: always;
+    -webkit-font-smoothing: antialiased;
+	
+}
+
+#footer_tag a{
+	color: #0395C5;	
+	text-decoration: none;
+	
+	transition:all 0.15s ease-out;
+	-o-transition:all 0.15s ease-out;
+	-ms-transition:all 0.15s ease-out;
+	-moz-transition:all 0.15s ease-out;
+	-webkit-transition:all 0.15s ease-out;
+}
+
+#periLogo {
+	text-indent: -9999px;
+	display: inline-block;
+	width: 150px;
+	height: 24px;
+	background: url(../../images/politilines/peri-logo.png) 3px no-repeat;
+
+	position: relative;
+	top: -5px;
+}
+
+#footer_tag a:hover{
+	color: #03779E;
+	
+	transition:all 0.15s ease-out;
+	-o-transition:all 0.15s ease-out;
+	-ms-transition:all 0.15s ease-out;
+	-moz-transition:all 0.15s ease-out;
+	-webkit-transition:all 0.15s ease-out;
+}
+
+#footer_separator{
+	position: absolute;
+	top: 14px;
+	left: 875px;/*919px;*/
+	width:196px;	
+	
+	background: url(../../images/politilines/separator.gif) no-repeat top left;
+	width:1px;
+	height:35px;	
+}
+
+
+#footer_facebook{
+	position: absolute;
+	top: 19px;
+	left: 880px;/*924px;*/
+	width:196px;	
+	
+	width:19px;
+	height:24px;	
+}
+
+#footer_twitter{
+	position: absolute;
+	top: 19px;
+	left: 899px;/*943px;*/
+	width:196px;	
+	
+	
+	width:19px;
+	height:24px;	
+}
+
+#embedThis {
+	position: absolute;
+	font-size: 11px;
+	color: #FFF;
+	font-family: 'Cabin', sans-serif;
+	top: 74px;
+	left: 14px;
+}
+
+#embedThis code {
+	font-family: monospace;
+	background-color: #50BBDF;
+	color: #354F58;
+	font-size: 10px;
+	
+}
+
+#sources_tooltip_content{
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	font-size: 0.8em;
+	color: #000;
+	text-align: left;
+	line-height: 1.3em;
+	
+	padding-top: 11px;
+	padding-left: 11px;
+	padding-right: 11px;
+	font-smoothing: always;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+#sources_tooltip_content a{
+	color: #0395C5;	
+	text-decoration: none;
+}
+
+#sources_tooltip_content a:hover{
+	color: #03779E;
+	
+	transition:all 0.15s ease-out;
+	-o-transition:all 0.15s ease-out;
+	-ms-transition:all 0.15s ease-out;
+	-moz-transition:all 0.15s ease-out;
+	-webkit-transition:all 0.15s ease-out;
+}
+
+.tip_hidden,
+.source_hidden{	
+	visibility:hidden; 
+	opacity: 0;
+	
+	transition:all 0.15s ease-out;
+	-o-transition:all 0.15s ease-out;
+	-ms-transition:all 0.15s ease-out;
+	-moz-transition:all 0.15s ease-out;
+	-webkit-transition:all 0.15s ease-out;
+}
+
+.tip_hidden.tip_shown,
+.source_hidden.source_shown{	
+	visibility:visible;	
+	opacity: 1;
+	
+}
+
+.word_tip {
+	font-family: 'Cabin', sans-serif;
+    font-weight: 400;  
+	font-size: 13px;
+}
+
+.word_tip .col {
+	float: left;
+	white-space: nowrap;
+}
+
+.word_tip .grid {
+	background: #F7F7F7;
+	border: 1px solid #E9E9E9;
+	border-radius: 4px;	
+	padding: 2px;
+	margin: 5px;
+	font-size: 11px;
+}
+
+.word_tip .grid .col:first-line {	
+}
+
+.word_tip .grid .col:first-child {
+	text-align: right;	
+	margin-right: 6px;
+	margin-left: 2px;
+	
+}
+
+.word_tip .grid .col :first-child {
+	color: #B6B6B6;
+	padding-top: 2px;
+}
+
+
+.word_tip .grid .col:first-child .labels {
+	text-align: right;	
+	position: relative;
+	top: 2px;
+	padding-top: 8px;
+	padding-bottom: 4px;
+}
+
+.word_tip .grid .col:not(:first-child) .labels {
+	padding-bottom: 3px;
+	display: inline-block;
+}
+.word_tip .grid .col:not(:first-child) {
+	text-align: center;	
+}
+
+.word_tip .grid .col .gridItem {
+	font-size: 18px;
+}
+
+.word_tip .grid .col:not(.lastCol) .gridItem {
+	border-right: 1px solid #E5E5E5;	
+}
+
+.word_tip .grid .col .gridItem:not(:last-child) {
+	border-bottom: 1px solid #E5E5E5;	
+}
+/*
+.word_tip .grid .col .gridItem:last-child {
+	color: #666;	
+}*/
+
+.word_tip .grid .col:not(:first-child) * {
+	padding-right: 6px;
+	padding-left: 6px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.word_tip .grid .col *:last-child {
+	color: #888;
+}
+
+.word_tip .link {
+	margin: 0 auto 0 auto;
+	padding-right: 7px;
+	color: #0395C5;
+	background: url(../../images/politilines/linkTri.gif) right 4px no-repeat;
+		
+	font-size: 11px;
+	position: relative;
+	top: 1px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.word_overlay {
+	width: 400px;
+	background: #FFF;
+	border-radius: 6px;
+	position: absolute;
+	top: 300px;
+	left: 375px;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.6);
+	-moz-box-shadow: 0 1px 4px rgba(0,0,0,0.6);
+	-ms-box-shadow: 0 1px 4px rgba(0,0,0,0.6);
+	-o-box-shadow: 0 1px 4px rgba(0,0,0,0.6);
+	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.6);
+	font-family: Cabin, sans-serif;
+}
+
+.word_overlay .shell {
+	background: #F7F7F7;
+	border: 1px solid #E9E9E9;
+	border-radius: 4px;	
+	padding: 8px 8px 0 8px;
+	margin: 23px 10px 10px 10px;
+}
+
+.word_overlay .scrollpane {
+	overflow: auto;	
+	max-height: 334px;
+}
+
+.word_overlay .head {
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+	color: #404040;
+}
+
+.word_overlay .head em {
+    font-style: normal;
+			
+    font-weight: bold;
+}
+
+.word_overlay .sentenceHeader {
+	text-transform: uppercase;	
+	font-size: 11px;
+	font-weight: bold;
+	color: #333;
+	-webkit-font-smoothing: antialiased;
+	margin-bottom: 3px;
+}
+
+.word_overlay .sentence {
+	margin-bottom: 5px;	
+	font-size: 12px;
+	line-height: 17px;
+	color: #444;
+	-webkit-font-smoothing: antialiased;
+}
+
+.word_overlay .sentence em {
+	background: #ECD798;	
+	font-weight: bold;
+}
+
+.word_overlay .close_btn {
+	background: white url(../../images/politilines/close.gif)  2px 2px no-repeat;
+	width: 19px;
+	height: 19px;
+	cursor: pointer;
+	left: 378px;
+	top: 3px;
+	position: absolute;
+}
+
+.word_overlay hr {
+    border: 0; 	    
+    border-top: 1px solid #DDD;
+}
+
+.helpBtn {
+	background: url(../../images/politilines/help.gif) 2px 2px no-repeat;
+	width: 19px;
+	height: 19px;
+	position: absolute;	
+}
+
+.plot_tip {
+	font-family: Cabin, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-size: 12px;
+	padding: 4px;
+	
+	line-height: 15px;
+	padding-left: 8px;
+	text-align: left;
+	
+	color: #4A4A4A;
+}

@@ -1,0 +1,97 @@
+.jspHorizontalBar,
+.jspVerticalBar,
+.jspTrack
+{
+	background: #eeeef4;
+}
+
+.jspVerticalBar {
+	padding-left:0px;
+	padding-right: 10px;
+	width: 4px;
+	right: -10px;
+}
+/*
+.jspDrag
+{
+	background:  #bbd;
+
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}*/
+
+.jspTrack .jspActive,
+.jspTrack .jspHover,
+.jspDrag:hover
+{
+	background: #8B8B9F;
+}
+
+.jspVerticalBar>.jspActive
+{
+	background-image: none;
+}
+
+.jspVerticalBar>.jspDisabled,
+.jspVerticalBar>.jspDisabled:hover,
+.jspHorizontalBar>.jspDisabled,
+.jspHorizontalBar>.jspDisabled:hover
+{
+	background-color: transparent;
+	background-image: url('../image/ui-icons_888888_256x240.png');
+}
+
+
+.jspHorizontalBar,
+.jspVerticalBar
+{
+	background: #F4F4F4;
+}
+
+
+.jspTrack {
+	background: #DDDDDD;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.jspDrag
+{
+	background: #5393C3;
+
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.jspTrack .jspActive,
+.jspTrack .jspHover,
+.jspDrag:hover
+{
+	background: #757776;
+}
+
+
+.jspVerticalBar>.jspActive,
+.jspArrow:hover
+{
+	background-image: none;
+}
+
+.jspVerticalBar>.jspDisabled,
+.jspVerticalBar>.jspDisabled:hover,
+.jspHorizontalBar>.jspDisabled,
+.jspHorizontalBar>.jspDisabled:hover
+{
+	background-color: transparent;
+}
+
+.jspCap {
+	display: block;
+}
+
+.jspVerticalBar .jspCapBottom {
+	height: 5px;
+}
