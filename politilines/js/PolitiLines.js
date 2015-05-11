@@ -6856,7 +6856,7 @@ politi.model.DebateData = function(data,dl) {
 	this.sponsors = data.sponsors;
 	this.venue = data.venue;
 	this.loadable = data.url && data.url.length > 0;
-	if(this.loadable) this._url = "../data/" + data.url + "?" + Math.floor(Math.random() * Math.pow(10,10));
+	if(this.loadable) this._url = "../politilines/data/" + data.url + "?" + Math.floor(Math.random() * Math.pow(10,10));
 	this._loaded = false;
 }
 politi.model.DebateData.__name__ = ["politi","model","DebateData"];
@@ -8488,7 +8488,7 @@ politi.model.DebateCategories.prototype.categories = null;
 politi.model.DebateCategories.prototype.load = function() {
 	if(!this._inited) {
 		this._inited = true;
-		var http = new haxe.Http("../data/debates.json" + "?" + Math.floor(Math.random() * Math.pow(10,10)));
+		var http = new haxe.Http("../politilines/data/debates.json" + "?" + Math.floor(Math.random() * Math.pow(10,10)));
 		http.onData = $closure(this,"handleData");
 		// http.request(true);
 		http.request(false);
@@ -9458,7 +9458,7 @@ politi.model.Filter.CANDIDATE = 2;
 politi.view.WordNode.CENTER = 382;
 politi.view.WordNode.HEIGHT = 26;
 politi.view.WordNode.tip = null;
-politi.model.DebateData.DIRECTORY = "../data/";
+politi.model.DebateData.DIRECTORY = "../politilines/data/";
 politi.model.DebateData.MAX_WORDS = 25;
 politi.view.Thread._pool = [];
 periscopic.utils.GlobalTimer.timers = new Array();
@@ -9468,7 +9468,7 @@ politi.model.Lexicon.DEBATE_DETAIL = "<span id=\"event_date\">$DATE;</span><br/>
 politi.view.IssueNode.OFFSET = 198;
 politi.view.IssueNode.HEIGHT = 26;
 politi.view.IssueNode.MAX_SELECTED_WIDTH = 195;
-politi.model.DebateCategories.PATH = "../data/debates.json";
+politi.model.DebateCategories.PATH = "../politilines/data/debates.json";
 politi.model.DebateCategories.READY = "debateCategoriesReady";
 politi.model.DebateCategories.SELECTION_CHANGE = "debateCategoriesSelectionChange";
 politi.view.Bead._pool = [];
