@@ -554,6 +554,8 @@ function clear() {
 // Rather than flood the browser history, use location.replace.
 function click(d) {
   location.replace("#" + encodeURIComponent(d === activeTopic ? "!" : d.name));
+  // PFS: 12/05/2015
+  parent.resizeIframeByHeight(parent.document.getElementsByName('iframe_a')[0],document.getElementById('interactiveABC').scrollHeight);
   d3.event.preventDefault();
 }
 

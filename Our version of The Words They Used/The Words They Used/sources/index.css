@@ -99,17 +99,20 @@
 }
 
 .g-republican.g-swatch {
-  background-color: #f9caca;
+  /* background-color: #f9caca; */
+  background-color: #c5d7ea;
   border-radius: 0 4px 4px 0;
 }
 
 .g-democrat.g-swatch {
-  background-color: #c5d7ea;
+  /* background-color: #c5d7ea; */
+  background-color: #f9caca;
   border-radius: 4px 0 0 4px;
 }
 
 .g-republican.g-swatch {
-  background-color: #f9caca;
+  /* background-color: #f9caca; */
+  background-color: #c5d7ea;
 }
 
 .g-notes {
@@ -152,30 +155,50 @@
 }
 
 .g-node .g-democrat {
-  fill: #c5d7ea;
+  /* fill: #c5d7ea; */
+  fill: #f9caca;
 }
 
 .g-node.g-hover .g-democrat {
-  fill: #acbed1; /* darker(.5) */
+  /* darker(.5) */
+  /* fill: #acbed1; */
+  fill: #dfb1b1;
 }
 
 .g-node.g-selected .g-democrat {
-  fill: #99c0e5; /* c *= 2, darker(.5) */
-  stroke: #6081a3; /* c *= 2, darker(2) */
+  /* c *= 2, darker(.5) */
+  /* fill: #99c0e5; */
+  /* c *= 2, darker(2) */
+  /* stroke: #6081a3; */
+  /* ------------------ */
+  /* c *= 2, darker(.5) */
+  fill: #fda4a7;
+  /* c *= 2, darker(2) */
+  stroke: #af5e61;
   stroke-width: 1.5px;
 }
 
 .g-node .g-republican {
-  fill: #f9caca;
+  /* fill: #f9caca; */
+  fill: #c5d7ea;
 }
 
 .g-node.g-hover .g-republican {
-  fill: #dfb1b1; /* darker(.5) */
+  /* darker(.5) */
+  /* fill: #dfb1b1; */
+  fill: #acbed1; 
 }
 
 .g-node.g-selected .g-republican {
-  fill: #fda4a7; /* c *= 2, darker(.5) */
-  stroke: #af5e61; /* c *= 2, darker(2) */
+  /* c *= 2, darker(.5) */
+  /* fill: #fda4a7; */
+  /* c *= 2, darker(2) */
+  /* stroke: #af5e61; */
+  /* ------------------ */
+  /* c *= 2, darker(.5) */
+  fill: #99c0e5;
+  /* c *= 2, darker(2) */
+  stroke: #6081a3;
   stroke-width: 1.5px;
 }
 
@@ -293,13 +316,21 @@ a.g-label {
 }
 
 .g-democrat a {
+  /*
   background-color: #c5d7ea;
   color: #4a5783;
+  */
+  background-color: #fbdedf;
+  color: #734143;
 }
 
 .g-republican a {
+  /*
   background-color: #fbdedf;
   color: #734143;
+  */
+  background-color: #c5d7ea;
+  color: #4a5783;
 }
 
 .g-mention p:before,
