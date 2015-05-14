@@ -1,0 +1,187 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>¿De qué hablan los políticoss?</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="bootstrap/css/blog.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+ 
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+   <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand">¿De qué hablan los políticos?</a>
+            </div>
+			<div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+				<li><a href="./index_esp.html">Página Principal</a></li>
+                <li><a href="./radar_esp.html">El Radar</a></li>
+                <li><a href="./goodChart.html">Diferencias</a></li>
+				<li><a href="politilines/politilines.html">Líneas Políticas</a></li>
+				<li><a href="Our version of The Words They Used/index_The Words They Used.html">¿Qué dicen?</a></li>
+				<li class="active"><a href="./blog.html">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+  
+  
+  <body>
+
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">¿De qué hablan los políticos?</h1>
+        <p class="lead blog-description">El proceso:¿Cómo lo hemos hecho?</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">¿Cómo funciona el Barómetro del CIS?</h2>
+			<p> <br>  Cada mes 2.500 españoles mayores de edad son seleccionados de forma aleatória proporcional teniendo en cuenta otras variables como sexo, edad, población o hábitat. Los seleccionados son entrevistados por los agentes del CIS personalmente en su casa. Es a partir de estas encuestas de donde se obtienen la información para los barómetros (<a href="http://www.cis.es/cis/export/sites/default/-Archivos/NotasdeInvestigacion/NI004_MetodologiaBarometros_Informe.pdf">más información sobre el método</a>).
+				<br><br>  Estos estudios contienen un bloque de preguntas fijas y otro variable que está orientado a un tema de interés político o social según la ocasión. Dentro de este grupo de preguntas fijas nos centramos en las siguientes preguntas:
+			 <blockquote><ul>
+              <p><li>-¿Cuál es, a su juicio, el principal problema que existe actualmente en España?¿Y el segundo?¿Y el tercero?(RESPUESTA ESPONTÁNEA) - Desde mar'06</li>
+			    <li>-¿Cuáles son, a su juicio, los tres problemas principales que existen actualmente en España?(MÁXIMO TRES RESPUESTAS) - Desde sep'00 a feb'06</li></p>
+            </ul></blockquote>
+			<p> Estas nos dan información sobre los 3 principales problemas que percibe la población española y son las que utilizaremos para saber que preocupa a la población española.
+			<br><br> Podemos consultar los resultados de los barómetros a lo largo del tiempo en el <a href="http://www.cis.es/cis/opencm/ES/11_barometros/depositados.jsp">banco de datos</a>.</p>
+		</div><!-- /.blog-post -->
+
+		<div class="blog-post">
+            <h2 class="blog-post-title">¿Cómo funcionan las Sesiones de Control al Gobierno en el Congreso de los Diputados?</h2>
+			<p><br>   Dentro de los diferentes tipos de sesiones que se realizan en el Congreso elegimos las sesiones de control al gobierno, que se celebran actualmente los miércoles. Aunque estas no están definidas en la constitución  ni por los reglamentos parlamentarios, se han consolidado con la práctica debido a que es en estas donde los diferentes partidos políticos explican sus inquietudes respecto a nuevas legislaciones o problemas a solucionar y el presidente del gobierno, junto con sus diferentes ministros, debe dar respuesta a ellas.
+			<br><br> Estos diarios los encontramos en la web del congreso, 100% accesibles desde un <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Publicaciones"> buscador</a>. 
+			<br><br> El procedimiento a seguir en este tipo de sesiones es bastante sencillo. Los diferentes grupos políticos deben entregar las preguntas que desean hacer el viernes de la semana anterior al presidente del Congreso para su aprovación. En caso de que surgiera algun tema de mayor actualidad o importancia posterior a la entrega de la pregunta esta se podría cambiar hasta la media noche del domingo. El funcionamiento de estas sesiones es un pregunta respuesta con derecho a réplica. </p>
+		</div>
+		
+		<div class="blog-post">
+            <h2 class="blog-post-title">El Scrapping</h2>
+			<p><br>  El Scrapping es el proceso por el cual extraemos los datos de una página web para poderlos procesar. En este caso hemos procesado los barómetros del CIS utilizando su banco de datos y el Congreso a través de su buscador.
+				<br><br> Para esta parte del proceso hemos utilizado Python, en particular dos paquetes: Selenium y BeautifulSoup.</p>
+			<h3> <br>CIS </h3>
+			<p> Mediante Selenium hemos ido descargando las diferentes páginas y con la ayuda de BeautifulSoup hemos buscado la pregunta que nos interesaba y nos hemos creado una base de datos con los resultados. 
+				<br><br> Esta base de datos tiene formato de diccinario python y la guardamos utilizando MongoDB. En esta guardamos la fecha de entrada en banco de datos del barómetro, el título del barómetro (mes y año), la url, el tipo de documento del que se ha hecho el scrapping (html o pdf) y las respuestas a las preguntas anteriormente vistas. Un ejemplo:</p>
+				<img src="images/cis_dic.png" alt="Diccionario CIS" width="500" height="400">
+			<p><br>Como respuesta a cada pregunta obtenemos 30 tópicos diferentes, por lo que a lo largo de todo el periodo en el que hemos generado datos (desde sept.'00 hasta feb. '15) hemos encontrado alrededor de 150 tópicos diferentes. Debido a la imposibilidad de visualizar tal cantidad de tópicos y que muchos de ellos eran similares decidimos agruparlos en 14 clusters: Educación, Salud, Corrupción, Medio Ambiente, Servicios Públicos, Ideología, Economía, Empleo, Juventud, Justícia, Social, Terrorismo, Vivienda, Seguridad Ciudadana y Otros. 
+			<br><br> A partir de estos nuevos clusters agruparemos los datos y obtendremos la información necesaria para los gráficos.</p>
+			<h3><br> Congreso de los Diputados </h3>
+			<p>Nuevamente utilizamos Selenium para descargar todos los diarios de sesiones de control. Estos diarios contienen toda la información de las intervenciones llevadas a cabo en el Congreso a lo largo de una sesión. Por lo que nos encontramos con un primer reto que es dividir el diario en intervenciones. Para ello, hemos utilizado Selenium y obtenemos:</p>
+			<img src="images/congres1.png" alt="Documento Congreso" width="700" height="1000">
+			<p><br>Vemos que podemos dividir los diarios de sesiones en intervenciones que contienen pregunta, respuesta y diputado. Las pintaremos de un color u otro dependiendo del grupo político al que esten asociados. 
+			<br><br> Para saber la composición de la cámara utilizamos otro apartado de la web del congreso: <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=10"> Diputados </a></p>
+			<img src="images/congres2.png" alt="Lista Diputados" width="1000" height="1000">
+			<p> <br>De aquí nos hemos descargado las listas de diputados de las diferentes legislaturas con el objetivo de poder filtrar las intervenciones por grupo político.
+			<br> <br>Finalmente hemos obtenido una base de datos que consta de un diccionario python por sesion de control dividido en intervenciones y estas contienen la pregunta relacionada, la intervención, el diputado y grupo político al que pertenecen. Esta base de datos ha sido almacenada en MongoDB para su posterior tratamiento. </p>
+		</div>	 
+			
+		<div class="blog-post">
+            <h2 class="blog-post-title">¿Cómo se obtienen las palabras clave de cada intervención?</h2>
+
+            <p><br> En la base de datos del Congreso encontramos 311 documentos y 7000 intervenciones, etiquetar esto dentro de los clusters del CIS es un trabajo titánico así que trazamos un plan: extraeriamos las palabras clave de cada intervención y creariamos un diccionario "clasificador" que se iría nutriendo de las palabras clave que fuéramos encontrando con el objetivo de clusterizar el máximo de documentos.
+			<br><br> Definimos como palabra clave o key word cualquier n-grama de palabras (secuencia de una o mas palabras) dentro del documento. Nos dimos cuenta que, en general, estos n-gramas estan compuestos por nombres y adjetivos, así que  nos centramos en estos dentro de nuestros documentos. 
+			<br><br> Para encontrar estas palabras clave utilizamos RAKE (Rapid Automatic Keyword Extraction), un sencillo paquete de Python que utiliza solo un parámetro: una stop-list (o palabras a descartar), en nuestro caso consiste en cualquier palabra que no sea un nombre o un adjetivo. A partir de esto, RAKE generará un grafo de concurrencia de posibles palabras clave. Además, obtenemos una puntuación para cada una de ellas que consiste: grado(pc)/frec(pc).
+			<br><br> Una vez finalizado este proceso utilizamos un algoritmo K-means para construir una matriz de frecuencia de los terminos utilizando las palabras clave como vocabulario (bag of the words) y usamos la librería scikit-learn para transformar esta matriz en una matriz de dispersión. A continuación aplicamos un algorito K-means utilizando "k-means++" para crear los clusters. 
+			<br><br> A continuación, después de varias iteraciones del K-means conseguimos distinguir una série de clusters que son claramente afines a los clusters del CIS, a partir de aquí cremaos un clasificador simple, y lo entrenamos para clasificar el resto de documentos. 
+			<br><br> A partir de toda esta información y una vez etiquetados los documentos utilizamos el número de líneas de cada intervención como medida de tiempo y obtenemos una série de tablas y diccionarios que se utilizan mas adelante para la realización de los gráficos.</p>
+			
+		 </div><!-- /.blog-post -->	
+		  
+		<div class="blog-post">
+            <h2 class="blog-post-title">Los Gráficos</h2>
+
+            <p><br> Empezamos queriendo imitar a USA, nos encantaba este <a href="http://www.nytimes.com/interactive/2012/09/06/us/politics/convention-word-counts.html">gráfico</a> del NY Times, así que no podía faltar en nuestra presentación final, pero también eramos conscientes de que no cumpliriamos uno de nuestros objetivos principales: explotar la información del CIS.
+			<br><br> Con este objetivo en mente surgieron los gráficos del radar y las diferencias, fantásticos ambos para ver como han ido cambiando nuestras preocupaciones a lo largo del tiempo. Para ello utilizamos el programa D3 y pasamos de gráficos estáticos a dinámicos creando transiciones para ayudar a la visualización. 
+			<br><br> Cuando estabamos a punto de finalizar este proyecto, nos encontramos con el increíble gráfico <a href="http://politilines.periscopic.com/">PolitiLines</a>, teniamos toda la información: los clusters, las keywords, los partidos políticos que habian hablado sobre cada tema así que decidimos crear una versión española de este. </p>
+          </div><!-- /.blog-post -->	  
+			
+			
+			
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About us</h4>
+            <p> Four mathematicians and one of them physic too doing a Big Data & Data Science course. What can go wrong?</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Archives</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">March 2014</a></li>
+              <li><a href="#">February 2014</a></li>
+              <li><a href="#">January 2014</a></li>
+              <li><a href="#">December 2013</a></li>
+              <li><a href="#">November 2013</a></li>
+              <li><a href="#">October 2013</a></li>
+              <li><a href="#">September 2013</a></li>
+              <li><a href="#">August 2013</a></li>
+              <li><a href="#">July 2013</a></li>
+              <li><a href="#">June 2013</a></li>
+              <li><a href="#">May 2013</a></li>
+              <li><a href="#">April 2013</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  
+
+</body></html>

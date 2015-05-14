@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Diferencias</title>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<body>
+ <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand">¿De qué hablan los políticos?</a>
+            </div>
+			<div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+				<li><a href="./index_esp.html">Página Principal</a></li>
+                <li><a href="./radar_esp.html">El Radar</a></li>
+                <li class="active"><a>Diferencias</a></li>
+				<li><a href="politilines/politilines.html">Líneas Políticas</a></li>
+				<li><a href="Our version of The Words They Used/index_The Words They Used.html">¿Qué dicen?</a></li>
+				<li><a href="./blog_esp.html">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+	<div class="jumbotron">
+	  <div class="container">
+		<h1>Diferencias</h1>
+		<p><br>A continuación vemos como evolucionan algunas de las principales preocupaciones de los españoles a lo largo del tiempo y su repercusión en el congreso por trimestres.</p>
+	  </div>
+	</div>
+
+</body>
+<style>
+
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.area.above {
+  fill: #1f77b4;
+}
+
+.area.below {
+  fill: #ff7f0e;
+}
+
+.line1 {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.line2 {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.year.label {
+  font: 500 76px "Helvetica Neue";
+  fill: #ddd;
+}
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.js"></script>
+<script>
+
+var margin = {top: 20, right: 20, bottom: 30, left: 50},
+	padWidth = 250,
+    width = 960 - margin.left - margin.right + padWidth,
+    height = 500 - margin.top - margin.bottom;
+
+var tema = "corrupcion";
+var parseDate = d3.time.format("%Y%m%d").parse;
+
+var topics = ["Corruption","Economy","Education","Jobs","Ideology","Crime","Youth","Justice",
+			  "Environment","Others","Health","Public Services","Social","Terrorism","Housing"];
+			  
+
+
+var x = d3.time.scale()
+    .range([0, width - padWidth]);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+var line1 = d3.svg.area()
+    .interpolate("basis")
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d["Congreso"]); });
+	
+var line2 = d3.svg.area()
+    .interpolate("basis")
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d["Cis"]); });
+
+var area = d3.svg.area()
+    .interpolate("basis")
+    .x(function(d) { return x(d.date); })
+    .y1(function(d) { return y(d["Congreso"]); });
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+	.append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	
+var titPos = {"Corruption":250,
+			  "Economy":320,
+			  "Education":250,
+			  "Jobs":450,
+			  "Ideology":50,
+			  "Crime":80,
+			  "Youth":250,
+			  "Justice":200,
+			  "Environment":0,
+			  "Others":80,
+			  "Health":250,
+			  "Public Services":50,
+			  "Social":120,
+			  "Terrorism":50,
+			  "Housing":50}
+			  
+var legPos = {"Corruption":40,
+			  "Economy":40,
+			  "Education":40,
+			  "Jobs":40,
+			  "Ideology":300,
+			  "Crime":300,
+			  "Youth":40,
+			  "Justice":40,
+			  "Environment":250,
+			  "Others":40,
+			  "Health":100,
+			  "Public Services":40,
+			  "Social":40,
+			  "Terrorism":200,
+			  "Housing":40}
+	
+
+d3.csv("dataForBiArea4.csv", function(error, data) {
+	data.forEach(function(d) {
+		d.date = parseDate(d.date);
+		d["Congreso"]= +d[tema.concat("Congreso")];
+		d["Cis"] = +d[tema.concat("Cis")];
+	});
+	
+	
+	
+	var legend = ["More important to CIS","More important to Congress"];
+	var title = ["Corruption"];
+	
+	svg.selectAll("rectLeg")
+		.data(legend)
+		.enter()
+		.append("rect")
+		.attr("y",function(d, i){
+			return i*20;
+		})
+		.attr("class", "leg1")
+		.attr("x", legPos[title[0]])
+		.attr("height", 15)
+		.attr("width", 15)
+		.attr("fill", function(d, i){
+			return d3.scale.category10().domain([0,1])(i);
+		});
+		
+	svg.selectAll("textLeg")
+		.data(legend)
+		.enter()
+		.append("text")
+		.attr("y",function(d, i){
+			return i*20 + 12;
+		})
+		.text(function(d){
+					return d;
+				})
+		.attr("class", "leg2")
+		.attr("x", legPos[title[0]] + 20)
+		.attr("font-size", 14)
+		.attr("text-anchor", "left");
+	
+	myTitle = svg.selectAll("Title").data(title)
+		.enter()
+		.append("text")
+		.attr("class", "year label")
+		.attr("text-anchor", "end")
+		.text(function(d){
+			return d;
+		})
+		.attr("x", width - padWidth - titPos[title[0]])
+		.attr("y", 50);
+	
+	var padText = svg.selectAll("padText")
+		.data(topics)
+		.enter()
+		.append('text')
+		.attr("x", width + margin.right - padWidth / 2)
+		.attr("y", function(d,i){
+			return -margin.top + 3 + 20 + i * (height + margin.top + margin.bottom)/15;
+		})
+		.text(function(d){
+			return d;
+		})
+		.attr("text-anchor", "middle")
+		.attr("font-size", 18);
+		
+	var pad = svg.selectAll("pad")
+		.data(topics)
+		.enter()
+		.append('rect')
+		.attr("width", padWidth)
+		.attr("height", (height + margin.top + margin.bottom)/15 - 6)
+		.attr("x", width + margin.right - padWidth)
+		.attr("y", function(d,i){
+			return -margin.top + 3 + i * (height + margin.top + margin.bottom)/15;
+		})
+		.attr("fill","#ddd")
+		.attr("opacity",0.4)
+		.on("click",function(d){
+					return change(d);
+				});
+
+
+	x.domain(d3.extent(data, function(d) { return d.date; }));
+
+	y.domain([
+		d3.min(data, function(d) { return Math.min(d["Congreso"], d["Cis"]); }),
+		d3.max(data, function(d) { return Math.max(d["Congreso"], d["Cis"]); })
+	]);
+
+	svg.datum(data);
+
+	clipPath1 = svg.append("clipPath")
+		.attr("class", "clip")
+		.attr("id", "clip-below")
+		.append("path")
+		.attr("d", area.y0(height));
+
+	clipPath2 = svg.append("clipPath")
+		.attr("class", "clip")
+		.attr("id", "clip-above")
+		.append("path")
+		.attr("d", area.y0(0));
+
+	path1 = svg.append("path")
+		.attr("class", "area above")
+		.attr("clip-path", "url(#clip-above)")
+		.attr("d", area.y0(function(d) { return y(d["Cis"]); }));
+
+	path2 = svg.append("path")
+		.attr("class", "area below")
+		.attr("clip-path", "url(#clip-below)")
+		.attr("d", area);
+
+	l1 = svg.append("path")
+		.attr("class", "line1")
+		.attr("d", line1);
+	  
+	l2 = svg.append("path")
+		.attr("class", "line2")
+		.attr("d", line2);
+
+	svg.append("g")
+		.attr("class", "x axis")
+		.attr("transform", "translate(0," + height + ")")
+		.call(xAxis);
+
+	svg.append("g")
+		.attr("class", "y axis")
+		.call(yAxis)
+		.append("text")
+		.attr("transform", "rotate(-90)")
+		.attr("y", 6)
+		.attr("dy", ".71em")
+		.style("text-anchor", "end")
+		.text("% of importance");  
+	
+
+	function change(Tema){
+		
+		var tema = "";
+		if (Tema == "Corruption"){
+			tema = "corrupcion";
+		} else if (Tema == "Economy"){
+			tema = "economia";
+		} else if (Tema == "Others"){
+			tema = "otros";
+		} else if (Tema == "Justice"){
+			tema = "justicia";
+		} else if (Tema == "Social"){
+			tema = "social";
+		} else if (Tema == "Health"){
+			tema = "salud";
+		} else if (Tema == "Environment"){
+			tema = "ma";
+		} else if (Tema == "Public Services"){
+			tema = "spei";
+		} else if (Tema == "Housing"){
+			tema = "vivienda";
+		} else if (Tema == "Terrorism"){
+			tema = "terrorismo";
+		} else if (Tema == "Jobs"){
+			tema = "empleo";
+		} else if (Tema == "Ideology"){
+			tema = "ideologia";
+		} else if (Tema == "Education"){
+			tema = "educacion";
+		} else if (Tema == "Youth"){
+			tema = "jovenes";
+		} else if (Tema == "Crime"){
+			tema = "ic";
+		}
+		
+		var title = [Tema];
+    
+		data.forEach(function(d) {
+			d["Congreso"]= +d[tema.concat("Congreso")];
+			d["Cis"] = +d[tema.concat("Cis")];
+		});
+	
+		y.domain([
+			d3.min(data, function(d) { return Math.min(d["Congreso"], d["Cis"]); }),
+			d3.max(data, function(d) { return Math.max(d["Congreso"], d["Cis"]); })
+		]);
+
+		path1.transition().duration(750).style("opacity",0).remove();
+		path2.transition().duration(750).style("opacity",0).remove();
+		clipPath1.transition().duration(750).style("opacity",0).remove();
+		clipPath2.transition().duration(750).style("opacity",0).remove();
+		svg.selectAll(".year.label").transition().duration(375).style("opacity",0).remove();
+		
+		myTitle = svg.selectAll("Title").data(title)
+			.enter()
+			.append("text")
+			.attr("class", "year label")
+			.attr("text-anchor", "end")
+			.text(function(d){
+				return d;
+			})
+			.attr("x", width - padWidth - titPos[title[0]])
+			.attr("y", 50)
+			.attr("opacity",0)
+			.transition().duration(375).delay(375)
+			.attr("opacity",1);
+
+	
+		var t1 = svg.transition().duration(750).delay(750);
+		t1.selectAll(".line1").attr("d", line1);
+		t1.selectAll(".line2").attr("d", line2);
+		t1.selectAll(".y.axis").call(yAxis);
+		t1.selectAll(".leg1").attr("x", legPos[Tema]);
+		t1.selectAll(".leg2").attr("x", legPos[Tema] + 20);
+	
+		function pintaAgain(){
+	
+			var area = d3.svg.area()
+				.interpolate("basis")
+				.x(function(d) { return x(d.date); })
+				.y1(function(d) { return y(d["Congreso"]); });
+							
+			clipPath1 = svg.append("clipPath")
+				.attr("class", "clip")
+				.attr("id", "clip-below")
+				.append("path")
+				.attr("d", area.y0(height))
+				.style("opacity",1);
+
+			clipPath2 = svg.append("clipPath")
+				.attr("class", "clip")
+				.attr("id", "clip-above")
+				.append("path")
+				.attr("d", area.y0(0))
+				.style("opacity",1);
+
+			path1 = svg.append("path")
+				.attr("class", "area above")
+				.attr("clip-path", "url(#clip-above)")
+				.attr("d", area.y0(function(d) { return y(d["Cis"]); }))
+				.style("opacity",1);
+
+			path2 = svg.append("path")
+				.attr("class", "area below")
+				.attr("clip-path", "url(#clip-below)")
+				.attr("d", area)
+				.style("opacity",1);
+		}
+	
+		setTimeout(pintaAgain, 1500);
+	}
+
+});
+
+</script>
