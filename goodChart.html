@@ -1,52 +1,10 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>Diferencias</title>
 
-<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-<body>
- <div class="navbar-wrapper">
-      <div class="container">
-
-        <nav class="navbar navbar-inverse navbar-static-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand">¿De qué hablan los políticos?</a>
-            </div>
-			<div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-				<li><a href="./index_esp.html">Página Principal</a></li>
-                <li><a href="./radar_esp.html">El Radar</a></li>
-                <li class="active"><a>Diferencias</a></li>
-				<li><a href="politilines/politilines.html">Líneas Políticas</a></li>
-				<li><a href="Our version of The Words They Used/index_The Words They Used.html">¿Qué dicen?</a></li>
-				<li><a href="./blog_esp.html">Blog</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-
-      </div>
-    </div>
-
-	<div class="jumbotron">
-	  <div class="container">
-		<h1>Diferencias</h1>
-		<p><br>A continuación vemos como evolucionan algunas de las principales preocupaciones de los españoles a lo largo del tiempo y su repercusión en el congreso por trimestres.</p>
-	  </div>
-	</div>
-
-</body>
 <style>
 
 body {
-  font: 10px sans-serif;
+  font: 16px sans-serif;
 }
 
 .axis path,
@@ -101,7 +59,28 @@ var parseDate = d3.time.format("%Y%m%d").parse;
 var topics = ["Corruption","Economy","Education","Jobs","Ideology","Crime","Youth","Justice",
 			  "Environment","Others","Health","Public Services","Social","Terrorism","Housing"];
 			  
-
+var par = {"Corruption":["A very important issue in Spain these days, we discovered that our politicians don't discuss corruption very often, at least in the control sessions. Despite the steep rise of the number of known cases these last years, early 2003 remains the stand-out period, when the Aznar government reduced taxes to tackle money laundering and tax evasion. Some parties harshly critizised the timing of the move, since the general election of 2004 was scheduled only a few months ahead.",
+						 "The people, though, have reacted strongly to the multiple scandals since 2010. We could see a sharp increase from that year onwards, coincing with the end of the worst part of the financial crisis. 2013 saw a whole new wave of cases of illegal funding and tax evasion regarding the principal political parties. After that, corruption has become the second most important issue for the Spanish people (the first being Jobs).",
+						 "However, the public outcry hasn't made any noticeable difference in the Congress. The last wave of scandals, involving almost every party in the country, have not led to increased presence of the matter in the control sessions."],
+		   "Economy":["As expected, 2008 saw a notable rise in the interest of both politicians and people in Economy. The financial crisis hit Spain specially hard, and it triggered a property bubble whose effects last until today (more on that in Housing and Jobs).",
+					  "Before that, we could observe that the introduction of the Euro in 2002 did bother the politicians, while there hardly seems to be any interest from the Spanish people. After 2012 there is a marked decline in interest from both groups. A possible reason could be that the focus of the crisis no longer is on the banks or financial institutions, but on people's problems like unemployment.",
+					  "Economy is actually the topic on which the interest of the politicians better reflects the interest in the subject of the people they represent."],
+		   "Education":["Despite occasional surges of activity in the Congress, Education has remained a quiet issue for the last 15 years. On one hand, large portions of the population have no natural interest in education, having already finished theirs. Therefore, despite occasional highly visible demonstrations, the CIS gives Education a relative small importance.",
+						"On the other hand, some situations involving politics did became highly politicised in recent years, explaining the brief surges in interest by the Congress. The introduction of the Bolonia Plan in 2008 was met by strong opposition from many parties, who argued that it was the first step towards the privatization of universities. The resistance of the Catalan government to the so called 'Ley Wert', which intended to reduce the number of lective hours in Catalan, led to some heated exchanges in 2014, as it was seen as a form of repression against Catalunya. Despite all this, Education never surpasses a 4% on the CIS barometer."],
+		   "Jobs":["Unemployment has been an issue in Spain for many years. In the last 15 years, the CIS value for Jobs has never failed to reach 20%.",
+				   "Despite being one of the most pressing problems in Spain, the importance of Employment has been at most moderate in the control sessions of the Congress. Isolated high points in 2008 and 2012 could indicate that Employment remains a hot topic before general elections, but even in those occasions the gap remains markedly wide."],
+		   "Ideology":["Ideology, which includes ****, is almost of exclusive interest for the Congress."],
+		   "Crime":["Almost always under 10% of interest, crime has seen two opposite trends in recent years. On one hand, there is an increased presence of the subject in the Congress' discussions. On the other hand, Spanish people don't list Crime so often as one of their main worries since 2007. The crisis and the more urgent problems it brought could be an explanation for the latter trend.",
+					"The explanation behind the first trend is quite different from what one may expect. Starting 2010, austerity politics resulted in considerably reduced spending in some areas, one of them the police force (Guardia Civil). Very often, parties against spending cuts would use this to question the ruling party. Thus, the 'Guardia Civil' became a matter of discussion in the Congress."],
+		   "Youth":["Youth, which includes ****, is almost of exclusive interest for the Congress."],
+		   "Justice":["Justice, which includes ****, is almost of exclusive interest for the Congress."],
+		   "Environment":0,
+		   "Others":80,
+		   "Health":250,
+		   "Public Services":50,
+		   "Social":120,
+		   "Terrorism":50,
+		   "Housing":50}
 
 var x = d3.time.scale()
     .range([0, width - padWidth]);
@@ -169,6 +148,10 @@ var legPos = {"Corruption":40,
 			  "Social":40,
 			  "Terrorism":200,
 			  "Housing":40}
+			  
+par["Corruption"].forEach(function(d){
+	return d3.select("body").append("p").text(d)
+	});
 	
 
 d3.csv("dataForBiArea4.csv", function(error, data) {
@@ -420,6 +403,11 @@ d3.csv("dataForBiArea4.csv", function(error, data) {
 		}
 	
 		setTimeout(pintaAgain, 1500);
+		
+		d3.selectAll("p").remove()
+		par[Tema].forEach(function(d){
+			return d3.select("body").append("p").text(d)
+		});
 	}
 
 });

@@ -7,7 +7,7 @@
     <meta name="author" content="">
 
 
-    <title>¿De qué hablan los políticoss?</title>
+    <title>¿De qué hablan los políticos?</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -43,11 +43,11 @@
 			<div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
 				<li><a href="./index_esp.html">Página Principal</a></li>
-                <li><a href="./radar_esp.html">El Radar</a></li>
-                <li><a href="./goodChart.html">Diferencias</a></li>
-				<li><a href="politilines/politilines.html">Líneas Políticas</a></li>
-				<li><a href="Our version of The Words They Used/index_The Words They Used.html">¿Qué dicen?</a></li>
-				<li class="active"><a href="./blog.html">Blog</a></li>
+				<li><a href="./el_radar.html">El Radar</a></li>
+                <li><a href="./el_analisis.html">El Análisis</a></li>
+				<li><a href="./lineas_politicas.html">Líneas Políticas</a></li>
+				<li><a href="./que_dicen.html">¿Qué dicen?</a></li>
+				<li class="active"><a>Blog</a></li>
               </ul>
             </div>
           </div>
@@ -55,7 +55,7 @@
 
       </div>
     </div>
-  
+  </head>
   
   <body>
 
@@ -91,7 +91,7 @@
 		
 		<div class="blog-post">
             <h2 class="blog-post-title">El Scrapping</h2>
-			<p><br>  El Scrapping es el proceso por el cual extraemos los datos de una página web para poderlos procesar. En este caso hemos procesado los barómetros del CIS utilizando su banco de datos y el Congreso a través de su buscador.
+			<p><br>  El Scrapping es el proceso por el cual extraemos los datos de una página web para poderlos utilizar. En este caso hemos procesado los barómetros del CIS utilizando su banco de datos y el Congreso a través de su buscador.
 				<br><br> Para esta parte del proceso hemos utilizado Python, en particular dos paquetes: Selenium y BeautifulSoup.</p>
 			<h3> <br>CIS </h3>
 			<p> Mediante Selenium hemos ido descargando las diferentes páginas y con la ayuda de BeautifulSoup hemos buscado la pregunta que nos interesaba y nos hemos creado una base de datos con los resultados. 
@@ -115,9 +115,9 @@
             <p><br> En la base de datos del Congreso encontramos 311 documentos y 7000 intervenciones, etiquetar esto dentro de los clusters del CIS es un trabajo titánico así que trazamos un plan: extraeriamos las palabras clave de cada intervención y creariamos un diccionario "clasificador" que se iría nutriendo de las palabras clave que fuéramos encontrando con el objetivo de clusterizar el máximo de documentos.
 			<br><br> Definimos como palabra clave o key word cualquier n-grama de palabras (secuencia de una o mas palabras) dentro del documento. Nos dimos cuenta que, en general, estos n-gramas estan compuestos por nombres y adjetivos, así que  nos centramos en estos dentro de nuestros documentos. 
 			<br><br> Para encontrar estas palabras clave utilizamos RAKE (Rapid Automatic Keyword Extraction), un sencillo paquete de Python que utiliza solo un parámetro: una stop-list (o palabras a descartar), en nuestro caso consiste en cualquier palabra que no sea un nombre o un adjetivo. A partir de esto, RAKE generará un grafo de concurrencia de posibles palabras clave. Además, obtenemos una puntuación para cada una de ellas que consiste: grado(pc)/frec(pc).
-			<br><br> Una vez finalizado este proceso utilizamos un algoritmo K-means para construir una matriz de frecuencia de los terminos utilizando las palabras clave como vocabulario (bag of the words) y usamos la librería scikit-learn para transformar esta matriz en una matriz de dispersión. A continuación aplicamos un algorito K-means utilizando "k-means++" para crear los clusters. 
-			<br><br> A continuación, después de varias iteraciones del K-means conseguimos distinguir una série de clusters que son claramente afines a los clusters del CIS, a partir de aquí cremaos un clasificador simple, y lo entrenamos para clasificar el resto de documentos. 
-			<br><br> A partir de toda esta información y una vez etiquetados los documentos utilizamos el número de líneas de cada intervención como medida de tiempo y obtenemos una série de tablas y diccionarios que se utilizan mas adelante para la realización de los gráficos.</p>
+			<br><br> Una vez finalizado este proceso construimos una matriz de frecuencia de los terminos utilizando las palabras clave como vocabulario (bag of the words) y mediante la librería scikit-learn transformar esta matriz en una matriz de dispersión. A continuación aplicamos un algoritmo K-means utilizando "k-means++" para crear los clusters. 
+			<br><br> Seguidamente, después de varias iteraciones del K-means conseguimos distinguir una série de clusters que son claramente afines a los clusters del CIS. A partir de aquí cremaos un clasificador simple, y lo entrenamos para clasificar el resto de documentos. 
+			<br><br> Finalmente, después de haber etiquetado los documentos utilizamos el número de líneas de cada intervención como medida de tiempo. Obtendremos una série de tablas y diccionarios que se utilizan mas adelante para la realización de los gráficos.</p>
 			
 		 </div><!-- /.blog-post -->	
 		  
@@ -132,40 +132,6 @@
 			
 			
         </div><!-- /.blog-main -->
-
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          <div class="sidebar-module sidebar-module-inset">
-            <h4>About us</h4>
-            <p> Four mathematicians and one of them physic too doing a Big Data & Data Science course. What can go wrong?</p>
-          </div>
-          <div class="sidebar-module">
-            <h4>Archives</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">March 2014</a></li>
-              <li><a href="#">February 2014</a></li>
-              <li><a href="#">January 2014</a></li>
-              <li><a href="#">December 2013</a></li>
-              <li><a href="#">November 2013</a></li>
-              <li><a href="#">October 2013</a></li>
-              <li><a href="#">September 2013</a></li>
-              <li><a href="#">August 2013</a></li>
-              <li><a href="#">July 2013</a></li>
-              <li><a href="#">June 2013</a></li>
-              <li><a href="#">May 2013</a></li>
-              <li><a href="#">April 2013</a></li>
-            </ol>
-          </div>
-          <div class="sidebar-module">
-            <h4>Elsewhere</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
-            </ol>
-          </div>
-        </div><!-- /.blog-sidebar -->
-
-      </div><!-- /.row -->
 
     </div><!-- /.container -->
 
