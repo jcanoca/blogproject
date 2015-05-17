@@ -7079,7 +7079,7 @@ politi.model.DebateData.prototype.handleData = function(data) {
 		return b.count - a.count;
 	};
 	this._wordDatas.sort(sortDescendingCount);
-	if(this._wordDatas.length > 25) this._wordDatas = this._wordDatas.slice(0,25);
+	if(this._wordDatas.length > 40) this._wordDatas = this._wordDatas.slice(0,40);
 	i = 0;
 	var _g = 0, _g1 = this._wordDatas;
 	while(_g < _g1.length) {
@@ -7335,6 +7335,9 @@ politi.model.DebateData.prototype.cleanBeadData = function(a) {
 politi.model.DebateData.prototype.writtenDate = function() {
 	return periscopic.locale.EnglishUS.month(this.date.getMonth()) + " " + periscopic.locale.EnglishUS.fullOrdinal(this.date.getDate()) + ", " + this.date.getFullYear();
 }
+politi.model.DebateData.prototype.writtenMonthYear = function() {
+	return periscopic.locale.EnglishUS.month(this.date.getMonth()) + ", " + this.date.getFullYear();
+}
 politi.model.DebateData.prototype.writtenVenue = function() {
 	return this.venue + " in " + this.city;
 }
@@ -7577,13 +7580,13 @@ politi.view.WordTooltip = function(uses,wordNode,anchr) {
 	link.innerHTML = "explore the use" + (uses.length > 1?"s":"") + " of this word";
 	if(curFilter.pinned == 2 || curFilter.pinned == 0) {
 		if(curFilter.pinned == 2) {
-			pinCategory = "candidate";
+			pinCategory = "group";
 			unpinCategory = "issue";
 			unpinVal = politi.model.DebateData.issuesIn(uses).length;
 			unpinOverallVal = politi.model.DebateData.issuesIn(uses[0].word.uses).length;
 		} else {
 			pinCategory = "issue";
-			unpinCategory = "candidate";
+			unpinCategory = "group";
 			unpinVal = politi.model.DebateData.debatersIn(uses).length;
 			unpinOverallVal = politi.model.DebateData.debatersIn(uses[0].word.uses).length;
 		}
@@ -7602,7 +7605,7 @@ politi.view.WordTooltip = function(uses,wordNode,anchr) {
 		grid.appendChild(col3);
 		content.appendChild(grid);
 		body.appendChild(content);
-		grid.style.width = col1.clientWidth + col2.clientWidth + col3.clientWidth + 10 + "px";
+		grid.style.width = col1.clientWidth + col2.clientWidth + col3.clientWidth + 12 + "px";
 		content.style.width = col1.clientWidth + col2.clientWidth + col3.clientWidth + 25 + "px";
 		grid.innerHTML += "<div style=\"clear:both;\"></div>";
 		content.appendChild(link);
@@ -8488,7 +8491,18 @@ politi.model.DebateCategories.prototype.categories = null;
 politi.model.DebateCategories.prototype.load = function() {
 	if(!this._inited) {
 		this._inited = true;
-		var http = new haxe.Http("../politilines/data/debates.json" + "?" + Math.floor(Math.random() * Math.pow(10,10)));
+		
+		// PFS:
+		var el = document.getElementById("debates_filter");
+		var path_debates = "";
+		if (el.value == "day") {
+			path_debates = "../politilines/data/debates_by_day.json";
+		}
+		else {
+			path_debates = "../politilines/data/debates_by_month.json";
+		}
+		
+		var http = new haxe.Http(path_debates + "?" + Math.floor(Math.random() * Math.pow(10,10)));
 		http.onData = $closure(this,"handleData");
 		// http.request(true);
 		http.request(false);
@@ -8545,6 +8559,11 @@ haxe.Log.prototype.__class__ = haxe.Log;
 politi.view.SubMenuView = function(debateList,onDateClick) {
 	if( debateList === $_ ) return;
 	this.open = false;
+	
+	// PFS:
+	var el = document.getElementById("debates_filter");
+	var debatesType = el.value;
+	
 	var futureDebates = debateList.getFutureDebates();
 	var pastDebates = debateList.getPastDebates();
 	var doc = js.Lib.document;
@@ -8566,7 +8585,8 @@ politi.view.SubMenuView = function(debateList,onDateClick) {
 		var db = [pastDebates[_g]];
 		++_g;
 		var li = [doc.createElement("li")];
-		li[0].innerHTML = db[0].writtenDate();
+		// PFS:
+		if (debatesType == "day") li[0].innerHTML = db[0].writtenDate(); else li[0].innerHTML = db[0].writtenMonthYear();
 		li[0].style.cursor = "pointer";
 		li[0].onclick = (function(li,db) {
 			return function(e) {
@@ -8684,7 +8704,7 @@ politi.view.WordOverlay = function(uses) {
 	} else {
 		var debaters = politi.model.DebateData.debatersIn(uses);
 		var s = "The word <em>" + incept.word.word + "</em> was used <em>" + uses.length + "</em> time" + (uses.length > 1?"s":"");
-		if(curFilter.pinned == 0) s += " by <em>" + debaters.length + "</em> candidate" + (debaters.length > 1?"s":"") + "."; else s += " in this debate.";
+		if(curFilter.pinned == 0) s += " by <em>" + debaters.length + "</em> group" + (debaters.length > 1?"s":"") + "."; else s += " in this debate.";
 		head.html(s);
 	}
 	shell.appendTo(content);
@@ -9048,6 +9068,19 @@ Main.main = function() {
 }
 Main.prototype.init = function() {
 	politi.control.MainController.getInstance();
+}
+// PFS:
+Main.reload = function() {
+	// Remove side_menus elements
+	var myNode = document.getElementById("side_menus");
+	while (myNode.firstChild) {
+		myNode.removeChild(myNode.firstChild);
+	}
+
+	var dc = politi.model.DebateCategories.getInstance();
+	dc._inited = null;
+	dc.categories = null
+	dc.load();
 }
 Main.prototype.__class__ = Main;
 politi.model.DebateList = function(data) {
@@ -9459,7 +9492,7 @@ politi.view.WordNode.CENTER = 382;
 politi.view.WordNode.HEIGHT = 26;
 politi.view.WordNode.tip = null;
 politi.model.DebateData.DIRECTORY = "../politilines/data/";
-politi.model.DebateData.MAX_WORDS = 25;
+politi.model.DebateData.MAX_WORDS = 40;
 politi.view.Thread._pool = [];
 periscopic.utils.GlobalTimer.timers = new Array();
 periscopic.locale.EnglishUS.MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];

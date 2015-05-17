@@ -1,0 +1,212 @@
+ul, ol, dl, dt, dd, li, p, h1, h2, h3, h4, h5, h6, form, img, q, blockquote{margin:0px;padding:0px;border:0px;list-style-type:none; }
+#CONGRESO{margin:auto;height:100%;width:765px;background-color:#ffffff;}
+
+/* COMUNES PORTADA*/
+.btn_mas {float:left;width:auto; height:auto;padding: 0 0 10px 14px;font-weight:normal; background:url('../img/btn_mas.gif') no-repeat 5px 3px;}
+.btn_mas a{text-decoration:underline; color:#9C1E3D;margin:0 5px 0 5px;}
+.btn_mas a:hover{text-decoration:none;}
+.btn_mas a:active{text-decoration:none;font-weight:normal;}
+
+.cabecera_dorada h2{clear:both;width:292px; height:auto; padding:3px 4px 5px 4px; background-color:#B29200; line-height:12px}
+.cabecera_dorada_portada h2{clear:both;width:140px; height:auto; padding:3px 4px 5px 3px; background-color:#B29200}
+.cabecera_dorada_auto h2{clear:both;width:auto; height:auto; padding:3px 4px 5px 4px; background-color:#B29200; line-height:12px}
+.cabecera_gris h2{clear:both;width:auto; height:auto; padding:3px 4px 5px 3px; background-color:#626469;}
+.cabecera_rojo h2{clear:both;width:292px; height:auto; padding:3px 4px 5px 3px; background-color:#9C1E3D;}
+.cabecera_rojo_corta h2{clear:both;width:140px; height:auto; padding:3px 4px 5px 3px; background-color:#9C1E3D;}
+.cabecera_rojo_imagen h2{clear:both;width:293px; height:auto; padding:3px 4px 5px 3px; background-color:#9C1E3D;}
+.cabecera_granate_corta h2{clear:both;width:183px; height:auto; padding:3px 4px 5px 3px; background-color:#69173F;}
+.cabecera_rojooscuro_corta h2{clear:both;width:183px; height:auto; padding:3px 4px 5px 3px; background-color:#961F3B;}
+.cabecera_marron_corta h2{clear:both;width:183px; height:auto; padding:3px 4px 5px 3px; background-color:#C14D02;}
+.cabecera_naranja_corta h2{clear:both;width:183px; height:auto; padding:3px 4px 5px 3px; background-color:#E37D01;}
+
+
+/* SI SE VUELVE A UTILIZAR. CAMBIAR EL NOMBRE DE LA CLASE*/
+.texto { font-size:0.66em;color:#626469;padding:0 5px 5px 5px}
+.texto_novedadmas { font-size:0.66em;color:#626469}
+.texto_hora { font-size:0.66em;color:#626469;padding:0 5px 2px 0px}
+.texto_tabulado { font-size:0.66em;color:#626469;padding:0px 0px 0px 5px;margin-left:15px;height:auto;width:auto;}
+.texto_tabulado a{text-decoration:none; color:#626469;}
+.texto_tabulado a span {color:#b29200;width:auto; margin-bottom: 0px;float: none; font-size: 0.86em;}
+.texto_tabulado a:hover{text-decoration:underline;}
+.texto_tabulado a:active{text-decoration:none;font-weight:normal;}
+.texto_tabulado span{color:#b29200;width:auto; margin-bottom: 0px;float: none; font-size: 0.86em;}
+.texto a{text-decoration:none;color:#626469;}
+.texto a:hover{text-decoration:underline;}
+.texto a:active{text-decoration:none;font-weight:normal;}
+.fecha {font-size:0.66em; color:#9C1E3D; padding:5px 0px 0px 5px}
+.hora {height:14px;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:0.6em; color:#9C1E3D; padding-left:5px;padding-top:7px!important;padding-top:5px; font-weight:bold}
+.modalidad {color:#B29200}
+
+/* CONTENIDOS*/
+.MODULOS {float:left; width:765px; height:auto;margin-top:20px;}
+
+/* modulo 1_2*/
+.MODULO1_2_1 {float:left;width:145px; height:auto; margin:0 5px 0px 0;}
+.MODULO1_2_1 #buscador{float:left; width:145px; margin-right:0px; }
+.MODULO1_2_1 #buscador #caja_buscador{float:left; width:145px;height:35px;background-color:#CCCCCC; margin-bottom:8px;}
+.MODULO1_2_1 #buscador #caja_buscador input{ float:left; color:#626469; font-size:0.9em;border:1px solid #626469;margin:10px 0 10px 4px;width:114px!important;width:112px;height:17px;}
+.MODULO1_2_1 #buscador #caja_buscador img{float:left; padding:10px 0 5px;margin-top:11px;margin-left:5px}
+
+.MODULO1_2 {float:left;width:290px; height:auto; margin:0 0px 10px 0;}
+.MODULO1_2 #buscador{float:left; width:145px; margin-right:10px; }
+.MODULO1_2 #buscador #caja_buscador{float:left; width:145px;height:35px;background-color:#CCCCCC; margin-bottom:8px;}
+.MODULO1_2 #buscador #caja_buscador input{ float:left; color:#626469; font-size:0.9em;border:1px solid #626469;margin:10px 0 10px 4px;width:114px!important;width:112px;height:13px;}
+.MODULO1_2 #buscador #caja_buscador input image{float:left; padding:10px 0 0 5px}
+
+.MODULO1_2 #buscador .titular_buscador {width:auto;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:0.6em; font-weight:bold; margin-bottom:8px; color:#626469; padding-left:3px;}
+.MODULO1_2 #buscador .buscadores {float:left;width:145px;color:#626469; margin:0 0 10px 0}
+.MODULO1_2 #buscador .buscadores ul{list-style:none}
+.MODULO1_2 #buscador .buscadores li { display:block; padding-left:4px; line-height:0.78em;}
+.MODULO1_2 #buscador .buscadores a{text-decoration:none; padding-left:9px;background:url('../img/arrow_buscador.gif') no-repeat 0px 5px;font-size:0.66em;color:#626469;}
+.MODULO1_2 #buscador .buscadores a:hover{text-decoration:underline;}
+.MODULO1_2 #buscador .buscadores a:active{text-decoration:none;font-weight:normal;font-size:0.66em;}
+
+.MODULO3_4 .saludo {float:left;width:145px;margin:0 0px 0 0;border:1px solid #CCBA66; background-color:#E7E2CC}
+.MODULO3_4 .saludo img{margin:5px 0 5px 4px;}
+.MODULO3_4 .saludo .txt_saludo a{float:left;width:135px;margin-left:5px;padding:0 0 5px 0; text-decoration:none; font-family: Arial, Verdana, Helvetica, sans-serif; font-size:0.9em;color:#626469;}
+.MODULO3_4 .saludo .txt_saludo a:hover{text-decoration:underline;}
+.MODULO3_4 .saludo .txt_saludo a:active{text-decoration:none;font-weight:normal;font-size:0.6em;}
+
+.MODULO3_4 .saludo_portada_texto {float:left;height:90px;width:147px;margin:0 0px 0 0;border:1px solid #CCBA66; background-color:#E7E2CC}
+.MODULO3_4 .saludo_portada_texto img{margin:5px 0 5px 4px;}
+.MODULO3_4 .saludo_portada_texto span{float:left; width:140px; height:auto; margin:2px 5px 0 5px;font-size:0.66em;font-weight:bold; color:#626469; }
+.MODULO3_4 .saludo_portada_texto a{height:auto; font-weight:bold; color:#626469;}
+.MODULO3_4 .saludo_portada_texto a:hover{height:auto; font-weight:bold; color:#626469;}
+.MODULO3_4 .saludo_portada_texto a:active{height:auto; font-weight:bold; color:#626469;}
+
+
+.MODULO1_2 .novedades{float:left;width:280px; height:auto;margin:5px 0 0 0;font-size:0.66em;}
+.MODULO1_2 .novedades .caja {width:203px;height:14px;color:#626469; font-size:1.1em;border:1px solid #626469;margin:0 0 4px 0;}
+.MODULO1_2 .novedades .cajaApellidos {width:80px;height:14px;color:#626469; font-size:1.1em;border:1px solid #626469;margin:0 0 4px 0;}
+.MODULO1_2 .novedades .titular {font-weight:bold; margin:5px 0 5px 0; color:#9C1E3D}
+.MODULO1_2 .novedades ul{list-style:none; margin-top:5px;}
+.MODULO1_2 .novedades li { display:block;background:url('../img/arrow_resultados.gif') no-repeat 0px 4px; font-family: Arial, Verdana, Helvetica, sans-serif; line-height:1.2em; color:#626469; padding:0 5px 10px 10px;}
+
+.MODULO1_2 .novedades a{text-decoration:none;color:#626469;}
+.MODULO1_2 .novedades a:hover{text-decoration:underline;}
+.MODULO1_2 .novedades a:active{text-decoration:none;font-weight:normal;}
+
+.MODULO1_2 .btn_mas {float:left;width:auto; height:auto;padding: 0 0 5px 14px;font-weight:normal; font-size:0.6em; background:url('../img/btn_mas.gif') no-repeat 5px 3px;}
+.MODULO1_2 .btn_mas a{text-decoration:underline; color:#9C1E3D;margin:0 5px 0 5px;}
+.MODULO1_2 .btn_mas a:hover{text-decoration:none;}
+.MODULO1_2 .btn_mas a:active{text-decoration:none;font-weight:normal;}
+
+/* modulo 3_4*/
+.MODULO3_4 {float:left;width:150px;height:auto; margin-right:0px;}
+.MODULO3_4 .imagen_dia{width:300px; height:auto;background-color:#F3F3F3}
+.MODULO3_4 .imagen_dia img{width:300px; height:225px; margin:5px 0 3px 0;}
+.MODULO3_4 .tit_piefoto{margin:0 4px 3px 4px; height:auto;font-size:0.66em; color:#626469; height:auto;}
+.MODULO3_4 .txt_piefoto{margin:0 4px 3px 4px; height:auto;font-size:0.66em; color:#626469; height:42px;}
+
+.MODULO3_4 .tit_pievideo {margin:0 4px 3px 0px; font-size:1em; color:#626469; height:auto; width:300px}
+.MODULO3_4 .txt_pievideo{margin:0 4px 3px 0px; height:auto;font-size:0.66em; color:#626469; width:300px}
+.MODULO3_4 .imagen_dia a{margin:0 4px 3px 0px; height:auto;font-size:0.66em; font-weight:bold; color:#626469; width:300px}
+
+.MODULO3_4 .linea_separa{float:left;width:290px; height:0.05em;line-height:0.05em;margin:5px 0 3px 2px; background-color:#CCCCCC}
+
+.MODULO3_4 .control_imagenes img{float:left; width:auto; height:auto; margin-right:8px;}
+.MODULO3_4 .numeracion{float:right; margin-top:5px; padding-top:1px; margin-right:2px; font-size:0.66em; color:#626469; font-weight:bold;}
+
+.MODULO3_4 .modulo34_1{float:left;width:300px; height:auto; margin:10px 10px 5px 0;}
+.MODULO3_4 .modulo34_2{float:left;width:300px; height:auto;}
+.MODULO3_4 .mod1{float:left;width:145px; height:auto; margin:10px 0 0 2px;}
+.MODULO3_4 .mod2{float:left;width:145px; height:auto; margin:10px 0 0 0;}
+.MODULO3_4 .txt_modulo34{margin:5px 4px 0 4px;font-size:0.6em; color:#B29200;}
+.MODULO3_4 .constitucion {float:left;width:145px;margin:0 0 5px 0;border:1px solid #CCBA66; background-color:#E7E2CC}
+.MODULO3_4 .constitucion img{margin:5px 0 5px 4px;}
+.MODULO3_4 .hemiciclo {float:left;width:145px;margin:0 0 5px 0 ;border:1px solid #CCBA66; background-color:#E7E2CC}
+.MODULO3_4 .hemiciclo img{margin:5px 0 5px 4px;}
+.MODULO3_4 a{text-decoration:none;color:#B29200;}
+.MODULO3_4 a:hover{text-decoration:underline;}
+.MODULO3_4 a:active{text-decoration:none;font-weight:normal;}
+
+.MODULO3_4 .btn_mas {float:left;width:135px; height:auto;padding: 0 0 10px 14px;font-weight:normal; background:url('../img/btn_mas.gif') no-repeat 5px 3px;color:#9C1E3D;}
+.MODULO3_4 .btn_mas a{text-decoration:underline; color:#9C1E3D;margin:0 5px 0 5px;font-size:0.6em}
+.MODULO3_4 .btn_mas a:hover{text-decoration:none;}
+.MODULO3_4 .btn_mas a:active{text-decoration:none;font-weight:normal;}
+.MODULO_IMAGEN {height:280px;width:320px;overflow:auto;}
+.MODULO_IMAGEN .imagen_dia{width:300px; height:auto;background-color:#F3F3F3}
+.MODULO_IMAGEN .imagen_dia img{width:auto; height:auto; margin:5px 0 3px 0;}
+.MODULO_IMAGEN .tit_piefoto{margin:0 4px 3px 4px; height:auto;font-size:0.66em; color:#626469; height:auto;}
+.MODULO_IMAGEN .txt_piefoto{margin:0 4px 3px 4px; height:auto;font-size:0.66em; color:#626469; height:42px;}
+.MODULO_IMAGEN .numeracion{float:right; margin-top:5px; padding-top:1px; margin-right:2px; font-size:0.66em; color:#626469; font-weight:bold;}
+
+
+
+/*MODULO 5*/
+.MODULO5{width:auto; height:auto;color:#ffffff;}
+.MODULO5 .actualidad{float:left;width:145px; height:auto;padding-bottom:0px!important; padding-bottom:10px;}
+/*#MODULO5 #actualidad .txt-actualidad{ font-family:Arial, Verdana, Helvetica, sans-serif; font-size:0.66em; line-height:0.78em; color:#626469; padding:0px 5px 0px 5px;}*/
+.MODULO5 .actualidad img{margin-top:9px; margin-bottom:12px!important;margin-bottom:9px;}
+.MODULO5 .mod1{float:left;width:145px; height:auto; margin:10px 0 0 2px;}
+.MODULO5 .mod2{float:left;width:100px; height:auto; margin:10px 0 0 0;}
+
+.MODULO5 .hoy {float:left;width:145px;height:auto;margin:10px 0 10px 0;}
+.MODULO5 .hoy .recuadro_dorado{float:left;width:143px;border-left:1px solid #b29200;border-bottom:1px solid #b29200;border-right:1px solid #b29200;}
+.MODULO5 .hoy .txt_hoy{float:left;width:135px;font-size:0.66em; color:#626469; margin:5px 0 5px 5px;}
+.MODULO5 .btn_mas {float:left;width:auto; height:auto;padding: 0 0 5px 14px;font-weight:normal; font-size:0.6em; background:url('../img/btn_mas.gif') no-repeat 5px 3px;}
+.MODULO5 .btn_mas a{text-decoration:underline; color:#9C1E3D;margin:0 5px 0 5px;}
+.MODULO5 .btn_mas a:hover{text-decoration:none;}
+.MODULO5 .btn_mas a:active{text-decoration:none;font-weight:normal;}
+
+.MODULO5 .publicaciones {float:left;width:145px;height:auto;background-color:#FFFFFF; margin-top:10px;color:#626469;}
+.MODULO5 .publicaciones ul{list-style:none;margin:5px 0 5px 4px;}
+.MODULO5 .publicaciones li {display:block;line-height:0.84em; padding:0 5px 0 0;}
+.MODULO5 .publicaciones li a{text-decoration:none;font-size:0.66em;color:#626469;}
+.MODULO5 .publicaciones li a:hover{text-decoration:underline;}
+.MODULO5 .publicaciones li a:active{text-decoration:none;font-weight:normal;font-size:0.66em;}
+.MODULO5 .JEC {float:left;width:145px;height:auto;background-color:#FFFFFF;color:#626469;}
+.MODULO5 .JEC .txt_jec{float:left;width:135px;font-size:0.66em; color:#626469; margin:5px 0 5px 5px;}
+
+.MODULO5 .diputados{float:left;width:149px;height:auto;color:#000000}
+.MODULO5 .diputados .busqueda {width:135px; font-family:Arial, Verdana, Helvetica, sans-serif;font-size:0.66em; padding-left:5px;}
+.MODULO5 .diputados .busqueda input{width:89px;height:13px;border:1px solid #626469; font-size:0.9em; color:#626469;}
+.MODULO5 .diputados .abecedario {float:left;width:149px; height:auto; margin:5px 0 8px 2px;font-size:0.6em;}
+.MODULO5 .diputados .abecedario p{float:left; }
+.MODULO5 .diputados .abecedario p a{float:left;width:10px;height:5px; text-decoration:none;text-align:center;color:#626469;}
+.MODULO5 .diputados .abecedario p a:hover{text-decoration:underline; color:#6c193f}
+.MODULO5 .diputados .abecedario p a:active{text-decoration:none;font-weight:normal;}
+.MODULO5 .diputados .btn_buscar{float:left;width:139px;text-align:right;margin-top:4px; padding-right:5px;}
+
+/* PARA EL CALENDARIO DE SESIONES PLENARIAS*/
+.MODULO4{float:left;margin:0 0 0 0;width:145px; height:auto;}
+.MODULO4 .prensa {float:left; padding-bottom:5px!important;padding-bottom:10px;margin-bottom:10px; background-color:#F0F0F0;}
+.MODULO4 .prensa p{font-family:Arial, Verdana, Helvetica, sans-serif; font-size:0.6em; line-height:1.3em; color:#626469; padding:0px 5px 11px 0px;}
+.MODULO4 .prensa a{text-decoration:none;font-size:0.6em;color:#626469;}
+.MODULO4 .prensa a:hover{text-decoration:underline;}
+.MODULO4 .prensa a:active{text-decoration:none;font-weight:normal;font-size:0.6em;}
+.MODULO4 .btn_mas {float:left;width:auto; height:auto;padding: 0 0 15px 19px;font-weight:normal; background:url('../img/btn_mas.gif') no-repeat 5px 3px;}
+.MODULO4 .btn_mas a{text-decoration:underline; color:#9C1E3D;margin:0 0 0 0;font-weight:normal;}
+.MODULO4 .btn_mas a:hover{text-decoration:none;font-weight:normal;}
+.MODULO4 .btn_mas a:active{text-decoration:none;font-weight:normal;}
+
+.MODULO4 .hoy{float:left;width:145px;height:auto;margin-bottom:10px; }
+.MODULO4 .hoy .calendario{float:left;width: 448px;height:auto; border-bottom:1px solid #B29200; border-left:1px solid #B29200; border-right:1px solid #B29200;padding-bottom:0px!important; padding-bottom:10px;border-top:1px solid #B29200}
+.MODULO4 .hoy .calendario .leyenda{width:100px; height:auto;margin:0 0 15px 5px;}
+.MODULO4 .hoy .calendario .leyenda p{font-family:Arial, Verdana, Helvetica, sans-serif; font-size:0.6em; padding:5px 5px 0px 0px;}
+.MODULO4 .hoy .calendario .leyenda img {float:left;padding-top:3px; margin-right:5px;}
+.MODULO4 .hoy .calendario table {width:138px;margin:0 0 10px 5px;}
+.MODULO4 .hoy .calendario .mes{ font-family:Verdana, Arial, Helvetica, sans-serif;font-size:0.6em;font-weight:bold; color:#9C1E3D; text-align:center;}
+.MODULO4 .hoy .calendario .dia{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:0.6em;font-weight:bold; color:#9C1E3D; text-align:center;}
+.MODULO4 .hoy .calendario .dia_actual{font-size:0.66em;height:auto;margin-top:1px; color:#000000; font-weight:bold; background-color:#FFFFFF}
+.MODULO4 .hoy .calendario .num_dia{font-size:0.66em;text-align:center;}
+.MODULO4 .hoy .calendario .color_amarillo{font-size:0.66em;width:13px; height:8px; margin-top:3px; background-color:#EFC868;text-align:center;}
+.MODULO4 .hoy .calendario .color_gris{font-size:0.66em;width:13px;height:8px;margin-top:3px; background-color:#C9CACB;text-align:center;}
+.MODULO4 .hoy .calendario .color_rojo{font-size:0.66em;width:13px;height:8px;margin-top:3px; background-color:#9C1E3D;text-align:center;}
+.MODULO4 .hoy .calendario .color_festivo{font-size:0.66em;float:left;width:13px; height:auto;margin-top:3px; background-color:#9C1E3D; color:#FFFFFF;text-align:center;}
+
+.MODULO_MES .hoy{float:left;width:145px;height:auto;margin-bottom:10px; }
+.MODULO_MES .hoy .calendario{float:left;width:145px;height:auto; border-bottom:1px solid #B29200; border-left:1px solid #B29200; border-right:1px solid #B29200;padding-bottom:0px!important; padding-bottom:10px;border-top:1px solid #B29200}
+.MODULO_MES .hoy .calendario .leyenda{width:100px; height:auto;margin:0 0 15px 5px;}
+.MODULO_MES .hoy .calendario .leyenda p{font-family:Arial, Verdana, Helvetica, sans-serif; font-size:0.6em; padding:5px 5px 0px 0px;}
+.MODULO_MES .hoy .calendario .leyenda img {float:left;padding-top:3px; margin-right:5px;}
+.MODULO_MES .hoy .calendario table {width:138px;margin:0 0 10px 5px;}
+.MODULO_MES .hoy .calendario .mes{ font-family:Verdana, Arial, Helvetica, sans-serif;font-size:0.6em;font-weight:bold; color:#9C1E3D; text-align:center;}
+.MODULO_MES .hoy .calendario .dia{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:0.6em;font-weight:bold; color:#9C1E3D; text-align:center;}
+.MODULO_MES .hoy .calendario .dia_actual{font-size:0.66em;height:auto;margin-top:1px; color:#000000; font-weight:bold; background-color:#FFFFFF}
+.MODULO_MES .hoy .calendario .num_dia{font-size:0.66em;text-align:center;}
+.MODULO_MES .hoy .calendario .color_amarillo{font-size:0.66em;width:13px; height:8px; margin-top:3px; background-color:#EFC868;text-align:center;}
+.MODULO_MES .hoy .calendario .color_gris{font-size:0.66em;width:13px;height:8px;margin-top:3px; background-color:#C9CACB;text-align:center;}
+.MODULO_MES .hoy .calendario .color_rojo{font-size:0.66em;width:13px;height:8px;margin-top:3px; background-color:#9C1E3D;text-align:center;}
+.MODULO_MES .hoy .calendario .color_festivo{font-size:0.66em;float:left;width:13px; height:auto;margin-top:3px; background-color:#9C1E3D; color:#FFFFFF;text-align:center;}
+

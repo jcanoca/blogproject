@@ -431,9 +431,22 @@ div.divider{
 	padding-left: 16px;
 	text-align: left;	
 	padding-top: 7px;
+	padding-bottom: 7px;
 	position: relative;
 	top: 5px;
 }
+
+select {
+    font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	font-size: 0.9em;    
+    padding-top: 2px;
+    padding-left: 16px;
+    padding-bottom: 2px;
+    color: #0395C5;
+    cursor: pointer;
+}
+
 
 /* MAIN VIZ ITEMS */
 

@@ -58,8 +58,14 @@
 	        			<div id="sidehead">Explore by Debate</div>
 	        			<div id="event_info"></div>
 	        			<div id="sideheadSub">Debates</div>
+	        			<div id="side_filter">
+							<select name="debates_filter" id="debates_filter" style="width: 100%;" onchange="Main.reload()">
+								<option selected value="day">By Day</option>
+								<option value="month">By Month</option>
+							</select>
+						</div>
 						<!-- http://stackoverflow.com/questions/838545/div-vertical-scrollbar-show -->
-	        			<div id="side_menus" style="height: 590px; overflow-y: scroll;"></div>
+	        			<div id="side_menus" style="height: 555px; overflow-y: scroll;"></div>
 	        		</div>
 	        		<div id="viz">
 	        			<div id="vector_layer" class="shell"></div>

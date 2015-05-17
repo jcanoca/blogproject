@@ -1,0 +1,128 @@
+ul, ol, dl, dt, dd, li, p, h1, h2, h3, h4, h5, h6, form, img, q, blockquote{margin:0px;padding:0px;border:0px;list-style-type:none; }
+
+/* LISTADO DE NOTAS DE PRENSA */
+#LISTADO {float:left; width:600px; height:auto; margin-bottom:10px;}
+
+/* RESULTADOS BUSQUEDA */
+#FOTOS_NOTAS{float:left;width:auto; height:auto; margin-right:10px;}
+#FOTOS_NOTAS .imagen{margin-bottom:20px;padding-left:0px}
+#FOTOS_NOTAS .imagen img{}
+#FOTOS_NOTAS .imagen .ico_ampliar{height:auto;margin:5px 0 5px 0; padding:0 0 1px 20px; background:url('../img/btn_ampliar.gif') no-repeat 0px 0px; font-family:Arial, Helvetica, sans-serif; font-size:0.66em; color:#626469}
+#FOTOS_NOTAS .imagen .ico_descarga{height:auto;margin:5px 0 5px 0; padding:0 0 1px 20px; background:url('../img/ico_descargar.gif') no-repeat 0px 0px; font-family:Arial, Helvetica, sans-serif; font-size:0.66em; color:#626469}
+#FOTOS_NOTAS .imagen p a{ text-decoration:underline; color:#626469;font-weight:normal;}
+#FOTOS_NOTAS .imagen p a:hover{text-decoration:none; color:#626469;font-weight:normal;}
+#FOTOS_NOTAS .imagen p a:active{text-decoration:underline; color:#626469;font-weight:normal;}
+
+#FOTOS_NOTAS .fondo_imagenes{float:left;width:288px;margin:0 5px 15px 0!important; margin:0 5px 10px 2px; padding:2px 5px 2px 5px; background-color:#f3f3f3; border:1px solid #cccccc; }
+#FOTOS_NOTAS .fondo_descargar_alta_calidad{float:left;width:298px; padding-left:0px; background-color:#f3f3f3; border:1px solid #cccccc; }
+
+/*#NOTA_PRENSA {float:left;width:435px;}*/
+.info_nota {width:auto;height:auto; margin-bottom:10px;}
+.info_nota .hora_sesion{width:auto; height:auto;margin:8px 0 8px 0; font-size:0.66em; font-weight:bold; color:#626469}
+.info_nota .titulo_rojo{float:left; width:auto; height:auto;margin:8px 0 8px 0; font-size:0.66em; font-weight:bold; color:#9C1E3D}
+
+.info_nota .grafico{float:left;width:auto;height:20px;margin-right:15px;padding:5px 0 0 19px;font-size:0.6em; background:url('../img/ico_grafico.gif') no-repeat 0px 5px;}
+.info_nota .audio{float:left;width:auto;height:20px;margin-right:15px;padding:5px 0 0 19px;font-size:0.6em; background:url('../img/ico_audio.gif') no-repeat 0px 5px;}
+.info_nota .video{float:left;width:auto;height:20px;margin-right:15px;padding:5px 0 0 19px;font-size:0.6em; background:url('../img/ico_video.gif') no-repeat 0px 5px;}
+
+.info_nota .descargar{float:left;width:auto;height:20px;margin-right:15px;padding:5px 0 0 19px;font-size:0.6em; background:url('../img/ico_descargar.gif') no-repeat 0px 5px;}
+
+.info_nota .opciones{float:left;width:auto;height:auto; margin:10px 0 10px 0; padding:5px 0 5px 5px; background-color:#F3F3F3}
+
+.info_nota a{text-decoration:none; color:#9C1E3D;}
+.info_nota a:hover{text-decoration:underline;font-weight:normal;}
+.info_nota a:active{text-decoration:underline;font-weight:normal;}
+
+/* LEYES */
+#NOTA_PRENSA ul{width:600px;margin-top:10px;}
+#NOTA_PRENSA li {width:auto; height:auto;padding-bottom:10px;font-size:1.1em;color:#626469;}
+#NOTA_PRENSA li span {font-weight:bold;}
+
+.info_nota .texto_sesion{width:auto; height:auto;padding-bottom:10px;font-size:0.66em;color:#626469;}
+.info_nota .resolucion{width:auto; height:auto;margin-bottom:10px;font-size:0.66em;font-weight:bold;color:#626469;}
+.info_nota .texto_sesion span {font-weight:bold;}
+
+#NOTA_PRENSA .info_nota .texto_sesion{float:left;width:600px; height:auto;padding-bottom:10px;font-size:0.66em;color:#626469;}
+#NOTA_PRENSA .info_nota .resolucion{width:600px; height:auto;margin-bottom:10px;font-size:0.66em;font-weight:bold;color:#626469;}
+#NOTA_PRENSA .info_nota .texto_sesion span {font-weight:bold;}
+#NOTA_PRENSA .info_nota .titulo_rojo{float:left; width:435px; height:auto;margin:8px 0 8px 0; font-size:0.66em; font-weight:bold; color:#9C1E3D}
+
+#NOTA_PRENSA2 {float:left;width:600px;}
+#NOTA_PRENSA2 .info_nota {width:600px;height:auto; margin-bottom:10px;}
+#NOTA_PRENSA2 .info_nota .hora_sesion{float:left; width:435px; height:auto;margin:8px 0 8px 0; font-size:0.66em; font-weight:bold; color:#626469}
+#NOTA_PRENSA2 .info_nota .titulo_rojo{float:left; width:435px; height:auto;margin:8px 0 8px 0; font-size:0.66em; font-weight:bold; color:#9C1E3D}
+
+#NOTA_PRENSA2 .info_nota .grafico{float:left;width:auto;height:20px;margin-right:15px;padding:5px 0 0 19px;font-size:0.6em; background:url('../img/ico_grafico.gif') no-repeat 0px 5px;}
+#NOTA_PRENSA2 .info_nota .audio{float:left;width:auto;height:20px;margin-right:15px;padding:5px 0 0 19px;font-size:0.6em; background:url('../img/ico_audio.gif') no-repeat 0px 5px;}
+#NOTA_PRENSA2 .info_nota .video{float:left;width:auto;height:20px;margin-right:15px;padding:5px 0 0 19px;font-size:0.6em; background:url('../img/ico_video.gif') no-repeat 0px 5px;}
+
+#NOTA_PRENSA2 .info_nota .descargar{float:left;width:auto;height:20px;margin-right:15px;padding:5px 0 0 19px;font-size:0.6em; background:url('../img/ico_descargar.gif') no-repeat 0px 5px;}
+
+#NOTA_PRENSA2 .opciones{float:left;width:100%;height:auto; margin:10px 0 10px 0; padding:5px 0 5px 5px; background-color:#F3F3F3}
+
+#NOTA_PRENSA2 .info_nota a{text-decoration:none; color:#9C1E3D;}
+#NOTA_PRENSA2 .info_nota a:hover{text-decoration:underline;font-weight:normal;}
+#NOTA_PRENSA2 .info_nota a:active{text-decoration:underline;font-weight:normal;}
+
+/* LEYES */
+#NOTA_PRENSA2 ul{width:600px;margin-top:10px;}
+#NOTA_PRENSA2 li {width:auto; height:auto;padding-bottom:10px;font-size:1.1em;color:#626469;}
+#NOTA_PRENSA2 li span {font-weight:bold;}
+/* FIN LEYES */
+#NOTA_PRENSA2 .info_nota .texto_sesion{width:600px; height:auto;padding-bottom:10px;font-size:0.66em;color:#626469;}
+#NOTA_PRENSA2 .info_nota .resolucion{width:600px; height:auto;margin-bottom:10px;font-size:0.66em;font-weight:bold;color:#626469;}
+#NOTA_PRENSA2 .info_nota .texto_sesion span {font-weight:bold;}
+
+/*Listado de fotos*/
+
+.list_fotos{width:610px;height:auto;}
+.franja_fotos {float:left; height:auto;}
+.foto {float:left;width:140px;height:auto;margin:0 10px 0 0; padding-bottom:10px;}
+.img_centrado{text-align:center; margin-bottom:3px;height:101px;}
+.foto_final {float:left;width:140px;height:auto;margin:0 0 0 0;padding-bottom:10px;}
+.pie_foto{padding:0 5px 0 5px;font-size:0.66em; color:#626469;width:135px;height:60px;}
+.pie_foto a{text-decoration:none;color:#626469;}
+.pie_foto a:hover{text-decoration:underline;color:#626469;}
+.pie_foto a:active{text-decoration:underline;color:#9C1E3D;}
+.pie_fecha{padding:0 5px 0 5px;font-size:0.66em; color:#b29200;}
+
+/* TEMAS */
+.list_temas{width:610px;height:auto;}
+.list_fotos_temas{width:600px;height:auto;}
+.franja_fotos_temas {float:left;width:100%;height:auto;}
+.menu_temas {float:left;width:140px;height:auto;margin:0 5px 10px 0; padding-right:5px; border-right:1px solid #F3F3F3}
+.foto_temas {float:left;width:140px;height:auto;margin:0 5px 10px 0;}
+/* SIN ACTIVIDAD EN AGENDA Y PROGRAMACION */
+.sinactividad{width:auto; height:25px; padding-top:25px; font-size:1.3em; font-weight:bold; text-align:center; color:#b29200;}
+.fila{float:left;width:auto;height:auto; margin-bottom:10px; }
+
+/* boton imprimir */
+.imprimir{float:right; width:auto; height:15px; margin-top:10px; background:url('../img/ico_print.gif') no-repeat 0px 0px; padding:1px 0 0 20px; font-family:Arial, Verdana, Helvetica, sans-serif; font-size:0.66em; }
+.imprimir a, a:active{text-decoration:none;color:#626469;}
+.imprimir a:hover {text-decoration:underline;}
+
+/* Agenda histórica */
+.list_temas_agenda{width:610px;height:auto;}
+.list_fotos_temas_agenda{width:600px;height:auto;}
+.franja_fotos_temas_agenda {float:left;width:455px;height:auto;}
+.menu_temas_agenda {float:left;width:140px;height:auto;margin:0 5px 10px 0; padding-right:5px; border-right:1px solid #F3F3F3}
+.foto_temas_agenda {float:left;width:140px;height:auto;margin:0 5px 10px 0;}
+
+.fila_agenda{float:left;width:auto;height:auto; margin-bottom:10px; }
+.list_fotos_agenda{width:610px;height:auto;}
+
+/*Menu años y temas para la agenda historica de diputados*/
+.soporte_year_agenda {float:left;width:148px; height:auto;margin:0 0px 10px 0;padding:0px 0px 0px 0; font-size:0.58em; font-weight:bold; color:#000000; background-color:#F3F3F3;}
+.soporte_year_agenda ul{ list-style:none}
+.soporte_year_agenda li{display:inline;width:auto; line-height:22px;}
+.soporte_year_agenda li a{color:#000000; text-decoration:none;padding:5px;}
+.soporte_year_agenda li a:hover{color:#9C1E3D; text-decoration:underline;font-weight:bold;padding:5px;}
+.soporte_year_agenda li a:active{color:#FFFFFF; text-decoration:none;font-weight:bold; background-color:#9C1E3D;padding:5px; margin-right:0px; font-weight:bold;}
+.soporte_year_agenda .elegido{color:#FFFFFF; text-decoration:none;font-weight:bold; background-color:#9C1E3D;padding:5px; margin-right:0px; font-weight:bold;}
+.soporte_year_agenda .elegido li a{color:#FFFFFF; text-decoration:none;font-weight:bold; background-color:#9C1E3D;padding:5px; margin-right:0px; font-weight:bold;}
+.soporte_year_agenda .elegido li a:hover{color:#FFFFFF; text-decoration:underline;font-weight:bold; background-color:#9C1E3D;padding:5px; margin-right:0px; font-weight:bold;}
+.soporte_year_agenda .elegido li a:active{color:#FFFFFF; text-decoration:none;font-weight:bold; background-color:#9C1E3D;padding:5px; margin-right:0px; font-weight:bold;}
+
+/* EStilo para la nota de los campos obligatorios de los formularios */
+
+.pie_foto_formulario{padding:0 5px 0 5px;font-size:0.66em; color:#626469;width:417px;height:60px;}

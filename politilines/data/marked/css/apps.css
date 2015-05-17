@@ -1,0 +1,264 @@
+ul, ol, dl, dt, dd, li, p, h1, h2, h3, h4, h5, h6, form, img, q, blockquote{margin:0px;padding:0px;border:0px;list-style-type:none; }
+
+/* Formulario genérico */
+
+#FORMULARIO_CHRISTMA{float:left;width:500px;height:auto;margin:0 0 10px 0;background:url('../img/bg_form.gif') repeat-y 0px 0px;}
+#IMAGEN_CHRISTMA{float:left;height:auto;margin-top:50px;text-align:center;width:150px;}
+
+#FORMULARIO_CHRISTMA .campos{ width:600px;height:auto;}
+#FORMULARIO_CHRISTMA .campos .fila_form{ float:left; width:600px; height:auto;margin:0 0 15px 0;}
+#FORMULARIO_CHRISTMA .campos .fila_form p{float:left;width:163px; height:auto;margin:0 20px 0 0; padding-top:3px; text-align:right; font-size:0.66em; font-weight:bold; color:#626469;}
+#FORMULARIO_CHRISTMA .campos .fila_form span{float:left;width:417px;height:auto; color:#626469;}
+#FORMULARIO_CHRISTMA .campos .fila_form input{float:left;width:300px; height:15px; line-height:14px; font-size:0.66em; color:#626469; border:1px solid #626469;}
+#FORMULARIO_CHRISTMA .campos .fila_form .caja_fecha{float:left;width:60px; height:15px; line-height:14px; font-size:0.66em; color:#626469; border:1px solid #626469;}
+#FORMULARIO_CHRISTMA .campos .fila_form .caja_grande{float:left;width:155px; height:15px; line-height:14px; font-size:0.66em; color:#626469; border:1px solid #626469;}
+#FORMULARIO_CHRISTMA .campos .fila_form .caja_mediana{float:left;width:113px; height:15px; line-height:14px; font-size:0.66em; color:#626469; border:1px solid #626469;}
+#FORMULARIO_CHRISTMA .campos .fila_form .caja_mini{float:left;width:25px; height:16px;font-size:0.6em; color:#626469; border:1px solid #626469; margin-right:5px;}
+#FORMULARIO_CHRISTMA .campos .fila_form .caja_mini_ano{float:left;width:40px; height:16px;font-size:0.6em; color:#626469; border:1px solid #626469; margin-right:5px;}
+#FORMULARIO_CHRISTMA .campos .fila_form .fecha{width:auto; height:auto;margin:0 5px 0 10px; padding-top:3px; text-align:right; font-size:0.66em; font-weight:bold; color:#626469;}
+#FORMULARIO_CHRISTMA .campos .fila_form select{float:left;width:auto; max-height:22px; min-height:20px;font-size:0.6em; color:#626469; border:1px solid #626469;}
+#FORMULARIO_CHRISTMA .campos .fila_form span .botonActualizar{float:left; width:69px; height: 16px; margin:2px 0 0 5px; border:0px}
+#FORMULARIO_CHRISTMA .campos .fila_form .btn_elegir{float:left; margin:3px 0 0 5px;}
+#FORMULARIO_CHRISTMA .campos .fila_form .descripcion{float:left;width:427px;height:auto; margin:0 0 5px 0; padding-top:3px;font-size:0.6em;color:#626469;}
+#FORMULARIO_CHRISTMA .campos .fila_form img { float:left; margin: 3px 5px 0 5px;}
+#FORMULARIO_CHRISTMA .campos .fila_botones {float:right; width:417px; height:auto; margin-bottom:5px;}
+#FORMULARIO_CHRISTMA .campos .fila_botones_boletin {float:right; width:417px; height:12px; margin-bottom:5px;}
+#FORMULARIO_CHRISTMA .campos .fila_botones_boletin span{width:auto; height:auto; margin:0 0 5px 85px;font-size:0.6em;color:#626469;}
+
+#FORMULARIO_CHRISTMA .campos .fila_form2{ float:left; width:800px; height:auto;margin:0 0 0 0;}
+#FORMULARIO_CHRISTMA .campos .fila_form2 span{float:left;width:185px;height:auto; color:#626469;}
+#FORMULARIO_CHRISTMA .campos .fila_form2 p{float:left;width:585px; height:auto;margin:0 20px 0 0; padding-top:3px; text-align:left; font-size:0.66em; color:#626469;}
+#FORMULARIO_CHRISTMA .campos .fila_form2 .texto_checkbox{float:left;width:163px; height:auto;margin:0 20px 0 0; padding-top:3px; text-align:right; font-size:0.66em; font-weight:bold; color:#626469;}
+#FORMULARIO_CHRISTMA .campos .fila_form2 input{float:right;width:58px; height:15px; line-height:14px; font-size:0.66em; color:#626469; border:0px solid #626469;}
+#FORMULARIO_CHRISTMA .campos .fila_form2 .casilla_seleccion{float:left;width:300px; height:15px; line-height:14px; font-size:0.66em; color:#626469; border:0px solid #626469;}
+
+
+
+#FORMULARIO_CHRISTMA .campos #capaErrores{ float:left; width:500px; height:auto;margin:0px 0 15px 0;}
+#FORMULARIO_CHRISTMA .campos #capaErrores .capaErrores { font-weight:bold; color:#9C1E3D;font-size:0.66em; }
+#FORMULARIO_CHRISTMA .campos #capaErrores .capaErrores p{float:left;width:163px; height:auto;margin:0 20px 0 0; padding-top:3px; text-align:right; font-weight:bold; color:#9C1E3D;}
+
+
+#FORMULARIO_CHRISTMA .campos .fila_form_peticionSalas{ float:left; width:600px; height:auto;margin:0 0 15px 0; padding-top:10px}
+#FORMULARIO_CHRISTMA .campos .fila_form select_novedades{float:left;width:auto; max-height:22px; min-height:20px;font-size:0.57em; color:#626469; border:1px solid #626469;}
+
+#FORMULARIO_CHRISTMA .campos .fila_form .caja_mini_salas{float:left;width:25px; height:16px;color:#626469; border:1px solid #626469; margin-right:5px;}
+#FORMULARIO_CHRISTMA .campos .fila_form .caja_mini_hora_salas{float:left;width:35px; height:16px;color:#626469; border:1px solid #626469; margin-right:5px;}
+#FORMULARIO_CHRISTMA .campos .fila_form .caja_mini_extension_salas{float:left;width:35px; height:16px;color:#626469; border:1px solid #626469; margin-right:5px;}
+#FORMULARIO_CHRISTMA .campos .fila_form .caja_mini_ano_salas{float:left;width:40px; height:16px;color:#626469; border:1px solid #626469; margin-right:5px;}
+#FORMULARIO_CHRISTMA .campos .fila_form .peticionSalas span{float:left;color:#626469;font-size:0.66em;}
+#FORMULARIO_CHRISTMA .campos .fila_form .boletinNovedades select{float:left;width:auto; max-height:22px; min-height:20px;font-size:0.6em; color:#626469; border:1px solid #626469;}
+
+#FORMULARIO_CHRISTMA .campos .fila_form_nota{ float:left; width:500px; height:auto;margin:0 0 15px 0;}
+#FORMULARIO_CHRISTMA .campos .fila_form_nota .nota{float:left;width:310px; height:auto;margin:0 0px 0 0; padding-top:3px; text-align:left; font-size:0.66em; color:red;}
+#FORMULARIO_CHRISTMA .campos .fila_form_nota p{float:left;width:163px; height:auto;margin:0 20px 0 0; padding-top:3px; text-align:right; font-size:0.66em; font-weight:bold; color:red;}
+#FORMULARIO_CHRISTMA .campos .fila_form textarea{float:left;width:300px; height:70px; line-height:14px; font-size:0.66em; color:#626469; border:1px solid #626469;}
+
+
+#FORMULARIO_AGENDA span{float:left;width:100%;height:auto; color:#626469; font-size:0.66em;}
+#FORMULARIO_AGENDA form input{float:left;width:100px; height:18px; line-height:14px; font-size:0.66em; color:#626469; border:1px solid #626469;}
+#FORMULARIO_AGENDA form .caja_fecha{float:left;width:58px; height:18px; line-height:14px; font-size:0.66em; color:#626469; border:1px solid #626469;}
+#FORMULARIO_AGENDA form .caja_mini{float:left;width:58px; height:18px;font-size:0.66em; color:#626469; border:1px solid #626469; margin-right:5px;}
+#FORMULARIO_AGENDA form .caja_mini_ano{float:left;width:35px; height:16px;font-size:0.6em; color:#626469; border:1px solid #626469; margin-right:5px;}
+#FORMULARIO_AGENDA form .fecha{width:auto; height:auto;margin:0 5px 0 10px; padding-top:3px; text-align:right; font-size:0.66em; font-weight:bold; color:#626469;}
+#FORMULARIO_AGENDA form select{float:left;width:auto; max-height:22px; min-height:20px;font-size:0.6em; color:#626469; border:1px solid #626469;}
+#FORMULARIO_AGENDA form .btn_elegir{float:left; margin:3px 0 0 5px;}
+#FORMULARIO_AGENDA form .elementoAgenda{ border-bottom:solid; border-bottom-color:#CCCCCC; border-bottom-width:1px; padding-bottom:10px; margin-bottom:10px}
+
+/* BUSQUEDA DE INICIATIVAS */
+#FORMULARIO{float:left;width:600px;height:auto;margin:0 0 10px 0;background:url('../img/bg_form.gif') repeat-y 0px 0px;}
+#FORMULARIO .campos{ width:600px;height:auto;}
+#FORMULARIO .campos .fila_form{ float:left; width:600px; height:auto;margin:0 0 15px 0;}
+#FORMULARIO .campos .fila_form p{float:left;width:163px; height:auto;margin:0 20px 0 0; padding-top:3px; text-align:right; font-size:0.66em; font-weight:bold; color:#626469;}
+#FORMULARIO .campos .fila_form span{float:left;width:417px;height:auto; color:#626469;}
+#FORMULARIO .campos .fila_form input{float:left;width:300px; height:15px; line-height:14px; font-size:0.66em; color:#626469; border:1px solid #626469;}
+#FORMULARIO .campos .fila_form .caja_fecha{float:left;width:60px; height:15px; line-height:14px; font-size:0.66em; color:#626469; border:1px solid #626469;}
+#FORMULARIO .campos .fila_form .caja_grande{float:left;width:155px; height:15px; line-height:14px; font-size:0.66em; color:#626469; border:1px solid #626469;}
+#FORMULARIO .campos .fila_form .caja_mediana{float:left;width:113px; height:15px; line-height:14px; font-size:0.66em; color:#626469; border:1px solid #626469;}
+#FORMULARIO .campos .fila_form .caja_mini{float:left;width:25px; height:16px;font-size:0.6em; color:#626469; border:1px solid #626469; margin-right:5px;}
+#FORMULARIO .campos .fila_form .caja_mini_ano{float:left;width:40px; height:16px;font-size:0.6em; color:#626469; border:1px solid #626469; margin-right:5px;}
+#FORMULARIO .campos .fila_form .fecha{width:auto; height:auto;margin:0 5px 0 10px; padding-top:3px; text-align:right; font-size:0.66em; font-weight:bold; color:#626469;}
+#FORMULARIO .campos .fila_form select{float:left;width:auto; max-height:22px; min-height:20px;font-size:0.6em; color:#626469; border:1px solid #626469;}
+#FORMULARIO .campos .fila_form span .botonActualizar{float:left; width:69px; height: 16px; margin:2px 0 0 5px; border:0px}
+#FORMULARIO .campos .fila_form .btn_elegir{float:left; margin:3px 0 0 5px;}
+#FORMULARIO .campos .fila_form .descripcion{float:left;width:427px;height:auto; margin:0 0 5px 0; padding-top:3px;font-size:0.6em;color:#626469;}
+#FORMULARIO .campos .fila_form img { float:left; margin: 3px 5px 0 5px;}
+#FORMULARIO .campos .fila_botones {float:right; width:417px; height:30px; margin-bottom:5px;}
+#FORMULARIO .campos .fila_botones_boletin {float:right; width:417px; height:12px; margin-bottom:5px;}
+#FORMULARIO .campos .fila_botones_boletin span{width:auto; height:auto; margin:0 0 5px 85px;font-size:0.6em;color:#626469;}
+
+
+#FORMULARIO .campos #capaErrores{ float:left; width:600px; height:auto;margin:10px 0 15px 0;}
+#FORMULARIO .campos #capaErrores .capaErrores { font-weight:bold; color:#9C1E3D;font-size:0.66em; }
+#FORMULARIO .campos #capaErrores .capaErrores p{float:left;width:163px; height:auto;margin:0 20px 0 0; padding-top:3px; text-align:right; font-weight:bold; color:#9C1E3D;}
+
+
+#FORMULARIO .campos .fila_form_peticionSalas{ float:left; width:600px; height:auto;margin:0 0 15px 0; padding-top:10px}
+#FORMULARIO .campos .fila_form select_novedades{float:left;width:auto; max-height:22px; min-height:20px;font-size:0.57em; color:#626469; border:1px solid #626469;}
+
+#RESULTADOS_BUSQUEDA ul{list-style:none; margin:0 5px 0 0;}
+#RESULTADOS_BUSQUEDA li {display:inline;line-height:0.78em;}
+
+/*#RESULTADOS_BUSQUEDA .resultados {float:left; width:595px;height:auto; }*/
+#RESULTADOS_BUSQUEDA .resultados {float:left; width:600px;height:auto;}
+#RESULTADOS_BUSQUEDA .resultados .resultados_competencias{float:left; width:600px; height:auto;margin:10px 0 0 0; padding-top:0;}
+#RESULTADOS_BUSQUEDA .resultados .resultados_competencias2{float:left; width:600px; height:auto; padding-top:8px;}
+#RESULTADOS_BUSQUEDA .resultados .titulo_competencias{float:left; width:600px; height:auto; font-size:0.72em; font-weight:bold;margin:0 0 10px 0; padding-top:8px; border-top:1px solid #E2E2E2;}
+#RESULTADOS_BUSQUEDA .resultados .titulo2_competencias{float:left; width:590px; height:auto; font-size:0.72em; font-weight:bold; color:#9C1E3D;margin:0 0 10px 0;}
+#RESULTADOS_BUSQUEDA .resultados .subtitulo_competencias{font-size:0.66em; font-weight:bold; margin:0 0 10px 0;color:#9C1E3D;}
+
+#RESULTADOS_BUSQUEDA .resultados .resultados_encontrados {float:left; width:600px; height:auto; margin-bottom:8px;}
+#RESULTADOS_BUSQUEDA .resultados .resultados_encontrados .titulo_iniciativa{float:left; width:592px; height:auto; background:url('../img/arrow_resultados.gif') no-repeat 0px 4px;padding:0 0 0 10px; font-size:0.66em;font-weight:bold;color:#626469}
+#RESULTADOS_BUSQUEDA .resultados .resultados_encontrados .titulo_iniciativa span{color:#b29200}
+#RESULTADOS_BUSQUEDA .resultados .resultados_encontrados .titulo_iniciativa a{text-decoration:none; color:#626469;font-size:1.08em}
+#RESULTADOS_BUSQUEDA .resultados .resultados_encontrados .titulo_iniciativa a:hover{font-weight:bold; text-decoration:underline; color:#9C1E3D}
+#RESULTADOS_BUSQUEDA .resultados .resultados_encontrados .titulo_iniciativa a:active{font-weight:bold; text-decoration:underline}
+#RESULTADOS_BUSQUEDA .resultados .resultados_encontrados .subtitulo_iniciativa{float:left;width:595px; height:auto;padding:0 0 0 10px;font-size:0.66em; color:#626469;}
+#RESULTADOS_BUSQUEDA .resultados .resultados_encontrados .subtitulo_iniciativa a{text-decoration:none; color:#9C1E3D;}
+#RESULTADOS_BUSQUEDA .resultados .resultados_encontrados .subtitulo_iniciativa a:hover{text-decoration:underline; color:#9C1E3D;}
+#RESULTADOS_BUSQUEDA .resultados .resultados_encontrados .subtitulo_iniciativa a:active{text-decoration:none; color:#000000;}
+#RESULTADOS_BUSQUEDA .resultados .resultados_encontrados .tramitacion{float:left; width:595px; height:auto;padding:0 0 0 10px; font-size:0.66em;font-weight:bold;color:#626469}
+
+#RESULTADOS_BUSQUEDA .resultados .ficha_iniciativa {float:left; width:595px; height:auto; margin-bottom:0px;}
+#RESULTADOS_BUSQUEDA .resultados .ficha_iniciativa .titulo_iniciativa{float:left; width:595px; height:auto;padding:0 0 10px 0; font-size:0.66em;font-weight:bold;color:#626469}
+#RESULTADOS_BUSQUEDA .resultados .ficha_iniciativa .apartado_iniciativa{float:left; width:595px; height:auto;font-size:0.66em;color:#9C1E3D}
+#RESULTADOS_BUSQUEDA .resultados .ficha_iniciativa .texto{float:left; width:595px; height:auto;padding-bottom:10px;font-size:0.66em;color:#626469;}
+#RESULTADOS_BUSQUEDA .resultados .ficha_iniciativa .texto a{text-decoration:underline;color:#626469; font-weight: bold;font-size:1.08em}
+#RESULTADOS_BUSQUEDA .resultados .ficha_iniciativa .texto a:hover{text-decoration:none;  font-weight: bold;}
+#RESULTADOS_BUSQUEDA .resultados .ficha_iniciativa .texto a:active{text-decoration:none;  font-weight: bold;}
+#RESULTADOS_BUSQUEDA .resultados .ficha_iniciativa .texto span a{ text-decoration:none; color:#9C1E3D}
+#RESULTADOS_BUSQUEDA .resultados .ficha_iniciativa .texto span a:hover{text-decoration:underline; color:#9C1E3D}
+#RESULTADOS_BUSQUEDA .resultados .ficha_iniciativa .texto span a:active{text-decoration:underline; color:#9C1E3D}
+
+
+/*#RESULTADOS_BUSQUEDA_POPUP .resultados {float:left; width:530;height:auto; }*/
+#RESULTADOS_BUSQUEDA_POPUP .resultados {float:left; width:450px;height:auto; margin-left: 10px; }
+#RESULTADOS_BUSQUEDA_POPUP .resultados .resultados_competencias{float:left; width:450px; height:auto;margin:10px 0 0 0; padding-top:0;}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .resultados_competencias2{float:left; width:450px; height:auto; padding-top:8px;}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .titulo_competencias{float:left; width:450px; height:auto; font-size:0.72em; font-weight:bold;margin:0 0 10px 0; padding-top:8px; border-top:1px solid #E2E2E2;}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .titulo2_competencias{float:left; width:450px; height:auto; font-size:0.72em; font-weight:bold; color:#9C1E3D;margin:0 0 10px 0;}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .subtitulo_competencias{font-size:0.66em; font-weight:bold; margin:0 0 10px 0;color:#9C1E3D;}
+
+#RESULTADOS_BUSQUEDA_POPUP .resultados .resultados_encontrados {float:left; width:450px; height:auto; margin-bottom:8px;}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .resultados_encontrados .titulo_iniciativa{float:left; width:450px; height:auto; background:url('../img/arrow_resultados.gif') no-repeat 0px 4px;padding:0 0 0 10px; font-size:0.66em;font-weight:bold;color:#626469}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .resultados_encontrados .titulo_iniciativa span{color:#b29200}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .resultados_encontrados .titulo_iniciativa a{text-decoration:none; color:#626469}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .resultados_encontrados .titulo_iniciativa a:hover{font-weight:bold; text-decoration:underline; color:#9C1E3D}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .resultados_encontrados .titulo_iniciativa a:active{font-weight:bold; text-decoration:underline}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .resultados_encontrados .subtitulo_iniciativa{float:left;width:450px; height:auto;padding:0 0 0 10px;font-size:0.66em; color:#626469;}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .resultados_encontrados .subtitulo_iniciativa a{text-decoration:none; color:#9C1E3D;}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .resultados_encontrados .subtitulo_iniciativa a:hover{text-decoration:underline; color:#9C1E3D;}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .resultados_encontrados .subtitulo_iniciativa a:active{text-decoration:none; color:#000000;}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .resultados_encontrados .tramitacion{float:left; width:450px; height:auto;padding:0 0 0 10px; font-size:0.66em;font-weight:bold;color:#626469}
+
+#RESULTADOS_BUSQUEDA_POPUP .resultados .ficha_iniciativa {float:left; width:450px; height:auto; margin-bottom:0px;}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .ficha_iniciativa .titulo_iniciativa{float:left; width:450px; height:auto;padding:0 0 10px 0; font-size:0.66em;font-weight:bold;color:#626469}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .ficha_iniciativa .apartado_iniciativa{float:left; width:450px; height:auto;font-size:0.66em;color:#9C1E3D}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .ficha_iniciativa .texto{float:left; width:450px; height:auto;padding-bottom:10px;font-size:0.66em;color:#626469;}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .ficha_iniciativa .texto a{text-decoration:underline;color:#626469;}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .ficha_iniciativa .texto a:hover{text-decoration:none;}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .ficha_iniciativa .texto a:active{text-decoration:none;}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .ficha_iniciativa .texto span a{ text-decoration:none; color:#9C1E3D}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .ficha_iniciativa .texto span a:hover{text-decoration:underline; color:#9C1E3D}
+#RESULTADOS_BUSQUEDA_POPUP .resultados .ficha_iniciativa .texto span a:active{text-decoration:underline; color:#9C1E3D}
+
+
+
+#RESULTADOS_BUSQUEDA .resultados_competencias .ficha_iniciativa .indentado_ini{padding:0 0 0 30px;}
+
+
+
+
+
+/* LEGISLATURAS SELECT DERECHA */
+
+#CONSULTALEG {float:left;width:300px; height:auto; margin-bottom:10px; padding:10px 0 10px 0; font-size:0.66em; background-color:#F3F3F3}
+#CONSULTALEG select{width:auto;height:auto; margin-top:5px; border:1px solid #626469; font-size:0.95em; line-height:0.6em; color:#626469;}
+
+#CONSULTALEG_MINI {float:left;width:150px; height:auto; padding:0 0 5px 0; background-color:#F3F3F3}
+
+#CONSULTALEG_MINI select{font-size:0.54em; width:135px;height:auto; margin-top:5px; margin-left:5px; border:1px solid #626469; line-height:0.6em; color:#626469;}
+#CONSULTALEG_MINI .titulares3 {float:left;width:145px;font-size:0.66em; padding-left:5px; margin:5px 5px 0 0;}
+#CONSULTALEG_MINI input {margin:5px 0 0 0;}
+
+/* DIARIO DE SESIONES */
+.diario{float:left;width:600px; height:auto;}
+
+/* HEMICICLO */
+#posiciones_dip{float:left;}
+.datos_dip{text-align:center;float:left;width:209px; height:auto; margin:30px 0 0 15px;}
+.datos_dip .imagen_dip{text-align:center;height:100px;}
+.capa_dip{width:auto; height:auto;margin-top:10px;padding-bottom:10px; border-top:1px solid #E3E3E3;border-bottom:1px solid #E3E3E3;}
+.capa_dip .nombre {font-size:0.66em;font-weight:bold;margin-top:10px;text-align:center;}
+.capa_dip .circunscripcion {font-size:0.66em;padding:0 5px 0 5px;font-weight:bold;text-align:center;color:#9C1E3D}
+.capa_dip .grupo {font-size:0.66em;padding:0 5px 0 5px;font-weight:bold;text-align:center;color:#9C1E3D}
+
+#PIE_FORMATO {float:right;width:595px; height:auto; font-size:0.6em;color:#626469;font-family: Arial, Verdana, Helvetica, sans-serif;}
+
+.composicion  {float:left; width:100%; height:auto;margin-right:10px;}
+.composicion img {margin:10px 0 10px 5px;}
+.composicion .listado_escanos {float:left;width:auto; height:auto; margin-top:10px;}
+.composicion li{float:left; width:100%; height:auto; margin:2px 5px 0 5px;font-size:0.66em;font-weight:bold; color:#626469; }
+.composicion li a{ height:auto; font-weight:bold; color:#626469; }
+.composicion li a:hover{height:auto; font-weight:bold; color:#626469; }
+.composicion li a:active{height:auto; font-weight:bold; color:#626469; }
+.composicion li img {margin:0 5px 0 0;}
+.composicion li span {font-weight:normal;}
+
+/* FORMULARIO DE PETICION DE SALAS */
+
+#FORMULARIO .campos .fila_form .caja_mini_salas{float:left;width:25px; height:16px;color:#626469; border:1px solid #626469; margin-right:5px;}
+#FORMULARIO .campos .fila_form .caja_mini_ano_salas{float:left;width:40px; height:16px;color:#626469; border:1px solid #626469; margin-right:5px;}
+#FORMULARIO .campos .fila_form .caja_mini_hora_salas{float:left;width:35px; height:16px;color:#626469; border:1px solid #626469; margin-right:5px;}
+#FORMULARIO .campos .fila_form .caja_mini_extension_salas{float:left;width:35px; height:16px;color:#626469; border:1px solid #626469; margin-right:5px;}
+#FORMULARIO .campos .fila_form .peticionSalas span{float:left;color:#626469;font-size:0.66em;}
+#FORMULARIO .campos .fila_form .boletinNovedades select{float:left;width:auto; max-height:22px; min-height:20px;font-size:0.6em; color:#626469; border:1px solid #626469;}
+
+#FORMULARIO .campos .fila_form_nota{ float:left; width:600px; height:auto;margin:0 0 15px 0;}
+#FORMULARIO .campos .fila_form_nota .nota{float:left;width:385px; height:auto;margin:0 20px 0 0; padding-top:3px; text-align:left; font-size:0.66em; color:red;}
+#FORMULARIO .campos .fila_form_nota p{float:left;width:163px; height:auto;margin:0 20px 0 0; padding-top:3px; text-align:right; font-size:0.66em; font-weight:bold; color:red;}
+#FORMULARIO .campos .fila_form textarea{float:left;width:300px; height:70px; line-height:14px; font-size:0.66em; color:#626469; border:1px solid #626469;}
+
+
+/* FORMULARIO POST */
+#FORMULARIO_POST{float:left;width:450px;height:auto;margin:0 0 5px 0;}
+#FORMULARIO_POST .campos{ width:450px;height:auto;}
+#FORMULARIO_POST .campos .fila_form{ float:left; width:450px; height:auto;margin:0 0 15px 0;}
+#FORMULARIO_POST .campos .fila_form p{float:left;width:113px; height:auto;margin:0 20px 0 0; padding-top:3px; text-align:right; font-size:0.66em; font-weight:bold; color:#626469;}
+#FORMULARIO_POST .campos .fila_form span{float:left;width:317px;height:auto; color:#626469;}
+#FORMULARIO_POST .campos .fila_form input{float:left;width:300px; height:15px; line-height:14px; font-size:0.66em; color:#626469; border:1px solid #626469;}
+#FORMULARIO_POST .campos .fila_form img { float:left; margin: 3px 5px 0 5px;}
+#FORMULARIO_POST .campos .fila_form .obligatorios {float:left;width:213px; height:auto;margin:0 20px 0 0; padding-top:3px; text-align:left; font-size:0.66em; font-weight:bold; color:#626469;}
+#FORMULARIO_POST .campos .fila_botones {float:right; width:317px; height:12px; margin-bottom:5px;}
+
+#FORMULARIO_POST .campos #capaErrores{ float:left; width:500px; height:auto;margin:10px 0 15px 0;}
+#FORMULARIO_POST .campos #capaErrores .capaErrores { font-weight:bold; color:#9C1E3D;font-size:0.66em; }
+#FORMULARIO_POST .campos #capaErrores .capaErrores p{float:left;width:103px; height:auto;margin:0 20px 0 0; padding-top:3px; text-align:right; font-weight:bold; color:#9C1E3D;}
+
+/* SOLICITUD DE ESTADISTICAS INE */
+#FORMULARIO .campos .fila_form2{ float:left; width:800px; height:auto;margin:0 0 0 0;}
+#FORMULARIO .campos .fila_form2 span{float:left;width:185px;height:auto; color:#626469;}
+#FORMULARIO .campos .fila_form2 p{float:left;width:400px; height:auto;margin:0 20px 0 0; padding-top:3px; text-align:left; font-size:0.66em; color:#626469;}
+#FORMULARIO .campos .fila_form2 .texto_checkbox{float:left;width:163px; height:auto;margin:0 20px 0 0; padding-top:3px; text-align:right; font-size:0.66em; font-weight:bold; color:#626469;}
+#FORMULARIO .campos .fila_form2 input{float:right;width:58px; height:15px; line-height:14px; font-size:0.66em; color:#626469; border:0px solid #626469;}
+#FORMULARIO .campos .fila_form2 .casilla_seleccion{float:left;width:300px; height:15px; line-height:14px; font-size:0.66em; color:#626469; border:0px solid #626469;}
+/* FORMULARIO DIAS DE PERMISOS */
+#FORMULARIO_PERMISOS{float:left;width:600px;height:auto;margin:0 0 10px 0;}
+#FORMULARIO_PERMISOS .campos{ width:600px;height:auto;}
+#FORMULARIO_PERMISOS .campos .fila_form{ float:left; width:600px; height:auto;margin:0 0 15px 0;}
+#FORMULARIO_PERMISOS .campos .fila_form span label{float:left;width:163px; height:auto;margin:0 0 0 0; padding-top:3px; text-align:left; font-size:0.66em; font-weight:bold; color:#626469;}
+#FORMULARIO_PERMISOS .campos .fila_form p{float:left;width:163px; height:auto;margin:0 20px 0 0; padding-top:3px; text-align:right; font-size:0.66em; font-weight:bold; color:#626469;}
+#FORMULARIO_PERMISOS .campos .fila_form span{float:left;width:417px;height:auto; color:#626469;}
+#FORMULARIO_PERMISOS .campos .fila_form input{float:left;width:300px; height:15px; line-height:14px; font-size:0.66em; color:#626469; border:1px solid #626469;}
+#FORMULARIO_PERMISOS .campos .fila_form .caja_fecha{float:left;width:60px; height:15px; line-height:14px; font-size:0.66em; color:#626469; border:1px solid #626469;}
+#FORMULARIO_PERMISOS .campos .fila_form .caja_grande{float:left;width:155px; height:15px; line-height:14px; font-size:0.66em; color:#626469; border:1px solid #626469;}
+#FORMULARIO_PERMISOS .campos .fila_form .caja_mediana{float:left;width:113px; height:15px; line-height:14px; font-size:0.66em; color:#626469; border:1px solid #626469;}
+#FORMULARIO_PERMISOS .campos .fila_form .caja_mini{float:left;width:25px; height:16px;font-size:0.6em; color:#626469; border:1px solid #626469; margin-right:5px;}
+#FORMULARIO_PERMISOS .campos .fila_form .caja_mini_ano{float:left;width:40px; height:16px;font-size:0.6em; color:#626469; border:1px solid #626469; margin-right:5px;}
+#FORMULARIO_PERMISOS .campos .fila_form .fecha{width:auto; height:auto;margin:0 5px 0 10px; padding-top:3px; text-align:right; font-size:0.66em; font-weight:bold; color:#626469;}
+#FORMULARIO_PERMISOS .campos .fila_form select{float:left;width:auto; max-height:22px; min-height:20px;font-size:0.6em; color:#626469; border:1px solid #626469;}
+#FORMULARIO_PERMISOS .campos .fila_form span .botonActualizar{float:left; width:69px; height: 16px; margin:2px 0 0 5px; border:0px}
+#FORMULARIO_PERMISOS .campos .fila_form .btn_elegir{float:left; margin:3px 0 0 5px;}
+#FORMULARIO_PERMISOS .campos .fila_form .descripcion{float:left;width:427px;height:auto; margin:0 0 5px 0; padding-top:3px;font-size:0.6em;color:#626469;}
+#FORMULARIO_PERMISOS .campos .fila_form img { float:left; margin: 3px 5px 0 5px;}
+#FORMULARIO_PERMISOS .campos .fila_botones {float:right; width:417px; height:12px; margin-bottom:5px;}
