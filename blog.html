@@ -16,8 +16,13 @@
     <link href="bootstrap/css/blog.css" rel="stylesheet">
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
- 
-
+ 	<style>
+	iframe {
+		width:600px;
+		height: 600px;
+		}
+	#borde { border: 2px black solid; }	
+	</style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -71,61 +76,71 @@
 
           <div class="blog-post">
             <h2 class="blog-post-title">How does the CIS's Barometer work?</h2>
-			<p> <br>  Every month 2.500 legal age people are selected randomly and proportional taking into consideration other variables as age, sex, population and environment ( <a href="http://www.cis.es/cis/export/sites/default/-Archivos/NotasdeInvestigacion/NI004_MetodologiaBarometros_Informe.pdf"> more information about the method </a>)
-				This people are interviewed personally at home by CIS agents. The result of the surveys is what the barometers show to us.
-				<br><br>   In this barometers we see two blocks of questions. The first one is always the same and the other can change and ask about a recent political or social issues. Is from the first block where we have selected two fix questions for our study:</p>
+			<p> <br>  Every month 2.500 legal age people are selected randomly and proportional to other variables such as age, sex, population and environment ( <a href="http://www.cis.es/cis/export/sites/default/-Archivos/NotasdeInvestigacion/NI004_MetodologiaBarometros_Informe.pdf"> more information about the method </a>).
+				These people are interviewed personally at home by CIS agents. The result of the surveys is what the barometers show us.
+				<br><br>   In these barometers we see two blocks of questions. The first one is always the same and the other can change and ask about a recent political or social issue. It is from the first block where we have selected two fixed questions for our study:</p>
 			 <blockquote>
               <li> ¿Cuál es, a su juicio, el principal problema que existe actualmente en España?¿Y el segundo?¿Y el tercero?(RESPUESTA ESPONTÁNEA) -Available since mar'06</li>
-			    <li> ¿Cuáles son, a su juicio, los tres problemas principales que existen actualmente en España?(MÁXIMO TRES RESPUESTAS) -Available from sep'00 to feb'06</li></p>
-            </blockquote>
-			<p> The answers to this two questions are the three main problems that we have in Spain in opinion of the Spanish Society and is what we are going to use for our study.
+			  <img src="images/pregunta1_cis.png" alt="Pregunta CIS" width="750" height="250">
+			  <li> ¿Cuáles son, a su juicio, los tres problemas principales que existen actualmente en España?(MÁXIMO TRES RESPUESTAS) -Available from sep'00 to feb'06</li></p>
+			  <img src="images/pregunta2_cis.png" alt="Pregunta CIS" width="700" height="400">	
+ 		   </blockquote>
+			<p> The answers to these two questions are the three main problems that we have in Spain in the opinion of the Spanish Society and this is what we are going to use for our study.
 			<br><br> We can find all the barometers in the <a href="http://www.cis.es/cis/opencm/EN/11_barometros/depositados.jsp">Data Bank</a>.</p>
 		</div><!-- /.blog-post -->
 
 		<div class="blog-post">
             <h2 class="blog-post-title">How do the Control Sessions to the Government in the Congress of Deputies work?</h2>
-			<p><br>There are many kinds of session done in the Congress, however we selected the Control Sessions that are taking place every Wednesday. Although they are not defined by the Constitution, they have become very popular over the years and now are ones of the most popular. Is in this sessions where the different political groups can ask to the Government and Ministers about the new laws that are in process or recently approved or talk about detected problems and they must answer.
+			<p><br>There are many kinds of session done in the Congress, however we selected the Control Sessions that are taking place every Wednesday. Although they are not defined by the Constitution, they have become very popular over the years and now are ones of the most popular. Is in these sessions where the different political groups can ask to the Government and Ministers about the new laws that are in process or recently approved or talk about detected problems and they answer.
 				<br><br> The session diaries are completely available in their web page by a <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Publicaciones">search engine</a>.
-				<br><br> The procedure of this sessions is easy. The different political groups have to deliver to the President of the Congress the questions before Friday midnight. Once approved they can be asked in the session. If a recent and more important issue appear before, the question can be changed until Sunday midnight. The sessions consists in the questions, that are answered by the Government, and the political groups can response again. </p>
+				<br><br> You can find more information about how they work in the following <a href="http://www.periodistasparlamentarios.org/?p=834">link</a>:</p>		
+			<blockquote>
+			<p>"[...] A normal session has a duration of at least 2 hours to debate about the proposed questions and answers. The Control Sessions are taking place on Tuesday afternoon in the Senate and Wednesday morning on the Congress.
+			<br><br> In first place they debate the questions and then the speech. The Government answer to the last ones can generate an iniciative from the asking group who put together all the conclusions and became a proposal(moción consecuencia de interpelación). These ones are going to be debated in the next session [...]"</p>
+			</blockquote>
 		</div>		
 		
 		<div class="blog-post">
             <h2 class="blog-post-title">The Scrapping</h2>
-			<p><br>  The Scrapping is the process from which we extract the information from the web to use them. In this case we have done it with the CIS barometers using its data bank and the Congress using the Search Engine. 
-				<br> For this part of the process we have used Python, in particular Selenium and BeautifulSoup. </p>
+			<p><br>  The Scrapping is the process from which we extract the information from the web. In this case we have achieve CIS barometers using its data bank and the Congress diaries using the Search Engine. 
+				<br><br> For this part of the process we needed Selenium and BeautifulSoup. </p>
 			<h3> <br> CIS </h3>
 			<p> Using Selenium we have download the content of all the barometers and with the help of BeautifulSoup we have searched the question and create a database with the results. 
-			<br><br> The database is a Python dictionary and we save it in MongoDB. In this we keep the date when the data was uploaded in the data bank, the title of the barometer (month and year), the url, the kind of document (html or pdf) and the answers to the questions. An example:</p>
-			<img src="images/cis_dic.png" alt="CIS Dictionary" width="500" height="400">
-			<p><br>As answer we have 30 diferent topics each months, that means that durting all the period (from sept'00 to feb'15) we have found 150 different topics. It's impossible to visualize all those topics and lots of them where similar. Because of this we create 14 clusters: Education, Health, Corruption, Environment, Public Services, Ideology, Economy, Employment, Youth, Justice, Social, Terrorism, Housing, Public Safety and others. 
-			<br><br> Once we have this new classification we will put into groups the data and obtain the information that is need for the charts. </p>
+			<br>As answer we have 30 different topics each month, that means that during all the period (from sept'00 to feb'15) we have found 150 different topics. It is impossible to visualize all those topics and lots of them were similar. Because of this we create 14 clusters: Education, Health, Corruption, Environment, Public Services, Ideology, Economy, Employment, Youth, Justice, Social, Terrorism, Housing, Public Safety and Others. 
+			<br><br> Once we have the clusters we will put into groups the data and obtain the information that is need for the charts. </p>
 			<h3><br> The Congress of Deputies</h3>
-			<p><br>We have used Selenium again to download the Session Control diaries. This diaries contain all the information about the speech on the Congress in all the sessions. The first thing we have to do once we have the information is divide the diary  in speech. For this we have used again selenium and this is what we achieve:</p>
-				<img src="images/congres1.png" alt="Congress Document" width="700" height="1000">
-			<p><br> We can see that is possible to divide the session by speech and in every speech we can keep the information of question, answer and deputie. We	are going to paint every speech of one colour or another depending the political group. 
-			<br><br>To know the composition of the chamber, we used the deputies information available in the web <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=10">Deputies</a>.</p>
-			<img src="images/congres2.png" alt="Lista Diputados" width="1000" height="1000">
-			<p><br> From here we have downloaded the different lists of deputies to screen the different speeches for political group. 
-			<br><br> Finally, we we obtained a database that has a Python dictionary per control session divided in speeches which contain the question related, the speech, the depute and the political group. We save this database in MongoDB.	
-			</p>
+			<p><br> We are interested in the data between September 2000 to March 2015, because is on this period when we have data from CIS.
+			<br><br> The Congress webpage is generated dynamically. To obtain the list and download the session diaries we have used tools from Selenium and BeautifulSoap libraries. 
+			<br><br> As soon as we have the documents we start the analysis of the structure to extract the information that we really need. The Corpus has a defined patter with speeches next to questions previously registered (every question has a number to identify it). Every speech is registered with the deputy who started first. Knowing this, the documents are going to be divided in questions and answers which are done in the Control Session, the deputy and the political group it pertains. 
+			<br><br> To identify all the Congress members in the speeches and the political group they belong to we can obtain the information from the Congress web:<a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=10">Deputies</a>.</p>
+			<img src="images/congres2.png" alt="Lista Diputados" width="700" height="700">
+			<p><br> We are going to use Selenium and BeautifulSoap again to a deputies relation, parliamentary groups and legislature from the analysed period. Again, all this information we are going to keep it in MongoDB to use it in the next step. </p>
+			<h4> Questions and speeches extraction </h4>
+			<p><br> For the extraction of questions and speeches we are going to use regular expressions. With their help we can analyse line by line the content of the diary searching the start and end from the questions and the speeches, deputies, parliamentary groups, ....
+			<br><br> The process starts when it finds the marks that indicate the question start, omitting the diary sections that doesn't correspond to the control sessions questions, as for example: "PROPOSICIONES NO DE LEY", "CONVALIDACIÓN O DEROGACIÓN DE REALES DECRETOS-LEYES", "JURAMENTO O PROMESA DE ACATAMIENTO DE LA CONSTITUCIÓN", etc. Also we omit in the process the interventions realised by the Congress moderator.
+			<br><br> Behind this lines we show you an example of the text before and after the process(with a different background depending on the political group to whom the deputy who realises belongs: blue, grupo popular; red, grupo socialista; grey, grupo mixto,...)</p>
+			<img src="images/intervencion1_eng.png" alt="Intervención Congreso" width="900" height="600">
+			<p> Then we apply the <a href="http://en.wikipedia.org/wiki/String_metric">String Metrics</a> method. With this method the possible transcriptions mistakes will not affect to our analysis.
+			<br><br> Finally, you can see a complet diary session after all the process. If you put the pointer on top it gives to us information about the deputy, political group and other information obtained during the analysis.</p>
+			<p><iframe src="images/diario.html" frameborder="0" id="borde"></iframe></p>
 		</div>
 		
 		<div class="blog-post">
             <h2 class="blog-post-title">How we find the keywords of every speech?</h2>
-			<p><br> In the Congress Database we can find 311 document and 7000 speeches. Classify all this by CIS clusters is a huge work so we make a plan: we would extract the keywords of each speech and create a dictionary with them to cluster all as maximum as documents as possible.
-			<br><br>Since we were interested in the extraction of the main topics from our Corpus, we defined as a feature any n-gram keyword (a sequence of one or more words) within the Corpus. We noticed that that concepts, in general, are expressed by nouns, with or without adjectives, so, we focused on finding the way to extract nouns and adjectives from our documents.
-			<br><br>We used an unsupervised algorithm called RAKE (Rapid Automatic Keyword Extraction). RAKE it is very simple and has only a parameter. This parameter is a stop list (in our case we customized this list in order to include all the words that are not noums or adjectives) and RAKE uses it to generate the co-occurrence graph formed by the candidates keywords. RAKE is also able to score the selected keywords. It works out the weight of each keyword as: deg(kw) / freq(kw).
+			<p><br> In the Congress Database we can find 311 documents and 7000 speeches. Classifying all this by CIS clusters is a great deal of work so we made a plan: we would extract the keywords of each speech and create a dictionary with them to cluster as many as documents as possible.
+			<br><br>Since we were interested in the extraction of the main topics from our Corpus, we defined as a feature any n-gram keyword (a sequence of one or more words) within the Corpus. We noticed that that concepts, in general, are expressed by nouns, with or without adjectives, so we focused on finding the way to extract nouns and adjectives from our documents.
+			<br><br>We used an unsupervised algorithm called RAKE (Rapid Automatic Keyword Extraction). RAKE is very simple and only has one parameter. This parameter is a stop list (in our case we customized this list in order to include all the words that are not noums or adjectives) and RAKE uses it to generate the co-occurrence graph formed by the keywords candidate. RAKE is also able to score the selected keywords. It works out the weight of each keyword as: deg(kw) / freq(kw).
 			<br><br> Then we built the term-frequency matrix using the extracted keywords as a vocabulary (bag-of-the-words). After that, we used scikit-learn library to transform this matrix into a sparse matrix.
-			<br><br> Once we obtained the sparse matrix we can apply a K-means algorithm, in particular "k-means++" to create the clusters. Once we have done several iterations of K-means we can identify clusters that were clearly identifiable with CIS topics.We managed to create a list of words affine with these topics in order to train a simple classifier. We used this classifier to classify the rest of documents.  
-			<br><br> Eventually, we used the number of lines of each speech as a time reference obtaining several tables and dictionarys that are going to be used to make the charts. 
+			<br><br> Once we obtained the sparse matrix we can apply a K-means algorithm, in particular "k-means++" to create the clusters. Once we have done several iterations of K-means, we can identify clusters that were clearly identifiable with CIS topics.We managed to create a list of words associated with with these topics in order to train a simple classifier. We used this classifier to classify the rest of the documents.  
+			<br><br> Eventually, we used the number of lines of each speech as a time reference to obtain several tables and dictionaries that are going to be used to make the charts. 
 			</p>
 		</div>
 			
 		<div class="blog-post">
             <h2 class="blog-post-title">The Charts</h2>
-			<p><br> At the very beginning we wantet to imitate this <a href="http://www.nytimes.com/interactive/2012/09/06/us/politics/convention-word-counts.html">chart</a> from the NY Times but it was not enough for our purposes, it was very important for us to use the information from CIS. 
-			<br><br> Having this goal in mind we created the radar and the analysis charts. Both of them with the objective to see how our preferences have changed on time. To do this charts we have used D3 program and we create transitions to make the visualization of the charts more dynamic. 
-			<br><br> When we where close to finish this project, we found the incredible <a href="http://politilines.periscopic.com/">PolitiLines</a> and realised that we have all the information to do it: the clusters, the keywords and the political group match so we decided to create the Spanish version of it. 
+			<p><br> At the very beginning we wanted to imitate this <a href="http://www.nytimes.com/interactive/2012/09/06/us/politics/convention-word-counts.html">chart</a> from the NY Times, but it was not enough for our purposes. It was very important for us to use the information from CIS. 
+			<br><br> Having this goal in mind we created the radar and the analysis charts. Both of them with the goal of seeing how our preferences have changed over time. To make this charts we have used D3.js and we created transitions to make the visualization of the charts more dynamic. 
+			<br><br> When we were close to finishing this project, we found the incredible <a href="http://politilines.periscopic.com/">PolitiLines</a> and realised that we had all the information to do it: the clusters, the keywords and the political group matched so we decided to create the Spanish version of it. 
 			</p>
 		</div>	
 
