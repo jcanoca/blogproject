@@ -82,7 +82,7 @@
 				<br><br>   In these barometers we see two blocks of questions. The first one is always the same and the other can change and ask about a recent political or social issue. It is from the first block where we have selected two fixed questions for our study:</p>
 			 <blockquote>
               <li> ¿Cuál es, a su juicio, el principal problema que existe actualmente en España?¿Y el segundo?¿Y el tercero?(RESPUESTA ESPONTÁNEA) -Available since mar'06</li>
-			  <img src="images/pregunta1_cis.png" alt="Pregunta CIS" width="750" height="250">
+			  <img src="images/pregunta1_cis.png" alt="Pregunta CIS" width="700" height="250">
 			  <li> ¿Cuáles son, a su juicio, los tres problemas principales que existen actualmente en España?(MÁXIMO TRES RESPUESTAS) -Available from sep'00 to feb'06</li></p>
 			  <img src="images/pregunta2_cis.png" alt="Pregunta CIS" width="700" height="400">	
  		   </blockquote>
@@ -116,7 +116,7 @@
 			<br><br> To identify all the Congress members in the speeches and the political group they belong to we can obtain the information from the Congress web:<a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=10">Deputies</a>.</p>
 			<img src="images/congres2.png" alt="Lista Diputados" width="700" height="700">
 			<p><br> We are going to use Selenium and BeautifulSoap again to a deputies relation, parliamentary groups and legislature from the analysed period. Again, all this information we are going to keep it in MongoDB to use it in the next step. </p>
-			<h4> Questions and speeches extraction </h4>
+			<h4> <br>Questions and speeches extraction </h4>
 			<p><br> For the extraction of questions and speeches we are going to use regular expressions. With their help we can analyse line by line the content of the diary searching the start and end from the questions and the speeches, deputies, parliamentary groups, ....
 			<br><br> The process starts when it finds the marks that indicate the question start, omitting the diary sections that doesn't correspond to the control sessions questions, as for example: "PROPOSICIONES NO DE LEY", "CONVALIDACIÓN O DEROGACIÓN DE REALES DECRETOS-LEYES", "JURAMENTO O PROMESA DE ACATAMIENTO DE LA CONSTITUCIÓN", etc. Also we omit in the process the interventions realised by the Congress moderator.
 			<br><br> Behind this lines we show you an example of the text before and after the process(with a different background depending on the political group to whom the deputy who realises belongs: blue, grupo popular; red, grupo socialista; grey, grupo mixto,...)</p>
@@ -128,12 +128,49 @@
 		
 		<div class="blog-post">
             <h2 class="blog-post-title">How we find the keywords of every speech?</h2>
-			<p><br> In the Congress Database we can find 311 documents and 7000 speeches. Classifying all this by CIS clusters is a great deal of work so we made a plan: we would extract the keywords of each speech and create a dictionary with them to cluster as many as documents as possible.
-			<br><br>Since we were interested in the extraction of the main topics from our Corpus, we defined as a feature any n-gram keyword (a sequence of one or more words) within the Corpus. We noticed that that concepts, in general, are expressed by nouns, with or without adjectives, so we focused on finding the way to extract nouns and adjectives from our documents.
-			<br><br>We used an unsupervised algorithm called RAKE (Rapid Automatic Keyword Extraction). RAKE is very simple and only has one parameter. This parameter is a stop list (in our case we customized this list in order to include all the words that are not noums or adjectives) and RAKE uses it to generate the co-occurrence graph formed by the keywords candidate. RAKE is also able to score the selected keywords. It works out the weight of each keyword as: deg(kw) / freq(kw).
-			<br><br> Then we built the term-frequency matrix using the extracted keywords as a vocabulary (bag-of-the-words). After that, we used scikit-learn library to transform this matrix into a sparse matrix.
-			<br><br> Once we obtained the sparse matrix we can apply a K-means algorithm, in particular "k-means++" to create the clusters. Once we have done several iterations of K-means, we can identify clusters that were clearly identifiable with CIS topics.We managed to create a list of words associated with with these topics in order to train a simple classifier. We used this classifier to classify the rest of the documents.  
-			<br><br> Eventually, we used the number of lines of each speech as a time reference to obtain several tables and dictionaries that are going to be used to make the charts. 
+			<h3>Feature extraction and text clustering</h3>
+			<h4><br> The problem </h4>
+			<p><br>After scraping the Congreso's and the CIS’ website, our next goal was to figure out how to connect these two worlds. The problem was, we want to build a bridge between the main topics coming from the Congreso’s documents and the main topics from the CIS website. 	
+			<br><br>There are a lot of ways to tackle this problem. We tried some of them, but, eventually, we chose to extract top topics from Congreso’s documents and to build a model using the k-mean algorithm in order to clustering these documents using the CIS’ main topics as labels to these clusters (as many as we can!). Thus, we could create, somehow, a dictionary between Congreso and CIS main topics. Next step was, to establish how to work out the metrics in order to compare these two worlds.
+			<br><br>In the following paragraphs, we try to explain how we dealt with this problem step by step.</p>
+			<h4><br>Defining what it is a "feature"</h4>
+			<p><br>Since we were interested in the extraction of the main topics from our Corpus, we defined as a feature any n-gram keyword (a sequence of one or more words) within the Corpus.
+			<br><br>We decided that it would be helpful for our purpose, to split the Corpus into smaller pieces to reduce the number of topics per document, where one piece consist of a single "question" and their "interventions". This is what we call a "document" in the following paragraphs.
+			<br><br>We noticed that concepts, in general, are expressed by nouns, with or without adjectives, so, we focused on finding the way to extract nouns and adjectives from our documents.</p>
+			<h4><br>How we extracted these features from the Corpus</h4>
+			<p><br>We used an unsupervised algorithm called RAKE (Rapid Automatic Keyword Extraction) implemented in Python to do that. RAKE it is very simple and has only a parameter. This parameter is a stop list and RAKE uses it to generate the co-occurrence graph formed by the candidates keywords.
+			<br><br>At this point, we considered building a customized stop list instead of using a static stop list. At first, we dealt with this problem as it was a NLP problem (Natural Language Processing), so we used a Spanish POS (Part-of-Speech) tagger to identify nouns and adjectives from our documents. So, we built stop lists as a list of all words except those identified as nouns and adjectives.
+			<br><br>RAKE is also able to score the selected keywords. It works out the weight of each keyword as: deg(kw) / freq(kw)</p>
+			<h4><br>Cleaning and filtering keywords</h4>
+			<p><br>Before extracting keywords from each document, we used a dictionary to find false positives single out by RAKE (just in case the POS tagger have failed).
+			<br><br>In the course of extracting and loading the keywords into the database (by the way, we have used MongoDB), we discarded keywords with a RAKE score below 1.0
+			<br><br>After the process of extracting and loading keywords, we discarded manually those keywords that were meaningless under our point of view.</p>
+			<h4><br>Unsupervised approach: Clustering documents with k-Means</h4> 
+			<p><br>Before applying the k-means algorithm, we built the term-frequency matrix using the extracted keywords as a vocabulary (bag-of-the-words).
+			<br><br>At the beginning we used the sckit-learn Python library to build the term-frequency matrix but we noticed that scikit-learn counted the words within a keyword as unigrams and this was not what we wanted to do, so we decided to count keywords using an own algorithm.
+			<br><br>After that, we used scikit-learn library to transform this matrix into a sparse matrix (where the coefficients are calculated as “tfidf” weights). 
+			<br><br>Then, we applied the k-means algorithm using the "k-means++" initialization and executing it up to 10 times to deal with variance due to the random initialization of centroids. Initially, we chose k=20 in our first tries, where k is the number of fixed clusters.</p>
+			<h4><br>Tuning parameters selection: Grid search method and Silhouette coefficients</h4>
+			<p><br>After these first tries, we did not have no idea about the "k" value, so we tried some values in combination with different term-frequency thresholds. So, we dealt with two parameters: term-frequency and the number of clusters.	
+			<br><br>In order to find the best combination of these two values, we built a grid search algorithm to execute multiple combinations, in order to evaluate the best of them, we worked out the Silhouette coefficients for each combination and it turned out that the outcomes were very close to zero, so the points were very close each other.
+			<br><br>Finally, we took k = 45 and tf = 25, where tf is the term-frequency threshold.</p>
+			<h4><br>Semi-supervised approach: Classifying clusters with Stochastic Gradient Descent</h4>
+			<p><br>Thanks to the k-means algorithm, we could visualize some clusters that were clearly identifiable with a topic extracted from the CIS. We managed to create a list of keywords affine with these topics in order to train a simple classifier. We used this classifier to label the rest of the clusters. 
+			<br><br>The list consisted of a dictionary of topics from CIS and keywords from the Congreso's Corpus. This work was performed by hand, checking clusters manually as cycle of try and error. This work helped us to decide what keywords match better some concepts as: economy, employment, terrorism, housing, etc.
+			<br><br>We used a Stochastic Gradient Descent (SGD) classifier to help our aim of labeling our clusters and therefore our documents. Unfortunately, we used a few documents to train the classifier because we were struggling with an unsupervised problem. However we managed to find important keywords from the most identifiable clusters to build a reliable classifier, at least to label some clusters with enough accuracy.
+			<br><br>During the clustering process, we found, most of the time that it was a cluster bigger than the others. When we say “bigger” we mean, more than four sigma from the mean! So we considered splitting it up in smaller clusters and try to label them with our classifier in order to solve this problem. And this was, exactly what we finally did.</p>
+			<h4><br>Building metric tables</h4>
+			<p><br>After clustering every document, the final step was to craft a metric to relate documents with their importance in the Congreso. 
+			<br><br>We thought deeply about this problem, and in the end, we decided that we could use the number of lines of every document as a measure of the importance of a topic, since every document was tagged to a single topic.
+			<br><br>We grouped and normalized our data by year and month. We found that some months there were no data, so we applied linear interpolation to deal with these gaps. These months (without data) are: August, and those months between the change of legislature (four month approximately), we suppose politics need time to start again.</p>
+			<h4><br>Miscellanea</h4>
+			<p><br>During all this process, we tried some other approaches to tackle this problem, although eventually we discarded them. 
+			<br><br>Some of them were:</p>
+			<blockquote>
+				<li>Topic model: Latent Dirichlet Analysis and Hierarchical Dirichlet Process as an alternative to k-Means algorithm</li>
+				<li>TextRank algorithm as an alternative to RAKE algorithm</li>
+				<li>Clustering a graph which is made up of keywords (the adjacency matrix of co-occurrence keywords). This approach gave us a small number of communities, so we decided to discard this interesting approach.</li>
+			</blockquote>
 			</p>
 		</div>
 			
@@ -147,6 +184,25 @@
 
         </div><!-- /.blog-main -->
 
+		
+		<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>Python Packages</h4>
+            <p><a href="https://selenium-python.readthedocs.org/">Selenium</a>
+				<br> <a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a>
+				<br> <a href="http://www.nltk.org/">NLTK</a>
+				<br> <a href="http://www.numpy.org/">Numpy</a>
+				<br> <a href="http://pandas.pydata.org/">Pandas</a>
+				<br> <a href="http://scikit-learn.org/stable/"> Scikit-Learn</a>
+				<br> <a href="http://sujitpal.blogspot.in/2013/03/implementing-rake-algorithm-with-nltk.html">RAKE</a>
+			</p>
+			<h4>Other references:</h4>
+			<p>	<li>A Python implementation of the Rapid Automatic Keyword Extraction (RAKE) algorithm as described in: Rose, S., Engel, D., Cramer, N., & Cowley, W. (2010). Automatic Keyword Extraction from Individual Documents. In M. W. Berry & J. Kogan (Eds.), Text Mining: Theory and Applications: John Wiley & Sons.</li>
+				<br><li>Pattern 2.6, De Smedt, T. & Daelemans, W. (2012). Pattern for Python. Journal of Machine Learning Research, 13: 2031–2035.</li>
+				<br><li>Lluís Padró— and Evgeny Stanilovsky. FreeLing 3.0: Towards Wider Multilinguality Proceedings of the Language Resources and Evaluation Conference (LREC 2012) ELRA. Istanbul, Turkey. May, 2012.</li>
+				</p>
+          </div>
+		</div>  
     </div><!-- /.container -->
 
     <footer class="blog-footer">
