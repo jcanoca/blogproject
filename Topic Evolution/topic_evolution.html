@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html class="ocks-org do-not-copy">
+<meta charset="utf-8">
+<title>Topic Evolution</title>
+<style>
+
+@import url(style.css?aea6f0a);
+
+#chart {
+  margin-left: -40px;
+  height: 506px;
+}
+
+text {
+  font: 10px sans-serif;
+}
+
+.dot {
+  stroke: #000;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.label {
+  fill: #777;
+}
+
+.year.label {
+  font: 500 100px "Helvetica Neue";
+  fill: #ddd;
+}
+
+.year.label.active {
+  fill: #aaa;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+  cursor: ew-resize;
+}
+
+.line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2.5px;
+  stroke-dasharray: 2,5;
+}
+
+</style>
+
+<p id="chart"></p>
+
+<table>
+  <col width="20%">
+  <col width="50%">
+  <col width="30%">  
+<tr>
+<td>
+<select multiple name="topic_filter" id="topic_filter" style="width: 200px;">
+	<option selected value="all">All</option>
+	<option value="empleo">Empleo</option>
+	<option value="economia">Economía</option>
+	<option value="corrupcion">Corrupción</option>
+	<option value="internacional">Internacional</option>
+	<option value="terrorismo">Terrorismo</option>
+	<option value="social">Social</option>
+	<option value="salud">Salud</option>
+	<option value="inseguridad ciudadana">Inseguridad ciudadana</option>
+	<option value="medio ambiente">Medio ambiente</option>
+	<option value="jovenes">Jóvenes</option>
+	<option value="justicia">Justicia</option>
+	<option value="servicios publicos e infraestructuras">Servicios públicos e infraestructuras</option>
+	<option value="educacion">Educación</option>
+	<option value="guerras">Guerras</option>
+	<option value="vivienda">Vivienda</option>
+	<option value="politica">Pólitica</option>
+	<option value="tecnologia e investigacion">Tecnología e investigación</option>
+	<option value="cultura">Cultura</option>
+	<option value="fuerzas armadas">Fuerzas armadas</option>
+	<option value="ideologia">Ideología</option>
+	<option value="preocupaciones situaciones personales">Preocupaciones situaciones personales</option>
+</select>
+</td>
+<td>
+<button onclick="cleanAndStart()">Start</button>
+</td>
+<td>
+<aside>Mouseover the month/year to move forward and backwards through time.</aside>
+</td>
+</tr>
+</table>
+
+<script src="d3.v3.min.js"></script>
+<script>
+
+// Various accessors that specify the four dimensions of data to visualize.
+function x(d) { return d.income; }
+function y(d) { return d.lifeExpectancy; }
+function radius(d) { return d.population; }
+function color(d) { return d.region; }
+function key(d) { return d.name; }
+
+// Entre 01/09/2000 i 11/3/2015 hi han 5304 dies
+var rangeDays = 5304
+
+// Chart dimensions.
+var margin = {top: 19.5, right: 19.5, bottom: 19.5, left: 39.5},
+    width = 960 - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+// Various scales. These domains make assumptions of data, naturally.
+/*
+var xScale = d3.scale.log().domain([300, 1e5]).range([0, width]),
+    yScale = d3.scale.linear().domain([10, 85]).range([height, 0]),
+    radiusScale = d3.scale.sqrt().domain([0, 5e8]).range([0, 40]),
+    colorScale = d3.scale.category10();
+*/
+//
+var xMin = -0.005, xMax = 0.5;
+var yMin = -0.05, yMax = 0.5;
+var rMin = 0, rMax = 1.0;
+var xScale = d3.scale.sqrt().domain([xMin, xMax]).range([0, width]),
+    yScale = d3.scale.linear().domain([yMin, yMax]).range([height, 0]),
+    radiusScale = d3.scale.sqrt().domain([rMin, rMax]).range([0, 120]),
+    colorScale = d3.scale.category20();
+
+// The x & y axes.
+/*
+var xAxis = d3.svg.axis().orient("bottom").scale(xScale).ticks(12, d3.format(",d")),
+    yAxis = d3.svg.axis().scale(yScale).orient("left");
+*/
+var xAxis = d3.svg.axis().ticks(10).tickFormat(d3.format("%")).orient("bottom").scale(xScale),
+    yAxis = d3.svg.axis().ticks(10).tickFormat(d3.format("%")).orient("left").scale(yScale);
+
+// Create the SVG container and set the origin.
+var svg = d3.select("#chart").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+// Add the x-axis.
+svg.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
+
+// Add the y-axis.
+svg.append("g")
+    .attr("class", "y axis")
+    .call(yAxis);
+
+// Add an x-axis label.
+svg.append("text")
+    .attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x", width)
+    .attr("y", height - 6)
+    .text("More important to CIS (" + (100.*xMin).toFixed(0) + "% - " + (100.*xMax).toFixed(0) + "%)");
+
+// Add a y-axis label.
+svg.append("text")
+    .attr("class", "y label")
+    .attr("text-anchor", "end")
+    .attr("y", 6)
+    .attr("dy", ".75em")
+    .attr("transform", "rotate(-90)")
+    .text("More important to Congreso (" + (100.*yMin).toFixed(0) + "% - " + (100.*yMax).toFixed(0) + "%)");
+
+// Add the year label; the value is set on transition.
+var label = svg.append("text")
+    .attr("class", "year label")
+    .attr("text-anchor", "end")
+    // .attr("y", height - 24)
+	.attr("y", 48)
+    .attr("x", width)
+    .text("09/2000");
+	
+var line = d3.svg.line()
+    .interpolate("basis")
+    .x(function(d, i) { return d[0]; })
+    .y(function(d, i) { return d[1]; });
+	
+var ptdata = [];
+
+// Load the data.
+function loadAndStart() {
+d3.json("common_nations_list.json", function(data) {
+
+  // Filter
+  var options = topic_filter && topic_filter.options;
+  var selected_filter = new Array();
+  for (var i=0, iLen=options.length; i<iLen; i++) {
+    if (options[i].selected) {
+      selected_filter.push(options[i].value);
+    }
+  } 
+  
+  var all_selected = (selected_filter.indexOf('all') > -1);
+  if (selected_filter.length==0) {
+	all_selected = true;
+  }
+  var nations = new Array();
+  for(i=0; i<data.length; i++) {
+	if (all_selected || (selected_filter.indexOf(data[i].name) > -1) ) {
+		nations.push(data[i]);
+	}
+  }  
+
+  formatDateToControl = d3.time.format("%m/%Y");
+
+  // A bisector since many nation's data is sparsely-defined.
+  var bisect = d3.bisector(function(d) { return d[0]; });
+  
+  var elemEnter = svg.append("g")
+      .attr("class", "dots")
+    .selectAll(".dot")
+      .data(interpolateData(0))
+    .enter();
+	
+  var dot = elemEnter.append("circle")
+      .attr("class", "dot")
+      .style("fill", function(d) { return colorScale(color(d)); })
+      .call(position)
+      .sort(order);
+	  
+  // Add a title.
+  dot.append("title")
+	  .attr("class", "dot_title")
+	  .text(function(d) {var result = d.name;});
+	  
+  // Add a dashed path
+  dot.append("path")
+	.data([ptdata])
+    .attr("class", "line")
+    .attr("d", line);
+
+  // Add a label to circle	
+  var label_dot = elemEnter.append("text")
+	.attr("class", "label_dot")
+	.style("text-anchor", "middle")
+	.call(label_position)
+	.sort(order)
+	.text(function(d){return d.name});
+	  
+  // Add an overlay for the year label.
+  var box = label.node().getBBox();
+
+  var overlay = svg.append("rect")
+        .attr("class", "overlay")
+        .attr("x", box.x)
+        .attr("y", box.y)
+        .attr("width", box.width)
+        .attr("height", box.height)
+        .on("mouseover", enableInteraction);
+
+  // Start a transition that interpolates the data based on year.
+  svg.transition()
+      .duration(60000)
+      .ease("linear")
+      .tween("year", tweenYear)
+      .each("end", enableInteraction);
+
+  // Positions the dots based on data.
+  function position(dot) {
+    dot .attr("cx", function(d) { return xScale(x(d)); })
+        .attr("cy", function(d) { return yScale(y(d)); })
+        .attr("r", function(d) { return radiusScale(radius(d)); });
+	
+	/*
+	var pt = new Array();
+	pt.push(dot.attr("cx"));
+	pt.push(dot.attr("cy"));
+	ptdata.push(pt);
+	// Redraw the path:
+	dot.selectAll(".line").attr("d", function(d) { return line(d);})
+	*/
+		
+	// Remove previous title
+    dot.selectAll(".dot_title").remove();
+	// Add a new title.
+	dot.append("title")
+	  .attr("class", "dot_title")
+      .text(function(d) {  
+		  var result = d.name + ":";
+		  if (x(d) > 0) {
+			  result += "\nCIS: (" + (100.*x(d)).toFixed(2) + "%)";
+		  }
+		  if (y(d) > 0) {
+			  result += "\nCongrés: (" + (100.*y(d)).toFixed(2) + "%)";
+		  }
+		  result += "\nGlobal: (" + (100.*radius(d)).toFixed(2) + "%)";
+		  return result;	  
+	});
+  }
+  
+  function path_position(path) {
+	/*
+	// push a new data point onto the back
+	ptdata.push(pt);
+
+	// Redraw the path:
+	path
+	  .attr("d", function(d) { return line(d);})
+	*/
+  }
+  
+  function label_position(label_dot) {
+    label_dot	.attr("dx", function(d) { return xScale(x(d)); })
+				.attr("dy", function(d) { return yScale(y(d)); })
+				.style("font-size", function(d) { return Math.round(radiusScale(radius(d))/3.)+"px"; });
+  }
+
+  // Defines a sort order so that the smallest dots are drawn on top.
+  function order(a, b) {
+    return radius(b) - radius(a);
+  }
+  
+  // After the transition finishes, you can mouseover to change the year.
+  function enableInteraction() {
+    var yearScale = d3.scale.linear()
+        .domain([0, rangeDays])
+        .range([box.x + 10, box.x + box.width - 10])
+        .clamp(true);
+
+    // Cancel the current transition, if any.
+    svg.transition().duration(0);
+
+    overlay
+        .on("mouseover", mouseover)
+        .on("mouseout", mouseout)
+        .on("mousemove", mousemove)
+        .on("touchmove", mousemove);
+
+    function mouseover() {
+      label.classed("active", true);
+    }
+
+    function mouseout() {
+      label.classed("active", false);
+    }
+
+    function mousemove() {
+      displayYear(yearScale.invert(d3.mouse(this)[0]));
+    }
+  }
+
+  // Tweens the entire chart by first tweening the year, and then the data.
+  // For the interpolated data, the dots and label are redrawn.
+  function tweenYear() {
+    var year = d3.interpolateNumber(0, rangeDays);
+    return function(t) { displayYear(year(t)); };
+  }
+
+  // Updates the display to show the specified year.
+  function displayYear(year) {
+    dot.data(interpolateData(year), key).call(position).sort(order);
+	label_dot.data(interpolateData(year), key).call(label_position).sort(order);
+    // label.text(Math.round(year));
+	var from = new Date('2000-09-01T00:00:00');
+	var result = new Date(from);
+    result.setDate(from.getDate() + year);
+	label.text(formatDateToControl(result));
+  }
+
+  // Interpolates the dataset for the given (fractional) year.
+  function interpolateData(year) {
+    return nations.map(function(d) {
+		return {
+			name: d.name,
+			region: d.region,
+			income: interpolateValues(d.income, year),
+			population: interpolateValues(d.population, year),
+			lifeExpectancy: interpolateValues(d.lifeExpectancy, year)
+		  };
+    });
+  }
+
+  // Finds (and possibly interpolates) the value for the specified year.
+  function interpolateValues(values, year) {
+    var i = bisect.left(values, year, 0, values.length - 1),
+        a = values[i];
+    if (i > 0) {
+      var b = values[i - 1],
+          t = (year - a[0]) / (b[0] - a[0]);
+	  var result = a[1] * (1 - t) + b[1] * t;
+      return (result>0)?result:0.0;
+    }
+    return a[1];
+  }
+});
+}
+
+function cleanAndStart() {
+	// Clean
+	svg.selectAll(".dots").remove();
+	
+	// Load and start
+	loadAndStart();
+}
+loadAndStart();
+</script>

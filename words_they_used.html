@@ -15,8 +15,8 @@
     <!-- Custom styles for this template -->
 	<style>
 	iframe {
-		width:1200px;
-		height: 800px;
+		width:1140px;
+		height: 100%;
 		}
 	#borde { border: 2px black solid; }	
 	</style>
@@ -51,6 +51,7 @@
 				<li><a href="./index.html">Home</a></li>
 				<li><a href="./the_radar.html">The Radar</a></li>
                 <li><a href="./the_analysis.html">The Analysis</a></li>
+				<li><a href="./topic_evolution.html">Topic Evolution</a></li>
 				<li><a href="./politilines.html">Politilines</a></li>
 				<li class="active"><a>Words They Used</a></li>
 				<li><a href="./blog.html">Blog</a></li>
@@ -61,7 +62,13 @@
 
       </div>
     </div>
-
+	
+<script>
+function resizeIframe(obj) {
+  obj.style.height = obj.contentWindow.document.body.scrollHeight + 20 + 'px';
+}
+</script>
+	
   <body>
 
     <div class="container">
@@ -75,12 +82,15 @@
         <div class="col-sm-8 blog-main">
 
           <div class="blog-post">
-            <p><br> A comparison of how often speakers at the Congres Control Session used different words and phrases, based on an analysis of transcripts from the Congres Web Page.</p>
-			<p><iframe src="Our version of The Words They Used/index_The Words They Used.html" frameborder="0" id="borde"></iframe></p>
-		</div>
+            <p>Graphic inspired by the graphic <a href="http://www.nytimes.com/interactive/2012/09/06/us/politics/convention-word-counts.html">At the National Conventions, the Words They Used</a> showing a comparison of the different words and phrases used by deputies in the sessions of the Government Control, based on an analysis of transcripts from the Congres Web Page.<br>
+			<b>For technical details see:</b> <a href="http://bost.ocks.org/mike/example/">For Example</a>, <a href="http://bl.ocks.org/mbostock/3422480">Circular Segment</a>, and <a href="http://bl.ocks.org/mbostock/3231307">Collision Detection (Canvas)</a>
+			</p>
+			<p><iframe src="Our version of The Words They Used/index_The Words They Used.html" frameborder="0" id="borde" onload='javascript:resizeIframe(this);'></iframe></p>
+		  </div>
 
         </div><!-- /.blog-main -->
-
+	  </div>
+    </div>
    
 
     <!-- Bootstrap core JavaScript

@@ -1,0 +1,44 @@
+<!DOCTYPE html><html><body><meta charset="utf-8">
+
+<!--  font embedding -->
+<link href='http://fonts.googleapis.com/css?family=Cabin:400,500,700|Podkova' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="css/main.css" type="text/css" charset="utf-8">
+
+<link rel="stylesheet" href="The Words They Used/sources/code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="The Words They Used/sources/code.jquery.com/jquery-1.11.3.js"></script>
+<script src="The Words They Used/sources/code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<div id="checkbox_hightlight">
+	<input type="checkbox" checked="true" onchange = "switchAllSpanAlpha()"/>Show dialogues hightlight</input>
+</div>
+<div id="words_they_use_viewer">
+	<iframe src="" width="650px" height="450px" id="iframe_a"></iframe>
+</div>
+
+<script>
+  function switchElementAlpha(element) {
+	current_color = getComputedStyle(element).getPropertyValue("background-color");
+	match = /rgba?\((\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*(,\s*\d+[\.\d+]*)*\)/g.exec(current_color)
+	
+	var a = 0;
+	if (match[4]!=null) {
+		value = parseFloat(match[4].substring(2,match[4].length));
+		a = (value > 0)?0:1;
+	}
+	element.style.backgroundColor = "rgba(" + [match[1],match[2],match[3],a].join(',') +")";
+  }
+  
+  function switchAllSpanAlpha() {
+	var ifr=document.getElementById('iframe_a'); 
+	var span_elements = ifr.contentDocument.getElementsByName('dialog_mark');
+	for (i=0; i<span_elements.length; i++) {
+		switchElementAlpha(span_elements[i]);
+	}
+  }
+
+$( "button" ).click(function() {
+	switchAllSpanAlpha();
+});
+</script>
+</body>
+</html>
