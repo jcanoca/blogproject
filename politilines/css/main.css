@@ -88,7 +88,7 @@ body {
 	height: 945px; /*978px;*//*1128px;*/  	     	
     margin: 0 auto;
     text-align: left;
-    width: 940px;       
+    width: 974px;       
     position: relative;                                  
 }      
   
@@ -96,7 +96,7 @@ body {
 #logo{
 	position: absolute;
 	top: 32px;
-    left: 8px;
+    left: 24px;
 }
 
 #star{
@@ -110,7 +110,7 @@ body {
     width:400px;
     height: 45px;
     top: 48px;
-    left: 530px;/*574px;*/  
+    left: 570px;/*574px;*/  
     
     font-family: 'Cabin', sans-serif;
     font-weight: 400;
@@ -138,8 +138,7 @@ body {
     position: absolute;
     top: 119px;
    
-    margin-left: 164px;
-    
+    margin-left: 200px;
 }
 
 #categories span{
@@ -200,7 +199,7 @@ body {
 #viz{
 	width: 771px;
     height: 100%;
-    margin-left: 167px;/*211px;*/
+    margin-left: 201px;/*211px;*/
     position: relative;
     background: #FCFCFC url(../images/stage_bg_narrow.png) repeat-y top left; /*url(../images/stage_bg.jpg)*/
     outline: solid 1px #E0E0E0;
@@ -235,7 +234,7 @@ body {
 /* SIDE MARGIN ITEMS */
 #debates{   
     float: left;
-    width: 166px;/*210px;*/
+    width: 200px;/*210px;*/
     height: 100%;
     /*padding-top:17px;*/
     background-color: #FFFFFF;
@@ -258,7 +257,7 @@ body {
     padding-left: 7px;
     padding-top: 14px;
     padding-bottom: 9px;
-    width: 142px;/*186px;*/
+    width: 176px;/*186px;*/
     background-color: #FAFAFA;
     border: solid 1px #EFEFEF;
     border-radius: 4px;

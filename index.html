@@ -1,4 +1,5 @@
-<html lang="en"><head>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,7 +25,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+ </head>
 <!-- NAVBAR
 ================================================== -->
   <body>
@@ -48,7 +49,7 @@
 				<li><a href="./the_radar.html">The Radar</a></li>
                 <li><a href="./the_analysis.html">The Analysis</a></li>
 				<li><a href="./topic_evolution.html">Topic Evolution</a></li>
-				<li><a href="./politilines.html">PolitiLiness</a></li>
+				<li><a href="./politilines.html">PolitiLines</a></li>
 				<li><a href="./words_they_used.html">Words They Used</a></li>
 				<li><a href="./blog.html">Blog</a></li>
                 <li><a href="./index_esp.html">Español</a></li>
@@ -85,16 +86,16 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
 		<div>
-		<p><iframe src="./Topic Evolution/topic_evolution_simplified.html" frameborder="0" ></iframe></p>
+		<p><iframe src="" id="borde" frameborder="0" ></iframe></p>
 		<h2>Topic Evolution </h2>
-          <p> The evolution of the citizens interests and their treatment in the congress' debates over recent legislatures.  <a class="btn btn-default" href="./topic_evolution.htm" role="button">See More »</a></p>
+          <p> The evolution of the citizens interests and their treatment in the congress' debates over recent legislatures.  <a class="btn btn-default" href="./topic_evolution.html" role="button">See More »</a></p>
 		  <p><br></p>
 		</div>
         <div class="col-lg-3">
           <img class="img-circle" src="images/radar.png" alt="Radar" width="250" height="250">
           <h2>The Radar </h2>
           <p> Spaniards are worried about 5 main topics: Terrorism, Social Issues, Corruption, Economic Issues and Employment. How much do we worry about it? And the politicians?</p>
-          <p><a class="btn btn-default" href=".\the_radar.html" role="button">See More »</a></p>
+          <p><a class="btn btn-default" href="./the_radar.html" role="button">See More »</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-3">
           <img class="img-circle" src="images/line.png" alt="The Analysis" width="250" height="250">
@@ -168,7 +169,7 @@
       </footer>
 
     </div><!-- /.container -->
-
+	
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -180,5 +181,37 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   
+	<!-- Inicia l'animació del gràfic Topic evolution quan es fa visible a la pantalla -->
+	<script>
+		var loaded = false;
+		
+		// http://stackoverflow.com/questions/704758/how-to-check-if-an-element-is-really-visible-with-javascript
+		function visible(element) {
+		  if (element.offsetWidth === 0 || element.offsetHeight === 0) return false;
+		  var height = document.documentElement.clientHeight,
+			  rects = element.getClientRects(),
+			  on_top = function(r) {
+				  for (var x = Math.floor(r.left), x_max = Math.ceil(r.right); x <= x_max; x++)
+				  for (var y = Math.floor(r.top), y_max = Math.ceil(r.bottom); y <= y_max; y++) {
+					if (document.elementFromPoint(x, y) === element) return true;
+				  }
+				  return false;
+				};
+		  for (var i = 0, l = rects.length; i < l; i++) {
+			var r = rects[i],
+				in_viewport = r.top > 0 ? r.top <= height : (r.bottom > 0 && r.bottom <= height);
+			if (in_viewport && on_top(r)) return true;
+		  }
+		  return false;
+		}
+
+		$(window).scroll(function(){
+			ifr = document.getElementById("borde");
+			if( !loaded && visible( ifr ) ) {
+			   ifr.src="./Topic Evolution/topic_evolution_simplified.html";
+			   loaded = true;
+			}
+		});
+	</script>
 
 <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" preserveAspectRatio="none" style="visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs></defs><text x="0" y="23" style="font-weight:bold;font-size:23pt;font-family:Arial, Helvetica, Open Sans, sans-serif;dominant-baseline:middle">500x500</text></svg></body></html>

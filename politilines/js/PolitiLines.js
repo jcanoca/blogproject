@@ -7782,7 +7782,7 @@ politi.view.MenuView.prototype.handleDateClick = function(li,data) {
 politi.view.MenuView.prototype.updateSelectedDebate = function() {
 	var el = js.Lib.document.getElementById("event_info");
 	var db = politi.model.DebateCategories.selected;
-	var s = StringTools.replace(StringTools.replace(StringTools.replace(StringTools.replace("<span id=\"event_date\">$DATE;</span><br/><strong>$CITY;</strong><br/>$VENUE;<br/><span id=\"event_sponsors\">Sponsors: $SPONSORS;</span>","$DATE;",db.detailDate()),"$CITY;",db.city),"$VENUE;",db.venue),"$SPONSORS;",db.detailSponsors());
+	var s = StringTools.replace(StringTools.replace(StringTools.replace(StringTools.replace("<span id=\"event_date\">$DATE;</span><br/><strong>$CITY;</strong><br/>$VENUE;<br/>","$DATE;",db.detailDate()),"$CITY;",db.city),"$VENUE;",db.venue),"$SPONSORS;",db.detailSponsors());
 	el.innerHTML = StringTools.replace(s,"<br/><br/>","<br/>");
 }
 politi.view.MenuView.prototype.__class__ = politi.view.MenuView;
@@ -9255,7 +9255,7 @@ politi.view.MetaView = function(p) {
 	*/
 	var updateTitle = function(e) {
 		var list = politi.model.DebateCategories.selected.list;
-		title.innerHTML = list.years + " <strong>" + list.name + " Debates</strong>";
+		title.innerHTML = list.years + " <strong>" + list.name + "</strong>";
 	};
 	politi.model.DebateCategories.getInstance().addEventListener("debateCategoriesSelectionChange",updateTitle);
 }

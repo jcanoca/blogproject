@@ -453,7 +453,8 @@ function loadAndStart() {
   function label_position(label_dot) {
     label_dot	.attr("dx", function(d) { return xScale(x(d)); })
 				.attr("dy", function(d) { return yScale(y(d)); })
-				.style("font-size", function(d) { return Math.round(radiusScale(radius(d))/3.)+"px"; });
+				// .style("font-size", function(d) { return Math.round(radiusScale(radius(d))/3.)+"px"; });
+				.style("font-size", function(d) { return (radiusScale(radius(d))/3.).toFixed(2)+"px"; });
   }
 
   // Defines a sort order so that the smallest dots are drawn on top.

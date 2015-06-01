@@ -1,0 +1,238 @@
+
+<!DOCTYPE html><html><body><meta charset="utf-8">
+<style>
+
+/* slider */
+div .slider {
+background-color: #393939;
+font-size: 14px;
+font-family: 'Raleway', sans-serif;
+}
+p {
+color: black;
+margin: 50px;
+}
+a {
+color: #4FDEF2;
+}
+.axis {
+fill: gray;
+-webkit-user-select: none;
+-moz-user-select: none;
+user-select: none;
+}
+.axis .halo {
+stroke: gray;
+stroke-width: 4px;
+stroke-linecap: round;
+}
+.slider .handle path {
+stroke: black;
+stroke-width: 3px;
+stroke-linecap: round;
+pointer-events: none;
+}
+.slider .handle text {
+fill: black;
+text-align: center;
+font-size: 18px;
+}
+</style>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<link rel="stylesheet" href="The Words They Used/sources/code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="The Words They Used/sources/code.jquery.com/jquery-1.11.3.js"></script>
+<script src="The Words They Used/sources/code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<table>
+<tr>
+<td>
+<button>+</button>
+</td>
+<td>
+<label id="session_label"></label>
+</td>
+</tr>
+</table>
+<table id="control_panel">
+<tr>
+<td><div id="slider" align="center"></div></td>
+<td>
+<div id="session_calendar">
+<label>Fecha:  </label><input id="datepicker" type="text">
+</div>
+</td>
+</tr>
+</table>
+
+<script>
+$( "button" ).click(function() {
+	$( "#control_panel" ).toggle("slow");
+});
+
+function resizeIframe(obj) {
+  obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  // alert(obj.style.height);
+}
+
+function resizeIframeByHeight(obj,h) {
+  obj.style.height = h + 'px';
+}
+
+<!-- $("body").css("overflow", "hidden"); -->
+</script>
+
+<div id="words_they_use_viewer">
+	<iframe src="" width="1100px" height="100%" name="iframe_a" scrolling="no" onload='javascript:resizeIframe(this);'></iframe>
+</div>
+
+<script type="text/javascript">
+var datesArray=['13-9-2000', '20-9-2000', '27-9-2000', '4-10-2000', '18-10-2000', '29-11-2000', '13-12-2000', '20-12-2000', '7-2-2001', '14-2-2001', '21-2-2001', '7-3-2001', '14-3-2001', '21-3-2001', '4-4-2001', '18-4-2001', '25-4-2001', '16-5-2001', '23-5-2001', '30-5-2001', '13-6-2001', '20-6-2001', '12-9-2001', '19-9-2001', '26-9-2001', '3-10-2001', '31-10-2001', '28-11-2001', '12-12-2001', '19-12-2001', '6-2-2002', '13-2-2002', '20-2-2002', '6-3-2002', '13-3-2002', '20-3-2002', '10-4-2002', '17-4-2002', '24-4-2002', '8-5-2002', '22-5-2002', '29-5-2002', '12-6-2002', '19-6-2002', '26-6-2002', '11-9-2002', '18-9-2002', '25-9-2002', '2-10-2002', '16-10-2002', '30-10-2002', '20-11-2002', '27-11-2002', '11-12-2002', '18-12-2002', '5-2-2003', '12-2-2003', '19-2-2003', '5-3-2003', '12-3-2003', '26-3-2003', '2-4-2003', '9-4-2003', '30-4-2003', '7-5-2003', '14-5-2003', '28-5-2003', '11-6-2003', '18-6-2003', '25-6-2003', '10-9-2003', '17-9-2003', '24-9-2003', '1-10-2003', '15-10-2003', '5-11-2003', '26-11-2003', '10-12-2003', '17-12-2003', '12-5-2004', '19-5-2004', '26-5-2004', '2-6-2004', '16-6-2004', '23-6-2004', '30-6-2004', '15-9-2004', '22-9-2004', '29-9-2004', '6-10-2004', '20-10-2004', '3-11-2004', '24-11-2004', '1-12-2004', '15-12-2004', '22-12-2004', '2-2-2005', '9-2-2005', '23-2-2005', '9-3-2005', '16-3-2005', '6-4-2005', '20-4-2005', '27-4-2005', '18-5-2005', '25-5-2005', '1-6-2005', '22-6-2005', '29-6-2005', '14-9-2005', '21-9-2005', '28-9-2005', '5-10-2005', '19-10-2005', '23-11-2005', '30-11-2005', '14-12-2005', '21-12-2005', '8-2-2006', '15-2-2006', '22-2-2006', '1-3-2006', '15-3-2006', '22-3-2006', '29-3-2006', '5-4-2006', '26-4-2006', '10-5-2006', '17-5-2006', '24-5-2006', '21-6-2006', '28-6-2006', '13-9-2006', '20-9-2006', '27-9-2006', '4-10-2006', '18-10-2006', '22-11-2006', '29-11-2006', '13-12-2006', '20-12-2006', '7-2-2007', '21-2-2007', '28-2-2007', '14-3-2007', '21-3-2007', '28-3-2007', '18-4-2007', '25-4-2007', '9-5-2007', '16-5-2007', '30-5-2007', '13-6-2007', '20-6-2007', '27-6-2007', '12-9-2007', '19-9-2007', '26-9-2007', '3-10-2007', '17-10-2007', '31-10-2007', '21-11-2007', '28-11-2007', '12-12-2007', '19-12-2007', '14-5-2008', '21-5-2008', '28-5-2008', '11-6-2008', '25-6-2008', '17-9-2008', '24-9-2008', '1-10-2008', '15-10-2008', '29-10-2008', '19-11-2008', '26-11-2008', '10-12-2008', '17-12-2008', '11-2-2009', '18-2-2009', '11-3-2009', '18-3-2009', '25-3-2009', '1-4-2009', '29-4-2009', '27-5-2009', '10-6-2009', '24-6-2009', '9-9-2009', '9-9-2009', '16-9-2009', '23-9-2009', '14-10-2009', '28-10-2009', '18-11-2009', '25-11-2009', '2-12-2009', '16-12-2009', '10-2-2010', '17-2-2010', '24-2-2010', '10-3-2010', '17-3-2010', '24-3-2010', '14-4-2010', '21-4-2010', '28-4-2010', '12-5-2010', '19-5-2010', '26-5-2010', '9-6-2010', '16-6-2010', '23-6-2010', '21-7-2010', '8-9-2010', '15-9-2010', '22-9-2010', '29-9-2010', '13-10-2010', '27-10-2010', '10-11-2010', '1-12-2010', '15-12-2010', '26-1-2011', '9-2-2011', '16-2-2011', '23-2-2011', '9-3-2011', '16-3-2011', '23-3-2011', '30-3-2011', '13-4-2011', '11-5-2011', '25-5-2011', '8-6-2011', '15-6-2011', '22-6-2011', '13-7-2011', '20-7-2011', '14-9-2011', '21-9-2011', '8-2-2012', '15-2-2012', '22-2-2012', '7-3-2012', '14-3-2012', '28-3-2012', '11-4-2012', '16-5-2012', '30-5-2012', '13-6-2012', '20-6-2012', '27-6-2012', '18-7-2012', '12-9-2012', '19-9-2012', '26-9-2012', '10-10-2012', '31-10-2012', '28-11-2012', '12-12-2012', '19-12-2012', '30-1-2013', '13-2-2013', '27-2-2013', '13-3-2013', '20-3-2013', '10-4-2013', '17-4-2013', '24-4-2013', '8-5-2013', '22-5-2013', '29-5-2013', '12-6-2013', '19-6-2013', '26-6-2013', '11-9-2013', '18-9-2013', '25-9-2013', '9-10-2013', '16-10-2013', '30-10-2013', '20-11-2013', '27-11-2013', '11-12-2013', '18-12-2013', '22-1-2014', '12-2-2014', '12-3-2014', '19-3-2014', '9-4-2014', '7-5-2014', '14-5-2014', '28-5-2014', '25-6-2014', '9-7-2014', '10-9-2014', '17-9-2014', '24-9-2014', '8-10-2014', '15-10-2014', '29-10-2014', '19-11-2014', '26-11-2014', '10-12-2014', '17-12-2014', '21-1-2015', '11-2-2015', '18-2-2015', '11-3-2015'];
+//
+$(function(){
+$( "#datepicker" ).datepicker({
+inline: true,
+beforeShowDay: function (date) {
+var theday = date.getDate() + '-' + (date.getMonth()+1) + '-' + date.getFullYear();
+var isInListTheDay = $.inArray(theday, datesArray) >= 0
+// alert(theday + " " + isInListTheDay);
+return [isInListTheDay,isInListTheDay?"specialDate":''];
+}
+});
+$(function() {
+
+//Array para dar formato en español
+$.datepicker.regional['es'] =
+{
+closeText: 'Cerrar',
+prevText: 'Previo',
+nextText: 'Próximo',
+monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio',
+'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+monthNamesShort: ['Ene','Feb','Mar','Abr','May','Jun',
+'Jul','Ago','Sep','Oct','Nov','Dic'],
+monthStatus: 'Ver otro mes', yearStatus: 'Ver otro año',
+dayNames: ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'],
+dayNamesShort: ['Dom','Lun','Mar','Mie','Jue','Vie','Sáb'],
+dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sa'],
+dateFormat: 'dd/mm/yy',
+firstDay: 1,
+initStatus: 'Selecciona la fecha',
+isRTL: false
+};
+$.datepicker.setDefaults($.datepicker.regional['es']);
+
+//minDate: fecha de comienzo D=días | M=mes | Y=año
+//maxDate: fecha tope D=días | M=mes | Y=año
+$( "#datepicker" ).datepicker({ minDate: "13-9-2000", maxDate: "11-3-2015" });
+$( "#datepicker" ).datepicker({
+onSelect: function(dateText) {
+$(this).change();
+}
+})
+.change(function() {
+var sel_date = $("#datepicker").datepicker('getDate');
+var str_label_date = $.datepicker.formatDate("dd/mm/yy", sel_date);
+var str_file_date = $.datepicker.formatDate("yymmdd", sel_date);
+var sel_url = "The Words They Used_es/The Words They Used_" + str_file_date + ".html";
+var ifr=document.getElementsByName('iframe_a')[0]; 
+ifr.src=sel_url;
+$( "#control_panel" ).hide();
+document.getElementById('session_label').innerHTML = "Mostrando los resultados del análisis del diario de la sesión de control de " + str_label_date;
+});
+$( "#datepicker" ).datepicker('setDate', '11/3/2015');
+$( "#datepicker" ).change();
+// alert("Init");
+});
+
+});
+</script>
+
+<style type="text/css">.specialDate { background-color: #6F0 !important; }</style>
+
+<script>
+formatDate = d3.time.format("%B %Y");
+formatDateSpanish = function(value) {
+	return ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"][value.getMonth()] + " " + value.getFullYear();
+};
+formatDateToPicker = d3.time.format("%d/%m/%Y");
+// parameters
+var margin = {
+top: 25,
+right: 100,
+bottom: 25,
+left: 100
+},
+width = 780 - margin.left - margin.right,
+height = 200 - margin.bottom - margin.top;
+// scale function
+var timeScale = d3.time.scale()
+.domain([new Date('2000-9-13'), new Date('2015-3-11')])
+.range([0, width])
+.clamp(true);
+// initial value
+var startValue = timeScale(new Date('2015-3-11'));
+startingValue = new Date('2015-3-11');
+//////////////////
+// defines brush
+var brush = d3.svg.brush()
+.x(timeScale)
+.extent([startingValue, startingValue])
+.on("brush", brushed);
+var svgSlider = d3.select("#slider").append("svg")
+.attr("width", width + margin.left + margin.right)
+.attr("height", height + margin.top + margin.bottom)
+.append("g")
+// classic transform to position g
+.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+svgSlider.append("g")
+.attr("class", "x axis")
+// put in middle of screen
+.attr("transform", "translate(0," + height / 2 + ")")
+// inroduce axis
+.call(d3.svg.axis()
+.scale(timeScale)
+.orient("bottom")
+.tickFormat(function(d) {
+return formatDateSpanish(d);
+})
+.tickSize(0)
+.tickPadding(12)
+.tickValues([timeScale.domain()[0], timeScale.domain()[1]]))
+.select(".domain")
+.select(function() {
+console.log(this);
+return this.parentNode.appendChild(this.cloneNode(true));
+})
+.attr("class", "halo");
+var slider = svgSlider.append("g")
+.attr("class", "slider")
+.call(brush);
+slider.selectAll(".extent,.resize")
+.remove();
+slider.select(".background")
+.attr("height", height);
+var handle = slider.append("g")
+.attr("class", "handle")
+handle.append("path")
+.attr("transform", "translate(0," + height / 2 + ")")
+.attr("d", "M 0 -20 V 20")
+handle.append('text')
+.text(startingValue)
+.attr("transform", "translate(" + (-18) + " ," + (height / 2 - 25) + ")");
+slider
+.call(brush.event)
+function brushed() {
+var value = brush.extent()[0];
+if (d3.event.sourceEvent) { // not a programmatic event
+value = timeScale.invert(d3.mouse(this)[0]);
+brush.extent([value, value]);
+}
+handle.attr("transform", "translate(" + timeScale(value) + ",0)");
+handle.select('text').text(formatDateSpanish(value));
+// alert(formatDateToPicker(value));
+$( "#datepicker" ).datepicker('setDate', formatDateToPicker(value));
+$( "#datepicker" ).datepicker("show");
+}
+</script>
+</body>
+</html>

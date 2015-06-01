@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+   <head> 
+                
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+        <!-- force IE9 to not use compatability mode -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+       
+        <!-- Facebook share metadata -->
+        <meta name="title" content="PolitiLines" /> 
+		<meta name="description" content="Politilines: una herramienta que permite explorar las palabras usadas en los diarios de sesiones de control del Congreso español y conectarlas con los tópicos con los diputados  que los usan." /> 
+        <link rel="image_src" href="images/logo.png" />
+       
+        <meta name="robots"content="all"/>        
+        
+        <title>Politilines</title>
+        
+        <!--  view size on mobile devices -->
+        <!-- <meta name="viewport" content="width=device-width,maximum-scale=1.0" />-->       
+
+		<!--  font embedding -->
+		 <link href='http://fonts.googleapis.com/css?family=Cabin:400,500,700|Podkova' rel='stylesheet' type='text/css'>
+		
+		<!-- styles old browsers / modern browsers-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" type="text/css" charset="utf-8"><![endif]-->
+		<!--[if gt IE 8]><!--><link rel="stylesheet" href="css/main.css" type="text/css" charset="utf-8"><!--<![endif]-->
+		
+		<link rel="stylesheet" href="css/jquery.jscrollpane.css" type="text/css" charset="utf-8">
+		<link rel="stylesheet" href="css/scrollpane.css" type="text/css" charset="utf-8">
+
+       <!--[if lte IE 8]>
+		<script type="text/javascript">var is_lte_IE8 = true;</script>
+		<![endif]––>  
+       		    
+       			
+		<!--[if IE 7]>
+       	<script type="text/javascript">   
+			//ultimately redirect to upgrade page or fix display issues with IE7
+			//window.location = 'upgrade.html';
+		<script>
+		<![endif]-->    
+       		  
+       
+       	<script type="text/javascript"> 
+       		if(is_lte_IE8!=true)
+       			var is_lte_IE8=false;     	
+       	</script>    
+                      
+    </head> 
+    <body>    	   	
+    	<div id="wrapper">
+	        <div id="stage">
+	        	<img id="logo" src="images/logo.png"/>
+	        	 <div id="describe">Visualizando las palabras usadas en la<br/><span id="describe_scope">2011-2012 <strong></strong></span></div>
+	         	<div id="categories"><span id="cat_one">'TOP' de TÓPICOS</span><span id="cat_two">'TOP' de PALABRAS</span><span id="cat_three">GRUPOS</span></div>
+	        
+	        	<div id="waist">
+	        	 	<div id="debates">
+	        			<div id="sidehead">Explora por Sesión</div>
+	        			<div id="event_info"></div>
+	        			<div id="sideheadSub">Sesiones</div>
+	        			<div id="side_filter">
+							<select name="debates_filter" id="debates_filter" style="width: 100%;" onchange="Main.reload()">
+								<option selected value="day">Por día</option>
+								<option value="month">Por mes</option>
+							</select>
+						</div>
+						<!-- http://stackoverflow.com/questions/838545/div-vertical-scrollbar-show -->
+	        			<div id="side_menus" style="height: 555px; overflow-y: scroll;"></div>
+	        		</div>
+	        		<div id="viz">
+	        			<div id="vector_layer" class="shell"></div>
+	        			<div id="text_shell" class="shell">
+	        				<div id="text_layer"></div>
+	        			</div>
+	        		</div> 
+	        	</div>        
+	        </div>  
+        </div>
+		<!--
+        <div id="footer">
+       	    <div id="footer_block">
+        		<div id="footer_credit">
+					<a id="sources" style="cursor:pointer">Method & sources</a>
+        		</div>
+        	</div>
+        </div> 
+		-->
+       
+        <script src="js/PolitiLines_es.js?101212"></script>
+      
+    </body> 
+</html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html class="ocks-org do-not-copy">
+<meta charset="utf-8">
+<title>Evolución de los intereses</title>
+<style>
+
+@import url(style.css?aea6f0a);
+
+#chart {
+  margin-left: -40px;
+  height: 506px;
+}
+
+text {
+  font: 10px sans-serif;
+}
+
+.dot {
+  stroke: #000;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.label {
+  fill: #777;
+}
+
+.year.label {
+  font: 500 100px "Helvetica Neue";
+  fill: #ddd;
+}
+
+.year.label.active {
+  fill: #aaa;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+  cursor: ew-resize;
+}
+
+.ocks-org table, 
+.ocks-org select,
+.ocks-org input {
+  font: normal 13px Arial;
+}
+.ocks-org button {
+  font: normal 42px Arial;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: 10px;
+}
+
+</style>
+
+<p id="chart"></p>
+
+<div id="control_panel">
+	<table id="control_panel_table">
+		<col width="30%">
+		<col width="50%">
+		<col width="20%"> 
+		<tr>
+			<td>
+				<big><b>Seleccionar todos o algunos tópicos</b></big>
+			</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+				<select multiple id="topic_filter" name="topic_filter" size="4" style="width: 280px;">
+				</select>
+			</td>
+			<td>
+				<button onclick="cleanAndStart()">Empezar</button>
+			</td>
+			<td>
+				<aside id="overlay_help"></aside>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left">
+				<input type="checkbox" id="trace_checkbox"/><label>Dibujar el rastro de la evolución del tópico</label></input>
+			</td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+</div>
+
+<div id="topics_comments">
+</div>
+
+<script src="d3.v3.min.js"></script>
+<script>
+
+// Various accessors that specify the four dimensions of data to visualize.
+function x(d) { return d.income; }
+function y(d) { return d.lifeExpectancy; }
+function radius(d) { return d.population; }
+function color(d) { return d.region; }
+function key(d) { return d.name; }
+
+var menu_topics = {
+	"all":"All",
+    "empleo":"Empleo",
+    "economia":"Economía",
+    "corrupcion":"Corrupción",
+    "internacional":"Internacional",
+    "terrorismo":"Terrorismo",
+    "social":"Social",
+    "salud":"Salud",
+    "inseguridad ciudadana":"Inseguridad ciudadana",
+    "medio ambiente":"Medio ambiente",
+    "jovenes":"Jóvenes",
+    "justicia":"Justicia",
+    "servicios publicos e infraestructuras":"Servicios públicos e infraestructuras",
+    "educacion":"Educación",
+    "guerras":"Guerras",
+    "vivienda":"Vivienda",
+    "politica":"Pólitica",
+    "tecnologia e investigacion":"Tecnología e investigación",
+    "cultura":"Cultura",
+    "fuerzas armadas":"Fuerzas armadas",
+    "ideologia":"Ideología",
+    "preocupaciones situaciones personales":"Preocupaciones situaciones personales"
+}
+
+var par = {"corrupcion":{nombre:"Corrupción",name:"Corruption",description:["Some top keywords: Agencia Tributaria, Fraude Fiscal, Amnistía Fiscal",
+						 "A very important issue in Spain these days, we discovered that our politicians don't discuss corruption very often, at least in the control sessions. Despite the steep rise of the number of known cases these last years, early 2003 remains the stand-out period, when the Aznar government reduced taxes to tackle the problems of money laundering and tax evasion. Some parties harshly critizised the timing of the move, since the general election of 2004 was scheduled only a few months ahead.",
+						 "The people, though, have reacted strongly to the multiple scandals since 2010. We could see a sharp increase from that year onwards, coincing with the end of the worst part of the financial crisis. 2013 saw a whole new wave of cases of illegal funding and tax evasion regarding the principal political parties. After that, corruption has become the second most important issue for the Spanish people (the first being Jobs).",
+						 "However, the public outcry hasn't made any noticeable difference in the Congress. The last wave of scandals, involving almost every party in the country, have not led to increased appearance of the matter in the control sessions."]},
+		   "economia":{nombre:"Economía",name:"Economy",description:["Some top keywords: Empresas, Política Industrial, Economía Española",
+					  "As expected, 2008 saw a notable rise in the interest of both politicians and people in Economy. The financial crisis hit Spain specially hard, and it triggered a property bubble whose effects last until today (more on that in Housing and Jobs).",
+					  "Before that, we could observe that the introduction of the Euro in 2002 did bother the politicians, while there hardly seems to be any interest from the Spanish people. After 2012 there is a marked decline in interest from both groups. A possible reason could be that the focus of the crisis no longer is on the banks or financial institutions, but on people's problems like unemployment.",
+					  "Economy is actually the topic on which the interest of the politicians better reflects the interest in the subject of the people they represent."]},
+		   "educacion":{nombre:"Educación",name:"Education",description:["Some top words: Sistema Educativo, Formación Profesional, Fracaso Escolar",
+						"Despite occasional surges of activity in the Congress, Education has remained a quiet issue for the last 15 years. On one hand, large portions of the population have no natural interest in education, having already finished theirs. Therefore, despite occasional highly visible demonstrations, the CIS gives Education a relative small importance.",
+						"On the other hand, some situations involving politics did became highly politicised in recent years, explaining the brief surges in interest by the Congress. The introduction of the Bolonia Plan in 2008 was met by strong opposition from many parties, who argued that it was the first step towards the privatization of universities. The resistance of the Catalan government to the so called 'Ley Wert', which intended to reduce the number of lective hours in Catalan, led to some heated exchanges in 2014, as it was seen as a form of repression against Catalunya. Despite all this, Education never surpasses a 4% on the CIS barometer."]},
+		   "empleo":{nombre:"Empleo",name:"Jobs",description:["Some top keywords: Reforma Laboral, Negociación Colectiva, Paro",
+				   "Unemployment has been an issue in Spain for many years. In the last 15 years, the CIS value for Jobs has never failed to reach 20%.",
+				   "Despite being one of the most pressing problems in Spain, the importance of Employment has been at most moderate in the control sessions of the Congress. Isolated high points in 2008 and 2012 could indicate that Employment remains a hot topic before general elections, but even in those occasions the gap remains markedly wide."]},
+		   "ideologia":{nombre:"Ideología",name:"Ideology",description:["Some top keywords: Guerra Civil, Memoria Histórica, Vasco",
+					   "Ideology belongs to a group of issues that, although they appear in the Congress every now and then, are of very little importance to people according to the CIS. But in the middle of a financial crisis, with people losing jobs and homes, it shouldn't surprise anyone that Spaniards don't worry about historic memory or the victims of the Civil War. In spite of that, there are still periods where this matters keep our representatives busy. We noticed that the last mentioned issue, the victims of the Civil War, was often brought up in the sessions of control in late 2003."]},
+		   "inseguridad ciudadana":{nombre:"Inseguridad ciudadana",name:"Crime",description:["Some top keywords: Seguridad Ciudadana, Policía, Guardia Civil",
+					"Almost always under 10% of interest, Crime has seen two opposite trends in recent years. On one hand, there is an increased presence of the subject in the Congress' discussions. On the other hand, Spanish people don't list Crime so often as one of their main worries since 2007. The crisis and the more urgent problems it brought could be an explanation for the latter trend.",
+					"The explanation behind the first trend is quite different from what one may expect. Starting 2010, austerity politics resulted in considerably reduced spending in some areas, one of them the police force (Guardia Civil). Very often, parties against spending cuts would use this to question the ruling party. Thus, the 'Guardia Civil' became a matter of discussion in the Congress."]},
+		   "jovenes":{nombre:"Jóvenes",name:"Youth",description:["Some top keywords: Jóvenes, Paro Juvenil, Garantía Juvenil",
+					"An irregular but ever-present matter in the Congress, Youth covers related issues such as lack of opportunities for and massive emigration of highly qualified young people. After some years of reduced attention, the surge of new political parties since 2012 has led to an increase in Youth issues. Young people are considered to be the key in the upcoming general election.",
+					"Youth is rated as a very peripheric problem by Spaniards, undoubtedly because of the general situation of the country."]},
+		   "justicia":{nombre:"Justicia",name:"Justice",description:["Some top keywords: Fiscal General, Estatuto Orgànico, Tribunal Supremo",
+					  "The slow judiciary system has long been a recurrent thema in Spain. The start of the crisis in 2008 shifted the attention towards other issues, until the cases of corruption brought it back on the matter. We decided to treat Corruption and Justice separately, since we could identify both clusters pretty well. Contrary to Corruption, Justice does appear more often in the Congress since 2012. It seems politicians prefer to talk about the judges than about the judged ones...",
+					  "Anyway, Spanish people seem to be able to identify one of them as the real problem, and it is Corruption, not Justice."]},
+		   "medio ambiente":{nombre:"Medio ambiente",name:"Environment",description:["Some top keywords: Energías Renovables, Seguridad Nuclear, Cambio Climático",
+						  "A pretty important matter in the years of economic growth, when the adoption of renewable energies was a hot issue, interest fell quickly when the financial crisis hit Spain, and has not truly recovered since.",
+						  "We noticed an isolated fall in Congress in late 2002, coinciding with the only time people gave Environment as one of their worries. The reason people did so is the sinking of the Prestige and the oil spill that polluted the coastline of Galicia."]},
+		   "salud":{nombre:"Salud",name:"Health",description:["Some top keywords: Sanidad Pública, Sistema Sanitaria, Gasto Farmacéutico",
+					 "Health is one of the few issues, together with Economy, for which Congress and CIS show similar trends. Interest rarely surpasses 10% in both cases. While people's worries about health don't change much over time, health care reforms or impending elections, when health care system is discussed by all parties, make sure Health gets a little more attention in the Congress every now and then."]},
+		   "servicios publicos e infraestructuras":{nombre:"Servicios públicos e infraestructuras",name:"Public Services",description:["Some top keywords: AVE, Red Convencional, Fomento",
+							  "Delays in construction, growing and unexpected costs, the choice of the lines to be built, and the underuse of some of them have made the AVE a controversioal issue these last 15 years. As such, there have been many questions about it in the sessions of control of the Congress. Public spending in some regions has also become an issue in recent years.",
+							  "Spanish people don't rate Public Services or Infrastructures as worrying issues, probably because they aren't as pressing as others."]},
+		   "social":{nombre:"Social",name:"Social",description:["Some top keywords: Igualdad, Servicios Sociales, Pobreza",
+					 "A category which includes social equality and women's rights doesn't get more than 2% of the time of our politicians, while on the streets some people clearly care about these themes. We have to admit that this was one of the graphics that puzzled us the most.",
+					 "One possible reason for the low values in Congress is that many of the keywords of the category Social tend to be generic. When found with other more specific keywords, the documents containing them would then be assigned to other categories. Therefore, only a small portion of the documents involving 'Social' keywords would be classified as 'Social'.",
+					 "As an example, growing poverty is a vaguely defined issue while unemployment and evictions, directly related to it, are easier to label with keywords that are specific to them."]},
+		   "terrorismo":{nombre:"Terrorismo", name:"Terrorism",description:["Some top keywords: ETA, País Vasco, Política Antiterrorista",
+						"The decade of the 1990s saw ETA perpetrate numerous murders and bombings. Going into the 2000s international terrorism was on the rise too, and so terrorism was a very serious matter for the Spanish people, as illustrated by the CIS data. In strong contrast to this, few questions about terrorism were put to the government in the sessions of control.",
+						"We believe the reason of it may be quite unique in politics, in that all parties agreed on the measures taken by the government. Of course terrorism was high in the agenda of Spanish politicians, there was just no need to discuss about it. During the last decade, people have shifted their attention from terrorism to other matters, but the consequences of the Atocha Bombing in March 2004 and the Barajas Airport Bombing in December 2006 still can be seen in the data.",
+						"Nowadays, people don't worry about terrorism any more. In spite of that, the matter still comes up in the Congress as much as it did a decade ago."]},
+		   "vivienda":{nombre:"Vivienda",name:"Housing",description:["Some top keywords: Vivienda Protegida, Protección Oficial, Suelo",
+					  "An economy founded on ever-growing real estate prices meant a lot of people weren't able to afford a home by the mid 2000s. Until 2004, the opposition from the left, mainly the PSOE, seeked to discuss the issue with certain regularity. The politics of the ruling rigth party, the PP, were seen as one of the main reasons real estate was being heavily speculated with.",
+					  "After the change in the government in 2004, the PP didn't press for the issue to be discussed. Nevertheless, the prices continued to raise despite the new government's attempts to curb them. According to the CIS, people felt the situation actually got worse until 2008. The global financial crisis meant a sudden burst of the Spanish property bubble. Prices fell, and as housing slowly became more affordable the interest of people and politicians turned to the new problems the crisis brought."]}};
+
+// Entre 01/09/2000 i 11/3/2015 hi han 5304 dies
+var rangeDays = 5304;
+
+// Chart dimensions.
+var margin = {top: 19.5, right: 19.5, bottom: 19.5, left: 39.5},
+    width = 960 - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+// Various scales. These domains make assumptions of data, naturally.
+/*
+var xScale = d3.scale.log().domain([300, 1e5]).range([0, width]),
+    yScale = d3.scale.linear().domain([10, 85]).range([height, 0]),
+    radiusScale = d3.scale.sqrt().domain([0, 5e8]).range([0, 40]),
+    colorScale = d3.scale.category10();
+*/
+//
+var xMin = -0.005, xMax = 0.5;
+var yMin = -0.05, yMax = 0.5;
+var rMin = 0, rMax = 1.0;
+var xScale = d3.scale.sqrt().domain([xMin, xMax]).range([0, width]),
+    yScale = d3.scale.linear().domain([yMin, yMax]).range([height, 0]),
+    radiusScale = d3.scale.sqrt().domain([rMin, rMax]).range([0, 120]),
+    colorScale = d3.scale.category20();
+
+// The x & y axes.
+/*
+var xAxis = d3.svg.axis().orient("bottom").scale(xScale).ticks(12, d3.format(",d")),
+    yAxis = d3.svg.axis().scale(yScale).orient("left");
+*/
+var xAxis = d3.svg.axis().ticks(10).tickFormat(d3.format("%")).orient("bottom").scale(xScale),
+    yAxis = d3.svg.axis().ticks(10).tickFormat(d3.format("%")).orient("left").scale(yScale);
+
+// Create the SVG container and set the origin.
+var svg = d3.select("#chart").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+// Add the x-axis.
+svg.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
+
+// Add the y-axis.
+svg.append("g")
+    .attr("class", "y axis")
+    .call(yAxis);
+
+// Add an x-axis label.
+svg.append("text")
+    .attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x", width)
+    .attr("y", height - 6)
+    .text("CIS (" + (100.*xMin).toFixed(0) + "% - " + (100.*xMax).toFixed(0) + "%)");
+
+// Add a y-axis label.
+svg.append("text")
+    .attr("class", "y label")
+    .attr("text-anchor", "end")
+    .attr("y", 6)
+    .attr("dy", ".75em")
+    .attr("transform", "rotate(-90)")
+    .text("Congreso (" + (100.*yMin).toFixed(0) + "% - " + (100.*yMax).toFixed(0) + "%)");
+
+// Add the year label; the value is set on transition.
+var label = svg.append("text")
+    .attr("class", "year label")
+    .attr("text-anchor", "end")
+    // .attr("y", height - 24)
+	.attr("y", 48)
+    .attr("x", width)
+    .text("09/2000");
+	
+var line = d3.svg.line()
+    .interpolate("basis")
+    .x(function(d, i) { return d[0]; })
+    .y(function(d, i) { return d[1]; });
+	
+var ptdata = {};
+
+// Status flags
+var first_execution = true;
+var transition_running = false;
+
+///////////////////////////////////////////////////////////////////////////////
+// Initial configuration
+var transition_length = 60 * 1000; // transition duration in milliseconds
+var enable_overlay = true;
+var show_topic_comments = true;
+var initial_selection = ['all'];
+///////////////////////////////////////////////////////////////////////////////
+	
+// Load the data.
+function loadAndStart() {
+
+  d3.json("common_nations_list.json", function(data) {
+
+  // Add menu options
+  if (first_execution) {
+	if (initial_selection==null && initial_selection.length == 0) {
+		for(var item in menu_topics) {
+			var opt = document.createElement('option')
+			opt.innerHTML = menu_topics[item];
+			opt.value = item;
+			if (item == 'all') {
+				opt.selected = true;
+			}
+			topic_filter.appendChild(opt);
+		}
+	}
+	else {
+		for(var item in menu_topics) {
+			var opt = document.createElement('option')
+			opt.innerHTML = menu_topics[item];
+			opt.value = item;
+			if (initial_selection.indexOf(item) > -1) {
+				opt.selected = true;
+			}
+			topic_filter.appendChild(opt);
+		}
+	}
+  }
+  else {
+	for(var item in menu_topics) {
+		var opt = document.createElement('option')
+		opt.innerHTML = menu_topics[item];
+		opt.value = item;
+		topic_filter.appendChild(opt);	
+	}
+  }
+  first_execution = false;
+  
+  // Filter by menu options
+  var options = topic_filter && topic_filter.options;
+  var selected_filter = new Array();
+  for (var i=0, iLen=options.length; i<iLen; i++) {
+    if (options[i].selected) {
+      selected_filter.push(options[i].value);
+    }
+  } 
+  
+  var all_selected = (selected_filter.indexOf('all') > -1);
+  if (selected_filter.length==0) {
+	all_selected = true;
+  }
+  var nations = new Array();
+  for(i=0; i<data.length; i++) {
+	if (all_selected || (selected_filter.indexOf(data[i].name) > -1) ) {
+		nations.push(data[i]);
+		ptdata[data[i].name] = new Array();
+	}
+  }
+  
+  // Add comments to selected topics
+  if (show_topic_comments) {
+	addComments(selected_filter);
+  }
+  
+  // Add overlay help
+  if (enable_overlay) {
+	overlay_help.innerHTML = "Mover el ratón sobre el mes/año para ir hacia adelante y atrás en el tiempo."
+  }
+
+  formatDateToControl = d3.time.format("%m/%Y");
+
+  // A bisector since many topic data is sparsely-defined.
+  var bisect = d3.bisector(function(d) { return d[0]; });
+  
+  var elemEnter = svg.append("g")
+      .attr("class", "dots")
+    .selectAll(".dot")
+      .data(interpolateData(0))
+    .enter();
+
+  // Add a path
+  var path_dot = null;
+  var trace_checkbox=document.getElementById('trace_checkbox'); 
+  if (trace_checkbox.checked) {
+	path_dot = elemEnter.append("path")
+    .attr("class", function(d){return "line-"+d.name.replace(' ','-');})
+	.attr("fill","none")
+	.attr("stroke", function(d) { return colorScale(color(d)); })
+	.attr("stroke-width", "3px")
+	// .attr("stroke-dasharray", ("2,5"))
+    .attr("d", line);
+  }
+	
+  // Add a circle
+  var dot = elemEnter.append("circle")
+      .attr("class", "dot")
+      .style("fill", function(d) { return colorScale(color(d)); })
+      .call(position)
+      .sort(order);
+	  
+  // Add a title.
+  dot.append("title")
+	  .attr("class", "dot_title")
+	  .text(function(d) {var result = d.name;});
+	  
+  // Add a label to circle	
+  var label_dot = elemEnter.append("text")
+	.attr("class", "label_dot")
+	.style("text-anchor", "middle")
+	.call(label_position)
+	.sort(order)
+	.text(function(d){return d.name;});
+	  
+  // Add an overlay for the month/year label.
+  var box = label.node().getBBox();
+  
+  var overlay = null;
+  if (enable_overlay) {
+    overlay = svg.append("rect")
+        .attr("class", "overlay")
+        .attr("x", box.x)
+        .attr("y", box.y)
+        .attr("width", box.width)
+        .attr("height", box.height)
+        .on("mouseover", enableInteraction);
+  }
+  
+  // Start a transition that interpolates the data based on month/year.
+  transition_running = true;
+  svg.transition()
+      .duration(transition_length)
+      .ease("linear")
+      .tween("year", tweenYear)
+      .each("end", enableInteraction);
+
+  // Positions the dots based on data.
+  function position(dot) {
+    dot .attr("cx", function(d) { return xScale(x(d)); })
+        .attr("cy", function(d) { return yScale(y(d)); })
+        .attr("r", function(d) { return radiusScale(radius(d)); });
+	
+	// Remove previous title
+    dot.selectAll(".dot_title").remove();
+	// Add a new title.
+	dot.append("title")
+	  .attr("class", "dot_title")
+      .text(function(d) {  
+		  var result = d.name + ":";
+		  if (x(d) > 0) {
+			  result += "\nCIS: (" + (100.*x(d)).toFixed(2) + "%)";
+		  }
+		  if (y(d) > 0) {
+			  result += "\nCongrés: (" + (100.*y(d)).toFixed(2) + "%)";
+		  }
+		  result += "\nGlobal: (" + (100.*radius(d)).toFixed(2) + "%)";
+		  return result;	  
+	});
+	
+  }
+  
+  function path_position(path_dot, year_data) {
+  
+	for (i=0; i<year_data.length; i++) {
+		var pt = new Array();
+		pt.push(xScale(x(year_data[i])));
+		pt.push(yScale(y(year_data[i])));		
+		ptdata[year_data[i].name].push(pt);
+		path_dot_name = d3.selectAll(".line-"+year_data[i].name.replace(' ','-'));
+		path_dot_name.data([ptdata[year_data[i].name]]);
+		// path_dot_name.attr("stroke-width", 2*radiusScale(radius(year_data[i])) + "px")
+	}
+	
+	// Redraw the path_dot:
+	path_dot.attr("d", function(d) { return line(d);})  
+  }
+  
+  function label_position(label_dot) {
+    label_dot	.attr("dx", function(d) { return xScale(x(d)); })
+				.attr("dy", function(d) { return yScale(y(d)); })
+				// .style("font-size", function(d) { return Math.round(radiusScale(radius(d))/3.)+"px"; });
+				.style("font-size", function(d) { return (radiusScale(radius(d))/3.).toFixed(2)+"px"; });
+  }
+
+  // Defines a sort order so that the smallest dots are drawn on top.
+  function order(a, b) {
+    return radius(b) - radius(a);
+  }
+  
+  // After the transition finishes, you can mouseover to change the year.
+  function enableInteraction() {
+    var yearScale = d3.scale.linear()
+        .domain([0, rangeDays])
+        .range([box.x + 10, box.x + box.width - 10])
+        .clamp(true);
+
+    // Cancel the current transition, if any.
+    svg.transition().duration(0);
+	transition_running = false;
+
+	if (enable_overlay) {
+		overlay
+			.on("mouseover", mouseover)
+			.on("mouseout", mouseout)
+			.on("mousemove", mousemove)
+			.on("touchmove", mousemove);
+	}
+
+    function mouseover() {
+      label.classed("active", true);
+    }
+
+    function mouseout() {
+      label.classed("active", false);
+    }
+
+    function mousemove() {
+      displayYear(yearScale.invert(d3.mouse(this)[0]));
+    }
+  }
+
+  // Tweens the entire chart by first tweening the year, and then the data.
+  // For the interpolated data, the dots and label are redrawn.
+  function tweenYear() {
+    var year = d3.interpolateNumber(0, rangeDays);
+    return function(t) { displayYear(year(t)); };
+  }
+
+  // Updates the display to show the specified year.
+  function displayYear(year) {
+  
+	var year_data = interpolateData(year);
+  
+    dot.data(year_data, key).call(position).sort(order);
+	label_dot.data(year_data, key).call(label_position).sort(order);
+	
+	if (path_dot!=null && transition_running) {
+		path_position(path_dot,year_data);
+	}
+	
+    // label.text(Math.round(year));
+	var from = new Date('2000-09-01T00:00:00');
+	var result = new Date(from);
+    result.setDate(from.getDate() + year);
+	label.text(formatDateToControl(result));
+  }
+
+  // Interpolates the dataset for the given (fractional) year.
+  function interpolateData(year) {
+    return nations.map(function(d) {
+		return {
+			name: d.name,
+			region: d.region,
+			income: interpolateValues(d.income, year),
+			population: interpolateValues(d.population, year),
+			lifeExpectancy: interpolateValues(d.lifeExpectancy, year)
+		  };
+    });
+  }
+
+  // Finds (and possibly interpolates) the value for the specified year.
+  function interpolateValues(values, year) {
+    var i = bisect.left(values, year, 0, values.length - 1),
+        a = values[i];
+    if (i > 0) {
+      var b = values[i - 1],
+          t = (year - a[0]) / (b[0] - a[0]);
+	  var result = a[1] * (1 - t) + b[1] * t;
+      return (result>0)?result:0.0;
+    }
+    return a[1];
+  }
+});
+}
+
+function addComments(selected_filter) {
+
+	var div_topics_comments = d3.select("#topics_comments");
+	div_topics_comments.selectAll("*").remove();
+  
+	for(var i=0; i<selected_filter.length; i++) {
+		if (selected_filter[i]!="all") {
+			div_topics_comments.append("hr");
+			div_topics_comments.append("p").html("<b>" + par[selected_filter[i]].name + "</b>" + " (Topic: \"" + par[selected_filter[i]].nombre + "\")");
+			par[selected_filter[i]].description.forEach(function(d){
+				return d3.select("#topics_comments").append("p").text(d);
+			});
+		}
+	}
+	div_topics_comments.append("hr");
+}
+
+function cleanAndStart() {
+	// Clean
+	svg.selectAll(".dots").remove();
+	
+	// Load and start
+	loadAndStart();
+}
+
+loadAndStart();
+
+</script>

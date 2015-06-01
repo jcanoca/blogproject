@@ -63,6 +63,7 @@ text {
 .ocks-org input {
   font: normal 13px Arial;
 }
+
 .ocks-org button {
   font: normal 42px Arial;
   -moz-border-radius: 5px;
@@ -74,39 +75,36 @@ text {
 
 <p id="chart"></p>
 
-<div id="control_panel">
+<div id="control_panel" style="margin-left: -140px;">
 	<table id="control_panel_table">
-		<col width="40%">
+		<col width="25%">
 		<col width="55%">
-		<col width="5%"> 
+		<col width="20%"> 
 		<tr>
-			<td>
-				<button onclick="cleanAndStart()">Start</button>
-			</td>
 			<td style="display:none;">
 				<big><b>Select all, one or multiple topics</b></big>
 			</td>
 			<td></td>
-			
+			<td></td>
 		</tr>
 		<tr>
-			<td></td>
-			<td>
-				<aside id="overlay_help"></aside>
-			</td>
 			<td style="display:none;">
 				<select multiple id="topic_filter" name="topic_filter" size="4" style="width: 240px;">
 				</select>
 			</td>
+			<td>
+				<button onclick="cleanAndStart()">Start</button>
+			</td>
+			<td>
+				<aside id="overlay_help"></aside>
+			</td>
 		</tr>
 		<tr>
-			
 			<td style="display:none;">
 				<input type="checkbox" id="trace_checkbox"/><label>Draw trace topic path</label></input>
 			</td>
 			<td></td>
 			<td></td>
-			
 		</tr>
 	</table>
 </div>
@@ -470,7 +468,8 @@ function loadAndStart() {
   function label_position(label_dot) {
     label_dot	.attr("dx", function(d) { return xScale(x(d)); })
 				.attr("dy", function(d) { return yScale(y(d)); })
-				.style("font-size", function(d) { return Math.round(radiusScale(radius(d))/3.)+"px"; });
+				// .style("font-size", function(d) { return Math.round(radiusScale(radius(d))/3.)+"px"; });
+				.style("font-size", function(d) { return (radiusScale(radius(d))/3.).toFixed(2)+"px"; });
   }
 
   // Defines a sort order so that the smallest dots are drawn on top.

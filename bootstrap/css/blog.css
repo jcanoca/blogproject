@@ -2,11 +2,6 @@
  * Globals
  */
  
-body {
-  font-family: "sans-serif";
-  color: #555;
-}
-
 h1, .h1,
 h2, .h2,
 h3, .h3,
@@ -132,6 +127,8 @@ img {
  */
 
 .blog-post {
+  font-family: "sans-serif";
+  color: #555;
   margin-bottom: 60px;
 }
 .blog-post-title {
