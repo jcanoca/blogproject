@@ -1,9 +1,9 @@
 /*
  * Globals
  */
- 
+
 body {
-  font-family: "sans-serif";
+  font-family: Georgia, "Times New Roman", Times, serif;
   color: #555;
 }
 
@@ -14,7 +14,7 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   margin-top: 0;
-  font-family: "sans-serif";
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: #333;
 }
@@ -26,14 +26,10 @@ h6, .h6 {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
-	
+    width: 970px;
   }
 }
 
-img { 
-   border:1px solid #021a40;
-}
 
 /*
  * Masthead for nav
@@ -41,7 +37,6 @@ img {
 
 .blog-masthead {
   background-color: #428bca;
- 
   -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
           box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
 }
@@ -53,7 +48,6 @@ img {
   padding: 10px;
   font-weight: 500;
   color: #cdddeb;
-  font-family: sans-serif 
 }
 .blog-nav-item:hover,
 .blog-nav-item:focus {
@@ -62,7 +56,6 @@ img {
 }
 
 /* Active state gets a caret at the bottom */
-
 .blog-nav .active {
   color: #fff;
 }
@@ -75,13 +68,10 @@ img {
   margin-left: -5px;
   vertical-align: middle;
   content: " ";
-  font-family: sans-serif;
   border-right: 5px solid transparent;
   border-bottom: 5px solid;
   border-left: 5px solid transparent;
 }
-
-
 
 
 /*

@@ -7,8 +7,22 @@
 @import url(style.css?aea6f0a);
 
 #chart {
-  margin-left: -40px;
-  height: 506px;
+  margin-left: -140px;
+  height: 530px;
+}
+
+html {
+  min-width: 700px;
+}
+
+.ocks-org body {
+  background: #fcfcfa;
+  color: #333;
+  font-family: "PT Serif", serif;
+  margin: 1em auto 1em auto;
+  position: relative;
+  width: 820px;
+  height: 100px;
 }
 
 text {
@@ -53,7 +67,7 @@ text {
   font: normal 42px Arial;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  padding: 10px;
+  padding: 6px;
 }
 
 </style>
@@ -62,34 +76,37 @@ text {
 
 <div id="control_panel">
 	<table id="control_panel_table">
-		<col width="25%">
+		<col width="40%">
 		<col width="55%">
-		<col width="20%"> 
+		<col width="5%"> 
 		<tr>
-			<td>
-				<big><b>Select all, one or multiple topics</b></big>
-			</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>
-				<select multiple id="topic_filter" name="topic_filter" size="4" style="width: 240px;">
-				</select>
-			</td>
 			<td>
 				<button onclick="cleanAndStart()">Start</button>
 			</td>
+			<td style="display:none;">
+				<big><b>Select all, one or multiple topics</b></big>
+			</td>
+			<td></td>
+			
+		</tr>
+		<tr>
+			<td></td>
 			<td>
 				<aside id="overlay_help"></aside>
 			</td>
+			<td style="display:none;">
+				<select multiple id="topic_filter" name="topic_filter" size="4" style="width: 240px;">
+				</select>
+			</td>
 		</tr>
 		<tr>
-			<td style="text-align:left">
+			
+			<td style="display:none;">
 				<input type="checkbox" id="trace_checkbox"/><label>Draw trace topic path</label></input>
 			</td>
 			<td></td>
 			<td></td>
+			
 		</tr>
 	</table>
 </div>
@@ -181,9 +198,9 @@ var par = {"corrupcion":{nombre:"Corrupción",name:"Corruption",description:["So
 var rangeDays = 5304;
 
 // Chart dimensions.
-var margin = {top: 19.5, right: 19.5, bottom: 19.5, left: 39.5},
-    width = 960 - margin.right,
-    height = 500 - margin.top - margin.bottom;
+var margin = {top: 19.5, right: 19.5, bottom: 19.5, left: 35.5},
+    width = 1100 - margin.right-margin.left,
+    height = 550 - margin.top - margin.bottom;
 
 // Various scales. These domains make assumptions of data, naturally.
 /*
@@ -266,9 +283,9 @@ var transition_running = false;
 
 ///////////////////////////////////////////////////////////////////////////////
 // Initial configuration
-var transition_length = 60 * 1000; // transition duration in milliseconds
-var enable_overlay = true;
-var show_topic_comments = true;
+var transition_length = 100 * 1000; // transition duration in milliseconds
+var enable_overlay = false;
+var show_topic_comments = false;
 var initial_selection = ['all'];
 ///////////////////////////////////////////////////////////////////////////////
 	

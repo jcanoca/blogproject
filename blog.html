@@ -29,11 +29,10 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 	
-	 </head>
+	</head>	 
 
    <div class="navbar-wrapper">
       <div class="container">
-
         <nav class="navbar navbar-inverse navbar-static-top">
           <div class="container">
             <div class="navbar-header">
@@ -50,14 +49,9 @@
 				<li><a href="./index.html">Home</a></li>
 				<li><a href="./the_radar.html">The Radar</a></li>
                 <li><a href="./the_analysis.html">The Analysis</a></li>
-				<li class="dropdown">
-                  <a href="./classic graphics.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Classic Charts <span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="./topic_evolution.html">Topic Evolution</a></li>
-                    <li><a href="./politilines.html">PolitiLiness</a></li>
-                    <li><a href="./words_they_used.html">Words They Used</a></li>
-                  </ul>
-                </li>
+				<li><a href="./topic_evolution.html">Topic Evolution</a></li>
+				<li><a href="./politilines.html">PolitiLiness</a></li>
+				<li><a href="./words_they_used.html">Words They Used</a></li>
 				<li class="active"><a>Blog</a></li>
               </ul>
             </div>
@@ -67,6 +61,7 @@
       </div>
     </div>
 
+	
   <body>
 
     <div class="container">
@@ -87,89 +82,169 @@
 				<br><br>   In these barometers we see two blocks of questions. The first one is always the same and the other can change and ask about a recent political or social issue. It is from the first block where we have selected two fixed questions for our study:</p>
 			 <blockquote>
               <li> ¿Cuál es, a su juicio, el principal problema que existe actualmente en España?¿Y el segundo?¿Y el tercero?(RESPUESTA ESPONTÁNEA) -Available since mar'06</li>
-			  <img src="images/pregunta1_cis.png" alt="Pregunta CIS" width="700" height="250">
+			  <img src="images/pregunta1_cis.png" alt="Pregunta CIS">
 			  <li> ¿Cuáles son, a su juicio, los tres problemas principales que existen actualmente en España?(MÁXIMO TRES RESPUESTAS) -Available from sep'00 to feb'06</li></p>
-			  <img src="images/pregunta2_cis.png" alt="Pregunta CIS" width="700" height="400">	
+			  <img src="images/pregunta2_cis.png" alt="Pregunta CIS">	
  		   </blockquote>
-			<p> The answers to these two questions are the three main problems that we have in Spain in the opinion of the Spanish Society and this is what we are going to use for our study.
+			<p> The answers to these two questions are the three main problems that we have in Spain in the opinion of the Spanish Society and they are what we are going to use for our study.
 			<br><br> We can find all the barometers in the <a href="http://www.cis.es/cis/opencm/EN/11_barometros/depositados.jsp">Data Bank</a>.</p>
 		</div><!-- /.blog-post -->
 
 		<div class="blog-post">
             <h2 class="blog-post-title">How do the Control Sessions to the Government in the Congress of Deputies work?</h2>
-			<p><br>There are many kinds of session done in the Congress, however we selected the Control Sessions that are taking place every Wednesday. Although they are not defined by the Constitution, they have become very popular over the years and now are ones of the most popular. Is in these sessions where the different political groups can ask to the Government and Ministers about the new laws that are in process or recently approved or talk about detected problems and they answer.
+			<p><br>There are many kinds of session done in the Congress, however we selected the Control Sessions that are taking place every Wednesday. Although they are not defined by the Constitution, they have become very popular over the years and now are ones of the most popular. Is in these sessions where the different political groups can ask the Government and Ministers about the new laws that are in process or recently approved or debate about any issue.
 				<br><br> The session diaries are completely available in their web page by a <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Publicaciones">search engine</a>.
 				<br><br> You can find more information about how they work in the following <a href="http://www.periodistasparlamentarios.org/?p=834">link</a>:</p>		
 			<blockquote>
-			<p>"[...] A normal session has a duration of at least 2 hours to debate about the proposed questions and answers. The Control Sessions are taking place on Tuesday afternoon in the Senate and Wednesday morning on the Congress.
-			<br><br> In first place they debate the questions and then the speech. The Government answer to the last ones can generate an iniciative from the asking group who put together all the conclusions and became a proposal(moción consecuencia de interpelación). These ones are going to be debated in the next session [...]"</p>
+			<p>"[...] A normal session has a duration of at least 2 hours to debate about the proposed questions and answers. The Control Sessions are taking place on Tuesday afternoon in the Senate and Wednesday morning in the Congress.
+			<br><br> The first thing they do is to debate the questions and, afterwards, the speeches. The answer from the government to these second ones makes the asking partie gather the conclussions and prepare proposals. Those will be debated on the next plenary session. [...]"
+			<br><br> <Strong> Source: </Strong> <a href="http://www.periodistasparlamentarios.org/?p=834">Asociación de Periodistas Parlamentarios</a></p>
 			</blockquote>
 		</div>		
 		
 		<div class="blog-post">
-            <h2 class="blog-post-title">The Scrapping</h2>
-			<p><br>  The Scrapping is the process from which we extract the information from the web. In this case we have achieve CIS barometers using its data bank and the Congress diaries using the Search Engine. 
-				<br><br> For this part of the process we needed Selenium and BeautifulSoup. </p>
+            <h2 class="blog-post-title">The Scrapping and Cleaning of the data</h2>
+			<p><br>  The Scrapping is the process from which we extract the information from the web. In this case we have achieved CIS barometers using its data bank and the Congress diaries using the Search Engine. 
+				<br><br> For this part of the process we needed <strong>Selenium</strong> and <strong>BeautifulSoup.</strong> </p>
 			<h3> <br> CIS </h3>
-			<p> Using Selenium we have download the content of all the barometers and with the help of BeautifulSoup we have searched the question and create a database with the results. 
-			<br>As answer we have 30 different topics each month, that means that during all the period (from sept'00 to feb'15) we have found 150 different topics. It is impossible to visualize all those topics and lots of them were similar. Because of this we create 14 clusters: Education, Health, Corruption, Environment, Public Services, Ideology, Economy, Employment, Youth, Justice, Social, Terrorism, Housing, Public Safety and Others. 
-			<br><br> Once we have the clusters we will put into groups the data and obtain the information that is need for the charts. </p>
+			<p> CIS' barometers are available each month. We have selected the period from September, 2000 to February, 2015 because we can find the questions we are looking for each month, excepting in August and exceptionally October,2001 (after 11S). 
+			<p><br> First, we made an approach using Selenium to know how many barometers we had available with the information that we wanted. It was here when we discovered that we did't have an answer in regular periods to the questions until September, 2000. 
+			<br><br> Once we realised about it, we downloaded the content of all the barometers with Selenium and using regular expressions with BeautifulSoup we created a database with the results that we kept in MongoDB. 
+			<br><br>As an answer to each question we had 30 different topics every month, that means that during all the period we found 150 different topics. Most of the topics where similar or related and we decided to group them by clusters. We have 14 clusters clearly identified: Education, Health, Corruption, Environment, Public Services, Ideology, Economy, Employment, Youth, Justice, Social, Terrorism, Housing, Public Safety and Others.
+			<br><br>We are going to find more topics or clusters in the Congres' debate however we never thought that the relation of the topics was going to be bidirectional.
+			</p>
 			<h3><br> The Congress of Deputies</h3>
-			<p><br> We are interested in the data between September 2000 to March 2015, because is on this period when we have data from CIS.
-			<br><br> The Congress webpage is generated dynamically. To obtain the list and download the session diaries we have used tools from Selenium and BeautifulSoap libraries. 
-			<br><br> As soon as we have the documents we start the analysis of the structure to extract the information that we really need. The Corpus has a defined patter with speeches next to questions previously registered (every question has a number to identify it). Every speech is registered with the deputy who started first. Knowing this, the documents are going to be divided in questions and answers which are done in the Control Session, the deputy and the political group it pertains. 
-			<br><br> To identify all the Congress members in the speeches and the political group they belong to we can obtain the information from the Congress web:<a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=10">Deputies</a>.</p>
-			<img src="images/congres2.png" alt="Lista Diputados" width="700" height="700">
-			<p><br> We are going to use Selenium and BeautifulSoap again to a deputies relation, parliamentary groups and legislature from the analysed period. Again, all this information we are going to keep it in MongoDB to use it in the next step. </p>
-			<h4> <br>Questions and speeches extraction </h4>
-			<p><br> For the extraction of questions and speeches we are going to use regular expressions. With their help we can analyse line by line the content of the diary searching the start and end from the questions and the speeches, deputies, parliamentary groups, ....
-			<br><br> The process starts when it finds the marks that indicate the question start, omitting the diary sections that doesn't correspond to the control sessions questions, as for example: "PROPOSICIONES NO DE LEY", "CONVALIDACIÓN O DEROGACIÓN DE REALES DECRETOS-LEYES", "JURAMENTO O PROMESA DE ACATAMIENTO DE LA CONSTITUCIÓN", etc. Also we omit in the process the interventions realised by the Congress moderator.
-			<br><br> Behind this lines we show you an example of the text before and after the process(with a different background depending on the political group to whom the deputy who realises belongs: blue, grupo popular; red, grupo socialista; grey, grupo mixto,...)</p>
-			<img src="images/intervencion1_eng.png" alt="Intervención Congreso" width="900" height="600">
-			<p> Then we apply the <a href="http://en.wikipedia.org/wiki/String_metric">String Metrics</a> method. With this method the possible transcriptions mistakes will not affect to our analysis.
-			<br><br> Finally, you can see a complet diary session after all the process. If you put the pointer on top it gives to us information about the deputy, political group and other information obtained during the analysis.</p>
+			<p> The Congress webpage is generated dynamically. To obtain the list and download the session diaries we used tools from Selenium and BeautifulSoap libraries.
+			<br><br> From all the diaries available between September, 2000 and March, 2015  we downloaded the Control Sessions: The ones that are done on Wednesdays and had a questions' section on its agenda.  
+			<br><br> At the time of analyzing the number of Control Sessions obtained, it should be noted that in the traditional holiday months (January, July and August) and during electoral periods, we noted that we had 3 periods of 4 months, there are no sessions:</p>
+			<blockquote><ul><p>
+			<li>   January-April, 2004 (change of term: from VII to VIII)</li>
+			<li>   January-April, 2008 (change of term: from VIII to IX)</li>
+			<li>   October-December, 2011 and January,2012 (change of term: from IX to X) </li></p>
+			</ul></blockquote>
+			<p> After downloading all the sessions available we obtained 311 of them. </p>
+			<h4> <br><strong>Journal Sessions Structure</strong> </h4>
+			<p> Once obtained the diaries, we proceeded with the structure analysis of them. This process allowed us to extract the desired information: questions, answers, members and parliamentary groups performing in the session. 
+			<br><br> The content of the journal sessions is a debate around a question or issue previously registered. Questions or inquiries in the Congress are made one week prior the plenary control:</p>
+			<blockquote>
+			<p>"[...] The agenda of a Government control session in the Congress closes at 8pm of the previous week, although a Presidencial resolution on June, 1996 opened the possibility to replace it until Monday noon by questions concerning to resolutions adopted by the Council of Minister or to particulary topical issues. [...]"
+			<br><br> <strong>Source:</strong><a href="http://www.periodistasparlamentarios.org/?p=834"> Asociación de Periodistas Parlamentarios </a>.</p>
+			</blockquote>
+			<p>In this way, every question or issue has a <strong> file number </strong> that identifies it. All the speeches are literally recorded in the Session Journal pointing the deputy or parliamentary group who made it as we can see in this Jornal of March 25th, 2015:</p>
+			<img src="images/scraping1.png" alt="Session Journal">
+			<p> Henceforth, we define a document as a question and interventions (responses) generated and the additional information: date of session journal, deputy or group who asked the question, file number and members who performed every speech. 
+			<br><br> To identify the Congress members in the speeches and to which parliamentary groups they belong it was necessary to obtain the information from the Congress website. We used again <strong>Selenium</strong> and <strong>BeautifulSoap</strong> libraries to scrap lists of deputies, parliamentary groups and legislatures of the periods we were analysing.</p>
+			<h4> <br><strong>List of Congress Deputies</strong> </h4>
+			<p><a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=10">Members</a> is the secton of the Congress website where we can find the list of deputies by legislature. For example:<a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&letraElegida=A&tipoBusqueda=porLetra&idLegislatura=10"> listado de diputados de la X Legislatura y su grupo parlamentario </a>.</p>
+			<img src="images/congres2.png" alt="Lista Diputados">
+			<p> In all, we found 1374 members in our period.</p>
+			<h4> <br><strong>Parliamentary groups' List</strong> </h4>
+			<p> Looking at the <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/GruPar">Groups</a> tab we can find the list of parliamentari groups of each term. As we can see in: <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/GruPar?_piref73_2914053_73_1339199_1339199.next_page=/wc/cambioLegislatura"> listado de los grupos parlamentarios de la X Legislatura</a>.
+			<img src="images/congres3.png" alt="Lista Diputados"></p>
+			<p> Altogether we have a list of 16 parliamentary groups all along the period. The deputies that belong to the group are linked to the legislature, because it is possible to have changes in the compositions of the groups. </p>
+			<h4><br><strong>List of Legislatures </strong></h4>
+			<p> Inside Members we can find <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados/Historia">The Congress from 1977 to 2011</a> where we can find a list of the legislatures and their periods: <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados/Historia">List of Legislatures</a>.
+			<img src="images/congres4.png" alt="List of Legislatures"></p>
+			<p> Once we have all the lists we stored in MongoDB to use it in the extraction process</p>
+			<h3><br> Extraction of questions and speeches </h3>
+			<p> Using regular expressions we are able to analyse line by line the content of a journal tracking the beginning or the end of questions or contributions, deputies, groups, ...
+			<br><br> We begin the extraction process when we find the start of the questions, leaving out other sections from the journal that not belong to the questions of the control sessions as "PROPOSICIONES NO DE LEY", "CONVALIDACIÓN O DEROGACIÓN DE REALES DECRETOS-LEYES", "JURAMENTO O PROMESA DE ACATAMIENTO DE LA CONSTITUCIÓN", etc.</p>
+			<h4><br><strong> The questions' analysis </strong></h4>
+			<p>A session control question has the following structure:</p>
+			<blockquote><p>
+			["DEL DIPUTADO", "DE LA DIPUTADA", "DEL GRUPO PARLAMENTARIO", "DE DOÑA"] + [name and surname of the deputy] + [parliamentary group] + ["SOBRE", "RELATIVA A", ... ,":",","] + [question text] + [file number]
+			<img src="images/congres5.png" border="2" alt="Question">
+			</p></blockquote>
+			<p>To determine the deputy and the group of each question we sough the coincidence of [name deputy] on the deputies' table and the matching with the [political group] in the grup tabe. 
+			<br> Since the registered list of members in the DB is in the format: [[surname],[name]] it has been necessary an algorithm of names and surnames recognition to make the following transformations:</p>
+			<blockquote><p>
+			[Alberto Ruiz-Gallardón Jiménez] → [RUIZ-GALLARDÓN JIMÉNEZ], [ALBERTO]
+			[Jaime Rodríguez-Arana Muñoz] → [RODRÍGUEZ-ARANA MUÑOZ], [JAIME]
+			</p></blockquote>
+			<p>We trained the process with the whole list of deputies.</p>
+			<h4><br><strong> The discussions' analysis </strong></h4>			
+			<p>The discussions have one of the following structures in the journals:
+			<blockquote><p><ul>
+			<li>["El señor", "La señora",...] + [surname of the deputy] + [":"] + [intervention text]</li>
+			<li>["El señor", "La señora",...] + [position in the government] + ([surname of the deputy]) + [":"] + [intervention text]</li>
+			<img src="images/congres6.png" alt="Discussion">
+			</ul></p></blockquote>
+			<p>Once detected we do the same process as we have previously seen to determine the deputy, the group and the legislature. </p>
+			<h3><br>Remarks</h3>
+			<blockquote><p>
+			<li> The Moderator or the President of the Congress discussions have been deleted since they not provide any interesting content for us. </li>
+			<li> Different elements can act as a start of a question or discussion. That is why we have compiled dictionaries of elements (characters, n-grams of words) which have been trained with the collected documents:</p>
+			<blockquote><p>
+			Question initiators: ["DEL DIPUTADO", "DE LA DIPUTADA", "DEL GRUPO PARLAMENTARIO", "DE DOÑA", ...]
+			<br>Connectors within the question: ["SOBRE", "RELATIVA A", ... ,":",","]
+			<br>Interventions initiators: ["El señor", "La señora",...]
+			</p></blockquote>
+			<li>In the process of identification of deputies and parliamentary groups against our database we have applied <a href="http://en.wikipedia.org/wiki/String_metric">String Metrics</a> to skip frequent transcription errors in the journals as this one:</li>
+			<blockquote><p>
+			<img src="images/congres7.png" alt="String Metric">
+			"DE LADIPUTADADOÑALEIRE PAJÍN IRAOLA..." → "LEIRE PAJÍN IRAOLA"
+			<img src="images/congres8.png" alt="String Metric">
+			"... GRUPO PARLAMENTARIO FEDERAL DE IZQUIEDA UNIDA..." → "GIU" (Grupo Izquierda Unida)
+			</p></blockquote>
+			</p></blockquote>
+			<p> As a result of the extraction of questions and interventions<strong>7000 documents</strong> have been registered in the database. </p>
+			<h3><br>Examples</h3>
+			<p>Now we show you a couple of examples where you can see the original text and the one extracted in the process of analysis (painted the background of the text according to the group of the deputy who performs the intervention as blue-Popular group-, red-Socialist-, grey-Mixt group-)	
+			<img src="images/congres9.png" alt="Example">
+			<img src="images/congres10.png" alt="Example"></p>
+			<p><br> Finally, an example from a control session journal (HTML) labeled after going through the analysis process(when you put on a question or discussion a tooltip is shown with some of the information obtained during the analysis):</p>
 			<p><iframe src="politilines/data/marked/20150311_doc_marked.html" frameborder="0" id="borde"></iframe></p>
+			<h3><br> Testing </h3>
+			<p>To detect errors in the extraction process we have developed tests that analyze results after extraction.
+			<br><br>On one hand, it has been implemented a process that highlights the original documents(HTML) with colours selecting the extracts (each parliamentary group has an assigned colour). We have seen some examples in previous images. The result allows us to visually check the texts. In this sense, the charts PolitiLines and The Words They Used also allow us to validate the consistency of the data.
+			<br><br>Given the number of downloaded sessions control journals, it is not viable to use a visual review. Therefore, it has been developed a test that analyses the coherence of the information extracted looking for possible errors: Empty questions, unanswered questions, questions with too many discussions, empty interventions, questions or discussions which are not detected the deputy or parliamentary group that performs it...</p>
 		</div>
 		
 		<div class="blog-post">
-            <h2 class="blog-post-title">How we find the keywords of every speech?</h2>
+            <h2 class="blog-post-title">How do we find the keywords of every speech?</h2>
 			<h3>Feature extraction and text clustering</h3>
-			<h4><br> The problem </h4>
-			<p><br>After scraping the Congreso's and the CIS’ website, our next goal was to figure out how to connect these two worlds. The problem was, we want to build a bridge between the main topics coming from the Congreso’s documents and the main topics from the CIS website. 	
-			<br><br>There are a lot of ways to tackle this problem. We tried some of them, but, eventually, we chose to extract top topics from Congreso’s documents and to build a model using the k-mean algorithm in order to clustering these documents using the CIS’ main topics as labels to these clusters (as many as we can!). Thus, we could create, somehow, a dictionary between Congreso and CIS main topics. Next step was, to establish how to work out the metrics in order to compare these two worlds.
+			<h4><br><strong> The problem </strong></h4>
+			<p>After scraping the Congreso's and the CIS’ website, our next goal was to figure out how to connect these two worlds. The problem was that we wanted to build a bridge between the main topics coming from the Congreso’s documents and the main topics from the CIS website. 	
+			<br><br>There are a lot of ways of tackling this problem. We tried some of them, but, eventually, we chose to extract top topics from Congreso’s documents and to build a model using the k-mean algorithm in order to cluster these documents using the CIS’ main topics as labels to these clusters (as many as we can!). Therefore, we could create, somehow, a dictionary between Congreso and CIS main topics. Next step was, to establish how to work out the metrics in order to compare these two worlds.
 			<br><br>In the following paragraphs, we try to explain how we dealt with this problem step by step.</p>
-			<h4><br>Defining what it is a "feature"</h4>
-			<p><br>Since we were interested in the extraction of the main topics from our Corpus, we defined as a feature any n-gram keyword (a sequence of one or more words) within the Corpus.
-			<br><br>We decided that it would be helpful for our purpose, to split the Corpus into smaller pieces to reduce the number of topics per document, where one piece consist of a single "question" and their "interventions". This is what we call a "document" in the following paragraphs.
+			<h4><br><strong>Defining what it is a "feature"</strong></h4>
+			<p>Since we were interested in the extraction of the main topics from our Corpus, we defined as a feature any n-gram keyword (a sequence of one or more words) within the Corpus.
+			<br><br>We decided that it would be helpful for our purpose, to split the Corpus into smaller pieces to reduce the number of topics per document, where one piece consists of a single "question" and their "speeches". This is what we call a "document" in the following paragraphs.
 			<br><br>We noticed that concepts, in general, are expressed by nouns, with or without adjectives, so, we focused on finding the way to extract nouns and adjectives from our documents.</p>
-			<h4><br>How we extracted these features from the Corpus</h4>
-			<p><br>We used an unsupervised algorithm called RAKE (Rapid Automatic Keyword Extraction) implemented in Python to do that. RAKE it is very simple and has only a parameter. This parameter is a stop list and RAKE uses it to generate the co-occurrence graph formed by the candidates keywords.
-			<br><br>At this point, we considered building a customized stop list instead of using a static stop list. At first, we dealt with this problem as it was a NLP problem (Natural Language Processing), so we used a Spanish POS (Part-of-Speech) tagger to identify nouns and adjectives from our documents. So, we built stop lists as a list of all words except those identified as nouns and adjectives.
+			<h4><br><strong>How we extracted these features from the Corpus</strong></h4>
+			<p>We used an unsupervised algorithm called RAKE (Rapid Automatic Keyword Extraction) implemented in Python [1]. RAKE is very simple and has only one parameter. This parameter is a stop list and RAKE uses it to generate the co-occurrence graph formed by the candidate keywords.
+			<br><br>At this point, we considered building a customized stop list instead of using a static stop list. At first, we dealt with this problem as if it were a NLP problem (Natural Language Processing), so we used a Spanish POS (Part-of-Speech) tagger to identify nouns and adjectives from our documents. So, we built stop lists as a list of all words except those identified as nouns and adjectives.
 			<br><br>RAKE is also able to score the selected keywords. It works out the weight of each keyword as: deg(kw) / freq(kw)</p>
-			<h4><br>Cleaning and filtering keywords</h4>
-			<p><br>Before extracting keywords from each document, we used a dictionary to find false positives single out by RAKE (just in case the POS tagger have failed).
-			<br><br>In the course of extracting and loading the keywords into the database (by the way, we have used MongoDB), we discarded keywords with a RAKE score below 1.0
-			<br><br>After the process of extracting and loading keywords, we discarded manually those keywords that were meaningless under our point of view.</p>
-			<h4><br>Unsupervised approach: Clustering documents with k-Means</h4> 
-			<p><br>Before applying the k-means algorithm, we built the term-frequency matrix using the extracted keywords as a vocabulary (bag-of-the-words).
-			<br><br>At the beginning we used the sckit-learn Python library to build the term-frequency matrix but we noticed that scikit-learn counted the words within a keyword as unigrams and this was not what we wanted to do, so we decided to count keywords using an own algorithm.
+			<h4><br><strong>Cleaning and filtering keywords</strong></h4>
+			<p>Before extracting keywords from each document, we used a dictionary [2] to find false positives single out by RAKE (just in case the POS tagger had failed).
+			<br><br>While extracting and loading the keywords into the database (for what we used MongoDB) we discarded keywords with a RAKE's score below 1.0
+			<br><br>After the process of extracting and loading keywords, we discarded manually the keywords that were meaningless from our point of view.</p>
+			<h4><br><strong>Unsupervised approach: Clustering documents with k-Means</strong></h4> 
+			<p>Before applying the k-means algorithm, we built the term-frequency matrix using the extracted keywords as a vocabulary (bag-of-the-words).
+			<br><br>At the beginning we used the scikit-learn Python library to build the term-frequency matrix but we noticed that scikit-learn counted the words within a keyword as unigrams and this was not what we wanted to do, so we decided to count keywords using our own algorithm.
 			<br><br>After that, we used scikit-learn library to transform this matrix into a sparse matrix (where the coefficients are calculated as “tfidf” weights). 
-			<br><br>Then, we applied the k-means algorithm using the "k-means++" initialization and executing it up to 10 times to deal with variance due to the random initialization of centroids. Initially, we chose k=20 in our first tries, where k is the number of fixed clusters.</p>
-			<h4><br>Tuning parameters selection: Grid search method and Silhouette coefficients</h4>
-			<p><br>After these first tries, we did not have no idea about the "k" value, so we tried some values in combination with different term-frequency thresholds. So, we dealt with two parameters: term-frequency and the number of clusters.	
-			<br><br>In order to find the best combination of these two values, we built a grid search algorithm to execute multiple combinations, in order to evaluate the best of them, we worked out the Silhouette coefficients for each combination and it turned out that the outcomes were very close to zero, so the points were very close each other.
+			<br><br>Eventually, we applied the k-means algorithm using the "k-means++" initialization and executing it up to 10 times to deal with variance due to the random initialization of centroids. Initially, we chose k=20 in our first tries, where k is the number of fixed clusters.</p>
+			<h4><br><strong>Tuning parameters selection: Grid search method and Silhouette coefficients</strong></h4>
+			<p>After these first tries, we had no idea about the "k" value, so we tried some values in combination with different term-frequency thresholds. So, we dealt with two parameters: term-frequency and the number of clusters.	
+			<br><br>In order to find the best combination of these two values, we built a grid search algorithm to execute multiple combination, so as to evaluate the best of them. We worked out the Silhouette coefficients for each combination and it turned out that the outcomes were very close to zero, so the points were very close to each other.
 			<br><br>Finally, we took k = 45 and tf = 25, where tf is the term-frequency threshold.</p>
-			<h4><br>Semi-supervised approach: Classifying clusters with Stochastic Gradient Descent</h4>
-			<p><br>Thanks to the k-means algorithm, we could visualize some clusters that were clearly identifiable with a topic extracted from the CIS. We managed to create a list of keywords affine with these topics in order to train a simple classifier. We used this classifier to label the rest of the clusters. 
-			<br><br>The list consisted of a dictionary of topics from CIS and keywords from the Congreso's Corpus. This work was performed by hand, checking clusters manually as cycle of try and error. This work helped us to decide what keywords match better some concepts as: economy, employment, terrorism, housing, etc.
-			<br><br>We used a Stochastic Gradient Descent (SGD) classifier to help our aim of labeling our clusters and therefore our documents. Unfortunately, we used a few documents to train the classifier because we were struggling with an unsupervised problem. However we managed to find important keywords from the most identifiable clusters to build a reliable classifier, at least to label some clusters with enough accuracy.
-			<br><br>During the clustering process, we found, most of the time that it was a cluster bigger than the others. When we say “bigger” we mean, more than four sigma from the mean! So we considered splitting it up in smaller clusters and try to label them with our classifier in order to solve this problem. And this was, exactly what we finally did.</p>
-			<h4><br>Building metric tables</h4>
-			<p><br>After clustering every document, the final step was to craft a metric to relate documents with their importance in the Congreso. 
+			<h4><br><strong>Semi-supervised approach: Classifying clusters with Stochastic Gradient Descent</strong></h4>
+			<p>Thanks to the k-means algorithm, we could visualize some clusters that were clearly identifiable with a topic extracted from the CIS. We managed to create a list of keywords affine with these topics in order to train a simple classifier. We used this classifier to label the rest of the clusters. 
+			<br><br>The list consisted of a dictionary of topics from CIS and keywords from the Congreso's Corpus. This work was performed by hand, checking clusters manually as cycle of try and error. This work helped us to decide what keywords matched better some concepts as: economy, employment, terrorism, housing, etc.
+			<br><br>We used a Stochastic Gradient Descent (SGD) classifier to help our aim of labeling our clusters and therefore our documents. Unfortunately, we used a few documents to train the classifier because we were struggling with an unsupervised problem. However we managed to find important keywords from the most identifiable clusters to build a reliable classifier and label some clusters with enough accuracy.
+			<br><br>During the clustering process, we found that most of the time a cluster bigger than the others. When we say “bigger” we mean, more than four sigma from the mean! So we considered splitting it up in smaller clusters and try to label them with our classifier in order to solve this problem. And this was, exactly what we finally did.</p>
+			<h4><br><strong>Building metric tables</strong></h4>
+			<p>After clustering every document, the final step was to craft a metric to relate documents with their importance in the Congreso. 
 			<br><br>We thought deeply about this problem, and in the end, we decided that we could use the number of lines of every document as a measure of the importance of a topic, since every document was tagged to a single topic.
-			<br><br>We grouped and normalized our data by year and month. We found that some months there were no data, so we applied linear interpolation to deal with these gaps. These months (without data) are: August, and those months between the change of legislature (four month approximately), we suppose politics need time to start again.</p>
-			<h4><br>Miscellanea</h4>
-			<p><br>During all this process, we tried some other approaches to tackle this problem, although eventually we discarded them. 
+			<br><br>We grouped and normalized our data by year and month. We found that some months had no data, so we applied linear interpolation to deal with these gaps. These months were: August, and those months between the change of legislature (four months approximately), we suppose politics need time to start again.</p>
+			<h4><br><strong>Model Validation</strong></h4>
+			<p>Although the problem has been solved by unsupervised methods, we have evaluated and measured the strength of our model which has turned out rather strong!
+			<br><br>We performed a hundred times (N=100) our model which consists of a k-mean model (for k=45) and the process of clustering the largest cluster, if necessary. Our goal is to check if the process of labelling clusters is, at least, strong. We worked out the label of each model (experiment) and each document.
+			<br><br>After finishing this process, we have computed the label most chosen among the 100 experiments. It turned out that most of the clusters have one label which is the most chosen among the others, so this result fulfilled our expectations of strength of our model. 
+			<br><br>We can see in the following pictures what we have calculated,
+			</p><br><br>We did the same for a model where k = 55 in order to check if different k values have influenced in the strength of the model. As we can see in the following pictures, there is not much difference between these two models (k=45 and k=55),and we even can see that our model (k=45) it is slightly better.
+			<h4><br><strong>Miscellanea</strong></h4>
+			<p>During all this process, we tried some other approaches to tackle this problem, although eventually we discarded them. 
 			<br><br>Some of them were:</p>
 			<blockquote>
 				<li>Topic model: Latent Dirichlet Analysis and Hierarchical Dirichlet Process as an alternative to k-Means algorithm</li>
@@ -177,13 +252,18 @@
 				<li>Clustering a graph which is made up of keywords (the adjacency matrix of co-occurrence keywords). This approach gave us a small number of communities, so we decided to discard this interesting approach.</li>
 			</blockquote>
 			</p>
+			<h4><strong><br>References:</strong></h4>
+			<p>	<li>[1] - A Python implementation of the Rapid Automatic Keyword Extraction (RAKE) algorithm as described in: Rose, S., Engel, D., Cramer, N., & Cowley, W. (2010). Automatic Keyword Extraction from Individual Documents. In M. W. Berry & J. Kogan (Eds.), Text Mining: Theory and Applications: John Wiley & Sons.</li>
+				<br><li>[2] - Pattern 2.6, De Smedt, T. & Daelemans, W. (2012). Pattern for Python. Journal of Machine Learning Research, 13: 2031–2035.</li>
+				<br><li>[3] - Lluís Padró— and Evgeny Stanilovsky. FreeLing 3.0: Towards Wider Multilinguality Proceedings of the Language Resources and Evaluation Conference (LREC 2012) ELRA. Istanbul, Turkey. May, 2012.</li>
+			</p>
 		</div>
 			
 		<div class="blog-post">
             <h2 class="blog-post-title">The Charts</h2>
-			<p><br> At the very beginning we wanted to imitate this <a href="http://www.nytimes.com/interactive/2012/09/06/us/politics/convention-word-counts.html">chart</a> from the NY Times, but it was not enough for our purposes. It was very important for us to use the information from CIS. 
-			<br><br> Having this goal in mind we created the radar and the analysis charts. Both of them with the goal of seeing how our preferences have changed over time. To make this charts we have used D3.js and we created transitions to make the visualization of the charts more dynamic. 
-			<br><br> When we were close to finishing this project, we found the incredible <a href="http://politilines.periscopic.com/">PolitiLines</a> and realised that we had all the information to do it: the clusters, the keywords and the political group matched so we decided to create the Spanish version of it. 
+			<p><br> We can differentiate between 2 kinds of charts: those that compare the CIS with the Congress (The Radar, The Analysis and Topic Evolution) and those that are useful to have a deeper knowledge about what is debated in the Congress (PolitiLines and The Words They Used).
+			<br><br> We have seen that on some months there is no data available (ie: holidays in the Congress, August for the CIS, elections or 11M). To solve the problem and create more dynamical charts sometimes we have decided to delete that month in the chart (as in the case of August in the Radar) or to create an interpolation of the previous and next month. 
+			<br><br> Finally, all the charts have some particularities that are explained on each website. Hope you enjoy the experience!
 			</p>
 		</div>	
 
@@ -201,11 +281,6 @@
 				<br> <a href="http://scikit-learn.org/stable/"> Scikit-Learn</a>
 				<br> <a href="http://sujitpal.blogspot.in/2013/03/implementing-rake-algorithm-with-nltk.html">RAKE</a>
 			</p>
-			<h4>Other references:</h4>
-			<p>	<li>A Python implementation of the Rapid Automatic Keyword Extraction (RAKE) algorithm as described in: Rose, S., Engel, D., Cramer, N., & Cowley, W. (2010). Automatic Keyword Extraction from Individual Documents. In M. W. Berry & J. Kogan (Eds.), Text Mining: Theory and Applications: John Wiley & Sons.</li>
-				<br><li>Pattern 2.6, De Smedt, T. & Daelemans, W. (2012). Pattern for Python. Journal of Machine Learning Research, 13: 2031–2035.</li>
-				<br><li>Lluís Padró— and Evgeny Stanilovsky. FreeLing 3.0: Towards Wider Multilinguality Proceedings of the Language Resources and Evaluation Conference (LREC 2012) ELRA. Istanbul, Turkey. May, 2012.</li>
-				</p>
           </div>
 		</div>  
     </div><!-- /.container -->
