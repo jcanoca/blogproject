@@ -317,7 +317,14 @@ function loadAndStart() {
 		}
 	}
   }
+  /*
   else {
+	// Remove topic_filter previous options
+    for(var i=topic_filter.options.length-1;i>=0;i--)
+	{
+		topic_filter.remove(i);
+	}
+  
 	for(var item in menu_topics) {
 		var opt = document.createElement('option')
 		opt.innerHTML = menu_topics[item];
@@ -325,6 +332,7 @@ function loadAndStart() {
 		topic_filter.appendChild(opt);	
 	}
   }
+  */
   first_execution = false;
   
   // Filter by menu options
@@ -569,7 +577,7 @@ function addComments(selected_filter) {
 	div_topics_comments.selectAll("*").remove();
   
 	for(var i=0; i<selected_filter.length; i++) {
-		if (selected_filter[i]!="all") {
+		if (selected_filter[i]!="all" && par[selected_filter[i]]!=null) {
 			div_topics_comments.append("hr");
 			div_topics_comments.append("p").html("<b>" + par[selected_filter[i]].name + "</b>" + " (Topic: \"" + par[selected_filter[i]].nombre + "\")");
 			par[selected_filter[i]].description.forEach(function(d){
