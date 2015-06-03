@@ -1,0 +1,2324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head>
+<style>
+body{float:left;font-size:62.5%;font-family: Arial, Verdana, Helvetica, sans-serif;}
+blockquote{margin:0px;padding:0px;border:0px;list-style-type:none; }
+a{text-decoration:none; color:#626469;}
+a:hover{text-decoration:underline;font-weight:normal;color:#626469;}
+a:active{text-decoration:none;font-weight:normal;color:#000000;}
+</style>
+<title>PopUpCGI</title>
+<link href="/wc/htdocs/web/css/congreso.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/portada.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/prensa.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/apps.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/wc/htdocs/web/js/wc.js" language="JavaScript"></script>
+<style type="text/css">.GroupHeaderid1siteid73{Text-Align:left;Height:20px;Background-Color:#336699;}
+.GroupHeaderLinkid1siteid73{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.GroupHeaderTextid1siteid73{Font-Family:Arial, Helvetica;Color:#FFFFFF;Font-Size:9pt;Font-Weight:Bold;}
+.RegionHeaderid1siteid73{Background-Color:#b29200;Height:20px;Text-Align:left;}
+.RegionHeaderTextid1siteid73{Color:#ffffff;Font-Weight:Bold;Font-Family:Verdana;Font-Size:10px;}
+.Bodyid1siteid73{Background-Color:#FFFFFF;}
+.ArchivoAnuncioid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.AudioFotoNoticiaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.AudioNotaPrensaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.authorid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo1Pieid1siteid73{Font-Family:Arial, Helvetica;Color:#000000;Font-Size:8pt;}
+.Campo1Region3id1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.Campo2Pieid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Campo2Region3id1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.Campo3Pieid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.ComprobacionSelladoid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.Concesionid1siteid73{Font-Family:Arial;Font-Size:11px;Color:#626469;}
+.Convocatoriaid1siteid73{Font-Family:Arial;Font-Size:11px;Color:#626469;}
+.Correcciondeerroresid1siteid73{Color:#626469;Font-Size:11px;Font-Family:Arial;}
+.createdateid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.creatorid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.CuartoPlatoCafeteriaid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.defaultattributeid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescNotaPrensaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.Descripcionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.DescripcionAnuncioid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.DescripcionBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescripcionDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.descriptionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Destinoid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.DiaSemanaAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DiaSemanaCanalid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.documentsizeid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Enlaceid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnlaceAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnlaceURLNovedadid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.EnPortadaAnuncioid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.EnPortadaNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnVentanaNuevaAnuncioid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.EnVentanaNuevaNovedadIntranetid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.EtiquetaArchivoAnuncioid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.EtiquetadelEnlacedelAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EtiquetaEnlaceNovedadIntranetid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.EtiquetaURLNovedadid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.expiredateid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Faxid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Fax2id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaAgendaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.FechaAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaCanalid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.FechaDiarioid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.FechaFotonoticiaid1siteid73{Font-Size:11px;Font-Family:Arial;Color:#b29200;}
+.FechaFotonoticiaPresidenciaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaMenuid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.FechaMenuCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaNotaPrensaid1siteid73{Color:#b29200;Font-Family:Arial;Font-Weight:Bold;Font-Size:11px;}
+.FechaNovedadid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.FechaNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaRuedaPrensaid1siteid73{Font-Weight:Bold;Font-Size:11px;Font-Family:Arial;Color:#b29200;}
+.FotoEmergenteNotaPrensaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.FotoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto1descargaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Foto1emergenteid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto1thumbnailid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Foto2descargaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Foto2emergenteid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Foto2thumbnailid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.GraficoFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.GraficoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Grupoid1siteid73{Color:#626469;Font-Size:11px;Font-Family:Arial;}
+.Horaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.HoraAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.HoraCanalid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.ImagenDiaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.InformacionGeneralid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.inplacedisplayid1siteid73{Color:#000000;Font-Family:Arial;Font-Size:11px;}
+.InstruccinArchivoIIid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.InstruccinArchivo1id1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Intervinienteid1siteid73{Font-Size:11px;Font-Family:Arial;Color:#626469;}
+.itemfunctionid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.JefedeCocinaMenuid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.keywordsid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.LineaAgendaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.LineaCanalid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.listaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.Listadebecariosparticipantesid1siteid73{Font-Family:Arial;Font-Size:11px;Color:#626469;}
+.ListaPuestoMiembroDiputadoid1siteid73{Font-Size:11px;Font-Family:Arial;Color:#626469;}
+.ListaPuestoMiembroSenadoid1siteid73{Font-Size:11px;Color:#626469;Font-Family:Arial;}
+.Lugarid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.LugarAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LugarCanalid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Mail1id1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Mail2id1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.Mail3id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Mail4id1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Nombreid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.NombreBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NombreDiarioid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.NombreMiembroid1siteid73{Color:#626469;Font-Family:Arial;Font-Weight:Bold;Font-Size:11px;}
+.NumeroOrdenAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NumeroOrdenImagenid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NumeroOrdenNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PaginaBOCGBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PDFBoletinid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PDFDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.perspectivesid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PieImagenid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.PrimerPlatoCafeteriaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PrimerPlatoSaludableMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato1Menuid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PrimerPlato2Menuid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PrimerPlato3Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato4Menuid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Programaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PuestoMiembroDiputadoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.PuestoMiembroSenadoid1siteid73{Font-Size:11px;Font-Family:Arial;Color:#626469;Font-Weight:Bold;}
+.QuintoPlatoCafeteriaid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.RefBOEid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.RefBOEIIid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.scoreid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlatoSaludableMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlato1Menuid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.SegundoPlato2Menuid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.SeptimoPlatoCafeteriaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.SextoPlatoCafeteriaid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.SiglasBoletinid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.SiglasDiarioid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.subpagetitleid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.SugerenciaCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TargetNovedadid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.Telefonoid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Telefono2id1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.TemaFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaRuedaPrensaid1siteid73{Color:#000000;Font-Family:Arial;Font-Size:11px;}
+.TercerPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TextoAlternativoFotoNotaPrensaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.TextoAlternativoFoto1Fotonoticiaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.TextoAlternativoFoto2Fotonoticiaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.titleid1siteid73{Font-Family:Arial;Font-Size:11px;Color:#626469;Font-Weight:Bold;}
+.titleorimageid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.TitularFotoNoticiaid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Tituloid1siteid73{Font-Size:11px;Font-Family:Arial, Helvetica;Color:#626469;Font-Weight:Bold;}
+.TituloAnuncioid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.TituloImagendelDiaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.TituloNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TituloNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.URLEnlaceNovedadIntranetid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.VideoFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.VideoNotaPrensaid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.Visitasid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.wwsbr_category_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_charset_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_image_or_title_id1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.wwsbr_img_or_title_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_itemtype_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_mime_type_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_page_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_pagegroup_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_publishdate_id1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.wwsbr_title_and_img_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_updatedate_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_updator_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_version_number_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LeftCurve{}
+.PortletBodyColor{}
+.PortletHeaderColor{Background-Color:#b29200;}
+.PortletHeaderLink{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletHeaderStyle{}
+.PortletHeaderText{Color:#FFFFFF;Font-Weight:Bold;Font-Size:10pt;Font-Family:Arial, Helvetica;}
+.PortletHeading1{Color:#336699;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.PortletHeading2{Color:#336699;Font-Size:8pt;Font-Family:Arial, Helvetica;Font-Weight:Bold;}
+.PortletHeading3{Font-Size:7pt;Font-Family:Arial, Helvetica;Color:#336699;Font-Weight:Bold;}
+.PortletHeading4{Font-Size:7pt;Font-Family:Arial, Helvetica;Color:#336699;Font-Weight:Bold;}
+.PortletSubHeaderColor{Background-Color:#EEEEDD;}
+.PortletSubHeaderLink{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:9pt;}
+.PortletSubHeaderText{Font-Size:9pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PortletText1{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletText2{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletText3{Color:#000000;Font-Size:7pt;Font-Family:Arial, Helvetica;}
+.PortletText4{Font-Family:Arial, Helvetica;Font-Size:7pt;Color:#000000;}
+.RightCurve{}
+.LeftSubTabid1siteid73{Background-Position:left top;Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFsl.gif);Background-Repeat:no-repeat;}
+.LeftTabBgSlantid1siteid73{Background-Position:left top;Background-Image:url(http://www.congreso.es/images/FFFFFFtl.gif);Background-Color:#CCCC99;Background-Attachment:scroll;Background-Repeat:no-repeat;}
+.LeftTabForeSlantid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFtl.gif);Background-Position:left top;Background-Repeat:no-repeat;}
+.RightSubTabid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFsr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.RightTabBgCurveid1siteid73{Background-Image:url(http://www.congreso.es/images/FFFFFFtr.gif);Background-Color:#CCCC99;Background-Attachment:scroll;Background-Position:right top;Background-Repeat:no-repeat;}
+.RightTabForeCurveid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFtr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.SubTabBgTextid1siteid73{Color:#CCCC99;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:11pt;Font-Weight:Bold;}
+.TabBackgroundColorid1siteid73{Background-Color:#CCCC99;}
+.TabBackgroundTextid1siteid73{Color:#003366;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:10pt;}
+.TabForegroundColorid1siteid73{Background-Color:#336699;}
+.TabForegroundTextid1siteid73{Color:#FFFFFF;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:10pt;Font-Weight:Bold;}
+.portlet-font{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-font-dim{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-status{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-info{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-error{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-alert{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-success{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-header{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:9pt;    Font-Weight:Bold;    }
+.portlet-section-body{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-alternate{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-selected{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-subheader{Color:#336699;    Font-Size:8pt;    Font-Family:Arial, Helvetica;    Font-Weight:Bold;    }
+.portlet-section-footer{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-text{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-header{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:9pt;    Font-Weight:Bold;    Background-Color:#EEEEDD;    }
+.portlet-table-body{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-alternate{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-selected{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-subheader{Color:#336699;    Font-Size:8pt;    Font-Family:Arial, Helvetica;    Font-Weight:Bold;    }
+.portlet-table-footer{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-text{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-input-field{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-button{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-icon-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-dlg-icon-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-field-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-field{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.RegionNoBorder{}
+.RegionBorder { border:#b29200  1px solid; }
+.RegionHeaderColor { border:#b29200 0px solid;}
+.PageColor { background-color:#FFFFFF}
+ </style>
+</head>
+<body leftmargin="0" rightmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+<div id="texto_parrafo">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
+  <tbody><tr valign="top"><td align="center" valign="top">
+    <table width="500" cellpadding="0" cellspacing="0" border="0" height="100%">
+      <tbody><tr>
+        <td align="center" width="500" height="100%" valign="top">
+<iframe id="portalIFrame" title="" frameborder="0" width="0" height="0" src="/images/pobtrans.gif"></iframe><script type="text/javascript" src="http://www.congreso.es/portal/pls/portal/PORTAL.wwsbr_javascript.page_js?p_language=e&amp;p_version=10.1.4.2.0.197">
+&lt;!-- Comment out script for old browsers
+//--&gt;
+</script>
+<table width="100%" id="rg88017" border="0" cellpadding="0" cellspacing="0" summary=""><tbody><tr align="LEFT">
+<td valign="top" style="padding:4px 4px 0px 4px;width:100%;"><div id="p73_2138133_73_2138049_2138049"><table border="0" width="100%" cellpadding="0" cellspacing="0" class="RegionNoBorder"><tbody><tr><td class="RegionHeaderColor" width="100%" dir="LTR"><div id="pcnt73_2138133_73_2138049_2138049">
+
+
+
+
+
+
+
+  
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+        <title>Listas de valores</title>
+        <script language="JavaScript" type="text/javascript" src="/wc/htdocs/web/js/wc.js"></script> 
+		<link type="text/css" href="/wc/htdocs/web/css/apps.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/congreso.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/portada.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/prensa.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/texto_integro.css" rel="STYLESHEET" />   
+
+
+<script>
+function opcionesVentana(){
+
+window.resizeTo(630,520);
+}
+
+window.onload = function(){
+    opcionesVentana();
+}
+
+</script>
+	<div id="CONGRESO_TEXTO_INTEGRO_POPUP">
+            <div id="CABECERA_TEXTO_POPUP">
+                    <div class="cabecerah1"><img src="/wc/htdocs/web/img/logo_mini.gif" alt="Congreso de los Diputados" border="0" /></div>
+                    <div class="btn_cerrar" title="Cerrar">
+                        <p><img src="/wc/htdocs/web/img/ico_cerrar.gif" width="9" height="9" alt="Cerrar" /> <a href="javascript:window.close();" title="Cerrar">Cerrar</a></p>                   
+                    </div>
+                    
+                    <div class="fincabecera"> </div>
+            </div>
+
+
+
+    <div id="CONGRESO_TEXTO_INTEGRO_POPUP"> <div id="CABECERA_TEXTO_POPUP"> DS. Congreso de los Diputados, Pleno y Dip. Perm., núm. 236, de 30/10/2014 </div><div id="CABECERA_TEXTO_POPUP">cve:
+    DSCD-10-PL-236 </div> <div class="fincabecera"> </div> </div> <!-- CONGRESO_TEXTO_INTEGRO --> <div id="TEXTOS_POPUP">	<br />
+    	<div class="titular_texto"><br />CORTES GENERALES
+
+    <br />DIARIO DE SESIONES DEL CONGRESO DE LOS DIPUTADOS
+
+    <br />PLENO Y DIPUTACIÓN PERMANENTE
+    </div>
+
+    <div class="subtitular_texto"><br />Año 2014 X LEGISLATURA Núm.  236
+    <br />PRESIDENCIA DEL EXCMO.  SR.  D. JESÚS POSADA MORENO
+    <br />Sesión plenaria núm.  221
+    <br />celebrada el jueves,
+    <br />30 de octubre de 2014</div>
+          	<div class="texto_completo"><br /><br />Página
+
+    <br /><br />ORDEN DEL DÍA:
+
+    <br /><br />Enmiendas del Senado:
+
+    <br /><br />- Proyecto de Ley de reconocimiento mutuo de resoluciones penales en la
+    Unión Europea. "BOCG. Congreso de los Diputados", serie A, número 86-1,
+    de 21 de marzo de 2014. (Número de expediente 121/000086) ... <a href="#(Página3)">(Página3)</a>
+
+    <br /><br />- Proyecto de ley Orgánica sobre intercambio de información de
+    antecedentes penales y consideración de resoluciones judiciales penales
+    en la Unión Europea. "BOCG. Congreso de los Diputados", serie A, número
+    88-1, de 21 de marzo de 2014. (Número de expediente 121/000088) ... <a href="#(Página3)">(Página3)</a>
+
+    <br /><br />- Proyecto de ley por la que se modifica el texto refundido de la Ley de
+    Propiedad Intelectual, aprobado por Real Decreto Legislativo 1/1996, de
+    12 de abril, y la Ley 1/2000, de 7 de enero, de Enjuiciamiento Civil.
+    "BOCG. Congreso de los Diputados", serie A, número 81-1, de 21 de febrero
+    de 2014. (Número de expediente 121/000081) ... <a href="#(Página12)">(Página12)</a>
+
+    <br /><br />Dictámenes de la Comisión de Asuntos Exteriores sobre convenios
+    internacionales:
+
+    <br /><br />- Acuerdo entre el Gobierno del Reino de España y el Gobierno del Reino de
+    Bahrein sobre cooperación en el ámbito de la defensa, hecho en Manama el
+    1 de mayo de 2014. "BOCG. Cortes Generales", serie A, número 319, de 19
+    de septiembre de 2014. (Número de expediente 110/000135) ... <a href="#(Página19)">(Página19)</a>
+
+    <br /><br />- Acuerdo sobre condiciones de ejercicio de la actividad de las flotas
+    española y portuguesa en las aguas de ambos países entre el Reino de
+    España y la República Portuguesa, hecho en Bruselas el 24 de marzo de
+    2014. "BOCG. Cortes Generales", serie A, número 320, de 19 de septiembre
+    de 2014. (Número de expediente 110/000136) ... <a href="#(Página19)">(Página19)</a>
+
+    <br /><br />Mociones consecuencia de interpelaciones urgentes. (Votación) ... <a href="#(Página23)">(Página23)</a>
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página2)"><b>Página
+    2</b></a></p><br />
+
+    <br /><br />Enmiendas del Senado. (Votación) ... <a href="#(Página23)">(Página23)</a>
+
+    <br /><br />Votación de conjunto ... <a href="#(Página23)">(Página23)</a>
+
+    <br /><br />Dictámenes de la Comisión de Asuntos Exteriores sobre convenios
+    internacionales. (Votación) ... <a href="#(Página24)">(Página24)</a>
+
+    <br /><br />SUMARIO
+
+    <br /><br />Se reanuda la sesión a las nueve y cincuenta y cinco minutos de la mañana.
+
+    <br /><br />Página
+
+    <br /><br />Enmiendas del Senado ... <a href="#(Página3)">(Página3)</a>
+
+    <br /><br />Página
+
+    <br /><br />Proyecto de Ley de reconocimiento mutuo de resoluciones penales en la
+    Unión Europea ... <a href="#(Página3)">(Página3)</a>
+
+    <br /><br />Página
+
+    <br /><br />Proyecto de Ley Orgánica sobre intercambio de información de antecedentes
+    penales y consideración de resoluciones judiciales penales en la Unión
+    Europea ... <a href="#(Página3)">(Página3)</a>
+
+    <br /><br />En turno de fijación de posiciones intervienen los señores Urbina
+    Fernández, del Grupo Parlamentario Mixto; Olabarría Muñoz, del Grupo
+    Parlamentario Vasco (EAJ-PNV); Llamazares Trigo, del Grupo Parlamentario
+    de IU, ICV-EUiA, CHA: La Izquierda Plural; Jané i Guasch, del Grupo
+    Parlamentario Catalán (Convergència i Unió), y Sáez Jubero, del Grupo
+    Parlamentario Socialista, así como la señora Baena Azuaga, del Grupo
+    Parlamentario Popular en el Congreso.
+
+    <br /><br />Página
+
+    <br /><br />Proyecto de Ley por la que se modifica el Texto Refundido de la Ley de
+    Propiedad Intelectual, aprobado por Real Decreto Legislativo 1/1996, de
+    12 de abril, y la Ley 1/2000, de 7 de enero, de Enjuiciamiento Civil ...
+    <a href="#(Página12)">(Página12)</a>
+
+    <br /><br />En turno de fijación de posiciones intervienen los señores Larreina
+    Valderrama, del Grupo Parlamentario Mixto; Agirretxea Urresti, del Grupo
+    Parlamentario Vasco (EAJ-PNV), y Martínez Gorriarán, del Grupo
+    Parlamentario de Unión Progreso y Democracia; las señoras De las Heras
+    Ladera, del Grupo Parlamentario de IU, ICV-EUiA, CHA: La Izquierda
+    Plural, y Surroca i Comas, del Grupo Parlamentario Catalán (Convergència
+    i Unió); así como los señores Torres Mora, del Grupo Parlamentario
+    Socialista, y Ruano Gómez, del Grupo Parlamentario Popular en el
+    Congreso.
+
+    <br /><br />Página
+
+    <br /><br />Dictámenes de la Comisión de Asuntos Exteriores sobre Convenios
+    internacionales ... <a href="#(Página19)">(Página19)</a>
+
+    <br /><br />Página
+
+    <br /><br />Acuerdo entre el Gobierno del Reino de España y el Gobierno del Reino de
+    Bahrein sobre cooperación en el ámbito de la defensa, hecho en Manama el
+    1 de mayo de 2014 ... <a href="#(Página19)">(Página19)</a>
+
+    <br /><br />Página
+
+    <br /><br />Acuerdo sobre condiciones de ejercicio de la actividad de las flotas
+    española y portuguesa en las aguas de ambos países entre el Reino de
+    España y la República Portuguesa, hecho en Bruselas el 24 de marzo de
+    2014 ... <a href="#(Página19)">(Página19)</a>
+
+    <br /><br />Para fijar su posición sobre determinados convenios intervienen el señor
+    Tardà i Coma, del Grupo Parlamentario Mixto; la señora Lozano Domingo,
+    del Grupo Parlamentario de Unión Progreso y
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página3)"><b>Página
+    3</b></a></p><br />
+
+    <br /><br />Democracia; los señores Nuet Pujals, del Grupo Parlamentario de IU,
+    ICV-EUiA, CHA: La Izquierda Plural; Xuclà i Costa, del Grupo
+    Parlamentario Catalán (Convergència i Unió), y Sáez Jubero, del Grupo
+    Parlamentario Socialista, y la señora Miguélez Pariente, del Grupo
+    Parlamentario Popular en el Congreso.
+
+    <br /><br />Página
+
+    <br /><br />Mociones consecuencia de interpelaciones urgentes. (Votación) ... <a href="#(Página23)">(Página23)</a>
+
+    <br /><br />Sometida a votación la moción consecuencia de interpelación urgente del
+    Grupo Parlamentario Catalán (Convergència i Unió), sobre las actuaciones
+    adoptadas y las que tiene previsto adoptar el Gobierno frente al virus
+    del Ébola, con la incorporación de la enmienda del Grupo Parlamentario
+    Popular en el Congreso, se aprueba por 202 votos a favor y 117
+    abstenciones.
+
+    <br /><br />Página
+
+    <br /><br />Enmiendas del Senado. (Votación) ... <a href="#(Página23)">(Página23)</a>
+
+    <br /><br />Sometidas a votación las enmiendas del Senado al proyecto de ley de
+    reconocimiento mutuo de resoluciones penales en la Unión Europea, son
+    aprobadas por 315 votos a favor y 4 abstenciones.
+
+    <br /><br />Sometidas a votación las enmiendas del Senado al proyecto de ley orgánica
+    sobre intercambio de información de antecedentes penales y consideración
+    de resoluciones judiciales penales en la Unión Europea, son aprobadas por
+    313 votos a favor y 6 abstenciones.
+
+    <br /><br />Página
+
+    <br /><br />Votación de conjunto ... <a href="#(Página23)">(Página23)</a>
+
+    <br /><br />Sometida a votación de conjunto, por tener la iniciativa carácter de ley
+    orgánica, se aprueba por 293 votos a favor más 1 voto telemático, 294, 5
+    en contra y 20 abstenciones.
+
+    <br /><br />Sometidas a votación las enmiendas del Senado proyecto de ley por la que
+    se modifica el Texto Refundido de la Ley de Propiedad Intelectual,
+    aprobado por Real Decreto Legislativo 1/1996, de 12 de abril, y la Ley
+    1/2000, de 7 de enero, de Enjuiciamiento Civil, son aprobadas por 172
+    votos a favor, 144 en contra y 3 abstenciones.
+
+    <br /><br />Página
+
+    <br /><br />Dictámenes de la Comisión de Asuntos Exteriores sobre Convenios
+    internacionales. (Votación) ... <a href="#(Página19)">(Página19)</a>
+
+    <br /><br />Sometidos a votación separada los dictámenes de la Comisión de Asuntos
+    Exteriores que figuran en el orden del día, son aprobados.
+
+    <br /><br />Se levanta la sesión a las doce y diez minutos del mediodía.
+
+    <br /><br />Se reanuda la sesión a las nueve y cincuenta y cinco minutos de la mañana.
+
+    <br /><br />ENMIENDAS DEL SENADO:
+
+    <br /><br />- PROYECTO DE LEY DE RECONOCIMIENTO MUTUO DE RESOLUCIONES PENALES EN LA
+    UNIÓN EUROPEA. (Número de expediente 121/000086).
+
+    <br /><br />- PROYECTO DE LEY ORGÁNICA SOBRE INTERCAMBIO DE INFORMACIÓN DE
+    ANTECEDENTES PENALES Y CONSIDERACIÓN DE RESOLUCIONES JUDICIALES PENALES
+    EN LA UNIÓN EUROPEA. (Número de expediente 121/000088).
+
+    <br /><br />El señor PRESIDENTE: Se reanuda la sesión.
+
+    <br /><br />En esta sesión vamos a debatir enmiendas del Senado. Como se trata de una
+    ley orgánica, habrá una votación de totalidad, por lo que les adelanto
+    que esa votación no será antes de las once y media, aunque espero que sea
+    muy cerca de esa hora.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página4)"><b>Página
+    4</b></a></p><br />
+
+    <br /><br />Comenzamos, por tanto, con las enmiendas aprobadas por el Senado al
+    proyecto de ley de reconocimiento mutuo de resoluciones penales en la
+    Unión Europea y al proyecto de ley orgánica sobre el intercambio de
+    información de antecedentes penales y consideración de resoluciones
+    judiciales penales en la Unión Europea, que trataremos conjuntamente. En
+    primer lugar, para fijación de posiciones, por el Grupo Mixto, tiene la
+    palabra el señor Urbina.
+
+    <br /><br />El señor URBINA FERNÁNDEZ: Señor presidente, señorías, en primer lugar,
+    quiero anticipar que Amaiur, al igual que hizo en el Senado con relación
+    a estos proyectos de ley, se abstendrá en su votación. No obstante, es
+    cierto que este proyecto de ley -en este caso me refiero al de
+    reconocimiento mutuo de resoluciones penales-, y más que este proyecto de
+    ley, los textos europeos y las decisiones marco que dan origen al
+    proyecto y a la filosofía del mismo, dan pie a reflexiones interesantes y
+    a otras que hemos visto en la prensa que no lo son tanto. Como decía, dan
+    pie a unas cuantas reflexiones que merecen la pena y nosotros nos vamos a
+    centrar en una de ellas, porque consideramos que tiene una trascendencia
+    política y social importante en el momento político que vivimos en Euskal
+    Herria, que está relacionada con la política penitenciaria del Gobierno
+    español y en concreto con su política de dispersión de presos y presas.
+    En este sentido y en esta materia es cierto que se pueden hacer unas
+    cuantas apreciaciones a estos proyectos de ley y a estos textos europeos,
+    pero hay uno de ellos que creemos que además de innegable es inapelable,
+    y es aquel que hace referencia a que los presos y presas deberán cumplir
+    sus condenas en aquellos lugares en los que se garantice el arraigo
+    social, cultural, lingüístico y familiar. Esta no es una cuestión que sea
+    fruto de la interpretación que hace Amaiur -o en este caso Iker Urbina-
+    de estos textos; no, esto es algo que aparece textual en una de las
+    decisiones marco que originan este proyecto de ley que hoy se debate
+    aquí, la decisión marco 2008/909, que, como decía, expresamente se
+    refiere en esos términos, tanto en el articulado como en la exposición de
+    motivos, al cumplimiento de las condenas. Esta es una decisión marco que,
+    por medio de este proyecto de ley, el derecho español la hace propia, más
+    allá de la obligatoriedad que pudiera tener, aunque expresamente no se
+    hiciese la referencia que se hace en el proyecto de ley en ese sentido.
+    Creemos además, como decíamos, que es unívoca, no tiene ninguna otra
+    interpretación, es clara, es diáfana y además es parte de la esencia -por
+    lo menos en el cumplimiento de las condenas privativas de libertad- del
+    propio proyecto de ley que hoy aquí se analiza y que por su naturaleza
+    trasciende no solo el cumplimiento de las condenas impuestas en países
+    extranjeros sino también las propias.
+
+    <br /><br />Por lo tanto, señorías, en este concreto ámbito nos encontraríamos con una
+    disposición de obligado cumplimiento que nos lleva desde Amaiur a hacer
+    una reclamación clara, en primer lugar, al Gobierno, pero también a los
+    diputados y las diputadas del Partido Popular y del Partido Socialista.
+    Una reclamación para que apoyándose, si se quiere, en este proyecto de
+    ley, se ponga fin de una vez por todas a la política de dispersión de
+    presos y presas. Si quieren, no lo hagan ustedes porque es una política,
+    la penitenciaria, que vulnera derechos, que lo es y además ustedes son
+    conscientes de que es así -esta política se ha llevado por delante, como
+    mínimo, a dieciséis personas y ha dejado a cientos de personas heridas en
+    cientos de accidentes; son cientos las personas que semanalmente tienen
+    que desplazarse miles de kilómetros para poder visitar a sus familiares y
+    amigos presos-, sino porque fundamentalmente esta política penitenciaria
+    sigue siendo un riesgo constante para que crezca el número de víctimas en
+    Euskal Herria, y creo que todos estaremos de acuerdo en que ya tenemos
+    suficientes víctimas. Pero si quieren, tampoco lo hagan porque la inmensa
+    mayoría de la sociedad vasca se ha pronunciado claramente en contra de
+    esta política de dispersión y ha exigido una y otra vez a los Gobiernos
+    de España, de uno y otro color, que se pusiera fin a la misma, abarcando
+    todo el abanico político, social y sindical de la realidad vasca. Esto lo
+    digo yo pero se lo pueden preguntar ustedes también a los diferentes
+    diputados vascos que tienen en sus formaciones políticas, y también
+    pueden analizar la hemeroteca para constatar esta realidad. Sin ir muy
+    lejos, el pasado viernes, en Bayona, personalidades representativas de
+    todo el abanico político de Ipar Euskal Herria -desde el UMP, al PSF, a
+    la izquierda abertzale- firmaron un manifiesto, que invito a todos los
+    diputados y diputadas a que lo lean con interés porque creo que realmente
+    aporta mucho al momento político que vive Euskal Herria, que, entre otras
+    cosas, venía a exigir el fin de la política penitenciaria. Por lo tanto,
+    ahí tenemos también la constatación de eso que decía de que una mayoría
+    social de todo el abanico político respalda esta reivindicación. Pero, si
+    quieren, tampoco se agarren a eso; tampoco se agarren, si quieren, a que
+    una mayoría de instituciones vascas, desde ayuntamientos hasta el
+    Parlamento Vasco -la última ocasión el pasado 5 de mayo, en una
+    proposición no de ley- se han pronunciado en los mismos términos
+    exigiendo el fin de la política de dispersión de presos y presas
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página5)"><b>Página
+    5</b></a></p><br />
+
+    <br /><br />vascas. Si quieren, justifíquenlo desde la legalidad, desde la legalidad
+    interna, porque, aunque difusa, si hacemos una interpretación rigurosa de
+    la misma lo establece, pero sobre todo desde la legalidad europea, que es
+    diáfana, es clara y se ha proyectado en diferentes formas. Lo ha sido
+    como recomendación del Consejo de Ministros de la Unión Europea en
+    materia penitenciaria; lo ha sido también en forma de sentencia del
+    Tribunal Europeo de Derechos Humanos, en concreto en el caso Khodorkovsky
+    y Lebedev contra Rusia, y lo es ahora por medio de las decisiones marco,
+    una de ellas la ya referida 2008/909.
+
+    <br /><br />El Gobierno tiene la oportunidad, por medio de este proyecto de ley y del
+    resto de pronunciamientos normativos que existen a nivel europeo, de
+    poner fin a la política de dispersión. De lo contrario, si no se acogen a
+    ninguna de estas posibilidades, ni a la de vulneración de derechos ni a
+    la democrática ni a la de legalidad, nos encontraríamos ante la
+    confirmación de que en política penitenciaria en relación con los presos
+    y presas vascas el Gobierno, el Partido Socialista y el Partido Popular
+    se mueven por un impulso vindicativo, que en modo alguno puede tener
+    amparo en el ámbito legislativo, además de dejar claro cuál es la calidad
+    democrática del Estado español. Si el Gobierno no modifica su política
+    penitenciaria en esta materia teniendo en cuenta todos los argumentos de
+    diferente ámbito que tiene para ello, le lleva a uno a pensar que le da
+    igual que dentro de un tiempo el Tribunal Europeo de Derechos Humanos
+    dicte otra sentencia -como ya lo hizo con el tema de la doctrina Parot,
+    como ya lo ha hecho en sucesivas ocasiones con el tema de la tortura-
+    condenándoles, confirmando que ha habido una vulneración de derechos y
+    estableciendo la necesidad de una indemnización a estos cientos de
+    personas que están afectadas por esta política. Creemos que esto no tiene
+    ninguna lógica. Por eso reiteramos la reclamación que hacíamos al
+    comienzo. Señoras y señores del Partido Popular, señoras y señores del
+    Partido Socialista, señores del Gobierno, pongan fin de una vez por todas
+    a esta política criminal de dispersión contra los presos y presas vascos.
+
+    <br /><br />Muchas gracias.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Urbina.
+
+    <br /><br />Por el Grupo Parlamentario Vasco (PNV), tiene la palabra el señor
+    Olabarría.
+
+    <br /><br />El señor OLABARRÍA MUÑOZ: Gracias, señor presidente.
+
+    <br /><br />Estamos ante un proyecto de ley que incorpora dos decisiones marco ya
+    citadas, la 675 del año 2008 y la 315 también del año 2008. Es un
+    proyecto de ley que tiene una gran profundidad jurídica, y solo porque
+    quizás en este momento esta legislatura no está en condiciones para
+    apreciar determinadas sutilezas jurídicas -quizá ninguna sutileza
+    jurídica ya- no se ha percibido la profundidad de lo que se incorpora al
+    ordenamiento jurídico del Estado español. Estamos ante dos decisiones
+    marco que pretenden armonizar el régimen de cumplimiento de sentencias,
+    pero no solo el régimen de cumplimiento de penas y sentencias
+    condenatorias, sino que también se refieren al ámbito de la política
+    penitenciaria, de la instrucción sumarial, de los beneficios
+    penitenciarios o de los criterios de concesión de la libertad
+    provisional; dos decisiones marco que ponen muy elocuentemente de relieve
+    algunas de las disfunciones que nuestro grupo y otros han denunciado
+    reiteradamente con relación al derecho penal español. Particularmente
+    esta disfunción que contradice el principio de igualdad ante la ley,
+    consagrada por el Código Penal español, que establece con relación a
+    determinados tipos de delito -solo con relación a estos- penas más
+    amplias y criterios de cumplimiento más amplios o rigurosos en la
+    legislación penitenciaria que los previstos para los demás delitos. Si a
+    esto añadimos la elaboración o el complemento que permite una
+    prolongación artificial del cumplimiento de determinadas penas o que
+    establece un rigor innecesario en el régimen de cumplimiento de las penas
+    de algunas doctrinas de origen jurisprudencial, normalmente elaboradas
+    por el Tribunal Supremo, alguna de las cuales ya ha sido citada por el
+    señor Urbina, que me ha precedido en el uso de la palabra, nos
+    encontramos con que los elementos de armonización a los que invoca y los
+    que reivindican estas dos decisiones marco que se incorporan al
+    ordenamiento jurídico, quedan difuminados, quedan quebrantados
+    parcialmente. No quedan quebrantados, realmente son las decisiones marco
+    las que van a servir en este momento de referencia para la imposición de
+    penas, para el régimen de cumplimiento o cómo afecta el cumplimiento de
+    una sentencia en el extranjero cuando esa persona comete después un
+    delito en el Estado español, qué ocurre con el régimen de afectación del
+    cumplimiento de una sentencia en el extranjero, y lo contrario, cuando se
+    comete un delito en el Estado español y una persona es condenada, si
+    vuelve a cometer otro delito en el extranjero cómo afecta a esta segunda
+    sentencia cometida en el extranjero el régimen de cumplimiento, la
+    aplicación de las penas en el Estado español. Pero lo que se pone de
+    relieve es lo que se pone de relieve, señor presidente. Las grandes
+    disfunciones fácilmente apreciables entre estas dos decisiones marco que
+    incorporamos a la legislación española, el Código Penal español y esa
+    especie
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página6)"><b>Página
+    6</b></a></p><br />
+
+    <br /><br />de discriminación normativa punitiva en relación a determinados tipos
+    delictivos respecto a los cuales las condenas previstas en el Código
+    Penal español son muy superiores y el régimen de cumplimiento de las
+    mismas es mucho más riguroso, más rigorista y cómo estas decisiones marco
+    quizás puedan servir para armonizar y, por lo tanto, para acabar con
+    estas disfunciones, tanto de nuestra normativa punitiva como de la
+    normativa penitenciaria del Estado español, que hemos denunciado en
+    diversas ocasiones. Al final, el proceso de armonización comunitaria en
+    materia de cumplimiento de penas, cuando este cumplimiento de penas es
+    objeto de reciprocidad, penas que se cumplen en España y luego por un
+    delito cometido en el extranjero provocan un régimen de afectación
+    armonizado por estas decisiones marco, y lo contrario, va a acabar con
+    algunas disfunciones que han sido aprobadas en esta Cámara mediante la
+    configuración de una suerte de derecho penal del enemigo, de derecho
+    penal de autor, en donde la obsesión por determinadas fenomenologías
+    delictivas, preocupación que nosotros hemos compartido, han servido
+    también para cometer determinados atropellos jurídicos, determinadas
+    disfunciones jurídicas, estableciendo penas diferentes para determinados
+    tipos de delitos a las previstas en los demás códigos penales de Europa
+    donde esta discriminación no existe. Los tipos son únicos para cualquier
+    fenomenología delictiva, por una parte, y, por otra parte, en materia de
+    régimen de cumplimiento tampoco existen regímenes de cumplimiento para
+    determinadas tipologías o determinados fenómenos delictivos diferentes a
+    los previstos con carácter ordinario en ningún país de nuestro contexto
+    por la legislación europea. Por lo tanto, señor presidente, esta especie
+    de acumulación de normas punitivas especiales para determinados delitos y
+    determinadas doctrinas en cuanto a la aplicación de las penas que han
+    posibilitado en el Estado español la prolongación meramente artificial,
+    como alguna de las doctrinas ya citadas, del cumplimiento de las penas,
+    doctrinas que han sido declaradas ilegales por el Tribunal Europeo de
+    Derechos Humanos, pueden ser objeto de corrección. También me parece
+    pertinente utilizar esta oportunidad por la incorporación de estas tres
+    decisiones marco que se incorporan a través de este importante proyecto
+    de ley. En materia de transmisión de información sobre antecedentes
+    penales, la regulación es correcta en relación al Registro central de
+    penados.
+
+    <br /><br />Para terminar, señor presidente, en cuanto a las enmiendas aprobadas por
+    el Senado, no soy capaz de comprender qué es lo que nos quiere decir el
+    Senado, en tanto en cuanto el Senado, después de una alambicada reflexión
+    y de una enmienda pretendidamente técnico jurídica, en relación a estos
+    problemas de afectación de una pena cumplida en el Estado español a una
+    pena que luego se tiene que cumplir en otro Estado, o de una pena
+    cumplida fuera del Estado español y su afectación a una pena por otro
+    delito cometido en el Estado español, al final, las enmiendas del Senado
+    terminan concluyendo que lo que se aplica es la legislación española.
+    Probablemente para este viaje no hacían falta tantas alforjas, señor
+    presidente; hubiera bastado con mantener el orden jurídico vigente.
+
+    <br /><br />Pero es que el ordenamiento jurídico vigente, probablemente -y con esto
+    acabo, señor presidente-, ya no es mantenible en sus propios términos.
+    Las previsiones del Código Penal, singularizando determinados delitos, ya
+    no son mantenibles en tanto en cuanto se incorporan estas decisiones
+    marco que singularizan la atención o el reproche punitivo solo para
+    determinados delitos. El régimen de cumplimiento de las penas, la
+    instrucción sumarial, el acceso a la libertad profesional y otras
+    materias que son objeto de armonización a través de estas directivas
+    marco ya no son mantenibles tal y como las configura jurídicamente la
+    normativa penal española. Esta es la gran relevancia, esta es la
+    profundidad a la que yo me refería en una ley que prácticamente está
+    pasando desapercibida para los que tenemos determinadas inquietudes en
+    relación con lo que pueden suponer verdaderas disfunciones de nuestras
+    normas penales y de nuestras normas penitenciarias, señor presidente.
+    Mire al final cómo la profundización en esquemas armónicos en la Unión
+    Europea puede servir para remover algunas de las dificultades o algunas
+    de las disfunciones que nuestro ordenamiento penal ha poseído y que
+    nosotros en reiteradas ocasiones hemos denunciado.
+
+    <br /><br />Muchas gracias, señor presidente.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Olabarría.
+
+    <br /><br />Por el Grupo de La Izquierda Plural, tiene la palabra el señor Llamazares.
+
+    <br /><br />El señor LLAMAZARES TRIGO: Gracias, señor presidente.
+
+    <br /><br />Señorías, culminamos la tramitación de una serie de iniciativas
+    legislativas que provienen de decisiones marco europeas. La primera
+    reflexión que hace mi grupo parlamentario es que tenemos un cierto
+    peligro ciclotímico en materia de justicia: pasar de la agitación
+    legislativa a la parálisis. En este caso, estas iniciativas forman parte
+    de la agitación. La sensación, después de la sustitución del ministro de
+    Justicia, es la de parálisis; no sabemos muy bien cuál es el proceso
+    legislativo en los próximos tiempos. Eso es
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página7)"><b>Página
+    7</b></a></p><br />
+
+    <br /><br />especialmente preocupante en relación con algo que se ha convertido en el
+    tema fundamental de debate público y también de debate parlamentario como
+    es la lucha contra la corrupción. Si no hay un mínimo de recursos
+    presupuestarios y no hay tampoco una dirección política para luchar
+    contra la corrupción, difícilmente esta cuestión irá más allá de un
+    espectáculo público. Nosotros creemos que no estamos para espectáculos
+    morbosos en materia de corrupción sino para adoptar decisiones claras, en
+    primer lugar, a través de la justicia penal y administrativa y, en
+    segundo lugar, a través de la modificación legal que sea necesaria.
+    Tenemos, sin embargo, muchas leyes y las aplicamos muy deficientemente.
+
+    <br /><br />Señorías, en relación con las decisiones marco, con respecto a la primera,
+    el reconocimiento mutuo de resoluciones penales, nos felicitamos de la
+    incorporación de enmiendas en el Senado. Sin embargo, creemos que esta
+    iniciativa, como se ha dicho por parte de otros portavoces, es
+    manifiestamente mejorable. Tiene carencias en materias esenciales, como
+    derechos fundamentales, garantías y cláusulas de respeto a los derechos
+    humanos; cuestiones no menores. Entre las enmiendas, se ha aceptado una
+    primera enmienda nuestra al artículo 53.4, que ha incorporado lo que
+    nuestro grupo parlamentario planteaba, que la vista fuera obligatoria en
+    cuanto lo pidiera una de las partes. Nos felicitamos de ello. En segundo
+    lugar, al artículo 134 se ha incorporado también una enmienda en la que
+    pedíamos el reconocimiento explícito del derecho a asistencia letrada.
+    Por tanto, valoramos muy positivamente que se haya introducido esta
+    enmienda para incluir la mención explícita del derecho de asistencia
+    letrada para el afectado por esta orden penal internacional.
+
+    <br /><br />Otras modificaciones son fundamentalmente técnicas. Los cambios clarifican
+    y añaden seguridad jurídica, mejoran, por lo que nuestro grupo
+    parlamentario va a votar favorablemente estas mejoras que, como digo, son
+    suficientemente positivas para votarlas. Sin embargo, creemos que el
+    texto es manifiestamente mejorable y en temas, además, muy delicados. A
+    nuestro juicio, el proyecto de ley debería haberse mejorado incorporando
+    garantías procesales de derechos fundamentales y de derechos humanos,
+    para evitar la indefensión de las personas afectadas. Explico alguna de
+    ellas. Debería haber introducido la posibilidad de recurrir las
+    decisiones de la fiscalía sobre esta materia, porque en ocasiones la
+    actuación será impulsada exclusivamente por la fiscalía y pudiera afectar
+    a derechos fundamentales. En segundo lugar, la posibilidad de dispensar
+    al Estado requirente de la obligación de presentar el certificado que
+    acredita la resolución judicial extranjera que se pretende ejecutar, lo
+    que podría ocasionar, en nuestra opinión, falta de garantías. En tercer
+    lugar, garantizar la obligación de la notificación que debería ser
+    universal, porque es la única manera en que la persona afectada puede
+    ejercer sus derechos: informarse, recurrir, etcétera. En cuarto lugar,
+    establecer un límite para la detención. No existe ese límite. En nuestra
+    opinión, se deja en total inseguridad. Por ello sería conveniente
+    establecer un límite máximo, las setenta y dos horas, que es el plazo
+    máximo en general que prevé el artículo 17 de nuestra Constitución para
+    la detención preventiva. En quinto lugar, la audiencia preceptiva del
+    afectado o de su defensa antes de emitir la orden de detención y entrega.
+    En definitiva, como ven ustedes, una iniciativa manifiestamente mejorable
+    en materia de garantías.
+
+    <br /><br />Y hay algunas cuestiones importantes en materia de derechos humanos. Por
+    ejemplo, se prevé la posibilidad de que España entregue a una persona
+    para que cumpla una pena de prisión perpetua -señorías, ello va en contra
+    de cualquier principio humanitario- o que se prevea la posibilidad
+    también de suspender la entrega de una persona requerida por motivos
+    humanitarios graves, que es un término, en nuestra opinión, impreciso
+    pero que, en todo caso, deberían contemplarse de forma expresa las
+    razones de derechos humanos, o que se prevea como condición para
+    solicitar la ejecución de una pena española en una país europeo. Nada se
+    dice sobre las condiciones del sistema penitenciario o sobre su respeto a
+    los derechos humanos, cuestión que nos parece también muy importante.
+
+    <br /><br />Por otro lado, el proyecto de ley solamente prevé la solicitud de informes
+    sobre este particular, sobre los derechos humanos, del Gobierno del país,
+    pero lo razonable es que, cuando menos, se recurriese además a informes
+    de organismos internacionales, que contrastarían la complacencia de los
+    países miembros en muchos casos con materias delicadas como los derechos
+    humanos. Incluso no se prevé entre las causas para la denegación ningún
+    examen de las condiciones de derechos humanos, tortura, juicio justo, en
+    las que la sanción ha sido impuesta. En definitiva, el texto que viene
+    del Senado con las enmiendas que se han introducido se ha mejorado; sin
+    embargo, el resultado es manifiestamente mejorable en relación con el
+    reconocimiento, en este caso mutuo, de resoluciones penales.
+
+    <br /><br />Voy al segundo texto, el que tiene que ver con el intercambio de
+    información. Aquí, señorías, nosotros tenemos una posición de rechazo
+    total. Si bien vienen enmiendas, tres enmiendas, que clarifican, como
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página8)"><b>Página
+    8</b></a></p><br />
+
+    <br /><br />en el caso de las enmiendas al artículo 14, o mejoran técnicamente o
+    responden a motivos de seguridad jurídica, que nosotros valoramos, sin
+    embargo, este proyecto de ley sigue siendo muy preocupante en una
+    cuestión esencial; la cuestión fundamental es el acceso a la información
+    y su utilización. En principio, la información que contiene el Registro
+    de penados solo será accesible a jueces y fiscales en el contexto de un
+    proceso penal, al margen de la solicitud de certificación del interesado,
+    titular de los datos. Sin embargo, señorías, resulta inaceptable la
+    previsión abierta que contempla el artículo 13.3 -repito, 13.3-, que
+    permite la utilización de los datos y, digo explícitamente, para la
+    protección del orden público o la seguridad nacional en caso de amenaza
+    inminente o grave. Señorías, ¿qué es esto? Esto hace suponer que se trata
+    de un acceso de una autoridad distinta a la autoridad judicial, de una
+    autoridad administrativa, lo que resulta inadmisible al tratarse de
+    información sensible. No es propio de una sociedad democrática. A juicio
+    de nuestro grupo parlamentario, esta es una cuestión fundamental que
+    debería recogerse claramente, que solo el juez y el fiscal en un proceso
+    penal por delito podrían tener acceso a una información tan sensible.
+    Esto no se ha hecho y esto merece una valoración muy negativa por parte
+    de nuestro grupo parlamentario y, por tanto, el rechazo del proyecto.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Llamazares.
+
+    <br /><br />Por el Grupo Catalán (Convergència i Unió) tiene la palabra el señor Jane.
+
+    <br /><br />El señor JANE I GUASCH: Gracias, señor presidente.
+
+    <br /><br />Señorías, hoy llegan al Congreso dos proyectos de ley y, en el trámite de
+    hoy, el Pleno tiene que pronunciarse sobre las enmiendas que vienen el
+    Senado, que es el objetivo de este debate. Nuestro grupo parlamentario
+    votará a favor de las enmiendas introducidas por el Senado, porque
+    entendemos que globalmente suponen una mejora de los textos que les
+    enviamos desde el Congreso. Algunos de los proyectos de ley que venían en
+    ese paquete no han regresado del Senado ya que han ido directamente al
+    Boletín Oficial del Estado al no incluir enmiendas, pero los dos que hoy
+    tratamos sí. Sin embargo, aprovechando esta intervención, desde
+    Convergència i Unió querríamos hacer una reflexión global sobre lo que
+    supone el Tratado de Ámsterdam, por el que se crea ese espacio de
+    libertad, seguridad y justicia en el ámbito de la Unión Europea y en el
+    que se refuerzan los mecanismos de cooperación judicial a través de esos
+    dos principios básicos: armonización de legislaciones y reconocimiento
+    mutuo de resoluciones judiciales. Hoy lo que estamos realizando con los
+    proyectos de ley en trámite es esa adaptación a lo que ya está previsto
+    en el Tratado de Funcionamiento de la Unión Europea en sus artículos 67 y
+    82, donde también se concreta el mecanismo de comunicación directa entre
+    las autoridades judiciales. Estamos, por tanto, trasponiendo unas
+    decisiones marco y el objetivo -como también se recoge en los propios
+    proyectos que hoy se aprueban- es simplificar y agilizar los
+    procedimientos de transmisión de esas resoluciones judiciales.
+
+    <br /><br />Desde Convergència i Unió queremos enfatizar un hecho. En ese tercer pilar
+    europeo, el pilar de libertad, seguridad y justicia, se está
+    estableciendo el intercambio de resoluciones judiciales dentro del ámbito
+    de la justicia. En ese tercer pilar está la libertad y está la seguridad.
+    Ha entrado en este momento en el hemiciclo nuestro portavoz en la
+    Comisión de Interior, el señor Guillaumes, que está trabajando de manera
+    muy activa para precisamente conseguir algo que desde Convergència i Unió
+    venimos reclamando legislatura tras legislatura, que es esa posibilidad
+    de que también dentro del ámbito policial se consiga ese intercambio de
+    información. Todo aquello que hoy es bueno y positivo en el ámbito
+    judicial, por ese intercambio de resoluciones judiciales entre las
+    autoridades judiciales entre sí, d Convergència i Unió lo viene
+    reclamando desde hace años -y apelo al "Diario de Sesiones" y a todos los
+    que hemos sido portavoces en materia de interior- para que en el ámbito
+    de la Unión Europea los cuerpos de seguridad, como pueden ser la
+    Ertzaintza o los Mossos d'Esquadra, tengan acceso a esas bases de datos
+    de Europol e incluso más allá de las fronteras europeas, por ejemplo de
+    Interpol, buscando esa colaboración en el ámbito policial. Hoy estamos
+    desarrollando ese mecanismo de trasposición de unas decisiones marco,
+    positivo; de reconocimiento mutuo de resoluciones judiciales, positivo,
+    pero en ese tercer pilar está también el pilar de la seguridad, y dentro
+    de este pilar, si hacemos buenas esas intenciones de colaboración
+    directa, de intercambio directo de resoluciones, quiero que los Mossos
+    d'Esquadra, cuando intervengan como policía judicial o cuando realicen
+    una investigación, puedan tener acceso directo a lo que está también en
+    el ámbito de otras policías de la Unión Europea o más allá de la Unión
+    Europea. Eso es creernos lo que hoy se está haciendo de esa amplia
+    colaboración entre autoridades, de esa intencionalidad de agilizar que
+    buscan los proyectos de ley. Pues si queremos agilizar, si queremos ser
+    operativos, aquello
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página9)"><b>Página
+    9</b></a></p><br />
+
+    <br /><br />que hoy aprobamos y valoramos positivamente de ese Tratado de Ámsterdam en
+    lo que es ese pilar, repito, de la libertad, seguridad y justicia, hoy
+    reclamamos también desde Convergència i Unió que ello se pueda dirigir
+    también hacia lo que es esa demanda de poder tener esa amplia
+    comunicación y colaboración entre las fuerzas y cuerpos de seguridad
+    cuando las mismas tienen competencias directas de seguridad ciudadana,
+    son policía ordinaria en sus respectivos territorios y necesitan también
+    esa colaboración en la línea que hoy estamos aprobando en el ámbito
+    judicial.
+
+    <br /><br />Señor presidente, señorías, muchas gracias.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Jané.
+
+    <br /><br />Por el Grupo Parlamentario Socialista, el señor Sáez Jubero.
+
+    <br /><br />El señor SÁEZ JUBERO: Gracias, señor presidente.
+
+    <br /><br />Señorías, les confieso que estoy reconfortado en esta sesión de hoy tras
+    la intervención de la presidenta Bachelet, reconfortado con la política.
+    Por tanto vamos a continuar el orden del día, pero tras una estela y una
+    jornada muy positivas por el discurso que hoy ha pronunciado la
+    presidenta Bachelet ante esta Cámara.
+
+    <br /><br />En cuanto a los proyectos de ley, señorías, nuestro grupo parlamentario va
+    a votar favorablemente las enmiendas que nos propone el Senado para
+    mejorar el proyecto de ley de reconocimiento mutuo de resoluciones
+    penales en la Unión Europea y el proyecto de ley orgánica de intercambio
+    de información de antecedentes penales y resoluciones judiciales penales.
+    Pese a ello nos parece que el grupo parlamentario de la mayoría podría
+    haber apoyado algunas de las enmiendas formuladas por nuestro grupo
+    parlamentario en el Senado que, a criterio nuestro, mejoraban el texto
+    propuesto por el Gobierno.
+
+    <br /><br />Señorías, la aprobación de esta trasposición de directivas y decisiones
+    europeas nos recuerda nuevamente nuestra propia realidad normativa. Cada
+    vez más la iniciativa legislativa del Gobierno viene condicionada por
+    nuestra pertenencia a la Unión Europea, por la necesidad de cumplir con
+    las obligaciones derivadas de la normativa europea y su adaptación y
+    trasposición a nuestra legislación nacional. Y es precisamente en el
+    espacio de libertad, seguridad y justicia donde la Unión Europea más está
+    avanzando en los objetivos de convergencia de nuestros instrumentos
+    legislativos y procesales. Los objetivos comunes de lucha contra los
+    delitos trasnacionales, contra el crimen organizado y de cooperación en
+    materia de seguridad han obligado a desplegar cambios tanto en nuestro
+    derecho positivo, especialmente en sucesivas reformas de nuestro Código
+    Penal, como también en nuestras normas procesales y en los mecanismos de
+    cooperación e información. Quedan todavía muchos retos por delante, como
+    por ejemplo la puesta en marcha de la fiscalía europea que preveía el
+    Tratado de Lisboa a partir de Eurojust. Eurojust es el órgano de la Unión
+    Europea encargado de reforzar la cooperación judicial y de fomentar la
+    adopción de medidas de cooperación judicial entre los Estados miembros y
+    sin duda ha estimulado también la adopción de estas iniciativas
+    legislativas en la Unión Europea.
+
+    <br /><br />En materia de cooperación judicial hemos ido incorporando desde 2002 a
+    nuestro ordenamiento jurídico -si bien es cierto que en muchas ocasiones,
+    y hay que hacer autocrítica por ello, de manera tardía- distintos
+    instrumentos. La cooperación judicial europea ha permitido sustituir las
+    antiguas comunicaciones a través de autoridades o representaciones
+    gubernamentales de los diversos países miembros por otros instrumentos
+    que permiten la cooperación directa entre juzgados y tribunales. Tal vez
+    el más significativo y el que mayor avance supone en materia de
+    cooperación judicial sea la orden europea de detención y entrega. Con
+    esta orden europea se permite que mediante una resolución judicial
+    dictada en un Estado miembro de la Unión Europea se permita la detención
+    y entrega por otro Estado miembro de una persona a la que se reclama para
+    ejercer contra la misma una acción penal o ejecutar una pena o medida de
+    seguridad. La orden europea de detención ha planteado en su aplicación
+    algunos problemas de garantías de derechos fundamentales que esperamos, y
+    estamos convencidos de ello, pueda resolver mejor la nueva redacción que
+    se da en esta nueva ley. También se incluyen en materia de cooperación
+    judicial otros instrumentos de coordinación, como el reconocimiento mutuo
+    de sanciones pecuniarias, de resoluciones de decomiso, de resoluciones
+    judiciales en materia penal o de resoluciones dictadas a raíz de juicios
+    celebrados sin la comparecencia del imputado. En interés de la mejora de
+    la técnica legislativa y de la dispersión normativa, a nuestro grupo
+    parlamentario le ha parecido apropiado haber recogido todos estos
+    instrumentos de cooperación en una sola ley de reconocimiento mutuo de
+    resoluciones judiciales con el complemento de ley orgánica, ya que
+    afectaba al articulado de la Ley Orgánica del Poder Judicial.
+
+    <br /><br />De importancia también es la aprobación de la ley orgánica sobre
+    intercambio de información de antecedentes penales y resoluciones
+    judiciales penales en la Unión Europea que adopta dos decisiones
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página10)"><b>Página
+    10</b></a></p><br />
+
+    <br /><br />marco de la Unión Europea y que regula también el régimen aplicable al
+    intercambio de información sobre los antecedentes penales entre los
+    registros centrales de penados de los distintos Estados miembros y que le
+    dota, por tanto, de garantías y de mayor seguridad jurídica. En el clima
+    de consenso de aprobación de estas leyes hubiéramos deseado que el grupo
+    mayoritario aprobara las enmiendas técnicas propuestas por nuestro grupo
+    parlamentario en el Senado que también propusimos en el Congreso. A
+    efectos de fijación de nuestra posición, y pese a nuestro voto favorable
+    al proyecto y a las enmiendas incorporadas en el Senado, que entendemos
+    que aportan mejora en el texto que enviamos al Senado, quiero recordar en
+    este trámite cuáles han sido esas enmiendas propuestas por nuestro grupo
+    parlamentario en el Senado y que, a nuestro criterio, deberían haber sido
+    acogidas por el grupo mayoritario.
+
+    <br /><br />En el proyecto de ley de reconocimiento mutuo de resoluciones penales la
+    enmienda 62, para que se solicitara también información a los puntos de
+    contacto españoles de la red judicial europea y la red española de
+    secretarios judiciales en cooperación internacional cuando se desconozca
+    cuál es la autoridad judicial de ejecución competente. La enmienda 63 -y
+    esta tal vez nos parece la enmienda más trascendente que queríamos
+    incorporar al texto-, para que en la lista de delitos no sujetos de la
+    doble tipificación por el juez o tribunal español también se incluyera el
+    delito de mutilación genital femenina y los delitos sobre prevención y
+    lucha contra la violencia contra la mujer y la violencia doméstica y así
+    impedir que el Estado de ejecución pudiera denegarla porque los hechos no
+    estén tipificados en su legislación nacional. La enmienda 64, para que
+    las resoluciones dictadas por la autoridad judicial española de
+    reconocimiento mutuo sean únicamente susceptibles de recurso de
+    apelación, suprimiendo el recurso de reforma a fin de evitar dilaciones
+    indebidas o innecesarias.
+
+    <br /><br />En el proyecto de ley orgánica sobre intercambio de información, la
+    enmienda 8 a fin de que el registro central de penados únicamente remita
+    información sobre infracciones penales juzgadas y condenadas por un
+    órgano jurisdiccional penal. Las enmiendas 9, 10 y 11, para que el
+    registro central de penados solo responda a las consultas que se le
+    formulen sobre condenas dictadas por terceros países que estén inscritas
+    en el registro y cuya cancelación no se haya comunicado. Finalmente la
+    enmienda 12, para cambiar la rúbrica del título II por la siguiente:
+    Consideración de resoluciones condenatorias firmes dictadas en otros
+    Estados miembros de la Unión Europea en coherencia con las enmiendas que
+    he tratado de explicarles con antelación.
+
+    <br /><br />En cualquier caso, tal como les he anunciado al inicio de esta
+    intervención, nuestro grupo parlamentario va a votar favorablemente estas
+    enmiendas que sin duda contribuyen a tener dos nuevos instrumentos
+    legislativos que siguen en la mejora de este espacio de libertad,
+    seguridad y justicia y esa construcción también de una normativa de
+    derecho procesal, de derecho penal común, para avanzar hacia esa idea que
+    todos tenemos de una Europa federal y una Europa cada vez más unida
+    políticamente, también por nuestro cuerpo normativo.
+
+    <br /><br />Muchas gracias, señor presidente. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Sáez Jubero.
+
+    <br /><br />Le agradezco especialmente sus palabras de elogio al discurso de la señora
+    Bachelet.
+
+    <br /><br />Por el Grupo Popular, tiene la palabra la señora Baena.
+
+    <br /><br />La señora BAENA AZUAGA: Muchas gracias, señor presidente.
+
+    <br /><br />Señorías, es para mí un honor subir a esta tribuna para defender la
+    posición del Grupo Parlamentario Popular en dos proyectos de ley tan
+    importantes para seguir avanzando hacia una mayor integración de la Unión
+    Europea. Estas leyes son fundamentales para la seguridad de los
+    ciudadanos porque los ciudadanos quieren vivir en un mundo más seguro, un
+    mundo donde sus libertades estén garantizadas. Lo cierto es que vivimos
+    en un escenario donde la delincuencia viene caracterizada por su
+    internacionalización, una delincuencia que despliega su actividad en el
+    territorio de distintos Estados dando lugar a lo que se puede denominar
+    como la globalización de la criminalidad. La cooperación judicial
+    internacional ha de ser, por tanto, una prioridad y para este Gobierno lo
+    es.
+
+    <br /><br />Señorías, con la aprobación definitiva de estos proyectos de ley vamos a
+    poner en vigor instrumentos de la mayor importancia para, en primer
+    lugar, ser más eficaces en la lucha contra el crimen internacional y, en
+    segundo lugar -y no por ello menos importante-, para ser más eficaces en
+    la protección de las víctimas en todo el territorio de la Unión Europea
+    de una manera coordinada. En definitiva, estas leyes buscan una mejor
+    coordinación entre los Estados miembros que ha de redundar en mayor
+    seguridad para todos los ciudadanos. Por ello hubiera sido una muestra de
+    irresponsabilidad que no hubiésemos sido capaces de llegar a un consenso
+    en estos proyectos de ley. Al contrario, ha habido voluntad de diálogo
+    por
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página11)"><b>Página
+    11</b></a></p><br />
+
+    <br /><br />parte del Grupo Parlamentario Popular y de la mayoría del resto de los
+    grupos para aprobar enmiendas al texto inicial. También en su paso por el
+    Senado se han aprobado enmiendas de distintos grupos parlamentarios. Esta
+    tramitación ágil y consensuada nos permite mantener el compromiso del
+    Estado español en la trasposición de normas de la Unión Europea y
+    demostrar una vez más que somos socios leales con todos sus países
+    miembros. (La señora vicepresidenta, Villalobos Talero, ocupa la
+    Presidencia).
+
+    <br /><br />La cooperación judicial -o, lo que es lo mismo, la coordinación entre las
+    autoridades judiciales de los Estados miembros- es fundamental para
+    garantizar una seguridad en una Europa en la que decidimos eliminar las
+    fronteras nacionales interiores, una Europa en la que los ciudadanos
+    podemos circular libremente por todo el territorio común. Entre todos
+    hemos conseguido que Europa sea el mayor espacio de libertad, progreso y
+    bienestar del mundo y queremos que siga siéndolo en el futuro. Sin
+    embargo, somos conscientes de que el mundo en general -y Europa en
+    particular- se enfrenta a desafíos nuevos: una delincuencia que no conoce
+    fronteras, unas crisis económicas y financieras, dependencia
+    energética... Sabemos que Europa necesita un impulso renovado, en
+    definitiva necesita una mayor integración. Así lo reconocía el presidente
+    Mariano Rajoy hace escasas fechas en la apertura del curso académico del
+    Colegio de Europa cuando decía que la integración es el signo de los
+    tiempos, es la única manera que tenemos para garantizar nuestra
+    influencia y nuestra fortaleza en este siglo XXI tan complejo que nos ha
+    tocado vivir.
+
+    <br /><br />Pues bien, los dos proyectos de ley que hoy se someten a la consideración
+    de este Pleno van encaminados a conseguir una mayor integración. El
+    primero, es el proyecto de ley de reconocimiento mutuo de resoluciones
+    penales en la Unión Europea, una ley que se presenta como un texto
+    conjunto, un compendio que acaba con la dispersión normativa que había
+    hasta ahora en esta materia. En ella se articulan instrumentos tan
+    importantes como la orden europea de detención y entrega, mucho más ágil
+    que el tradicional proceso de extradición; el embargo preventivo de
+    bienes y aseguramiento de pruebas en cualquier Estado miembro, sea cual
+    sea el Estado donde se cometió el delito; o la más reciente orden europea
+    de protección, que va a permitir extender las medidas para proteger a una
+    persona de los posibles actos delictivos de otra a cualquier Estado
+    miembro al que esa víctima se desplace.
+
+    <br /><br />El segundo proyecto de ley supone una revolución, un cambio radical de las
+    relaciones entre los Estados miembros. ¿Por qué? Porque se sustituyen las
+    antiguas comunicaciones entre las autoridades gubernativas por la
+    comunicación directa entre las autoridades judiciales. Esto supone
+    simplificar y agilizar enormemente los procedimientos. Y es que el
+    proyecto de ley sobre intercambio de información de antecedentes penales
+    viene a consolidar un sistema que ya permite a jueces y fiscales acceder
+    fácilmente a una información completa del historial delictivo de
+    cualquier ciudadano de la Unión Europea con independencia del país
+    europeo en el que hubiera sido condenado. Aquí debemos destacar el papel
+    pionero de nuestro país, ya que España y Austria fueron los dos primeros
+    que conseguimos conectar on line nuestros propios sistemas de
+    antecedentes penales, pero queremos ir más allá, queremos poder consultar
+    el historial de antecedentes de cualquier ciudadano de la Unión Europea
+    simplemente con la huella dactilar. Para ello ya se ha puesto en marcha
+    un sistema con el Reino Unido, tal y como nos adelantó el secretario
+    general de la Administración de Justicia en su comparecencia en esta casa
+    el pasado 7 octubre.
+
+    <br /><br />Señorías, estos son solo dos ejemplos, pero podríamos poner muchos más que
+    vienen a demostrar que España ejerce de socio comprometido, un socio que
+    hace propuestas para conseguir una Unión Europea mejor y, sobre todo, que
+    España es un socio al que ahora, con el Gobierno del Partido Popular, se
+    le escucha, a diferencia de lo que ocurría con otros Gobiernos; ahora
+    nuestra opinión cuenta, se tiene en cuenta y vuelve a ser fuerte. De
+    hecho, en estos años en que no solo España sino toda Europa se ha visto
+    abocada a la superación de una profunda crisis, nuestro impulso, las
+    propuestas de España, han sido decisivas en asuntos tan importantes como
+    la unión bancaria o el pacto fiscal, asuntos importantes en los que en
+    apenas tres años hemos construido más en la gobernanza europea que en las
+    dos décadas anteriores. (Un señor diputado: ¡Halaaa!).
+
+    <br /><br />Igualmente, en el Consejo Europeo del pasado mes de junio se trataron los
+    aspectos del espacio de libertad, seguridad y justicia. Pues bien, en sus
+    conclusiones también se recogieron las propuestas que en este ámbito hizo
+    el presidente Rajoy, como fueron, en primer lugar, la necesidad de contar
+    en la Unión Europea con una política de inmigración, asilo y fronteras
+    eficiente y bien gestionada para evitar más tragedias humanas y, en
+    segundo lugar, la necesidad de reforzar la protección de las víctimas.
+    Aquí, señorías, se pone de relieve una vez más el compromiso de este
+    Gobierno con todas aquellas personas
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página12)"><b>Página
+    12</b></a></p><br />
+
+    <br /><br />que han sufrido las consecuencias del terrorismo o de la violencia de
+    género. Sin duda aquí la cooperación judicial tiene mucho que aportar en
+    estos graves asuntos.
+
+    <br /><br />Termino, señorías. Estas leyes responden al compromiso que tenemos todos
+    los Estados miembros de mejorar la cooperación judicial penal en el seno
+    de la Unión Europea. Con ellas vamos a tener más y mejores instrumentos
+    para luchar a nivel internacional contra delitos tan graves como el
+    terrorismo, la trata de seres humanos, el narcotráfico o la corrupción.
+    Vamos a ganar en coordinación y, en definitiva, vamos a ganar en
+    seguridad para todos los ciudadanos. Vamos a dar, señorías, un paso firme
+    más para seguir construyendo y fortaleciendo ese espacio de libertad,
+    seguridad y justicia que los europeos decidimos darnos.
+
+    <br /><br />Muchas gracias, señorías, y gracias, señora presidenta. (Aplausos).
+
+    <br /><br />- PROYECTO DE LEY POR LA QUE SE MODIFICA EL TEXTO REFUNDIDO DE LA LEY DE
+    PROPIEDAD INTELECTUAL, APROBADO POR REAL DECRETO LEGISLATIVO 1/1996, DE
+    12 DE ABRIL, Y LA LEY 1/2000, DE 7 DE ENERO, DE ENJUICIAMIENTO CIVIL.
+    (Número de expediente 121/000081).
+
+    <br /><br />La señora VICEPRESIDENTA (Villalobos Talero): Gracias, señora Baena.
+
+    <br /><br />Vamos a pasar al siguiente proyecto: Enmiendas aprobadas por el Senado al
+    proyecto de ley por el que se modifica el texto refundido de la Ley de
+    Propiedad Intelectual, aprobado por Real Decreto legislativo 1/1996, de
+    12 de abril, y la Ley 1/2000, de 7 enero, de Enjuiciamiento Civil. En
+    turno de fijación de posiciones, en primer lugar por el Grupo Mixto,
+    tiene la palabra el señor Larreina.
+
+    <br /><br />El señor LARREINA VALDERRAMA: Muchas gracias, señora presidenta.
+
+    <br /><br />Señorías, estamos ante el trámite final de una ley que tal como va a
+    quedar es una oportunidad perdida. Una vez más el Grupo Popular está
+    aplicando su mayoría absoluta con muy poca visión histórica y también con
+    poca responsabilidad, porque estamos hablando de un ámbito, el de la Ley
+    de Propiedad Intelectual, que tiene mucha conexión con las libertades
+    democráticas, con la libertad de información, con la libertad de
+    comunicación, con el acceso a la información, con la educación y con la
+    libertad de expresión. Estamos hablando de un elemento que es importante
+    y central en cualquier sistema democrático. En estos grandes temas la
+    responsabilidad de los políticos es buscar grandes consensos. Lo que es
+    absurdo es que leyes básicas, con aspectos fundamentales sobre las
+    libertades, las estemos cambiando cada seis meses o cada cuatro años,
+    cada legislatura. Con esta ley va a pasar eso. Ahora ustedes van a
+    modificar la Ley de Propiedad Intelectual, además con una modificación
+    muy restrictiva desde el punto de vista de las libertades, una
+    modificación que depende mucho de los grandes intereses de determinados
+    grupos mediáticos y económicos, pero que da la espalda a la realidad, a
+    la realidad del mundo de la información, a la realidad de la evolución de
+    las nuevas tecnologías -de ese ámbito que se conoce como Internet- y que
+    da la espalda también a la nueva economía. Este es un elemento importante
+    que tendría que servir de reflexión. Además esta modificación de la ley
+    es precipitada, porque en el plazo de seis u ocho meses vamos a tener que
+    volver a modificarla, porque estamos pendientes de la normativa
+    comunitaria en este ámbito, una normativa comunitaria que va a
+    condicionar todas las legislaciones estatales y que va a condicionar esta
+    también. Por tanto, modificar ahora la ley para volverla a modificar
+    dentro de seis meses, un año o año y medio, modificarla sin un consenso
+    mayoritario, amplio, que respalde ese ámbito de las libertades que decía
+    antes y que le dé estabilidad, es de una irresponsabilidad supina.
+
+    <br /><br />Además hay aspectos también importantes de esta ley que la ponen en
+    cuestión. Incluso hay sectores que están impugnando la propia
+    tramitación, porque el Gobierno ocultó a la Unión Europea la modificación
+    de uno de los artículos. En el anteproyecto que se envió había un
+    artículo que no está en el proyecto que se tramitó en las Cortes
+    Generales. Eso incluso puede ser motivo de impugnación, pero al margen de
+    esos ámbitos formales, es más importante el fondo de la cuestión. En el
+    fondo de la cuestión se está dando la espalda a la realidad del mundo de
+    las nuevas tecnologías, se está dando la espalda también a la libertad de
+    expresión, se pierde la oportunidad de reconocer algo que es básico y que
+    cada vez tiene mayor peso, que es el ámbito de las licencias libres, por
+    ejemplo, de las creative commons, que siguen ausentes en la legislación
+    del Estado y provocan un gran interés en el mundo universitario y en el
+    mundo de la comunicación. Esta ley también pasa por encima de esta
+    cuestión y ha perdido esa oportunidad. Precisamente nosotros presentamos
+    una enmienda en ese ámbito. Ustedes saben que nosotros normalmente no
+    entramos a las enmiendas parciales en los proyectos de ley, porque la
+    misión que tenemos comprometida con nuestros electores no es mejorar la
+    legislación española sino reivindicar el derecho de Euskal Herria a tener
+    su propio ámbito de decisión y a ejercer su propia soberanía. Sin
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página13)"><b>Página
+    13</b></a></p><br />
+
+    <br /><br />embargo, en este tema incluso presentamos una enmienda parcial, porque
+    consideramos que era algo sustancial, importante, que tiene trascendencia
+    para el mundo de las libertades y sobre todo para ese mundo de las nuevas
+    tecnologías. Al final, con ese objetivo de combatir la piratería -que es
+    sano y bueno combatirla-, ustedes están combatiendo la piratería dando
+    patente de corso a una serie de entidades de gestión de derechos,
+    entidades privadas que no cubren el conjunto de los titulares de los
+    derechos de propiedad y que al final se van a beneficiar incluso de
+    derechos de gente del mundo universitario que publica sus estudios, sus
+    producciones intelectuales bajo la licencia creative commons, es decir,
+    que renuncia precisamente al cobro de sus derechos, y lo que están
+    consiguiendo con esto es que esas entidades privadas de gestión de
+    derechos acaben cobrando derechos que no les corresponden.
+
+    <br /><br />Desde todos los puntos de vista este proyecto de ley es un sinsentido.
+    Está dando la espalda tanto al nuevo mundo del ámbito digital como al de
+    la economía digital, elemento importante; es otro punto de reflexión que
+    les tendría que servir para dar marcha atrás en este sinsentido. Creo que
+    están muy condicionados por los intereses de la vieja economía, de esos
+    medios de comunicación que se están quedando obsoletos y que son
+    incapaces de reaccionar ante las nuevas tecnologías. Están siendo
+    insensibles y desconocen la realidad del mundo digital que avanza a pasos
+    agigantados. Por otra parte, también están dando la espalda a las
+    corrientes cada vez más importantes que propugnan -propugnamos- la
+    necesidad de la socialización del conocimiento. Es decir, hay una
+    hipoteca social sobre el conocimiento, hay una obligación de poner toda
+    la capacidad intelectual de una sociedad al servicio de toda ella. Hay
+    elementos de progreso social basados en la difusión del conocimiento que
+    no pueden ser sometidos a las reglas del mercado economicista. Esta ley
+    tampoco lleva en su planteamiento, ni en su concepción, ni en su
+    reflexión, la necesidad de avanzar en las políticas de socialización del
+    conocimiento, que es un elemento fundamental de reducción de la
+    desigualdad. El otro día en el debate de presupuestos citaba al
+    economista francés Thomas Piketty, que decía que uno de los elementos
+    clave para avanzar en la reducción de las desigualdades es avanzar en la
+    sociedad del conocimiento. Con esta ley, que podría ofrecer la
+    oportunidad de avanzar en ese ámbito, se ha perdido una nueva
+    oportunidad.
+
+    <br /><br />Simplemente quiero trasladarles estas reflexiones. Rectifiquen, cambien de
+    mentalidad en esta y en otras leyes, especialmente -no está el ministro
+    titular señor Wert- en el ámbito educativo, en el del conocimiento, en el
+    de las libertades. Ahí no se puede legislar a golpe de mayoría absoluta,
+    porque por muy mayoría absoluta que sea siempre es insuficiente. Hay que
+    buscar amplios consensos que den estabilidad al ámbito de las libertades,
+    a la difusión del conocimiento, que es un elemento de progreso social.
+    Repito, creo que ustedes están perdiendo esa oportunidad. Están cegados
+    por esa mayoría absoluta -que no deja de ser escasa- cuando hablamos de
+    proteger las libertades, el conocimiento y de combatir la desigualdad.
+    Por eso, vamos a votar en contra de esta ley, y no perdemos la esperanza
+    de que cuando haya que volver a modificarla en el plazo de año o año y
+    medio tomen en cuenta estas reflexiones y avancen tanto en buscar amplios
+    consensos para proteger las libertades como en el derecho de la
+    ciudadanía a participar del conocimiento, por la senda de socialización
+    del conocimiento, que es uno de los elementos más eficaces para mejorar
+    en la lucha contra las desigualdades.
+
+    <br /><br />Muchas gracias.
+
+    <br /><br />La señora VICEPRESIDENTA (Villalobos Talero): Gracias, señor Larreina.
+
+    <br /><br />Por el Grupo Vasco, PNV, señor Agirretxea.
+
+    <br /><br />El señor AGIRRETXEA URRESTI: Gracias, señora presidenta.
+
+    <br /><br />Intervengo muy brevemente para decir que vuelve al Congreso, después de
+    pasar por el Senado, una ley que dio muchas vueltas en esta Cámara, con
+    mucha parafernalia, como si fuera a ser la panacea que iba a traer la
+    solución. Ya en verano, en pleno julio, con una especie de veranitud -no
+    sé si existe el sustantivo, sería algo parecido a nocturnidad- y con
+    muchísima urgencia pasó por aquí, pero evidentemente entró y salió coja
+    del Congreso con la promesa del Grupo Popular de que esa cojera se
+    enderezaría en el Senado; pero allí se ha fortalecido su cojera, y aunque
+    parezca una contradicción esta ley ha salido más mutilada todavía. Por
+    tanto, tenemos una decepción más del Grupo Popular en cuanto a promesas
+    dadas a los demás grupos, que pretendíamos mejorar esta ley porque
+    considerábamos que en ella había cuestiones injustas, como denunciábamos
+    en nuestras enmiendas. No sé qué ha ocurrido pero no hay peor cosa que
+    prometer algo y después no cumplirlo, y en este caso el Grupo Popular ha
+    reincidido; ha hecho una ley basándose en criterios solo propios porque
+    no ha convencido a nadie más -no ha obtenido ningún apoyo más en el
+    Senado de los que tuvo aquí, ni volverá a tener-, no ha convencido a
+    nadie de las bonanzas de esta ley, que, como usted ha dicho antes, va a
+    tener que cambiarse dentro de poco. Europa marcará unos criterios. ¿Qué
+    va a pasar si esos criterios no coinciden con lo que
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página14)"><b>Página
+    14</b></a></p><br />
+
+    <br /><br />el Gobierno actual ha establecido? No es una ley justa. Desde un principio
+    considerábamos que quien usa debe pagar y quien no usa no debe pagar.
+    Proponíamos la vuelta al famoso canon digital, al que se dijo que
+    podíamos volver, y todo ha quedado en agua de borrajas. Las enmiendas
+    incorporadas en el Senado -¡qué quieren que les diga!- son una especie de
+    paripé para poder demostrar que allí también se hacen cosas, y ahora
+    vuelve la ley aquí.
+
+    <br /><br />En resumidas cuentas, es una decepción más. Pensábamos que se podía haber
+    hecho una ley que convenciera mínimamente a todos los grupos y que
+    recogiera las necesidades que planteábamos, que eran obvias; pero Grupo
+    Popular ha hecho caso omiso. Por lo tanto, votaremos en contra de las
+    enmiendas que no aportan nada y queremos expresar nuestro voto en contra
+    -ideológico- a esta ley.
+
+    <br /><br />Muchas gracias.
+
+    <br /><br />La señora VICEPRESIDENTA (Villalobos Talero): Gracias, señor Agirretxea.
+
+    <br /><br />Por Unión Progreso y Democracia, señor Martínez Gorriarán.
+
+    <br /><br />El señor MARTÍNEZ GORRIARÁN: Gracias, señora presidenta.
+
+    <br /><br />Voy a intervenir brevemente para lamentar no solo que el Senado otra vez
+    haya hecho poco más que un ligero cepillado para quitar los solecismos
+    que tenía la redacción -cosa para la que no hace falta una segunda Cámara
+    sino tener un poco de cuidado al redactar- sino sobre todo porque creo
+    que esta es una de las peores leyes que se ha hecho en lo que llevamos de
+    legislatura, y es algo realmente meritorio. Esta ley de propiedad
+    intelectual es una ley intelectualmente impropia. Es una ley que solo se
+    ha concebido y aprobado con un fin, y con fecha de caducidad -lo cual
+    dice ya mucho de para qué se ha hecho y cómo se ha hecho-, puesto que en
+    su preámbulo señala que dentro de un año habrá que revisarla; se ha
+    apuntado aquí también porque es sabido que las directivas europeas van en
+    un sentido contrario al que marca esa ley, lo cual es legislar a
+    sabiendas de que se está haciendo durante un breve periodo de tiempo para
+    favorecer a determinados intereses privados, y esto es realmente
+    escandaloso. España es un país que tiene 5,5 millones de parados, entre
+    otras cosas porque no ha sabido aprovechar -por un marco legislativo muy
+    deficiente- las oportunidades de la economía digital. Pues bien, una ley
+    como esta, que tenía que servir para favorecer la economía digital, lo
+    único que hace es bloquear el acceso de emprendedores a nuevos modelos de
+    negocio y a nuevos desarrollos, porque su única preocupación -como se ha
+    hecho en otros campos también- es blindar los intereses que ya existen.
+    Incluye cosas como la tasa AEDE -también conocida como tasa Google-, que
+    probablemente va a ser tumbada por el Tribunal de Luxemburgo, que ya ha
+    incluido cuestiones prejudiciales al respecto. Se sabía pero no se ha
+    tenido en cuenta, para variar, como siempre. Incluye cosas tan aberrantes
+    como el derecho de cita, que es en realidad una tasa para cobrar por el
+    tráfico de conocimiento; es una cosa increíble. No se ha conocido algo
+    así en Europa desde la época del Imperio otomano, que prohibió los libros
+    impresos hasta finales del siglo XVIII. No se ha contado a la opinión
+    pública -lógico también, porque son los grandes grupos de comunicación
+    los beneficiados por este tipo de tasas, por la tasa AEDE en concreto-,
+    por ejemplo, que las universidades van a tener que ponerse de acuerdo con
+    las entidades de gestión de derechos para pagarles un tanto por usar
+    libros; no se ha contado que las bibliotecas públicas van a tener que
+    pagar por prestar libros. Es absolutamente aberrante, es un desastre de
+    ley. Para lo único que sirve, como digo, es para retrasar la innovación y
+    la sociedad del conocimiento. Sirve exactamente para todo lo contrario de
+    lo que se proclama.
+
+    <br /><br />Desde luego, no cuente con el voto favorable de nuestro grupo a esta ley
+    ni a nada que se le parezca. Cuando dentro de un año volvamos a
+    discutirla, será el momento de repasar para qué se hizo: para ganar
+    tiempo y entretanto seguir controlando el oligopolio que existe en España
+    entre política y medios de comunicación.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />La señora VICEPRESIDENTA (Villalobos Talero): Gracias, señor Martínez
+    Gorriarán.
+
+    <br /><br />Por La Izquierda Plural, señora De las Heras.
+
+    <br /><br />La señora DE LAS HERAS LADERAS: Gracias, presidenta.
+
+    <br /><br />Señorías, con la aprobación definitiva de esta ley de propiedad
+    intelectual, el Gobierno pone el interés de la cultura, de sus artistas,
+    productores y autores a los pies de los caballos de la industria del
+    sector tecnológico, de las telecomunicaciones y de las grandes cadenas
+    hoteleras. No defiende los intereses ni derechos de propiedad intelectual
+    ni de su gestión colectiva, amenaza la función social que las sociedades
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página15)"><b>Página
+    15</b></a></p><br />
+
+    <br /><br />de gestión de derechos realizan y se ha demostrado incapaz de definir la
+    seguridad jurídica necesaria para resolver de manera equilibrada los
+    intereses entre autores y editores. Es una ley que el Grupo Popular
+    aprobará pasando el rodillo de su mayoría absoluta en la absoluta
+    soledad, no solo contra el resto de todos los grupos de la oposición sino
+    de todo el sector cultural, vulnerando la legislación de la Unión Europea
+    y desoyendo entre otros el informe del Consejo de Estado o del Consejo
+    General del Poder Judicial. Después de la obstinación y cerrazón
+    demostrada por el Grupo Popular para bajar el IVA cultural, cuando ya
+    tienen -porque los tienen- los datos de lo que para la industria y los
+    trabajadores y trabajadoras de la cultura supone esta medida, esta ley es
+    la demostración más clara del desprecio que este Gobierno manifiesta ante
+    la cultura de nuestro país, ante su valor emancipador y generador de
+    ciudadanos y ciudadanas libres y críticos. Es una ley que a su vuelta del
+    Senado, donde el Grupo Popular se comprometió -ya se ha dicho aquí- a
+    llegar a acuerdos para su mejora, y ante su incapacidad y verdadera falta
+    de voluntad para llevarlos a cabo, incorpora dos modificaciones mediante
+    las disposiciones cuarta y quinta, que posponen su entrada en vigor a 1
+    de enero de 2015 y le da el plazo de un año de vida para ser sustituida
+    por otra reforma integral de la ley, que aborde precisamente los aspectos
+    que más daño van a causar al mundo de la cultura y que han motivado este
+    desaguisado de ley: el régimen aplicable a la gestión colectiva de
+    derechos, la compensación por copia privada y las competencias y
+    naturaleza del legislador. Es una verdadera chapuza, señores del Grupo
+    Popular; un parche que no podrá evitar el daño que causará de manera
+    inmediata esta ley en su puesta en vigor. Como ya alerta Adepi, la
+    Asociación de entidades de gestión, reducirá muy gravemente cientos de
+    miles de salarios de profesionales del sector de la cultura, dificultará
+    su gestión y no aportará soluciones en la lucha contra la piratería. Esta
+    es su ley; nace muerta, señoras y señores del Grupo Popular, y a mayor
+    gloria de su irremediable inoperancia traerá mayores problemas a la ya
+    suficientemente apaleada cultura de nuestro país.
+
+    <br /><br />Desde La Izquierda Plural por supuesto que no vamos a apoyar este
+    desastre, este desaguisado. (Aplausos).
+
+    <br /><br />La señora VICEPRESIDENTA (Villalobos Talero): Gracias, señora De las
+    Heras.
+
+    <br /><br />Por el Grupo Parlamentario Catalán (Convergència i Unió), tiene la palabra
+    la señora Surroca.
+
+    <br /><br />La señora SURROCA I COMAS: Gracias, señora presidenta.
+
+    <br /><br />Señorías, desde Convergència i Unió recibimos este proyecto, cuando entró
+    en el Congreso, con una actitud abierta, constructiva. Ya le dijimos,
+    señor ministro, en el primer debate que tuvimos aquí hace ya unas cuantas
+    semanas que estábamos dispuestos a hablar de ello; incluso usted nos
+    habló de la necesidad de consenso en este proyecto, nos dijo que era
+    importante que existiera consenso. Estábamos absolutamente de acuerdo y
+    aún pensamos que habría sido deseable que lo hubiera habido por la
+    importancia que este proyecto tiene para la cultura, para el sector
+    cultural, para nuestros creadores e industrias culturales.
+
+    <br /><br />Estamos absolutamente convencidos de la necesidad de una buena ley de
+    propiedad intelectual, una ley adecuada y adaptada a los cambios
+    tecnológicos de los últimos años, una ley adecuada a los innegables
+    cambios que ha habido en el consumo cultural, una ley capaz de afrontar
+    con determinación y con valentía el grave problema de la vulneración de
+    los derechos de autor en el entorno tecnológico. Ahí nuestro grupo
+    parlamentario siempre ha estado al lado del Gobierno, fuera del color que
+    fuera, para luchar contra esa lacra que es la vulneración de los derechos
+    de autor en el entorno tecnológico. Esperábamos una ley capaz de
+    adaptarse a los acontecimientos recientes que pusieron de manifiesto la
+    necesidad de reforzar y mejorar la regulación de las entidades de gestión
+    colectiva de derechos de autor para que fueran realmente eficaces a la
+    hora de proteger los derechos de nuestros creadores; una ley, en
+    definitiva, señor ministro, para los nuevos tiempos; una ley que fuera un
+    instrumento realmente útil para nuestros creadores, para nuestras
+    industrias culturales; una ley que fuera un aliciente para el sector
+    cultural, pero también para la economía productiva, señor ministro,
+    porque usted sabe muy bien la enorme potencialidad que tiene nuestra
+    cultura en la economía. Señor ministro, la cultura es un ámbito que puede
+    ser un motor importante para crear ocupación.
+
+    <br /><br />Ahora bien, hemos perdido, como ha dicho algún portavoz que me ha
+    precedido en el uso de la palabra, una oportunidad útil para avanzar,
+    para mejorar ese potencial de nuestra industria cultural. Además, el
+    sector cultural lo pedía y lo continúa pidiendo a gritos. Necesitamos una
+    buena ley de propiedad intelectual que sirva de impulso para realizar esa
+    aportación a nuestra economía. Ya no hablo de los otros ámbitos en los
+    que tiene incidencia la cultura, que la tiene y mucho. Desde Convergència
+    i Unió vemos que estamos a punto de aprobar un nuevo proyecto, pero hemos
+    perdido una oportunidad, y lo lamentamos
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página16)"><b>Página
+    16</b></a></p><br />
+
+    <br /><br />profundamente. En nuestro grupo, a pesar de las discrepancias, estábamos
+    dispuestos a hablar de ello, a hacer aportaciones y a apoyarlo, si se
+    hubieran incorporado propuestas de nuestro grupo y de otros grupos que
+    hubiéramos podido compartir. Tenemos la sensación de que desde la
+    Secretaría de Estado de Cultura no ha habido esa capacidad de convencer a
+    otros ministerios implicados en este proyecto de ley, y lo lamentamos. No
+    han conseguido sumar a otros ministerios para realizar las aportaciones
+    en este proyecto de ley y que necesita el sector cultural. Era una
+    oportunidad para conseguir mejoras de calado. El Gobierno tampoco ha sido
+    incapaz de sumar a los grupos parlamentarios. Ha habido algún intento -lo
+    reconocemos-, pero quedó en nada, en palabras agradables que no se han
+    materializado. Este proyecto de ley llega del Senado como salió, con
+    cambios que no son sustanciales; ni siquiera ha habido capacidad del
+    Grupo Popular, incluso del Gobierno, para conseguir en el Senado
+    consensos con otros grupos parlamentarios. Lamentamos que hayan sido
+    incapaces de conseguir esa complicidad que era importante y necesaria
+    para el sector cultural.
+
+    <br /><br />Además, nos preocupa mucho cómo va a salir esta ley, porque hay una
+    cuestión -la fórmula de cómo se está pagando la compensación equitativa
+    por copia privada, fórmula adoptada por el Gobierno e incorporada a este
+    proyecto- que no entendemos. Presentamos nuestra propuesta, y había
+    varias de otros grupos que también nos parecían razonables y se ajustaban
+    mucho mejor a la normativa de las directrices europeas. Ahora estamos en
+    una zona de riesgo. ¿Por qué? Porque este proyecto va a salir de aquí con
+    una fórmula para pagar la compensación equitativa por copia privada, y a
+    lo mejor dentro de cuatro días nos van a decir que es contraria a la
+    normativa europea. Esto es realmente preocupante por las consecuencias
+    que puede tener para el Gobierno. Tal vez algunas de las demandas que se
+    han puesto ante los juzgados son estimadas y tendríamos problemas de
+    responsabilidad patrimonial de la Administración, con lo que ello puede
+    suponer para los presupuestos del Estado: tener que abonar importantes
+    cantidades al sector cultural. Esta cuestión realmente preocupa muchísimo
+    a nuestro grupo parlamentario.
+
+    <br /><br />Había propuestas, no solamente de nuestro grupo sino también de otros
+    grupos parlamentarios, que se podrían haber incorporado a este proyecto,
+    que podrían haber salvado este riesgo con el que ahora va a salir
+    aprobado de las Cámaras. Por lo tanto, nuestro grupo parlamentario no
+    puede apoyar este texto. Anunciamos que vamos a votar en contra de los
+    cambios que vienen incorporados del Senado. Somos conscientes de que, con
+    la mayoría absoluta del Grupo Popular, quedarán igualmente incorporados.
+    Probablemente, alguno de los cambios del Senado pueden suponer alguna
+    mejora. Con este voto en contra manifestamos esa discrepancia por no
+    haber sido capaces de conseguir los consensos necesarios y las mejoras
+    sustanciales que necesitaba el sector cultural. Queda incorporado un
+    aspecto que nos preocupa muchísimo, nuevamente en este proyecto de ley
+    hay vulneración de competencias. Ya lo dijimos en el primer debate en
+    esta Cámara, así como en Comisión y mi compañero del Senado el señor Joan
+    Bagué lo puso de manifiesto. Allí presentamos nuestra enmienda al
+    respecto, que fue rechazada. Lamentamos nuevamente que tengamos aquí un
+    proyecto que vulnera competencias de las comunidades autónomas.
+
+    <br /><br />Muchas gracias, señora presidenta. (Aplausos).
+
+    <br /><br />La señora VICEPRESIDENTA (Villalobos Talero): Muchas gracias, señora
+    Surroca. (Aplausos).
+
+    <br /><br />Por el Grupo Socialista, señor Torres Mora.
+
+    <br /><br />El señor TORRES MORA: Muchas gracias, señora presidenta.
+
+    <br /><br />Señorías, señor ministro, no ha podido ser. Finalmente la reforma de la
+    Ley de la Propiedad Intelectual no ha obtenido el amplio consenso que la
+    cultura merece. En el Congreso ustedes, señores del Grupo Popular,
+    aprobaron nueve enmiendas, de ciento sesenta y tres que presentamos; en
+    el Senado se han presentado doscientas nueve y no han aprobado ninguna.
+    En estas condiciones mi grupo, como el resto de los grupos
+    parlamentarios, no puede apoyar las enmiendas que envían del Senado, no
+    puede apoyar esta ley. Lo que se presentó como una reforma parcial y
+    urgente de la Ley de Propiedad Intelectual ha resultado tener poco de
+    reforma, nada de urgente, pero parcial sí ha sido, como se podrá
+    comprobar cuando miremos dentro de un rato el panel de votación. Decía
+    Séneca que ningún barco tiene buenos vientos cuando no sabe a qué puerto
+    se dirige. Esta ley partió sin un rumbo claro y sin ninguna carta
+    náutica. Faltó un libro blanco -lo pedimos aquí- que nos hubiera
+    iluminado a la hora de legislar; un libro blanco que nos hubiera
+    iluminado también a la hora de dialogar con los distintos sectores que se
+    han interesado por la ley. Nos han faltado datos, objetividad, rigor a la
+    hora de las discusiones, información; de eso tenía que habernos dotado un
+    libro blanco. Insisto en que lo pedimos, pedimos un análisis. Hubiera
+    estado bien saber realmente cómo son las tarifas, poder comparar las de
+    un sector con otro, conocer
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página17)"><b>Página
+    17</b></a></p><br />
+
+    <br /><br />exactamente cómo gravan las tarifas el desarrollo de las industrias que
+    hacen uso de la propiedad intelectual. Hubiera estado bien poder comparar
+    las tarifas españolas con las de los países con los que competimos, por
+    ejemplo, por el turismo para saber qué ocurre con ellas en los hoteles;
+    hubiera estado bien tener esa información porque nos hubiera permitido
+    dialogar sobre un conocimiento sustantivo. Hubiera estado bien conocer,
+    por ejemplo, qué ha ocurrido con los productos, con los soportes para la
+    grabación, después de quitar la compensación por copia privada. ¿Se han
+    abaratado? ¿Son más baratos para los ciudadanos? ¿Ha obtenido algún
+    beneficio la ciudadanía o simplemente hemos echado sobre los Presupuestos
+    Generales del Estado lo que antes financiaba una industria que tiene
+    bastante recursos, como es la tecnológica? Es el daño que se hace al
+    mundo cultural con ese tipo de copias. No tenemos informes sobre eso. Al
+    Gobierno no le gustan los informes sobre la evolución de la piratería; no
+    le gustan no los resultados de los informes -espero que no-, ni siquiera
+    los informes, porque piensan que son parciales. Claro, generalmente, los
+    que piratean no encargan los informes; los encargan aquellos que ven
+    vulnerados sus derechos. Tampoco tenemos ese tipo de información.
+
+    <br /><br />Ahora se han hecho en esta ley modificaciones, pero va a ser difícil que
+    sepamos si son eficaces o no si no tenemos un sistema de indicadores que
+    nos ayude a legislar y a cambiar nuestra propia legislación. No lo
+    tenemos; no hemos tenido una carta náutica; no hemos tenido mapas que nos
+    ayudaran a orientarnos a la hora de cambiar el sistema de leyes de
+    derechos de autor, de propiedad intelectual, en un contexto de cambio
+    tecnológico muy importante; no hemos tenido esa información. Hemos
+    legislado como se legisla, por desgracia, demasiado -y no solo en el
+    sector cultural- a ojo de buen cubero. (Rumores).
+
+    <br /><br />Es un sector muy relevante. Tiene una aportación al PIB más grande que el
+    sector agrario. Estamos hablando de casi medio millón de personas que
+    trabajan en el sector de la cultura; no son eso que se tiene prejuzgado,
+    sino personas muy distintas: músicos, pintores, ingenieros del verso, que
+    con otros construyen España, como han hecho Cervantes, Goya, Albéniz, y
+    como ahora hace mucha gente que está construyendo nuestro país, que hace
+    patria. Hubiera sido necesaria una cartografía que radiografiara
+    perfectamente a ese sector para que hubiéramos podido enfrentarnos a
+    todos esos intereses que han estado pugnando en torno a esta ley, para
+    que hubiéramos podido dialogar con ellos con rigor; pero no lo hemos
+    tenido, y esos sectores han ido imponiendo sus distintas posiciones. Esta
+    es una ley que ha afectado a varios ministerios. Es verdad que hay un
+    anillo que controla todos los anillos. (Continúan los rumores).
+
+    <br /><br />La señora VICEPRESIDENTA (Villalobos Talero): Un momento, señor Torres
+    Mora; un segundo, por favor.
+
+    <br /><br />Ruego algo de silencio, para que sea posible que escuchemos al orador. El
+    señor ministro está haciendo muchos esfuerzos para escucharlo pero
+    comprendo que es imposible. Por favor, guarden silencio; el que quiera
+    hablar que salga. Pido un poco de respeto por el compañero diputado que
+    está interviniendo.
+
+    <br /><br />Adelante, señor Torres Mora.
+
+    <br /><br />El señor TORRES MORA: Presidenta, no soy yo el que merece el respeto sino
+    la cultura, de la que estamos hablando.
+
+    <br /><br />Decía que hay un anillo capaz de controlar todos los anillos; ese anillo
+    está en La Moncloa y es el anillo que marca el rumbo de la cultura y el
+    rumbo de esta ley. Y tengo la sensación de que quien marca el rumbo de
+    esta ley y de la política cultural tiene la misma tentación o ha dado la
+    misma orden con el barco de la cultura que dieron con el Prestige, que es
+    mandarla lo más lejos posible. Me parece que es muy injusto hacer eso con
+    la cultura porque están confundiendo a un sector que es muy amplio, que
+    tiene muchos intereses y posiciones políticas muy diversas con sus
+    adversarios.
+
+    <br /><br />Se están equivocando. El sector de la cultura no es su adversario
+    político; el sector de la cultura es un sector industrial que defiende
+    sus intereses, que son intereses estratégicos para nuestro país. Han
+    cometido un error tratando así a la cultura. Ahora se han sentido fuertes
+    para debilitar la cultura, para quitarle poder corporativo, para
+    empobrecerla, para quebrarla, pero no van a poder mantener su fuerza y la
+    cultura seguirá siendo fuerte e importante. Se han equivocado ustedes
+    tratando así a la cultura. Tienen una oportunidad todavía de cambiar esa
+    relación que mantienen con la cultura, que no es buena para ustedes, no
+    es buena para España, no es buena para nadie. La cultura forma parte de
+    todos nosotros. No sean sus adversarios, traten bien a la cultura porque
+    es un sector importante económicamente, pero también lo es para nuestra
+    propia identidad nacional. Ahora tienen una oportunidad a través de los
+    reglamentos. Intenten hablar con ellos, intenten consensuar con ellos. Es
+    verdad que hay muchos intereses, que tenemos que mediar, pero les aseguro
+    que nuestra obligación como representantes de los ciudadanos es
+    equilibrar esos intereses, buscar su equilibrio. Hay sectores muy
+    poderosos y otros menos,
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página18)"><b>Página
+    18</b></a></p><br />
+
+    <br /><br />y la cultura es un sector poco poderoso. Por tanto, desde las
+    administraciones públicas y desde los poderes públicos debemos
+    reequilibrar el poder y fortalecer la cultura. Les aseguro que lo vamos a
+    tener que hacer y ustedes tienen todavía la oportunidad de hacerlo en el
+    año que les queda, luego no la tendrán. Les sugiero que de verdad se
+    ocupen seriamente, ahora que, como digo, todavía tienen oportunidad, de
+    hacer un buen reglamento de desarrollo para esta ley e intenten hacer con
+    la cultura lo que no han podido hacer hasta ahora, que es una alianza por
+    el país, por España, por nuestros intereses generales. No han conseguido
+    ustedes el apoyo de ningún grupo parlamentario y tampoco entenderse
+    previamente con el sector de la cultura, algo que es de lamentar
+    realmente. Señorías, como dije anteriormente, mi grupo votará en contra.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />La señora VICEPRESIDENTA (Villalobos Talero): Gracias, señor Torres Mora.
+
+    <br /><br />Por el Grupo Popular, señor Ruano.
+
+    <br /><br />El señor RUANO GÓMEZ: Gracias, señora presidenta.
+
+    <br /><br />Señor ministro, señorías, decía el gran escritor y periodista Manuel
+    Chaves Nogales, cuyos libros conocen bien sus señorías, que a las
+    personas se las juzga o bien por sus palabras o bien por sus hechos. Pues
+    bien, en la reforma de la Ley de Propiedad Intelectual, como en todas las
+    demás, el Grupo Parlamentario Popular puede decir alto y claro: dicho y
+    hecho. A lo largo de este año hemos tenido ocasión de debatir en las
+    Cortes Generales una reforma que ha tenido y tiene tres fines
+    principales. Primero, la protección de nuestros creadores culturales en
+    Internet; segundo, la mejora de la transparencia y la eficacia de las
+    entidades de gestión de derechos de autor, y tercero, la transposición de
+    tres directivas europeas. Y hoy, señorías, podemos decir con meridiana
+    claridad: dicho y hecho.
+
+    <br /><br />Aún quedan temas pendientes por abordar, tales como los aspectos relativos
+    a la compensación por copia privada, que se llevarán a cabo cuando la
+    Unión Europea así lo establezca mediante la necesaria armonización
+    legislativa de los distintos Estados miembros. Pero, dicho lo anterior,
+    hay que decir que la protección de nuestros creadores culturales en
+    Internet, la exigencia de transparencia y eficacia de las entidades de
+    gestión de derechos de autor y finalmente la transposición de directivas
+    europeas que quedaron pendientes en la anterior legislatura no podían ni
+    debían esperar por una reforma de mayor calado y profundidad en la que
+    desde ya, en este mismo texto legislativo, estamos siendo convocados para
+    dialogar y consensuar medidas que por su misma naturaleza una reforma
+    como esta no puede ni debe llevar a cabo hasta tanto la Unión Europea no
+    fije directrices homogéneas en todos los Estados miembros.
+
+    <br /><br />Con humildad, señorías, pero también con absoluta convicción les decimos
+    que es mucho el camino que hemos recorrido y prueba de ello son los ocho
+    objetivos alcanzados con esta reforma. Primer objetivo: hemos reforzado
+    los mecanismos de supervisión de las entidades de gestión asegurando así
+    una mayor transparencia y eficacia y mejorando con ello los mecanismos de
+    participación y de control por parte de los socios de las entidades en
+    sus órganos de gobierno. Lo dijimos y lo cumplimos. Segundo objetivo:
+    hemos mejorado la protección de los derechos de propiedad intelectual
+    frente a las vulneraciones que puedan sufrir en el entorno digital. Lo
+    dijimos y lo cumplimos. Tercero: hemos acotado los límites del concepto
+    de copia privada atendiendo a los progresos de la sociedad de la
+    información. Pues bien, lo dijimos y lo cumplimos. Cuarto: hemos ampliado
+    el derecho de ilustración para usos educativos y de investigación
+    facilitando el uso de licencias. Pues dicho y hecho. Quinto objetivo:
+    hemos adaptado el límite de cita o reseña al ámbito de los agregadores de
+    contenidos o buscadores en Internet reconociendo el derecho de las
+    empresas editoras y de los autores de noticias a ser compensados
+    económicamente por la explotación de sus contenidos. Dicho y hecho.
+    Sexto: hemos establecido una nueva base jurídica que facilita la
+    negociación entre las plataformas de agregación de noticias, los editores
+    de prensa y los autores de noticias, y todo ello sin que en ningún caso
+    -repito: en ningún caso- los usuarios de Internet tengan que realizar
+    pago alguno por enlazar a noticias creadas por las editoras de prensa.
+    Pues bien, lo hemos dicho y lo hemos hecho. Séptimo: hemos realizado la
+    transposición al ordenamiento jurídico español de dos directivas europeas
+    que quedaron pendientes en la anterior legislatura más otra nueva
+    producida durante la propia tramitación legislativa de este proyecto de
+    ley. Pues bien, lo hemos dicho y lo hemos hecho. Y octavo objetivo y
+    último: hemos adaptado la Ley de propiedad intelectual a la nueva
+    legislación de racionalización del sector público. Pues bien...
+
+    <br /><br />El señor PRESIDENTE: Por favor, señor diputado, un momento.
+
+    <br /><br />Por favor, ruego un poco de silencio para que se pueda escuchar al
+    interviniente. Gracias.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página19)"><b>Página
+    19</b></a></p><br />
+
+    <br /><br />El señor RUANO GÓMEZ: Señor presidente, señorías, concluyo. Estos son los
+    objetivos de esta reforma de la Ley de Propiedad Intelectual. Todos y
+    cada uno de estos objetivos están presentes y tienen un cumplido
+    desarrollo en el texto refundido de la Ley de Propiedad Intelectual y
+    todos y cada uno de estos objetivos tienen una misma y clara finalidad:
+    la protección y la defensa de nuestros creadores culturales.
+
+    <br /><br />Gracias, señor presidente. Gracias, señor ministro. Gracias, señorías, por
+    su atención y su consideración. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Ruano.
+
+    <br /><br />DICTÁMENES DE LA COMISIÓN DE ASUNTOS EXTERIORES SOBRE CONVENIOS
+    INTERNACIONALES:
+
+    <br /><br />- ACUERDO ENTRE EL GOBIERNO DEL REINO DE ESPAÑA Y EL GOBIERNO DEL REINO DE
+    BAHREIN SOBRE COOPERACIÓN EN EL ÁMBITO DE LA DEFENSA, HECHO EN MANAMA EL
+    1 DE MAYO DE 2014. (Número de expediente 110/000135).
+
+    <br /><br />- ACUERDO SOBRE CONDICIONES DE EJERCICIO DE LA ACTIVIDAD DE LAS FLOTAS
+    ESPAÑOLA Y PORTUGUESA EN LAS AGUAS DE AMBOS PAÍSES ENTRE EL REINO DE
+    ESPAÑA Y LA REPÚBLICA PORTUGUESA, HECHO EN BRUSELAS EL 24 DE MARZO DE
+    2014. (Número de expediente 110/000136).
+
+    <br /><br />El señor PRESIDENTE: Llegamos al último punto del orden del día que son
+    los dictámenes de la Comisión de Asuntos Exteriores sobre convenios
+    internacionales con números de expediente 110/000135 y 110/000136. Se ha
+    pedido por parte de los grupos poder intervenir y les recuerdo que tienen
+    hasta cinco minutos; hasta cinco minutos, es decir que no hay que
+    consumirlos enteros.
+
+    <br /><br />En primer lugar, por el Grupo Mixto tiene la palabra el señor Tardà.
+
+    <br /><br />El señor TARDÀ I COMA: Gracias, señor presidente.
+
+    <br /><br />Señorías, estoy convencido de que ustedes son conocedores, son
+    conscientes, tienen idea de qué democracia es Bahrein. No es democracia,
+    de hecho es un Estado dictatorial disfrazado. Deben saber que hace pocos
+    días un ciudadano, un activista en pro de los derechos humanos, fue
+    detenido porque se había atrevido a publicar en la red un tuit en el cual
+    denunciaba que miembros de las fuerzas armadas de Bahrein se habían unido
+    al Estado Islámico. Solamente la publicación de un tuit, solamente la
+    publicación de un tuit, repito, le costó a este activista de los derechos
+    humanos sufrir encarcelamiento. Por cierto, Amnistía Internacional, Green
+    Peace, Oxfam Intermón, FundiPau y también Esquerra Republicana de
+    Catalunya han denunciado que el Estado español ha incrementado en un 25 %
+    la venta de armas a este Estado. ¿Cuál es la finalidad de estas armas?
+    Pues creo que a nadie se le escapa que estas armas tienen como objetivo
+    mantener un régimen autoritario que reprime a su población. Y ahora
+    ustedes nos piden que ratifiquemos un convenio de colaboración militar y
+    nos preguntamos de qué colaboración estamos hablando y con qué finalidad.
+    ¿Acaso es para que el ejército y la policía de Bahrein vengan aquí, a
+    nuestro Estado, a enseñarnos cómo y de qué manera se reprime a los
+    activistas de los derechos humanos o acaso es al revés? ¿Acaso se trata
+    de ir nosotros allí, a Bahrein, a enseñarles cómo se utiliza de manera
+    eficaz todo el material antidisturbios que les vendemos? Entenderán,
+    pues, que nosotros hoy no solamente manifestamos nuestro voto contrario,
+    sino que les pedimos que no ratifiquen, y nos dirigimos básicamente a las
+    fuerzas progresistas de este Parlamento, este convenio de colaboración
+    militar entre el Estado español y el Estado autoritario y represor de
+    Bahrein.
+
+    <br /><br />Muchas gracias.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Tardà.
+
+    <br /><br />Por el Grupo de UPyD tiene la palabra la señora Lozano.
+
+    <br /><br />La señora LOZANO DOMINGO: Muchas gracias, señor presidente.
+
+    <br /><br />Celebro que este acuerdo de cooperación entre el Reino de España y el
+    Reino de Bahrein nos dé la ocasión de hablar de un pequeño país, pequeño
+    pero muy cercano a otro país grande y poderoso y que es una potencia
+    regional, como es Arabia Saudí. Con este país, que en la Primavera Árabe
+    de 2011 sacó los tanques a la calle contra su población civil -tanques
+    saudíes, precisamente-, se quiere firmar un acuerdo de cooperación de
+    ocho puntos (Rumores), de los cuales seis son relativos a cooperación
+    militar:
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página20)"><b>Página
+    20</b></a></p><br />
+
+    <br /><br />cooperación en la industria de defensa, importación y exportación de
+    armas, servicios sanitarios militares, operaciones de mantenimiento de
+    paz, actividades culturales y deportivas militares (Rumores), cuestiones
+    medioambientales y de contaminación causada por instalaciones
+    militares... En fin, un acuerdo que tiene una orientación
+    clarísimamente...
+
+    <br /><br />El señor PRESIDENTE: Perdón, señora diputada.
+
+    <br /><br />¡Por favor, los diputados que no quieran estar que abandonen el hemiciclo!
+
+    <br /><br />Continúe, señora Lozano.
+
+    <br /><br />La señora LOZANO DOMINGO: Muchas gracias, señor presidente.
+
+    <br /><br />Decía que sobre este país -con el que el Gobierno de España quiere
+    establecer una cooperación clarísimamente orientada a lo militar- nos ha
+    llegado precisamente estos días de la Asociación Pro Derechos Humanos de
+    España una alerta en relación con las represalias sufridas por don Nabeel
+    Rajab, presidente del Centro de Bahrein para los Derechos Humanos. Sobre
+    el caso de este activista de los derechos humanos, que ha estado detenido
+    durante varias semanas y ha sufrido torturas, nos pedían que llamáramos
+    la atención, lo cual aprovecho para hacer en esta intervención. También
+    quiero recordar que el Parlamento Europeo, en febrero de este año, ha
+    aprobado una resolución de urgencia por unanimidad relativa a Bahrein en
+    la que se dice, y cito literalmente: Las autoridades de Bahrein siguen
+    violando y restringiendo los derechos de los individuos a la protesta
+    pacífica, la libertad de expresión y la libertad digital. Y sigue: Los
+    activistas de derechos humanos se enfrentan a sistemáticos y continuos
+    ataques, hostigamiento y detención. Esta resolución -insisto- se aprobó
+    en el Parlamentario Europeo por unanimidad.
+
+    <br /><br />Señorías, en los países donde los activistas de derechos humanos sufren
+    persecución, toda la población sufre persecución. En los países donde los
+    activistas de derechos humanos están detenidos sin garantizarles sus
+    derechos, toda la población está expuesta a que se vulneren sus derechos
+    fundamentales. Creemos que una democracia asentada como la nuestra no
+    debe dar la menor cobertura a una autocracia como es la de Bahrein y por
+    eso votaremos en contra de este convenio.
+
+    <br /><br />Muchas gracias, presidente. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Lozano.
+
+    <br /><br />Por el Grupo de La Izquierda Plural, tiene la palabra el señor Nuet.
+
+    <br /><br />El señor NUET PUJALS: Gracias, presidente.
+
+    <br /><br />De vez en cuando vienen a este Plenario tratados -como hoy el convenio
+    militar de España con Bahrein- que nuestro grupo vota en contra. Pero
+    ustedes, que van a votar a favor, lo van a hacer con la nariz tapada. Lo
+    van a votar con la nariz tapada porque cualquier demócrata siente náuseas
+    al firmar un tratado militar con una dictadura represora de sus propios
+    ciudadanos. Dice el convenio que vamos a votar dentro de un minuto que
+    vamos a educar, formar, cooperar, importar, exportar y que vamos a
+    realizar operaciones humanitarias y actividades culturales. Creo que hace
+    tiempo que no votaba nada con más cinismo en esta Cámara. Estamos
+    hablando del Reino de Bahrein, estamos hablando de su majestad Sheikh
+    Hamad Bin Isa Al Khalifa, hermano del Rey de España, como él mismo se
+    autodenomina. Estamos hablando de una dictadura, no de una monarquía
+    parlamentaria, de una dictadura donde la oposición está prohibida y del
+    país árabe donde porcentualmente la represión de su Primavera Árabe ha
+    sido la más importante de todos los países árabes. Estoy hablando de
+    proporción, pensemos que es un país con menos de 1,5 millones de
+    habitantes y la mitad son extranjeros. Las cifras de la represión son
+    brutales. Si las comparásemos con España estaríamos hablando de docenas
+    de miles de reprimidos y de miles de asesinados en los años 2011 y 2012.
+
+    <br /><br />Sabemos que el rey de España, Juan Carlos, en su periplo por las
+    dictaduras del Golfo de mayo de este año, de mayo de 2014, hizo dos
+    cosas: en primer lugar, hacer de conseguidor de contratos con empresas
+    españolas y, en segundo lugar, actuar como factor de olvido de los
+    derechos humanos en todas las dictaduras del Golfo; esa fue también una
+    de las acciones del rey Juan Carlos en mayo de este año. (Aplausos). Y
+    eso es lo que hoy aquí estamos discutiendo. Yo les propongo que añadan
+    algunas cosas al tratado, igual entonces nos abstendremos. Añadan que el
+    principal partido de la oposición está prohibido o suspendido, pónganlo
+    también en su tratado, por favor. Pongan también, como dicen el Centro de
+    Derechos Humanos y diversas organizaciones no gubernamentales de derechos
+    humanos, que se declaró una ley marcial, que tropas de Arabia Saudí
+    fueron utilizadas para
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página21)"><b>Página
+    21</b></a></p><br />
+
+    <br /><br />la represión en Bahrein, que se ha asesinado a más de cien personas por
+    parte de los cuerpos de seguridad del Estado en la Primavera Árabe de ese
+    país. Pongan también que 4.500 personas fueron detenidas, que hay miles
+    de torturados y que en las cárceles de Bahrein hay presos políticos, a
+    cientos en estos momentos; póngalo en su tratado, por favor. Y pongan
+    también que hay impunidad sobre los responsables, que hay revocatorias
+    arbitrarias de nacionalidad, que hay tres condenas a muerte, veintidós
+    cadenas perpetuas, y que en Bahrein desde el año 2002 las mujeres pueden
+    votar, pero no tienen ningún derecho político ni ningún derecho civil.
+    Pongan eso en su tratado y que se les caiga la cara de vergüenza.
+    (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Nuet.
+
+    <br /><br />Por el Grupo Catalán de Convergència i Unió, tiene la palabra el señor
+    Xuclà.
+
+    <br /><br />El señor XUCLÀ I COSTA: Muchas gracias, señor presidente.
+
+    <br /><br />Señorías, creo que es una buena práctica que en esta legislatura se haya
+    establecido el debate sobre los tratados internacionales, que muchas
+    veces traen causa de debates de fondo sobre la situación de las
+    relaciones internacionales y los derechos humanos. Sucede lo siguiente,
+    señorías, cuando tenemos que fijar posición sobre tratados como los que
+    se votan esta mañana. Por cierto, uno respeto a Turquía y al cual nadie
+    ha hecho referencia, cuando algunos elementos de política interna de
+    Turquía también podrían ser avocados a este debate, y el otro respecto a
+    Bahrein.
+
+    <br /><br />Señorías, ayer por la tarde en la Comisión de Defensa se aprobó el informe
+    anual sobre comercio de armas con las recomendaciones de los distintos
+    grupos parlamentarios, básicamente se adoptaron las recomendaciones del
+    grupo de la mayoría. ¿Qué sucede en el debate del informe anual del
+    comercio de armas y qué está sucediendo hoy aquí con este Convenio con el
+    Reino de Bahrein, no democrático y que viola los derechos humanos?
+    Señorías, sucede que al final hay un prejuicio muchas veces de posición
+    previa sobre aquellos países con los cuales se puede comerciar o no
+    comerciar. ¿Y qué sucede? Que de una forma absolutamente previsible año
+    tras año una parte de este hemiciclo presenta en el informe anual del
+    comercio de armas resoluciones para que nunca se vendan armas a Israel y
+    después se hace una relación de adjetivos calificativos notablemente
+    degradantes, y otra parte de la bancada de este hemiciclo hace la
+    presentación y defensa de una resolución pidiendo que nunca se vendan
+    armas a Venezuela, otro régimen no democrático. Señorías, es cierto que
+    se venden armas a regímenes no democráticos. Yo personalmente en esta
+    dicotomía entre Israel y Venezuela tengo claro cuál es el régimen
+    democrático y cuál es el régimen no democrático. Hoy estamos discutiendo
+    un convenio con un régimen no democrático y con un régimen en el cual ha
+    habido violación de los derechos humanos. Nosotros hemos apoyado también
+    en el Parlamento Europeo las resoluciones sobre la violación de los
+    derechos humanos en Bahrein. Dicho esto, señorías, en las relaciones
+    internacionales, en los tratados internacionales y en el comercio
+    internacional es mejor la cooperación con luz y taquígrafos a través de
+    un tratado internacional que a través de las viejas formas de los fondos
+    reservados. Preferimos hablar con regímenes no democráticos a través del
+    Estado de derecho y a través de los instrumentos de los tratados
+    internacionales a las viejas formas de hacer política en las relaciones
+    internacionales y la diplomacia. Este es un tratado, como tantos otros
+    que se han firmado en el pasado sin discusión ni debate en esta Cámara,
+    con un régimen no democrático, estamos de acuerdo, pero si ustedes
+    quieren aplicar este criterio para todo y en todo, haremos una lista de
+    más de cien países del mundo con los que España no debe tener relaciones
+    comerciales ni diplomáticas. Lo podemos hacer, es otra aproximación a las
+    relaciones internacionales. Si ustedes quieren hacer una relación de
+    países en los que se violan los derechos humanos y con los que no
+    firmamos tratados internacionales, nosotros quizá podamos adoptar este
+    nuevo criterio, pero es un cambio de paradigma absoluto.
+
+    <br /><br />Señorías, no vengo aquí a hacer de abogado del diablo de un régimen no
+    democrático, simplemente vengo a destacar los dobles criterios, los
+    dobles estándares, el prejuicio y la proyección ideológica con la que se
+    afrontan a veces los debates de los convenios sobre el comercio de armas
+    y sobre algunos países. No nos apetece especialmente afrontar la votación
+    de este tratado con Bahrein, pero este tratado dice en su articulado que
+    es a favor de la cooperación y del incremento de los estándares en
+    seguridad y también de restricción de la violación de los derechos
+    humanos. Nosotros preferimos esto a la continuación de los más
+    desgraciados episodios de la represión de la Primavera Árabe en Bahrein.
+    Ninguna pasión defendiendo los convenios con Venezuela, ninguna pasión
+    defendiendo los convenios con Bahrein, siempre la defensa
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página22)"><b>Página
+    22</b></a></p><br />
+
+    <br /><br />de los tratados internacionales, del Estado de derecho, del negro sobre
+    blanco. Por esto vamos a votar favorablemente este tratado internacional.
+
+    <br /><br />Muchas gracias, señor presidente.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Xuclà.
+
+    <br /><br />Por el Grupo Socialista, tiene la palabra el señor Sáez Jubero.
+
+    <br /><br />El señor SÁEZ JUBERO: Gracias, presidente.
+
+    <br /><br />Señorías, nuestro grupo parlamentario va a votar afirmativamente los dos
+    convenios. En los convenios internacionales es norma de este grupo
+    parlamentario votar afirmativamente las propuestas que hace el Gobierno.
+    En particular, en este convenio con Bahrein, que ha sido objeto de debate
+    en este Pleno, quiero hacer una pequeña mención. Si con todos los países
+    que tienen problemas con los derechos fundamentales España no pudiera
+    tener relaciones bilaterales y firmar convenios, obviamente perderíamos
+    muchos de los convenios que habitualmente firmamos y relaciones
+    bilaterales que normalmente tenemos y que también nos legitiman para
+    exigir a estos países las mejoras en el ámbito de derechos fundamentales
+    y en el ámbito democrático. En cuanto al convenio objeto de ratificación
+    hoy, ciertamente es un convenio de cooperación militar, pero no
+    estrictamente militar, porque quiero hacer notar que en la base del
+    convenio también hay cooperación en materia de operaciones humanitarias,
+    de mantenimiento de la paz y también cuestiones medioambientales. Por
+    todo ello, nuestro voto va a ser afirmativo, de igual forma que en
+    relación con el convenio sobre temas de flota y de pesca con la República
+    de Portugal, con la que nos unen lazos de muy estrecha relación.
+
+    <br /><br />Muchas gracias, presidente, señorías. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Sáez Jubero.
+
+    <br /><br />Por el Grupo Popular, tiene la palabra la señora Miguélez.
+
+    <br /><br />La señora MIGUÉLEZ PARIENTE: Gracias, presidente.
+
+    <br /><br />Señor Nuet, le oigo hablar mucho de represión en Bahrein, pero no le oigo
+    hablar nada de la represión de Cuba y de Venezuela. (Aplausos). Ustedes
+    todavía no han entendido que en un entorno internacional como el actual,
+    en el que hay un concepto fundamental, que es el de interdependencia, en
+    el siglo XXI la lucha contra el terrorismo no puede ser abordada de
+    manera individual por ningún país, sino por la comunidad internacional en
+    su conjunto. Un país en solitario no puede enfrentarse al terrorismo
+    internacional, como el de Isis, y los nuevos riesgos y amenazas deben
+    abordarse desde la perspectiva de iniciativas consensuadas entre todos
+    los países. Este es el contexto en el que se inscribe este Tratado
+    bilateral con Bahréin que hoy traemos al Pleno. España quiere contribuir,
+    precisamente, a consolidar un orden global estable mediante la
+    cooperación, en materia de defensa, con países que respondan a nuestros
+    intereses estratégicos, por ejemplo, en este caso con los del Golfo
+    Pérsico, y espero que a usted no le quepa duda de la importancia que
+    tiene actualmente la lucha contra la amenaza a la seguridad mundial,
+    incluida la que afecta a España.
+
+    <br /><br />Este convenio no tiene, ni mucho menos, como objeto principal -usted lo
+    sabe, léaselo todo- la exportación de armas, sino que habla -como aquí se
+    ha dicho bien- de instalaciones militares en ambos países, desde el punto
+    de vista de las visitas mutuas, actividades de adiestramiento militar,
+    cuestiones medioambientales, etcétera. En ningún caso habla del envío
+    inmediato de armas a este país. Señor Nuet, le recuerdo que el Gobierno
+    no fabrica armas y ni siquiera potencia su exportación; son las empresas
+    y las industrias las que lo hacen. Lo único que tienen que hacer el
+    Estado y el Gobierno es disponer de un marco legislativo estricto para
+    que se cumplan todas las disposiciones, en el sentido de que estas armas
+    no puedan ser utilizadas contra civiles o que no puedan ser objeto de
+    tráfico de armas.
+
+    <br /><br />España tiene una legislación muy rigurosa en este sentido, cumplimos toda
+    la normativa, y si el Ministerio de Defensa y el Ministerio de Asuntos
+    Exteriores creen que este tratado es importante para la defensa de los
+    intereses estratégicos nuestros, nosotros no lo vamos a discutir.
+
+    <br /><br />Muchísimas gracias, presidente. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Miguélez.
+
+    <br /><br />En tres minutos procederemos a votar. (Pausa).
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página23)"><b>Página
+    23</b></a></p><br />
+
+    <br /><br />MOCIONES CONSECUENCIA DE INTERPELACIONES URGENTES. (VOTACIÓN):
+
+    <br /><br />- DEL GRUPO PARLAMENTARIO CATALÁN (CONVERGÈNCIA I UNIÓ), SOBRE LAS
+    ACTUACIONES ADOPTADAS Y LAS QUE TIENE PREVISTO ADOPTAR EL GOBIERNO FRENTE
+    AL VIRUS DEL ÉBOLA. (Número de expediente 173/000179).
+
+    <br /><br />El señor PRESIDENTE: Vamos a proceder a las votaciones.
+
+    <br /><br />En primer lugar, moción del Grupo Catalán de Convergència i Unió, que
+    debatimos ayer, sobre las actuaciones adoptadas y las que tiene previsto
+    adoptar el Gobierno frente al virus del Ébola. Se vota en los términos de
+    la enmienda presentada por el Grupo Popular y aceptada por Convergència i
+    Unió.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 319; a
+    favor, 202; abstenciones, 117.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />ENMIENDAS DEL SENADO. (VOTACIÓN):
+
+    <br /><br />- PROYECTO DE LEY DE RECONOCIMIENTO MUTUO DE RESOLUCIONES PENALES EN LA
+    UNIÓN EUROPEA. (Número de expediente 121/000086).
+
+    <br /><br />El señor PRESIDENTE: Vamos a votar ahora en conjunto y en bloque las
+    enmiendas aprobadas por el Senado al proyecto de ley de reconocimiento
+    mutuo de resoluciones penales en la Unión Europea.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 319; a
+    favor, 315; abstenciones, 4.
+
+    <br /><br />El señor PRESIDENTE: Quedan aprobadas.
+
+    <br /><br />- PROYECTO DE LEY ORGÁNICA SOBRE INTERCAMBIO DE INFORMACIÓN DE
+    ANTECEDENTES PENALES Y CONSIDERACIÓN DE RESOLUCIONES JUDICIALES PENALES
+    EN LA UNIÓN EUROPEA. (Número de expediente 121/000088).
+
+    <br /><br />El señor PRESIDENTE: Ahora enmiendas aprobadas por el Senado, también se
+    votan todas en bloque, al proyecto de ley orgánica sobre intercambio de
+    información de antecedentes penales y consideración de resoluciones
+    judiciales penales en la Unión Europea.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 319; a
+    favor, 313; abstenciones, 6.
+
+    <br /><br />El señor PRESIDENTE: Quedan aprobadas.
+
+    <br /><br />VOTACIÓN DE CONJUNTO.
+
+    <br /><br />El señor PRESIDENTE: Al tratarse de una ley de carácter orgánico requiere
+    para su aprobación el voto favorable de la mayoría absoluta de la Cámara,
+    y a esa votación es a la que vamos a proceder. Hay un voto emitido
+    telemáticamente.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 318 más
+    1 voto telemático, 319; a favor 293 más 1 voto telemático, 294; en
+    contra, 5; abstenciones, 20.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />- PROYECTO DE LEY POR LA QUE SE MODIFICA EL TEXTO REFUNDIDO DE LA LEY DE
+    PROPIEDAD INTELECTUAL, APROBADO POR REAL DECRETO LEGISLATIVO 1/1996, DE
+    12 DE ABRIL, Y LA LEY 1/2000, DE 7 DE ENERO, DE ENJUICIAMIENTO CIVIL.
+    (Número de expediente 121/000081).
+
+    <br /><br />El señor PRESIDENTE: Votación, también en bloque, de las enmiendas
+    aprobadas por el Senado al proyecto de ley por la que se modifica el
+    texto refundido en la Ley de Propiedad Intelectual, aprobado
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página24)"><b>Página
+    24</b></a></p><br />
+
+    <br /><br />por Real Decreto Legislativo 1/1996, de 12 de abril, y la Ley 1/2000, de 7
+    de enero, de Enjuiciamiento Civil.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 319; a
+    favor, 172; en contra, 144; abstenciones, 3.
+
+    <br /><br />El señor PRESIDENTE: Quedan aprobadas.
+
+    <br /><br />DICTÁMENES DE LA COMISIÓN DE ASUNTOS EXTERIORES SOBRE CONVENIOS
+    INTERNACIONALES. (VOTACIÓN):
+
+    <br /><br />- ACUERDO ENTRE EL GOBIERNO DEL REINO DE ESPAÑA Y EL GOBIERNO DEL REINO DE
+    BAHREIN SOBRE COOPERACIÓN EN EL ÁMBITO DE LA DEFENSA, HECHO EN MANAMA EL
+    1 DE MAYO DE 2014. (Número de expediente 110/0000135).
+
+    <br /><br />El señor PRESIDENTE: Ahora vamos a votar los dictámenes por separado. En
+    primer lugar, acuerdo entre el Gobierno del Reino de España y el Gobierno
+    del Reino de Bahréin sobre cooperación en el ámbito de la defensa.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 315; a
+    favor, 290; en contra, 20; abstenciones, 5.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobado.
+
+    <br /><br />- ACUERDO SOBRE CONDICIONES DE EJERCICIO DE LA ACTIVIDAD DE LAS FLOTAS
+    ESPAÑOLA Y PORTUGUESA EN LAS AGUAS DE AMBOS PAÍSES ENTRE EL REINO DE
+    ESPAÑA Y LA REPÚBLICA PORTUGUESA, HECHO EN BRUSELAS EL 24 DE MARZO DE
+    2014. (Número de expediente 110/000136).
+
+    <br /><br />El señor PRESIDENTE: Acuerdo sobre condiciones de ejercicio de la
+    actividad de las flotas española y portuguesa en las aguas de ambos
+    países entre el Reino de España y la República Portuguesa.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 315; a
+    favor, 313; abstenciones, 2.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobado.
+
+    <br /><br />Se levanta la sesión.
+
+    <br /><br />Eran las doce y diez minutos del mediodía.
+
+    <br /><br />http://www.congreso.es Calle Floridablanca, s/n. 28071 Madrid
+
+    <br /><br />D. L.: M-12.580/1961 CONGRESO DE LOS DIPUTADOS Teléf.: 91 390 60 00
+
+    <br /><br />Edición electrónica preparada por la Agencia Estatal Boletín Oficial del
+    Estado - http://boe.es
+    </div>
+<hr size="1" noshade="" /><!-- BRSCGI © 1995-2004 Baratz Servicios de Teledocumentación, S.A. http://www.baratz.es -->
+
+
+<!-- FUNCION PIE -->
+    
+
+
+
+                 
+
+
+
+
+
+
+<script language="JavaScript" type="text/javascript">
+	cargaLegSesion('null')
+</script>
+ 
+<!-- FIN  PIE   -->
+        <div id="PIE_POPUP">
+		<p><span lang="es">Congreso de los Diputados</span> · C/Floridablanca s/n - 28071 - MADRID ·<u> <a style="color:#FFFFFF" href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Publicaciones/Aviso_Legal">Aviso Legal</a></u></p>
+	</div>
+
+</div></div></div></td></tr>
+</tbody></table>
+</div></td></tr>
+<tr>
+<td colspan="1" style="width:100%;"><img src="/images/pobtrans.gif" height="4" width="1" alt="" style="display:block" /></td>
+</tr>
+</tbody></table><!-- show footer template = 1824729544 -->
+</td>
+      </tr>
+    </tbody></table>
+  </td></tr>
+</tbody></table>
+</div>
+
+
+<!-- Page Metadata Generated On: 20-MAR-2015:02:10:05  Time Taken: 20 msecs -->
+</body></html>

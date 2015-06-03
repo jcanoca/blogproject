@@ -1,0 +1,2279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head>
+<style>
+body{float:left;font-size:62.5%;font-family: Arial, Verdana, Helvetica, sans-serif;}
+blockquote{margin:0px;padding:0px;border:0px;list-style-type:none; }
+a{text-decoration:none; color:#626469;}
+a:hover{text-decoration:underline;font-weight:normal;color:#626469;}
+a:active{text-decoration:none;font-weight:normal;color:#000000;}
+</style>
+<title>PopUpCGI</title>
+<link href="/wc/htdocs/web/css/congreso.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/portada.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/prensa.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/apps.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/wc/htdocs/web/js/wc.js" language="JavaScript"></script>
+<style type="text/css">.GroupHeaderid1siteid73{Background-Color:#336699;Height:20px;Text-Align:left;}
+.GroupHeaderLinkid1siteid73{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.GroupHeaderTextid1siteid73{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.RegionHeaderid1siteid73{Background-Color:#b29200;Height:20px;Text-Align:left;}
+.RegionHeaderTextid1siteid73{Color:#ffffff;Font-Family:Verdana;Font-Size:10px;Font-Weight:Bold;}
+.Bodyid1siteid73{Background-Color:#FFFFFF;}
+.ArchivoAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.AudioFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.AudioNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo1Pieid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo1Region3id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo2Pieid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo2Region3id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo3Pieid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.ComprobacionSelladoid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Concesionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Convocatoriaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Correcciondeerroresid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.CuartoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescNotaPrensaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.Descripcionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.DescripcionAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescripcionBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescripcionDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Destinoid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DiaSemanaAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DiaSemanaCanalid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnPortadaAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnPortadaNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnVentanaNuevaAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnVentanaNuevaNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Enlaceid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnlaceAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnlaceURLNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EtiquetaArchivoAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EtiquetaEnlaceNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EtiquetaURLNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EtiquetadelEnlacedelAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Faxid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Fax2id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaCanalid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaFotonoticiaid1siteid73{Color:#b29200;Font-Family:Arial;Font-Size:11px;}
+.FechaFotonoticiaPresidenciaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaMenuCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaNotaPrensaid1siteid73{Color:#b29200;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.FechaNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaRuedaPrensaid1siteid73{Color:#b29200;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.Foto1descargaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto1emergenteid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto1thumbnailid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto2descargaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto2emergenteid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto2thumbnailid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FotoEmergenteNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FotoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.GraficoFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.GraficoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Grupoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Horaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.HoraAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.HoraCanalid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.ImagenDiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.InformacionGeneralid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.InstruccinArchivo1id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.InstruccinArchivoIIid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Intervinienteid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.JefedeCocinaMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LineaAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LineaCanalid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.ListaPuestoMiembroDiputadoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.ListaPuestoMiembroSenadoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Listadebecariosparticipantesid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Lugarid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.LugarAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LugarCanalid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Mail1id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Mail2id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Mail3id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Mail4id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Nombreid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.NombreBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NombreDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NombreMiembroid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.NumeroOrdenAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NumeroOrdenImagenid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NumeroOrdenNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PDFBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PDFDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PaginaBOCGBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PieImagenid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato1Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato2Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato3Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato4Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlatoSaludableMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Programaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PuestoMiembroDiputadoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.PuestoMiembroSenadoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.QuintoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.RefBOEid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.RefBOEIIid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlato1Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlato2Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlatoSaludableMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SeptimoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SextoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SiglasBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SiglasDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SugerenciaCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TargetNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Telefonoid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Telefono2id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaRuedaPrensaid1siteid73{Color:#000000;Font-Family:Arial;Font-Size:11px;}
+.TercerPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TextoAlternativoFoto1Fotonoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TextoAlternativoFoto2Fotonoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TextoAlternativoFotoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TitularFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Tituloid1siteid73{Color:#626469;Font-Family:Arial, Helvetica;Font-Size:11px;Font-Weight:Bold;}
+.TituloAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TituloImagendelDiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TituloNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TituloNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.URLEnlaceNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.VideoFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.VideoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Visitasid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.authorid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.createdateid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.creatorid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.defaultattributeid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.descriptionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.documentsizeid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.expiredateid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.inplacedisplayid1siteid73{Color:#000000;Font-Family:Arial;Font-Size:11px;}
+.itemfunctionid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.keywordsid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.listaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.perspectivesid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.scoreid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.subpagetitleid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.titleid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.titleorimageid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.wwsbr_category_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_charset_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_image_or_title_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_img_or_title_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_itemtype_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_mime_type_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_page_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_pagegroup_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_publishdate_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_and_img_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_updatedate_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_updator_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_version_number_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LeftCurve{}
+.PortletBodyColor{}
+.PortletHeaderColor{Background-Color:#b29200;}
+.PortletHeaderLink{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletHeaderStyle{}
+.PortletHeaderText{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:10pt;Font-Weight:Bold;}
+.PortletHeading1{Color:#336699;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.PortletHeading2{Color:#336699;Font-Family:Arial, Helvetica;Font-Size:8pt;Font-Weight:Bold;}
+.PortletHeading3{Color:#336699;Font-Family:Arial, Helvetica;Font-Size:7pt;Font-Weight:Bold;}
+.PortletHeading4{Color:#336699;Font-Family:Arial, Helvetica;Font-Size:7pt;Font-Weight:Bold;}
+.PortletSubHeaderColor{Background-Color:#EEEEDD;}
+.PortletSubHeaderLink{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:9pt;}
+.PortletSubHeaderText{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:9pt;}
+.PortletText1{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletText2{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletText3{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:7pt;}
+.PortletText4{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:7pt;}
+.RightCurve{}
+.LeftSubTabid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFsl.gif);Background-Position:left top;Background-Repeat:no-repeat;}
+.LeftTabBgSlantid1siteid73{Background-Attachment:scroll;Background-Color:#CCCC99;Background-Image:url(http://www.congreso.es/images/FFFFFFtl.gif);Background-Position:left top;Background-Repeat:no-repeat;}
+.LeftTabForeSlantid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFtl.gif);Background-Position:left top;Background-Repeat:no-repeat;}
+.RightSubTabid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFsr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.RightTabBgCurveid1siteid73{Background-Attachment:scroll;Background-Color:#CCCC99;Background-Image:url(http://www.congreso.es/images/FFFFFFtr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.RightTabForeCurveid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFtr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.SubTabBgTextid1siteid73{Color:#CCCC99;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:11pt;Font-Weight:Bold;}
+.TabBackgroundColorid1siteid73{Background-Color:#CCCC99;}
+.TabBackgroundTextid1siteid73{Color:#003366;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:10pt;}
+.TabForegroundColorid1siteid73{Background-Color:#336699;}
+.TabForegroundTextid1siteid73{Color:#FFFFFF;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:10pt;Font-Weight:Bold;}
+.portlet-font{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-font-dim{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-status{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-info{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-error{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-alert{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-success{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-header{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:9pt;    Font-Weight:Bold;    }
+.portlet-section-body{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-alternate{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-selected{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-subheader{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    Font-Weight:Bold;    }
+.portlet-section-footer{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-text{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-header{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:9pt;    Font-Weight:Bold;    Background-Color:#EEEEDD;    }
+.portlet-table-body{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-alternate{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-selected{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-subheader{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    Font-Weight:Bold;    }
+.portlet-table-footer{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-text{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-input-field{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-button{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-icon-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-dlg-icon-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-field-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-field{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.RegionNoBorder{}
+.RegionBorder { border:#b29200  1px solid; }
+.RegionHeaderColor { border:#b29200 0px solid;}
+.PageColor { background-color:#FFFFFF}
+ </style>
+</head>
+<body leftmargin="0" rightmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+<div id="texto_parrafo">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
+  <tbody><tr valign="top"><td align="center" valign="top">
+    <table width="500" cellpadding="0" cellspacing="0" border="0" height="100%">
+      <tbody><tr>
+        <td align="center" width="500" height="100%" valign="top">
+<iframe id="portalIFrame" title="" frameborder="0" width="0" height="0" src="/images/pobtrans.gif"></iframe><script type="text/javascript" src="http://www.congreso.es/portal/pls/portal/PORTAL.wwsbr_javascript.page_js?p_language=e&amp;p_version=10.1.4.2.0.197">
+&lt;!-- Comment out script for old browsers
+//--&gt;
+</script>
+<table width="100%" id="rg88017" border="0" cellpadding="0" cellspacing="0" summary=""><tbody><tr align="LEFT">
+<td valign="top" style="padding:4px 4px 0px 4px;width:100%;"><div id="p73_2138133_73_2138049_2138049"><table border="0" width="100%" cellpadding="0" cellspacing="0" class="RegionNoBorder"><tbody><tr><td class="RegionHeaderColor" width="100%" dir="LTR"><div id="pcnt73_2138133_73_2138049_2138049">
+
+
+
+
+
+
+
+  
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+        <title>Listas de valores</title>
+        <script language="JavaScript" type="text/javascript" src="/wc/htdocs/web/js/wc.js"></script> 
+		<link type="text/css" href="/wc/htdocs/web/css/apps.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/congreso.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/portada.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/prensa.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/texto_integro.css" rel="STYLESHEET" />   
+
+
+<script>
+function opcionesVentana(){
+
+window.resizeTo(630,520);
+}
+
+window.onload = function(){
+    opcionesVentana();
+}
+
+</script>
+	<div id="CONGRESO_TEXTO_INTEGRO_POPUP">
+            <div id="CABECERA_TEXTO_POPUP">
+                    <div class="cabecerah1"><img src="/wc/htdocs/web/img/logo_mini.gif" alt="Congreso de los Diputados" border="0" /></div>
+                    <div class="btn_cerrar" title="Cerrar">
+                        <p><img src="/wc/htdocs/web/img/ico_cerrar.gif" width="9" height="9" alt="Cerrar" /> <a href="javascript:window.close();" title="Cerrar">Cerrar</a></p>                   
+                    </div>
+                    
+                    <div class="fincabecera"> </div>
+            </div>
+
+
+
+    <div id="CONGRESO_TEXTO_INTEGRO_POPUP"> <div id="CABECERA_TEXTO_POPUP"> DS. Congreso de los Diputados, Pleno y Dip. Perm., núm. 208, de 26/06/2014 </div><div id="CABECERA_TEXTO_POPUP">cve:
+    DSCD-10-PL-208 </div> <div class="fincabecera"> </div> </div> <!-- CONGRESO_TEXTO_INTEGRO --> <div id="TEXTOS_POPUP">	<br />
+    	<div class="titular_texto"><br />CORTES GENERALES
+
+    <br />DIARIO DE SESIONES DEL CONGRESO DE LOS DIPUTADOS
+
+    <br />PLENO Y DIPUTACIÓN PERMANENTE
+    </div>
+
+    <div class="subtitular_texto"><br />Año 2014 X LEGISLATURA Núm.  208
+    <br />PRESIDENCIA DEL EXCMO.  SR.  D. JESÚS POSADA MORENO
+    <br />Sesión plenaria núm.  196
+    <br />celebrada el jueves,
+    <br />26 de junio de 2014</div>
+          	<div class="texto_completo"><br /><br />ORDEN DEL DÍA:
+
+    <br /><br />Dictámenes de Comisiones sobre iniciativas legislativas:
+
+    <br /><br />- Proyecto de ley orgánica complementaria de la ley de racionalización del
+    sector público y otras medidas de reforma administrativa por la que se
+    modifica la Ley orgánica 6/1985, de 1 de julio, del Poder Judicial.
+    "BOCG. Congreso de los Diputados", serie A, número 93-1, de 30 de abril
+    de 2014. (Número de expediente 121/000093) ... <a href="#(Página2)">(Página2)</a>
+
+    <br /><br />Votación de conjunto ... <a href="#(Página23)">(Página23)</a>
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página2)"><b>Página
+    2</b></a></p><br />
+
+    <br /><br />SUMARIO
+
+    <br /><br />Se abre la sesión a las doce y quince minutos del mediodía.
+
+    <br /><br />Dictámenes de Comisiones sobre iniciativas legislativas ... <a href="#(Página2)">(Página2)</a>
+
+    <br /><br />Proyecto de Ley Orgánica complementaria de la Ley de racionalización del
+    sector público y otras medidas de reforma administrativa por la que se
+    modifica la Ley Orgánica 6/1985, de 1 de julio, del Poder Judicial ... <a href="#(Página2)">(Página2)</a>
+
+    <br /><br />La Presidencia informa de que la votación de esta iniciativa no se
+    producirá antes de las 13:30 horas.
+
+    <br /><br />Para la fijación de posiciones y, en su caso, defender las enmiendas y
+    votos particulares presentados intervienen la señora Barkos Berruezo, los
+    señores Salvador Armendáriz, Álvarez Sostres y Baldoví Roda, las señoras
+    Oramas González-Moro y Fernández Davila, el señor Tardà i Coma y la
+    señora Enbeita Maguregi, del Grupo Parlamentario Mixto; el señor
+    Olabarría Muñoz, del Grupo Parlamentario Vasco (EAJ-PNV); la señora
+    Lozano Domingo, del Grupo Parlamentario de Unión Progreso y Democracia;
+    los señores Llamazares Trigo, del Grupo Parlamentario de IU, ICV-EUiA,
+    CHA: La Izquierda Plural; Jané i Guasch, del Grupo Parlamentario Catalán
+    (Convergència i Unió); la señora Batet Lamaña, del Grupo Parlamentario
+    Socialista, y el señor Barreda de los Rios, del Grupo Parlamentario
+    Popular en el Congreso.
+
+    <br /><br />Sometidas a votación separada las enmiendas y el voto particular
+    presentados, son rechazados.
+
+    <br /><br />Sometidas a votación separada las diversas partes del dictamen, son
+    aprobadas todas.
+
+    <br /><br />Votación de conjunto ... <a href="#(Página23)">(Página23)</a>
+
+    <br /><br />Sometido a votación de conjunto el proyecto de ley de referencia, es
+    aprobado por 184 votos a favor, 32 en contra y 109 abstenciones.
+
+    <br /><br />Se levanta la sesión a las dos y treinta minutos de la tarde.
+
+    <br /><br />Se abre la sesión a las doce y quince minutos del mediodía.
+
+    <br /><br />DICTÁMENES DE COMISIONES SOBRE INICIATIVAS LEGISLATIVAS:
+
+    <br /><br />- PROYECTO DE LEY ORGÁNICA COMPLEMENTARIA DE LA LEY DE RACIONALIZACIÓN DEL
+    SECTOR PÚBLICO Y OTRAS MEDIDAS DE REFORMA ADMINISTRATIVA POR LA QUE SE
+    MODIFICA LA LEY ORGÁNICA 6/1985, DE 1 DE JULIO, DEL PODER JUDICIAL.
+    (Número de expediente 121/000093).
+
+    <br /><br />El señor PRESIDENTE: Se abre la sesión.
+
+    <br /><br />En la presente sesión el único punto es el debate y aprobación del
+    dictamen del proyecto de ley orgánica complementaria de la Ley de
+    racionalización del sector público y otras medidas de reforma
+    administrativa por la que se modifica la Ley Orgánica 6/1985, de 1 de
+    julio, del Poder Judicial. Como esta iniciativa tiene carácter orgánico,
+    anuncio que la votación no se producirá antes de las 13:30.
+
+    <br /><br />Conforme acordamos en Junta de Portavoces, los grupos parlamentarios
+    intervendrán de menor a mayor en un único turno de quince minutos,
+    excepto el Mixto, que tiene un tratamiento diferente, de mayor tiempo,
+    para fijar su posición y, en su caso, defender las enmiendas presentadas.
+    Comenzamos, por tanto, con el Grupo Mixto. En primer lugar, tiene la
+    palabra la señora Barkos.
+
+    <br /><br />La señora BARKOS BERRUEZO: Gracias, presidente.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página3)"><b>Página
+    3</b></a></p><br />
+
+    <br /><br />Señorías, lo que hoy se nos propone es cerrar el círculo que se iniciaba
+    con la abdicación del Rey Juan Carlos el 2 de junio. Veinticuatro días
+    han pasado solamente, poco más de tres semanas, y en este tiempo se ha
+    producido la abdicación de un Rey, la proclamación de un Rey, la
+    consolidación... (Rumores).
+
+    <br /><br />El señor PRESIDENTE: Perdón, señora diputada.
+
+    <br /><br />Hemos comenzado un Pleno. Ruego, por tanto, que los que quieran atender se
+    sienten y los que no abandonen el hemiciclo.
+
+    <br /><br />Señora Barkos.
+
+    <br /><br />La señora BARKOS BERRUEZO: Gracias, presidente.
+
+    <br /><br />Decía que en poco más de tres semanas se ha producido una abdicación, la
+    proclamación de un nuevo Rey, la consolidación de una monarquía
+    parlamentaria, que fue, y hoy sigue siendo por mor del procedimiento
+    utilizado, herencia directa del franquismo. Ahora se fuerzan los tiempos
+    parlamentarios, una vez más, para traernos una propuesta de aforamiento
+    exprés, y no solo fuerzan tiempos sino que la propia iniciativa viene de
+    tapadillo, porque lo cierto es que hoy la mayoría de esta Cámara va a
+    crear la figura del aforamiento del Rey abdicante -no parece poca cosa-,
+    pero lo va a hacer no con una propuesta al efecto, sino a través de una
+    enmienda de adición al proyecto de ley orgánica complementaria de la Ley
+    de racionalización del sector público, por la que se modifica la Ley
+    Orgánica 6/1985 del Poder Judicial. Francamente, yo creo que esto
+    merecería una explicación.
+
+    <br /><br />¿Quiere alguien explicarnos la necesidad de verles, en este caso concreto
+    a ustedes, señores del Grupo Parlamentario Popular, utilizando todas las
+    artes de la hurtadilla parlamentaria para aforar a un ciudadano? Y no nos
+    digan -lo hemos escuchado fuera de esta Cámara- que no puede un aforado
+    negar un aforamiento. No es de ley, no es rigurosa esa afirmación, no se
+    puede ser irresponsable en esta materia. No se está cuestionando el
+    aforamiento de un cargo público, que también podríamos hacerlo -no
+    estaría mal, y creo que muchos en esta Cámara estaríamos dispuestos a
+    hablarlo-, se está cuestionando el aforamiento de quien ya no lo es. Esa
+    es la cuestión, de la que no debemos desviarnos, el aforamiento de quien
+    ha dejado de ser cargo público y, por tanto, la protección de sus
+    actuaciones en virtud de ese cargo.
+
+    <br /><br />Señorías, en el pasado Pleno, en el que se aprobaba la abdicación del Rey,
+    esta portavoz afeó a quienes llevaban el sí aquella mañana que estuvieran
+    consolidando el sistema de la monarquía parlamentaria por la puerta de
+    atrás -nos parece lamentable-, que se desaprovechara la ocasión de
+    conseguir en las urnas la legitimidad que a esta monarquía parlamentaria
+    el franquismo nunca le va a poder dar, que no quisieran ver que la misma
+    abdicación activaba el debate que existe sobre el modelo de Estado,
+    aunque se quiera negar, en una sociedad que, es evidente, madura a ritmo
+    bastante más rápido que sus propias instituciones. Yo les pedía que
+    preguntaran, y, además, que lo hicieran para escuchar.
+
+    <br /><br />Pues bien, señorías, aquellos son los mismos argumentos con los que hoy
+    vamos a votar no a su enmienda. No hay problema, su mayoría, por
+    supuesto, va a hacer el resto y hoy ustedes cierran el círculo, pero
+    insisto -y termino como empezaba- en que lo cierran en falso.
+
+    <br /><br />Gracias, presidente.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Barkos.
+
+    <br /><br />Por el Grupo Mixto también, tiene la palabra el señor Salvador.
+
+    <br /><br />El señor SALVADOR ARMENDÁRIZ: Gracias, señor presidente.
+
+    <br /><br />Señor ministro, a mi partido la fórmula que se ha encontrado para el
+    aforamiento nos parece razonable, lógica y oportuna. Y si es ahora cuando
+    se plantea este dilema o cuando existe una laguna jurídica es,
+    precisamente, ahora cuando podemos y debemos plantear las soluciones con
+    total naturalidad. A quienes se oponen al aforamiento por una cuestión de
+    procedimiento les diría que podríamos mostrarles seguramente no uno, sino
+    muchos precedentes en los que en su favor se han tramitado cambios
+    normativos con este mismo procedimiento perfectamente legal. Es cierto
+    que debatimos un asunto que no es habitual, que es ciertamente
+    excepcional o muy excepcional, tanto por las personas a las que se dirige
+    la norma como por la falta de precedentes normativos recientes o remotos
+    que nos pueden proporcionar un modelo previo o una solución y tampoco el
+    derecho comparado nos podría proporcionar uno. Ni el aforamiento ni su
+    excepcionalidad en este caso constituyen a nuestro juicio un privilegio y
+    mucho menos deben suponer ninguna impunidad, ninguna. Si creemos en la
+    justicia española, el que estas personas pudieran ser juzgadas por el
+    Tribunal Supremo, como ha declarado el expresidente Felipe González, es
+    simplemente
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página4)"><b>Página
+    4</b></a></p><br />
+
+    <br /><br />una garantía de que serían juzgados con máxima seriedad, máximo rigor y
+    máxima independencia. Y no dejaría de ser una paradoja, por otra parte,
+    que quedaran en peor situación que cualquiera de nosotros o de los más de
+    10.000 aforados que hay en España.
+
+    <br /><br />A quienes justifican su negativa diciendo que esta fórmula solo se aplica
+    a quienes están en activo, podríamos contestar o argumentar que será
+    difícil evitar la actividad pública de don Juan Carlos o doña Sofía. Es
+    más, si por el hecho de la abdicación tuviéramos que privar a nuestro
+    país de sus buenas relaciones, de sus buenos oficios, de su experiencia o
+    de su conocimiento, estaríamos desaprovechando un gran activo,
+    sencillamente. Don Juan Carlos, aun habiendo abdicado y pasado a la
+    reserva, me temo que estará en activo, siempre estará al servicio del
+    mando, por decirlo de alguna manera, o cuando se le requiera por
+    cualquiera de las comunidades autónomas o de sus señorías. Mucho me temo
+    que más allá de la renuncia a la Jefatura del Estado siempre estará en
+    activo. Es obvio que respetamos los discursos de quienes abogan por la
+    desaparición de todo tipo de aforamiento, que no lo haya para nadie.
+    También es verdad que en ese discurso habría que incorporar una reflexión
+    en torno a un cambio normativo para impedir las querellas políticas y el
+    uso fraudulento de la justicia como altavoz político o plataforma
+    mediática con el único objetivo de destrozar la honorabilidad del
+    adversario político, o de provocar descrédito en las instituciones, el
+    desgaste, la renuncia o la exclusión del contrario.
+
+    <br /><br />Termino, señorías. En cuanto a algunos otros grupos, entenderé la
+    oposición al aforamiento del Grupo de Amaiur, lógico. Son los mismos que
+    jamás condenaron los intentos de asesinar o secuestrar a Su Majestad el
+    Rey, que en la historia reciente se han producido, al menos, en cinco
+    ocasiones. Ninguno, jamás, no ya condenar, siquiera criticar u oponerse.
+    Ayer mismo en Barañáin a un etarra con dos asesinatos y un secuestro a
+    sus espaldas y por ese compromiso con la causa, por pertenecer a una
+    banda que ha querido -como digo- cinco veces asesinar al Rey se le hacía
+    un homenaje. ¡Qué le vamos a hacer, señor ministro! Bastante tienen con
+    respetar las reglas de la democracia que rigen en esta casa.
+
+    <br /><br />Señor presidente, señor ministro, UPN votará a favor del aforamiento.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Salvador.
+
+    <br /><br />Señor Álvarez Sostres.
+
+    <br /><br />El señor ÁLVAREZ SOSTRES: Gracias, señor presidente.
+
+    <br /><br />Señorías, mi intervención en esta tribuna obedece a la necesidad de
+    referirme a mi posición política de apoyo explícito y claro al dictamen
+    que modifica la Ley Orgánica, de 1 de julio, del Poder Judicial, que en
+    su artículo único, entre otras cosas, incluye un apartado 55 bis y una
+    disposición transitoria en la que encomienda al Tribunal Supremo la
+    tramitación y enjuiciamiento de las acciones civiles o penales del Rey o
+    Reina abdicada y otros integrantes reales. Hasta aquí la exposición de la
+    iniciativa que nos ocupa.
+
+    <br /><br />El pasado día 18 de junio se ha producido la abdicación de Su Majestad
+    Juan Carlos I, cesando por ello la inviolabilidad del Monarca, y sus
+    actos, consecuentemente, dejan de estar exentos de cualquier
+    responsabilidad jurídica. No existiendo nada en el ordenamiento legal que
+    prevea la situación sobrevenida en la que el Rey ha abdicado, queda con
+    el tratamiento honorífico de Rey y tratamiento de Majestad. Es preciso
+    observar que el famoso aforamiento, hoy tan en entredicho, no es un tema
+    que haya nacido ayer ni siquiera anteayer; es de una situación que se
+    arrastra desde las propias Cortes de Cádiz, es decir, desde el desarrollo
+    de la Revolución liberal burguesa española. Y ese término jamás encerró
+    en su justo sentido ningún atributo propio de privilegio de clase o vía
+    de escape de una responsabilidad, sino que se corresponde con aquella
+    acepción de garantía de y por los actos efectuados o por efectuar como
+    alto servidor del Estado, evitando a parlamentarios, fiscales y
+    magistrados querellas y demandas interesadas que eliminen de hecho sus
+    responsabilidades a estos servidores.
+
+    <br /><br />En el fondo, seamos claros, y yo siempre lo soy. Se está produciendo un
+    debate con grandes dosis de hipocresía y cinismo, porque muchas críticas
+    se formulan precisamente desde los miles de parlamentarios regionales o
+    nacionales o incluso miembros de la fiscalía y judicatura que sí tienen
+    esa garantía en función de su responsabilidad, y, por cierto, los últimos
+    representan los dos tercios de los aforados. El aforamiento, pues, no es
+    un asunto de impunidad, sino de elección del órgano jurisdiccional que
+    garantice las actuaciones de orden institucional para ser juzgado por un
+    tribunal superior de carácter penal o civil. Por eso estamos de acuerdo y
+    hemos suscrito la enmienda presentada, más allá del procedimiento
+    empleado, siempre mejorable, pero que no empaña la calidad final del
+    producto de velar por la imagen institucional de España, salvo que sirva
+    de excusa que eclipsa una realidad menos confesable. Entendemos
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página5)"><b>Página
+    5</b></a></p><br />
+
+    <br /><br />que mientras el aforamiento exista, y todo es revisable en cantidad y
+    calidad, debe afectar a quien está llevando el título de Rey honorífico y
+    que aún debe prestar grandes servicios a nuestro país.
+
+    <br /><br />Gracias, señorías. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Álvarez.
+
+    <br /><br />Tiene la palabra ahora, dentro del Grupo Mixto, el señor Baldoví.
+
+    <br /><br />El señor BALDOVÍ RODA: Muchas gracias, señor presidente.
+
+    <br /><br />Hoy en mis tres minutos quiero sintetizar tres ideas. Permítanme que
+    comience con una afirmación que tengo muchísimas ganas de decir y si me
+    la callo me revuelve las entrañas: no, categóricamente no, el Rey no fue
+    el único que contribuyó a traer la democracia a este país. La democracia
+    vino también de la mano de todas las personas que en mayor o en menor
+    medida lucharon contra la Dictadura, sufrieron persecución, fueron
+    reprimidas, torturadas, de esas personas que incluso perdieron su vida;
+    personas de todas las ideologías que entendieron que el viejo mundo se
+    había acabado y que contribuyeron desde diferentes sectores, lugares y
+    posiciones a construir un nuevo país.
+
+    <br /><br />En segundo lugar, me voy a referir al fondo de lo que hoy se discute aquí.
+    Que lo cargos públicos sean hereditarios resulta pintoresco, por no decir
+    otro adjetivo; que el cargo suponga que puedas cometer delitos
+    impunemente es poco menos que aberrante, y que, encima -y este es el
+    fondo de este proyecto de ley que discutimos hoy aquí-, el Poder
+    Ejecutivo y el Poder Legislativo aprueben que cuando el Rey saliente deje
+    el cargo siga ostentando privilegios por razón del cargo que tuvo -para
+    el cual le nombró, no lo olvidemos, el general Franco-, esto ya no hay
+    ciudadano demócrata que lo entienda. Esta protección extraordinaria
+    urdida con tramitación exprés, carente de toda justificación jurídica,
+    solo puede provocar el recelo y la sospecha. Dijo el Tribunal
+    Constitucional en su sentencia 22/1997 que al dejar de ostentar el cargo,
+    lo natural es la pérdida de tal privilegio, pues lo contrario supondría
+    convertirlo en privilegio personal. Vulnerar este criterio supone
+    vulnerar el principio de igualdad de la Constitución.
+
+    <br /><br />Por último, me referiré a la forma en que vamos a aprobar esta ley. Están
+    convirtiendo el Parlamento en esto (Introduce una flor en un vaso con
+    agua), en un lugar decorativo, en un florero, negando el debate, negando
+    la reflexión, negando el diálogo. Hace menos de un mes que abdicó el Rey.
+    En una semana hicieron una ley para coronar al nuevo Rey y el martes nos
+    convocan para hoy jueves -dos días, dos días- con objeto de aprobar una
+    nueva ley que pretende aforar al Rey saliente, únicamente con los votos
+    del Partido Popular y de algún que otro diputado. Con el 45 % de los
+    votos -ni siquiera el 50 %- van a aprobar esta ley hoy aquí y nadie
+    quiere refrendar este despropósito. Convendrán conmigo que tanta prisa
+    nos hace pensar mal, que no huele bien. Creo que muchas de esas personas
+    a las que me referí al principio sentirían vergüenza de ver cómo se
+    maltrata la democracia justamente aquí, cómo han convertido el Congreso
+    en esto (Señala la flor): un lugar decorativo, un florero.
+
+    <br /><br />Acabo haciendo dos reconocimientos. Quiero mostrar mi reconocimiento y
+    mandar un abrazo al diputado Chesús Yuste. Que le vaya muy bien.
+    (Pronuncia palabras en valenciano). Y mi reconocimiento y felicitación a
+    los trabajadores de Coca-Cola (Muestra una pegatina) por su victoria
+    contra el gigante.
+
+    <br /><br />Muchas gracias.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Baldoví.
+
+    <br /><br />Tiene la palabra la señora Oramas.
+
+    <br /><br />La señora ORAMAS GONZÁLEZ-MORO: Gracias, señor presidente.
+
+    <br /><br />Señoras y señores diputados, el tema que debatimos hoy es importante,
+    delicado y sensible, y tiene dos aspectos, el fondo y la forma. Respecto
+    al fondo quiero decir que parece necesario que la Reina esté aforada y
+    que parece oportuno que los anteriores Rey y Reina estén aforados. ¿Por
+    qué lo digo? Porque se están diciendo por ahí cosas que son absurdas y
+    mentira. No es inmunidad, es garantía. De lo único que se trata es de
+    que, en vez de que una sola persona, un solo juez decida, lo haga un
+    tribunal, pero las leyes y las penas se les van a aplicar igual que al
+    resto de los españoles. Hay que acabar con esa imagen de que el
+    aforamiento es privilegio; es un tema de garantía.
+
+    <br /><br />¿Por qué digo que en el caso de la Reina es necesario y en el caso del
+    anterior Rey oportuno? Porque hasta los propios jueces y fiscales de este
+    país -que me he enterado, a raíz de este debate, que están todos
+    aforados-, que son los que administran la justicia, consideran que hay
+    determinados temas sensibles, de imparcialidad, que necesitan no la
+    opinión de un solo juez sino de un órgano colegiado, como puede ser un
+    tribunal, en este caso el Supremo. En este país hay mucho loquito, y yo
+    sé que hay
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página6)"><b>Página
+    6</b></a></p><br />
+
+    <br /><br />gente a la que le gustaría que el anterior Rey estuviera yendo provincia
+    por provincia -por cada loquito que presente una demanda-, pero yo creo
+    que este país tiene ante sí un tema de dignidad.
+
+    <br /><br />A continuación voy a entrar en el tema de la forma. Por ser, como dije al
+    principio, un tema importante, delicado y sensible, no se tendría que
+    haber hecho así. Se tenía que haber hablado con el resto de las fuerzas
+    políticas que estamos en esa línea y haber buscado un trámite ágil, serio
+    y parlamentario, que existe, no de esta forma, de tapadillo, de urgencia,
+    que da una percepción de que hay algo que no puede esperar ni tres ni
+    cuatro ni cinco semanas. Creo que eso no es serio en un tema que, vuelvo
+    a decir, es importante, delicado y sensible.
+
+    <br /><br />Quedémonos con lo bueno. Al final esto ha servido para que todas las
+    fuerzas políticas, todas, incluido el Partido Popular, digan que este
+    tema, que es mastodóntico, lo de 10.000 personas aforadas en este país y
+    el sistema y las causas por las que uno es aforado, se tenga que revisar.
+    Y ya que estamos metidos en esto y esto se ha hecho mal, invito al
+    Partido Popular a que haga una cosa bien: que con urgencia veamos si
+    podemos dar respuesta a una situación que todas las fuerzas políticas
+    consideramos que no está actualizada, que es urgente en este país, que lo
+    pide la ciudadanía, para que, al final, aforados en este país, el
+    presidente del Gobierno, los ministros, los presidentes autonómicos y
+    tres más, y solamente para el ejercicio del cargo. Nosotros no tenemos
+    que estar aforados, nosotros no firmamos papeles en el ejercicio del
+    cargo; damos libertad, damos opinión. Eso viene de la época en la que se
+    creía que por lo que se decía a uno le podían procesar. Creo que los
+    diputados y el 99 % de los aforados no tienen que estarlo.
+
+    <br /><br />Por todo ello anuncio que nos vamos a abstener, porque creo que no ha
+    habido la negociación parlamentaria ni las formas para un tema tan
+    importante, tan delicado y tan sensible. Prisas, para lo otro, para
+    quitar todos esos aforados.
+
+    <br /><br />Gracias, señor presidente.
+
+    <br /><br />El señor PRESIDENTE: Gracias, señora Oramas.
+
+    <br /><br />Señora Fernández Davila.
+
+    <br /><br />La señora FERNÁNDEZ DAVILA: Gracias, señor presidente.
+
+    <br /><br />Señorías, intervengo para anunciar el voto en contra del Bloque
+    Nacionalista Galego a este proyecto de ley, tanto por la forma como por
+    el fondo de cómo el Gobierno ha afrontado lo que se denomina aforamiento
+    del Rey Juan Carlos. Señorías, No podemos compartir en absoluto las
+    formas que el Gobierno ha tenido de presentar una enmienda a un proyecto
+    de ley ya en curso y, sobre todo, hacerlo en tan poquísimo tiempo,
+    veinticuatro horas, lo que impide total y absolutamente a los grupos
+    parlamentarios presentar sus propias enmiendas o hacer su propio debate,
+    no solamente en relación con el aforamiento del Rey Juan Carlos, sino
+    también con la figura del aforamiento. El Gobierno ha hurtado a este
+    Parlamento la posibilidad del debate y sobre todo la posibilidad de que
+    los grupos parlamentarios cumplieran con su responsabilidad de actuar
+    como consideraran oportuno en relación con este asunto.
+
+    <br /><br />Tampoco compartimos el fondo, porque no podemos compartir que se presente
+    una enmienda por la que, con este nuevo artículo 55 bis, se otorguen al
+    Rey Juan Carlos, que acaba de abdicar hace unos días, unas prerrogativas,
+    unos privilegios que entendemos que ya no corresponden, en la medida en
+    que la función del Rey Juan Carlos no va a ser una función en activo.
+    Desde nuestro punto de vista, el aforamiento debería estar delimitado y
+    justificado para aquellos asuntos relacionados con las funciones
+    institucionales que tiene cualquier persona que pueda ser aforada.
+
+    <br /><br />El Bloque Nacionalista Galego se hace una pregunta que se pueden estar
+    haciendo muchos ciudadanos en este momento y es de qué quiere el Gobierno
+    proteger al Rey Juan Carlos con este aforamiento que hoy se va a aprobar
+    aquí, y sobre todo con las prisas con que se está haciendo, del mismo
+    modo que nos preguntamos qué quiere proteger el Gobierno cuando quiere
+    recurrir la imputación de la Infanta Cristina de Borbón.
+
+    <br /><br />Queremos aprovechar para decir algo que nos duele mucho como ciudadanos
+    del Estado español que vivimos épocas de dictadura, y es que se siga
+    alabando tanto al Rey Juan Carlos como si por gracia divina nos hubiera
+    otorgado a los ciudadanos del Estado español la democracia. Eso es tanto
+    como insultar a los miles y miles de ciudadanos del Estado que, por
+    defender la democracia, tuvieron que sufrir la represión de la Dictadura.
+    Nosotros no podemos admitir que la democracia, mucha o poca, que existe
+    en el Estado español sea gracia de ningún rey, sino que es gracia de la
+    defensa de todas y todos los ciudadanos.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página7)"><b>Página
+    7</b></a></p><br />
+
+    <br /><br />Por esa razón y por las mismas que adujimos cuando defendimos nuestra
+    posición frente a la abdicación del Rey, hecha de manera que no se
+    pudiera pronunciar la ciudadanía en relación con la elección de la
+    jefatura del Estado, vamos a votar en contra.
+
+    <br /><br />Muchas gracias, señor presidente.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Fernández.
+
+    <br /><br />Señor Tardà.
+
+    <br /><br />El señor TARDÀ I COMA: Gracias, señor presidente.
+
+    <br /><br />Señorías, hemos vivido decenios de opacidades, decenios de privilegios,
+    decenios de corrupciones, y hoy aquí se va a cometer otro fraude a la
+    democracia. Ya robaron a nuestros padres, que habían padecido la
+    Dictadura franquista, el derecho a elegir en el año 1978 entre la
+    monarquía instaurada por uno de los genocidas más sanguinarios del siglo
+    XX o bien la restitución de la legalidad republicana, y ahora ustedes,
+    incluso el Partido Socialista, roban a las nuevas generaciones este mismo
+    derecho a decidir, de forma chapucera, de forma vergonzante e incluso
+    reprimiendo en las calles. Felipe VI, Rey por la gracia de Rajoy y
+    Rubalcaba, como Juan Carlos lo fue por la gracia de Franco, y ahora de lo
+    que se trata es de blindarlo judicialmente.
+
+    <br /><br />No es verdad que ustedes actúen, tal como dice el ministro Gallardón, por
+    respeto y dignidad a España, no, lo hacen por miedo, miedo a la
+    democracia y miedo a la verdad, porque durante años Juan Carlos de Borbón
+    tuvo barra libre para hacer y deshacer lo que le viniera en gana, tanto
+    que solo así se explica que haya podido amasar una de las fortunas más
+    importantes del mundo que hoy podría ser cuestionada en los tribunales.
+    Por ello, nosotros planteamos, en lugar del aforamiento, la creación de
+    una comisión parlamentaria que estudie si ha cometido delitos y que envíe
+    las conclusiones a la justicia. Y, entre estos delitos, los
+    imprescriptibles crímenes contra la humanidad cometidos por la Dictadura,
+    ante los cuales nunca tuvo la honradez de solicitar perdón por su
+    complicidad, porque ¿al lado de quién y en qué balcón estaba Juan Carlos
+    de Borbón el día 1 de octubre del año 1975 cuando el fascismo vitoreaba
+    las últimas penas de muerte dictadas por Franco?
+
+    <br /><br />Esta es la realidad. Ustedes tienen miedo a la democracia y a la justicia.
+    Por ello, pretenden garantizar que, ante una posible actuación judicial,
+    el ciudadano Juan Carlos de Borbón sea juzgado por un tribunal que puedan
+    ustedes controlar. Y el ejemplo más claro de ello es el caso de Cristina
+    de Borbón, porque, a pesar de aparecer su firma en tantos y tantos
+    documentos de Nóos, si hubiera estado aforada, ¿acaso hubiera sido
+    imputada por un tribunal de los que ustedes controlan? La respuesta es
+    evidente: no. De hecho, fíjense, el fiscal general de Estado, que es uno
+    de los suyos, va a actuar para impedir que se haga justicia. Ustedes
+    siguen la consigna de Franco: todo atado y bien atado. Pero, no se
+    equivoquen, esto para ustedes y para el nuevo Borbón es solo pan para hoy
+    y hambre para mañana. Los jóvenes de hoy no consentirán que les impongan
+    sus trampas antidemocráticas, aquellas que sus padres y madres -los
+    míos-...
+
+    <br /><br />El señor PRESIDENTE: Tiene usted que terminar, señor Tardà.
+
+    <br /><br />El señor TARDÀ I COMA: ... tuvieron que tragarse por el miedo y el terror
+    con que tuvieron que vivir buena parte de sus vidas.
+
+    <br /><br />El señor PRESIDENTE: Gracias, señor Tardà.
+
+    <br /><br />Señora Enbeita.
+
+    <br /><br />La señora ENBEITA MAGUREGI: Gracias, señor presidente.
+
+    <br /><br />Señorías, Juan Carlos de Borbón abdicó, ha dejado de ser jefe de Estado.
+    Bien, nos alegramos, pero ojalá hubiera abdicado toda su familia, ojalá
+    hubieran decidido no seguir en los cargos que heredaron de Franco y
+    hubieran decidido dar cuentas por los cargos imputados por los jueces,
+    porque, claro, ustedes nos dirán que el Rey no ha sido imputado, pero, si
+    ni ustedes ni el Rey tienen miedo de ninguna imputación, ¿por qué este
+    aforamiento? No vale decir que también nosotras las diputadas somos
+    aforadas, no vale. Los aforamientos deberían desaparecer, todos ellos,
+    porque son fuente de desigualdad. La experiencia nos ha demostrado que
+    protegen a los prevaricadores, a los ladrones y a los influyentes,
+    porque, aprovechando el aforamiento, no dan cuenta del dinero que han
+    ganado a costa de los demás.
+
+    <br /><br />El aforamiento del Rey o ex-Rey en concreto esconde algo, porque, para
+    cosa buena, mucha prisa han tenido ustedes. Juan Carlos ya no es Rey, con
+    lo cual ya no es jefe de Estado, ya no es inviolable ni
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página8)"><b>Página
+    8</b></a></p><br />
+
+    <br /><br />irresponsable, pero por si acaso se le afora. Ahora que, en teoría y solo
+    en teoría, es un ciudadano más, van ustedes y lo aforan. ¿Por qué? ¿Para
+    protegerlo de qué? Señorías, este señor llegó de Italia con una maletita
+    de madera, una mano delante y otra detrás, y hoy en día tiene una de las
+    mayores fortunas de Europa. ¿De dónde? ¿Qué es, heredero del rey Midas?
+    Nos hicieron creer que su padre, el rey que nunca llegó a serlo, murió en
+    la miseria, y resulta que aunque jamás fue aforado acabó sus días
+    "aforrado", pues tenía algunos dinerillos ahorrados en Suiza por si
+    acaso. De eso es de lo que hay que hablar, señorías. ¿Cuánto dinero ha
+    ganado el Rey Juan Carlos siendo Rey? ¿Cuánto se le ha pagado de cada
+    ministerio y para qué? Porque, con la asignación que se dice que se le
+    dona, es imposible tener la colección de coches o palacios que tiene, por
+    ejemplo; de la asignación que se dice que le corresponde, pocos safaris
+    se pueden subvencionar.
+
+    <br /><br />Miren, señorías, ustedes me lo negarán una y mil veces, pero este señor
+    tuvo tanto que ver como Tejero en el 23-F. (Rumores). Un discursito lo
+    convirtió en salvaguardador de la democracia, cuando su elección fue
+    hecha por nadie más y nadie menos que Francisco Franco, el pequeño gran
+    dictador. Y ahora lo quieren dejar libre de toda culpa, deprisa y
+    corriendo, para que ahora tampoco falle nada y pueda retirarse tranquilo,
+    sin responsabilidades. Sus mayores responsabilidades no son las
+    familiares, porque allá él con sus demandas de paternidad -de lo suyo
+    gasta-, pero Juan Carlos era jefe de Estado cuando el GAL secuestraba,
+    torturaba y asesinaba. Era jefe de Estado cuando un 20 noviembre
+    asesinaron a Josu Muguruza en el hotel Alcalá (Protestas), y jamás dijo
+    nada al respecto, prefirió seguir cazando elefantes. Total, con un: Lo
+    siento, me he equivocado y no volverá a ocurrir, lo ha solucionado todo.
+
+    <br /><br />Ahora, ahora que ya no tiene cargo alguno, también quiere que sea fácil
+    para él solucionar sus irresponsabilidades. Señorías, han tenido cuarenta
+    años para organizarlo todo y han hecho una chapuza. La abdicación no
+    pilló a casi nadie por sorpresa y aún así tuvimos que esperar
+    veinticuatro horas para que alguien diera alguna explicación de cuál era
+    el procedimiento. La ley que al final tuvo tres hojas incluyendo el
+    discurso del ya ex-Rey se podía haber escrito mucho antes, pero en
+    cuarenta años nadie escribió nada al respecto, y ahora vienen con un
+    aforamiento exprés. Señorías, ustedes mismos se delatan, ustedes mismos
+    desacreditan la marca España, ustedes mismos nos dan cada día más motivos
+    para irnos de este país que nunca fue ni grande ni libre. Aforen al Rey,
+    déjenlo libre de sus cacerías, parrandas... (Protestas).
+
+    <br /><br />El señor PRESIDENTE: Un momento.
+
+    <br /><br />Señores diputados, la oradora tiene derecho a expresar sus opiniones. Si
+    están en desacuerdo, no pueden manifestarlo mientras ella está hablando,
+    porque entonces no se la oye. Siga usted.
+
+    <br /><br />La señora ENBEITA MAGUREGI: Gracias, señor presidente.
+
+    <br /><br />Decía que le pongan la alfombra roja al nuevo Rey y sigan lavando la cara
+    del Estado una y otra vez, pero cada vez tienen menos manos para tanta
+    gotera. El régimen se debilita y los blindajes ya no esconden nada. Las
+    alfombras rojas tienen ya un perfil demasiado irregular con toda la
+    suciedad que han escondido ustedes debajo. Después de cinco siglos el
+    gran imperio se derrumba. Con Felipe V perdieron ustedes Nápoles,
+    Sicilia, Cerdeña, Flandes y Gibraltar entre otros; con Felipe VI seguro
+    que caen Cataluña y Euskal Herria. Será un placer hacerles agur, agur a
+    sus imposiciones, a sus banderas, a sus casas reales, a sus aforados y
+    demás "aforrados". (Varios señores diputados: ¡Agur!).
+
+    <br /><br />El señor PRESIDENTE: Gracias, señora Enbeita.
+
+    <br /><br />Por el Grupo Vasco, PNV, tiene la palabra el señor Olabarría.
+
+    <br /><br />El señor OLABARRÍA MUÑOZ: Gracias, señor presidente, señorías.
+
+    <br /><br />Señor ministro, me gustaría, si es tan amable, que me escuchara, más que
+    nada porque no creo que su mano esté muy lejos de la enmienda que se ha
+    redactado por su grupo parlamentario y otros dos, UPN y Foro Asturias.
+    (El señor vicepresidente, Barrero López, ocupa la Presidencia).
+
+    <br /><br />La perspectiva argumentativa de mi grupo va a ser diferente de la de
+    quienes me han precedido en el uso de la palabra -suele serlo-. Va a
+    basarse, señor ministro, en algo que es particularmente conocido e
+    incluso me atrevo a decir que dilecto para usted, en la máxima ignaciana
+    -de San Ignacio de Loyola- que afirmaba que en tiempos de tribulación no
+    hacer mudanza. No han hecho caso de la máxima ignaciana y nos encontramos
+    en una situación complejísima, señor ministro. No sé en este momento, o
+    sí sé, mejor dicho, quiénes son los que mejores estamos protegiendo a
+    quien hay que proteger pretendidamente -voy a ser cauto con las
+    expresiones-, a quien hay que proteger porque hay que protegerle por
+    alguna razón, pretendidamente también, y que hay que proteger de una
+    manera además manifiestamente ilegal,
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página9)"><b>Página
+    9</b></a></p><br />
+
+    <br /><br />por razones que le comentaré a continuación. ¿Qué es lo que está
+    ocurriendo, señor ministro? Que los que vamos a votar que no somos los
+    mejores defensores de esta persona a la que hay que proteger
+    pretendidamente, por dos razones fundamentales.
+
+    <br /><br />Este Pleno es ilegal. Se lo digo así, con la normalidad con que hay que
+    decir estas cosas. Es manifiestamente ilegal porque está viciado ya desde
+    la configuración o desde la composición de la ponencia, que fue ilegal,
+    vicio de ilegalidad que mediante un mecanismo de tracto sucesivo va
+    viciando los actos posteriores concatenados con el primero: la ponencia
+    ilegal vicia de nulidad. Si estuviéramos hablando de derecho
+    administrativo, sería una nulidad de pleno derecho, una nulidad con
+    efectos ex tunc; vicia a la Comisión y la Comisión impide la celebración
+    de este Pleno. Casi con esto me tendría que marchar por congruencia con
+    el carácter ilegal de este Pleno, pero casi prefiero quedarme un rato más
+    para explicarle por qué entendemos que es ilegal, como otros grupos de
+    esta Cámara también entienden que este Pleno es manifiestamente ilegal.
+
+    <br /><br />Es ilegal por razones procedimentales o por razones procesales o
+    reglamentarias, en primer lugar, señor ministro. La ponencia no se
+    configuró como reivindica o como exige el artículo 69 del Reglamento de
+    la Cámara con las cuarenta y ocho horas que deben transcurrir entre la
+    presentación de la enmienda a la que nos estamos refiriendo, y que provee
+    al aforamiento de la práctica totalidad de la Casa Real, y la propia
+    composición de la ponencia. Es cierto, y el presidente de la Comisión de
+    Justicia está aquí, que está autorizado el presidente de la Comisión de
+    Justicia para acortar estos plazos que no se cumplieron, puesto que la
+    enmienda fue presentada el viernes a las ocho de la tarde, para acortar
+    los plazos, pero no es una legitimación para acortar los plazos de manera
+    discrecional o arbitraria, sino, como establece el artículo 69 del
+    Reglamento, mediante la debida justificación. ¿Cuál es la debida
+    justificación? La desconocemos. Ni el presidente de la Comisión de
+    Justicia ni el portavoz de su grupo parlamentario ni nadie de su partido
+    ni nadie de su Gobierno nos ha explicado cuál es la debida justificación.
+    Claro, esto genera suspicacias y sospechas en la ciudadanía. ¿A quién se
+    quiere proteger, por qué se le quiere proteger y por qué se hacen las
+    cosas mal?
+
+    <br /><br />Lo más próximo a una debida justificación, tal como reclama o requiere el
+    Reglamento de la Cámara, sería una reflexión del portavoz de su grupo
+    parlamentario indicando que hay que evitar dilaciones indebidas. Ya me
+    explicará usted, señor ministro, si dilaciones indebidas equivale a
+    atropellar en los requerimientos reglamentarios tan brutal y groseramente
+    como se ha hecho en esta ocasión, atropellarlos. Nadie sabe en esta
+    Cámara -y si no que lo diga cualquiera de los portavoces que van a
+    continuación a intervenir en esta tribuna- cuál es la debida
+    justificación para el acortamiento de la constitución de la ponencia, la
+    celebración de la Comisión al día siguiente y la celebración del Pleno
+    hoy, que no del Pleno, de un segundo Pleno. ¿Para qué entrar en gastos,
+    señor ministro? Ustedes podían haber ya forzado la legalidad y haber
+    convocado mañana en el Senado la ponencia, la Comisión y el Pleno del
+    Senado, e incluso nos podían haber convocado el próximo domingo para,
+    recibido del Senado con la predeterminación temporal prevista en el
+    Reglamento, aprobar ya el aforamiento definitivo de la Casa Real
+    prácticamente en su totalidad. Pero es que no solo el plazo de cuarenta y
+    ocho horas para la constitución de la ponencia lo establece el artículo
+    69 del Reglamento, lo establece el artículo 90 del Reglamento también.
+    Estamos hablando de la Ley Orgánica del Poder Judicial y el problema es
+    que hubo un domingo interpuesto en el cómputo de los plazos, y el domingo
+    es inhábil, no se pueden computar los domingos. El artículo 90
+    expresamente lo dice así. No se computarán los días inhábiles a efectos
+    de los trámites parlamentarios, y estamos hablando de la constitución de
+    una ponencia tras la presentación de una enmienda. Lo dice también el
+    artículo 182 de la Ley Orgánica del Poder Judicial. Los domingos son
+    inhábiles también, luego las horas del domingo no se pueden computar a
+    efectos de cumplir los requerimientos reglamentarios para la constitución
+    de la ponencia y para validar la legalidad de la misma, validar la
+    legalidad de la Comisión y validar la legalidad del Pleno que estamos
+    celebrando de carácter manifiestamente ilegal, señor ministro. Pero no es
+    solo eso, lo dice el artículo 5 del Código Civil, y quienes hemos
+    estudiado en Deusto sabemos perfectamente que el título preliminar del
+    Código Civil posee carácter multidisciplinar y afecta a todos los
+    sectores del ordenamiento jurídico; me imagino que también a los
+    requerimientos reglamentarios de esta Cámara. Desde esa perspectiva, hay
+    un primer elemento que provoca que estemos realizando un acto ilegal. El
+    derecho parlamentario tiene una naturaleza anfibológica -sería la
+    expresión que seguramente utilizaría el Tribunal Constitucional-; no
+    sabemos si ubicarlo en un sector del ordenamiento jurídico propio y
+    autónomo, si forma parte del derecho administrativo o si forma parte del
+    derecho constitucional. Si estuviéramos hablando de derecho
+    administrativo en la aplicación de los procedimientos, este acto sería
+    nulo, radicalmente nulo, nulo de pleno derecho, con efectos ex tunc la
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página10)"><b>Página
+    10</b></a></p><br />
+
+    <br /><br />nulidad, y no valdría de nada lo que estamos haciendo, señor ministro. Es
+    ilegal por otra razón además, por falta de conexidad, por falta de
+    congruencia entre el contenido de la enmienda y el proyecto de ley que
+    estamos debatiendo. Si cree usted que existe algún tipo de conexidad o
+    congruencia entre el aforamiento de la Casa Real y el estatuto de los
+    funcionarios al servicio de la justicia, explíqueme cuál es el elemento
+    de conexión, por qué alambicado procedimiento de conexión o de identidad
+    cree usted que esa coherencia, esa conexidad existe. Cuando no existe
+    congruencia y conexidad entre las enmiendas y el contenido de un proyecto
+    de ley, el Tribunal Constitucional ha declarado que no se puede conferir
+    validez constitucional a esas enmiendas; luego esta enmienda tampoco
+    tiene relevancia constitucional, no tiene validez constitucional. Léase
+    enmiendas -que seguramente se habrá leído ya o las conoce-; léase la
+    enmienda 119 de 2011, la enmienda 136 del Tribunal Constitucional de
+    2011, la enmienda 176 de 2011, la enmienda 209 del Tribunal
+    Constitucional de 2012. (El señor ministro de Justicia, Ruiz-Gallardón
+    Jiménez, hace gestos negativos). Si me está diciendo que las ha leído,
+    las ha leído a beneficio de inventario, permítame que se lo diga, porque
+    está haciendo manifiesto caso omiso de los requerimientos de las mismas
+    en materia de conexidad y congruencia de la naturaleza de las enmiendas y
+    el proyecto de ley que es objeto de debate. Este, el de la falta de
+    congruencia de las enmiendas, es un vicio que podríamos corregir e
+    incluso subsanar. ¿Cómo? Pues llegando a este forzamiento extremo del
+    ordenamiento jurídico, podríamos convertir a estos nuevos aforados en
+    personal al servicio de la justicia: podríamos convertir al Rey
+    abdicante, al Rey que ha abdicado, en un secretario judicial, por
+    ejemplo; podríamos convertir al Rey en este momento reinante en un
+    oficial de un órgano judicial; al consorte o a la consorte los podríamos
+    convertir en un auxiliar. Esta sería una forma de regenerar la falta de
+    conexidad o congruencia entre el contenido de la enmienda y el contenido
+    del proyecto de ley que estamos debatiendo. Estas son razones
+    suficientemente relevantes para acreditar la ilegalidad de lo que se está
+    cometiendo en este momento, y que nos lleva a manifestar la sospecha que
+    ya la ciudadanía está interiorizando casi con carácter general y
+    colectivo. ¿Por qué estamos corriendo tanto, señor ministro?, ¿por qué
+    estamos corriendo tanto, señor Castillo? -Me refiero directamente al
+    portavoz del Partido Popular que va a intervenir después-. ¿Por qué?,
+    ¿qué hay que ocultar, qué estamos ocultando? Esto levanta sospechas
+    legítimas, señor ministro, levanta suspicacias. No he visto nunca un
+    forzamiento del Reglamento tan brutal como este para realizar una
+    operación que es dudosa también en cuanto a su contenido material, porque
+    el aforamiento es temporal.
+
+    <br /><br />Usted es aforado, pero cuando deje de ser el ministro de Justicia va a
+    dejar de ser aforado y tendrá que someterse a la jurisdicción ordinaria.
+    Los diputados que estamos aquí somos aforados. Cuando dejemos de ser
+    diputados, nos tendremos que someter a la jurisdicción ordinaria, al juez
+    natural predeterminado por la ley. El presidente del Gobierno es aforado.
+    Cuando deje de serlo, a pesar de su condición de registrador, tendrá que
+    someterse al juez ordinario predeterminado por la ley. El presidente del
+    Tribunal Supremo y los magistrados son aforados. Cuando dejen de ser
+    presidente del Tribunal Supremo o magistrados, tendrán que someterse al
+    tribunal ordinario predeterminado por la ley. El presidente del Tribunal
+    Constitucional y sus magistrados son aforados. Cuando dejen de serlo,
+    tendrán que someterse al juez ordinario predeterminado por la ley, y así
+    sucesivamente. Los presidentes autonómicos, el lehendakari, el president
+    y todos los demás son aforados. Cuando dejen de serlo, se someterán al
+    tribunal ordinario predeterminado por la ley, como todos los aforados de
+    todo el mundo. Esto es a lo que provee el derecho comparado, a pesar de
+    las distorsiones de algún portavoz que me ha precedido en el uso de la
+    palabra.
+
+    <br /><br />Sin embargo, aquí se consagra una suerte de aforamiento vitalicio, porque
+    el aforamiento afecta al rey que ha abdicado ya. Bueno, afecta a mucha
+    gente; ya la Casa Real está aforada prácticamente en su totalidad: el Rey
+    o su consorte; la Reina o su consorte; la Princesa de Asturias o el
+    Príncipe de Asturias; y el Rey que ha abdicado o la Reina consorte o la
+    Reina que ha abdicado o su consorte. Nada menos que todos estos son
+    aforados. No sé qué pretenden, de verdad, me lo tendrían que explicar.
+    Usted conoce las teorías de Lombroso, el famoso penalista italiano,
+    fascista y padre del Código Penal de Mussolini, donde establecía lo que
+    se denominaba perfil delincuencial, que lo vinculaba incluso al aspecto
+    físico, a las características físicas. ¿Es que ustedes ven en el Rey un
+    perfil delincuencial que obliga a una operación tan rápida de
+    aforamiento, vulnerando y atropellando los requerimientos reglamentarios
+    y la jurisprudencia del Tribunal Constitucional en materia de congruencia
+    entre las enmiendas y los proyectos de ley? No creo que sean ustedes,
+    precisamente, los que vean un perfil delincuencial en el aspecto físico
+    del monarca, aunque pretendidamente alguno intuye que se le está
+    intentando proteger, no sabemos de qué, de lo que fuera. Ustedes lo
+    sabrán si tienen tanta prisa en proveer a este aforamiento tan irregular.
+    No es un
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página11)"><b>Página
+    11</b></a></p><br />
+
+    <br /><br />aforamiento ordinario el que ustedes configuran, sino un aforamiento de
+    naturaleza extraordinaria, más potente, más desmesurado que el que poseen
+    los demás aforados del Estado español. En el artículo 56 de la Ley
+    Orgánica del Poder Judicial, enmendada, se establece que en el ámbito
+    penal el aforamiento es como el de cualquier otro aforado, pues es un
+    aforamiento de origen constitucional; pero en el ámbito civil el
+    aforamiento de la Casa Real no está vinculado al ejercicio de sus
+    funciones o a la responsabilidad civil dimanante del ejercicio de sus
+    funciones; nuestro aforamiento, el de todos los aforados, el suyo, el del
+    Tribunal Constitucional, el del Tribunal Supremo, el de los presidentes
+    autonómicos, el de todos los aforados existentes en el Estado español
+    está vinculado al ejercicio de sus funciones y a la responsabilidad civil
+    dimanante del ejercicio de sus funciones. Sin embargo, ustedes proveen a
+    la Casa Real de un aforamiento de carácter universal. Y por si fueran
+    pocas las extravagancias jurídicas -estamos analizando, señor ministro, y
+    lo estoy haciendo con cierta contención, le aseguro que estoy intentando
+    argumentar exclusivamente en términos de derecho-, incluso se le da
+    efectos retroactivos a este aforamiento, porque el Rey está aforado ya y
+    el Rey que ha abdicado también está aforado ya. En el momento en que esta
+    ley se publique en el Boletín Oficial del Estado, si son encausados -me
+    da la impresión de que ustedes piensan que van a ser encausados porque si
+    no no correrían tanto-, el tribunal ad hoc, el tribunal que está
+    entendiendo de la causa la pierde o pierde la competencia de forma
+    sobrevenida y tiene que cederla a la Sala primera del Tribunal Supremo,
+    en tanto en cuanto se establecen que todas las acciones se presentarán
+    ante la Sala primera del Tribunal Supremo y con efectos retroactivos. Una
+    vez aprobada la ley, podríamos terminarlo el próximo domingo. -Ya le
+    sugiero que habilite mañana en el Senado una ponencia por la mañana, una
+    comisión por la tarde y un pleno por la noche y nos convoque aquí el
+    domingo para terminar de cubrir el círculo de la operación completa y
+    tener una Casa Real aforada en su integridad la semana que viene-.
+
+    <br /><br />Hay dos reyes que han abdicado en Europa, una reina y un rey, en Bélgica y
+    en Holanda, como usted sabe perfectamente, señor ministro. Ninguno de los
+    dos ha reivindicado ni se le ha concedido ningún tipo de aforamiento que
+    fuera especial. Los dos están sujetos al juez ordinario predeterminado
+    por la ley de sus países, el que ha abdicado en Bélgica y la que ha
+    abdicado en Holanda. No hagamos singularidades y hagamos caso, señor
+    ministro, a San Ignacio de Loyola. Estamos en tiempos de perturbación; ya
+    me explicará esta perturbación monárquica a qué se debe, porque empezamos
+    a tener los ciudadanos un interés morboso en ver qué asuntos subyacen
+    bajo esta suerte de forzamiento o violación, si me permite la expresión
+    en el sentido más etimológico y jurídico del término, de la legalidad.
+    ¿En qué consiste exactamente esta perturbación? Seguro que alguno de
+    ustedes lo tiene que saber, porque si no no estarían corriendo tanto y
+    jugándose además la legalidad, jugándose posibles recursos. Los recursos
+    contra la soberanía parlamentaria constitucionalmente son muy difíciles
+    de articular, pero existe la posibilidad incluso de recurrir la legalidad
+    de los procedimientos administrativos previos que provocan un vicio en
+    esta parte final que coincide con la parte final de mi parlamento. La
+    parte final es un aforamiento hecho de forma manifiestamente ilegal, un
+    aforamiento desmesurado y diferente al aforamiento de las demás personas,
+    cargos públicos o responsables institucionales existentes en el Estado
+    español.
+
+    <br /><br />El señor VICEPRESIDENTE (Barrero López): Señoría, debe concluir.
+
+    <br /><br />El señor OLABARRÍA MUÑOZ: Acabo ya, señor presidente.
+
+    <br /><br />Para evitar que la sospecha adquiera carta de naturaleza definitivamente
+    en el Estado español, le pido, por favor, que nos explique por qué están
+    haciendo estas cosas.
+
+    <br /><br />Gracias, señor presidente.
+
+    <br /><br />El señor VICEPRESIDENTE (Barrero López): Gracias, señor Olabarría.
+
+    <br /><br />Grupo Parlamentario de Unión Progreso y Democracia. Tiene la palabra la
+    señora Lozano.
+
+    <br /><br />La señora LOZANO DOMINGO: Muchas gracias, presidente.
+
+    <br /><br />Señorías, nos felicitamos por que la abdicación del Rey haya permitido que
+    volvamos a debatir en esta Cámara sobre el privilegio del aforamiento.
+    Desde nuestro punto de vista, no es este un debate sobre la monarquía ni
+    sobre la figura del Rey o sobre sus actos históricos; es un debate sobre
+    el privilegio y es un debate sobre el principio de igualdad ante la ley.
+    En esos términos es en los términos que nosotros lo queremos plantear.
+    Pensamos que es muy complicado, desde la óptica de la coherencia, hablar
+    en este trámite de 4 aforamientos nuevos y no querer hablar de los 10.000
+    existentes desde hace años. El problema es que hay muchos grupos en esta
+    Cámara que no tienen
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página12)"><b>Página
+    12</b></a></p><br />
+
+    <br /><br />ninguna duda de que los 10.000 aforamientos ya existentes son
+    perfectamente posibles, legales y convenientes y, sin embargo, estos 4
+    aforamientos nuevos están mal. Desde ese punto de vista, con las
+    enmiendas que hemos planteado en este trámite del procedimiento
+    pretendemos defender la coherencia de que creemos que, por hacer valer el
+    principio de igualdad ante la ley de todos los ciudadanos, ninguno debe
+    estar aforado; ni los 10.000 que ya están -que ya estamos- ni los cuatro
+    nuevos que se van a aprobar hoy en este trámite. Lo planteamos hace un
+    año en una proposición no de ley que trajimos al Pleno y, en este
+    momento, lo volvemos a presentar en forma de enmiendas para darle a esta
+    Cámara una nueva oportunidad de reconciliarse con la ciudadanía, que no
+    entiende por qué hay justicia de dos categorías en España. Hay una
+    justicia cómoda y rápida para los cargos públicos en un sentido amplísimo
+    -jueces, diputados autonómicos, nosotros mismos, senadores, ministros;
+    hasta el adjunto al Defensor del Pueblo tiene aforamiento- y, sin
+    embargo, hay una justicia que es cara -más cara desde que gobierna el PP-
+    y lenta para el común de los mortales, para el común de los ciudadanos.
+    Estábamos en contra de esos 10.000 aforamientos y estamos en contra de
+    estos 4 nuevos porque sí que constituyen un privilegio. En contra de lo
+    que ha señalado la señora Oramas -y otros oradores-, que ha negado que
+    sea un privilegio y lo ha llamado garantía, exactamente es la garantía de
+    que te van a juzgar aquellos jueces que tú controlas, aquellos jueces que
+    tú has colocado en los tribunales superiores de Justicia autonómicos o en
+    el Tribunal Supremo o en el Consejo General del Poder Judicial; en fin,
+    en todas aquellas instancias que son las que luego se encargan de
+    instruir y juzgar los casos cuando afectan a los cargos públicos que
+    están aforados.
+
+    <br /><br />Este mecanismo del aforamiento nos interesa combatirlo especialmente -por
+    eso presentamos hace un año esa proposición no de ley- porque es uno de
+    los vértices por los que se busca la impunidad frente a la corrupción. Es
+    el vértice que complementa el reparto por cuotas del Consejo General del
+    Poder Judicial, el control y el uso espurio de la fiscalía por parte del
+    Gobierno, y la figura del indulto. Por lo tanto, es un privilegio sin
+    ningún género de dudas. Pero se han hecho manifestaciones extrañas al
+    respecto en los últimos días. Sin ir más lejos, ayer el ministro
+    Gallardón hizo dos afirmaciones en esta misma tribuna a propósito de otra
+    moción que debatíamos. La primera, que el aforamiento no es un
+    privilegio, sino más bien al contrario es una carga. Es una carga porque
+    el que es juzgado por el Tribunal Supremo no tiene la oportunidad de
+    recurrir ante una instancia superior y, por lo tanto, pierde una
+    oportunidad de recurso. Así pues, es una carga, no es un privilegio.
+    Segunda afirmación que hizo el ministro: hay que aforar al Rey porque se
+    lo merece por lo que ha hecho por España. Es decir, hay que imponerle
+    esta pesada carga del aforamiento por lo que ha hecho por España. No
+    sabemos cómo interpretar estas palabras suyas, señor ministro. No sabemos
+    si es que no le gusta lo que el Rey ha hecho por España o si es que
+    verdaderamente -como sospechamos-, a pesar de toda su retórica en contra,
+    sí considera que es un privilegio y por eso, igual que lo quieren
+    conservar en el caso de los 10.000 que ya lo tienen, se lo quieren dar a
+    estos nuevos miembros de la familia del Rey. De lo contrario, lo que
+    estaría sosteniendo es que quiere perjudicar al Rey, que quiere imponerle
+    esta onerosa carga de estar aforado.
+
+    <br /><br />Lo que es una onerosa carga para los ciudadanos son las tasas judiciales
+    que ustedes les impusieron. Si quieren hablar de cargas, retiren esas
+    tasas. Eso es una carga para los ciudadanos y eso no es lo que ustedes le
+    dan al Rey; ustedes le dan el aforamiento porque proporciona una vía de
+    justicia mucho más cómoda. Otro de los razonamientos que se han esgrimido
+    para defender el aforamiento del Rey y el aforamiento en general es que
+    en un país en el que hay, como he dicho, 10.000 aforados, y que hasta
+    figuras como el adjunto al Defensor del Pueblo está aforado, cómo no
+    vamos a aforar al Rey saliente. Ese es el razonamiento idóneo para
+    eliminar todos los aforamientos existentes, los que no están recogidos en
+    la Constitución, que podríamos hacer de manera inmediata, hoy mismo en
+    este trámite, apoyando el Grupo Popular las enmiendas que ha presentado
+    Unión Progreso y Democracia, y también reformando los que están en la
+    Constitución, es decir, los nuestros, los de diputados y senadores. -Por
+    cierto, aprovecho para decir que no podemos renunciar a ellos porque,
+    conociendo las perversas formas dialécticas de algunos diputados, temo
+    que cuando ya no podamos contestar alguien nos pregunte por qué no
+    renunciamos. No renunciamos porque no podemos hacerlo-. Es curioso, es
+    extraño, que en Alemania no haya ningún aforado, mientras en España hay
+    10.000. Es extraño que en Francia solo estén aforados el presidente, el
+    primer ministro y los miembros del Gobierno, mientras en España hay
+    10.000 aforados. Nos preguntamos a qué se debe esa anomalía, a qué se
+    debe la excepcionalidad española. Como somos gente seria cuando debatimos
+    y cuando planteamos las cuestiones, sabemos que es cierto que en los
+    países de nuestro entorno, en nuestro países vecinos, se persigue con
+    vehemencia la denuncia falsa y la denuncia temeraria, y creemos que ese
+    debate también deberíamos tenerlo. Deberíamos reforzar
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página13)"><b>Página
+    13</b></a></p><br />
+
+    <br /><br />la persecución y agravar las penas, si es necesario, por denuncia falsa y
+    denuncia temeraria, para evitar eso que otros esgrimen también como pobre
+    argumento para justificar el aforamiento: que puede haber gente que, en
+    busca no se sabe qué estrellato o en busca de causarle no se sabe qué
+    incomodidad al Rey, a un ministro o a un diputado, pueden empezar a
+    ponerle denuncias y querellas por toda España. Pues bien, evitemos que
+    eso se haga disuadiendo a la gente de presentar ese tipo de denuncias
+    falsas o temerarias castigando ese comportamiento, pero no lo utilicemos
+    para blindar ante la justicia a los cargos públicos. Eso es lo que
+    constituye este aforamiento específico que se ha creado para la familia
+    del Rey, un aforamiento que implica cambiar el concepto, que es más
+    extenso porque se refiere a los actos realizados mientras estaba en el
+    cargo, pero también a los que realice fuera del cargo -insólito en un
+    aforamiento, que va siempre vinculado al cargo-. Además es un aforamiento
+    que dura lo que dura la vida de quien posee ese privilegio, un
+    aforamiento vitalicio, un aforamiento que no cesa cuando se cesa en el
+    cargo, sino que pervive.
+
+    <br /><br />Señorías, con este blindaje de los 10.000 aforados y el blindaje nuevo que
+    hoy se aprobará aquí, todavía hay gente que se pregunta por qué los
+    ciudadanos han perdido la confianza en la política; todavía hay quien que
+    se pregunta por qué la gente no confía en que vayamos a solucionar sus
+    problemas. Eso es así porque demostramos mucha más preocupación por
+    proteger a ciertas élites que gobiernan o han gobernado el país, que por
+    proteger a los ciudadanos, que es a quienes representamos en esta Cámara.
+    Si de verdad alguien quiere mejorar la confianza de los ciudadanos en la
+    política, hay una forma muy rápida de lograrlo hoy: votando a favor de
+    nuestras enmiendas que defienden la abolición del privilegio del
+    aforamiento. Lo primero que hay que hacer para recuperar la confianza de
+    la gente es acabar con los privilegios de quienes los representan y de
+    quienes ocupan ciertos cargos públicos; lo segundo es decirles la verdad.
+    No se puede estar diciendo que nos preocupa la corrupción mientras se
+    mantienen los mecanismos por los que se garantiza la impunidad de quienes
+    cometen delitos de corrupción. Los ciudadanos no confiarán en los
+    políticos si nosotros no confiamos en los ciudadanos. Cuando se blinda y
+    se amplía esta institución del aforamiento se está manifestando una
+    desconfianza cerval, una desconfianza atroz en el juez de instrucción,
+    porque ustedes dicen que cualquiera puede poner una demanda, una
+    querella, en cualquier juzgado de España; sí, pero el juzgado que la
+    recibe tiene como titular a un juez en el que confiamos porque es el
+    último y el primer valladar del Estado de derecho. Señorías, los miles de
+    jueces que hay en España son los que se encargan de hacer cumplir el
+    Estado de derecho y de defender la igualdad ante la ley. Así que, en el
+    caso de que se presentaran denuncias falsas, denuncias temerarias,
+    denuncias espurias, debemos confiar en quienes defienden el Estado de
+    derecho y quienes garantizan el principio de igualdad ante la ley.
+
+    <br /><br />Sin embargo, ustedes dejan patente la desconfianza en esos jueces de
+    instrucción cuando, igual que hicieron en la reforma de la jurisdicción
+    universal, introducen una disposición transitoria que da órdenes a los
+    jueces respecto de lo que deben hacer en el caso de que, en los pocos
+    días que median entre la abdicación y la aprobación de este aforamiento,
+    llegara alguna denuncia a algún juzgado: lo que deben hacer es remitirla
+    con carácter inmediato al Tribunal Supremo. -Algo insólito, señorías, que
+    se dé órdenes a los jueces de instrucción respecto a lo que tienen que
+    hacer con las denuncias que lleguen a sus juzgados; una nueva invasión
+    del Poder Legislativo y del Poder Ejecutivo, en el Poder Judicial.
+
+    <br /><br />Señorías, nosotros defendemos la abolición del aforamiento porque
+    defendemos la igualdad de los ciudadanos ante la ley. La ley no puede ser
+    un traje a medida hecho para cada ocasión y para cada persona. La ley no
+    puede ser un traje cómodo y fácil de sobrellevar cuando se trata de los
+    cargos públicos y, sin embargo, un traje estrecho, angosto y caro cuando
+    se trata de los ciudadanos de a pié.
+
+    <br /><br />Por último, quiero hacer una consideración sobre el procedimiento. Como se
+    ha dicho en repetidas ocasiones a lo largo de esta semana en la que hemos
+    puesto el turbo a los procedimientos parlamentarios, por ocho horas,
+    señorías, por ocho horas. Hubieran bastado ocho horas para convocar la
+    ponencia del lunes con el fin de que nadie hubiera podido suscitar
+    ninguna duda sobre la ilegalidad de este procedimiento. Por ocho horas no
+    se ha hecho, señorías. Esto se llama chapuza. Esto se llama tener en muy
+    poca estima a las personas a las que se dice proteger, señorías. Se han
+    forzado los plazos, se ha permitido que se ponga en duda la legalidad del
+    procedimiento y además hay dudas sobre la congruencia de que este asunto
+    pudiera incluirse en esta ley sobre la racionalización del sector
+    público. Nosotros, exclusivamente desde el punto de vista de la lógica,
+    lo que creemos es que si este es el trámite en el que debatir el
+    aforamiento de 4 personas, también lo es el de debatir el de 10.000, y si
+    no es el lugar donde debatir
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página14)"><b>Página
+    14</b></a></p><br />
+
+    <br /><br />el aforamiento de 10.000 personas, tampoco lo es el de 4. Lo que no es de
+    recibo es que nos digan que este no es el momento de debatir sobre todos
+    los aforados que existen en España, y si es el momento de debatir solo
+    los relativos a la Familia Real. Eso es una incongruencia absoluta.
+
+    <br /><br />Con este trámite, con dudas de legalidad, al que le han puesto el turbo en
+    esta institución, le hacen un flaco favor a la institución monárquica,
+    que es lo que a nosotros nos interesa defender, la institución y la
+    normalidad democrática. Forzando los plazos y los procedimientos no se
+    ayuda a quienes ustedes dicen querer ayudar y querer proteger.
+    Inevitablemente, me viene a la cabeza con su comportamiento la célebre
+    frase del ministro de Exteriores israelí, Abba Eban, que dijo en aquel
+    caso de los palestinos lo que en este caso es aplicable a ustedes, al
+    Grupo Popular y al Gobierno: que nunca pierden la oportunidad de perder
+    la oportunidad. En este trámite han vuelto a perder la oportunidad de
+    reconciliarse con la ciudadanía, de fortalecer las instituciones, la
+    institución monárquica pero también esta institución. Han vuelto a perder
+    la oportunidad de demostrarles a los ciudadanos que comparten sus
+    preocupaciones y no que tienen las preocupaciones exclusivas de una élite
+    que blinda su propia supervivencia.
+
+    <br /><br />Muchas gracias, presidente. (Aplausos).
+
+    <br /><br />El señor VICEPRESIDENTE (Barrero López): Gracias, señora Lozano.
+
+    <br /><br />Grupo Parlamentario de IU, ICV-EUiA, CHA: La Izquierda Plural, señor
+    Llamazares.
+
+    <br /><br />El señor LLAMAZARES TRIGO: Gracias, señor presidente.
+
+    <br /><br />Señorías, señor ministro, en política no hay casualidades, no existen. Hoy
+    mismo conocemos la imputación de la infanta Cristina y este Congreso de
+    los Diputados va a aprobar un aforamiento extraordinario de la Familia
+    Real. ¿Qué cabe deducir de esas dos cuestiones? Que el Congreso de los
+    Diputados se convierte en un monumento al desacato al Poder Judicial, un
+    monumento al desacato a un juez. Esta es, en primer lugar, una ley anti
+    juez Castro, porque hay seres humanos que cuando dejan su responsabilidad
+    no se convierten en ciudadanos, siguen siendo casi dioses y habiendo
+    perdido la inviolabilidad pretenden tener un aforamiento extraordinario.
+    Señorías, ni siquiera estamos hablando de aforamientos -que son muchos-,
+    estamos hablando de un aforamiento extraordinario, generalizado,
+    retroactivo y vitalicio. ¿Se puede encontrar un desafuero tal en alguna
+    legislación sobre aforamientos? Es un desafuero, señorías, este
+    aforamiento que nos proponen. (Aplausos).
+
+    <br /><br />Señorías, la propuesta que viene como una enmienda a Ley Complementaria de
+    Administraciones Públicas ha cambiado de naturaleza a esa ley. Ya no
+    estamos discutiendo del horario o de las retribuciones de los magistrados
+    como consecuencia de la reforma de las administraciones, a no ser que el
+    Partido Popular considere que este incremento en el número de aforados
+    extraordinario vaya a suponer una carga extraordinaria de trabajo para
+    los magistrados. Espero que no sea así. Como no hay conexión no hay
+    congruencia, señorías.
+
+    <br /><br />Hay sentencias del Tribunal Constitucional que han echado por tierra leyes
+    de esta Cámara por falta de congruencia. Esas sentencias del Tribunal
+    Constitucional han provocado una resolución del Senado y otra similar del
+    Congreso de los Diputados para evitar situaciones como esta, es decir,
+    para evitar que una ley puramente administrativa se convierta en el
+    vehículo de una iniciativa de hondo calado político. Señorías, se
+    pretende un aforamiento extraordinario, vitalicio, retroactivo y además
+    se hace a la trágala. A este Congreso de los Diputados no nos han dejado
+    ni intervenir, prácticamente han reducido los plazos al mínimo y han
+    introducido la enmienda como un parásito en una ley en tramitación.
+
+    <br /><br />Señorías, no se puede hacer peor. Pero, incluso, no se puede hacer peor
+    desde el punto de vista democrático, desde el punto de vista
+    institucional. Señores del Partido Popular, ¿se han dado ustedes cuenta
+    de que en la sucesión han perdido ya dos partidos políticos que formaron
+    parte del bloque de constitucionalidad?, ¿se han dado cuenta también de
+    que en torno al aforamiento extraordinario se van a quedar ustedes
+    solos?, ¿son ustedes los que respaldan la forma de Estado de este país?
+    Señorías, hay que hacérselo mirar. Tendrían que reflexionar sobre esta
+    cuestión, porque si alguien ha pretendido que estemos ante un proceso de
+    revitalización y regeneración democrática, ante una nueva transición
+    democrática, mal comienza esa transición democrática disminuyendo el
+    bloque de constitucionalidad, disminuyendo los apoyos democráticos a esas
+    reformas. Señorías, no se trata de regeneración, no señor. No se trata
+    del cuento de hadas que nos han contado. Aquí no hay una actitud generosa
+    del jefe del Estado que reflexiona a solas -con algún secretario general
+    de los partidos dinásticos- y que luego decide abdicar. No señorías, no.
+    La iniciativa de aforamiento extraordinario demuestra que hay una
+    maniobra palaciega y la sustitución de los pactos de La Moncloa por un
+    pacto de La Zarzuela. (Aplausos). Pacto en el cual entra lo que podríamos
+    llamar la operación Gatopardo, que cambie todo
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página15)"><b>Página
+    15</b></a></p><br />
+
+    <br /><br />para que todo permanezca. Esa operación Gatopardo de la cual este
+    aforamiento es la tercera escena. La primera fue la abdicación, todavía
+    no sabemos las verdaderas razones de la abdicación. Señorías, no es la
+    regeneración es la degradación. En segundo lugar, hay una sucesión
+    rápida, una sucesión impuesta y una cacería en Madrid de los
+    republicanos. Esa sucesión es el segundo acto. (Aplausos). Y un tercer
+    acto se refiere a este aforamiento extraordinario que se pretende para la
+    Casa Real, no para la familia del Rey -sé distinguir- sino para la
+    Familia Real, un aforamiento que llamamos generalizado.
+
+    <br /><br />¿Por qué no es un aforamiento más? Por un lado, porque cubre todos los
+    aspectos civiles y penales al margen del cargo, señorías. El aforamiento
+    en nuestro país, en nuestra tradición legislativa está unido a un cargo.
+    Por tanto si no tienes cargo no tienes fuero, y un fuero sin cargo es un
+    desafuero, que es lo que propone el Grupo Parlamentario Popular.
+    (Aplausos). Un desafuero que cubre aspectos penales y aspectos civiles
+    que están fuera de la actividad y del cargo público, eso tampoco tiene
+    nada que ver con los fueros. Por otro lado, es un fuero vitalicio. ¿Cómo
+    va a haber la pérdida de un cargo y un fuero vitalicio? Es una
+    contradicción en sí misma. Pero por si no fuera todavía suficiente este
+    tipo de contradicciones se pretende un fuero retroactivo, de tal manera
+    que en el espacio que media entre la abdicación y la publicación de este
+    aforamiento extraordinario el Rey emérito estará cubierto por el fuero.
+    Señorías, es un despropósito, un desafuero que solamente se explica por
+    algo: porque hay cortesanos que son más papistas que el papa.
+
+    <br /><br />Yo les recomendaría, señorías, que hablaran con el nuevo Rey para que
+    evitase este desafuero, porque este desafuero en mi opinión y en opinión
+    de mi grupo, es un despropósito desde el punto de vista constitucional, y
+    desde el punto de vista legal. Para ello, señorías, han tomado una
+    iniciativa parlamentaria -no es sui géneris, la ha habido en otras
+    ocasiones- especialmente -en términos norteamericanos- inapropiada, y es
+    especialmente inapropiada porque utilizan ustedes el trámite de una ley
+    que no tiene nada que ver a razón de materia con la que estamos tratando,
+    y lo hacen de una manera clandestina, lo hacen en el marco de la Ley
+    complementaria de reforma de las administraciones públicas de manera
+    clandestina, sin cumplir con las cuarenta y ocho horas preceptivas, a no
+    ser que contabilicen las horas de domingo, y le vuelvo a repetir al
+    Partido Popular que los domingos, en su idea, deben de estar
+    santificados. En nuestra opinión no son días de trabajo, pero en su
+    opinión deben ser santos; por lo tanto no son horas contabilizables. No
+    han cumplido ustedes con las horas, no han cumplido ustedes con la
+    congruencia de la iniciativa, porque nada tiene que ver el horario de los
+    jueces con el desafuero o con el fuero extraordinario que pretenden para
+    el Rey emérito.
+
+    <br /><br />Señorías, es verdad que se da este fuero -lo ha planteado algún grupo
+    parlamentario, y lo ha utilizado también el propio ministro de Justicia-
+    en un marco de muchos fueros. Bueno, en mi opinión no es comparable. No
+    tiene nada que ver un fuero extraordinario, que se parece más a la
+    inviolabilidad en diferido, ni siquiera con los fueros que tienen en
+    estos momentos o los aforamientos los parlamentarios, los Gobiernos, los
+    jueces y magistrados. Pero si ustedes quieren que debatamos de todo no
+    utilicen una operación acordeón; es decir, no aumenten ustedes los
+    aforados, para en octubre disminuir los aforados. Aprovechen la ocasión,
+    reduzcan drásticamente los aforados, y dentro de esa reducción de
+    aforados no utilicen el fuero para personas que no tienen cargo, no
+    utilicen el fuero para un momento posterior al cargo, no utilicen el
+    fuero de manera retroactiva. Nosotros se lo recomendamos, y en ese
+    sentido mi grupo parlamentario se ha dirigido al resto de los grupos
+    parlamentarios de esta Cámara para que abordemos una supresión drástica
+    de los aforamientos.
+
+    <br /><br />Señorías, el aforamiento originalmente tenía una finalidad y era la no
+    intervención de otros poderes en el ámbito del poder político, la no
+    intromisión en el ejercicio del cargo público. En estos momentos un
+    aforamiento generalizado es prácticamente una especialidad del derecho.
+    En estos momentos, como la Sala de lo Laboral o como la Sala de lo Penal,
+    estamos convirtiendo el Tribunal Supremo y los tribunales superiores de
+    Justicia en Salas de lo Político. En nuestra opinión tribunales que deben
+    ser para otra cosa -deben ser tribunales de casación, deben ser
+    tribunales de unificación de doctrina- no tienen que ser tribunales de
+    aforados. En nuestra opinión, pues, hay que aprovechar la oportunidad:
+    reducir drásticamente los aforamientos y evitar el despropósito del
+    desafuero del aforamiento generalizado de la Casa Real. Por tanto, si en
+    vez de un mensaje de degradación de la vida política se pretende dar un
+    mensaje de regeneración, y como diría el nuevo Rey se pretende inaugurar
+    un nuevo tiempo donde quepamos todos, lo que hay que hacer en primer
+    lugar es garantizar la transparencia. Creo que si se quiere hacer eso, el
+    Monarca emérito debería presentar sus cuentas, sus rentas, su patrimonio
+    y sus intereses. Ese sería realmente un ejercicio de regeneración
+    democrática. (Aplausos). Y si se quiere también apostar por la
+    regeneración deberíamos suprimir la dinámica creciente, imparable de los
+    aforamientos, que más que
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página16)"><b>Página
+    16</b></a></p><br />
+
+    <br /><br />defender a la política de las injerencias están provocando su
+    desprestigio. Es verdad que no siempre es un privilegio; es verdad que es
+    una parte de lo que podríamos llamar los medios de la política, pero en
+    estos momentos la lectura por parte de los ciudadanos es otra, y la
+    política debe ser sensible a la lectura de los ciudadanos. No necesitamos
+    el aforamiento; el aforamiento lo necesitan solamente algunos. En general
+    en la política no necesitamos estar aforados porque en general en la
+    política la gente es honesta, y no se va a encontrar ante un tribunal.
+
+    <br /><br />Por último, señorías, si se quiere colaborar con la regeneración de la
+    democracia lo que hay que hacer es colaborar con la justicia. Ayer mismo
+    la Casa Real expresaba su respeto a la imputación de la infanta por parte
+    del juez instructor -bienvenido sea-, pero además de expresarlo
+    retóricamente hay que actuar colaborando con la justicia. Hoy, en nuestra
+    opinión, colaborar con la justicia significa retirar esta iniciativa, que
+    es un desacato al juez Castro y a la justicia. Y, señorías, colaborar
+    también con la justicia es que la fiscalía saque sus manos del caso Nóos,
+    y permita que continúe la instrucción.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />El señor VICEPRESIDENTE (Barrero López): Gracias, señor Llamazares.
+
+    <br /><br />Grupo Parlamentario Catalán, Convergència i Unió, tiene la palabra el
+    señor Jané.
+
+    <br /><br />El señor JANÉ I GUASCH: Señor presidente, señor ministro de Justicia,
+    señoras y señores diputados, llevamos más de una hora debatiendo en un
+    Pleno acelerado, convocado el pasado martes, un Pleno claramente
+    improvisado porque ninguno de los que estamos aquí sabíamos la semana
+    pasada que iba a producirse hoy, tras el Pleno ordinario celebrado, con
+    un único punto del orden del día, que paso a leerles. En teoría ahora
+    estamos dictaminando en el Pleno del Congreso de los Diputados el
+    proyecto de ley orgánica complementaria de la Ley de Racionalización del
+    Sector Público y otras medidas de reforma administrativa, por la que se
+    modifica la Ley Orgánica del Poder Judicial. Este es el título, y nada de
+    lo que hemos escuchado hasta el momento se corresponde con el título del
+    proyecto de ley presentado por el Gobierno, que era una adaptación en el
+    ámbito del Poder Judicial al proyecto de ley ordinario, que era el de la
+    CORA, y a ese proyecto le hemos introducido de forma rápida, exprés, una
+    enmienda que provoca que hoy estemos hablando de otra cosa, no de este
+    proyecto de ley. Estamos hablando del nuevo artículo 55 bis, un artículo
+    que va a otorgar un aforamiento específico al Rey Juan Carlos, a la Reina
+    Sofía, a quienes ostenten la condición de Príncipe o Princesa de Asturias
+    y a la consorte del actual Rey, y el debate de ese artículo 55 bis es un
+    tema serio, importante. Señorías, hemos producido un articulo en menos de
+    una semana. El pasado jueves ni tan siquiera existía el artículo, el
+    viernes a las ocho de la tarde se presenta la enmienda, el lunes la
+    ponencia, el martes la Comisión, y hoy este Pleno. ¿Qué sensación da este
+    proceso acelerado? Que estamos improvisando, que estamos legislando de
+    forma poco adecuada. Esta es la impresión generalizada que provoca este
+    trámite exprés que hemos imprimido a ese nuevo artículo 55 bis.
+
+    <br /><br />Hemos troceado muchísimo la Ley Orgánica del Poder Judicial,
+    constantemente hay reformas puntuales de otras leyes que nos obligan a
+    realizar la correspondiente reforma de la Ley Orgánica del Poder
+    Judicial. Esta misma semana, con el tema del reconocimiento de
+    resoluciones penales en el ámbito de la Unión Europea, estamos
+    modificando la Ley Orgánica del Poder Judicial para ese tema. ¿Por qué no
+    hacemos una reforma específica de la Ley Orgánica del Poder Judicial en
+    materia de aforamiento? Esto hubiera sido lo correcto, señor ministro. Se
+    ha anunciado por parte de su Gobierno y por parte del portavoz del Grupo
+    Popular que el próximo mes de octubre íbamos a debatir el alcance de los
+    aforamientos. Hay muchísimos, miles, y hay que acotarlos, hay que ver en
+    qué supuestos está justificado y en cuáles no, qué extensión tiene ese
+    aforamiento, hasta en qué momento puede concluir, si debe abarcar o no a
+    exjefes de Estado. Todos son temas que es posible debatir, que es
+    necesario debatir, pero requieren un debate serio, un consenso. Estamos
+    hablando de temas absolutamente trascendentes que van a llegar sin el
+    informe incluso del Consejo de Estado. En el aforamiento del exjefe de
+    Estado no tendremos ni tan siquiera el informe del Consejo de Estado. Es
+    cierto -eso hay que ponerlo en valor- que el Consejo General del Poder
+    Judicial sí se ha pronunciado en términos favorables a reducir el número
+    de aforados y a hacer una revisión global -mi grupo está dispuesto a
+    entrar en ese planteamiento de una reducción global del número de
+    aforados-, y ha entendido que era posible extender esa aforamiento a
+    figuras como el Rey Juan Carlos. Esto lo ha dictaminado el Consejo
+    General del Poder Judicial. Tenemos ese dictamen. No tenemos el dictamen
+    del Consejo de Estado.
+
+    <br /><br />¿Qué tenemos? Una ley improvisada, una ley precipitada, una ley que no se
+    corresponde con el necesario respeto institucional a quien se pretende
+    proteger, y si me lo permiten, señorías, con el respeto
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página17)"><b>Página
+    17</b></a></p><br />
+
+    <br /><br />institucional a esta Cámara, al Congreso de los Diputados, más allá de si
+    estamos o no cumpliendo el Reglamento. Yo quiero mostrar mi respeto a las
+    letradas de la Comisión de Justicia, doña Piedad García-Escudero, doña
+    Isabel Revuelta, y a todos los servicios jurídicos del Congreso de los
+    Diputados, a todo el Cuerpo de letrados, pero en ocasiones se lo ponemos
+    muy difícil, porque se intenta forzar de manera muy directa el Reglamento
+    de la Cámara, que no discutimos que en ocasiones se puede hacer si existe
+    la mayoría absoluta para aprobarlo, pero, ¿dónde queda el respeto
+    institucional a estos diputados que estamos aquí, que nos estamos
+    pronunciando hoy ante un artículo, el 55 bis, al que nadie ha podido
+    presentar una enmienda porque nos lo hemos encontrado de repente
+    introducido en ponencia, en Comisión al día siguiente, y debatido hoy en
+    este Pleno? Esto no es serio para el buen hacer del proceso
+    parlamentario. Por tanto desde Convergència i Unió reivindicamos legislar
+    de manera distinta. Necesitamos respetar las formas -y no digo que se
+    esté incumpliendo el Reglamento-, las necesarias formas de respeto a
+    todos los grupos para buscar el mayor consenso posible, y se podía haber
+    hecho de manera distinta; por tanto, desde Convergència i Unió lo
+    lamentamos.
+
+    <br /><br />No vamos a votar favorablemente esta reforma puntual de la Ley Orgánica de
+    Poder Judicial; nos vamos a abstener. Y lamentamos que no haya sido
+    posible un consenso mayor, de una gran mayoría de grupos parlamentarios,
+    porque este habría sido posible si se hubiera tratado el tema del
+    aforamiento desde la seriedad, buscando el derecho comparado, viendo las
+    posibilidades, los alcances, y finalmente aprobando una reforma nada más
+    y nada menos que de la Ley Orgánica del Poder Judicial. Pero de esta
+    manera no podemos estar de acuerdo, no podemos compartir en ningún caso
+    que llegue esta reforma con esa precipitación. Hoy la vamos a mandar al
+    Senado, rápidamente el Senado -esta semana o la próxima- va a emitir ya
+    el dictamen, y ya les anticipo -que no se preocupe nadie- que esta ley no
+    va a volver del Senado al Congreso porque se van a cuidar mucho de que en
+    el Senado no se introduzca ninguna enmienda, para que esté cuanto antes
+    en el BOE y sea una ley en vigor. (El señor presidente ocupa la
+    Presidencia). ¿Tanta prisa es necesaria? Esto también se lo pregunta la
+    opinión pública. ¿Es necesario? ¿Qué pretendemos con esas prisas? Es un
+    interrogante que también cuestiona el necesario respeto institucional
+    cuando hablamos de la degradación de las instituciones. Hoy no estamos
+    contribuyendo a ese respeto con esta reforma tan rápida, tan precipitada.
+    La gente nos ve con distancia, la gente nos observa, y dice: el Congreso
+    hace un puzle con la Ley Orgánica del Poder Judicial; quita una pieza,
+    saca otra; esta no le encaja, la pone en otra ley. Desde Convergencia i
+    Unió reivindicamos, más allá del Reglamento, la seriedad necesaria del
+    procedimiento reglamentario, que se legisle con mayoría absoluta, que es
+    legítima, pero contando con todos, intentando cada vez que afrontamos una
+    reforma -y esta es seria- hacerlo de la forma más pausada, serena y útil
+    posible, porque hoy esta reforma tampoco es útil para la garantía que se
+    pretende otorgar. Por tanto también desde esta óptica somos críticos
+    desde Convergència i Unió.
+
+    <br /><br />Termino ya, señor presidente, señorías, haciendo pedagogía de algo que hoy
+    no sabemos explicar bien entre todos, pero también es nuestra
+    responsabilidad explicarlo bien. Existen aforamientos; demasiados. ¿Hay
+    que revisarlos? Sí. El Gobierno ha dicho que lo haría en octubre.
+    Podríamos haber esperado a octubre y hacerlo de manera global, que era lo
+    deseable, con un proyecto de ley, pero expliquemos que quien está aforado
+    no tiene impunidad. Es necesario explicar que quien está aforado tiene un
+    tribunal colegiado superior que le va a juzgar, pero que le va a juzgar,
+    porque si equiparamos que sea juzgado por un tribunal superior con que va
+    a quedar impune estamos dañando la imagen del Poder Judicial y de
+    nuestros tribunales superiores, y el portavoz de Convergència i Unió no
+    pretende hacerlo en la Comisión de Justicia. Decir que si a una persona
+    le va a juzgar el Tribunal Supremo es como si quedara impune -cualquier
+    aforado de los que estamos aquí- estaríamos negando la verdad. Estar
+    aforado es tener esa garantía de un tribunal superior. Discutamos cuándo
+    esto es necesario y cuándo no, pero tampoco digamos ante la sociedad que
+    quien está aforado queda impune, porque impune no queda. Queda impune y
+    es irresponsable desde un punto de vista de responsabilidad jurídica de
+    sus actos quien es el jefe del Estado, porque la Constitución así lo
+    establece. Ahora decidimos -deciden por mayoría absoluta- que va a serlo
+    también el exjefe del Estado. Es discutible, debemos tratarlo; pero en
+    ningún caso podemos afirmar que se abre la impunidad, porque no
+    estaríamos haciendo la necesaria pedagogía ante el conjunto de los
+    ciudadanos.
+
+    <br /><br />¿Qué le pedimos desde Convergència i Unió? Reflexión global sobre los
+    aforamientos, reducción de los mismos, y hacerlo desde el consenso y no
+    de manera parcheada, específica, teledirigida para cuanto antes poner en
+    el BOE una norma que parece que quiera proteger aquello que con este
+    debate estamos dañando, que es el necesario respeto institucional. Por
+    tanto desde Convergència i Unió lamentamos que
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página18)"><b>Página
+    18</b></a></p><br />
+
+    <br /><br />se haya legislado de esta forma, lamentamos las prisas, y esperamos con
+    sinceridad que toda reforma de una ley orgánica tan importante como la
+    Ley Orgánica del Poder Judicial se hagan de otra forma. Y aprovecho
+    también para afirmar desde la tribuna que es cierto que es una enmienda
+    que nada tiene que ver con el título, pero es cierto también que es una
+    enmienda dirigida a la norma que la ley pretendía modificar, que es la
+    Ley Orgánica del Poder Judicial, porque se han hecho cosas peores; en
+    muchísimas leyes se han introducido enmiendas que modifican leyes que
+    nada tienen que ver con la ley que se reformaba. En este caso hay un
+    objetivo en que la norma final es la Ley Orgánica del Poder Judicial,
+    pero fijémonos en lo que nos va a ocurrir a partir de los próximos meses
+    de julio, agosto y septiembre. ¿Qué nos va a ocurrir? Que van a entrar en
+    el BOE diversas reformas de la Ley Orgánica del Poder Judicial -las
+    veremos-, y cada una con un título dirigido a aquello que reforma, y en
+    cambio esta va a salir con un título que nada tiene que ver con la ley
+    que reforma. Incluso la memoria del Gobierno que acompaña a todo proyecto
+    de ley podría producir algún sarcasmo, si me lo permiten, porque si
+    leemos la memoria de este proyecto de ley afirma que lo que vamos a hacer
+    es agilizar trámites para la jubilación del personal al servicio de la
+    Administración de Justicia, e incluso pretender una organización más
+    eficiente de su gestión, y de alguna manera -se dice en la memoria-
+    tratar prórrogas de permanencia en el servicio. Alguien podría hacer una
+    ironía: estar en este caso prorrogando un aforamiento cuando hablamos del
+    Rey Juan Carlos y de la Reina Sofía no deja de ser un sarcasmo, porque la
+    memoria de este proyecto de ley se refiere a la Administración pública y
+    a los funcionarios que están en la Administración de Justicia, se refiere
+    a esa racionalización del sector público, y encaja mal que en ella se
+    discuta, se enmiende con esa precipitación una ley importante, la Ley
+    Orgánica del Poder Judicial, que requiere serenidad, consenso, y sobre
+    todo evitar comportamientos legislativos que se parecen más a la chapuza
+    improvisada que no a la seriedad que este Congreso de los Diputados se
+    merece, nos merecemos todos cuando tramitamos un proyecto de ley
+    orgánica.
+
+    <br /><br />Muchas gracias, señor presidente. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Jané.
+
+    <br /><br />Por el Grupo Socialista tiene la palabra la señora Batet.
+
+    <br /><br />La señora BATET LAMAÑA: Gracias, señor presidente.
+
+    <br /><br />Señorías, quiero empezar agradeciendo al presidente de nuestro grupo
+    parlamentario tantos años de dedicación al servicio público, tanta
+    entrega a todos los ciudadanos de este país... (Aplausos). He de decirle
+    que la química de este país ganará mucho, pero la química en este
+    Congreso perderá, sin duda.
+
+    <br /><br />El proyecto de ley orgánica complementaria de la Ley de Racionalización
+    del Sector Público y otras medidas de reforma administrativa, por la que
+    se modifica la Ley Orgánica del Poder Judicial, introduce criterios de
+    oportunidad y racionalidad en la constitución de tribunales para las
+    pruebas de acceso a los cuerpos de funcionarios, o equipara el régimen de
+    permisos por asuntos propios del personal al servicio de la
+    Administración de Justicia al existente para la Función pública en
+    general. En este sentido mi grupo parlamentario presentó cinco enmiendas,
+    todas ellas rechazadas, con las que pretendíamos que los empleados
+    públicos del ámbito de la justicia recuperaran todos los derechos que
+    bajo el pretexto de la crisis el Gobierno les ha ido cercenando. Sobre
+    todo esto, señorías, es sobre lo que el Grupo Parlamentario Popular nos
+    ha impedido hablar hoy aquí, de la misma manera que tampoco se habló de
+    ello en la Comisión. Esta es la primera anomalía de un procedimiento
+    repleto de despropósitos.
+
+    <br /><br />Señoras y señores diputados, nosotros concebimos los fueros especiales
+    como un elemento para preservar las instituciones constitucionales, así
+    se concibieron, con ese objetivo se introdujeron y se regularon en todo
+    nuestro ordenamiento jurídico. El aforamiento no está para proteger a las
+    personas, sino a las instituciones, y en último extremo a la democracia.
+    No se trata de ofrecer impunidad o inviolabilidad a nadie, porque no es
+    eso, sino de evitar que alguna instancia pueda alterar el normal
+    funcionamiento de las instituciones constitucionales, y por ende que el
+    interés general se vea perjudicado. Si el objetivo del Gobierno y del
+    Grupo Parlamentario Popular partiera de esa concepción, y hubiese
+    pretendido mostrar ese respeto a las instituciones constitucionales,
+    jamás hubiese hecho las cosas como las está haciendo, precipitadamente,
+    con un mal procedimiento legislativo, y con una falta absoluta de
+    consenso con los grupos parlamentarios de esta Cámara. Con este
+    procedimiento lo único que consiguen paradójicamente es que el
+    instrumento que se había diseñado para proteger a la democracia esté
+    dañando a esa misma democracia. Lo lógico, señorías, hubiese sido traer
+    un proyecto de ley propio, y lo podría haber hecho con celeridad igual,
+    presentar un proyecto de ley orgánica de reflexión y debate sobre la
+    institución del aforamiento, su alcance y la extensión de este a miembros
+    de la Familia Real. Pero el
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página19)"><b>Página
+    19</b></a></p><br />
+
+    <br /><br />método elegido por el Grupo Parlamentario Popular y por el Gobierno ha
+    sido otro: incluir mediante enmienda a un proyecto de ley existente esta
+    regulación ex novo de un aforamiento especial para la Reina consorte o el
+    consorte de la Reina, el Príncipe o la Princesa de Asturias y su
+    consorte, y el Rey o Reina que hubiese abdicado y su consorte. El
+    mecanismo elegido ha sido este y no otro y se han equivocado. La
+    inclusión de este tema de esta manera comporta incongruencia material,
+    comporta falta de debate parlamentario, y comporta vulneración del
+    Reglamento de la Cámara, y me explico. Comporta problemas de
+    incongruencia material con el proyecto de ley existente, y es que las
+    enmiendas presentadas no tienen nada que ver con el objeto de la
+    modificación de la Ley Orgánica del Poder Judicial sobre aspectos
+    relativos a la carrera judicial y del personal al servicio de la
+    Administración de Justicia. De hecho el mismo día que debatíamos este
+    proyecto de ley en la Comisión, debatimos a su vez otro proyecto de ley
+    que también modificaba la Ley Orgánica del Poder Judicial sobre
+    reconocimiento mutuo de resoluciones penales en la Unión Europea.
+
+    <br /><br />¿Por qué el Gobierno no hizo un solo proyecto de ley y trajo dos por
+    separado al Parlamento? Porque el Gobierno valoró, con buen criterio, que
+    eran cuestiones completamente distintas y que merecían debates propios,
+    individualizados y específicos. De hecho hay varias sentencias, citadas
+    ya por el señor Olavaria, del Tribunal Constitucional como la 119, la 136
+    y la 176 de 2011, y la 209 de 2012, que marcan claramente esta línea
+    jurisprudencial.
+
+    <br /><br />También es un clásico en la técnica legislativa que usa este Gobierno
+    introducir o presentar enmiendas de manera contraria a la jurisprudencia
+    constitucional consolidada. De hecho este proyecto de ley que estamos hoy
+    debatiendo es complementario a otro proyecto de ley en el que hicieron
+    exactamente lo mismo. Parece que ustedes han descubierto la alternativa a
+    legislar a golpe de decretos leyes, que es legislar a golpe de enmiendas.
+    En segundo lugar, decía que impide el debate parlamentario, y no me digan
+    que no es cierto porque en estos momentos estamos hablando en esta
+    tribuna igual que lo hicimos en la Comisión. La deliberación
+    parlamentaria no son solo monólogos expresados por los distintos grupos
+    parlamentarios de manera sucesiva, sino que la función principal de esta
+    Cámara pasa por deliberar sobre cómo llegamos entre todos a la mejor
+    expresión del interés general, para lo que muchas veces es fundamental
+    transar entre enmiendas distintas, llegando a un acercamiento de
+    posiciones, lo que viene a llamarse consenso, acuerdo o pacto, que es
+    precisamente la máxima y mejor expresión de la democracia. Ustedes con
+    este procedimiento legislativo permiten a los grupos parlamentarios
+    situarse en un sí o en un no, y eso es todo, porque una enmienda ya no la
+    podemos enmendar. Por tanto, sí ha habido usurpación de la principal
+    función de un Parlamento, que es la deliberación, el acercamiento de
+    posiciones y el acuerdo. Miren si han hecho mal las cosas, señorías, que
+    han presentado tres enmiendas y a estas tres enmiendas han tenido que
+    presentar tres correcciones de errores. Tres enmiendas y tres
+    correcciones de errores. Hablamos de precipitación, pero es que esa
+    precipitación se demuestra en cosas como esta.
+
+    <br /><br />A estos dos problemas hay que añadirles un tercero, como es el dudoso
+    cumplimiento del Reglamento de la Cámara en su artículo 69. Ni en la
+    convocatoria de la ponencia ni en la convocatoria de la Comisión se han
+    cumplido los plazos de cuarenta y ocho horas. No le quiero dedicar más
+    tiempo a esto, puesto que ya en la Comisión tuve oportunidad incluso de
+    leer la literalidad del precepto y además hay otros portavoces que me han
+    precedido en el uso de la palabra que ya lo han hecho, lo que sí quiero
+    poner de manifiesto, señoras y señores diputados, es que lo expuesto
+    hasta ahora no es una cuestión jurídico-procesal, no es una cuestión de
+    technicalities, no es una cuestión meramente procedimental, como muchos
+    querrán verlo para reducir su trascendencia. No; no lo es. Estamos
+    hablando del respeto a un procedimiento parlamentario, que es ni más ni
+    menos que lo único que ofrece garantías a las minorías; lo único,
+    señorías. Por tanto, en este caso el fondo y la forma convergen, porque
+    no respetar este procedimiento parlamentario es no respetar la democracia
+    y, por tanto, vulnerar la función básica de este Parlamento. Si el
+    Gobierno o el Grupo Parlamentario Popular querían traer a la Cámara un
+    debate sobre este tema, deberían haber traído un proyecto de ley,
+    ofreciendo un trato de normalidad a la cuestión, y no traer este debate
+    mediante este instrumento parlamentario y pedir luego a todos los grupos
+    responsabilidad y altura de miras.
+
+    <br /><br />Les agradecería también que no digan en tribuna lo que han estado diciendo
+    algunos cargos de su Gobierno de que estamos negando a otros el
+    aforamiento de régimen general que nosotros mismos tenemos. Ustedes saben
+    perfectamente que están presentando otra cosa, con otro alcance, que como
+    mínimo merecería una mayor discusión.
+
+    <br /><br />En definitiva, señorías, si el Gobierno y el Grupo Parlamentario Popular
+    pensaran en términos de respeto institucional, en términos de búsqueda
+    del interés general, de fortalecimiento del parlamentarismo, de
+    garantizar la deliberación que tiene que llevar a cabo esta Cámara, de
+    preservación de la propia
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página20)"><b>Página
+    20</b></a></p><br />
+
+    <br /><br />Jefatura del Estado y de búsqueda de los consensos necesarios, no hubiesen
+    actuado como lo han hecho. Señorías del Grupo Popular, la responsabilidad
+    de estar solos hoy y de las consecuencias que eso comporta es solo suya.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Batet.
+
+    <br /><br />Por el Grupo Parlamentario Popular, tiene la palabra el señor Barreda.
+
+    <br /><br />El señor BARREDA DE LOS RÍOS: Muchas gracias, señor presidente.
+
+    <br /><br />Señorías, el Grupo Popular votará favorablemente el proyecto de ley
+    orgánica que debatimos, votará favorablemente un proyecto de ley que
+    ofrece el soporte adecuado para atender una situación sobrevenida
+    derivada de la abdicación de Su Majestad el Rey don Juan Carlos I: la
+    necesidad de definir el estatuto jurídico tras la abdicación. Es
+    importante atender esta cuestión con sentido de la responsabilidad y
+    también con sentido de Estado; sentido de la responsabilidad que cada
+    cual debe asumir y sentido de Estado que evite dilaciones innecesarias o,
+    lo que es lo mismo, periodos de interinidad, situaciones transitorias que
+    nada aportan en términos de seguridad jurídica. No es mejor el
+    procedimiento por ser más lento.
+
+    <br /><br />Hablamos de una institución constitucional. Se trata de la importancia
+    simbólica de la figura de don Juan Carlos, incluso después de su
+    abdicación, como suele recordar el primer grupo de la oposición. Somos
+    conscientes de la importancia y de la necesidad de esta reforma y debe
+    ser voluntad de todos llevarla a cabo. Contamos con el instrumento
+    adecuado, este proyecto de ley, y por tanto el compromiso del Gobierno y
+    del Grupo Popular es impulsarlo por los cauces legales y en los plazos
+    que permite el Reglamento de la Cámara. Sin embargo, pese a nuestra
+    disposición al acuerdo, no han faltado críticas de forma y de fondo al
+    proyecto de ley que tramitamos, críticas que se han reproducido en la
+    mañana de hoy. Por tanto, debo reiterar cosas que ya dijimos en Comisión.
+    En cuanto al procedimiento, son muchos y hasta gruesos los calificativos
+    de algunos portavoces esta mañana, pero lo cierto es que se ha respetado
+    escrupulosamente el Reglamento de la Cámara. La Mesa y los portavoces de
+    la Comisión de Justicia autorizaron el pasado día 11 la aplicación del
+    artículo 69, que permite la reducción de los plazos, e igualmente se ha
+    cumplido el Reglamento para fijar el orden del día de la Comisión. La
+    ausencia o la conveniencia de los portavoces de algunos grupos no permite
+    cuestionar el escrupuloso respeto al procedimiento parlamentario. A nadie
+    se ha hurtado el debate, ni en ponencia, ni en Comisión, ni tampoco en el
+    día de hoy en este Pleno. Por tanto, ni improvisación ni precipitación;
+    previsión y agilidad dentro de los márgenes que permite el Reglamento
+    para impulsar esta reforma y cubrir un vacío legal. Se ha actuado con
+    plena transparencia, con conocimiento de la Comisión desde el 11 de junio
+    e insisto en que la dejación de funciones, en representación de sus
+    electores, de algunos grupos en reuniones dirigidas precisamente a
+    ordenar los trabajos de la Comisión no les permite descalificar la tarea
+    de la Cámara.
+
+    <br /><br />Tampoco está en cuestión por mucho que se empeñen la congruencia de las
+    enmiendas del Partido Popular, de Foro Asturias y de Unión del Pueblo
+    Navarro con el propio proyecto de ley. Tratándose de la Ley Orgánica del
+    Poder Judicial parece de sentido común plantear en este proyecto de ley
+    estos aforamientos. Al menos así lo han entendido varios grupos de la
+    Cámara que también han presentado enmiendas sobre aforamientos e incluso
+    peticiones de comisiones de investigación sobre don Juan Carlos, y nadie
+    se ha opuesto a su admisión a trámite por incongruentes. Por tanto, si
+    congruentes son las enmiendas sobre aforamientos de unos grupos,
+    coherentes son las de todos, incluidas las del Grupo Parlamentario
+    Popular. Incongruencias, señorías, las de otros grupos, las de La
+    Izquierda Plural, por ejemplo, pretendiendo plantear una reforma
+    constitucional vía referéndum en una enmienda a la Ley Orgánica de
+    Abdicación y viniendo hoy, siendo muy flacos de memoria, apenas cuatro
+    días después, a denunciar supuestas incongruencias de otros grupos
+    parlamentarios. Eso es tener muy poca memoria, señor Llamazares. Y
+    también me da la impresión de que algunos, incapaces de definir una
+    posición sobre el fondo, incluso diciendo compartir la necesidad de los
+    aforamientos propuestos, han invocado inexistentes defectos de forma para
+    justificar su abstención.
+
+    <br /><br />En cuanto a la necesidad de la reforma, el pasado día 2 de junio Su
+    Majestad el Rey don Juan Carlos I comunicó al presidente del Gobierno su
+    voluntad de abdicar, es decir, de poner fin a un reinado excepcional, que
+    constituye el periodo más extenso de convivencia en paz, democracia y
+    libertad, de progreso social y prosperidad material que hemos conocido
+    los españoles en toda nuestra historia contemporánea. Don Juan Carlos ha
+    sido no solo motor de la transición democrática, sino símbolo de unidad y
+    un factor clave para el fortalecimiento del país y para la concordia
+    entre los españoles. Ha sido, en fin, porque quiso serlo, Rey de todos
+    los españoles. (Aplausos). Groseras descalificaciones, cuando no insultos
+    o injurias,
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página21)"><b>Página
+    21</b></a></p><br />
+
+    <br /><br />como las que hemos oído gratuitamente en el Pleno de hoy, no empañan sino
+    que enaltecen la figura de don Juan Carlos, señorías. Con la aprobación
+    de la Ley Orgánica 3/2014 se daba cumplimiento al artículo 57.5 de la
+    Constitución y el pasado día 19, en este mismo hemiciclo, se producía la
+    proclamación ante las Cortes de Su Majestad el Rey don Felipe VI como
+    nuevo jefe del Estado. Se trata de un hecho inédito en los dos siglos de
+    nuestra historia constitucional, la normal sucesión en la Corona conforme
+    a las previsiones legales, una excelente noticia en términos democráticos
+    para nuestra nación, pero que supone también la necesidad de abordar
+    situaciones igualmente excepcionales y novedosas. En efecto, la figura
+    del Rey, como se ha recordado, está constitucionalmente revestida de
+    inviolabilidad e inmunidad porque así lo establece el artículo 56.3 de
+    nuestra Carta Magna. Por tanto, todos los actos realizados por el Rey
+    quedan amparados por la inviolabilidad y están exentos de
+    responsabilidad. Por el contrario, los que realizare después de haber
+    abdicado quedarán sometidos al control jurisdiccional y es la actual
+    falta de regulación en esta materia la que el proyecto de ley viene a
+    subsanar.
+
+    <br /><br />Conocen sus señorías -también se ha recordado- que el Gobierno venía
+    trabajando en el proyecto de ley de reforma de la Ley Orgánica del Poder
+    Judicial en el aforamiento de diferentes miembros de la Familia Real.
+    Consta la opinión favorable del Consejo General del Poder Judicial tanto
+    a tal propuesta como a la regulación del estatuto jurídico de don Juan
+    Carlos y doña Sofía, atribuyendo a ambos el aforamiento tras la
+    abdicación. (Rumores). Hasta la fecha, tanto la Constitución como la Ley
+    Orgánica del Poder Judicial o los estatutos de autonomía prevén el
+    aforamiento de diferentes cargos del Poder Ejecutivo, Legislativo o
+    Judicial y de altas instituciones del Estado o de las comunidades
+    autónomas; sin embargo, no existe ninguna previsión concreta en nuestro
+    ordenamiento jurídico... (Rumores).
+
+    <br /><br />El señor PRESIDENTE: Perdón, señor diputado.
+
+    <br /><br />Por favor, ruego atención al que está interviniendo.
+
+    <br /><br />El señor BARREDA DE LOS RÍOS: Gracias, señor presidente.
+
+    <br /><br />Decía que no existe ninguna previsión respecto al órgano judicial que debe
+    conocer de los procedimientos civiles o penales dirigidos contra miembros
+    de la Familia Real. Pues bien, conforme a las recomendaciones del Consejo
+    General del Poder Judicial y de la Fiscalía General del Estado, el
+    proyecto de ley ha optado por el aforamiento ante el Tribunal Supremo de
+    determinados miembros de la Familia Real. Lo hace así no solo atendiendo,
+    por ejemplo, a la dignidad de quien ha sido Rey de España, sino al
+    tratamiento dispensado a los titulares de otras magistraturas y poderes
+    del Estado.
+
+    <br /><br />En cuanto al fondo de la cuestión, señorías, la política debe también ser
+    pedagogía, como le gusta decir al señor portavoz de Convergència i Unió.
+    Por ello, debo recordar cuál es la verdadera naturaleza del aforamiento.
+    Creo que tenemos la obligación, y también la responsabilidad, de evitar
+    debates que tergiversen los hechos o adulteren el lenguaje al servicio de
+    la más simple demagogia o el más ramplón de los populismos. En el trámite
+    de este proyecto de ley no han sido pocas las voces, todas ellas aforadas
+    -es más, todas ellas amparadas en la inmunidad parlamentaria-, que han
+    pujado en una verdadera subasta de desafueros. Hay quienes confunden la
+    libertad de expresión con barra libre para el insulto o la insidia.
+    Dejando aparte la mucha o poca educación de cada cual, solo acreditan
+    -permítanme decirlo así- la carencia de argumentos sobre el fondo de la
+    cuestión. Se ha querido en el curso de este debate en Comisión y en Pleno
+    sembrar la sombra de la sospecha sobre las intenciones del Gobierno; se
+    ha tachado a las más altas instancias judiciales del país de justicia
+    parasitada y de excepción dedicada a hacer trajes a medida de las
+    personas aforadas, y se ha recurrido a metáforas literarias que hubieran
+    sonrojado al príncipe de Lampedusa. Se trata de discursos que nada tienen
+    que ver con el debate o la crítica; por el contrario, carecen de todo
+    rigor, cuando no reproducen simplemente tópicos o clichés. Insisto, todos
+    ellos en boca de aforados, todos amparados en la inmunidad parlamentaria.
+    Porque, ciertamente, confundir fuero con privilegio es precisamente eso:
+    demagogia y falta de rigor. El aforamiento no es un privilegio, sino una
+    competencia jurisdiccional concreta con pleno aval constitucional. No es
+    una prerrogativa personal, sino una garantía para la institución a la que
+    el aforado pertenece, así lo ha afirmado reiteradamente la jurisprudencia
+    constitucional. Se trata de lograr que el procedimiento judicial se
+    desarrolle con plena normalidad con independencia de la relevancia o
+    notoriedad pública de la persona enjuiciada o, lo que es lo mismo, se
+    trata de preservar también la independencia judicial de la posible
+    presión ambiental que tal notoriedad pudiera representar, como muy bien
+    ha argumentado el señor Salvador. De hecho, de ese énfasis en la garantía
+    de las instituciones se pueden derivar inconvenientes para las personas
+    aforadas como, por ejemplo, el hecho de no disponer de una segunda
+    instancia. En todo caso, es fundamental recalcar -porque lo contrario
+    afectaría al principio de igualdad- que el aforamiento no
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página22)"><b>Página
+    22</b></a></p><br />
+
+    <br /><br />supone impunidad ni inmunidad. El aforado responde en vía civil o penal de
+    sus actos y el aforamiento no exime de responsabilidad ni reduce el
+    alcance de las eventuales responsabilidades, tanto civiles como penales.
+    Existe un único derecho sustantivo en España y se aplica por igual por
+    todos los órganos jurisdiccionales, esté aforada o no la persona
+    enjuiciada. Quede esto claro a efectos de la Cámara y también para el
+    conjunto de la opinión pública. Reitero: el aforamiento no supone ni
+    impunidad, ni inmunidad, ni limitación de responsabilidades ante la
+    justicia, tan solo determina el órgano competente para el enjuiciamiento,
+    que será un tribunal ante el que el aforado responde en los mismos
+    términos y conforme a las mismas leyes que el resto de los ciudadanos.
+    Esa es la realidad de nuestras previsiones constitucionales y legales en
+    contraste con los múltiples desatinos de tanta lengua de trapo jurídica y
+    de tantos juristas de ocasión a los que lo último que parece preocuparles
+    es fundamentar en derecho sus exabruptos. Todo ello, por supuesto, con
+    independencia del legítimo debate sobre el número de aforados o la
+    necesidad de los mismos que actualmente existe en España, debate que
+    tendremos ocasión de abordar -como se ha dicho- en los próximos meses,
+    cuando el Gobierno remita a la Cámara la reforma de la Ley Orgánica del
+    Poder Judicial.
+
+    <br /><br />En cuanto a la concreta regulación propuesta, señorías, el artículo 55 bis
+    de la Ley Orgánica del Poder Judicial atribuye a las salas de lo Civil y
+    de lo Penal del Tribunal Supremo el conocimiento de todas las acciones
+    civiles o penales eventualmente dirigidas contra la Reina consorte o el
+    consorte de la Reina, la Princesa o Príncipe de Asturias y su consorte,
+    así como contra el Rey o Reina que hubiera abdicado y su consorte, es
+    decir, se determina por la ley qué concretos miembros de la Familia Real
+    están aforados. No todos los miembros de la Familia Real ni, por
+    supuesto, otros parientes del Rey, tan solo la Reina consorte o el
+    consorte de la Reina y quienes hubieran ocupado la Jefatura del Estado o
+    estuvieren llamados por las previsiones constitucionales a desempeñarla,
+    así como sus consortes. Y se determina qué salas del Tribunal Supremo
+    serán competentes para la tramitación y enjuiciamiento de los procesos en
+    que esas personas aforadas sean parte denunciada, querellada o demandada,
+    exclusivamente eso, señorías, y no va más allá la previsión del proyecto
+    de ley. Por tanto, se excluyen del aforamiento otros supuestos; no existe
+    aforamiento para miembro alguno de la Familia Real cuando sean ellos
+    mismos quienes inicien un procedimiento como demandantes, denunciantes o
+    querellantes, ni cuando se vean involucrados en un procedimiento como
+    víctimas o fueren llamados como testigos. Aclaro esto porque, oyendo
+    algunos discursos, viendo algunos debates en algunos medios de
+    comunicación, pudiera parecer lo contrario. De hecho, no falta quien lo
+    divulgue, con manifiesta falsedad, alegre e irresponsablemente, por lo
+    que creo -insisto- que es importante dejarlo claro en este debate.
+
+    <br /><br />Por último, la disposición transitoria del proyecto de ley prevé que los
+    procedimientos iniciados con anterioridad a la entrada en vigor del
+    artículo 55 bis sean suspendidos y remitidos a la sala competente del
+    Tribunal Supremo, que continuará su tramitación. Es una previsión
+    habitual, un supuesto que se da cuando una persona, cualquiera de los
+    presentes, por ejemplo, pasa a ser aforada y tenía alguna causa abierta
+    ante otro juzgado o tribunal. No hace falta que busquen tres pies al gato
+    ni que siembren de insidia sus discursos, parapetados en la inmunidad
+    parlamentaria. Se trata de una disposición que permite la continuidad de
+    eventuales procedimientos iniciados en lo que antes he denominado como
+    situaciones transitorias.
+
+    <br /><br />Termino, señor presidente. En cuanto al resto de los aspectos contemplados
+    en el proyecto de ley, a los que otros grupos no han dedicado atención,
+    permiten lograr diferentes objetivos vinculados a la racionalización del
+    sector público y la reforma administrativa en general en lo que afecta a
+    la Ley Orgánica del Poder Judicial. Además, a través del acuerdo en torno
+    a enmiendas planteadas por el Grupo de Convergència i Unió se han
+    atendido otros aspectos y mejorado la estructura de la Ley Orgánica del
+    Poder Judicial.
+
+    <br /><br />Por todo ello, señorías, y especialmente con voluntad de atender una
+    situación sobrevenida tras la sucesión en la Corona sin dilaciones
+    innecesarias, el Grupo Popular aprobará el presente proyecto de ley
+    orgánica.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Barreda.
+
+    <br /><br />Señorías, como les habrá ocurrido a muchos de ustedes, yo me he enterado
+    esta mañana con gran tristeza de que nos va a abandonar en los próximos
+    meses en su escaño don Alfredo Pérez Rubalcaba. Como presidente del
+    Congreso, y creo que represento la voluntad de la inmensa mayoría de los
+    diputados, quiero agradecerle su labor durante todos estos años, su labor
+    en el escaño, que ha dado categoría y altura a la función de diputado.
+    Siempre será recordado como una gran figura del parlamentarismo del siglo
+    XXI. Muchas gracias. (Aplausos de las señoras y los señores diputados,
+    puestos en pie).
+
+    <br /><br />En unos minutos, procederemos a votar. (Pausa).
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página23)"><b>Página
+    23</b></a></p><br />
+
+    <br /><br />Proyecto de ley orgánica complementaria de la Ley de racionalización del
+    sector público y otras medidas de reforma administrativa, por la que se
+    modifica la Ley Orgánica 6/1985, de 1 de julio, del Poder Judicial.
+
+    <br /><br />Votamos en primer lugar una enmienda del Grupo Mixto, del señor Bosch.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 327; a
+    favor, 21; en contra, 290; abstenciones, 16.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Enmienda del Grupo Vasco PNV.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 327; a
+    favor, 139; en contra, 188.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Votación en bloque de las enmiendas del Grupo de Unión Progreso y
+    Democracia.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 322; a
+    favor, 18; en contra, 183; abstenciones, 121.
+
+    <br /><br />El señor PRESIDENTE: Quedan rechazadas.
+
+    <br /><br />Voto particular del Grupo Parlamentario de La Izquierda Plural. Se somete
+    a votación el voto particular contra la introducción de las enmiendas
+    números 8, 9 y 16 del Grupo Popular.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 327; a
+    favor, 25; en contra, 184; abstenciones, 118.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazado.
+
+    <br /><br />Votación en bloque de las enmiendas del Grupo Socialista.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 323; a
+    favor, 117; en contra, 184; abstenciones, 22.
+
+    <br /><br />El señor PRESIDENTE: Quedan rechazadas.
+
+    <br /><br />Votación del dictamen de la Comisión. En primer lugar, votación conjunta
+    de: Artículo Único, apartado uno (adición de un nuevo artículo 55 bis a
+    la Ley orgánica del Poder Judicial); disposición transitoria única
+    (procedimientos en trámite), y apartado IV del preámbulo.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 327; a
+    favor, 185; en contra, 30; abstenciones, 112.
+
+    <br /><br />El señor PRESIDENTE: Quedan aprobados.
+
+    <br /><br />Resto del dictamen.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 326; a
+    favor, 184; en contra, 31; abstenciones, 111.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobado.
+
+    <br /><br />VOTACIÓN DE CONJUNTO.
+
+    <br /><br />El señor PRESIDENTE: Votación de conjunto del proyecto de ley orgánica,
+    precisamente por su carácter orgánico.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página24)"><b>Página
+    24</b></a></p><br />
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 325; a
+    favor, 184; en contra, 32; abstenciones 109.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobado el proyecto de ley orgánica.
+
+    <br /><br />Se levanta la sesión.
+
+    <br /><br />Eran las dos y treinta minutos de la tarde.
+    </div>
+<hr size="1" noshade="" /><!-- BRSCGI © 1995-2004 Baratz Servicios de Teledocumentación, S.A. http://www.baratz.es -->
+
+
+<!-- FUNCION PIE -->
+    
+
+
+
+                 
+
+
+
+
+
+
+<script language="JavaScript" type="text/javascript">
+	cargaLegSesion('null')
+</script>
+ 
+<!-- FIN  PIE   -->
+        <div id="PIE_POPUP">
+		<p><span lang="es">Congreso de los Diputados</span> · C/Floridablanca s/n - 28071 - MADRID ·<u> <a style="color:#FFFFFF" href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Publicaciones/Aviso_Legal">Aviso Legal</a></u></p>
+	</div>
+
+</div></div></div></td></tr>
+</tbody></table>
+</div></td></tr>
+<tr>
+<td colspan="1" style="width:100%;"><img src="/images/pobtrans.gif" height="4" width="1" alt="" style="display:block" /></td>
+</tr>
+</tbody></table><!-- show footer template = 1824729544 -->
+</td>
+      </tr>
+    </tbody></table>
+  </td></tr>
+</tbody></table>
+</div>
+
+
+<!-- Page Metadata Generated On: 20-MAR-2015:02:09:51  Time Taken: 20 msecs -->
+</body></html>

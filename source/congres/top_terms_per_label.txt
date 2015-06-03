@@ -1,0 +1,43 @@
+﻿0                                vivienda   
+1                                justicia   
+2                               educación   
+3                                  empleo   
+4                          medio ambiente   
+5                                   salud   
+6                                 jóvenes   
+7                               ideología   
+8                                economía   
+9                           internacional   
+10                                cultura   
+11                  inseguridad ciudadana   
+12                                 social   
+13  servicios públicos e infraestructuras   
+14                             corrupción   
+15                        fuerzas armadas   
+16             tecnologia e investigación   
+17                             terrorismo
+
+
+
+[u'vivienda', u'vivienda protegida', u'viviendas', u'viviendas protegidas', u'protecci\xf3n oficial', u'suelo', u'vivienda libre', u'precio', u'alquiler', u'suelo p\xfablico', u'metros cuadrados', u'familias espa\xf1olas', u'vivienda digna', u'sociedad p\xfablica', u'familias', u'acceso', u'j\xf3venes', u'conferencia sectorial', u'c\xf3digo t\xe9cnico', u'ayudas']
+[u'fiscal general', u'fiscal', u'fiscal\xeda general', u'estatuto org\xe1nico', u'fiscal\xeda', u'fiscal\xeda anticorrupci\xf3n', u'consejo fiscal', u'justicia', u'tribunal supremo', u'pol\xedtica antiterrorista', u'pol\xedtica criminal', u'fiscales', u'responsabilidad pol\xedtica', u'juana chaos', u'audiencia nacional', u'pacto antiterrorista', u'consejo general', u'servicio p\xfablico', u'comparte', u'proceso']
+[u'sistema educativo', u'educaci\xf3n', u'comunidad educativa', u'formaci\xf3n profesional', u'fracaso escolar', u'educaci\xf3n infantil', u'pol\xedtica educativa', u'becas', u'reforma educativa', u'abandono escolar temprano', u'conferencia sectorial', u'formaci\xf3n', u'calidad', u'educaci\xf3n p\xfablica', u'alumnos', u'ense\xf1anza', u'administraciones educativas', u'centros', u'abandono escolar', u'resultados']
+[u'reforma laboral', u'negociaci\xf3n colectiva', u'mercado laboral', u'di\xe1logo social', u'agentes sociales', u'seguridad social', u'flexibilidad interna', u'contrato', u'despido', u'contratos indefinidos', u'relaciones laborales', u'contrataci\xf3n indefinida', u'huelga general', u'contratos', u'crecimiento econ\xf3mico', u'contrato indefinido', u'gobiernos socialistas', u'datos', u'paro', u'trabajadores']
+[u'energ\xedas renovables', u'seguridad nuclear', u'energ\xeda', u'central nuclear', u'eficiencia energ\xe9tica', u'pol\xedtica energ\xe9tica', u'energ\xeda nuclear', u'centrales nucleares', u'renovables', u'd\xe9ficit tarifario', u'cambio clim\xe1tico', u'mix energ\xe9tico', u'sistema el\xe9ctrico', u'energ\xe9tico', u'materia energ\xe9tica', u'energ\xeda el\xe9ctrica', u'seguridad', u'ahorro energ\xe9tico', u'medio ambiente', u'santa mar\xeda']
+[u'sistema nacional', u'sanidad', u'sanidad p\xfablica', u'consejo interterritorial', u'sistema sanitario', u'asistencia sanitaria', u'profesionales sanitarios', u'salud', u'gasto farmac\xe9utico', u'atenci\xf3n primaria', u'profesionales', u'atenci\xf3n sanitaria', u'servicios sanitarios', u'ley general', u'medicamentos', u'consumo', u'copago', u'atenci\xf3n', u'pol\xedtica farmac\xe9utica', u'copago sanitario']
+[u'j\xf3venes', u'paro juvenil', u'paro', u'j\xf3venes espa\xf1oles', u'juvenil', u'desempleo juvenil', u'garant\xeda juvenil', u'interlocutores sociales', u'seguridad social', u'poblaci\xf3n activa', u'mercado laboral', u'contratos', u'j\xf3venes menores', u'reforma laboral', u'contratos indefinidos', u'oportunidades', u'di\xe1logo social', u'agentes sociales', u'desempleo', u'formaci\xf3n profesional']
+[u'guerra civil', u'memoria hist\xf3rica', u'guerra', u'archivo', u'comisi\xf3n t\xe9cnica', u'memoria', u'documentos', u'vasco', u'reconocimiento', u'documentaci\xf3n', u'nacionalista vasco', u'nacionalidad espa\xf1ola', u'administraci\xf3n general', u'v\xedctimas', u'instituciones', u'comisi\xf3n mixta', u'derechos', u'democracia', u'cortes generales', u'generalitat']
+[u'empresas', u'empresas espa\xf1olas', u'medianas empresas', u'empresa', u'pol\xedtica industrial', u'econom\xeda espa\xf1ola', u'industria', u'industrial', u'mediana empresa', u'econom\xeda', u'i d i', u'peque\xf1as empresas', u'aut\xf3nomos', u'actividad', u'peque\xf1as', u'crisis econ\xf3mica', u'trabajadores aut\xf3nomos', u'actividad econ\xf3mica', u'industria espa\xf1ola', u'tejido industrial']
+[u'asuntos exteriores', u'pol\xedtica exterior', u'derechos humanos', u'cooperaci\xf3n', u'oriente medio', u'intereses espa\xf1oles', u'comunidad internacional', u'diplomacia espa\xf1ola', u'posici\xf3n com\xfan', u'secretario general', u'posici\xf3n', u'exteriores', u'intereses', u'cumbre iberoamericana', u'espa\xf1oles', u'am\xe9rica latina', u'visita', u'presidencia', u'cooperaci\xf3n internacional', u'asuntos generales']
+[u'cultura', u'deporte', u'lengua', u'patrimonio', u'cultural', u'lenguas cooficiales', u'cine', u'lengua oficial', u'pol\xedtica cultural', u'patrimonio hist\xf3rico', u'educaci\xf3n', u'patrimonio cultural', u'lenguas', u'cine espa\xf1ol', u'lengua catalana', u'lenguas oficiales', u'lengua castellana', u'ciento cultural', u'industrias culturales', u'instituto cervantes']
+[u'seguridad ciudadana', u'polic\xeda', u'seguridad', u'guardia civil', u'inseguridad ciudadana', u'polic\xeda nacional', u'cuerpo nacional', u'polic\xeda judicial', u'interior', u'seguridad p\xfablica', u'polic\xedas', u'guardias civiles', u'efectivos policiales', u'juicios r\xe1pidos', u'delincuencia', u'infracciones penales', u'datos', u'incremento', u'derechos fundamentales', u'c\xf3digo penal']
+[u'igualdad', u'servicios sociales', u'gasto social', u'pol\xedtica social', u'pobreza infantil', u'pobreza', u'pol\xedticas sociales', u'mujeres', u'personas dependientes', u'inclusi\xf3n social', u'exclusi\xf3n social', u'protecci\xf3n social', u'personas mayores', u'autonom\xeda personal', u'familias', u'social', u'brecha salarial', u'seguridad social', u'vida familiar', u'atenci\xf3n']
+[u'alta velocidad', u'l\xednea', u'ave', u'red', u'tren', u'red convencional', u'madrid', u'fomento', u'tramo', u'red ferroviaria', u'eje atl\xe1ntico', u'corredor', u'barcelona', u'transporte', u'trenes', u'frontera francesa', u'ancho uic', u'conexi\xf3n', u'transporte ferroviario', u'redes transeuropeas']
+[u'agencia tributaria', u'fraude fiscal', u'amnist\xeda fiscal', u'fraude', u'hacienda p\xfablica', u'agencia', u'reforma fiscal', u'reforma tributaria', u'hacienda', u'ley general tributaria', u'para\xedsos fiscales', u'administraci\xf3n tributaria', u'personas f\xedsicas', u'pol\xedtica fiscal', u'recaudaci\xf3n tributaria', u'administraciones p\xfablicas', u'sistema tributario', u'obligaciones tributarias', u'rentas medias', u'lucha']
+[u'fuerzas armadas', u'defensa', u'militares', u'defensa nacional', u'seguridad', u'misi\xf3n', u'fuerzas armadas espa\xf1olas', u'tropas', u'militar', u'ej\xe9rcito', u's', u'accidente', u'apoyo', u'guardia civil', u'espa\xf1oles', u'fuerzas', u'buque', u'operaciones', u'siglo xix', u'unidad']
+[u'investigaci\xf3n', u'i d i', u'i d', u'ciencia', u'investigaci\xf3n cient\xedfica', u'recursos humanos', u'desarrollo tecnol\xf3gico', u'tecnolog\xeda', u'investigadores', u'plan nacional', u'innovaci\xf3n', u'organismos p\xfablicos', u'pol\xedtica cient\xedfica', u'personal investigador', u'comunidad cient\xedfica', u'desarrollo', u'proyectos', u'recursos', u'sistema espa\xf1ol', u'investigaciones cient\xedficas']
+[u'pa\xeds vasco', u'vasco', u'concierto econ\xf3mico', u'eta', u'tribunal constitucional', u'nacionalista vasco', u'pol\xedtica antiterrorista', u'sociedad vasca', u'pol\xedtica penitenciaria', u'instituciones penitenciarias', u'pa\xeds', u'parlamento vasco', u'comunidad aut\xf3noma vasca', u'ciudadanos vascos', u'competencias', u'organizaci\xf3n terrorista', u'partidos pol\xedticos', u'pol\xedtico', u'plan ibarretxe', u'banda terrorista eta']
+
+
+
+

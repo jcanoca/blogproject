@@ -1,0 +1,3150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head>
+<style>
+body{float:left;font-size:62.5%;font-family: Arial, Verdana, Helvetica, sans-serif;}
+blockquote{margin:0px;padding:0px;border:0px;list-style-type:none; }
+a{text-decoration:none; color:#626469;}
+a:hover{text-decoration:underline;font-weight:normal;color:#626469;}
+a:active{text-decoration:none;font-weight:normal;color:#000000;}
+</style>
+<title>PopUpCGI</title>
+<link href="/wc/htdocs/web/css/congreso.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/portada.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/prensa.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/apps.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/wc/htdocs/web/js/wc.js" language="JavaScript"></script>
+<style type="text/css">.GroupHeaderid1siteid73{Background-Color:#336699;Height:20px;Text-Align:left;}
+.GroupHeaderLinkid1siteid73{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.GroupHeaderTextid1siteid73{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.RegionHeaderid1siteid73{Background-Color:#b29200;Height:20px;Text-Align:left;}
+.RegionHeaderTextid1siteid73{Color:#ffffff;Font-Family:Verdana;Font-Size:10px;Font-Weight:Bold;}
+.Bodyid1siteid73{Background-Color:#FFFFFF;}
+.ArchivoAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.AudioFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.AudioNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo1Pieid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo1Region3id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo2Pieid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo2Region3id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo3Pieid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.ComprobacionSelladoid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Concesionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Convocatoriaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Correcciondeerroresid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.CuartoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescNotaPrensaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.Descripcionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.DescripcionAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescripcionBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescripcionDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Destinoid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DiaSemanaAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DiaSemanaCanalid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnPortadaAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnPortadaNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnVentanaNuevaAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnVentanaNuevaNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Enlaceid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnlaceAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnlaceURLNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EtiquetaArchivoAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EtiquetaEnlaceNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EtiquetaURLNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EtiquetadelEnlacedelAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Faxid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Fax2id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaCanalid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaFotonoticiaid1siteid73{Color:#b29200;Font-Family:Arial;Font-Size:11px;}
+.FechaFotonoticiaPresidenciaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaMenuCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaNotaPrensaid1siteid73{Color:#b29200;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.FechaNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaRuedaPrensaid1siteid73{Color:#b29200;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.Foto1descargaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto1emergenteid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto1thumbnailid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto2descargaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto2emergenteid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto2thumbnailid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FotoEmergenteNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FotoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.GraficoFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.GraficoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Grupoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Horaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.HoraAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.HoraCanalid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.ImagenDiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.InformacionGeneralid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.InstruccinArchivo1id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.InstruccinArchivoIIid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Intervinienteid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.JefedeCocinaMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LineaAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LineaCanalid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.ListaPuestoMiembroDiputadoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.ListaPuestoMiembroSenadoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Listadebecariosparticipantesid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Lugarid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.LugarAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LugarCanalid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Mail1id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Mail2id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Mail3id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Mail4id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Nombreid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.NombreBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NombreDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NombreMiembroid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.NumeroOrdenAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NumeroOrdenImagenid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NumeroOrdenNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PDFBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PDFDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PaginaBOCGBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PieImagenid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato1Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato2Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato3Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato4Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlatoSaludableMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Programaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PuestoMiembroDiputadoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.PuestoMiembroSenadoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.QuintoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.RefBOEid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.RefBOEIIid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlato1Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlato2Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlatoSaludableMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SeptimoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SextoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SiglasBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SiglasDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SugerenciaCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TargetNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Telefonoid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Telefono2id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaRuedaPrensaid1siteid73{Color:#000000;Font-Family:Arial;Font-Size:11px;}
+.TercerPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TextoAlternativoFoto1Fotonoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TextoAlternativoFoto2Fotonoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TextoAlternativoFotoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TitularFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Tituloid1siteid73{Color:#626469;Font-Family:Arial, Helvetica;Font-Size:11px;Font-Weight:Bold;}
+.TituloAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TituloImagendelDiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TituloNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TituloNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.URLEnlaceNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.VideoFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.VideoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Visitasid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.authorid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.createdateid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.creatorid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.defaultattributeid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.descriptionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.documentsizeid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.expiredateid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.inplacedisplayid1siteid73{Color:#000000;Font-Family:Arial;Font-Size:11px;}
+.itemfunctionid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.keywordsid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.listaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.perspectivesid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.scoreid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.subpagetitleid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.titleid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.titleorimageid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.wwsbr_category_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_charset_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_image_or_title_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_img_or_title_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_itemtype_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_mime_type_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_page_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_pagegroup_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_publishdate_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_and_img_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_updatedate_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_updator_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_version_number_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LeftCurve{}
+.PortletBodyColor{}
+.PortletHeaderColor{Background-Color:#b29200;}
+.PortletHeaderLink{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletHeaderStyle{}
+.PortletHeaderText{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:10pt;Font-Weight:Bold;}
+.PortletHeading1{Color:#336699;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.PortletHeading2{Color:#336699;Font-Family:Arial, Helvetica;Font-Size:8pt;Font-Weight:Bold;}
+.PortletHeading3{Color:#336699;Font-Family:Arial, Helvetica;Font-Size:7pt;Font-Weight:Bold;}
+.PortletHeading4{Color:#336699;Font-Family:Arial, Helvetica;Font-Size:7pt;Font-Weight:Bold;}
+.PortletSubHeaderColor{Background-Color:#EEEEDD;}
+.PortletSubHeaderLink{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:9pt;}
+.PortletSubHeaderText{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:9pt;}
+.PortletText1{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletText2{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletText3{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:7pt;}
+.PortletText4{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:7pt;}
+.RightCurve{}
+.LeftSubTabid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFsl.gif);Background-Position:left top;Background-Repeat:no-repeat;}
+.LeftTabBgSlantid1siteid73{Background-Attachment:scroll;Background-Color:#CCCC99;Background-Image:url(http://www.congreso.es/images/FFFFFFtl.gif);Background-Position:left top;Background-Repeat:no-repeat;}
+.LeftTabForeSlantid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFtl.gif);Background-Position:left top;Background-Repeat:no-repeat;}
+.RightSubTabid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFsr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.RightTabBgCurveid1siteid73{Background-Attachment:scroll;Background-Color:#CCCC99;Background-Image:url(http://www.congreso.es/images/FFFFFFtr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.RightTabForeCurveid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFtr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.SubTabBgTextid1siteid73{Color:#CCCC99;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:11pt;Font-Weight:Bold;}
+.TabBackgroundColorid1siteid73{Background-Color:#CCCC99;}
+.TabBackgroundTextid1siteid73{Color:#003366;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:10pt;}
+.TabForegroundColorid1siteid73{Background-Color:#336699;}
+.TabForegroundTextid1siteid73{Color:#FFFFFF;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:10pt;Font-Weight:Bold;}
+.portlet-font{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-font-dim{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-status{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-info{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-error{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-alert{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-success{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-header{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:9pt;    Font-Weight:Bold;    }
+.portlet-section-body{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-alternate{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-selected{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-subheader{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    Font-Weight:Bold;    }
+.portlet-section-footer{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-text{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-header{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:9pt;    Font-Weight:Bold;    Background-Color:#EEEEDD;    }
+.portlet-table-body{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-alternate{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-selected{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-subheader{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    Font-Weight:Bold;    }
+.portlet-table-footer{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-text{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-input-field{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-button{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-icon-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-dlg-icon-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-field-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-field{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.RegionNoBorder{}
+.RegionBorder { border:#b29200  1px solid; }
+.RegionHeaderColor { border:#b29200 0px solid;}
+.PageColor { background-color:#FFFFFF}
+ </style>
+</head>
+<body leftmargin="0" rightmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+<div id="texto_parrafo">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
+  <tbody><tr valign="top"><td align="center" valign="top">
+    <table width="500" cellpadding="0" cellspacing="0" border="0" height="100%">
+      <tbody><tr>
+        <td align="center" width="500" height="100%" valign="top">
+<iframe id="portalIFrame" title="" frameborder="0" width="0" height="0" src="/images/pobtrans.gif"></iframe><script type="text/javascript" src="http://www.congreso.es/portal/pls/portal/PORTAL.wwsbr_javascript.page_js?p_language=e&amp;p_version=10.1.4.2.0.197">
+&lt;!-- Comment out script for old browsers
+//--&gt;
+</script>
+<table width="100%" id="rg88017" border="0" cellpadding="0" cellspacing="0" summary=""><tbody><tr align="LEFT">
+<td valign="top" style="padding:4px 4px 0px 4px;width:100%;"><div id="p73_2138133_73_2138049_2138049"><table border="0" width="100%" cellpadding="0" cellspacing="0" class="RegionNoBorder"><tbody><tr><td class="RegionHeaderColor" width="100%" dir="LTR"><div id="pcnt73_2138133_73_2138049_2138049">
+
+
+
+
+
+
+
+  
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+        <title>Listas de valores</title>
+        <script language="JavaScript" type="text/javascript" src="/wc/htdocs/web/js/wc.js"></script> 
+		<link type="text/css" href="/wc/htdocs/web/css/apps.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/congreso.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/portada.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/prensa.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/texto_integro.css" rel="STYLESHEET" />   
+
+
+<script>
+function opcionesVentana(){
+
+window.resizeTo(630,520);
+}
+
+window.onload = function(){
+    opcionesVentana();
+}
+
+</script>
+	<div id="CONGRESO_TEXTO_INTEGRO_POPUP">
+            <div id="CABECERA_TEXTO_POPUP">
+                    <div class="cabecerah1"><img src="/wc/htdocs/web/img/logo_mini.gif" alt="Congreso de los Diputados" border="0" /></div>
+                    <div class="btn_cerrar" title="Cerrar">
+                        <p><img src="/wc/htdocs/web/img/ico_cerrar.gif" width="9" height="9" alt="Cerrar" /> <a href="javascript:window.close();" title="Cerrar">Cerrar</a></p>                   
+                    </div>
+                    
+                    <div class="fincabecera"> </div>
+            </div>
+
+
+
+    <div id="CONGRESO_TEXTO_INTEGRO_POPUP"> <div id="CABECERA_TEXTO_POPUP"> DS. Congreso de los Diputados, Pleno y Dip. Perm., núm. 207, de 26/06/2014 </div><div id="CABECERA_TEXTO_POPUP">cve:
+    DSCD-10-PL-207 </div> <div class="fincabecera"> </div> </div> <!-- CONGRESO_TEXTO_INTEGRO --> <div id="TEXTOS_POPUP">	<br />
+    	<div class="titular_texto"><br />CORTES GENERALES
+
+    <br />DIARIO DE SESIONES DEL CONGRESO DE LOS DIPUTADOS
+
+    <br />PLENO Y DIPUTACIÓN PERMANENTE
+    </div>
+
+    <div class="subtitular_texto"><br />Año 2014 X LEGISLATURA Núm.  207
+    <br />PRESIDENCIA DEL EXCMO.  SR.  D. JESÚS POSADA MORENO
+    <br />Sesión plenaria núm.  195
+    <br />celebrada el jueves,
+    <br />26 de junio de 2014</div>
+          	<div class="texto_completo"><br /><br />ORDEN DEL DÍA:
+
+    <br /><br />Dictamen de la Comisión del Estatuto de los Diputados:
+
+    <br /><br />- Dictamen de la Comisión del Estatuto de los Diputados sobre declaración
+    de actividades de Excmos. Sres. Diputados. (Número de expediente
+    042/000035) ... <a href="#(Página5)">(Página5)</a>
+
+    <br /><br />Enmiendas del Senado:
+
+    <br /><br />- Proyecto de ley de ordenación, supervisión y solvencia de entidades de
+    crédito. "BOCG. Congreso de los Diputados", serie A, número 80-1, de 14
+    de febrero de 2014. "BOCG. Congreso de los Diputados", serie A, número
+    80-3, de 29 de abril de 2014. (Número de expediente 121/000080) ... <a href="#(Página5)">(Página5)</a>
+
+    <br /><br />- Proyecto de ley por la que se regula el procedimiento para la
+    determinación de la representatividad de las organizaciones profesionales
+    agrarias y se crea el Consejo Agrario. "BOCG. Congreso de los Diputados",
+    serie A, número 75-1, de 17 de enero de 2014. (Número de expediente
+    121/000075) ... <a href="#(Página12)">(Página12)</a>
+
+    <br /><br />Dictámenes de la Comisión de Asuntos Exteriores sobre convenios
+    internacionales:
+
+    <br /><br />- Acuerdo entre el Reino de España y la República de Serbia para el
+    intercambio y protección recíproca de información clasificada, hecho en
+    Madrid el 13 de marzo de 2014. "BOCG. Cortes Generales", serie A, número
+    275, de 25 de abril de 2014. (Número de expediente 110/000122) ... <a href="#(Página20)">(Página20)</a>
+
+    <br /><br />- Acuerdo de cooperación entre la Unión Europea y sus Estados miembros,
+    por una parte, y la Confederación Suiza, por otra, sobre los programas
+    europeos de navegación por satélite, hecho en Bruselas el 18 de diciembre
+    de 2013. "BOCG. Cortes Generales", serie A, número 279, de 16 de mayo de
+    2014. (Número de expediente 110/000123) ... <a href="#(Página20)">(Página20)</a>
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página2)"><b>Página
+    2</b></a></p><br />
+
+    <br /><br />- Protocolo para la eliminación del comercio ilícito de productos de
+    tabaco, hecho en Seúl el 12 de noviembre de 2012. "BOCG. Cortes
+    Generales", serie A, número 282, de 23 de mayo de 2014. (Número de
+    expediente 110/000124) ... <a href="#(Página20)">(Página20)</a>
+
+    <br /><br />Dictámenes de Comisiones sobre iniciativas legislativas:
+
+    <br /><br />- Proyecto de ley orgánica de régimen disciplinario de las Fuerzas
+    Armadas. "BOCG. Congreso de los Diputados", serie A, número 47-1, de 17
+    de mayo de 2013. (Número de expediente 121/000047) ... <a href="#(Página22)">(Página22)</a>
+
+    <br /><br />Propuestas de creación de subcomisiones:
+
+    <br /><br />- Solicitud de creación de una subcomisión, en el seno de la Comisión de
+    Sanidad y Servicios Sociales, para abordar el problema de la violencia
+    contra los niños y las niñas. "BOCG. Congreso de los Diputados", serie D,
+    número 473, de 6 de junio de 2014. (Número de expediente 158/000030) ...
+    <a href="#(Página30)">(Página30)</a>
+
+    <br /><br />Solicitud de prórroga de subcomisiones:
+
+    <br /><br />- Solicitud de la Comisión de Interior para prorrogar, hasta el 31 de
+    marzo de 2015, el plazo otorgado a la Subcomisión de estudio sobre las
+    redes sociales para la conclusión de sus trabajos. (Número de expediente
+    154/000007) ... <a href="#(Página30)">(Página30)</a>
+
+    <br /><br />Propuestas de creación de subcomisiones. (Votación) ... <a href="#(Página31)">(Página31)</a>
+
+    <br /><br />Mociones consecuencia de interpelaciones urgentes. (Votación) ... <a href="#(Página31)">(Página31)</a>
+
+    <br /><br />Dictamen de la Comisión del Estatuto de los Diputados. (Votación) ... <a href="#(Página32)">(Página32)</a>
+
+    <br /><br />Enmiendas del Senado. (Votación) ... <a href="#(Página32)">(Página32)</a>
+
+    <br /><br />Dictámenes de la Comisión de Asuntos Exteriores sobre convenios
+    internacionales. (Votación) ... <a href="#(Página33)">(Página33)</a>
+
+    <br /><br />Dictámenes de Comisiones sobre iniciativas legislativas. (Votación) ... <a href="#(Página33)">(Página33)</a>
+
+    <br /><br />Votación de conjunto ... <a href="#(Página34)">(Página34)</a>
+
+    <br /><br />SUMARIO
+
+    <br /><br />Se reanuda la sesión a las nueve de la mañana.
+
+    <br /><br />Dictamen de la Comisión del Estatuto de los Diputados ... <a href="#(Página5)">(Página5)</a>
+
+    <br /><br />Dictamen de la Comisión del Estatuto de los Diputados sobre declaración de
+    actividades de señores diputados ... <a href="#(Página5)">(Página5)</a>
+
+    <br /><br />La Presidencia informa de que ningún grupo desea intervenir en este punto
+    del orden del día.
+
+    <br /><br />Enmiendas del Senado ... <a href="#(Página5)">(Página5)</a>
+
+    <br /><br />Proyecto de Ley de ordenación, supervisión y solvencia de entidades de
+    crédito ... <a href="#(Página5)">(Página5)</a>
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página3)"><b>Página
+    3</b></a></p><br />
+
+    <br /><br />En turno de fijación de posiciones intervienen los señores Anchuelo Crego,
+    del Grupo Parlamentario de Unión Progreso y Democracia; Coscubiela
+    Conesa, del Grupo Parlamentario de IU, ICV-EUiA, CHA: La Izquierda
+    Plural; Picó i Azanza, del Grupo Parlamentario Catalán (Convergència i
+    Unió); Gómez Sánchez, del Grupo Parlamentario Socialista, y Araújo Gil,
+    del Grupo Parlamentario Popular en el Congreso.
+
+    <br /><br />Proyecto de Ley por la que se regula el procedimiento para la
+    determinación de la representatividad de las organizaciones profesionales
+    agrarias y se crea el Consejo Agrario ... <a href="#(Página12)">(Página12)</a>
+
+    <br /><br />En turno de fijación de posiciones intervienen el señor Baldoví Roda y las
+    señoras Jordà i Roura y Ariztegui Larrañaga, del Grupo Parlamentario
+    Mixto; los señores Agirretxea Urresti, del Grupo Parlamentario Vasco
+    (EAJ-PNV); Centella Gómez, del Grupo Parlamentario de IU, ICV-EUiA, CHA:
+    La Izquierda Plural; Solsona Aixalà, del Grupo Parlamentario Catalán
+    (Convergència i Unió); Alonso Núñez, del Grupo Parlamentario Socialista,
+    y Serrano Calurano, del Grupo Parlamentario Popular en el Congreso.
+
+    <br /><br />Dictámenes de la Comisión de Asuntos Exteriores sobre Convenios
+    internacionales ... <a href="#(Página20)">(Página20)</a>
+
+    <br /><br />Acuerdo entre el Reino de España y la República de Serbia para el
+    intercambio y protección recíproca de información clasificada, hecho en
+    Madrid el 13 de marzo de 2014. "BOCG. Cortes Generales", serie A, número
+    275, de 25 de abril de 2014 .... <a href="#(Página20)">(Página20)</a>
+
+    <br /><br />Acuerdo de cooperación entre la Unión Europea y sus Estados miembros, por
+    una parte, y la Confederación Suiza, por otra, sobre los programas
+    europeos de navegación por satélite, hecho en Bruselas el 18 de diciembre
+    de 2013 ... <a href="#(Página20)">(Página20)</a>
+
+    <br /><br />Protocolo para la eliminación del comercio ilícito de productos de tabaco,
+    hecho en Seúl el 12 de noviembre de 2012 ... <a href="#(Página20)">(Página20)</a>
+
+    <br /><br />Para fijar su posición sobre determinados convenios intervienen los
+    señores Nuet Pujals, del Grupo Parlamentario de IU, ICV-EUiA, CHA: La
+    Izquierda Plural; Picó i Azanza, del Grupo Parlamentario Catalán
+    (Convergència i Unió); Sáez Jubero, del Grupo Parlamentario Socialista, y
+    Bermúdez de Castro Fernández, del Grupo Parlamentario Popular en el
+    Congreso.
+
+    <br /><br />Dictámenes de Comisiones sobre iniciativas legislativas ... <a href="#(Página22)">(Página22)</a>
+
+    <br /><br />Proyecto de Ley Orgánica de Régimen Disciplinario de las Fuerzas Armadas
+    ... <a href="#(Página23)">(Página23)</a>
+
+    <br /><br />En defensa de las enmiendas que se mantienen vivas para su defensa en
+    Pleno intervienen el señor Tardà i Coma, del Grupo Parlamentario Mixto;
+    la señora Lozano Domingo, del Grupo Parlamentario de Unión Progreso y
+    Democracia; el señor Centella Gómez, del Grupo Parlamentario de IU,
+    ICV-EUiA, CHA: La Izquierda Plural; Guillaumes i Ràfols, del Grupo
+    Parlamentario Catalán (Convergència i Unió); López Garrido, don Diego,
+    por el Grupo Parlamentario Socialista, y Ferrer Roselló, del Grupo
+    Parlamentario Popular en el Congreso.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página4)"><b>Página
+    4</b></a></p><br />
+
+    <br /><br />Propuestas de creación de subcomisiones ... <a href="#(Página30)">(Página30)</a>
+
+    <br /><br />Solicitud de creación de una subcomisión, en el seno de la Comisión de
+    Sanidad y Servicios Sociales, para abordar el problema de la violencia
+    contra los niños y las niñas ... <a href="#(Página30)">(Página30)</a>
+
+    <br /><br />La Presidencia informa de que ningún grupo desea intervenir en este punto
+    del orden del día.
+
+    <br /><br />Solicitud de prórroga de subcomisiones ... <a href="#(Página30)">(Página30)</a>
+
+    <br /><br />Sometida a votación la solicitud de la Comisión de Interior de prórroga
+    hasta el 31 de marzo de 2015 del plazo otorgado para emitir informe a la
+    Subcomisión de estudio sobre las redes sociales, queda aprobada por
+    asentimiento.
+
+    <br /><br />Propuestas de creación de subcomisiones. (Votación) ... <a href="#(Página31)">(Página31)</a>
+
+    <br /><br />Sometida a votación la solicitud de creación de una subcomisión, en el
+    seno de la Comisión de Sanidad y Servicios Sociales, para abordar el
+    problema de la violencia contra los niños y las niñas, queda aprobada por
+    asentimiento.
+
+    <br /><br />Mociones consecuencia de interpelaciones urgentes. (Votación) ... <a href="#(Página31)">(Página31)</a>
+
+    <br /><br />Sometida a votación la moción consecuencia de interpelación urgente del
+    Grupo Parlamentario de IU, ICV-EUiA, CHA: La Izquierda Plural, sobre la
+    política del Gobierno en relación con el reconocimiento de las provincias
+    de Teruel, Soria y Cuenca como zonas escasamente pobladas dentro de la
+    Unión Europea, con objeto de recabar las ayudas que los Fondos
+    Estructurales y el Fondo Social Europeo prevén para las zonas con esa
+    problemática, se aprueba el punto número 1 por 308 votos a favor, y el
+    punto número 2 por 115 votos a favor, 191 en contra y 2 abstenciones.
+
+    <br /><br />Dictamen de la Comisión del Estatuto de los Diputados. (Votación) ... <a href="#(Página32)">(Página32)</a>
+
+    <br /><br />Sometido a votación el dictamen de la Comisión del Estatuto de los
+    Diputados sobre declaración de actividades de excelentísimos señores
+    diputados, se aprueba por asentimiento.
+
+    <br /><br />Enmiendas del Senado. (Votación) ... <a href="#(Página32)">(Página32)</a>
+
+    <br /><br />Sometidas a votación las enmiendas del Senado al proyecto de ley de
+    ordenación, supervisión y solvencia de entidades de crédito, son
+    aprobadas todas.
+
+    <br /><br />Sometidas a votación las enmiendas del Senado al proyecto de ley por la
+    que se regula el procedimiento para la determinación de la
+    representatividad de las organizaciones profesionales agrarias y se crea
+    el Consejo Agrario, son aprobadas todas.
+
+    <br /><br />Dictámenes de la Comisión de Asuntos Exteriores sobre Convenios
+    internacionales. (Votación) ... <a href="#(Página33)">(Página33)</a>
+
+    <br /><br />Sometidos a votación conjunta y por asentimiento los dictámenes de la
+    Comisión de Asuntos Exteriores que figuran en el orden del día, son
+    aprobados.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página5)"><b>Página
+    5</b></a></p><br />
+
+    <br /><br />Dictámenes de Comisiones sobre iniciativas legislativas. (Votación) ... <a href="#(Página33)">(Página33)</a>
+
+    <br /><br />Sometidas a votación separada las enmiendas al proyecto de Ley Orgánica de
+    Régimen Disciplinario de las Fuerzas Armadas, son rechazadas todas.
+
+    <br /><br />Sometidas a votación separada las diversas partes del dictamen, son
+    aprobadas todas.
+
+    <br /><br />Votación de conjunto ... <a href="#(Página34)">(Página34)</a>
+
+    <br /><br />Sometido a votación de conjunto el proyecto de ley orgánica del régimen
+    disciplinario de las Fuerzas Armadas, se aprueba por 282 votos a favor,
+    22 en contra y 5 abstenciones.
+
+    <br /><br />Se levanta la sesión a las doce y cinco minutos del mediodía.
+
+    <br /><br />Se reanuda la sesión a las nueve de la mañana.
+
+    <br /><br />DICTAMEN DE LA COMISIÓN DEL ESTATUTO DE LOS DIPUTADOS:
+
+    <br /><br />- DICTAMEN DE LA COMISIÓN DEL ESTATUTO DE LOS DIPUTADOS SOBRE DECLARACIÓN
+    DE ACTIVIDADES DE EXCELENTÍSIMOS SEÑORES DIPUTADOS. (Número de expediente
+    042/000035).
+
+    <br /><br />El señor PRESIDENTE: Se reanuda la sesión.
+
+    <br /><br />En esta sesión plenaria se incluye el debate y aprobación del dictamen del
+    proyecto de ley orgánica del régimen disciplinario de las Fuerzas
+    Armadas, que tiene carácter de ley orgánica. Por lo tanto, habrá una
+    votación final de conformidad con esa calificación; por ello, tengo que
+    anunciar una hora y, en ese sentido, les comunico que las votaciones no
+    serán antes de las once. Preveo que van a ser bastante después, pero
+    nunca serán antes de las once.
+
+    <br /><br />Respecto al punto del orden del día relativo al dictamen de la Comisión
+    del Estatuto de los Diputados sobre declaración de actividades de los
+    señores diputados, no se han pedido turnos de palabra, por lo que pasamos
+    al siguiente punto.
+
+    <br /><br />ENMIENDAS DEL SENADO:
+
+    <br /><br />- PROYECTO DE LEY DE ORDENACIÓN, SUPERVISIÓN Y SOLVENCIA DE ENTIDADES DE
+    CRÉDITO. (Número de expediente 121/000080).
+
+    <br /><br />El señor PRESIDENTE: Enmiendas aprobadas por el Senado al proyecto de ley
+    de ordenación, supervisión y solvencia de entidades de crédito. Como
+    algunos de los diputados que tienen que intervenir en este punto no
+    están, iré dando la palabra a los que estén presentes y posteriormente se
+    la daré al resto de los portavoces, aunque no estén en este momento, para
+    que puedan intervenir. De los que tengo apuntados, el portavoz que está
+    es el del Grupo Parlamentario de Unión Progreso y Democracia, el señor
+    Anchuelo, que tiene la palabra.
+
+    <br /><br />El señor ANCHUELO CREGO: Gracias, señor presidente.
+
+    <br /><br />He tenido el honor ya que definir la postura de mi grupo en dos ocasiones
+    sobre esta ley, en el debate de totalidad que hubo en el Pleno y en el
+    debate en Comisión. Hoy vienen aquí las enmiendas del Senado, que no
+    modifican nada fundamental. Básicamente son cambios de redacción o
+    aspectos secundarios y, por tanto, mantengo la postura de mi grupo, que
+    ya está definida, y respecto a las enmiendas nos definiremos en la propia
+    votación.
+
+    <br /><br />Muchas gracias.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página6)"><b>Página
+    6</b></a></p><br />
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Anchuelo.
+
+    <br /><br />Veo que el señor Larreina no va a intervenir. Muchas gracias, señor
+    Larreina. Por el Grupo Parlamentario de La Izquierda Plural, tiene la
+    palabra el señor Coscubiela.
+
+    <br /><br />El señor COSCUBIELA CONESA: Gracias, señor presidente.
+
+    <br /><br />Señorías, llegamos al final de la tramitación de un proyecto de ley que
+    creo todos consideramos que es muy importante para la economía y para la
+    sociedad española. He de decir que en el trámite del Senado se han
+    introducido modificaciones que, a nuestro entender, y discrepando de lo
+    que decía hace un momento el señor Anchuelo, tienen en un aspecto
+    importante alguna repercusión, y la pueden tener especialmente en lo que
+    hace referencia a la situación del Sareb. Ese es uno de los motivos por
+    los cuales he pedido la palabra para fijar posición sobre estas
+    enmiendas.
+
+    <br /><br />Deberíamos de nuevo destacar que en el trámite del Senado se han
+    introducido modificaciones que a todos nos hubiera gustado poder discutir
+    en su fase previa y no que se establecieran en ese momento. Quiero
+    destacar especialmente esas modificaciones, un bloque de enmiendas que
+    suponen un reforzamiento de las competencias del Ministerio de Economía
+    frente a los organismos supervisores: el Banco de España y la Comisión
+    Nacional del Mercado de Valores. Como nada es casual, es importante
+    destacar que ese mayor intervencionismo del Ministerio de Economía frente
+    a los organismos supervisores y esa contradicción en el discurso teórico
+    del Gobierno y del Partido Popular de dar fuerza a la supervisión
+    externa, pero en cambio actuar dando cada vez más protagonismo e
+    intervencionismo al Poder Ejecutivo, tiene una razón y tiene un
+    detonante: todo apunta a que es la voluntad de blindar, de proteger el
+    estado contable del Sareb, del banco malo, ante los riesgos evidentes de
+    que una actuación del Banco de España que estaba ya preparada en forma de
+    circular pudiera poner en riesgo la valoración de los activos del Sareb
+    y, por tanto, poner al descubierto la situación de precariedad en la que
+    se encuentra ese organismo después de que los bienes que le fueron
+    transferidos al banco malo hayan vuelto al valor que tienen y no al valor
+    contable que se les dio. Por eso me ha parecido oportuno destacarlo y
+    destacar también la importancia de las enmiendas que vamos a votar para
+    que el conjunto de la Cámara, al menos desde nuestro grupo así lo creemos
+    oportuno, sea consciente de que en estos momentos estamos aumentando el
+    intervencionismo del Ministerio de Economía y, en ese sentido, estamos
+    desprotegiendo al conjunto de la ciudadanía frente a lo que sin duda es
+    de nuevo un exceso de poder por parte del Ejecutivo. Eso es así cuando
+    aún resuenan las consecuencias de una falta evidente de supervisión de
+    nuestro sistema financiero, una de las causas de la crisis, cuando aún
+    resuenan los ecos del rescate del sistema financiero, cuando aún los
+    ciudadanos están pagando y van a pagar durante décadas las consecuencias
+    de lo que ha supuesto esa falla en nuestro sistema financiero y de lo que
+    ha supuesto la creación de ese banco malo, del Sareb, para conseguir el
+    saneamiento de ese sistema financiero. En ese sentido, creemos que lo que
+    se va a votar hoy no es una buena noticia porque ese mayor
+    intervencionismo del Ministerio de Economía contra el papel de los
+    organismos supervisores no va a suponer más protección de los ciudadanos
+    de este país y del patrimonio colectivo, sino en todo caso más
+    indefensión, y menos supervisión, menos contrapesos, menos controles, más
+    pronto o más tarde, termina siendo menos democracia. Por eso nuestro
+    grupo va a votar en contra de ese bloque de enmiendas.
+
+    <br /><br />Hay otro bloque de enmiendas ubicadas en la disposición final primera que,
+    pretendiendo establecer más claridad en relación con el tratamiento legal
+    de las garantías de los clientes en casos de situación concursal de la
+    entidad, aportan a nuestro entender una redacción confusa. Compartimos el
+    objetivo del grupo proponente, Convergència i Unió, de clarificar ese
+    tema, pero creo, y lo dijimos en su momento, que en su redacción va a
+    suscitar más de un elemento de conflictividad jurisdiccional. Por lo
+    tanto, desde ese punto de vista, nuestro grupo se va a abstener.
+
+    <br /><br />Termino, señor presidente, señorías. Creo que es importante, en esta
+    última intervención en un proyecto de ley tan significativo para el
+    futuro de nuestra economía, volver a recordar las razones que nuestro
+    grupo ha tenido para su posicionamiento en contra. El proyecto responde a
+    tres necesidades que nosotros compartimos: abordar la obsolescencia y la
+    debilidad normativa actual, abordar la necesidad de agrupar en un solo
+    texto una normativa española hasta hoy muy dispersa, y la necesidad sin
+    duda de trasponer la directiva y adaptarla al reglamento de la Unión
+    Europea y al marco de Basilea III. Con eso estamos de acuerdo, lo dijimos
+    en su momento y lo compartimos, y eso solo ya justificaba este proyecto
+    de ley, pero queremos dejar constancia aquí -lo dijimos en su momento y
+    lo repetimos- que hoy se están sentando las bases de la precariedad, y en
+    algún momento alguien dirá que ha fallado la regulación y por eso estamos
+    aquí, ante una nueva falla del sistema financiero y una nueva burbuja, y
+    queremos al menos dejar constancia de esto en esta Cámara.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página7)"><b>Página
+    7</b></a></p><br />
+
+    <br /><br />Este proyecto no es la respuesta que la sociedad española necesita. Es un
+    proyecto que, a nuestro entender, en algunos aspectos nace viejo, nace
+    con las paredes de un edificio que ya se ha derrumbado. Quiero destacar
+    también que lo ha dicho la propia Comisión Europea cuando le ha recordado
+    al Gobierno español que esta normativa no tiene en cuenta aquellos
+    elementos de la armonización bancaria acordados por la Unión Europea en
+    los últimos meses. La clave de este proyecto a nuestro entender hubiera
+    sido no fijarse en aquello que hay que hacer, que debe hacerse cuando el
+    sistema financiero ya ha saltado por los aires y solo se puede escoger,
+    como ha pasado en esta última crisis, entre la que se llama la menos mala
+    de las soluciones, sino que la clave hubiera estado en aprovechar esta
+    regulación para intentar evitar, preventivamente, que el sistema
+    financiero vuelva a cometer los mismos errores, y cuando son errores
+    repetidos ya no son errores, sino que son situaciones que se vienen
+    repitiendo a lo largo de la vida de los sistemas financieros, primero,
+    por su carácter procíclico y tendencia al gregarismo, que les hace asumir
+    unas deudas insostenibles para conseguir beneficios y luego externalizar
+    los costes; segundo, por la profunda asimetría que la regulación -y esta
+    la mantiene- establece entre un reparto privado de los beneficios según
+    las reglas del mercado y una asunción/socialización de pérdidas cuando el
+    sistema financiero hace quiebra, con el grave riesgo moral, en tercer
+    lugar, que comporta esta lógica.
+
+    <br /><br />Somos conscientes, y lo dijimos, de la dificultad de intervenir en una
+    regulación nacional eficiente en un ámbito de una economía globalizada y
+    en el marco de la regulación de la Unión Europea, pero creo que el
+    problema no está en los obstáculos comunitarios, sino en que,
+    desgraciadamente, muchos gobernantes europeos -y el nuestro no ha sido
+    una excepción- comparten su negativa a no cruzar determinadas fronteras.
+    Quiero llamar la atención de lo curioso que supone que hoy incluso
+    Estados Unidos tenga una regulación del sistema financiero mucho más
+    exigente que la nuestra -tomen nota-. Posiblemente esa sea la razón por
+    la cual Estados Unidos no tiene ningún interés en que el sector
+    financiero forme parte del ámbito regulatorio del tratado transatlántico
+    entre Estado Unidos y la Unión Europea. Posiblemente esa es la razón de
+    la exclusión, porque sin duda no quieren que los contagiemos.
+
+    <br /><br />Discrepamos profundamente de que dentro de los márgenes del reglamento de
+    la Unión Europea y de la directiva comunitaria se haya optado por la
+    adaptación más light de esa normativa. En ese sentido, volvemos a
+    insistir en que creemos que se ha perdido una oportunidad para establecer
+    mayores exigencias en los ratios máximos de préstamo en función de los
+    depósitos de cada entidad para evitar los riesgos de sobreendeudamiento,
+    que los tenemos aquí, que nos estamos tragando aún. Se ha perdido la
+    oportunidad de establecer límites más exigentes en relación con el ratio
+    de préstamos agregados en función de la dimensión de la economía
+    nacional, para que no nos pase a nosotros lo que le ha pasado, por
+    ejemplo, también a Holanda, que un banco es tremendamente más grande que
+    su propia economía, lo que lleva al riesgo de arrastrar a esa propia
+    economía. Se ha perdido la oportunidad de establecer limitaciones en los
+    préstamos a sectores específicos que tienen mayor tendencia al gregarismo
+    y a su carácter procíclico y, por tanto, a la concentración de riesgos.
+    Todo eso son oportunidades perdidas en esta normativa y es lo que nos ha
+    llevado a considerar que teníamos que votar en contra, y hoy lo vamos a
+    volver a hacer, porque, a pesar de todo lo que se ha legislado de
+    positivo, se mantiene un grave riesgo moral, y es que quienes provocan
+    ese sobreendeudamiento, quienes privatizan los beneficios nunca, nunca
+    corren con los costes de un sistema financiero fallido, porque saben que
+    la sociedad actúa como avalista de último recurso. Ese riesgo continúa
+    estando, desgraciadamente, en el proyecto de ley que vamos a aprobar hoy,
+    creemos que ha sido una gran asignatura pendiente y, por lo tanto,
+    queríamos dejar constancia aquí, al menos, insisto, para que quede
+    constancia en el "Diario de Sesiones" de que sí hay alternativas; lo que
+    sucede que es que hay alguna gente que se siente muy cómoda con la
+    situación actual porque, desgraciadamente, cuando entender una cosa
+    supone dejar de tener importantes beneficios, los incentivos para no
+    entenderla son muy poderosos. Eso es lo que le pasa al poder económico y
+    a quienes desde el poder político le dan cobertura.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Coscubiela.
+
+    <br /><br />Por el Grupo Catalán de Convergència i Unió, tiene la palabra el señor
+    Picó.
+
+    <br /><br />El señor PICÓ I AZANZA: Muchas gracias, presidente.
+
+    <br /><br />A nadie se le escapa que este proyecto de ley de ordenación, supervisión y
+    solvencia de entidades de crédito es una continuación de la trasposición
+    de la normativa europea que iniciamos mediante la convalidación del real
+    decreto-ley del pasado mes de noviembre del año 2013. Por ello, mi grupo
+    parlamentario, que ha apoyado todas aquellas reformas orientadas a la
+    reordenación del sistema
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página8)"><b>Página
+    8</b></a></p><br />
+
+    <br /><br />financiero, lo afrontó al inicio de la tramitación convencido de que
+    entraríamos en la negociación de aquellas enmiendas parciales que
+    pudiéramos formular para alcanzar un acuerdo. Debo decirles que algunas
+    de las enmiendas que formulamos en el trámite en el Congreso fueron
+    aceptadas, como también lo han sido en el trámite en el Senado, en este
+    último caso en relación con la disposición final primera del proyecto de
+    ley -como decía el señor Coscubiela- con la inclusión de una enmienda
+    literal, la correspondiente a la formulada por mi grupo parlamentario
+    número 45 en el Senado, y con una transacción sobre las enmiendas 43 y 44
+    del Grupo Parlamentario Catalán en el Senado. A nuestro entender -y a
+    diferencia de lo que decía el señor Coscubiela- el texto de esta
+    disposición final clarifica el tratamiento legal que se aplicará a las
+    garantías constituidas por miembros y clientes para aquellos casos en
+    situación concursal de la entidad de contrapartida central. Pero,
+    señorías, hasta aquí hemos llegado, porque la formulación de una enmienda
+    por parte del Grupo Parlamentario Popular en el Congreso modificando el
+    artículo 45 de la Ley 26/2013, de 27 de diciembre, de cajas de ahorros y
+    fundaciones bancarias, ha roto el ánimo conciliatorio de mi grupo.
+
+    <br /><br />Los grupos parlamentarios nacionalistas siempre les hemos de recordar
+    -parece que esté implícito entre nuestras funciones- el marco de reparto
+    competencial vigente, que se vulnera con la modificación de ese artículo
+    45 por parte del grupo de la mayoría a través de la enmienda formulada en
+    el Congreso, con la previsión de que el protectorado de fundaciones
+    bancarias será ejercido por el Ministerio de Economía y Competitividad
+    cuando el ámbito de actuación principal de esa fundación exceda el de una
+    comunidad autónoma, y eso será así, dice ahora el artículo 45, cuando el
+    40 % de la actividad de las entidades de crédito en las que participe
+    directa o indirectamente la fundación se realice fuera de la comunidad
+    autónoma.
+
+    <br /><br />Señorías, esta previsión desde nuestra perspectiva vulnera el actual marco
+    competencial. ¿Por qué vulnera el vigente marco competencial? El artículo
+    118 del Estatut d' Autonomia de Catalunya prevé que corresponde a la
+    Generalitat de Catalunya la competencia exclusiva sobre el régimen
+    jurídico de las fundaciones que cumplan sus funciones mayoritariamente en
+    Cataluña. Por tanto, la nueva redacción de ese artículo de la Ley de
+    cajas de ahorros y fundaciones bancarias incumple y vulnera el régimen
+    competencial al ignorar la competencia, como decía, exclusiva de la
+    Generalitat de Catalunya en materia de fundaciones. Además señorías, el
+    tema riza el rizo. La referencia no se hace a la actividad propia de la
+    fundación bancaria, sino a la actividad de la entidad de crédito en la
+    que la fundación bancaria tiene una participación. Vuelvo otra vez al
+    Estatut d' Autonomia de Catalunya. Su artículo 120 prevé que corresponde
+    a la Generalitat de Catalunya la competencia otra vez exclusiva sobre la
+    regulación de la organización de cajas con domicilio en Cataluña: de
+    nuevo, en cualquier caso, la vulneración de competencias asumidas por
+    Cataluña.
+
+    <br /><br />Asumo plenamente que debo defender el marco competencial vigente, pero
+    también creo que todos deberían hacerlo, y no lo hacen. Además, esta
+    posibilidad que hoy se convertirá en realidad ya la puso de manifiesto mi
+    grupo en la tramitación de la Ley de cajas de ahorros y fundaciones
+    bancarias. Mi grupo en aquel momento estuvo de acuerdo en cómo se trataba
+    en dicha ley a las fundaciones de cajas, las cajas que se convertían en
+    bancos, y cuya actividad financiera excedía el ámbito de una comunidad
+    autónoma. Propusimos que en este supuesto el protectorado fuera ejercido
+    por aquella comunidad autónoma en la que la fundación tuviera su
+    domicilio social. Nosotros nos adelantábamos a la realidad que hoy se
+    materializará, por desgracia, y nuestros temores se han confirmado.
+
+    <br /><br />Señorías, mi grupo no puede compartir esta medida. Mi grupo no puede
+    avalar la vulneración del marco competencial vigente, no puede dejar de
+    denunciar estas reiteradas realidades que suponen pérdidas importantes de
+    competencias para Cataluña. No podemos ni queremos. No podemos dejar de
+    ver que el texto que hoy aprobará la Cámara incumple las competencias
+    exclusivas de las comunidades autónomas en materia de cajas y de
+    fundaciones de las cajas que se han transformado en bancos. Compartíamos,
+    como he dicho al inicio de mi intervención, el objeto del proyecto de
+    ley. En el texto que se aprobará hoy hay líneas escritas por mi grupo
+    parlamentario -pocas, pero las hay-, pero este texto que contiene una
+    flagrante vulneración de competencias de Cataluña no podrá contar con
+    nuestro apoyo. Por ello, más allá de la redacción dada por el Senado al
+    apartado uno de la disposición final primera del proyecto de ley, el
+    resto de enmiendas aprobadas por el Senado no contarán con nuestro apoyo,
+    como tampoco lo tiene el conjunto del proyecto.
+
+    <br /><br />Muchas gracias, señor presidente. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Picó.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página9)"><b>Página
+    9</b></a></p><br />
+
+    <br /><br />Por el Grupo Socialista, tiene la palabra don Valeriano Gómez.
+
+    <br /><br />El señor GÓMEZ SÁNCHEZ: Gracias, señor presidente.
+
+    <br /><br />Señorías, lo que debatimos hoy es el proyecto de ley que comenzó en
+    nuestra opinión con buen pie en esta Cámara y que vuelve -permítaseme la
+    expresión- algo trastabillado del Senado, aunque, si lo miramos bien, los
+    problemas comenzaron precisamente en el trámite de enmiendas en la
+    Comisión de Economía del Congreso. Como habían pasado ya tres meses y
+    medio desde que se produjo este debate de totalidad respecto de este
+    proyecto de ley, creo que merece la pena que volvamos al comienzo.
+    Entonces el Grupo Socialista manifestó -era el mes de marzo- que su voto
+    sería la abstención, desde la voluntad de mantener un debate constructivo
+    con el Gobierno y con los grupos en la Cámara. Compartíamos, cómo no
+    compartirla, la necesidad de reforzar los requerimientos de capital y de
+    liquidez de las entidades bancarias. Cómo no compartirla cuando han sido
+    precisamente sus abusos en forma de endeudamiento excesivo, de expansión
+    irresponsable en sus balances, los que están haciendo que tengan que ser
+    los Estados, y al final los contribuyentes, los que terminen pagando sus
+    errores. Al fin y al cabo, el proyecto que ahora votamos debería de ser
+    el desarrollo de una directiva europea, que en lo esencial recoge los
+    acuerdos de Basilea III; unos acuerdos que para muchos de nosotros son
+    insuficientes, pero que al menos caminan en la dirección adecuada. Digo
+    esto porque nosotros pensamos que son necesarios niveles de
+    capitalización, mayores incluso que los mínimos establecidos en Basilea
+    III, si no queremos que más capitalización bancaria sea equivalente a
+    menos crédito. Cuando un banco tiene más capital, puede que su
+    rendimiento por acción disminuya, pero también disminuye el riesgo de los
+    accionistas y, sobre todo -y esto es lo importante-, disminuye el riesgo
+    social; sí, el riesgo social, porque al final es la sociedad la que
+    termina por tener que capitalizar las entidades a las que los mercados no
+    están dispuestos a financiar. Pensábamos que la crisis había acabado
+    -ojalá que para siempre- con esa absurda visión de que los mercados
+    financieros se autorregulan, que por sí mismos alcanzan el equilibrio, y
+    que, como creían las sociedades que salían hace setenta años de la Gran
+    Depresión de los años veinte y de la Segunda Guerra Mundial, los mercados
+    financieros tienen que ser vigilados estrechamente y penalizados con
+    rapidez en sus peores actuaciones. ¿Por qué? Sencillamente porque la
+    prudencia, por cierto, y la sensatez no abundan en exceso en el
+    comportamiento de los banqueros.
+
+    <br /><br />Pues bien, nuestras propuestas en aquel debate eran perfectamente
+    compatibles con el espíritu y con los objetivos de la norma. Queríamos
+    reforzar la protección y la seguridad de los clientes minoristas en las
+    entidades de crédito. Queríamos que los servicios de defensa del cliente
+    no dependieran solo de la entidad de crédito ni de la autoridad
+    supervisora competente, sino que fueran también servicios específicos.
+    Planteábamos la creación de una agencia de protección financiera en la
+    que se integraran el conjunto de las autoridades de consumo y de
+    administración de las reclamaciones en las entidades supervisoras.
+    Defendíamos en segundo lugar la revisión en profundidad de los requisitos
+    de idoneidad para ejercer la profesión de banquero e impulsábamos el
+    desarrollo de un código deontológico para todos los altos cargos de las
+    entidades de crédito que operaban en España. Queríamos también mejorar el
+    proyecto en dos ámbitos esenciales, publicando en la web los ratios de
+    diferencia salarial entre los directivos y los consejeros que reciben una
+    retribución más elevada y aquellos trabajadores que la reciben en menor
+    nivel. Garantizábamos -así lo queríamos hacer- la presencia de consejeros
+    independientes también en el comité de nombramientos y queríamos reducir
+    el componente variable de la retribución hasta el 50 %, no el cien por
+    cien actual respecto del fijo, limitando por consiguiente el nivel más
+    elevado de la retribución actual en la parte variable. Por último,
+    introducíamos propuestas que iban dirigidas a mejorar la seguridad del
+    contribuyente creando un consejo de estabilidad financiera a nivel
+    nacional, un consejo en colaboración con todas las autoridades
+    financieras nacionales, e implantando una tasa específica para hacer
+    frente a los servicios de supervisión necesarios, supervisión que ejerce
+    efectivamente la autoridad monetaria, el Banco de España y el Banco
+    Central Europeo.
+
+    <br /><br />Pues bien, señorías, el diálogo no fue mal durante el debate en Comisión,
+    no fue mal hasta que apareció uno de los clásicos episodios chuscos -esta
+    es la palabra que se me ocurre ahora- a los que este Gobierno nos tiene
+    acostumbrados en demasiadas ocasiones a través de enmiendas en el trámite
+    en este caso en el Congreso y después convalidadas en el Senado. Me
+    refiero a la modificación de un asunto esencial, un asunto que ya
+    habíamos discutido algunos meses antes con ocasión de la propia Ley de
+    cajas de ahorros y fundaciones bancarias. Nosotros lo dijimos entonces,
+    en octubre y en noviembre del año pasado: el asunto del protectorado de
+    las cajas está oscuro y es mejor aclararlo cuanto antes. Esto es lo que
+    decíamos entonces. El Gobierno nos dijo que no, que todo seguiría igual,
+    que las comunidades
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página10)"><b>Página
+    10</b></a></p><br />
+
+    <br /><br />autónomas seguirían con sus competencias sobre el protectorado de las
+    fundaciones bancarias, que eran titulares de una entidad financiera con
+    presencia y con vocación esencialmente regional. Esta fue la respuesta
+    del Gobierno hace unos meses con ocasión del debate de la citada Ley de
+    cajas de ahorros y fundaciones bancarias. Pues bien, cinco meses después
+    de aprobar la Ley de Cajas, ahora la enmiendan en esta ley en un tema
+    crucial, alterando, como se ha dicho ya aquí, el marco competencial de
+    las comunidades autónomas. Ahora es el Ministerio de Economía quien
+    ejerce ese protectorado, también para las entidades que tengan un 40 % de
+    depósitos fuera de la comunidad autónoma. Señorías, no estamos de acuerdo
+    ni con el fondo ni por supuesto con la forma en que se produce esta
+    modificación.
+
+    <br /><br />Puedo entender que, en una entidad financiera propiedad de una fundación
+    bancaria que tiene, por ejemplo, más del 60 % de su negocio fuera de la
+    comunidad autónoma -me estoy refiriendo naturalmente a la Caixa-, algo
+    tenga que decir el Ministerio de Economía, por supuesto que sí, pero aquí
+    con esta enmienda en la práctica lo que se hace es que todas las
+    fundaciones bancarias serán tuteladas por el Ministerio de Economía. Como
+    no estamos de acuerdo, como se trata de un episodio más de tantos y
+    tantos durante esta legislatura de malas prácticas parlamentarias, como
+    no ha habido el más mínimo intento -lo subrayo, el más mínimo intento-
+    serio de negociar esto con el principal partido de la oposición, el Grupo
+    Socialista va a votar en contra, lo que significa ni más ni menos que
+    este apartado de la norma al que me refiero será cambiado cuando cambie
+    la mayoría parlamentaria en esta Cámara.
+
+    <br /><br />Quien les habla ha sido siempre partidario de los acuerdos en asuntos
+    fundamentales de nuestra política económica, de nuestra política social y
+    de nuestra política laboral, en este tipo de asuntos, y ya está un poco
+    cansado de tanta pantomima, en este tipo de materias. Así que votaremos
+    en contra; no nos abstendremos.
+
+    <br /><br />Permítanme, por último, que termine con una reflexión de carácter más
+    general. En alguna ocasión, más bien casi a cada momento, uno escucha esa
+    cantinela de que el Partido Popular ha estado solo en estas políticas de
+    reformas -de recortes sistemáticos habría que decir más bien- que han
+    sacado a España del pozo en el que los socialistas la dejaron. España ha
+    estado al borde del infierno en alguna ocasión, en más de una ocasión
+    durante la crisis, pero cuando de verdad cayó en una suerte de limbo, del
+    que por cierto todavía no hemos salido, fue en el verano de 2012 tras
+    haber legislado tres decretos-leyes de reforma financiera en cinco meses,
+    tres decretos contradictorios entre sí; tras haber protagonizado la
+    quiebra bancaria más importante de nuestra historia económica; tras haber
+    tenido que solicitar el rescate financiero a las autoridades europeas y
+    después enterarnos a mediados de año de que la reforma laboral y una
+    política de austeridad tremenda, contundente, feroz -se puede decir así-,
+    estaba produciendo la mayor sangría de empleos durante los últimos años
+    de crisis. Fue el Banco Central el que terminó perdonando la vida a
+    España e Italia aquel verano, y de paso también se la perdonó, por
+    cierto, al euro, pero nosotros nunca le perdonaremos al Banco Central la
+    inacción durante cuatro años seguidos, dejando a la mitad del continente
+    europeo en medio de la recesión y del paro masivo.
+
+    <br /><br />Este episodio que ahora discutimos con este proyecto de ley es solo uno
+    más en el ámbito económico, en el ámbito social, en el ámbito laboral. En
+    estos ámbitos el Gobierno nunca ha querido negociar nada importante: ni
+    la Ley de Estabilidad Presupuestaria -así empezó la legislatura, ¿se
+    acuerdan ustedes?- ni la reforma laboral ni la reforma de la protección
+    por desempleo ni la reforma de las pensiones ni la reforma de la Ley de
+    Dependencia. No han querido negociar nunca nada de nada. Por eso también
+    ustedes, señores del Partido Popular, en el pecado llevan la penitencia.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Gómez.
+
+    <br /><br />Por el Grupo Parlamentario Popular, tiene la palabra el señor Araújo.
+
+    <br /><br />El señor ARAÚJO GIL: Llegamos, como ya se ha comentado, al trámite final
+    del proyecto de ley de ordenación, supervisión y solvencia de entidades
+    de crédito, una norma que reforzará el nivel de exigencia hacia el sector
+    financiero en materia de regulación prudencial. Para el Partido Popular,
+    que asumió el Gobierno de España, ha sido una prioridad la generación de
+    empleo y la recuperación económica. No tengan la menor duda. El sector
+    financiero desempeña una función clave en la economía. Es necesario crear
+    las condiciones óptimas para que el crédito fluya a familias y empresas
+    como motor de crecimiento. Inherente a esta función de financiación está
+    también la asunción de riesgos, riesgos que cada día son más complejos,
+    tanto por la evolución de los productos como por la internacionalización
+    e interdependencia de las entidades de crédito que ahora se mueven en un
+    mercado global. El reto es encontrar un equilibrio entre esos dos
+    factores: por un lado, una gestión prudente de los riesgos que garantice
+    la estabilidad del
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página11)"><b>Página
+    11</b></a></p><br />
+
+    <br /><br />sistema financiero y, por otro, unas condiciones de financiación óptimas
+    para el buen funcionamiento de la economía. Las leyes que regulaban ese
+    sistema eran de la década de los ochenta, época con un entorno mucho más
+    sencillo que el actual y en el que el control de la solvencia y la
+    gestión de los riesgos se le asignó al Banco de España. Hoy día el
+    proceso de innovación financiera y la internacionalización e
+    interdependencia global de las entidades financieras exige adaptarse a
+    una perspectiva regulatoria supranacional, armonizando los criterios a
+    nivel global en el marco del Comité de Basilea de Supervisión Bancaria.
+
+    <br /><br />Señorías, con la crisis de 2008 se pusieron de manifiesto dos cosas:
+    primero, que los criterios fijados en Basilea y Basilea II se habían
+    mostrado insuficientes para cubrir las exigencias de capital y, segundo,
+    que las agencias de calificación habían infravalorado los riesgos de las
+    entidades de crédito, por lo que no se podía depender de sus
+    valoraciones. Por ello, en 2010 Basilea III estableció el marco regulador
+    global para reforzar los bancos y sistemas bancarios, con el objetivo de
+    aumentar las exigencias de capital y así evitar futuras crisis,
+    constituyendo la respuesta internacional más relevante a las carencias
+    regulatorias detectadas. Los ejes centrales de este acuerdo se
+    transformaron a mediados del año pasado en normativa armonizada en la
+    Unión Europea mediante un reglamento y una directiva que hoy se trasladan
+    plenamente a la normativa española. Concretando, el proyecto de ley de
+    ordenación, supervisión y solvencia de entidades de crédito, en primer
+    lugar, completa y absorbe el Real Decreto-ley de 29 de noviembre de 2013,
+    que reguló las materias más urgentes al respecto; en segundo lugar,
+    traspone la normativa europea que adapta y amplía Basilea III, creando
+    una normativa bancaria única en materia de solvencia y las condiciones
+    necesarias para una posterior unión bancaria; en tercer lugar, refunde en
+    un solo texto las normas con rango de ley que regula la ordenación y la
+    disciplina de las entidades de crédito.
+
+    <br /><br />Señorías, este proyecto de ley, como bien saben, se organiza en tres
+    bloques. El primero aborda el régimen jurídico de las entidades de
+    crédito, en el que se incluyen los requisitos de autoridad, idoneidad,
+    honorabilidad y gobierno corporativo; el segundo trata más
+    específicamente de la supervisión prudencial y solvencia de las entidades
+    de crédito, así como de su régimen sancionador. El tercero modifica la
+    Ley de Mercados de Valores para adaptarla a la norma europea, adecua el
+    régimen de participaciones preferentes, adapta la regulación de los
+    conglomerados financieros y modifica la composición de la comisión
+    gestora del Fondo de garantía de depósitos.
+
+    <br /><br />Señorías, las enmiendas del Senado que hoy consideramos son un total de
+    siete y fueron presentadas por el Grupo Parlamentario Popular y, como se
+    ha comentado, por el Grupo Parlamentario de Convergència i Unió, junto
+    con una docena de correcciones técnicas al texto remitido. Entre las
+    modificaciones aprobadas por la Cámara Alta, destaca la ampliación de
+    plazo de cuatro meses hasta el 31 de octubre concretamente, de algunos
+    preceptos en la norma, entre ellos la obligación impuesta a las entidades
+    que constituyan un comité de nombramientos, uno de remuneraciones y otro
+    conjunto de nombramientos y remuneraciones. No obstante, se mantiene la
+    fecha límite de 30 de junio para las entidades que antes de esta ley ya
+    estuvieran obligadas a contar con esos órganos; además, dos de los
+    cambios amplían al Banco de España, la Comisión Nacional del Mercado de
+    Valores y el Instituto de Contabilidad y Auditorías de Cuentas la
+    potestad de dictar normas de contabilidad y los modelos a los que deben
+    sujetarse los estados financieros de las entidades de crédito, aunque
+    será el Ministerio de Economía y Competitividad el que determine los
+    informes preceptivos.
+
+    <br /><br />En cuanto a las entidades de contrapartida central, se precisa en qué
+    casos se puede aplicar el vencimiento anticipado de contratos y
+    posiciones de un miembro, y también se clarifica el tratamiento legal
+    aplicable a las garantías constituidas por miembros y clientes en caso de
+    concurso de acreedores de la entidad de contrapartida central. Como bien
+    saben, este proyecto de ley -ya se ha comentado- en su tramitación en el
+    Congreso había conseguido un amplio respaldo inicial de casi todos lo
+    grupos parlamentarios, estando de acuerdo en la práctica totalidad del
+    articulado, pero la decisión de nuestro grupo de no retirar una enmienda
+    especificando cuándo el Ministerio de Economía y Competitividad ostenta
+    el protectorado de una fundación bancaria provocó el desacuerdo de
+    socialistas y nacionalistas, que decidieron en el último momento no
+    respaldar el texto. Señorías, en la confianza de que con las mejoras
+    técnicas realizadas en el trámite parlamentario de este proyecto de ley y
+    de que este cumpla eficazmente su objetivo de ordenación, supervisión y
+    solvencia de las entidades de crédito, les solicito un esfuerzo de
+    reflexión adicional y que voten favorablemente al texto.
+
+    <br /><br />Por último, permítanme que termine mi intervención con unos pequeños
+    agradecimientos. En primer lugar, al portavoz de mi grupo parlamentario,
+    el señor Martínez-Pujalte, por la confianza depositada en este diputado.
+    En segundo lugar, y de forma muy especial, a mis compañeras de ponencia,
+    doña Irene
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página12)"><b>Página
+    12</b></a></p><br />
+
+    <br /><br />Garrido y doña María Eugenia Romero, por el extraordinario trabajo
+    realizado. En tercer lugar, quisiera agradecer, lo digo sinceramente, la
+    labor realizada por los ponentes y portavoces de Convergència i Unió, del
+    Partido Nacionalista Vasco, de Unión Progreso y Democracia y del Partido
+    Socialista, que han colaborado activamente con sus propuestas en el
+    trámite parlamentario de este proyecto de ley. Siento que no se haya
+    podido llegar a un acuerdo consensuado pero, señor Valeriano, recuerde
+    que a lo mejor no solamente los ciudadanos, sino sus propios votantes le
+    recordarán a usted y a su partido la inacción cuando ustedes gobernaron.
+    (Aplausos). En cuarto lugar, quiero agradecer al ministro de Economía y
+    Competitividad, don Luis de Guindos, y a su equipo ministerial el diálogo
+    permanente con los ponentes y la flexibilidad mostrada para aceptar los
+    cambios propuestos.
+
+    <br /><br />Muchísimas gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Gracias, señor Araújo.
+
+    <br /><br />- PROYECTO DE LEY POR LA QUE SE REGULA EL PROCEDIMIENTO PARA LA
+    DETERMINACIÓN DE LA REPRESENTATIVIDAD DE LAS ORGANIZACIONES PROFESIONALES
+    AGRARIAS Y SE CREA EL CONSEJO AGRARIO. (Número de expediente 121/000075).
+
+    <br /><br />El señor PRESIDENTE: Enmiendas aprobadas por el Senado al proyecto de ley
+    por la que se regula el procedimiento o la determinación de la
+    representatividad de las organizaciones profesionales agrarias y se crea
+    el consejo agrario. En primer lugar, en turno de fijación de posiciones,
+    por el Grupo Mixto interviene el señor Baldoví.
+
+    <br /><br />El señor BALDOVÍ RODA: Las enmiendas que vienen hoy aquí no corrigen lo
+    que desde Compromís Equo ya apuntamos en su momento. Existe un claro
+    empecinamiento en no considerar estas elecciones un proceso electoral y,
+    por tanto, siguen sin ponerse las garantías suficientes que regula la Ley
+    Orgánica 5/1985. No se regulan ni la campaña ni los medios de
+    comunicación ni los gastos y subvenciones ni las infracciones. La barrera
+    de los electores por mesa ha bajado de 1.400 a 500, pero no es
+    suficiente, sobre todo en los territorios menos poblados, para asegurar
+    una buena participación. Sigue la barrera del 15 % de los votos en el
+    conjunto del Estado y eso perjudica a algunas organizaciones agrarias
+    territoriales; en definitiva, se pierde la oportunidad de celebrar unas
+    verdaderas elecciones en el campo y no cumple con la finalidad señalada
+    ni con las aspiraciones legítimas de las organizaciones agrarias ni de
+    los trabajadores del campo. En consecuencia, votaremos en contra.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Baldoví.
+
+    <br /><br />Por el Grupo Mixto también la señora Jordà.
+
+    <br /><br />La señora JORDÀ I ROURA: Gracias, señor presidente.
+
+    <br /><br />Señorías, vuelven a esta Cámara las enmiendas del Senado al proyecto de
+    ley por la que se regula el procedimiento para la determinación de la
+    representatividad de las organizaciones profesionales agrarias y la
+    creación del consejo agrario. En primer lugar, debo mostrar nuestra
+    satisfacción por la decisión política de poner en marcha esta iniciativa,
+    ya que es necesario y conveniente la realización de un proceso electoral
+    en el sector agrario y la consiguiente creación de un órgano de
+    representación y a la vez de concertación. A pesar de esto, Esquerra
+    Republicana presenta varias enmiendas al articulado de dicha ley que van
+    desde el objeto de la ley, que en su apartado 1 del artículo 1 solo
+    preveía la representación institucional, olvidando la concertación de las
+    políticas públicas que inciden sobre los profesionales agrarios y
+    entendiendo que es un elemento esencial del desarrollo del participación
+    institucional en los asuntos públicos, hasta enmiendas para determinar a
+    la vez la representatividad, la representación institucional, la votación
+    mediante las tecnologías de la información y de la comunicación, el
+    censo, las organizaciones elegibles y la organización de la consulta.
+    Hemos enmendado las funciones específicas del consejo agrario, la
+    composición del mismo, la atribución de los consejeros, el comité asesor
+    agrario y un largo etcétera, porque había muchísimas cosas que no
+    entendíamos y que no nos parecían bien.
+
+    <br /><br />Dicho esto, no podemos dejar de hacer unas consideraciones de tipo más
+    general. Este proyecto de ley determina la representatividad de las
+    organizaciones profesionales agrarias con implantación territorial
+    autonómica sobre la base, como siempre, una vez más, de una visión
+    centralista y unitarista que caracteriza la actividad legislativa del
+    Partido Popular en la presente legislatura. El establecimiento del
+    requerimiento de tener una presencia mínima en al menos seis comunidades
+    autónomas para considerar representativa una organización agraria es tan
+    excluyente, señorías, como arbitrario. Me explico: excluyente por la
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página13)"><b>Página
+    13</b></a></p><br />
+
+    <br /><br />pretensión reforzada por el criterio mínimo del 15 % a nivel estatal de
+    marginar la representación de los colectivos autonómicos y, es a la vez
+    también arbitrario, porque el criterio de seis comunidades autónomas es
+    absolutamente desorbitado, hasta el punto de que actualmente cinco
+    comunidades autónomas pueden representar únicamente el 23 %.
+
+    <br /><br />Acabo. Por último, quiero señalar que la disposición transitoria única
+    establece una provisionalidad sine die para el mantenimiento del comité
+    asesor agrario que viola la libertad sindical y la libertad de
+    representación. Así pues, sí a la decisión política de poner en marcha
+    esta iniciativa, pero no a este precio.
+
+    <br /><br />Muchas gracias, señor presidente.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Jordà.
+
+    <br /><br />Señora Ariztegui.
+
+    <br /><br />La señora ARIZTEGUI LARRAÑAGA: Muchas gracias, señor presidente.
+
+    <br /><br />Por muy repeinado que nos llegue el capricho del señor Cañete tras su
+    paseo por el Senado, con el maquillaje de sus veinte autoenmiendas,
+    estamos ante el mismo bodrio de ley, una chapuza legal totalmente
+    inasumible porque es otra partida con las cartas marcadas por la
+    discrecionalidad, con el único objetivo de mostrar la realidad del sector
+    agrario que ustedes quieren, su realidad difuminada, pero no la verdadera
+    situación ni responder a los objetivos planteados. Hoy se demuestra
+    claramente no solo las carencias de esta ley, sino su nula voluntad de
+    diálogo; ninguna intención de atender las peticiones de los colectivos a
+    los que va dirigida la ley ni la contestación aquí y en el Senado. Otra
+    vez la pared de su supermayoría y su actitud caciquil para recentralizar
+    y liquidar la contestación de las organizaciones agrarias críticas.
+
+    <br /><br />Primero, lo decíamos antes, siguen empeñados en hacernos tragar otra vez
+    un sistema totalmente centralizado y uniforme, al eliminar cualquier
+    intervención de nuestro país o limitándonos a ser meros gestores de lo
+    que Madrid ordene, excluyendo también la representatividad de las OPA con
+    implantación territorial autonómica, cuando bien saben que en Nafarroa,
+    Gipuzkoa, Bizkaia y Araba contamos con competencias exclusivas en materia
+    agraria, es decir, soberanía para decidir y cómo ordenar del modo más
+    acorde a nuestra realidad y nuestros intereses. En Nafarroa se han
+    celebrado elecciones agrarias con todas las garantías y sin ningún
+    problema, y en la comunidad autónoma donde contamos con una ley
+    específica para ello, aunque a quien manda no le interesa lo que pudiera
+    salir y seguimos reivindicando que se convoquen, déjenlo que lo hagamos
+    nosotros. Luego el fallo viene de origen, de ese concepto centralizador o
+    uniformizador del hasta ahora ministro y todo su Gobierno. ¿Cómo
+    pretenden que acepten estas votaciones nuestros baserritarras? Estamos
+    ante una nueva intromisión totalmente ilegal y un ataque directo a
+    nuestra soberanía que no acataremos si finalmente se lleva adelante. (La
+    señora vicepresidenta, Montserrat Montserrat, ocupa la Presidencia).
+
+    <br /><br />En segundo lugar, la representatividad, por mucho que quieran marear la
+    perdiz con los términos, se mide aquí y en Singapur mediante elecciones.
+    Estas son unas seudoelecciones disfrazadas de consulta, sorteando la Ley
+    Electoral, haciendo como que es una consultilla de nada, más aún tras las
+    enmiendas aprobadas para, finalmente, darle el valor de unas elecciones
+    en toda regla con sus consecuencias, con todo lo que ello acarrea:
+    reparto de patrimonio y la financiación de las organizaciones, además de
+    que los interlocutores que salieran no contarían con el respaldo y la
+    legitimidad que da un proceso electoral, es decir, continúan jugando con
+    la discrecionalidad y, según lo que les conviene, debilitando al máximo
+    las opciones sindicales que no les gustan. Sigue sin haber transparencia
+    ni objetividad ni garantías democráticas de participación para las y los
+    profesionales del campo. No pretenderán hacernos creer que el hecho de
+    subir de 3.000 a 5.000 euros el mínimo de ayudas recibidas para votar,
+    por ejemplo, garantiza que sean profesionales del campo quienes voten; o
+    sea, es un auténtico pucherazo, cuando además siguen sin otorgarse al
+    consejo agrario las funciones de negociación y concertación, siguen sin
+    aclararse exactamente sus funciones y siguen con su órgano limitado a
+    consulta y asesoramiento. ¿Para qué todo esto entonces? Lo que está en
+    juego es el concepto de democracia, que ustedes están vaciando cada vez
+    más de contenido. Lo único positivo, y nuestra última esperanza, es su
+    decisión de retrasar la celebración de la primera convocatoria. Queremos
+    entender que al faltar su padre y mentor, el señor Cañete, y no tener a
+    nadie que la quiera, es una manera de apartarla, olvidándola seguramente
+    en un cajón. De todas formas, ahí queda y es nuestro miedo, al capricho
+    de cualquier Gobierno que quiera aplicarla.
+
+    <br /><br />Respeten el derecho a la libertad sindical, respeten nuestra soberanía,
+    olviden este proyecto y pónganse a la única solución para lograr sus
+    fines, que sería cambiarla radicalmente.
+
+    <br /><br />Muchas gracias.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página14)"><b>Página
+    14</b></a></p><br />
+
+    <br /><br />La señora VICEPRESIDENTA (Montserrat Montserrat): Muchas gracias, señora
+    Ariztegui.
+
+    <br /><br />Por el Grupo Parlamentario EAJ-PNV, tiene la palabra el señor Agirretxea.
+
+    <br /><br />El señor AGIRRETXEA URRIARTE: Gracias, señora presidenta.
+
+    <br /><br />Intervengo muy brevemente por una sencilla razón, porque lo que tuvimos
+    que decir sobre este proyecto de ley ya lo dijimos en su día. Ha pasado
+    por el Senado y, en vez de mejorar, lo que ha hecho es empeorar. Por
+    tanto, el discurso que mi grupo tiene sigue siendo el mismo y lo ha sido
+    en el Senado. La forma de las autoenmiendas del Grupo Popular es algo que
+    me parece increíble, porque si quieren desfigurarlo lo pueden desfigurar
+    y llevarlo además de una manera en la que el debate no ha existido.
+
+    <br /><br />Sabemos que el proyecto de ley que hoy tratamos, que viene del Senado,
+    opta en consecuencia por un precepto, ya lo decía en su día,
+    preconstitucional para la determinación de las organizaciones
+    profesionales agrarias que, aunque se encuentre y sea acorde a la
+    Constitución, carece de fundamento constitucional expreso. En este
+    contexto este proyecto plantea un cambio de modelo en la elección de las
+    organizaciones profesionales agrarias más representativas al pasar de uno
+    en el que las comunidades autónomas ostentan un papel determinante en los
+    procesos de elección, a otro definido por lo que ustedes llaman una
+    consulta única en el conjunto del Estado. Vuelven a repetirse palabras
+    que más de una vez mi grupo en esta tribuna ha dicho, y sobre todo
+    referidas a proyectos de ley que presentaba el señor Cañete -supongo que
+    los seguirá presentando la señora García Tejerina-, es decir: consulta
+    única, conjunto del Estado, y no aparecen las palabras, territorio
+    nacional, que son las que más le gustan al señor Cañete en sus proyectos
+    de ley. Por tanto, se pretende instaurar un sistema de carácter
+    centralizado y uniforme, en el que se elimina cualquier intervención de
+    las comunidades autónomas cuando estas ostentan competencia exclusiva en
+    materia de agricultura -no sé cómo hay que decirlo-, materia que a fin de
+    cuentas es la que va a ser tratada en el seno del consejo agrario, que
+    crea esta ley como resultado de lo que el Estado denomina una consulta de
+    ámbito estatal.
+
+    <br /><br />Podríamos decir muchas cosas que ya se dijeron en su día, y seguramente
+    los grupos que no vamos a votar a favor de este proyecto de ley podemos
+    tener diferentes visiones, pero está claro que hay cuestiones que no se
+    nos escapan a ninguno: la forma de trufar una serie de cuestiones y una
+    forma de querer implantar este consejo. Se podría admitir quizá la
+    validez de dicho fundamento competencial -el que le citaba antes-, en el
+    caso de que la representatividad se obtuviera como se hacía en etapas
+    anteriores, a través de las extintas cámaras agrarias, dada su condición
+    de corporaciones vinculadas a las administraciones públicas que
+    participan de la naturaleza de las mismas, según sentencia del Tribunal
+    Constitucional 22/1999. Tratándose de organizaciones profesionales
+    agrarias, el Estado no puede ampararse como se ampara en este proyecto de
+    ley en el artículo 149.1.18ª de la Constitución española, ese cajón de
+    sastre que vale para todo; teniendo en cuenta que no se tiene claro si es
+    competencia tuya o no, por si acaso nos amparamos ahí para dictar el
+    presente proyecto de ley. Como tampoco puede el Estado ampararse en el
+    título relativo a la agricultura, porque en este ámbito la competencia
+    pertenece en exclusiva a las comunidades autónomas. La consulta que
+    propone este proyecto de ley constituye una suerte de intervención
+    estatal en el ámbito autonómico, en el que pueden llevarse a cabo los
+    procedimientos de selección de las organizaciones profesionales agrarias
+    más representativas, de conformidad con la correspondiente normativa
+    autonómica, y estas organizaciones profesionales agrarias de ámbito
+    autonómico pueden verse, se verán si este proyecto de ley se aprueba -no
+    es que puedan verse, se verán-, difuminadas o infravaloradas en su ámbito
+    de actuación, porque se verán concernidas a una consulta única y
+    centralizada que pretende desarrollarse también en ese mismo ámbito
+    territorial, de forma paralela y a modo de intromisión en un contexto más
+    amplio y uniformizado que plantea el proyecto de ley.
+
+    <br /><br />Por todo ello, y por otra serie de cuestiones en las que no me voy a
+    alargar porque ya las comentamos en su momento cuando este proyecto de
+    ley se presentó aquí -también lo hemos dicho en el Senado-, no era
+    necesario dictar una norma con rango de ley para estos términos, pero el
+    Gobierno del Partido Popular lo ha pretendido, con el objetivo de volver
+    a acaparar en el Estado competencias que ya estaban transferidas o querer
+    intervenir en aquellas cuestiones, dotándose una especie de estamento
+    superior, supraautonómico, queriendo demostrar que el Ministerio de
+    Agricultura, que el Gobierno central está por encima de los departamentos
+    de Agricultura de las comunidades autónomas y que es el que tiene que
+    tutelar y velar por si alguno no hace bien las cosas; no hace bien las
+    cosas como el Partido Popular quiere que se hagan. Por tanto, estuvimos
+    en contra de este proyecto de ley, en el Senado hemos votado en contra de
+    las enmiendas que se han presentado y hoy haremos lo mismo.
+
+    <br /><br />Muchas gracias, señora presidenta.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página15)"><b>Página
+    15</b></a></p><br />
+
+    <br /><br />La señora VICEPRESIDENTA (Montserrat Montserrat): Muchas gracias, señor
+    Agirretxea.
+
+    <br /><br />Por el Grupo de IU, ICV-EUiA, CHA: La Izquierda Plural tiene la palabra el
+    señor Centella.
+
+    <br /><br />El señor CENTELLA GÓMEZ: Señora presidenta, señorías, ya dijimos en la
+    primera fase de la tramitación de esta ley que estábamos ante una ocasión
+    perdida. Manifestamos que unas elecciones agrarias eran y son el medio
+    más democrático y más legítimo para medir quién representa a quién en el
+    sector agrario pero, claro, no estábamos ante unas elecciones agrarias,
+    sino ante una consulta, con todas las comillas del mundo, que no daba
+    legitimidad al proceso. Nos encontrábamos ante una consulta, con todas
+    las comillas, que era un verdadero apaño para que finalmente tuviese las
+    consecuencias propias de un proceso electoral, con toda la transparencia
+    y todos los elementos, algo que parece mentira que a estas alturas del
+    siglo XXI haya que repetir. Por eso presentamos y defendimos una enmienda
+    de totalidad para que se pudiese devolver ese proyecto de ley, para que
+    se pudiese debatir más a fondo y para que saliese un proceso de
+    elecciones agrarias -repito- con todas las garantías. No fue así porque,
+    entre las prisas del antiguo ministro, el señor Cañete, y el intento de
+    hacer un apaño, nos encontramos con un proyecto que no nos servía. Lo
+    malo no es que no nos sirva a nosotros, sino que no va a servir. Nos
+    encontramos ante un proyecto que va a crear más problemas de los que
+    puede resolver. Eso no ha cambiado en el Senado, por lo que estamos ante
+    una ley que, aparte de las barbaridades que contempla, ni siquiera se va
+    a aplicar.
+
+    <br /><br />A partir de aquí, nos traen enmiendas del Senado y hay cuestiones que en
+    un principio podían parecer positivas. De forma concreta está la
+    inclusión en el texto legal del Consejo Agroalimentario del Estado que
+    evita que desaparezca este foro de ámbito político para analizar y
+    debatir los asuntos agroalimentarios, en el que participan las
+    organizaciones y las asociaciones más representativas de los sectores de
+    producción y cooperativas, así como la industria y los trabajadores del
+    sector. Pero este consejo no constituye un órgano capaz de llegar a
+    acuerdos, porque no se recoge entre sus funciones la de la negociación y
+    la concertación. Es decir, es un consejo que no puede ni negociar ni
+    concertar; por tanto sigue siendo una chapuza, como otros elementos de
+    esta ley. Este aspecto fundamental de la interlocución puede incluso
+    empeorar respecto al actual Comité Asesor Agrario. Es una enmienda que
+    podría parecer interesante pero que en su concreción nos viene a
+    manifestar que ustedes siguen sin entender lo que es un proceso
+    democrático, un proceso que realmente sirva para representar al sector
+    agrario y para resolver problemas en el sector agrario. Por ello vamos a
+    seguir manteniendo nuestra confrontación con el actual texto, y vamos a
+    seguir planteando que ustedes han perdido la ocasión de reformarlo en el
+    Senado, porque el proceso sigue sin tener garantías democráticas, y eso
+    es lo peor que le puede pasar a cualquier proceso electoral: que no se
+    reconozca su legitimidad democrática.
+
+    <br /><br />En alguna enmienda que incorpora el Senado se eliminan las referencias a
+    un proceso electoral para resaltar que lo que se regula no es un proceso
+    electoral. Ustedes verán cómo resuelven esa situación. Se elimina incluso
+    la referencia a las mesas electorales para subrayar que no se trata de un
+    proceso electoral, sino de una consulta. Pues para consultas están las
+    encuestas, para consultas están las empresas que se dedican a ello. Lo
+    contrario es realmente grave. Puede llevarnos a que este Parlamento se
+    haga a través de una consulta y no de unas elecciones regladas -esto es
+    el absurdo- y lo mismo podría ocurrir con las elecciones sindicales. El
+    absurdo no nos puede llevar a no señalarles la gravedad de lo que están
+    haciendo, porque a partir de que este consejo ejerza va a representar una
+    foto del mundo agrario que no va a ser producto de unas elecciones; no va
+    a ser un resultado electoral democrático, y no va a ser reconocido como
+    tal, por lo que va a crear más conflicto y más deslegitimidad. El
+    problema está en que ustedes tienen que decidir. Quieren superar el
+    mecanismo actual que reconocemos que es insuficiente, y que aunque salió
+    por consenso tiene que ser superado por un marco electoral que represente
+    claramente al sector agrario. Pero háganlo bien; hagámoslo bien por el
+    bien del sector y por el bien de la propia democracia. Repetimos que
+    hablar de consulta y no darle legitimidad democrática elimina la foto y
+    crea un problema: ¿con quiénes van ustedes a mantener una interlocución?
+    ¿Con un consejo o con una estructura que salga de una consulta que no
+    tiene -lo repito por enésima vez- legitimidad democrática? ¿O van a tener
+    que seguir negociando con las organizaciones agrarias, que no se van a
+    ver representadas en esta estructura? Por lo tanto, señorías, están
+    ustedes cometiendo una verdadera barbaridad que va a repercutir en
+    mayores conflictos en el sector agrario, y en mayor dificultad para el
+    entendimiento en un sector que necesita en este momento todo lo
+    contrario. Necesita saber quién lo representa, cómo lo representa y cómo
+    se relaciona con el Gobierno.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página16)"><b>Página
+    16</b></a></p><br />
+
+    <br /><br />Para terminar, repito que no podemos aceptar este proceso y que no podemos
+    aceptar esta ley. Vamos a confrontar democráticamente con ella, y creemos
+    que hay que darle el carácter de derecho a la libertad sindical a lo que
+    tendría que ser este proceso de elecciones. Ustedes han perdido una
+    ocasión y por desgracia las consecuencias las pagarán todo el sector
+    agrario y todo el conjunto de la democracia.
+
+    <br /><br />Muchas gracias.
+
+    <br /><br />La señora VICEPRESIDENTA (Montserrat Montserrat): Muchas gracias, señor
+    Centella.
+
+    <br /><br />Por el Grupo Parlamentario Catalán (Convergència i Unió), tiene la palabra
+    el señor Solsona.
+
+    <br /><br />El señor SOLSONA AIXALÁ: Muchas gracias, señora presidenta.
+
+    <br /><br />Lo primero que quiero mostrar es nuestra decepción ante este proyecto de
+    ley en el trámite del Senado. Nosotros presentamos una enmienda a la
+    totalidad aquí en el Congreso; nos abstuvimos porque el Grupo Popular y
+    el mismo ministro Cañete expresaron su voluntad de incorporar enmiendas
+    en el Senado. Al final, después del trámite del Senado, podríamos decir
+    que nada o para ser más justos casi nada. La enmienda a la totalidad era
+    porque se hacía una consulta vinculante para elegir un órgano consultivo.
+    Esto por concepto ya es un poco contradictorio, y si encima se regula no
+    teniendo en cuenta la tarea que hacen las comunidades autónomas en
+    competencia exclusiva para poder realizar sus elecciones, aún nos
+    chirriaba más. Al fin y al cabo era un proceso electoral que el Gobierno
+    tiene todo el derecho de poder convocar. Pero cuando decimos nada o casi
+    nada queremos decir que se sigue sin regular el proceso electoral, se
+    siguen sin modificar los parámetros de representatividad, ni el 15 % ni
+    el 5 % en seis comunidades autónomas. Nosotros decíamos que si era
+    circunscripción única con un único concepto habría suficiente, pero se
+    empeñaron en mantener el 5 % en seis comunidades autónomas, aparte del 15
+    % general.
+
+    <br /><br />Siguen sin darse las aclaraciones necesarias sobre la posibilidad de
+    compatibilizar procesos electorales simultáneamente: los que hacen las
+    comunidades autónomas con los que propone la consulta del Estado. Lo más
+    flagrante es que lo que se nos dijo en el Congreso que era un error, y
+    que se enmendaría en el Senado, persiste el error o la voluntad en el
+    Senado. Me refiero a la disposición adicional quinta, donde se fija un
+    plazo máximo para realizar la consulta dieciocho meses después de la
+    entrada en vigor de la ley. Nos preguntamos: ¿por qué tanta celeridad y
+    rapidez a la hora de legislar para, al final, hacer una disposición
+    adicional que nos emplaza dieciocho meses después para poder hacer la
+    primera consulta? No lo entendemos. Si lo entendiéramos pensaríamos que
+    esta ley es un compromiso electoral del señor Cañete, que sustituye una
+    ley que se dice inaplicable por otra ley -esta- que seguramente tampoco
+    se aplicará; que se hace un trámite con mucha celeridad, y he dicho que
+    no terminamos de entender por qué; una ley que muy poco soluciona, que
+    nada tiene que ver -y que todo el mundo está en contra- con las OPA, con
+    las organizaciones que son objeto de regulación o de determinación de su
+    representatividad a través de esta ley.
+
+    <br /><br />Esta ley penaliza o no da ningún refuerzo positivo a esas comunidades
+    autónomas que sí cumplieron la anterior ley que ahora se deroga, como es
+    por ejemplo Cataluña. Por eso también en su momento expresamos nuestra
+    queja. A pesar de esto Convergència i Unió trabajó para mejorar la ley, y
+    ustedes lo saben. Participamos activamente, pero al ver el resultado
+    final estamos -como he dicho al principio- decepcionados, y si me
+    permiten y sin que nadie se ofenda nos sentimos engañados. Para una vez
+    que se legisla sin vulnerar las competencias tampoco la podemos votar. En
+    consecuencia vamos a votar en contra de las enmiendas que provienen del
+    Senado. Estamos de acuerdo -como no podía ser de otra manera- con alguna
+    enmienda con un concepto más gramatical o alguna de modificación o mejora
+    técnica, pero globalmente y a raíz de lo expresado en mi intervención
+    vamos a votar en contra.
+
+    <br /><br />Muchas gracias.
+
+    <br /><br />La señora VICEPRESIDENTA (Montserrat Montserrat): Muchas gracias, señor
+    Solsona.
+
+    <br /><br />Por el Grupo Socialista, tiene la palabra el señor Alonso Núñez.
+
+    <br /><br />El señor ALONSO NÚÑEZ: Muchas gracias, presidenta.
+
+    <br /><br />Terminamos hoy la tramitación de un proyecto de ley que podríamos decir,
+    señores del Grupo Popular, que nadie entiende, ni la mayoría de las
+    comunidades autónomas ni por supuesto la oposición, y han oído a todos
+    los portavoces. He tratado de encontrar algún editorialista de los que
+    escriben de agricultura en los distintos medios agrarios y tampoco he
+    encontrado a nadie que defienda o justifique esta ley. Nadie entiende;
+    nosotros no entendemos a qué objetivos responde ni a qué problemática se
+    quiere dar respuesta
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página17)"><b>Página
+    17</b></a></p><br />
+
+    <br /><br />con esta ley. A lo largo de la tramitación los grupos parlamentarios,
+    tanto en el Congreso como en el Senado, hemos tratado de conocer qué hay
+    de trasfondo en esta ley, pero lamentablemente nuestras dudas siguen
+    planteadas, siguen sin resolverse.
+
+    <br /><br />Ustedes, señores del Partido Popular, debían ya haberse dado cuenta de que
+    porque tengan mayoría, que la tienen, no pueden hacer lo que les dé la
+    gana, y en esta ley ustedes están haciendo simple y llanamente lo que les
+    da la gana, respondiendo a un compromiso, a un pacto oculto entre el
+    anterior ministro y no se sabe quién, que la mayoría parlamentaria va
+    haciendo que se cumpla plazo a plazo. Ustedes nos traen aquí un proyecto
+    que habla nada más y nada menos que de elegir la representatividad por
+    medio de una consulta, y ni siquiera han tenido la más mínima voluntad no
+    solo de negociarla con la oposición, sino ni siquiera de hablarla con los
+    distintos afectados de las organizaciones profesionales agrarias. Ustedes
+    no han sometido esta ley al dictamen del Consejo de Estado, y estamos
+    hablando de derechos de voto de los particulares para elegir sus
+    representantes. Ustedes ni siquiera han llevado esta ley al Consejo
+    Económico y Social, cuando es una ley que tendría que haber pasado para
+    recibir informe de los afectados.
+
+    <br /><br />Cuando hemos tratado de que nos explicaran a qué respondía esta ley
+    algunos nos dicen que responde a un acuerdo del señor ministro en
+    precampaña electoral con una organización profesional agraria, que en ese
+    momento manifestaba su disconformidad con la ley anterior. Deberían
+    explicarnos si esto es así, qué pacto es el que hay y a quién trata de
+    arreglar, porque lo que hemos escuchado de los tres sindicatos
+    mayoritarios, Asaja, UPA y COAG, es que no están de acuerdo con esta ley,
+    ni con sus principios ni con ninguno de sus contenidos. Y ustedes,
+    señores del Partido Popular, sobre la base de ese acuerdo oculto, que no
+    se ha conocido, nos traen aquí un proyecto de ley que modifica la
+    anterior. Se lo voy a repetir otra vez: el anterior, señores del Partido
+    Popular, fue el proyecto de ley que vino a esta Cámara a propuesta de
+    Asaja -señor Serrano, de Asaja- de UPA y de COAG, cuyo contenido literal,
+    el texto de la ley al cien por cien fue pactado entre el Partido
+    Socialista y el Partido Popular. Y ustedes no han dedicado un solo
+    segundo a hablar con quien ustedes pactaron la ley, es decir, con el
+    Grupo Socialista, ustedes no han dedicado ni un segundo de tiempo, ni un
+    minuto, ni una hora a hablar con quien les ofreció el pacto en la pasada
+    legislatura para tratar de negociar alguno de los aspectos de esta ley.
+    Ustedes van a aprobar esta ley con su mayoría, tienen votos para
+    aprobarla, pero van a aprobar una ley con la que está en contra la
+    mayoría de la representación agraria de este país, y con la oposición
+    absoluta del Congreso de los Diputados.
+
+    <br /><br />Señor Serrano, creo que va a intervenir usted en nombre del Partido
+    Popular. La verdad es que le aprecio y le va a resultar difícil, va a
+    tener que hacer aquí un esfuerzo, porque yo sé y saben sus compañeros que
+    usted es dirigente de una organización profesional agraria, Asaja. Le va
+    a resultar difícil defender esta ley aquí cuando en las asambleas de
+    Asaja de Extremadura, de Castilla y León, de Castilla-La Mancha, de
+    Aragón, la ley se critica abiertamente, y cuando compañeros suyos de
+    organización han preguntado en distintos medios de comunicación adónde va
+    el ministerio regulando este procedimiento electoral en contra de -según
+    Asaja- la principal organización profesional agraria de este país. Ahora
+    nos dicen que es un acuerdo del ministro Arias Cañete con esta nueva
+    organización. El señor Cañete nos dijo aquí, en su primera comparecencia
+    en esta legislatura, que iba a haber esta ley -es verdad que se
+    comprometió a ello-, que vendría inmediatamente, que se celebrarían
+    elecciones con carácter inmediato, en el primer año. El primer año pasó,
+    el segundo ha pasado. Sean serios, señores del Partido Popular, ustedes
+    con las enmiendas que han introducido en el Senado no van a convocar
+    elecciones en esta legislatura. El Gobierno del Partido Popular con esta
+    ley está enfadando a unos, a Asaja, UPA y COAG, que no quieren esta ley,
+    y engañando a otros, porque ustedes les han prometido elecciones y no las
+    van a celebrar, y si no, señor Serrano, explique aquí esa enmienda que
+    han introducido en el Senado, que dice nada más y nada menos que el
+    proceso electoral se va a desarrollar cuando transcurran dieciocho meses
+    desde la aprobación del reglamento, que no sabemos cuándo se va a
+    aprobar. Aunque ustedes aprobaran el reglamento ahora en el mes de julio,
+    dieciocho meses después es después de que ustedes se vayan del Gobierno.
+    Luego, enfado a unos y engaño a otros, señor Serrano; debería explicar
+    que no van a convocar elecciones.
+
+    <br /><br />Hay una cosa que me parece evidente, y es que la actual ministra no
+    coincide con el acuerdo de Cañete. La actual ministra es la que les ha
+    dicho a ustedes que esto es una cosa de Cañete sin explicación, sin
+    justificación, sin base legal ni respaldo jurídico. Señores del Partido
+    Popular, ¡si ustedes van a dar derecho a voto a gente en función de lo
+    que cobran de la PAC! ¡Qué barbaridad es esta! Si cobran 5.000 euros de
+    PAC pueden votar y si no los cobran no votan. ¿Pero ustedes creen que
+    esto es serio? ¿Pero cuándo en una democracia se dan derechos de voto por
+    lo que cobran de la PAC? Es una barbaridad, es
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página18)"><b>Página
+    18</b></a></p><br />
+
+    <br /><br />un atropello que no se entiende. Además hay sectores de la agricultura
+    española que no cobran de la PAC, que no tendrían posibilidad, como los
+    ganaderos de porcino, o de avicultura, o de cunicultura. Ellos nos cobran
+    ayudas de la PAC ahora ni las van a cobrar nunca. ¿Cómo se pueden
+    establecer derechos de voto en función de la cantidad de ayudas que
+    reciben de la PAC? En definitiva son muchos los temas de fondo que tiene
+    la ley, y en cualquier caso si ustedes hubieran querido hacer elecciones
+    ya les solicitamos nosotros que las hagan conforme a la legislación
+    electoral general. Ustedes han planteado aquí un paripé, un pucherazo
+    como ha dicho alguno. Llaman consulta electoral a una cosa que va a dar
+    derecho de representatividad. En definitiva algo que no entiende nadie.
+
+    <br /><br />Por último, señores del Partido Popular, les diré que la ley es mala en
+    origen. No solo no se ha mejorado en la tramitación, sino que se ha
+    empeorado. Por tanto nosotros votaremos en contra en el Congreso, en el
+    Senado hemos votado en contra de las enmienda, y vamos a votar en contra
+    de estas enmiendas que han introducido en el Senado, con una salvedad,
+    señores del Partido Popular, pero que demuestra de alguna manera su
+    incapacidad para el consenso. Vamos a votar a favor la enmienda que crea
+    el Consejo Agroalimentario del Estado, mejor dicho lo mantiene de la ley
+    anterior. Señor Serrano, en la tramitación en el Congreso esta enmienda
+    fue una propuesta del Grupo Socialista. El Grupo Socialista propuso en el
+    Congreso el mantenimiento del Consejo Agroalimentario del Estado de dos
+    maneras, con dos textos diferentes: lo hicimos con el texto propuesto por
+    la FIAP y la organización cooperativa. Les propusimos la misma enmienda
+    de creación del Consejo Agroalimentario del Estado en el Senado, y la han
+    votado en contra. Han votado nuestras propuestas en el Congreso y han
+    votado en contra la enmienda planteada por el Grupo Socialista, y han
+    dicho: bueno, pero la escribimos nosotros votamos la nuestra. Pues bien,
+    como no somos como ustedes y es bueno que exista un Consejo
+    Agroalimentario del Estado para que haya representación de FIAP, de
+    cooperativas, de los sindicatos de trabajadores, etcétera, vamos a votar
+    a favor de esa enmienda. Pero ni siquiera merecerían ese gesto del Grupo
+    Socialista.
+
+    <br /><br />Termino, señora presidenta. Un fiasco de ley, una ley incomprensible. Una
+    ley que creo que es ilegal. Una ley que no va a tener vida propia ni en
+    esta legislatura ni seguramente en la siguiente. Un engaño manifiesto del
+    Partido Popular en este caso a las organizaciones profesionales agrarias
+    y a los agricultores.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />La señora VICEPRESIDENTA (Montserrat Montserrat): Muchas gracias, señor
+    Alonso.
+
+    <br /><br />Por el Grupo Popular en el Congreso tiene la palabra el señor Serrano
+    Calurano.
+
+    <br /><br />El señor SERRANO CALURANO: Gracias, señora presidenta.
+
+    <br /><br />Señorías, por lo escuchado en esta tribuna a quienes me han precedido en
+    el uso de la palabra parece ser que es el Gobierno del Partido Popular y
+    el Partido Popular quienes quieren taparle la voz a los agricultores y
+    ganaderos de nuestro país. Parece ser que es el Partido Popular quien no
+    quiere que haya democracia en el sector agrario. Pues bien, me van a
+    permitir que aclaremos la situación porque quienes nos están escuchando a
+    lo mejor no conocen en profundidad el tema ni la realidad que hay en este
+    momento en el sector agrario de nuestro país, en cuanto a la
+    representatividad, en cuanto a democracia en el sector agrario, y en
+    cuanto a la legitimidad o no de las organizaciones agrarias que
+    actualmente representan al sector. Por ello me van a permitir que les
+    haga una breve introducción.
+
+    <br /><br />En estos momentos está en vigor la Ley 10/2009. Una ley que mide la
+    representatividad del sector agrario de dos maneras: la primera de ellas
+    en el artículo 4, que dice que serán representativas aquellas
+    organizaciones agrarias que saquen al menos el 15 % de los votos
+    escrutados en el total de los procesos de las distintas comunidades
+    autónomas de nuestro país. La segunda determina que si no se alcanza el
+    punto anterior las organizaciones pueden ser representativas siempre y
+    cuando las reconozcan en al menos diez comunidades autónomas. Vamos a
+    analizar qué es lo que ha ocurrido desde que ustedes aprobaron la ley en
+    el año 2009, con nuestro apoyo, señor Alonso, porque creíamos que era una
+    ley bienintencionada.
+
+    <br /><br />En primer lugar, en cinco de las diecisiete comunidades autónomas, es
+    decir, en el 30 % de las comunidades autónomas españolas nunca se han
+    celebrado unas elecciones al campo; nunca. En el 53 % de las comunidades
+    autónomas de este país, es decir, en nueve comunidades autónomas, solo se
+    han celebrado una vez en treinta y cinco años que llevamos de democracia,
+    y una de ellas, la más reciente, fue hace dieciséis años. Solo en una
+    comunidad autónoma -ahora después hablaré de ello- se determina por
+    afiliación a las distintas organizaciones agrarias; y solo en dos
+    comunidades autónomas de las diecisiete se celebran elecciones
+    simultáneamente y cuando toca: Cataluña y Castilla y León. En el resto
+    solo una vez se han celebrado elecciones en treinta y cinco años de
+    democracia, y en cinco de ellas
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página19)"><b>Página
+    19</b></a></p><br />
+
+    <br /><br />ni siquiera esa vez, no se han celebrado nunca. ¿De verdad consideran
+    ustedes que esto es serio en democracia? ¿De verdad consideran ustedes
+    que se puede dar legitimidad a las OPA que dicen representar al sector
+    agrario en nuestro país? (Una señora diputada: ¡Muy bien!). ¿De verdad
+    consideran ustedes que esto es serio y se puede sostener, señor Alonso?
+    ¿De verdad lo considera usted? (Un señor diputado: ¡Qué vergüenza!).
+
+    <br /><br />El Gobierno podía haber hecho dos cosas: primero, hacer como hicieron
+    ustedes, mirar para otro lado y no mirar para el problema, dejando que
+    las organizaciones agrarias se siguiesen representando a sí mismas, o
+    segundo, coger el toro por los cuernos e intentar solucionar el problema,
+    pero para ello no hemos contado con ustedes, eso sin duda. ¿Qué es lo que
+    está ocurriendo con esta ley? Con esta ley lo que está ocurriendo es que
+    se pacta la representatividad entre todas las organizaciones agrarias de
+    nuestro país. Hay tres organizaciones agrarias que pactan la
+    representatividad al 33,33 % cada una, y ya está. ¿Eso es de recibo? ¿Eso
+    es democrático? ¿Eso es representativo en nuestro país, en un Estado
+    social y democrático de derecho? Nosotros creemos que no; nosotros
+    consideramos que no. ¿Qué es lo que ocurre? Que si hay organizaciones
+    agrarias nuevas que quieren entrar en el sistema no pueden, porque la ley
+    lo impide. ¡Si no se celebran las elecciones en las comunidades
+    autónomas! Es decir, son las comunidades autónomas quienes tienen la
+    potestad para celebrar esas elecciones, pero no las han celebrado en
+    estos treinta y cinco años, solamente dos. ¿Cómo vamos a determinar la
+    representatividad del sector agrario en el campo español? Es imposible, y
+    ustedes saben que es totalmente imposible. Hay disputas entre las
+    organizaciones agrarias todos los días: yo represento más que tú; tú no
+    representas a nadie; yo tengo más afiliados que tú; yo tengo más
+    oficinas. ¿Cómo se puede consentir esto? ¿No será mejor que les hagamos
+    pasar por las urnas y determinemos quién representa a quién? Ustedes
+    dicen que una consulta no es válida. ¿Por qué no, si va a ser lo que
+    salga en las urnas lo que determine la representatividad de las
+    organizaciones agrarias? Eso es lo que va a ser. Una consulta es
+    totalmente válida y eficaz para determinar este grado de
+    representatividad de las distintas organizaciones agrarias.
+
+    <br /><br />Señorías, como pueden comprobar al leer la ley que hoy debatimos aquí, se
+    ha elaborado una ley para permitir que los agricultores y ganaderos
+    españoles elijan democráticamente en las urnas a los representantes ante
+    la Administración General del Estado. Se trata de una ley necesaria ante
+    la inaplicabilidad de la Ley 10/2009 -es imposible aplicarla, es
+    imposible determinar el grado de representatividad del actual sistema en
+    las organizaciones agrarias-, una ley pionera en España y en la Unión
+    Europea. No existe precedente de elecciones a nivel nacional y por eso
+    las vamos a hacer. Esta es una ley que va a permitir a nuestras
+    organizaciones agrarias sembrar un precedente dentro de la Unión Europea.
+    Ya es hora de que nosotros le demos lecciones a Europa también de cómo
+    deben elegirse los representantes del sector agrario. Señorías, una ley
+    pionera en Europa, una ley que va a permitir a las organizaciones
+    agrarias tener ese plus de legitimidad a la hora de reivindicar y de
+    sentarse en las distintas mesas de negociación. Va a permitir acabar con
+    las disputas permanentes de organizaciones agrarias que se han creado
+    nuevas, y ustedes lo saben muy bien en Cataluña, que diariamente llaman y
+    no pueden ser recibidas porque la ley no lo contempla. Están todos los
+    días llamando a la puerta del ministerio y no pueden ser atendidas; todos
+    los días disputas sobre lo mismo. Pues bien, esta ley acaba con esas
+    disputas porque se va a determinar de una vez por todas quién tiene la
+    representatividad. Señorías, el ministerio necesita interlocutores
+    válidos, interlocutores democráticos, interlocutores que hayan sido
+    elegidos por los agricultores y por el sector agrario de este país.
+
+    <br /><br />En cuanto a las distintas intervenciones, el señor Baldoví dice que es un
+    empecinamiento nuestro. Es un empecinamiento nuestro ante una realidad
+    palmaria y ante la falta de democracia en el sector agrario; por eso es
+    un empecinamiento nuestro, señor Baldoví. Esquerra Republicana dice que
+    es una ley necesaria. Coincidimos en algo, señora Jordà; nos gusta que
+    haya dicho que es una ley necesaria, lo que ocurre es que no le gusta
+    cómo la hemos hecho. Hubiese sido la gloria completa que también hubiera
+    dicho que le gusta y que la iban a votar a favor (Risas.-Aplausos), pero
+    nos conformamos con que diga que es una ley necesaria en el sector
+    agrario; nos vale con eso. Amaiur dice que ese una ley centralizadora.
+    Ustedes no pueden darnos lecciones de democracia en ningún concepto, y
+    tampoco ahora en el sector agrario. Ustedes determinan la
+    representatividad en el País Vasco por afiliación de las organizaciones
+    agrarias; son la única comunidad autónoma que lo hace en España. ¿Qué le
+    parecería a usted que la representatividad en el Parlamento español la
+    definiéramos en función de la afiliación de los ciudadanos de este país a
+    los partidos políticos? ¿Les gustaría a ustedes eso? La mayoría absoluta
+    sería para aquel que tuviera más afiliados. ¿Eso es serio, señores de
+    Amaiur? ¿Eso es serio? Dan ustedes lecciones de democracia, y no pueden
+    venir dando lecciones de democracia. Se está determinando la
+    representatividad
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página20)"><b>Página
+    20</b></a></p><br />
+
+    <br /><br />a nivel nacional. A ninguna comunidad autónoma se le dice lo que tiene que
+    hacer; es más, si quiere adherirse se adhiere, y si no quiere adherirse
+    no se adhiere. Puede seguir con los procesos que estime necesario, pero a
+    nivel nacional, a nivel del ministerio, a nivel de la Administración
+    General del Estado necesitamos saber quiénes son los interlocutores
+    válidos. Desde luego no podemos regirnos por la afiliación, porque si yo
+    me presento aquí con mi familia y cinco más, somos los más
+    representativos. Eso no es serio; de verdad que no es serio. Izquierda
+    Unida dice que faltan garantías, que es una consulta. No faltan
+    garantías, señores de Izquierda Unida; es una consulta y tiene todas las
+    garantías para salir adelante. CiU dice que es mejorable. Por supuesto
+    todo es mejorable, y no interfiere en lo que dicen las comunidades
+    autónomas. Señor Alonso, ¿a qué responde la ley? Se lo repito, a la
+    democracia, a ver quién es quién; a ver qué organizaciones agrarias
+    tienen de verdad esa representatividad. Hablan del consejo, pero ustedes
+    nunca predican con el ejemplo. La ley se aprueba en 2009, nosotros
+    llegamos al Gobierno en 2011 y ni siquiera habían convocado al consejo ni
+    al comité, y ahora dicen que es importante que haya consejo y que haya
+    comité. ¿Para qué los quieren, si no los convocaron? En dos años y medio
+    ustedes no los convocaron. ¿Para qué los quieren? ¿Es buena la Ley
+    10/2009? Creo que no. Pero ustedes están en el no por el no...
+
+    <br /><br />La señora VICEPRESIDENTA (Montserrat Montserrat): Señor Serrano, tendría
+    que ir terminando.
+
+    <br /><br />El señor SERRANO CALURANO: Termino, señora presidenta.
+
+    <br /><br />Ustedes están en el no por el no y da igual lo que hubiésemos traído a
+    esta Cámara. Ustedes iban a decir que no, si no porque era demasiado
+    blanco, porque era demasiado negro; si no porque estaba muy a la
+    izquierda, porque estaba muy a la derecha. Da igual; ustedes están en el
+    no por el no y sabemos que no vamos a contar con ustedes. No se
+    preocupen, esto lo vamos a sacar adelante solos, implantando la
+    democracia en el campo, que los agricultores y ganaderos se puedan
+    pronunciar como no lo han hecho en los treinta y cinco años que llevamos
+    de democracia en nuestro país. (Aplausos).
+
+    <br /><br />Muchas gracias.
+
+    <br /><br />La señora VICEPRESIDENTA (Montserrat Montserrat): Muchas gracias, señor
+    Serrano.
+
+    <br /><br />DICTÁMENES DE LA COMISIÓN DE ASUNTOS EXTERIORES SOBRE CONVENIOS
+    INTERNACIONALES:
+
+    <br /><br />- ACUERDO ENTRE EL REINO DE ESPAÑA Y LA REPÚBLICA DE SERBIA PARA EL
+    INTERCAMBIO Y PROTECCIÓN RECÍPROCA DE INFORMACIÓN CLASIFICADA, HECHO EN
+    MADRID EL 13 DE MARZO DE 2014. (Número de expediente 110/000122).
+
+    <br /><br />- ACUERDO DE COOPERACIÓN ENTRE LA UNIÓN EUROPEA Y SUS ESTADOS MIEMBROS,
+    POR UNA PARTE, Y LA CONFEDERACIÓN SUIZA, POR OTRA, SOBRE LOS PROGRAMAS
+    EUROPEOS DE NAVEGACIÓN POR SATÉLITE, HECHO EN BRUSELAS EL 18 DE DICIEMBRE
+    DE 2013. (Número de expediente 110/000123).
+
+    <br /><br />- PROTOCOLO PARA LA ELIMINACIÓN DEL COMERCIO ILÍCITO DE PRODUCTOS DE
+    TABACO, HECHO EN SEÚL EL 12 DE NOVIEMBRE DE 2012. (Número de expediente
+    110/000124).
+
+    <br /><br />La señora VICEPRESIDENTA (Montserrat Montserrat): Pasamos a examinar el
+    punto del orden del día relativo a los dictámenes de la Comisión de
+    Asuntos Exteriores sobre convenios internacionales con números de
+    expediente 110/000122, 110/000123 y 110/000124.
+
+    <br /><br />Algunos grupos han manifestado su voluntad de intervenir en este punto,
+    por lo que, conforme al acuerdo adoptado por la Junta de Portavoces, se
+    abrirá un único turno de fijación de posiciones de cinco minutos para
+    cada grupo parlamentario en relación con los dictámenes que se someten a
+    la consideración.
+
+    <br /><br />El primer grupo que ha pedido la palabra es el Grupo de IU, ICV-EUiA, CHA:
+    La Izquierda Plural y tiene la palabra el señor Nuet.
+
+    <br /><br />El señor NUET PUJALS: Gracias, presidenta.
+
+    <br /><br />Rápidamente, para fijar la posición de nuestro grupo parlamentario. Vamos
+    a votar favorablemente tanto el Acuerdo de información con la República
+    de Serbia como el Acuerdo de cooperación de la Unión Europea con la
+    Confederación Suiza y el Protocolo contra el comercio ilícito de
+    productos del tabaco. Respecto a la firma de este protocolo
+    antitabaquista hay varios temas que queríamos señalar. Primero,
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página21)"><b>Página
+    21</b></a></p><br />
+
+    <br /><br />recordar la justeza del Convenio marco de la Organización Mundial de la
+    Salud para el control del tabaco, que marca de alguna forma los
+    principios internacionales de los cuales todos nos hemos dotado para el
+    comercio del tabaco. En segundo lugar, quiero señalar de forma clara la
+    impotencia de este tratado para abordar la comercialización del tabaco en
+    las zonas francas. No estamos hablando de cosas lejanas, estamos hablando
+    de Gibraltar, de Andorra o del aeropuerto de Madrid, del duty free,
+    cuando muchos de nosotros viajamos y algunos se compran una cajetilla de
+    tabaco. De estas cosas estamos hablando. Este convenio no consigue
+    regular el tema de las zonas francas, que se han convertido de facto en
+    verdaderos paraísos fiscales del negocio del tabaco superando las
+    fronteras y los controles creados, verdaderas burbujas legales que se
+    aprovechan por parte de las grandes multinacionales del tabaco para
+    burlar la fiscalidad de los Estados, la fiscalidad española con el tema
+    del tabaco, también en muchas ocasiones la fiscalidad con el tema del
+    alcohol y las recomendaciones de la Organización Mundial de la Salud de
+    Naciones Unidas.
+
+    <br /><br />Hay que recordar que el artículo 6.2 del Convenio marco de la Organización
+    Mundial de la Salud para el control del tabaco alienta a las partes -y
+    por tanto también a España, que es Estado firmante de este convenio- a
+    que prohíban o restrinjan, según proceda, la venta y/o la importación por
+    los viajeros internacionales de productos del tabaco libres de impuestos
+    y libres de derechos de aduana. Puede parecer o algunos pueden creer que
+    estamos hablando de restricciones inasumibles desde el punto de vista de
+    la libertad de mercado, pero quiero recordar que los supuestos beneficios
+    que genera la industria del tabaco son ampliamente superados por los
+    costes que representan para los sistemas de salud de los distintos países
+    las adicciones y las enfermedades que el tabaco produce, pero de nuevo
+    estamos cediendo al aprobar este convenio -que, repito, vamos a votar a
+    favor porque es un paso adelante- ante los intereses y estrategias de las
+    grandes multinacionales del tabaco, que usan estos paraísos -repito,
+    Andorra, Gibraltar o, por ejemplo, nuestro aeropuerto- para superar la
+    fiscalidad y la legislación de países como España. Por tanto, es un paso
+    adelante, pero queda muchísimo camino por recorrer.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />La señora VICEPRESIDENTA (Montserrat Montserrat): Muchísimas gracias,
+    señor Nuet.
+
+    <br /><br />Por el Grupo de Convergencia i Unió, tiene la palabra el señor Picó.
+
+    <br /><br />El señor PICÓ I AZANZA: Gracias, señora presidenta.
+
+    <br /><br />En este ya habitual trámite en el Pleno de la Cámara mi grupo
+    parlamentario manifiesta que votará a favor de los acuerdos y del
+    protocolo. Se avanza con la aprobación de estos instrumentos
+    internacionales en materias como el intercambio y protección recíproca de
+    información clasificada con Serbia, la eliminación del comercio ilícito
+    de productos de tabaco, acuerdo hecho en Seúl el 12 de noviembre, y en
+    programas europeos de navegación por satélite, según el Acuerdo de
+    cooperación entre la Unión Europea, los Estados miembros, y Suiza.
+
+    <br /><br />Quiero centrarme en este último acuerdo. En su artículo 1 se manifiesta
+    que el objetivo del acuerdo es alentar, facilitar y mejorar la
+    cooperación a largo plazo entre las partes en materia de navegación por
+    satélites bajo control civil, en particular mediante la participación de
+    Suiza en los programas europeos de navegación por satélite a nivel
+    mundial, es decir, el programa Galileo y el Sistema europeo de navegación
+    por complemento geoestacionario, conocido por sus siglas Egnos. No es la
+    primera vez en esta legislatura que aprobamos un instrumento de acuerdo
+    de cooperación en relación con sistemas de navegación europeos. A inicios
+    de la misma, el Congreso ya concedió su autorización al Acuerdo de
+    cooperación sobre un sistema de navegación por satélite entre la Unión
+    Europea, sus Estados miembros, y el Reino de Noruega. Los programas
+    europeos de navegación por satélite son un claro ejemplo de que la
+    cooperación en el seno de Europa en materia de innovación y desarrollo en
+    sectores punteros y estratégicos con aplicaciones multimodales en un
+    ámbito que representa un potencial importante en la cadena de actividades
+    espaciales consigue aunar una importante participación, no únicamente de
+    los Estados miembros de la Unión Europea, sino también de otros Estados
+    europeos no integrados en la Unión Europea, como es el caso de Suiza, e
+    incluso de países no europeos. El avance tecnológico, las aplicaciones
+    resultantes de los procesos de desarrollo tecnológico también constituyen
+    un objeto de la cooperación multilateral, de diplomacia, de fomento de
+    las relaciones mundiales, y consideramos que ello es positivo.
+
+    <br /><br />Repito, mi grupo votará a favor de la autorización de estos tres convenios
+    internacionales que hoy debatimos.
+
+    <br /><br />Muchas gracias, señora presidenta.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página22)"><b>Página
+    22</b></a></p><br />
+
+    <br /><br />La señora VICEPRESIDENTA (Montserrat Montserrat): Muchísimas gracias,
+    señor Picó.
+
+    <br /><br />Por el Grupo Socialista, tiene la palabra el señor Sáez Jubero.
+
+    <br /><br />El señor SÁEZ JUBERO: Gracias, señora presidenta.
+
+    <br /><br />Anuncio el voto afirmativo de mi grupo parlamentario en la votación de los
+    dictámenes de estos convenios internacionales. Así, votaremos a favor del
+    primero, el Acuerdo entre el Reino de España y la República de Serbia
+    para el intercambio y protección recíproca de información clasificada.
+    Hace unos días expresamos en esta Cámara nuestras reservas por la firma
+    de un convenio de idénticas características con la Federación Rusa
+    atendiendo a criterios de oportunidad, pero en este caso votaremos a
+    favor del convenio con la República de Serbia. En definitiva, el
+    contenido de este convenio está dirigido a establecer los procedimientos
+    y las prácticas de seguridad para el intercambio de información
+    clasificada entre las partes en el curso de la cooperación política,
+    militar, económica o de cualquier otro tipo y para la protección de dicha
+    información clasificada.
+
+    <br /><br />También votaremos a favor del Acuerdo de cooperación entre la Unión
+    Europea y la Confederación Suiza para programas europeos de navegación
+    por satélite porque nos parece un convenio importante. Está pensado para
+    la cooperación a largo plazo entre los países de la Unión Europea en los
+    sistemas mundiales de navegación por satélite.
+
+    <br /><br />En cuanto al tercero de estos convenios, el comercio ilícito de productos
+    de tabaco, hecho en Seúl, al que ha hecho referencia de manera específica
+    el portavoz del Grupo Parlamentario de La Izquierda Plural, mi grupo
+    parlamentario también lo valora positivamente, como ha hecho el portavoz
+    que me ha precedido en el uso de la palabra. Efectivamente hay una
+    preocupación general de salud pública por ese tipo de comercio ilícito y
+    creemos que este convenio va a permitir que se pueda luchar con mejores
+    instrumentos para evitar las conductas ilícitas y establecer mecanismos
+    de control, de vigilancia del cumplimiento del ordenamiento jurídico
+    nacional e internacional para que este tipo de comercio se vaya
+    eliminando. Por tanto, nos parece un paso adelante y por ello queremos
+    manifestar también nuestro voto positivo.
+
+    <br /><br />Muchas gracias, señora presidenta. Muchas gracias, señorías.
+
+    <br /><br />La señora VICEPRESIDENTA (Montserrat Montserrat): Muchísimas gracias,
+    señor Sáez.
+
+    <br /><br />Por el Grupo Popular tiene la palabra el señor Bermúdez de Castro.
+
+    <br /><br />El señor BERMÚDEZ DE CASTRO FERNÁNDEZ: Muchas gracias.
+
+    <br /><br />El debate de esta mañana en relación con los convenios internacionales
+    hace referencia a materias dispares, desde la protección e intercambio
+    recíproco de información entre el Reino de España y la República de
+    Serbia referida a materias clasificadas hasta la ratificación de un
+    convenio entre la Unión Europea y la Confederación Suiza sobre programas
+    de navegación vía satélite y especialmente ese al que han hecho
+    referencia otros portavoces sobre eliminación del comercio ilícito de
+    productos del tabaco. Nosotros no vemos las objeciones que ha puesto
+    encima de la mesa el señor Nuet. Yo creo que este convenio, que viene a
+    complementar el Convenio marco de la Organización Mundial de la Salud,
+    define claramente conceptos como intermediación, decomiso, zona franca o
+    comercio ilícito que preocupan tanto al señor Nuet. Las medidas de
+    vigilancia que recoge este convenio entendemos que son un avance muy
+    importante en el comercio ilícito del tabaco y por tanto nosotros vamos a
+    ratificar estos convenios, porque, repito, entendemos que supone un
+    avance muy significativo en esa materia que preocupa a dichos portavoces.
+
+    <br /><br />Gracias.
+
+    <br /><br />La señora VICEPRESIDENTA (Montserrat Montserrat): Muchas gracias, señor
+    Bermúdez.
+
+    <br /><br />DICTÁMENES DE COMISIONES SOBRE INICIATIVAS LEGISLATIVAS:
+
+    <br /><br />- PROYECTO DE LEY ORGÁNICA DE RÉGIMEN DISCIPLINARIO DE LAS FUERZAS
+    ARMADAS. (Número de expediente 121/000047).
+
+    <br /><br />La señora VICEPRESIDENTA (Montserrat Montserrat): Pasamos al punto
+    relativo a dictámenes de comisiones sobre iniciativas legislativas, en
+    concreto el relativo al proyecto de Ley orgánica de régimen disciplinario
+    de las Fuerzas Armadas.
+
+    <br /><br />Para defender las enmiendas formuladas a esta iniciativa legislativa tiene
+    la palabra, por el Grupo Mixto, el señor Tardà.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página23)"><b>Página
+    23</b></a></p><br />
+
+    <br /><br />El señor TARDÀ I COMA: Gracias, señora presidenta.
+
+    <br /><br />Señorías, tal como ya manifestamos en la Comisión de Defensa, los
+    republicanos catalanes vamos a votar en contra de esta ley. Entendemos
+    que las Fuerzas Armadas deben estar sometidas a leyes muy estrictas,
+    leyes que castiguen con dureza conductas que cuestionan los derechos
+    humanos y que, en definitiva, cuestionan la misma democracia, y esta ley
+    que hoy van a aprobar ustedes no es lo exigente que debería atendiendo a
+    los tiempos que vivimos, tiempos en los que hay que dar un paso adelante
+    en todo aquello que atañe a la calidad democrática de nuestras
+    sociedades. Consideramos -y entiendo que ustedes no considerarán
+    petulante lo que voy a decir- que la ley no alcanza este objetivo en la
+    medida en que volverán a ser rechazadas nuestras enmiendas. ¿Acaso no es
+    importante fijar de forma clara y diáfana que los crímenes de genocidio,
+    los crímenes de guerra o los crímenes de lesa humanidad deben ser
+    juzgados por la Corte Penal Internacional? Porque es evidente que el
+    riesgo siempre existe. Por ello entendemos que sería fundamental que la
+    ley contemplara que las instituciones están obligadas a denunciar
+    cualquier crimen de este tipo, porque es evidente que el poder militar,
+    que externamente se valora por su capacidad armamentística, internamente
+    es poder real simplemente por su existencia, por su capacidad de
+    imponerse a toda la población en un momento determinado mediante la
+    violencia. De hecho, en la historia de España existe una larga tradición
+    de golpes militares, de dictaduras avaladas por las Fuerzas Armadas. De
+    ahí que los delitos cometidos por las Fuerzas Armadas contra la
+    población, contra la sociedad civil en el exterior o en el interior del
+    Estado deban ser juzgados por tribunales civiles y ustedes no están
+    dispuestos a ello. Ustedes todavía consideran que debe existir una
+    excepcionalidad jurisdiccional. Ustedes no están dispuestos a ello y lo
+    que hacen es anclarse en fórmulas ya superadas. Como tampoco están
+    dispuestos a dejar fijada como falta muy grave no colaborar o atender a
+    los requerimientos de los tribunales del Estado o de la Corte Penal
+    Internacional de Justicia, así como no investigar o intentar esconder
+    denuncias hechas contra miembros de las Fuerzas Armadas para que queden
+    impunes conductas criminales. De hecho, todo es tan lamentable que
+    incluso nos han negado nuestro requerimiento de considerar solamente
+    falta, repito, falta, expresiones de menosprecio a las lenguas
+    cooficiales en el Estado español o incluso expresiones de menosprecio a
+    la misma nacionalidad. Ni tan solo, repito, han sido capaces de
+    reconocerlo como falta, ya no hablo de otra categoría que podría también
+    haberse conceptuado.
+
+    <br /><br />Hoy ustedes se van a ratificar en el voto negativo a nuestras enmiendas.
+    Creo que ni el Grupo Socialista las va a votar; en Comisión creo que se
+    abstuvo, pero, repito, quede claro que votando en contra de nuestras
+    enmiendas van a perpetuar un marco de impunidad que se ve todavía más
+    agravado por el hecho de que los delitos cometidos por los militares, en
+    tanto en cuanto no son juzgados por la jurisdicción civil, en tanto en
+    cuanto son juzgados por la jurisdicción militar, suponen una
+    excepcionalidad inadmisible. De hecho, lo que ustedes hacen es consagrar
+    que los militares son juez y parte y esto no tiene parangón en las
+    sociedades que anhelamos. Estamos convencidos de que dentro de unos años
+    ustedes mismos sentirán vergüenza cuando vean cómo en el año 2014 todavía
+    defendían la jurisdicción militar. ¿Cómo se sostiene esto? Se puede
+    sostener mediante la asunción del pasado militarista de los Estados.
+    Asumimos la historia, no nos atrevemos a corregirla y, en consecuencia,
+    lo que hacemos es convertir una excepcionalidad retrógrada, arcaica,
+    superada por los tiempos, intentar configurar un marco de modernidad
+    dentro del cual pueda caber esta estupidez, porque se trata de una
+    estupidez.
+
+    <br /><br />Afortunadamente, y a pesar de que el Estado español no lo reconozca, hoy
+    todavía hay delitos que son universales e imprescriptibles y
+    afortunadamente todavía hay países, Estados, no como el Estado español,
+    que no han enterrado la justicia universal. Si alguna vez alguno de
+    ustedes, alguien tiene todavía la tentación de expresar o incluso de
+    traducir en hechos algunas ideas violentas, alguna amenaza, procuren
+    recordar a estos militares, o recuérdenselo ustedes mismos, que todavía
+    hay sociedades en las cuales en el frontispicio de sus leyes figura como
+    parte fundamental, eje de las actuaciones y aviso para los poderes
+    militares que nada se puede hacer contra el pueblo. Recuerden ustedes que
+    hoy han votado una ley que no aporta nada nuevo; no se atreven a dar un
+    paso hacia delante sino al contrario, viven del pasado y, como el pasado
+    no es otro que el del fuego y la espada de los militares, muchas veces en
+    contra de la ciudadanía, ustedes se limitan a hacernos creer que esta ley
+    es moderna. Pues no, no solamente no es moderna, sino que incluso está a
+    la altura de lo que ustedes hicieron hace pocos días enterrando la
+    justicia universal.
+
+    <br /><br />Muchas gracias.
+
+    <br /><br />La señora VICEPRESIDENTA (Montserrat Montserrat): Muchas gracias, señor
+    Tardà.
+
+    <br /><br />Por el Grupo de Unión Progreso y Democracia, tiene la palabra la señora
+    Lozano.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página24)"><b>Página
+    24</b></a></p><br />
+
+    <br /><br />La señora LOZANO DOMINGO: Gracias, presidenta.
+
+    <br /><br />Señorías, en el último trámite de esa nueva legislación respecto al
+    régimen disciplinario de los militares quiero señalar sobre todo que
+    nuestras enmiendas han tratado de adaptar este régimen disciplinario, que
+    procedía del año 1998, y casarlo con la Ley de derechos y deberes del año
+    2011. Esto era lo coherente desde el punto de vista legislativo, pero
+    también desde el punto de vista social. Ya dijimos en el debate en
+    Comisión que es legítimo imponer ciertas restricciones a los derechos y
+    las libertades de los miembros de las Fuerza Armadas por su estatus
+    especial, pero en tiempos de paz no se puede establecer un régimen
+    disciplinario que pueda dar pie al abuso de poder y a ejercer un control
+    férreo sobre estos miembros de las Fuerzas Armadas a costa de derechos y
+    libertades que ellos defienden, y que los defienden en otros países del
+    mundo para otras personas, cuando ellos mismos no los tienen en nuestro
+    propio país. Esta es la contradicción y la tristeza que nosotros
+    tratábamos de enmendar. Por desgracia no lo hemos conseguido, porque el
+    Grupo Parlamentario Popular y Grupo Parlamentario Socialista han pacto un
+    régimen disciplinario encaminado fundamentalmente a tener las cosas más
+    fáciles dentro del ejército cuando gobiernen unos y otros, como si esto
+    fuera ocurrir siempre, cosa que ya tienen suficientes motivos para dudar,
+    pero siguen comportándose como si no los tuvieran.
+
+    <br /><br />Este régimen disciplinario es un retroceso. Se lo dije en Comisión, y el
+    señor López Garrido, que hizo una defensa ardorosa de este pacto del
+    bipartidismo en cuanto al régimen disciplinario, discutió que existiera
+    ese retroceso. El retroceso al que yo me refiero, señor López Garrido, es
+    respecto a la Ley de derechos y deberes -que, por cierto, aprobó un
+    Gobierno del Partido Socialista-, no respecto al régimen disciplinario
+    del año 1998. Por cierto, respecto a ese apenas se avanza, ese es el
+    drama de este proyecto de ley, que apenas se avanza respecto a lo que era
+    el régimen de disciplina de los militares en el año 1998. El espíritu de
+    la Ley de derechos y deberes del año 2011 debería estar incorporado en
+    este nuevo régimen disciplinario, porque la disciplina no puede estar por
+    encima de los derechos y de las libertades básicas, no pueden existir
+    valores que tengan mayor rango jerárquico que los valores de reconocer a
+    los militares esos derechos y libertades recogidos en nuestra
+    Constitución. Esto no solamente es una posición política, que desde luego
+    lo es, sino que también ha quedado registrado en un voto particular a la
+    sentencia de la Sala de lo Militar del Tribunal de Supremo, de 2 de marzo
+    de 1994, hace ya veinte años: no pueden existir valores de mayor rango
+    jerárquico que los derechos y libertades reconocidos en nuestro
+    ordenamiento jurídico. Y la disciplina no puede ser un valor que esté por
+    encima de ellos.
+
+    <br /><br />Por entrar en algunos detalles que consideramos particularmente aberrantes
+    y que han sido discutidos en la Comisión, quiero señalar especialmente la
+    cuestión de la inseguridad jurídica que crean algunas sanciones.
+    Sanciones, por ejemplo, y cito literalmente del proyecto: al descuido en
+    el aseo personal, por la falta de interés en la preparación, por
+    alteraciones del buen orden, por inexactitud en el cumplimiento. Estos
+    son conceptos que pecan de imprecisión y ambigüedad, lo decía el propio
+    informe del Consejo General del Poder Judicial, por lo que entendemos que
+    se pone en cuestión la seguridad jurídica.
+
+    <br /><br />Otra aberración que ustedes consagran en este proyecto de ley es cuando se
+    arresta, cuando se priva de libertad a un militar. Saben que las
+    sanciones se tienen que cumplir de manera inmediata. Si posteriormente un
+    militar, al recurrirlo a los tribunales, consigue que se reconozca que
+    esa sanción estaba impuesta de manera incorrecta, se le retribuye por los
+    daños morales que le causa esa sanción. ¿En cuánto se le retribuye? Es
+    decir, ¿cuánto vale un día de privación de libertad? Esta ley establece
+    que el importe de un día de privación de libertad equivale a un día de
+    dietas; esto es, ustedes creen que privar a alguien de libertad es lo
+    mismo que el que tenga que viajar fuera de casa, pero como además se da
+    la circunstancia de que el importe de la dieta está calculado en el
+    ejército según el grado, se produce la aberración de que la privación de
+    un día de libertad de un soldado es más barata que la privación de un día
+    de libertad de un coronel. Esto es absolutamente aberrante y demuestra el
+    sentido que tienen ustedes de lo que significa privar de libertad a una
+    persona, que en una sociedad libre y en un régimen político democrático
+    como el nuestro es la sanción más grave que se le puede imponer a una
+    persona y desde luego no es comparable ni subsanable con la dieta de un
+    día.
+
+    <br /><br />Me quiero detener, al hilo de lo que comentaba de los arrestos y la
+    inmediata ejecutividad de las sanciones disciplinarias, es decir, que las
+    sanciones se tengan que cumplir de forma inmediata y posteriormente se
+    puedan recurrir, en que seguimos teniendo un sistema único en Europa e
+    insólito en el que se puede privar a la gente de libertad por la vía
+    administrativa. Ustedes dicen que lo han solventado introduciendo la
+    posibilidad de instar el procedimiento de hábeas corpus y que gracias a
+    eso se ha podido eliminar la reserva que España había establecido
+    respecto al Convenio Europeo de Derechos Humanos, a sus artículos 4 y 5.
+    Este razonamiento que hacen ustedes es una trampa porque el artículo 5
+    del
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página25)"><b>Página
+    25</b></a></p><br />
+
+    <br /><br />Convenio Europeo de Derechos Humanos dice literalmente: Toda persona
+    detenida o privada de libertad deberá ser conducida sin dilación ante la
+    presencia de un juez. Y la enmienda que ustedes, el PP y el PSOE, han
+    pactado dice que cuando un sancionado sea privado de libertad la
+    ejecutividad se entenderá inmediata, sin perjuicio de que el sancionado
+    pueda instar el procedimiento de hábeas corpus. Es decir, el convenio
+    europeo dice que se deberá poner a esa persona ante un juez y ustedes le
+    permiten la posibilidad de instar el hábeas corpus. Son cosas muy
+    distintas. El convenio impone la obligación de la Administración del
+    Estado, como garante de derechos, de poner a esa persona ante un juez, de
+    que la privación de libertad no pueda ser por vía administrativa y
+    ustedes simplemente le conceden el derecho de hábeas corpus. La
+    conclusión real es que ustedes eliminan esa reserva al Convenio Europeo
+    de Derechos Humanos y probablemente la tengan que introducir, como ya
+    ocurrió con el anterior régimen disciplinario, deprisa y corriendo, vía
+    Consejo de Ministros, como ya se hizo una vez, porque habrá recursos de
+    militares españoles ante el Tribunal Europeo de Derechos Humanos. Ustedes
+    eliminan la reserva para dar la apariencia de que ya no se vulnera ese
+    convenio, pero la realidad es que sí se vulnera, la realidad es que no se
+    cumplen sus términos.
+
+    <br /><br />Para terminar, señorías, creemos que hay derechos elementales, como la
+    libertad de expresión o el derecho de asociación, que quedan menoscabados
+    en este proyecto de ley. Pese a las limitaciones legítimas que puede
+    haber a los derechos de los militares, no se les trata como ciudadanos de
+    primera en este proyecto de ley y nosotros pensamos, señorías, que o
+    tenemos un ejército moderno o no lo tenemos. No puede ser que lo tengamos
+    para las obligaciones, pero no a la hora de recoger y respetar sus
+    derechos. Por suerte para todos los ciudadanos, en cuestiones de
+    formación, de entrega y de capacidad los militares españoles han
+    demostrado en repetidas ocasiones que están a la altura de los mejores
+    del mundo y nosotros vamos a seguir reivindicando que, en justa
+    correspondencia a su entrega y dedicación, les consideremos ciudadanos de
+    primera y no de segunda, como hace este proyecto.
+
+    <br /><br />Muchas gracias, señora presidenta.
+
+    <br /><br />La señora VICEPRESIDENTA (Montserrat Montserrat): Muchas gracias, señora
+    Lozano.
+
+    <br /><br />Por el Grupo de IU, ICV-EUiA, CHA: La Izquierda Plural, tiene la palabra
+    el señor Centella.
+
+    <br /><br />El señor CENTELLA GÓMEZ: Señora presidenta, señorías, esta es la última
+    intervención de nuestro grupo en este periodo de sesiones -más allá del
+    Pleno extraordinario siguiente- y quería hacer constar en el "Diario de
+    Sesiones" la felicitación y el agradecimiento de nuestro grupo al
+    diputado Chesús Yuste, que ha trabajado en nuestro grupo durante esta
+    legislatura y que va a ser sustituido con brevedad. Por lo tanto, quiero
+    dejar constancia de nuestra valoración positiva y nuestro reconocimiento
+    al compañero Chesús. (Aplausos).
+
+    <br /><br />Dicho esto y entrando en el debate del tema que nos ocupa, ya dijimos en
+    Comisión lo que vamos a señalar a grandes rasgos en el Pleno, ya dijimos
+    que este no es el proyecto de ley que necesitan nuestras Fuerzas Armadas.
+    En este proyecto, que parece ser que está consensuado, el Gobierno viene
+    entregado a los estados mayores y al anclaje de una concepción de la
+    disciplina más del pasado que del presente. Viene situando todavía a las
+    mujeres y a los hombres que conforman las Fuerzas Armadas como ciudadanos
+    y ciudadanas de segunda. Parece ser que todavía no va a llegar la
+    democracia y el reconocimiento pleno de los derechos y libertades a las
+    Fuerzas Armadas. No entendemos cómo no se ha podido avanzar más a la hora
+    de trabajar en la defensa y la seguridad de unas personas a las cuales
+    les adjudicamos la responsabilidad de la defensa de nuestro territorio.
+    Esta es la situación que justifica un proyecto como este, que perpetúa el
+    arresto. Ustedes pueden llamarlo como quieran llamarlo y pueden
+    envolverlo como quieran envolverlo, pero perpetúa la privación de
+    libertad como elemento básico y esencial para el mantenimiento de la
+    disciplina sin control judicial. Lo pueden envolver como lo quieran
+    envolver; y luego algo les diré. Ustedes siguen pensando que la
+    disciplina se basa fundamentalmente en el arresto y en la privación de
+    libertad. Por tanto, es una reforma que poco progresa y poco avanza hacia
+    unas Fuerzas Armadas del siglo XXI, en las que haya deberes pero también,
+    al mismo nivel, se reconozcan los derechos de cualquier ciudadano. Repito
+    que el mantenimiento del arresto es inasumible para nuestro grupo, lo
+    pongan como lo pongan, como lo es también que se imponga por autoridad
+    militar al margen de la intervención de una autoridad judicial
+    independiente y que se haga sin las garantías reales de una defensa, es
+    decir, sufriendo indefensión. En ese sentido, volvemos a reiterar que la
+    falta de separación y el mantenimiento de la dependencia jerárquica
+    directa de quienes instruyen los procedimientos disciplinarios y quienes
+    los resuelven son más que ilustrativas de lo que significa realmente la
+    falta de garantías en el procedimiento, que puede acabar -ya se ha dicho
+    en esta tribuna- con la peor sanción
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página26)"><b>Página
+    26</b></a></p><br />
+
+    <br /><br />que puede tener una persona, que es la privación de libertad. Por eso,
+    nuestras enmiendas iban en el sentido contrario, en el sentido de alejar
+    la instrucción de la ejecución y en el sentido de reconocer
+    verdaderamente una separación en este ámbito. Si a esta situación se le
+    suma un hecho grave para nosotros como es una configuración de tipo
+    disciplinario que se adentra en la represión de conductas en la esfera
+    personal de los militares, en ámbitos privados y de ciudadanía,
+    comprenderán nuestra radical oposición a este proyecto y nuestro voto
+    contrario a su aprobación. Si además -como decía- seguimos otorgando
+    potestad disciplinaria a escalones de mando que están contaminados por
+    los hechos a investigar, podemos decir aquello de que la justicia, cuanto
+    más militar es, menos justicia es. Esto es preocupante. Nosotros habíamos
+    entendido -y habíamos abierto una puerta a la esperanza- que lo que se
+    pretendía era reformar el régimen disciplinario de las Fuerzas Armadas
+    para modernizarlo, para adaptarlo a la vida real, a la situación actual
+    de plena profesionalización de las Fuerzas Armadas y, por tanto, al
+    mantenimiento de una estructura que no tenga los límites, los miedos, las
+    prevenciones preexistentes de una conciencia militar que, repito, no debe
+    ser la de un Estado democrático.
+
+    <br /><br />Sabemos -ya lo oímos en la Comisión- que los grupos que han llegado a un
+    acuerdo van a negar esta realidad, eso nos sitúa ante la evidencia de lo
+    que cada uno entendemos por disciplina, por militar, incluso por regular
+    los derechos sociales y las libertades, de otra manera no se explica.
+    Tenemos ideas diferentes de los derechos a preservar; ustedes entienden
+    que están preservados en esta ley y nosotros creemos que no. Nos preocupa
+    que haya quien todavía a estas alturas piense que lo que ustedes plantean
+    aquí es algo que cumple los derechos fundamentales de las personas en el
+    siglo XXI. Nosotros creemos sinceramente que no. Ahí tenemos un primer
+    problema de entendimiento. Ustedes entienden que hay garantías
+    democráticas cuando el hábeas corpus, que ya existe, no es un instrumento
+    adecuado para el control, y ya se ha explicado en esta tribuna. Ustedes
+    se limitan a eso, pero no es lo que existe en otros ámbitos de la vida.
+    Por tanto, estamos separando el ámbito de la vida militar de otros
+    ámbitos de la vida ciudadana. Además -lo escuchamos en la posición del
+    Grupo Popular en la Comisión- no se desprende que estén de acuerdo en lo
+    que han interpretado cada uno de los dos grupos que finalmente han
+    llegado a un acuerdo. Sostienen la misma enmienda, pero le dan
+    interpretaciones diferentes, algo que espero que se explique en esta
+    tribuna para evitar ese dislate que supone que ustedes se pongan de
+    acuerdo en una enmienda pero luego cada uno la interprete de una forma
+    diferente.
+
+    <br /><br />Nosotros no creemos que este proyecto vaya a resolver problemas; al
+    contrario, ustedes no crean una jurisdicción independiente, hay miedo,
+    hay temor, hay recelo en esta ley. Por tanto, seguimos manteniendo unas
+    Fuerzas Armadas en las que nosotros entendemos que no se cumple la
+    aplicación de los artículos 5 y 6 del Convenio de Derechos Humanos y que
+    ustedes van a hacer una interpretación que terminará teniendo que
+    reinterpretarse en otros ámbitos que no sean el político. Evidentemente,
+    va a haber quien lleve esta interpretación a otros ámbitos y finalmente
+    tendrá que ser en los ámbitos del convenio europeo donde se imponga la
+    razón y donde se imponga realmente cómo tienen que regularse estos
+    artículos. (La señora vicepresidenta, Villalobos Talero, ocupa la
+    Presidencia).
+
+    <br /><br />Para ir terminando, reafirmamos el espíritu de nuestras enmiendas porque
+    entendemos que hay que ir a unas Fuerzas Armadas que no conviertan a sus
+    componentes en ciudadanos y ciudadanas de segunda sino que, al contrario,
+    por aquella responsabilidad especial, por aquella responsabilidad
+    importante que tienen, tengan la posibilidad de ser ciudadanos al mismo
+    nivel que el resto de los compatriotas, a los que tienen la
+    responsabilidad de defender. Creemos que con este régimen disciplinario
+    que ustedes van a aprobar los militares estarán en las peores condiciones
+    para reivindicar sus derechos, porque esta ley les sitúa en peores
+    condiciones que a otros ciudadanos para defender sus derechos, por
+    ejemplo, un salario justo, y defender la verdadera conciliación de la
+    vida familiar, personal y profesional. En definitiva, ustedes siguen
+    castigando que los militares se puedan asociar para defender su derechos
+    porque esta ley, digan ustedes lo que digan, sigue castigando a las
+    asociaciones y a quienes las representan.
+
+    <br /><br />Termino, señora presidenta, manifestando que no vamos a apoyar este
+    proyecto, aunque ya sé que tiene poco valor matemático en esta Cámara,
+    advirtiéndole que no va a resolver los problemas, sino que les va a crear
+    más problemas de los que ustedes quieren resolver.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />La señora VICEPRESIDENTA (Villalobos Talero): Gracias, señor Centella.
+
+    <br /><br />Por el Grupo Catalán de Convergència i Unió, señor Guillaumes.
+
+    <br /><br />El señor GUILLAUMES I RÀFOLS: Gracias, presidenta. Permítame gastar unos
+    segundos también para felicitar y despedir al señor Yuste. La verdad es
+    que no hemos llegado a hablar en todo este periodo
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página27)"><b>Página
+    27</b></a></p><br />
+
+    <br /><br />de legislatura, pero a pesar de ello ha sabido ganarse el respeto por sus
+    intervenciones en esta tribuna, al menos el mío y el de mi grupo. Por
+    tanto, quisiera mostrarle nuestro agradecimiento.
+
+    <br /><br />Derechos, en este caso jurisdiccionales, de los militares. Tenemos una
+    vieja tradición en nuestro grupo, que se remonta casi a su constitución,
+    que es la profunda defensa de los derechos, las libertades, las garantías
+    jurisdiccionales, las garantías, en definitiva, del estamento militar.
+    Comenzó a hacerlo nuestro diputado Lluís Recoder hace muchos años ya, en
+    los años ochenta, y continuó haciéndolo con mucho mérito el diputado aún
+    presente en nuestra Cámara Carles Campuzano, que de alguna manera culminó
+    la mejor parte de ese trabajo al hacer que se consiguiera el servicio
+    militar no obligatorio. Aprovecho para recordar su trabajo, que yo
+    humildemente intento continuar, así como para agradecer a todos aquellos
+    chicos -porque en aquel tiempo todos eran chicos- que hacían el servicio
+    militar que nos informaran de las cosas que pasaban dentro de los
+    cuarteles, porque, señores, es bueno que recordemos de dónde venimos. Los
+    diputados no podíamos entrar en los cuarteles, no podíamos saber qué
+    pasaba allí, y ahora esto ha cambiado. Aprovecho para dar las gracias a
+    estos chicos, que no nos dijeron nunca un secreto de Estado, obviamente,
+    tampoco debían saberlo, pero que nos avisaban de las novatadas, a menudo
+    salvajes, que provocaban víctimas mortales, que nos avisaban también
+    cuando en los órdenes del día de los cuarteles se hacían alabanzas a
+    Franco y a la Guerra Civil. Es de donde venimos, señores, hemos de
+    recordar que es de ahí de donde venimos. Hoy tenemos una ley de derechos
+    y deberes, ahora vamos a aprobar una ley de régimen disciplinario y
+    tenemos un Observatorio de la vida militar, que es una sindicatura de
+    este Congreso. En definitiva, no podemos decir que no haya habido un
+    progreso importante. Hoy vamos más allá. Me apresuro a decir que no
+    suficientemente más allá. Comparto algunas de las críticas hechas por
+    Izquierda Unida sobre la falta de independencia de los jueces militares;
+    no tiene sentido que sean jueces y, a la vez, continúen teniendo una
+    dependencia jerárquica. Pero, aún así, creemos que ha habido una
+    sustancial mejora.
+
+    <br /><br />Voy a hacer una defensa genérica de nuestras enmiendas. No puede ser de
+    otra manera porque, siguiendo la tradición que les he indicado antes de
+    intervenir mucho en este tipo de temas, hemos presentado más de setenta
+    enmiendas. Nosotros hemos querido, en definitiva, concreción y seguridad
+    jurídica. Hemos hablado con todas las asociaciones de militares y lo que
+    a ellos les alarmaba de manera extraordinaria, y alguna portavoz ha hecho
+    referencia a ello, es la inconcreción con que muchas veces se definían
+    las infracciones, lo cual permitía un grado de arbitrariedad que estaba
+    absolutamente fuera de lugar y la violación de los derechos fundamentales
+    de las personas.
+
+    <br /><br />Concreción y seguridad jurídica. Creemos que la concreción la hemos
+    conseguido. Han sido aceptadas siete de nuestras enmiendas. No vamos a
+    hacer una valoración cuantitativa sino cualitativa. La verdad es que se
+    han aceptado dos de nuestras enmiendas que corrigen todo el artículo que
+    hablaba de las faltas graves y otra enmienda de nuestro grupo, la que
+    hablaba de las faltas muy graves. Por tanto, si hacemos una valoración no
+    cuantitativa sino cualitativa de nuestra aportación a esta ley podemos
+    decir que, de alguna manera, se ha aceptado en el corazón de la ley de
+    manera significativa nuestra necesidad de concreción y de seguridad
+    jurídica. También en cuanto a asistencia letrada, a acceso a
+    documentación y un sinfín de pequeños detalles que, en definitiva, son
+    los que configuran las garantías jurídicas de los militares. Hemos
+    defendido estas enmiendas y en ellas nos sentimos reflejados y creemos
+    que hemos hecho un buen trabajo en las que han sido aceptadas. Queríamos
+    más y, en definitiva, no es nuestra ley todavía pero hemos ido más allá
+    de lo que se ha ido nunca hasta ahora. La correlación parlamentaria es la
+    que es. Nosotros, repito, valoramos cualitativamente el trabajo
+    conseguido y, por lo tanto, vamos a ser coherentes en este sentido. Nos
+    parecen absolutamente coherentes con las nuestras las enmiendas de
+    Esquerra Republicana y vamos a votarlas favorablemente y en la inmensa
+    mayoría de las otras nos vamos a abstener, pero, debido a que entendemos
+    que hemos modificado el corazón de la ley con dos de nuestras enmiendas,
+    vamos a ser coherentes y vamos a votar a favor de la ley.
+
+    <br /><br />En mi época de servicio militar -el señor Centella no se ha atrevido a
+    hacer la cita entera, pero yo voy a hacerlo- se decía aquello de que la
+    justicia militar es a la justicia lo que la cocina militar es a la
+    cocina. Es una frase bastante gráfica. Entiendo que con la aprobación de
+    esta ley esta frase es menos cierta. Nosotros no dejaremos de luchar para
+    que finalmente esta frase sea una anécdota del pasado.
+
+    <br /><br />Gracias, presidenta. Gracias, señorías.
+
+    <br /><br />La señora VICEPRESIDENTA (Villalobos Talero): Gracias, señor Guillaumes.
+
+    <br /><br />Por el Grupo Socialista, en turno de fijación de posiciones, tiene la
+    palabra el señor López Garrido.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página28)"><b>Página
+    28</b></a></p><br />
+
+    <br /><br />El señor LÓPEZ GARRIDO (don Diego): Señora presidenta, señorías, la ley
+    que estamos debatiendo y que vamos a votar corresponde a lo que llamaría
+    una segunda modernización legislativa de las Fuerzas Armadas. La primera
+    modernización fue lo que sucedió después de la aprobación de la
+    Constitución, donde aparecen las Fuerzas Armadas en el artículo 8, y se
+    remite a una ley orgánica para su regulación de criterios básicos,
+    regulación que dio lugar a una serie de normas que a lo largo de la
+    última década se han ido modificando y reformando ante el cambio
+    sustancial que se ha producido en una organización -como es el caso de
+    las Fuerzas Armadas- que tiende a comportarse como una institución y que
+    requiere una regulación específica, propia. Desde que se aprobó la
+    Constitución España ha ingresado en la Organización del Tratado del
+    Atlántico Norte, España forma parte de la Política Común y de Seguridad y
+    Defensa de la Unión Europea; el Ejército se ha profesionalizado; ha
+    tenido lugar la incorporación de la mujer al Ejército; las Fuerzas
+    Armadas españolas han participado crecientemente en misiones en el
+    exterior como fuerza de interposición, como fuerzas de mantenimiento de
+    la paz, como ayuda humanitaria; participan en emergencias, en ayuda
+    frente a catástrofes o cataclismos de una forma muy eficaz. Todo esto
+    llevó a que el Gobierno socialista, que actuó a partir de 2004, empezase
+    a hacer una segunda modernización legislativa que se inició con la Ley
+    Orgánica de Defensa Nacional de 2005 y que siguió con leyes referidas a
+    la carrera militar, como la Ley de Tropa y Marinería de 2006, con una
+    importantísima reforma de las enseñanzas militares en 2007, así como con
+    leyes sobre el comportamiento de los miembros de las Fuerzas Armadas,
+    como las ordenanzas de 2009 y la Ley de derechos y deberes de las Fuerzas
+    Armadas de 2011. Así que esta ley de régimen disciplinario de alguna
+    manera es una cierta culminación -aún queda el Código de Justicia
+    Militar- de este proceso modernizador en todos los ámbitos importantes
+    que se refieren a la regulación de las Fuerzas Armadas.
+
+    <br /><br />La ley de régimen disciplinario tiene mucho que ver con unas reglas
+    esenciales de comportamiento de las Fuerzas Armadas, como son la unidad,
+    la jerarquía y la disciplina, pensadas para que las Fuerzas Armadas sean
+    eficaces y sean neutrales políticamente. Nosotros pensamos que los
+    cuerpos del Estado que llevan armas, que tienen, por tanto, una capacidad
+    importante de intervención y de coacción, deben ser especialmente
+    disciplinados, deben estar sometidos especialmente a la disciplina;
+    creemos que eso es absolutamente necesario, fundamental en una
+    democracia. Hemos asistido a acontecimientos históricos que prueban la
+    importancia de la unidad, de la jerarquía y de la disciplina en las
+    Fuerzas Armadas. La ley de régimen disciplinario está al servicio de esta
+    cuestión, como otras leyes sobre el régimen disciplinario en otros países
+    de la Unión Europea y de fuera de la Unión Europea. (El señor presidente
+    ocupa la Presidencia).
+
+    <br /><br />Esa ley esencialmente hace lo que toda ley de régimen disciplinario tiene
+    que hacer, regula la tipología de las infracciones, las sanciones y las
+    garantías. Nosotros dijimos aquí en esta tribuna, en el debate de
+    totalidad, en el que nos abstuvimos, que si la negociación posterior con
+    el Gobierno y con el Grupo Popular evolucionaba positivamente, nuestro
+    voto evolucionaría también hacia el sí y, si no, evolucionaría hacia el
+    no, en la votación que va a haber a continuación. La negociación que se
+    ha realizado a lo largo de bastante tiempo creemos que ha sido
+    constructiva, que ha evolucionado bien, que ha reformado el proyecto de
+    ley que el Gobierno trajo y por esas razones nosotros vamos a apoyarlo,
+    sin perjuicio de que naturalmente es mejorable. Nosotros hubiéramos hecho
+    un proyecto más avanzado en muchas cosas y nos hubiera gustado que
+    enmiendas de otros grupos parlamentarios hubieran sido aceptadas, cómo
+    no.
+
+    <br /><br />En el campo de la tipología de las infracciones se han introducido nuevos
+    tipos importantes que están acordes con la Ley orgánica de derechos y
+    deberes de los miembros de las Fuerzas Armadas, por ejemplo, el derecho
+    de los conflictos armados o el principio de igualdad y no discriminación
+    en el seno de las Fuerzas Armadas por razón de nacimiento, origen racial
+    o étnico, género, orientación sexual, religión, convicciones, opinión o
+    cualquiera otra condición o circunstancia personal o social. Y hay un
+    tema, señor Tardà, que usted ha señalado como ausente en este proyecto de
+    ley y que no es en absoluto tal. Usted ha hablado de que en este proyecto
+    de ley no se respetan las lenguas cooficiales y otros elementos de las
+    comunidades autónomas. A mí me gustaría que usted se leyera el proyecto
+    de ley, señor Tardà, cuyo artículo 7.1 recoge las faltas graves. La
+    primera de las faltas graves, señor Tardà, que hay en el proyecto de ley
+    -falta grave, no falta leve- es manifestar públicamente expresiones
+    contrarias, realizar actos irrespetuosos o adoptar actitud de menosprecio
+    hacia las comunidades autónomas y sus símbolos -entre ellos,
+    naturalmente, las lenguas- y las personas que las representan. Querer
+    presentar este proyecto de ley como lo que no hay, como lo que no dice o
+    como que no dice lo que usted dice que no dice es demagogia, pura y
+    simplemente demagogia, porque falta absolutamente a la verdad. Por eso me
+    parece importante que, aparte de las manifestaciones lícitas
+    absolutamente
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página29)"><b>Página
+    29</b></a></p><br />
+
+    <br /><br />genéricas al respecto, se concrete cuando se critica un determinado
+    resultado de una negociación política.
+
+    <br /><br />Las sanciones son la otra parte importante de este proyecto de ley.
+    Nosotros habríamos querido que hubieran desaparecido por completo los
+    arrestos por falta leve. No ha sido así, pero se ha acotado su alcance.
+    Los arrestos por falta leve no van a poder imponerse cuando no esté en
+    cuestión la disciplina militar o las reglas esenciales del comportamiento
+    en las Fuerzas Armadas. Además, las sanciones tienen que estar motivadas
+    y hay un control judicial sobre las mismas, lo cual nos parece un avance
+    -no un retroceso- sobre la anterior ley, todavía vigente, y sobre el
+    proyecto que trajo el Gobierno aquí. La última parte importante de este
+    proyecto es la relativa a las garantías del procedimiento, donde ha
+    habido avances sustantivos, importantísimos, en el procedimiento
+    administrativo y en el control judicial. Nosotros hemos introducido la
+    inmediata posibilidad de que el militar arrestado por falta leve, grave o
+    muy grave inmediatamente pueda solicitar la intervención de un juez por
+    el procedimiento de hábeas corpus. Hay un control judicial inmediato, no
+    diferido -que también lo hay- a la sanción y, por tanto, con posibilidad
+    de suspender la ejecución inmediata de la misma. A nuestro juicio, eso
+    nos permite decir que la reserva en el Convenio Europeo de los Derechos
+    Humanos que España tiene establecida desde que empezamos nuestra
+    democracia por razón de la existencia de este tipo de sanciones sin
+    suficiente control judicial debería ser retirada, porque no es necesario
+    establecerlo. Por tanto, lograríamos algo que todavía los militares
+    españoles no tienen, como es la posibilidad de llegar hasta Estrasburgo
+    en cuestiones disciplinarias. El Tribunal Europeo de Derechos Humanos
+    ahora mismo no es competente porque existe esa reserva, y habría que
+    equiparar a los militares españoles con los demás militares europeos, que
+    sí pueden hacerlo. Creo que ese es un avance sustantivo en este proyecto
+    de ley que nos va a permitir votarlo favorablemente y sentirnos
+    satisfechos al final de esta negociación.
+
+    <br /><br />Señor presidente, el Grupo Socialista, el Partido Socialista Obrero
+    Español, ha tenido las iniciativas políticas esenciales en la última
+    década -por supuesto que no ha sido el único- para una transformación
+    legislativa importante del funcionamiento de las Fuerzas Armadas, de su
+    régimen interno, de su régimen disciplinario, de la carrera militar, y
+    después de los cambios efectuados por este proyecto de ley nos satisface
+    poder culminarlo con un grado importante de consenso en el día de hoy,
+    como el que han tenido las anteriores leyes referidas a las Fuerzas
+    Armadas en esta Cámara.
+
+    <br /><br />Muchas gracias, señor presidente. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor López Garrido.
+
+    <br /><br />Por el Grupo Popular, tiene la palabra el señor Ferrer.
+
+    <br /><br />El señor FERRER ROSELLÓ: Señorías, esta es una ley importante porque lo es
+    el objetivo que persigue. Su finalidad es garantizar la observancia de
+    las reglas de comportamiento de nuestros militares, en particular, la
+    disciplina, la unidad y la jerarquía, de acuerdo con la Constitución y el
+    resto del ordenamiento. Constituyen, al fin y al cabo, el código de
+    conducta de los miembros de las Fuerzas Armadas; en definitiva, uno de
+    los pilares básicos de la organización militar y, como consecuencia de
+    ello, de la defensa nacional.
+
+    <br /><br />Es una ley importante, pero además es una buena ley, la mejor que hemos
+    tenido nunca en este ámbito. Consigue, a mi juicio, un equilibrio
+    armónico porque, salvaguardando los valores básicos a los que hacíamos
+    referencia de unidad, jerarquía y disciplina, constituye un poderoso
+    avance, un notable progreso en lo tocante a la salvaguarda de los
+    derechos de los militares. No podía ser de otra manera porque esta ley
+    adapta el régimen disciplinario de las Fuerzas Armadas a la doctrina del
+    Tribunal Europeo de Derechos Humanos, del Tribunal Constitucional y del
+    Tribunal Supremo sobre derechos y garantías fundamentales en el ejercicio
+    de la potestad disciplinaria en el ámbito militar. Se adapta también a la
+    plena profesionalización de las Fuerzas Armadas, garantiza especialmente
+    los derechos de la mujer y establece una regulación específica para el
+    personal desplazado en misiones en el exterior. Podría agotar mi tiempo
+    describiendo todos y cada uno de los nuevos elementos que incorpora la
+    norma, pero baste con afirmar que nos encontramos ante una de las leyes
+    más garantistas, avanzadas y progresistas del mundo en materia de
+    disciplina militar.
+
+    <br /><br />He dicho, señorías, que es una ley importante, que es buena y que es
+    avanzada. Ahora quisiera adelantarles una característica más. Es una ley
+    pactada. Winston Churchill decía que la democracia es la necesidad de
+    doblegarse de vez en cuando a la opinión de los demás; este es un
+    ejercicio que encuentro muy recomendable y que hemos puesto en práctica
+    el Gobierno de la nación y varios de los grupos representados en esta
+    Cámara. Lo hemos hecho porque esta es una norma que, tal y como les
+    decía, constituye uno de los pilares de la defensa nacional, y la defensa
+    nacional es una cuestión de Estado, es
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página30)"><b>Página
+    30</b></a></p><br />
+
+    <br /><br />la cuestión de Estado por excelencia, y demandaba -así lo hemos creído- un
+    ejercicio de responsabilidad por parte de todos. Es una ley consensuada
+    porque se ha realizado un enorme esfuerzo. No ha sido fácil, se lo puedo
+    asegurar. Se ha actuado con generosidad, y quiero agradecérselo por igual
+    al Ministerio de Defensa, al Grupo Socialista, a Convergència i Unió y al
+    resto de grupos que apoyan esta nueva ley. Quiero decirles que el secreto
+    del acuerdo ha estado sencillamente en primar en todo momento el interés
+    de la nación. No deslegitimo el derecho a la disensión, pero
+    flexibilidad, capacidad de alcanzar acuerdos, de aunar consensos y de
+    cerrar pactos me parece la más noble, la más inteligente y la más
+    saludable de las actitudes políticas, y no está reñida con la firmeza.
+    Fue Le Bon quien afirmó: gobernar es pactar y pactar no es ceder.
+
+    <br /><br />No quiero finalizar mi intervención sin realizar una reflexión sobre
+    algunas de las intervenciones que me han precedido. No veo al señor
+    Centella, pero si no me equivoco es secretario general del Partido
+    Comunista de España. Yo les he tenido siempre por gente de orden -es
+    verdad que alguna vez se les ha ido la mano, pero gente de orden en
+    definitiva-, como el paradigma de la disciplina, pero les oigo y no salgo
+    de mi asombro. En cualquier caso, estoy convencido de que si Juan
+    Modesto, Enrique Líster o Agustín González, más conocido como El
+    Campesino, todos ellos extraordinarios generales y buenos comunistas,
+    hubieran escuchado al señor Centella esta mañana aquí, el señor Centella
+    habría acabado el día arrestado, en el calabozo y echando de menos una
+    ley como esta.
+
+    <br /><br />Señor Tardà, yo no sé si son imaginaciones mías o detecto un cierto tono
+    de hostilidad hacia el Grupo Popular. Me preocupa, porque eso genera
+    dificultades de comprensión y de comunicación. ¿No cree su señoría que,
+    quizá, si probaran alguna vez a quitarse la bayoneta de entre los dientes
+    cada vez que se dirigen a nosotros, además de que su señoría ganaría en
+    comodidad -no le quepa la menor duda-, sería más fácil y más fluida la
+    relación? Lo digo en beneficio de todos.
+
+    <br /><br />Por último, señora Lozano, yo le he escuchado a usted y a su grupo desde
+    esta misma tribuna en repetidas ocasiones acusar al Partido Popular y
+    también al Partido Socialista de ser incapaces de alcanzar grandes
+    acuerdos de Estado -se lo he oído aquí-, porque se trataba de unos
+    irresponsables dispuestos a sacrificar en todo momento el interés general
+    a los bastardos beneficios electorales. Hoy, señora Lozano, traemos un
+    pacto de Estado que afecta a la defensa nacional, sin embargo, a usted
+    tampoco parece gustarle; es más, lo ha criticado con dureza. No acabo de
+    entenderlo, no acabo de entender las razones. Antonio Machado decía que
+    en España, de cada diez cabezas, nueve embisten y una piensa. Yo no sé si
+    atribuirlo a esto, o a que el problema también podría ser que sean
+    ustedes quienes en realidad siempre sacrifican el interés nacional a los
+    intereses electorales.
+
+    <br /><br />Muchísimas gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Ferrer.
+
+    <br /><br />PROPUESTAS DE CREACIÓN DE SUBCOMISIONES:
+
+    <br /><br />- SOLICITUD DE CREACIÓN DE UNA SUBCOMISIÓN, EN EL SENO DE LA COMISIÓN DE
+    SANIDAD Y SERVICIOS SOCIALES, PARA ABORDAR EL PROBLEMA DE LA VIOLENCIA
+    CONTRA LOS NIÑOS Y LAS NIÑAS. (Número de expediente 158/000030).
+
+    <br /><br />El señor PRESIDENTE: El último punto del orden del día es el relativo a
+    las propuestas de creación de subcomisiones, con la solicitud, dentro de
+    la Comisión de Sanidad y Servicios Sociales, y a propuesta suya, de la
+    creación de una subcomisión para abordar el problema de la violencia
+    contra los niños y las niñas. No se han pedido intervenciones y lo
+    votaremos con todo lo demás.
+
+    <br /><br />En unos minutos comienza la votación. (Pausa).
+
+    <br /><br />SOLICITUD DE PRÓRROGA DE SUBCOMISIONES:
+
+    <br /><br />- SOLICITUD DE LA COMISIÓN DE INTERIOR PARA PRORROGAR, HASTA EL 31 DE
+    MARZO DE 2015, EL PLAZO OTORGADO A LA SUBCOMISIÓN DE ESTUDIO SOBRE LAS
+    REDES SOCIALES PARA LA CONCLUSIÓN DE SUS TRABAJOS. (Número de expediente
+    154/000007).
+
+    <br /><br />El señor PRESIDENTE: Comenzamos las votaciones con unos acuerdos que creo
+    que son por asentimiento.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página31)"><b>Página
+    31</b></a></p><br />
+
+    <br /><br />Esta Presidencia somete al Pleno la prórroga hasta el 31 de marzo de 2015
+    del plazo otorgado para emitir informe a la Subcomisión de estudio sobre
+    las redes sociales. ¿Queda aprobado por asentimiento? (Asentimiento).
+
+    <br /><br />PROPUESTAS DE CREACIÓN DE SUBCOMISIONES. (VOTACIÓN):
+
+    <br /><br />- SOLICITUD DE CREACIÓN DE UNA SUBCOMISIÓN, EN EL SENO DE LA COMISIÓN DE
+    SANIDAD Y SERVICIOS SOCIALES, PARA ABORDAR EL PROBLEMA DE LA VIOLENCIA
+    CONTRA LOS NIÑOS Y LAS NIÑAS. (Número de expediente 158/000030).
+
+    <br /><br />El señor PRESIDENTE: Hay una solicitud de creación de una subcomisión en
+    el seno de la Comisión de Sanidad y Servicios Sociales para abordar el
+    problema de la violencia contra los niños y las niñas. Considero que se
+    aprueba por asentimiento. (Asentimiento).
+
+    <br /><br />MOCIONES CONSECUENCIA DE INTERPELACIONES URGENTES. (VOTACIÓN):
+
+    <br /><br />- DEL GRUPO PARLAMENTARIO DE IU, ICV-EUIA, CHA: LA IZQUIERDA PLURAL, SOBRE
+    LA POLÍTICA DEL GOBIERNO EN RELACIÓN CON EL RECONOCIMIENTO DE LAS
+    PROVINCIAS DE TERUEL, SORIA Y CUENCA COMO ZONAS ESCASAMENTE POBLADAS
+    DENTRO DE LA UNIÓN EUROPEA, CON OBJETO DE RECABAR LAS AYUDAS QUE LOS
+    FONDOS ESTRUCTURALES Y EL FONDO SOCIAL EUROPEO PREVÉN PARA LAS ZONAS CON
+    ESA PROBLEMÁTICA. (Número de expediente 173/000158).
+
+    <br /><br />El señor PRESIDENTE: Moción consecuencia de interpelación urgente, del
+    Grupo de La Izquierda Plural, sobre la política del Gobierno en relación
+    con el reconocimiento de las provincias de Teruel, Soria y Cuenca como
+    zonas escasamente pobladas dentro de la Unión Europea, con objeto de
+    recabar las ayudas que los Fondos Estructurales y el Fondo Social Europeo
+    prevén para las zonas con esta problemática.
+
+    <br /><br />Quiero decir que cuando se discutió esta moción, las palabras del señor
+    Yuste fueron que se votaría en sus propios términos y separados los dos
+    puntos, pero, a continuación, el señor Yuste, lo que si me permiten diría
+    que fue su última voluntad en este Congreso, y aprovecho para agradecerle
+    lo que ha hecho durante todos estos meses y para decir que es una
+    satisfacción para todos nosostros haber compartido este año con él
+    (Aplausos), me comunicó que aceptaba la enmienda socialista. Por tanto,
+    esta moción se votará con la enmienda socialista, cosa que hago conocer a
+    los portavoces porque no ha sido reflejado así. (El señor Hernando Fraile
+    pide la palabra).
+
+    <br /><br />Señor Hernando.
+
+    <br /><br />El señor HERNANDO FRAILE: Señor presidente, solamente para aclarar eso,
+    que se ha producido una alteración en el cuaderno de votaciones, y
+    también para puntualizar que, no como último acto de voluntad del señor
+    Yuste ni de mi grupo, hubiéramos deseado votar el primer punto de la
+    moción del señor Yuste, conscientes de la situación de despoblación que
+    se produce en Soria, Teruel y Cuenca.
+
+    <br /><br />Muchas gracias.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Hernando. (El señor Yuste
+    Cabello pide la palabra).
+
+    <br /><br />Señor Yuste.
+
+    <br /><br />El señor YUSTE CABELLO: No sé si hago bien cambiando mi última voluntad,
+    pero creo que a veces en los parlamentos es bueno que alcancemos
+    acuerdos, es bueno que busquemos lo que nos une y no lo que nos separa, y
+    en este caso concreto entiendo que el Grupo Parlamentario Popular, que
+    durante la interpelación no se mostraba de acuerdo en estos términos e
+    incluso en el debate de ayer tampoco, sin embargo, ahora es proclive a
+    aceptar una parte de la moción. En ese sentido, pensando en la gente de
+    Teruel, Soria y Cuenca, tengo que cambiar de opinión. Pido disculpas al
+    Grupo Socialista, pero a veces estas cosas ocurren en política, y sería
+    bueno que ocurrieran más. No voy a aceptar ninguna de las enmiendas para
+    facilitar la votación por separado.
+
+    <br /><br />Muchas gracias. (Varios señores diputados: Muy bien.-Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Yuste, pero debo decir al resto
+    de la Cámara que estos cambios de actitud solo se los aceptaremos al que
+    a continuación abandone el Congreso. (Risas). Por tanto, pido a los
+    portavoces que sean conscientes de cómo está la situación. Vamos a votar
+    en sus
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página32)"><b>Página
+    32</b></a></p><br />
+
+    <br /><br />propios términos la moción de La Izquierda Plural, con dos votaciones
+    distintas del primer y el segundo párrafo.
+
+    <br /><br />Votación del primer párrafo.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 308; a
+    favor, 308.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobado por unanimidad. (Aplausos).
+
+    <br /><br />Votación del segundo párrafo.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 308; a
+    favor, 115; en contra, 191; abstenciones, 2.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazado.
+
+    <br /><br />DICTAMEN DE LA COMISIÓN DEL ESTATUTO DE LOS DIPUTADOS. (VOTACIÓN):
+
+    <br /><br />- DICTAMEN DE LA COMISIÓN DEL ESTATUTO DE LOS DIPUTADOS SOBRE DECLARACIÓN
+    DE ACTIVIDADES DE EXCELENTÍSIMOS SEÑORES DIPUTADOS. (Número de expediente
+    042/000035).
+
+    <br /><br />El señor PRESIDENTE: Dictamen de la Comisión del Estatuto de los Diputados
+    sobre declaración de actividades de los señores diputados.
+
+    <br /><br />¿Puedo considerar que este punto se vota por asentimiento? (Asentimiento).
+    Pues así queda.
+
+    <br /><br />ENMIENDAS DEL SENADO. (VOTACIÓN):
+
+    <br /><br />- PROYECTO DE LEY DE ORDENACIÓN, SUPERVISIÓN Y SOLVENCIA DE ENTIDADES DE
+    CRÉDITO. (Número de expediente 121/000080).
+
+    <br /><br />El señor PRESIDENTE: Enmiendas del Senado. Proyecto de ley de ordenación,
+    supervisión y solvencia de entidades de crédito. Vamos a hacer votación
+    separada de las enmiendas.
+
+    <br /><br />Enmienda al artículo 4, apartado 2, letra b.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 312; a
+    favor, 178; en contra, 106; abstenciones, 28.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Enmienda al artículo 84, apartado 2.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 313; a
+    favor, 177; en contra, 124; abstenciones, 12.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Enmienda a la disposición final primera. Uno.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 313; a
+    favor, 196; en contra, 98; abstenciones, 19.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Enmienda a la disposición final primera. Veinticuatro.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 313; a
+    favor, 176; en contra, 123; abstenciones, 14.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Enmienda al preámbulo.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página33)"><b>Página
+    33</b></a></p><br />
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 313; a
+    favor, 179; en contra, 121; abstenciones, 13.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Resto de enmiendas al proyecto de ley.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 313; a
+    favor, 177; en contra, 107; abstenciones, 29.
+
+    <br /><br />El señor PRESIDENTE: Quedan aprobadas.
+
+    <br /><br />- PROYECTO DE LEY POR LA QUE SE REGULA EL PROCEDIMIENTO PARA LA
+    DETERMINACIÓN DE LA REPRESENTATIVIDAD DE LAS ORGANIZACIONES PROFESIONALES
+    AGRARIAS Y SE CREA EL CONSEJO AGRARIO. (Número de expediente 121/000075).
+
+    <br /><br />El señor PRESIDENTE: Enmiendas del Senado al proyecto de ley por la que se
+    regula el procedimiento para la determinación de la representatividad de
+    las organizaciones profesionales agrarias y se crea el consejo agrario.
+
+    <br /><br />En primer lugar, votamos la enmienda por la que se crea un nuevo capítulo
+    IV.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 312; a
+    favor, 269; en contra, 22; abstenciones, 21.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Resto de enmiendas al proyecto de ley.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 313; a
+    favor, 183; en contra, 115; abstenciones, 15.
+
+    <br /><br />El señor PRESIDENTE: Quedan aprobadas.
+
+    <br /><br />DICTÁMENES DE LA COMISIÓN DE ASUNTOS EXTERIORES SOBRE CONVENIOS
+    INTERNACIONALES. (VOTACIÓN):
+
+    <br /><br />- ACUERDO ENTRE EL REINO DE ESPAÑA Y LA REPÚBLICA DE SERBIA PARA EL
+    INTERCAMBIO Y PROTECCIÓN RECÍPROCA DE INFORMACIÓN CLASIFICADA, HECHO EN
+    MADRID EL 13 DE MARZO DE 2014. (Número de expediente 110/000122).
+
+    <br /><br />- ACUERDO DE COOPERACIÓN ENTRE LA UNIÓN EUROPEA Y SUS ESTADOS MIEMBROS,
+    POR UNA PARTE, Y LA CONFEDERACIÓN SUIZA, POR OTRA, SOBRE LOS PROGRAMAS
+    EUROPEOS DE NAVEGACIÓN POR SATÉLITE, HECHO EN BRUSELAS EL 18 DE DICIEMBRE
+    DE 2013. (Número de expediente 110/000123).
+
+    <br /><br />- PROTOCOLO PARA LA ELIMINACIÓN DEL COMERCIO ILÍCITO DE PRODUCTOS DE
+    TABACO, HECHO EN SEÚL EL 12 DE NOVIEMBRE DE 2012. (Número de expediente
+    110/000124).
+
+    <br /><br />El señor PRESIDENTE: Vamos a votar conjuntamente y por asentimiento los
+    tres convenios que se han debatido esta mañana. ¿Puedo considerar que hay
+    asentimiento? (Asentimiento).
+
+    <br /><br />DICTÁMENES DE COMISIONES SOBRE INICIATIVAS LEGISLATIVAS. (VOTACIÓN):
+
+    <br /><br />- PROYECTO DE LEY ORGÁNICA DE RÉGIMEN DISCIPLINARIO DE LAS FUERZAS
+    ARMADAS. (Número de expediente 121/000047).
+
+    <br /><br />El señor PRESIDENTE: Dictámenes de comisiones sobre iniciativas
+    legislativas. Proyecto de ley orgánica de régimen disciplinario de las
+    Fuerzas Armadas.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página34)"><b>Página
+    34</b></a></p><br />
+
+    <br /><br />En primer lugar, enmiendas del Grupo Mixto, Señor Bosch. Votación en
+    bloque de todas sus enmiendas.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 309; a
+    favor, 27; en contra, 179; abstenciones, 103.
+
+    <br /><br />El señor PRESIDENTE: Quedan rechazadas.
+
+    <br /><br />Votación en bloque de las enmiendas del Grupo de Unión Progreso y
+    Democracia.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 309; a
+    favor, 5; en contra, 180; abstenciones, 124.
+
+    <br /><br />El señor PRESIDENTE: Quedan rechazadas.
+
+    <br /><br />Votación en bloque de las enmiendas de La Izquierda Plural.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 309; a
+    favor, 19; en contra, 178; abstenciones, 112.
+
+    <br /><br />El señor PRESIDENTE: Quedan rechazadas.
+
+    <br /><br />Votación en bloque de las enmiendas del Grupo Parlamentario Catalán
+    (Convergència i Unió).
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 308; a
+    favor, 32; en contra, 178; abstenciones, 98.
+
+    <br /><br />El señor PRESIDENTE: Quedan rechazadas.
+
+    <br /><br />Vamos a votar ahora el dictamen de la Comisión. En primer lugar, votación
+    de la disposición final cuarta bis (nueva).
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 308; a
+    favor, 270; en contra, 31; abstenciones, 7.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Votación de la disposición final cuarta ter (nueva).
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 305; a
+    favor, 266; en contra, 32; abstenciones, 7.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Votación del resto del dictamen.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 307; a
+    favor, 279; en contra, 23; abstenciones, 5.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobado.
+
+    <br /><br />VOTACIÓN DE CONJUNTO.
+
+    <br /><br />El señor PRESIDENTE: Ahora vamos a realizar la última votación, que es la
+    votación de conjunto del proyecto de ley orgánica del régimen
+    disciplinario de las Fuerzas Armadas por tener precisamente este carácter
+    orgánico.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 309; a
+    favor, 282; en contra, 22; abstenciones, 5.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página35)"><b>Página
+    35</b></a></p><br />
+
+    <br /><br />El señor PRESIDENTE: Queda aprobado.
+
+    <br /><br />Antes de levantar la sesión, quiero decirles que a las doce y cuarto en
+    punto comenzaremos el nuevo Pleno.
+
+    <br /><br />Se levanta la sesión.
+
+    <br /><br />Eran las doce y cinco minutos del mediodía.
+    </div>
+<hr size="1" noshade="" /><!-- BRSCGI © 1995-2004 Baratz Servicios de Teledocumentación, S.A. http://www.baratz.es -->
+
+
+<!-- FUNCION PIE -->
+    
+
+
+
+                 
+
+
+
+
+
+
+<script language="JavaScript" type="text/javascript">
+	cargaLegSesion('null')
+</script>
+ 
+<!-- FIN  PIE   -->
+        <div id="PIE_POPUP">
+		<p><span lang="es">Congreso de los Diputados</span> · C/Floridablanca s/n - 28071 - MADRID ·<u> <a style="color:#FFFFFF" href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Publicaciones/Aviso_Legal">Aviso Legal</a></u></p>
+	</div>
+
+</div></div></div></td></tr>
+</tbody></table>
+</div></td></tr>
+<tr>
+<td colspan="1" style="width:100%;"><img src="/images/pobtrans.gif" height="4" width="1" alt="" style="display:block" /></td>
+</tr>
+</tbody></table><!-- show footer template = 1824729544 -->
+</td>
+      </tr>
+    </tbody></table>
+  </td></tr>
+</tbody></table>
+</div>
+
+
+<!-- Page Metadata Generated On: 20-MAR-2015:02:09:54  Time Taken: 20 msecs -->
+</body></html>

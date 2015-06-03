@@ -1,0 +1,876 @@
+(dp1
+I25
+(dp2
+I45
+(lp3
+(Vvivienda
+p4
+cnumpy.core.multiarray
+scalar
+p5
+(cnumpy
+dtype
+p6
+(S'i4'
+I0
+I1
+tRp7
+(I3
+S'<'
+NNNI-1
+I-1
+I0
+tbS'\x1d\x00\x00\x00'
+tRp8
+I120
+(lp9
+Vvivienda
+p10
+aVvivienda protegida
+p11
+aVviviendas
+p12
+aVviviendas protegidas
+p13
+aVprotección oficial
+p14
+aVsuelo
+p15
+aVvivienda libre
+p16
+aVprecio
+p17
+aValquiler
+p18
+aVsuelo público
+p19
+aVmetros cuadrados
+p20
+aVfamilias españolas
+p21
+aVvivienda digna
+p22
+aVsociedad pública
+p23
+aVfamilias
+p24
+aVacceso
+p25
+aVjóvenes
+p26
+aVconferencia sectorial
+p27
+aVcódigo técnico
+p28
+aVayudas
+p29
+atp30
+a(Vjusticia
+p31
+g5
+(g7
+S'\x0f\x00\x00\x00'
+tRp32
+I65
+(lp33
+Vfiscal general
+p34
+aVfiscal
+p35
+aVfiscalía general
+p36
+aVestatuto orgánico
+p37
+aVfiscalía
+p38
+aVfiscalía anticorrupción
+p39
+aVconsejo fiscal
+p40
+aVjusticia
+p41
+aVtribunal supremo
+p42
+aVpolítica antiterrorista
+p43
+aVpolítica criminal
+p44
+aVfiscales
+p45
+aVresponsabilidad política
+p46
+aVjuana chaos
+p47
+aVaudiencia nacional
+p48
+aVpacto antiterrorista
+p49
+aVconsejo general
+p50
+aVservicio público
+p51
+aVcomparte
+p52
+aVproceso
+p53
+atp54
+a(Veducación
+p55
+g5
+(g7
+S'\x08\x00\x00\x00'
+tRp56
+I205
+(lp57
+Vsistema educativo
+p58
+aVeducación
+p59
+aVcomunidad educativa
+p60
+aVformación profesional
+p61
+aVfracaso escolar
+p62
+aVeducación infantil
+p63
+aVpolítica educativa
+p64
+aVbecas
+p65
+aVreforma educativa
+p66
+aVabandono escolar temprano
+p67
+ag27
+aVformación
+p68
+aVcalidad
+p69
+aVeducación pública
+p70
+aValumnos
+p71
+aVenseñanza
+p72
+aVadministraciones educativas
+p73
+aVcentros
+p74
+aVabandono escolar
+p75
+aVresultados
+p76
+atp77
+a(Vempleo
+p78
+g5
+(g7
+S'!\x00\x00\x00'
+tRp79
+I110
+(lp80
+Vreforma laboral
+p81
+aVnegociación colectiva
+p82
+aVmercado laboral
+p83
+aVdiálogo social
+p84
+aVagentes sociales
+p85
+aVseguridad social
+p86
+aVflexibilidad interna
+p87
+aVcontrato
+p88
+aVdespido
+p89
+aVcontratos indefinidos
+p90
+aVrelaciones laborales
+p91
+aVcontratación indefinida
+p92
+aVhuelga general
+p93
+aVcontratos
+p94
+aVcrecimiento económico
+p95
+aVcontrato indefinido
+p96
+aVgobiernos socialistas
+p97
+aVdatos
+p98
+aVparo
+p99
+aVtrabajadores
+p100
+atp101
+a(Vmedio ambiente
+p102
+g5
+(g7
+S'&\x00\x00\x00'
+tRp103
+I88
+(lp104
+Venergías renovables
+p105
+aVseguridad nuclear
+p106
+aVenergía
+p107
+aVcentral nuclear
+p108
+aVeficiencia energética
+p109
+aVpolítica energética
+p110
+aVenergía nuclear
+p111
+aVcentrales nucleares
+p112
+aVrenovables
+p113
+aVdéficit tarifario
+p114
+aVcambio climático
+p115
+aVmix energético
+p116
+aVsistema eléctrico
+p117
+aVenergético
+p118
+aVmateria energética
+p119
+aVenergía eléctrica
+p120
+aVseguridad
+p121
+aVahorro energético
+p122
+aVmedio ambiente
+p123
+aVsanta maría
+p124
+atp125
+a(Vsalud
+p126
+g5
+(g7
+S'\t\x00\x00\x00'
+tRp127
+I131
+(lp128
+Vsistema nacional
+p129
+aVsanidad
+p130
+aVsanidad pública
+p131
+aVconsejo interterritorial
+p132
+aVsistema sanitario
+p133
+aVasistencia sanitaria
+p134
+aVprofesionales sanitarios
+p135
+aVsalud
+p136
+aVgasto farmacéutico
+p137
+aVatención primaria
+p138
+aVprofesionales
+p139
+aVatención sanitaria
+p140
+aVservicios sanitarios
+p141
+aVley general
+p142
+aVmedicamentos
+p143
+aVconsumo
+p144
+aVcopago
+p145
+aVatención
+p146
+aVpolítica farmacéutica
+p147
+aVcopago sanitario
+p148
+atp149
+a(Vjóvenes
+p150
+g5
+(g7
+S'\x01\x00\x00\x00'
+tRp151
+I74
+(lp152
+g26
+aVparo juvenil
+p153
+ag99
+aVjóvenes españoles
+p154
+aVjuvenil
+p155
+aVdesempleo juvenil
+p156
+aVgarantía juvenil
+p157
+aVinterlocutores sociales
+p158
+ag86
+aVpoblación activa
+p159
+ag83
+ag94
+aVjóvenes menores
+p160
+ag81
+ag90
+aVoportunidades
+p161
+ag84
+ag85
+aVdesempleo
+p162
+ag61
+atp163
+a(Videología
+p164
+g5
+(g7
+S'(\x00\x00\x00'
+tRp165
+I47
+(lp166
+Vguerra civil
+p167
+aVmemoria histórica
+p168
+aVguerra
+p169
+aVarchivo
+p170
+aVcomisión técnica
+p171
+aVmemoria
+p172
+aVdocumentos
+p173
+aVvasco
+p174
+aVreconocimiento
+p175
+aVdocumentación
+p176
+aVnacionalista vasco
+p177
+aVnacionalidad española
+p178
+aVadministración general
+p179
+aVvíctimas
+p180
+aVinstituciones
+p181
+aVcomisión mixta
+p182
+aVderechos
+p183
+aVdemocracia
+p184
+aVcortes generales
+p185
+aVgeneralitat
+p186
+atp187
+a(Veconomía
+p188
+g5
+(g7
+S'\x02\x00\x00\x00'
+tRp189
+I190
+(lp190
+Vempresas
+p191
+aVempresas españolas
+p192
+aVmedianas empresas
+p193
+aVempresa
+p194
+aVpolítica industrial
+p195
+aVeconomía española
+p196
+aVindustria
+p197
+aVindustrial
+p198
+aVmediana empresa
+p199
+aVeconomía
+p200
+aVi d i
+p201
+aVpequeñas empresas
+p202
+aVautónomos
+p203
+aVactividad
+p204
+aVpequeñas
+p205
+aVcrisis económica
+p206
+aVtrabajadores autónomos
+p207
+aVactividad económica
+p208
+aVindustria española
+p209
+aVtejido industrial
+p210
+atp211
+a(Vinternacional
+p212
+g5
+(g7
+S'%\x00\x00\x00'
+tRp213
+I155
+(lp214
+Vasuntos exteriores
+p215
+aVpolítica exterior
+p216
+aVderechos humanos
+p217
+aVcooperación
+p218
+aVoriente medio
+p219
+aVintereses españoles
+p220
+aVcomunidad internacional
+p221
+aVdiplomacia española
+p222
+aVposición común
+p223
+aVsecretario general
+p224
+aVposición
+p225
+aVexteriores
+p226
+aVintereses
+p227
+aVcumbre iberoamericana
+p228
+aVespañoles
+p229
+aVamérica latina
+p230
+aVvisita
+p231
+aVpresidencia
+p232
+aVcooperación internacional
+p233
+aVasuntos generales
+p234
+atp235
+a(Vcultura
+p236
+g5
+(g7
+S'\x10\x00\x00\x00'
+tRp237
+I130
+(lp238
+Vcultura
+p239
+aVdeporte
+p240
+aVlengua
+p241
+aVpatrimonio
+p242
+aVcultural
+p243
+aVlenguas cooficiales
+p244
+aVcine
+p245
+aVlengua oficial
+p246
+aVpolítica cultural
+p247
+aVpatrimonio histórico
+p248
+ag59
+aVpatrimonio cultural
+p249
+aVlenguas
+p250
+aVcine español
+p251
+aVlengua catalana
+p252
+aVlenguas oficiales
+p253
+aVlengua castellana
+p254
+aVciento cultural
+p255
+aVindustrias culturales
+p256
+aVinstituto cervantes
+p257
+atp258
+a(Vinseguridad ciudadana
+p259
+g5
+(g7
+S' \x00\x00\x00'
+tRp260
+I102
+(lp261
+Vseguridad ciudadana
+p262
+aVpolicía
+p263
+ag121
+aVguardia civil
+p264
+aVinseguridad ciudadana
+p265
+aVpolicía nacional
+p266
+aVcuerpo nacional
+p267
+aVpolicía judicial
+p268
+aVinterior
+p269
+aVseguridad pública
+p270
+aVpolicías
+p271
+aVguardias civiles
+p272
+aVefectivos policiales
+p273
+aVjuicios rápidos
+p274
+aVdelincuencia
+p275
+aVinfracciones penales
+p276
+ag98
+aVincremento
+p277
+aVderechos fundamentales
+p278
+aVcódigo penal
+p279
+atp280
+a(Vsocial
+p281
+g5
+(g7
+S'#\x00\x00\x00'
+tRp282
+I171
+(lp283
+Vigualdad
+p284
+aVservicios sociales
+p285
+aVgasto social
+p286
+aVpolítica social
+p287
+aVpobreza infantil
+p288
+aVpobreza
+p289
+aVpolíticas sociales
+p290
+aVmujeres
+p291
+aVpersonas dependientes
+p292
+aVinclusión social
+p293
+aVexclusión social
+p294
+aVprotección social
+p295
+aVpersonas mayores
+p296
+aVautonomía personal
+p297
+ag24
+aVsocial
+p298
+aVbrecha salarial
+p299
+ag86
+aVvida familiar
+p300
+ag146
+atp301
+a(Vservicios públicos e infraestructuras
+p302
+g5
+(g7
+S'+\x00\x00\x00'
+tRp303
+I143
+(lp304
+Valta velocidad
+p305
+aVlínea
+p306
+aVave
+p307
+aVred
+p308
+aVtren
+p309
+aVred convencional
+p310
+aVmadrid
+p311
+aVfomento
+p312
+aVtramo
+p313
+aVred ferroviaria
+p314
+aVeje atlántico
+p315
+aVcorredor
+p316
+aVbarcelona
+p317
+aVtransporte
+p318
+aVtrenes
+p319
+aVfrontera francesa
+p320
+aVancho uic
+p321
+aVconexión
+p322
+aVtransporte ferroviario
+p323
+aVredes transeuropeas
+p324
+atp325
+a(Vcorrupción
+p326
+g5
+(g7
+S'$\x00\x00\x00'
+tRp327
+I83
+(lp328
+Vagencia tributaria
+p329
+aVfraude fiscal
+p330
+aVamnistía fiscal
+p331
+aVfraude
+p332
+aVhacienda pública
+p333
+aVagencia
+p334
+aVreforma fiscal
+p335
+aVreforma tributaria
+p336
+aVhacienda
+p337
+aVley general tributaria
+p338
+aVparaísos fiscales
+p339
+aVadministración tributaria
+p340
+aVpersonas físicas
+p341
+aVpolítica fiscal
+p342
+aVrecaudación tributaria
+p343
+aVadministraciones públicas
+p344
+aVsistema tributario
+p345
+aVobligaciones tributarias
+p346
+aVrentas medias
+p347
+aVlucha
+p348
+atp349
+a(Vfuerzas armadas
+p350
+g5
+(g7
+S"'\x00\x00\x00"
+tRp351
+I89
+(lp352
+Vfuerzas armadas
+p353
+aVdefensa
+p354
+aVmilitares
+p355
+aVdefensa nacional
+p356
+ag121
+aVmisión
+p357
+aVfuerzas armadas españolas
+p358
+aVtropas
+p359
+aVmilitar
+p360
+aVejército
+p361
+aVs
+aVaccidente
+p362
+aVapoyo
+p363
+ag264
+ag229
+aVfuerzas
+p364
+aVbuque
+p365
+aVoperaciones
+p366
+aVsiglo xix
+p367
+aVunidad
+p368
+atp369
+a(Vtecnologia e investigación
+p370
+g5
+(g7
+S'\x0e\x00\x00\x00'
+tRp371
+I111
+(lp372
+Vinvestigación
+p373
+ag201
+aVi d
+p374
+aVciencia
+p375
+aVinvestigación científica
+p376
+aVrecursos humanos
+p377
+aVdesarrollo tecnológico
+p378
+aVtecnología
+p379
+aVinvestigadores
+p380
+aVplan nacional
+p381
+aVinnovación
+p382
+aVorganismos públicos
+p383
+aVpolítica científica
+p384
+aVpersonal investigador
+p385
+aVcomunidad científica
+p386
+aVdesarrollo
+p387
+aVproyectos
+p388
+aVrecursos
+p389
+aVsistema español
+p390
+aVinvestigaciones científicas
+p391
+atp392
+a(Vterrorismo
+p393
+g5
+(g7
+S'\x1a\x00\x00\x00'
+tRp394
+I155
+(lp395
+Vpaís vasco
+p396
+ag174
+aVconcierto económico
+p397
+aVeta
+p398
+aVtribunal constitucional
+p399
+ag177
+ag43
+aVsociedad vasca
+p400
+aVpolítica penitenciaria
+p401
+aVinstituciones penitenciarias
+p402
+aVpaís
+p403
+aVparlamento vasco
+p404
+aVcomunidad autónoma vasca
+p405
+aVciudadanos vascos
+p406
+aVcompetencias
+p407
+aVorganización terrorista
+p408
+aVpartidos políticos
+p409
+aVpolítico
+p410
+aVplan ibarretxe
+p411
+aVbanda terrorista eta
+p412
+atp413
+ass.

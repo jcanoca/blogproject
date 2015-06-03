@@ -1,0 +1,1921 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head>
+<style>
+body{float:left;font-size:62.5%;font-family: Arial, Verdana, Helvetica, sans-serif;}
+blockquote{margin:0px;padding:0px;border:0px;list-style-type:none; }
+a{text-decoration:none; color:#626469;}
+a:hover{text-decoration:underline;font-weight:normal;color:#626469;}
+a:active{text-decoration:none;font-weight:normal;color:#000000;}
+</style>
+<title>PopUpCGI</title>
+<link href="/wc/htdocs/web/css/congreso.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/portada.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/prensa.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/apps.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/wc/htdocs/web/js/wc.js" language="JavaScript"></script>
+<style type="text/css">.GroupHeaderid1siteid73{Text-Align:left;Height:20px;Background-Color:#336699;}
+.GroupHeaderLinkid1siteid73{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.GroupHeaderTextid1siteid73{Font-Family:Arial, Helvetica;Color:#FFFFFF;Font-Size:9pt;Font-Weight:Bold;}
+.RegionHeaderid1siteid73{Background-Color:#b29200;Height:20px;Text-Align:left;}
+.RegionHeaderTextid1siteid73{Color:#ffffff;Font-Weight:Bold;Font-Family:Verdana;Font-Size:10px;}
+.Bodyid1siteid73{Background-Color:#FFFFFF;}
+.ArchivoAnuncioid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.AudioFotoNoticiaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.AudioNotaPrensaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.authorid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo1Pieid1siteid73{Font-Family:Arial, Helvetica;Color:#000000;Font-Size:8pt;}
+.Campo1Region3id1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.Campo2Pieid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Campo2Region3id1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.Campo3Pieid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.ComprobacionSelladoid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.Concesionid1siteid73{Font-Family:Arial;Font-Size:11px;Color:#626469;}
+.Convocatoriaid1siteid73{Font-Family:Arial;Font-Size:11px;Color:#626469;}
+.Correcciondeerroresid1siteid73{Color:#626469;Font-Size:11px;Font-Family:Arial;}
+.createdateid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.creatorid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.CuartoPlatoCafeteriaid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.defaultattributeid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescNotaPrensaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.Descripcionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.DescripcionAnuncioid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.DescripcionBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescripcionDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.descriptionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Destinoid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.DiaSemanaAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DiaSemanaCanalid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.documentsizeid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Enlaceid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnlaceAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnlaceURLNovedadid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.EnPortadaAnuncioid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.EnPortadaNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnVentanaNuevaAnuncioid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.EnVentanaNuevaNovedadIntranetid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.EtiquetaArchivoAnuncioid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.EtiquetadelEnlacedelAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EtiquetaEnlaceNovedadIntranetid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.EtiquetaURLNovedadid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.expiredateid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Faxid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Fax2id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaAgendaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.FechaAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaCanalid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.FechaDiarioid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.FechaFotonoticiaid1siteid73{Font-Size:11px;Font-Family:Arial;Color:#b29200;}
+.FechaFotonoticiaPresidenciaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaMenuid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.FechaMenuCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaNotaPrensaid1siteid73{Color:#b29200;Font-Family:Arial;Font-Weight:Bold;Font-Size:11px;}
+.FechaNovedadid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.FechaNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaRuedaPrensaid1siteid73{Font-Weight:Bold;Font-Size:11px;Font-Family:Arial;Color:#b29200;}
+.FotoEmergenteNotaPrensaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.FotoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto1descargaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Foto1emergenteid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto1thumbnailid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Foto2descargaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Foto2emergenteid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Foto2thumbnailid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.GraficoFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.GraficoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Grupoid1siteid73{Color:#626469;Font-Size:11px;Font-Family:Arial;}
+.Horaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.HoraAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.HoraCanalid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.ImagenDiaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.InformacionGeneralid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.inplacedisplayid1siteid73{Color:#000000;Font-Family:Arial;Font-Size:11px;}
+.InstruccinArchivoIIid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.InstruccinArchivo1id1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Intervinienteid1siteid73{Font-Size:11px;Font-Family:Arial;Color:#626469;}
+.itemfunctionid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.JefedeCocinaMenuid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.keywordsid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.LineaAgendaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.LineaCanalid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.listaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.Listadebecariosparticipantesid1siteid73{Font-Family:Arial;Font-Size:11px;Color:#626469;}
+.ListaPuestoMiembroDiputadoid1siteid73{Font-Size:11px;Font-Family:Arial;Color:#626469;}
+.ListaPuestoMiembroSenadoid1siteid73{Font-Size:11px;Color:#626469;Font-Family:Arial;}
+.Lugarid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.LugarAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LugarCanalid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Mail1id1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Mail2id1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.Mail3id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Mail4id1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Nombreid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.NombreBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NombreDiarioid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.NombreMiembroid1siteid73{Color:#626469;Font-Family:Arial;Font-Weight:Bold;Font-Size:11px;}
+.NumeroOrdenAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NumeroOrdenImagenid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NumeroOrdenNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PaginaBOCGBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PDFBoletinid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PDFDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.perspectivesid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PieImagenid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.PrimerPlatoCafeteriaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PrimerPlatoSaludableMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato1Menuid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PrimerPlato2Menuid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PrimerPlato3Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato4Menuid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Programaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PuestoMiembroDiputadoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.PuestoMiembroSenadoid1siteid73{Font-Size:11px;Font-Family:Arial;Color:#626469;Font-Weight:Bold;}
+.QuintoPlatoCafeteriaid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.RefBOEid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.RefBOEIIid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.scoreid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlatoSaludableMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlato1Menuid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.SegundoPlato2Menuid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.SeptimoPlatoCafeteriaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.SextoPlatoCafeteriaid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.SiglasBoletinid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.SiglasDiarioid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.subpagetitleid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.SugerenciaCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TargetNovedadid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.Telefonoid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Telefono2id1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.TemaFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaRuedaPrensaid1siteid73{Color:#000000;Font-Family:Arial;Font-Size:11px;}
+.TercerPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TextoAlternativoFotoNotaPrensaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.TextoAlternativoFoto1Fotonoticiaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.TextoAlternativoFoto2Fotonoticiaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.titleid1siteid73{Font-Family:Arial;Font-Size:11px;Color:#626469;Font-Weight:Bold;}
+.titleorimageid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.TitularFotoNoticiaid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Tituloid1siteid73{Font-Size:11px;Font-Family:Arial, Helvetica;Color:#626469;Font-Weight:Bold;}
+.TituloAnuncioid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.TituloImagendelDiaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.TituloNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TituloNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.URLEnlaceNovedadIntranetid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.VideoFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.VideoNotaPrensaid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.Visitasid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.wwsbr_category_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_charset_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_image_or_title_id1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.wwsbr_img_or_title_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_itemtype_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_mime_type_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_page_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_pagegroup_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_publishdate_id1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.wwsbr_title_and_img_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_updatedate_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_updator_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_version_number_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LeftCurve{}
+.PortletBodyColor{}
+.PortletHeaderColor{Background-Color:#b29200;}
+.PortletHeaderLink{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletHeaderStyle{}
+.PortletHeaderText{Color:#FFFFFF;Font-Weight:Bold;Font-Size:10pt;Font-Family:Arial, Helvetica;}
+.PortletHeading1{Color:#336699;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.PortletHeading2{Color:#336699;Font-Size:8pt;Font-Family:Arial, Helvetica;Font-Weight:Bold;}
+.PortletHeading3{Font-Size:7pt;Font-Family:Arial, Helvetica;Color:#336699;Font-Weight:Bold;}
+.PortletHeading4{Font-Size:7pt;Font-Family:Arial, Helvetica;Color:#336699;Font-Weight:Bold;}
+.PortletSubHeaderColor{Background-Color:#EEEEDD;}
+.PortletSubHeaderLink{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:9pt;}
+.PortletSubHeaderText{Font-Size:9pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PortletText1{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletText2{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletText3{Color:#000000;Font-Size:7pt;Font-Family:Arial, Helvetica;}
+.PortletText4{Font-Family:Arial, Helvetica;Font-Size:7pt;Color:#000000;}
+.RightCurve{}
+.LeftSubTabid1siteid73{Background-Position:left top;Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFsl.gif);Background-Repeat:no-repeat;}
+.LeftTabBgSlantid1siteid73{Background-Position:left top;Background-Image:url(http://www.congreso.es/images/FFFFFFtl.gif);Background-Color:#CCCC99;Background-Attachment:scroll;Background-Repeat:no-repeat;}
+.LeftTabForeSlantid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFtl.gif);Background-Position:left top;Background-Repeat:no-repeat;}
+.RightSubTabid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFsr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.RightTabBgCurveid1siteid73{Background-Image:url(http://www.congreso.es/images/FFFFFFtr.gif);Background-Color:#CCCC99;Background-Attachment:scroll;Background-Position:right top;Background-Repeat:no-repeat;}
+.RightTabForeCurveid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFtr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.SubTabBgTextid1siteid73{Color:#CCCC99;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:11pt;Font-Weight:Bold;}
+.TabBackgroundColorid1siteid73{Background-Color:#CCCC99;}
+.TabBackgroundTextid1siteid73{Color:#003366;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:10pt;}
+.TabForegroundColorid1siteid73{Background-Color:#336699;}
+.TabForegroundTextid1siteid73{Color:#FFFFFF;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:10pt;Font-Weight:Bold;}
+.portlet-font{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-font-dim{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-status{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-info{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-error{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-alert{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-success{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-header{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:9pt;    Font-Weight:Bold;    }
+.portlet-section-body{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-alternate{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-selected{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-subheader{Color:#336699;    Font-Size:8pt;    Font-Family:Arial, Helvetica;    Font-Weight:Bold;    }
+.portlet-section-footer{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-text{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-header{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:9pt;    Font-Weight:Bold;    Background-Color:#EEEEDD;    }
+.portlet-table-body{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-alternate{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-selected{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-subheader{Color:#336699;    Font-Size:8pt;    Font-Family:Arial, Helvetica;    Font-Weight:Bold;    }
+.portlet-table-footer{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-text{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-input-field{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-button{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-icon-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-dlg-icon-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-field-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-field{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.RegionNoBorder{}
+.RegionBorder { border:#b29200  1px solid; }
+.RegionHeaderColor { border:#b29200 0px solid;}
+.PageColor { background-color:#FFFFFF}
+ </style>
+</head>
+<body leftmargin="0" rightmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+<div id="texto_parrafo">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
+  <tbody><tr valign="top"><td align="center" valign="top">
+    <table width="500" cellpadding="0" cellspacing="0" border="0" height="100%">
+      <tbody><tr>
+        <td align="center" width="500" height="100%" valign="top">
+<iframe id="portalIFrame" title="" frameborder="0" width="0" height="0" src="/images/pobtrans.gif"></iframe><script type="text/javascript" src="http://www.congreso.es/portal/pls/portal/PORTAL.wwsbr_javascript.page_js?p_language=e&amp;p_version=10.1.4.2.0.197">
+&lt;!-- Comment out script for old browsers
+//--&gt;
+</script>
+<table width="100%" id="rg88017" border="0" cellpadding="0" cellspacing="0" summary=""><tbody><tr align="LEFT">
+<td valign="top" style="padding:4px 4px 0px 4px;width:100%;"><div id="p73_2138133_73_2138049_2138049"><table border="0" width="100%" cellpadding="0" cellspacing="0" class="RegionNoBorder"><tbody><tr><td class="RegionHeaderColor" width="100%" dir="LTR"><div id="pcnt73_2138133_73_2138049_2138049">
+
+
+
+
+
+
+
+  
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+        <title>Listas de valores</title>
+        <script language="JavaScript" type="text/javascript" src="/wc/htdocs/web/js/wc.js"></script> 
+		<link type="text/css" href="/wc/htdocs/web/css/apps.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/congreso.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/portada.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/prensa.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/texto_integro.css" rel="STYLESHEET" />   
+
+
+<script>
+function opcionesVentana(){
+
+window.resizeTo(630,520);
+}
+
+window.onload = function(){
+    opcionesVentana();
+}
+
+</script>
+	<div id="CONGRESO_TEXTO_INTEGRO_POPUP">
+            <div id="CABECERA_TEXTO_POPUP">
+                    <div class="cabecerah1"><img src="/wc/htdocs/web/img/logo_mini.gif" alt="Congreso de los Diputados" border="0" /></div>
+                    <div class="btn_cerrar" title="Cerrar">
+                        <p><img src="/wc/htdocs/web/img/ico_cerrar.gif" width="9" height="9" alt="Cerrar" /> <a href="javascript:window.close();" title="Cerrar">Cerrar</a></p>                   
+                    </div>
+                    
+                    <div class="fincabecera"> </div>
+            </div>
+
+
+
+    <div id="CONGRESO_TEXTO_INTEGRO_POPUP"> <div id="CABECERA_TEXTO_POPUP"> DS. Congreso de los Diputados, Pleno y Dip. Perm., núm. 179, de 20/02/2014 </div><div id="CABECERA_TEXTO_POPUP">cve:
+    DSCD-10-PL-179 </div> <div class="fincabecera"> </div> </div> <!-- CONGRESO_TEXTO_INTEGRO --> <div id="TEXTOS_POPUP">	<br />
+    	<div class="titular_texto"><br />CORTES GENERALES
+
+    <br />DIARIO DE SESIONES DEL CONGRESO DE LOS DIPUTADOS
+
+    <br />PLENO Y DIPUTACIÓN PERMANENTE
+    </div>
+
+    <div class="subtitular_texto"><br />Año 2014 X LEGISLATURA Núm.  179
+    <br />PRESIDENCIA DEL EXCMO.  SR.  D. JESÚS POSADA MORENO
+    <br />Sesión plenaria núm.  167
+    <br />celebrada el jueves,
+    <br />20 de febrero de 2014</div>
+          	<div class="texto_completo"><br /><br />Página
+
+    <br /><br />ORDEN DEL DÍA:
+
+    <br /><br />Enmiendas del Senado:
+
+    <br /><br />- Proyecto de ley para la protección de los trabajadores a tiempo parcial
+    y otras medidas urgentes en el orden económico y social (procedente del
+    Real Decreto-ley 11/2013, de 2 de agosto). "BOCG. Congreso de los
+    Diputados", serie A, número 60-1, de 20 de septiembre de 2013. (Número de
+    expediente 121/000060) ... <a href="#(Página4)">(Página4)</a>
+
+    <br /><br />Dictámenes de la Comisión de Asuntos Exteriores sobre Convenios
+    internacionales:
+
+    <br /><br />- Acuerdo euromediterráneo de aviación entre la Unión Europea y sus
+    Estados miembros, por una parte, y el Gobierno del Estado de Israel, por
+    otra, hecho en Luxemburgo el 10 de junio de 2013. "BOCG. Cortes
+    Generales", serie A, número 222, de 15 de noviembre de 2013. (Número de
+    expediente 110/000109) ... <a href="#(Página13)">(Página13)</a>
+
+    <br /><br />- Protocolo de enmienda al Convenio Europeo para la represión del
+    terrorismo, hecho en Estrasburgo el 15 de mayo de 2003, y declaración que
+    España desea formular. "BOCG. Cortes Generales", serie A, número 230, de
+    29 de noviembre de 2013. (Número de expediente 110/000110) ... <a href="#(Página13)">(Página13)</a>
+
+    <br /><br />- Tratado sobre el comercio de armas, hecho en Nueva York el 2 de abril de
+    2013. "BOCG. Cortes Generales", serie A, número 235, de 20 de diciembre
+    de 2013. (Número de expediente 110/000111) ... <a href="#(Página13)">(Página13)</a>
+
+    <br /><br />- Acuerdo marco de colaboración y cooperación entre la Unión Europea y sus
+    estados miembros, por una parte, y Mongolia por otra, hecho en Ulan-Bator
+    el 30 de abril de 2013. "BOCG. Cortes Generales", serie A, número 236, de
+    20 de diciembre de 2013. (Número de expediente 110/000112) ... <a href="#(Página13)">(Página13)</a>
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página2)"><b>Página
+    2</b></a></p><br />
+
+    <br /><br />Mociones consecuencia de interpelaciones urgentes. (Votaciones)
+
+    <br /><br />Enmiendas del Senado. (Votaciones)
+
+    <br /><br />Dictámenes de la Comisión de Asuntos Exteriores sobre Convenios
+    internacionales. (Votaciones)
+
+    <br /><br />SUMARIO
+
+    <br /><br />Se reanuda la sesión a las nueve y cinco de la mañana.
+
+    <br /><br />Página
+
+    <br /><br />Enmiendas del Senado.... <a href="#(Página4)">(Página4)</a>
+
+    <br /><br />Página
+
+    <br /><br />Proyecto de Ley para la protección de los trabajadores a tiempo parcial y
+    otras medidas urgentes en el orden económico y social (procedente del
+    Real Decreto-ley 11/2013, de 2 de agosto.) ... <a href="#(Página4)">(Página4)</a>
+
+    <br /><br />En turno de fijación de posiciones intervienen los señores Baldoví Roda,
+    del Grupo Parlamentario Mixto; Olabarría Muñoz, del Grupo Parlamentario
+    Vasco (EAJ-PNV); Anchuelo Crego, del Grupo Parlamentario de Unión
+    Progreso y Democracia; Coscubiela Conesa, del Grupo Parlamentario de IU,
+    ICV-EUiA, CHA: La Izquierda Plural, y Campuzano i Canadés, del Grupo
+    Parlamentario Catalán (Convergència i Unió); así como las señoras
+    Gutiérrez del Castillo, del Grupo Parlamentario Socialista, y Susinos
+    Barrero, del Grupo Parlamentario Popular en el Congreso.
+
+    <br /><br />Página
+
+    <br /><br />Dictámenes de la Comisión de Asuntos Exteriores sobre Convenios
+    internacionales... <a href="#(Página13)">(Página13)</a>
+
+    <br /><br />Página
+
+    <br /><br />Acuerdo euromediterráneo de aviación entre la Unión Europea y sus Estados
+    miembros, por una parte, y el Gobierno del Estado de Israel, por otra,
+    hecho en Luxemburgo el 10 de junio de 2013... <a href="#(Página13)">(Página13)</a>
+
+    <br /><br />Página
+
+    <br /><br />Protocolo de enmienda al Convenio Europeo para la Represión del
+    Terrorismo, hecho en Estrasburgo el 15 de mayo de 2003, y declaración que
+    España desea formular ... <a href="#(Página13)">(Página13)</a>
+
+    <br /><br />Página
+
+    <br /><br />Tratado sobre el Comercio de Armas, hecho en Nueva York el 2 de abril de
+    2013. "BOCG. Cortes Generales", serie A, número 235, de 20 de diciembre
+    de 2013. Número de expediente 110/000111)... <a href="#(Página13)">(Página13)</a>
+
+    <br /><br />Página
+
+    <br /><br />Acuerdo marco de colaboración y cooperación entre la Unión Europea y sus
+    Estados Miembros, por una parte, y Mongolia por otra, hecho en Ulan-Bator
+    el 30 de abril de 2013 ... <a href="#(Página13)">(Página13)</a>
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página3)"><b>Página
+    3</b></a></p><br />
+
+    <br /><br />Para fijar su posición sobre determinados convenios intervienen la señora
+    Lozano Domingo, del Grupo Parlamentario de Unión Progreso y Democracia;
+    los señores Nuet Pujals, del Grupo Parlamentario de IU, ICV-EUiA, CHA: La
+    Izquierda Plural; Xuclà i Costa, del Grupo Parlamentario Catalán
+    (Convergència i Unió); Sáez Jubero, del Grupo Parlamentario Socialista, y
+    Beneyto Pérez, del Grupo Parlamentario Popular en el Congreso.
+
+    <br /><br />Página
+
+    <br /><br />Mociones consecuencia de interpelaciones urgentes. (Votación.) ... <a href="#(Página18)">(Página18)</a>
+
+    <br /><br />Sometida a votación la moción consecuencia de interpelación urgente del
+    Grupo Parlamentario de IU, ICV-EUiA, CHA: La Izquierda Plural, sobre la
+    criminalización de la protesta social y las reformas legales que
+    restringen los derechos fundamentales y libertades públicas de los
+    ciudadanos, se rechazan los puntos 1, 5, 6, 7, 8, 9 y 11 del apartado A),
+    por 131 votos a favor, 169 en contra y 15 abstenciones; se rechazan el
+    resto de puntos del apartado A) por 142 votos a favor, 168 en contra y 5
+    abstenciones; y se rechaza el apartado B) por 43 votos a favor, 170 en
+    contra y 102 abstenciones.
+
+    <br /><br />Sometida a votación la moción consecuencia de interpelación urgente del
+    Grupo Parlamentario Socialista al Ministro de Economía y Competitividad,
+    sobre la política de gestión de activos derivados del rescate bancario y,
+    en concreto, sobre la situación y gestión de la SAREB, con la
+    incorporación de la enmienda del Grupo Parlamentario de Unión Progreso y
+    Democracia y la segunda enmienda del Grupo Parlamentario de IU, ICV-EUiA,
+    CHA: La Izquierda Plural, se rechaza por 131 votos a favor, 169 en contra
+    y 15 abstenciones.
+
+    <br /><br />Sometida a votación la moción consecuencia de interpelación urgente del
+    Grupo Parlamentario de Unión Progreso y Democracia, sobre las medidas que
+    piensa adoptar el Gobierno para garantizar la protección del interés
+    general y el cumplimiento de la legalidad, quebrantada por diversos actos
+    ya ejecutados en desarrollo del proyecto secesionista de Artur Mas, con
+    la incorporación de la enmienda del Grupo Parlamentario Socialista, se
+    aprueba por 272 votos a favor, 43 en contra y 1 abstención.
+
+    <br /><br />Página
+
+    <br /><br />Enmiendas del Senado. (Votación.) ... <a href="#(Página19)">(Página19)</a>
+
+    <br /><br />Sometida a votación la enmienda número 2 al proyecto de ley para la
+    protección de los trabajadores a tiempo parcial y otras medidas urgentes
+    en el orden económico y social (procedente del Real Decreto-ley 11/2013,
+    de 2 de agosto), se aprueba por 296 votos a favor, 18 en contra y 3
+    abstenciones.
+
+    <br /><br />Sometidas a votación el resto de enmiendas al citado proyecto de ley, se
+    aprueban por 172 votos a favor, 22 en contra y 123 abstenciones.
+
+    <br /><br />Página
+
+    <br /><br />Dictámenes de la Comisión de Asuntos Exteriores sobre Convenios
+    internacionales. (Votación.) ... <a href="#(Página19)">(Página19)</a>
+
+    <br /><br />Sometidos a votación los dictámenes de la Comisión de Asuntos Exteriores
+    que figuran en el orden del día, todos ellos son aprobados.
+
+    <br /><br />Se levanta la sesión a las diez y cuarenta y cinco minutos de la mañana.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página4)"><b>Página
+    4</b></a></p><br />
+
+    <br /><br />Se reanuda la sesión a las nueve y cinco minutos de la mañana.
+
+    <br /><br />ENMIENDAS DEL SENADO.
+
+    <br /><br />- PROYECTO DE LEY PARA LA PROTECCIÓN DE LOS TRABAJADORES A TIEMPO PARCIAL
+    Y OTRAS MEDIDAS URGENTES EN EL ORDEN ECONÓMICO Y SOCIAL (PROCEDENTE DEL
+    REAL DECRETO-LEY 11/2013, DE 2 DE AGOSTO). (Número de expediente
+    121/000060).
+
+    <br /><br />El señor PRESIDENTE: Se reanuda la sesión.
+
+    <br /><br />Debate de las enmiendas aprobadas por el Senado al proyecto de ley para la
+    protección de los trabajadores a tiempo parcial y otras medidas urgentes
+    en el orden económico y social, procedente del Real Decreto-ley 11/2013,
+    de 2 de agosto. En primer lugar, en turno de fijación de posiciones, por
+    el Grupo Mixto, tiene la palabra el señor Baldoví.
+
+    <br /><br />El señor BALDOVÍ RODA: Recuerdo que en una ocasión la alcaldesa de Madrid
+    se refirió a la conveniencia de no mezclar peras y manzanas, y eso es
+    justamente lo que hace el Partido Popular todas las semanas -además con
+    un desparpajo a mi entender irresponsable-, mezclar peras con manzanas,
+    churras con merinas. Y así, mientras se da cumplimiento a una sentencia
+    del Tribunal Constitucional y del Tribunal de Justicia de la Unión
+    Europea para mejorar la protección de los trabajadores a tiempo parcial,
+    aprovechan que pasaban por allí para incorporar cuestiones relativas a la
+    reforma laboral -al agravamiento del despido, para ser más precisos- y a
+    temas ferroviarios y aeroportuarios, cuestiones en definitiva relativas a
+    peras y manzanas. Y así todas las semanas, un auténtico desbarajuste
+    legislativo. Desgraciadamente, el Senado no aporta las enmiendas
+    necesarias para que este real decreto pudiera servir para crear empleo o
+    mejorar algo, el real decreto vuelve casi tan mal como se fue, con
+    mínimas correcciones técnicas. Sigue siendo, por tanto, un texto
+    legislativo hostil hacia los trabajadores y sus derechos, un texto cuya
+    letra y música ha sido escrita por las grandes empresas, las grandes
+    multinacionales, como por ejemplo Coca Cola, "La chispa de la vida". Una
+    empresa que, según el informe del Tribunal Económico Administrativo,
+    podría haber defraudado 100 millones a Hacienda, una empresa que presenta
+    un ERE que afecta a 1.253 trabajadores, a pesar de tener beneficios
+    multimillonarios. Es un ejemplo de cómo ustedes, decreto tras decreto,
+    han construido un puente de plata a los despidos y en consecuencia han
+    conducido a muchísima gente al paro y a la pobreza. Con sus tramitaciones
+    urgentes están desregularizando el mercado laboral a toda prisa, creando
+    un nuevo marco en el que el trabajador se encuentra a expensas del
+    empresario, laminando la posibilidad de defensa de sus derechos que
+    realizan los sindicatos, contra los que también están en una particular
+    cruzada bajo las directrices del neoliberalismo radical que dirige la
+    troika, a cuyos designios también sometió el Gobierno anterior el rumbo
+    de este país.
+
+    <br /><br />Pobreza energética, pobreza económica, desigualdad social e injusticia,
+    son los apellidos de un Gobierno que, como Atila, todo lo destruye a su
+    paso. ¿Comparten ustedes, por ejemplo, la afirmación del presidente de la
+    patronal eléctrica Unesa, Eduardo Montes, de que la luz es como las
+    sardinas? Imagino que sí porque han votado en contra de todas las
+    iniciativas parlamentarias para hacer frente a la pobreza energética, y
+    ahí es donde residiría la urgencia y la necesidad, ahí, ahí es donde
+    residiría esta urgencia, en hacer frente a los males que padece la gente,
+    la gente que padece frío, por ejemplo, porque no puede pagar unos precios
+    abusivos de la luz, que no se pagan en casi ningún país de Europa. Ahí es
+    donde tendría éxito aprobar un real decreto cuya exposición de motivos se
+    encabezará como lo hace esta: La situación de crisis por la que está
+    atravesando nuestro país exige la adopción de reformas que contribuyan a
+    la recuperación del crecimiento económico y a la creación de empleo en el
+    plazo más corto posible. Con lo que luego se encuentran los ciudadanos es
+    bien distinto, ni siquiera ante la necesidad de modificar la cotización
+    de los trabajadores a tiempo parcial para acceder a las prestaciones en
+    cumplimiento de una sentencia del Tribunal Constitucional, han sido
+    benévolos, poniendo en riesgo su constitucionalidad de nuevo al
+    introducir un elemento corrector que no existe para el resto de
+    contratos, generando nuevamente desigualdad después de regular por
+    imposición de la igualdad. Esto es, que ni por mandato del Constitucional
+    son ustedes capaces de regular la igualdad, no sea que haya demasiada
+    gente accediendo a las prestaciones sociales para las que ha cotizado,
+    pueden pensar ustedes.
+
+    <br /><br />Acabo. Ustedes siguen en su senda de fomentar pobreza y desigualdad, y
+    nosotros, Compromís-Equo, en la de denunciarlo junto a miles de
+    trabajadores, como los de la Coca Cola, que no están dispuestos a
+    quedarse en casa ante la injusticia que ustedes favorecen a golpe de real
+    decreto. Por tanto, nuevamente nos obligan a darles un humilde pero
+    rotundo no a este decreto.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página5)"><b>Página
+    5</b></a></p><br />
+
+    <br /><br />Muchas gracias, señor presidente.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Baldoví.
+
+    <br /><br />Por el Grupo Vasco, PNV, tiene la palabra el señor Olabarría.
+
+    <br /><br />El señor OLABARRÍA MUÑOZ: Señor presidente, señorías, la verdad es que es
+    muy difícil decir algo razonable sobre este vamos a denominar proyecto de
+    ley, por desconocimiento. Se ve que esta es una legislatura para grandes
+    juristas que sepan o que tengan una visión enciclopédica y
+    omnicomprensiva del ordenamiento jurídico, porque aquí se regulan doce
+    materias sistemáticamente diferentes o este proyecto de ley afecta a doce
+    sectores diferentes del ordenamiento jurídico. Honestamente, tengo que
+    decirle que sobre el sector ferroviario sé poco, sobre el sector
+    aeroportuario menos; sé algo de la Ley Concursal; sobre el derecho del
+    trabajo o los aspectos relativos a la legislación laboral sé algo más,
+    algo más también sobre las materias relativas a la Seguridad Social y
+    particularmente lo que constituye pretendidamente el tronco de este
+    proyecto de ley, que es la nueva regulación del cómputo de la pensión de
+    jubilación de los trabajadores a tiempo parcial. Sobre la naturaleza
+    jurídica de la Sareb no sé absolutamente nada.
+
+    <br /><br />He intentado hacer un esfuerzo por absorber algunos de los aspectos de
+    esta prolija regulación y tengo que decirle que lo único que se me ocurre
+    es que este proyecto de ley probablemente será inconstitucional o es
+    inconstitucional en virtud de prolija jurisprudencia del Tribunal
+    Constitucional que obliga al legislador a practicar una mínima y
+    razonable coherencia sistemática a la hora de elaborar los textos
+    legales. Con tantas materias inconexas asistemáticamente incluidas en
+    este mismo proyecto de ley, desordenadas, se está vulnerando el artículo
+    9.3 de la Constitución, se está vulnerando la ordenación que provee de
+    suficiente seguridad jurídica para que los operadores jurídicos sepan por
+    lo menos dónde están físicamente reguladas determinadas materias. ¿O es
+    que quién puede saber que la atención a las víctimas de accidentes
+    ferroviarios está en este proyecto de ley? Me imagino que alguien, un
+    operador jurídico, con buena fe, iría a mirar la regulación o la
+    legislación en materia de víctimas de accidentes de trabajo o de otras
+    circunstancias y no se le ocurriría mirar aquí; o cómo se regula
+    parcialmente la estructura del sector ferroviario. No sé si sería esta la
+    ley, que se denomina proyecto de ley para la protección de los
+    trabajadores a tiempo parcial y otras -ahí el otras es lo importante,
+    otras es todo lo demás que le he dicho- medidas urgentes
+    -pretendidamente- en el orden económico y social. Pues nadie miraría aquí
+    para ver cómo se regulan los accidentes ferroviarios ni cómo se
+    configuran las comisiones de investigación de una catástrofe ferroviaria,
+    ni si deben poseer la condición de autoridad pública los miembros de una
+    comisión de investigación de un accidente ferroviario. Tampoco se les
+    ocurriría mirar aquí para ver cuál es la modificación de la naturaleza
+    jurídica de la Sareb, del banco malo. No sé si vendrían a este proyecto
+    de ley para reglamentar la regulación a tiempo parcial, que es lo único
+    que puedo glosar razonablemente.
+
+    <br /><br />En relación con esta ley, señor presidente, estamos de acuerdo con la
+    regulación que aquí se consigna y estamos de acuerdo porque esta es de
+    las escasas materias que en esta legislatura se han podido pactar
+    previamente en virtud de un pacto universal entre todos los grupos
+    parlamentarios mediante la regulación de los llamados coeficientes de
+    parcialidad y una adecuada alteridad entre jornadas a tiempo parcial,
+    jornadas a tiempo completo o jornadas que tienen duraciones diferentes.
+    Desde esa perspectiva, lo que está pactado, bien pactado está; está bien
+    ubicado, está bien trasladado a este proyecto de ley. En cuanto a lo
+    demás, tengo grandes dificultades intelectuales para poder emitir una
+    reflexión ponderada. Intuyo que estará bien la configuración de la nueva
+    naturaleza jurídica de la Sareb.
+
+    <br /><br />Intuyo que en materia de reformas estructurales del sector ferroviario,
+    aeroportuario y portuario las cosas se habrán hecho por personas
+    competentes y con un conocimiento suficiente y adecuado de esta materia.
+    En el ámbito de la Ley Concursal -aquí puedo hablar quizá con mayor
+    legitimidad- la regulación se cohonesta con los requerimientos del
+    Estatuto de los Trabajadores, sobre todo en materia de despidos
+    colectivos o despidos por causas objetivas. Desde esa perspectiva, nos
+    parece adecuada la regulación de la legislación concursal o el precepto
+    que regula parte de la Ley Concursal.
+
+    <br /><br />En materia de la reforma del Estatuto de los Trabajadores se ahondan en
+    las mismas líneas substantivas y ontológicas de la reforma laboral del
+    año 2012 y no podemos validar desde ninguna perspectiva una reforma
+    laboral que rechazamos en su totalidad, tanto en su fundamentación
+    ontológica como en su contenido material o substantivo, sobre todo en las
+    materias que aquí se prevén. De nuevo se potencia aún más la decadencia
+    de la negociación colectiva laboral mediante una facilitación adicional
+    de descuelgue de las cláusulas de los convenios colectivos de ámbito
+    superior. En materia de descausalización de los despidos objetivos y de
+    los despidos colectivos -los ERE-, se sigue también profundizando en esta
+    descausalización, que es uno de los motivos que está provocando las tasas
+    de desempleo con las que
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página6)"><b>Página
+    6</b></a></p><br />
+
+    <br /><br />convivimos y que nosotros denunciamos, con más voluntad que acierto -por
+    lo que se ve-, porque no se nos hizo caso ni a nosotros ni a ninguno de
+    los demás grupos de la oposición. Se aprobó esta norma con la mayoría
+    absoluta del Grupo Popular y desde esa perspectiva no podemos tampoco
+    convalidar esta materia. Pero el tronco de esta ley y lo que fuimos
+    llamados a debatir es la nueva regulación del cómputo de la jubilación de
+    los trabajadores a tiempo parcial mediante los coeficientes de
+    parcialidad que entre todos pactamos, atendiendo a los requerimientos de
+    una sentencia del Tribunal Constitucional, la sentencia 61/2003, y esto
+    se ha recogido adecuadamente atendiendo a las dos objeciones de la
+    sentencia del Tribunal Constitucional. Una era la vulneración del
+    principio de igualdad en el sistema de cómputo para la jubilación de los
+    trabajadores a tiempo parcial y de los trabajadores a jornada completa; y
+    otra, los problemas de género que pertinentemente invocaba la sentencia
+    del Tribunal Constitucional partiendo de la consideración estadística de
+    que la mayoría de los trabajadores a tiempo parcial realmente son
+    trabajadoras a tiempo parcial, porque son las mujeres las que
+    mayoritariamente usan esta figura del contrato a tiempo parcial por las
+    razones que sea, normalmente por intentar buscar fórmulas de conciliación
+    de la vida laboral y familiar. Esto está bien y esto es lo que teníamos
+    que haber regulado. Todas las demás materias son adhesiones ex post,
+    añadidos o sucedidos y, como le digo, señor presidente, algunos plantean
+    globalmente problemas de inconstitucionalidad. Pero también llama
+    poderosamente la atención como algunos preceptos o algunas de estas
+    reformas parciales de los nueve sectores del ordenamiento jurídico que
+    son objeto de afectación por esta ley, están derogando reales
+    decretos-leyes presentados por el Gobierno y convalidados por esta Cámara
+    muy recientemente. Desde esa perspectiva, cuando se elaboran leyes con
+    esta dimensión tan heterogénea y tan inconexa, que no dejan de constituir
+    una verdadera atrofia jurídica, por lo menos se tiene que tener cuidado
+    en las tablas derogatorias, qué es lo que se deroga y qué es lo que no se
+    deroga, porque a veces se derogan normas aprobadas por el mismo Gobierno
+    que ha elaborado este proyecto de ley.
+
+    <br /><br />Desde esta perspectiva, señor presidente, en relación con las enmiendas
+    -no sé si es el momento de pedir votación separada-, votaremos
+    afirmativamente a la enmienda aceptada por el Senado en relación con el
+    artículo 1 y la consideración de autoridad pública de los funcionarios
+    que participen en comisiones de investigación de accidentes ferroviarios,
+    y nos vamos a abstener por razones más estéticas que jurídicas en
+    relación con todas las demás.
+
+    <br /><br />Gracias, señor presidente.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Olabarría.
+
+    <br /><br />Por el Grupo Parlamentario de Unión Progreso y Democracia, tiene la
+    palabra el señor Anchuelo.
+
+    <br /><br />El señor ANCHUELO CREGO: Gracias, señor presidente.
+
+    <br /><br />He tenido ya el honor de fijar en numerosas ocasiones la postura de mi
+    grupo respecto a este texto legal, porque se convalidó como real decreto,
+    hubo un debate de totalidad, hubo un debate en Comisión y hubo un debate
+    en Pleno. Por tanto, para no entretener innecesariamente a la Cámara, me
+    limitaré a resumir brevemente nuestra postura. En este texto legal hay
+    tres bloques. El primero es un acuerdo convalidado en el Pacto de Toledo
+    para mejorar el acceso a las pensiones de jubilación de los trabajadores
+    a tiempo parcial. Nos parece un acuerdo muy importante, lo promovimos
+    mediante una proposición no de ley y cumple además sentencias europeas y
+    del Tribunal Constitucional. Lo apoyamos y lo único que lamentamos es que
+    no haya podido visualizarse ese importante acuerdo alcanzado en el Pacto
+    de Toledo separando esta disposición del resto de temas que se tratan en
+    la ley. Sin embargo, el segundo bloque tiene contenido laboral y no lo
+    apoyamos, es una nueva vuelta de tuerca en la reforma laboral, una nueva
+    vuelta de tuerca en la dirección de la precarización del empleo a la que
+    nos hemos venido oponiendo desde la misma reforma laboral. Por último,
+    hay un tercer bloque inconexo, de difícil descripción o calificación, con
+    temas aeroportuarios, ferroviarios, de la Sareb, y una y otra vez hemos
+    señalado nuestra oposición a esta forma de tramitar temas inconexos que
+    dificultan el debate y la votación. Por eso nos opusimos en conjunto a
+    esta ley. Las enmiendas del Senado no cambian nada esencial y, por tanto,
+    tampoco cambian nuestra posición de conjunto con respecto a esta ley.
+    Cuatro de ellas básicamente cambian de sitio disposiciones finales, las
+    cambian al Real Decreto 16; nos abstendremos porque nos resulta
+    indiferente que esas disposiciones finales estén aquí o allá. La quinta
+    enmienda da el rango de autoridad pública a los funcionarios que
+    participen en comisiones de investigación de accidentes ferroviarios, un
+    tema interesante pero menor, que votaremos favorablemente.
+
+    <br /><br />Gracias, presidente.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página7)"><b>Página
+    7</b></a></p><br />
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Anchuelo.
+
+    <br /><br />Por el Grupo de La Izquierda Plural, tiene la palabra el señor Coscubiela.
+
+    <br /><br />El señor COSCUBIELA CONESA: Gracias, señor presidente.
+
+    <br /><br />Señorías, terminamos hoy la tramitación de una norma que comenzó hace ya
+    algunos meses con el debate de convalidación del Decreto-ley 11/2013. Me
+    permitirán que les diga que creo que es el paradigma de la manera
+    chapucera que el Gobierno y el grupo mayoritario de la Cámara, el Grupo
+    Popular, han convertido la actividad legislativa, y voy a intentar
+    justificarlo. Hoy se confirma el dicho popular de que mal acaba lo que
+    mal comienza. Esta -recuerden- debería haber sido la norma que regulara
+    solo el nuevo sistema de cálculo de las cotizaciones en los contratos a
+    tiempo parcial. De hecho, es lo que dice el título del Decreto-ley
+    11/2013 que, convertido en proyecto de ley, en estos momentos termina su
+    tramitación. Además, teníamos la fortuna de que en este tema, en la nueva
+    regulación de las cotizaciones en los contratos a tiempo parcial, se
+    había podido alcanzar posiblemente el único acuerdo en materia laboral y
+    Seguridad Social -y me atrevo a decir que en el conjunto de los temas de
+    la Cámara- por todos los grupos de la Cámara. Un acuerdo que, por cierto,
+    no respondía a la voluntad política del Gobierno, sino a la obligación
+    imperiosa de cumplir la sentencia del Tribunal de Justicia de la Unión
+    Europea que exigía un cambio en la legislación española por considerar
+    que la anterior legislación discriminaba profundamente a los trabajadores
+    a tiempo parcial y especialmente, por razón de género, a las mujeres,
+    porque desgraciadamente el contrato a tiempo parcial es un contrato
+    precarizado que el legislador y el Ejecutivo tiene reservado
+    especialmente a las mujeres.
+
+    <br /><br />Incomprensiblemente -nadie nos ha dado aún una explicación-, después de
+    haber alcanzado un acuerdo de todos los grupos en el marco del Pacto de
+    Toledo y cuando podíamos haber convalidado todos un decreto-ley por
+    acuerdo pleno, resulta que el Gobierno decide cargarse ese acuerdo
+    metiendo dentro de ese decreto-ley materias no solo de Seguridad Social y
+    otras laborales -que podrían tener alguna justificación-, sino hasta
+    nueve materias distintas correspondientes a varios ministerios.
+    Resultado, no sé si ustedes lo recuerdan pero yo sí, el debate de
+    convalidación del decreto-ley fue confuso y de escasa transparencia.
+    Estoy profundamente convencido de que ni la ministra de Empleo cuando
+    presentó a su convalidación el decreto-ley sabía lo que estaba
+    presentando. No lo podía saber, sin duda, porque, insisto, es de ámbitos
+    de bastantes ministerios. Luego, como se tenía la necesidad política de
+    expresar el acuerdo con aquella parte del decreto-ley en el que todos
+    estamos de acuerdo, que es el tema de la cotización de los contratos a
+    tiempo parcial, como una excepción bondadosa por parte del grupo de la
+    mayoría se aceptó tramitarlo como proyecto de ley; entonces,
+    desgraciadamente, el Partido Popular confirmó que sus llamadas al diálogo
+    son pura retórica. A pesar del esfuerzo que hicimos algunos grupos -en el
+    caso del nuestro creo que bastante evidente, presentando un texto
+    articulado alternativo, complicado por cierto, muchas enmiendas con
+    propuestas y desmintiendo una vez más que es falso eso que pretende
+    imputar el Partido Popular de que nuestro grupo no es capaz de presentar
+    alternativas, las presentamos-, el Partido Popular ha sido totalmente
+    refractario a ninguna aportación; quiero insistir que ni tan siquiera a
+    aquellas de naturaleza técnica que, a nuestro modesto entender, permiten
+    una mayor claridad y precisión en la norma procesal de la jurisdicción
+    social que regula determinadas materias.
+
+    <br /><br />Hasta ahí, el proceso de tramitación. He tenido oportunidad en tres
+    ocasiones de explicar las razones profundas por las cuales estamos en
+    contra de esta norma. Da un paso más -y desgraciadamente no ha sido
+    último- en los procesos de precarización de las condiciones de trabajo,
+    en el proceso de privatización también de los servicios públicos de
+    empleo, en el proceso, me atrevo a decir, de criminalización de los
+    parados perceptores de prestaciones de desempleo, es decir, en todo
+    aquello que ha caracterizado lo peor de la política del Gobierno durante
+    esta legislatura. Hoy nos encontramos al final de un proceso marcado por
+    un espectacular esperpento legislativo y, como no podía ser de otra
+    manera, vamos a terminar como si este debate lo estuviera dirigiendo el
+    mismísimo Kafka. Me explico, hoy tenemos enmiendas del Senado que vienen
+    a intentar salvar, y no lo consiguen, la barbaridad y la falta de
+    seguridad jurídica provocada por un hecho curioso, y es que, mientras
+    estábamos tramitando este proyecto de ley, al Gobierno no se le ocurrió
+    otra cosa que presentar otro nuevo Decreto-ley, el 16/2013, que
+    modificaba en materia de contratación laboral lo que ya había modificado
+    el Decreto-ley 11/2013 hacía escasamente unos meses; ese decreto-ley ha
+    tenido una vigencia de escasas semanas. El Gobierno legisla
+    espasmódicamente, está convirtiendo la seguridad jurídica en una especie
+    de diplodocus inexistente en nuestro país. Pero, fíjense ustedes bien
+    hasta qué punto lleva al esperpento, que en las enmiendas introducidas en
+    el Senado se están modificando aspectos que fueron modificados en el
+    Decreto-ley
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página8)"><b>Página
+    8</b></a></p><br />
+
+    <br /><br />16/2013 hace escasamente unas semanas, que modificaba el texto original
+    del Decreto 11/2013; entenderé que ustedes no me sigan, porque eso solo
+    lo puede seguir Kafka. (Aplausos). Pero ya les vaticino que si el
+    Gobierno quiere enmendar esta plana, de aquí a dos días vamos a tener
+    otro decreto-ley que va a tener que enmendar el entuerto de su furor
+    legislativo, porque no se le puede llamar de otra manera. Han encontrado
+    ustedes tanta comodidad en la mayoría absoluta, se sienten tan cómodos,
+    se están acostumbrando tanto a ella, que no se dan cuenta de que hasta
+    qué punto les está perjudicando a ustedes también como Gobierno y como
+    grupo, porque se están deteriorando.
+
+    <br /><br />Sinceramente, señorías, no sé si a ustedes les sucede, pero yo no puedo
+    hablar con mis compañeros de profesión, del mundo del derecho, ni con
+    profesores ni con abogados laboralistas; me preguntan: ¿no os da
+    vergüenza legislar de esta manera? Yo digo: sí, pero os puedo asegurar
+    que no soy el responsable y que intentamos hacer todo lo posible.
+    Señorías, les traslado la pregunta de mis compañeros, ¿no les da
+    vergüenza, no se les cae la cara de vergüenza de legislar de esta manera?
+    Políticamente todo es discutible; ya sé que tenemos concepciones
+    diferentes sobre las relaciones laborales, eso es legítimo, pero ¡por
+    Dios, lo que hagan, incluso aunque sea precarizar las condiciones de
+    trabajo, al menos háganlo con un poco de dignidad, con un poco de sentido
+    común! Pero es que no han terminado ustedes, señorías; las barbaridades
+    continúan, y no solo es en el campo laboral. ¿Se han leído ustedes la
+    introducción de la exposición de motivos del primer decreto-ley de este
+    periodo de sesiones, el Real Decreto-ley 1/2014? Si no se la han leído,
+    se la voy a recordar yo hoy. En ese Decreto-ley 1/2014 el Gobierno
+    anuncia que se ve obligado a modificar la legislación sobre seguridad
+    ferroviaria que introdujo en el Decreto-ley 11/2013, dedicado a contrato
+    a tiempo parcial -porque lo hizo corriendo-, porque la Comisión Europea
+    le ha emplazado a modificarlo porque no cumple una directiva comunitaria
+    sobre seguridad ferroviaria. ¿Es posible ser más chapuzas? (Varios
+    señores diputados: ¡Sí!-Rumores.-Aplausos). ¿Es posible? Yo creo que
+    ustedes nos van a demostrar pronto que sí, que se pueden incluso superar
+    en su sentido kafkiano de la actividad legislativa y en su sentido
+    chapucero.
+
+    <br /><br />Por favor, impongan la política que ustedes crean que pueden imponer,
+    porque creen que su mayoría -conseguida con fraude electoral, porque
+    engañaron a la ciudadanía- les da permiso para hacer todo. Pero, al
+    menos, háganlo con un poco de dignidad. Han convertido ustedes el mandato
+    constitucional de seguridad jurídica del artículo 9.3 de la Constitución
+    en un papel mojado. No sirve para nada. Solo por eso, lo que estamos
+    discutiendo hoy merece nuestro voto en contra. La verdad, se lo vuelvo a
+    repetir, ni Kafka podría superar lo que ustedes son capaces de hacer
+    cuando se les da el BOE y se les permite utilizarlo absolutistamente.
+
+    <br /><br />Gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Gracias, señor Coscubiela.
+
+    <br /><br />Por el Grupo Catalán (Convergència i Unió), tiene la palabra el señor
+    Campuzano.
+
+    <br /><br />El señor CAMPUZANO I CANADÉS: Gracias, señor presidente.
+
+    <br /><br />Efectivamente, finaliza el debate de este proyecto de ley y los grupos de
+    la oposición venimos coincidiendo a lo largo de su tramitación en dos
+    cuestiones en las que los oradores que hasta ahora han subido a la
+    tribuna han insistido. Por un lado, en una valoración positiva de aquello
+    que incorpora el real-decreto, hoy proyecto de ley, en materia de tiempo
+    parcial, resolviendo el trato discriminatorio que los trabajadores a
+    tiempo parcial tenían en relación con el sistema de cotización
+    establecido desde hacía tiempo, fruto de sentencias de la justicia
+    europea y de la justicia española y fruto también, y nos gusta
+    recordarlo, de enmiendas de Convergència i Unió en la reforma de
+    pensiones de 2011 que mandataba a una reforma del tiempo parcial en la
+    dirección que finalmente se ha aprobado en este proyecto de ley; y una
+    reforma, la contenida en este hoy proyecto de ley, que respondía al
+    acuerdo con los interlocutores económicos y sociales. Todos contrastamos
+    cómo el Gobierno, los interlocutores sociales y los grupos políticos de
+    esta Cámara, en esta materia en concreto, fuimos capaces de alcanzar un
+    acuerdo demostrando la vigencia, las virtudes, la fortaleza de la
+    metodología del Pacto de Toledo a la hora de encarar la política en
+    materia de Seguridad Social. Y contraponíamos esta manera de legislar,
+    esa manera de actuar en esta materia frente a la otra reforma de
+    pensiones, la más sustancial, que el Gobierno y el Grupo Popular han
+    aprobado en solitario sin que ningún interlocutor social los haya
+    acompañado, con el rechazo de toda la oposición y muy convencidos de que
+    la reforma, que en la práctica abre un camino de empobrecimiento de los
+    pensionistas, cuando en esta Cámara exista una mayoría distinta deberá
+    ser revocada.
+
+    <br /><br />Decía que contrastábamos eso, la buena reforma que aquí introducíamos, con
+    esta otra reforma, y valorábamos positivamente la incorporación en este
+    texto legislativo de las cuestiones del tiempo parcial.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página9)"><b>Página
+    9</b></a></p><br />
+
+    <br /><br />Al mismo tiempo, todos estamos insistiendo -lo han hecho de manera
+    vehemente y brillante los señores Olabarría y Coscubiela- en el absurdo
+    que supone tramitar en un mismo texto legislativo en forma de real
+    decreto-ley cuestiones tan dispares y tan distintas que hacen imposible
+    una discusión mínimamente coherente, al menos por los conocimientos que
+    de las materias podemos tener los distintos portavoces; quizá la única
+    diputada que lo pueda hacer es la señora Gutiérrez porque, aparte de ser
+    inspectora de Trabajo, ha sido también secretaria de Estado de
+    Transportes y eso seguramente le da una visión global para abordar este
+    real decreto, pero no es el caso del resto de diputados. Además -y a ello
+    se ha referido con mucha contundencia el señor Coscubiela, yo quizá no
+    voy a ser tan vehemente como él, pero comparto la cuestión de fondo-,
+    resulta que el Gobierno, fruto de peticiones que le formula la Comisión
+    Europea de que debe modificar el régimen ferroviario, aprueba un real
+    decreto-ley, pero, como tiene en tramitación parlamentaria este proyecto
+    de ley, resulta que la entrada en vigor de esta nueva ley deja sin
+    vigencia aquello modificado en el real decreto-ley que afectaba al sector
+    ferroviario y que se aprobó a principios de este año con una demostración
+    de una pésima manera de legislar. Es sorprendente porque, a medida que la
+    legislatura va avanzando, la actitud del Grupo Popular no es tanto la de
+    esforzarse en intentar buscar acuerdos, en intentar que el trámite
+    parlamentario sirva para mejorar las leyes, sino simplemente instalarse
+    en la comodidad de hecho que le supone tener la mayoría absoluta de las
+    dos Cámaras y la consecuencia de una cierta pereza a la hora de trabajar
+    bien lleva a situaciones como la que estamos viviendo en el absurdo de
+    este proyecto de ley. Es lamentable porque, la verdad, para quienes
+    llevamos ya un cierto tiempo en esta Cámara provoca desazón esta manera
+    de legislar.
+
+    <br /><br />Todo ello hace que no podamos tener una valoración positiva sobre este
+    proyecto de ley, más allá, insisto, de las cuestiones del tiempo parcial,
+    por las cuestiones formales. Además, hemos intentado resolver una
+    cuestión, tanto en el Congreso como en el Senado, que no se ha resuelto y
+    que es un mal planteamiento en el cumplimiento de sentencias del Tribunal
+    Constitucional que afectan al control de determinadas prestaciones en el
+    ámbito de la protección social que, al entender de Convergència i Unió y
+    también del Consejo Consultivo de la Generalitat, vulneran los títulos
+    competenciales que en materia de empleo otorga el Estatuto de Autonomía a
+    las instituciones de Cataluña. Eso no ha habido manera de resolverlo en
+    los trámites parlamentarios y va a llevar al Parlament o al Govern de
+    Catalunya a presentar recurso ante el Tribunal Constitucional en esta
+    materia. Creíamos que podía haber existido una solución que encajase
+    perfectamente con el reparto de competencias existente.
+
+    <br /><br />Finalmente -con ello termino, señor presidente-, me referiré a cinco
+    cuestiones que, al hilo de un real decreto-ley, de un proyecto de ley que
+    forma parte de la política de empleo del Gobierno, Convergència i Unió
+    quiere reiterar. En primer lugar, en la recuperación, si es que estamos
+    ya instalados en el fin de la recesión pero continuamos en la crisis, los
+    acuerdos con los interlocutores sociales deberían ser prioridad en la
+    política de empleo y protección social del Gobierno. Sin capacidad de
+    acuerdo con los interlocutores sociales, la recuperación, si es que se
+    produce, va a ser más difícil, más compleja, más lenta y, sobre todo,
+    menos justa y menos equitativa; y, ante esa necesidad de recuperación
+    acordada con los interlocutores sociales, existe la necesidad de
+    recuperar los acuerdos en esta Cámara en materia de empleo y de
+    protección social. El Grupo Popular no puede instalarse en la pereza que
+    le da el ejercicio de su mayoría absoluta.
+
+    <br /><br />En segundo lugar, la lógica macroeconómica que la Unión Europea decide que
+    forma parte de la salida de esta crisis, de la contención del déficit
+    público, de las reformas estructurales y de la mejora de la
+    competitividad a largo plazo de nuestra economía por la mejora de las
+    condiciones o las rebajas salariales tiene sus límites en la capacidad de
+    generar empleo. La propia ministra de Empleo ya lo afirmaba hace unos
+    días, no da más de sí está política en el medio y en el corto plazo para
+    generar empleo, y se necesita una política de estímulos a la creación de
+    empleo en el corto plazo. Ahí el Gobierno debe dar respuesta a la
+    necesidad de un plan de choque para la creación de empleo.
+
+    <br /><br />En tercer lugar, continúa pendiente una convicción por parte del Gobierno
+    acerca de la importancia y la trascendencia de las políticas activas de
+    empleo, son imprescindibles. Las instituciones internacionales nos lo
+    vienen reclamando, el Fondo Monetario Internacional, la OCDE, la Comisión
+    Europea, la gran cuestión pendiente son las políticas activas de empleo.
+    Ustedes han recortado más del 50% de los recursos en esta materia y es
+    inconcebible que, frente al perfil de buena parte de nuestras personas
+    desempleadas con formaciones inferiores a la ESO, no hagan una apuesta
+    por el reciclaje profesional y el acompañamiento a los parados.
+
+    <br /><br />En cuarto lugar, debe preocuparnos, y debería preocuparle más al Gobierno,
+    la progresiva disminución de la tasa de cobertura de la protección por
+    desempleo. En Cataluña estamos en el 51% de cobertura de
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página10)"><b>Página
+    10</b></a></p><br />
+
+    <br /><br />la tasa de prestación por desempleo y durante 2014 el 68% de las personas
+    que hoy reciben protección social van a ver cómo finaliza la misma, y si
+    estas personas no encuentran ningún tipo de empleo, las condenaremos a la
+    economía sumergida o a la asistencia social.
+
+    <br /><br />Finalmente, al Gobierno debería preocuparle aquello que nos advertía la
+    Unión Europea hace muy pocas semanas, que es la emergencia de los
+    denominados trabajadores pobres, personas que, a pesar de tener un
+    empleo, el empleo no les permite vivir con dignidad. En la política de
+    empleo y en la política de protección social estas cinco cuestiones
+    deberían formar parte de la prioridad de la acción del Gobierno. Hasta
+    ahora nada de lo que ustedes están proponiendo va en esa dirección, y es
+    una pena.
+
+    <br /><br />Muchas gracias.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Campuzano.
+
+    <br /><br />Por el Grupo Socialista tiene la palabra la señora Gutiérrez del Castillo.
+
+    <br /><br />La señora GUTIÉRREZ DEL CASTILLO: Señor presidente.
+
+    <br /><br />Señorías, debatimos hoy las enmiendas incorporadas en el Senado al
+    proyecto de ley que tiene su origen en el real decreto-ley de 2 agosto
+    sobre protección de los trabajadores a tiempo parcial y otras medidas
+    urgentes en el orden económico y social. Mi grupo votará a favor de la
+    enmienda que modifica el artículo 2 y se abstendrá en el resto. Lo
+    curioso es que tres de las cuatro enmiendas que llegan del Senado son de
+    supresión de las disposiciones que el propio Grupo Popular había
+    incorporado a este proyecto de ley en la Cámara sobre los contratos
+    formativos. Sus reformas parecen un constante vaivén, pero con una
+    estrategia bien calculada: seguir pulverizando los derechos de los
+    trabajadores. En este caso tenían mucha prisa para que entrara en vigor
+    una mayor precariedad en los contratos formativos, por eso lo
+    incorporaron en el Real Decreto-ley 16/2013, de diciembre.
+
+    <br /><br />Señorías, el decreto-ley del 2 agosto, del cual trae causa este proyecto
+    de ley, y el Real Decreto-ley 16/2013, de diciembre, son expresión de lo
+    que la señora Báñez llama reformas estructurales de segunda o tercera
+    generación, es decir, nuevas vueltas de tuerca a la reforma laboral. ¿Y
+    en qué consisten? Consisten en seguir por la pendiente de la eliminación
+    de derechos individuales y colectivos de los trabajadores, en la
+    pendiente de otorgar un poder unilateral al empresario con abierta
+    ruptura del modelo de relaciones laborales. Siguen ustedes insistiendo en
+    hacer más fácil y barato el despido, en este caso el despido a los
+    mayores de cincuenta años en empresas con beneficios. Siguen ustedes
+    restringiendo la tutela jurisdiccional. Continúan ustedes precarizando
+    aún más la contratación laboral. Insisten en eliminar el diálogo social y
+    el acuerdo entre empresarios y sindicatos en un intento de hacer
+    irrelevantes a los interlocutores económicos y sociales que, no lo
+    olviden, tienen en nuestro país relevancia constitucional.
+
+    <br /><br />En la reforma de 2012 tenían entre sus objetivos la desregulación de la
+    fijación del salario para provocar la mayor devaluación que hemos
+    conocido en nuestra reciente historia. En estas segundas vueltas de
+    tuerca desregulan la jornada laboral y completan la desregulación de
+    todas las condiciones de trabajo. Con estas nuevas vueltas de tuerca
+    continúan quitando derechos y protección a los trabajadores hasta hacer
+    desaparecer el carácter tuitivo del derecho del trabajo. La realidad
+    muestra que los objetivos declarados en su reforma están hoy mucho más
+    lejos que lo que estaban hace dos años y los resultados son dramáticos
+    para los trabajadores. La reforma laboral ha provocado más destrucción de
+    empleo. En dos años se han destruido 1.049.000 empleos. El número de
+    parados ha aumentado en 622.700 y por primera vez en cuarenta años cae la
+    población activa en 426.000 personas. La relación entre crecimiento y
+    empleo en 2012 y 2013 es infinitamente peor que la que se daba en 2011 y,
+    por supuesto, peor que la de 2009, el peor año de la crisis. En 2013 esta
+    relación es de uno a tres, la producción ha caído un 1,2% y el empleo ha
+    caído un 3,1%. La tasa de paro se sitúa en el 26,4% en 2013 frente al
+    21,6% en 2011, cinco puntos porcentuales más.
+
+    <br /><br />En cuanto a los jóvenes, soportan tasas de paro que superan el 55%. En
+    cuanto a la protección de los desempleados, la cobertura por desempleo
+    está en caída libre, apenas alcanza el 60% de los parados. Hay más de 3
+    millones de parados sin ningún tipo de protección, 1.800.000 familias con
+    todos sus miembros en paro y 700.000 hogares donde no entra ningún tipo
+    de ingreso. Es una situación tan dramática para millones de desempleados
+    que la respuesta del Partido Popular ha sido más de lo mismo, pero desde
+    luego no políticas activas de empleo. Los recortes al desempleo suman más
+    de 6.000 millones de euros en relación con 2011. Los despidos siguen
+    aumentando, un 50% los despidos individuales y un 31% los despidos
+    colectivos. Decían que sustituirán despidos por reducción de jornada y
+    suspensiones, pero lo cierto es que los beneficiarios de estas
+    prestaciones pierden peso en relación con los despidos colectivos. En
+    2013 representaban el 73% de los trabajadores sometidos a expedientes de
+    regulación de
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página11)"><b>Página
+    11</b></a></p><br />
+
+    <br /><br />empleo cuando en 2009 era un 82%. Con su reforma, los contratos
+    indefinidos apenas llegan al 7%, la rotación temporal de los contratos se
+    ha disparado. El contrato de emprendedores, el gran hallazgo para superar
+    la segmentación del mercado laboral, profundiza aún más en la
+    segmentación del mercado laboral y ahora lo extienden ustedes a la
+    contratación a tiempo parcial. Asistimos a un proceso de sustitución de
+    empleo a tiempo completo y estable por contratación temporal a tiempo
+    parcial involuntario. Han roto la concertación social y han dañado la
+    negociación colectiva. El número de trabajadores cubierto por convenio se
+    ha reducido en un 25% tras la reforma.
+
+    <br /><br />Lo que sí han logrado es la gran devaluación salarial, con cinco
+    trimestres consecutivos de reducción de salario según la encuesta de
+    salarios. Esta devaluación salarial ha ido acompañada de incrementos
+    inaceptables en las retribuciones de altos ejecutivos. El coste de la
+    crisis la están pagando los trabajadores y los beneficios han ido a los
+    bolsillos de unos pocos. Los excedentes empresariales ligados a la caída
+    de salarios no se han reinvertido ni se han destinado al mantenimiento
+    del empleo. Empresas con beneficios siguen haciendo uso de la reforma
+    laboral, haciendo ERE, despidiendo a trabajadores y destruyendo empleo.
+
+    <br /><br />Señorías, algo debemos decir de su forma de legislar, ya lo han puesto de
+    manifiesto todos los grupos que me han precedido en el uso de la palabra.
+    Ustedes han hecho catorce modificaciones legales desde que llegaron al
+    Gobierno en el ámbito laboral y de Seguridad Social: ocho mediante
+    decreto-ley y seis mediante proyecto de ley. El hilo conductor de todas
+    ellas ha sido la desregulación del mercado de trabajo, eso sí, siempre en
+    perjuicio de los derechos de los trabajadores. Cada una de estas reformas
+    ha sido presentada como el gran hallazgo, el hallazgo definitivo; la
+    realidad es que esas modificaciones están repletas de ocurrencias,
+    improvisaciones y rectificaciones. Han creado ustedes una gran maraña
+    normativa, han generado inseguridad jurídica y sensación de
+    provisionalidad. En estos momentos es difícil saber qué precepto está en
+    vigor y cuál ha sido derogado.
+
+    <br /><br />Le pongo dos ejemplos. El proyecto de ley que hoy debatimos derogará lo
+    establecido en el Decreto-ley 1/2014, de 24 de enero, en relación con la
+    fijación del canon del uso de la infraestructura de ADIF, porque la Unión
+    Europea había exigido esa modificación. Esto lo advirtió mi compañero
+    Simancas la semana pasada en el debate de convalidación, y ustedes le
+    contestaron que leyera bien las memorias del real decreto-ley. Hoy los
+    servicios de la Cámara ponen de manifiesto este problema. ¿Cómo van a
+    explicar ustedes esta chapuza a las instituciones europeas? ¿Pretenden
+    ahora por la puerta falsa rectificar esta chapuza? Esto es una auténtica
+    vergüenza. Pero es más, no es el único caso, le pongo otro. ¿Puede el
+    Grupo Popular afirmar que se mantiene la eficacia de la reducción del 1%
+    en las cotizaciones al desempleo para los contratos de duración
+    determinada a tiempo parcial que contemplaba el Real Decreto-ley 16/2013
+    o ha sido derogada por la Ley de Presupuestos que entró en vigor con
+    posterioridad? ¿Desconocían ustedes, señorías, que una ley posterior
+    deroga siempre la anterior? Señorías, ocurrencias, improvisaciones,
+    rectificaciones, pero lo peor de todo es que no solamente afectan a las
+    formas -al final otro decreto-ley podrá rectificar este entuerto-, sino
+    que se han llevado por delante los derechos de los trabajadores y han
+    provocado un sufrimiento intolerable.
+
+    <br /><br />Ahora, el vicepresidente económico de la Comisión Europea dice que
+    recuperaremos en diez años el nivel de empleo que tenía España antes de
+    la crisis, eso sí, siempre que España tenga un crecimiento económico por
+    encima del 2,5% anual. La pregunta es: ¿Por qué no optaron desde el
+    principio por el crecimiento económico y la creación de empleo? ¿Era un
+    problema de recursos o un problema ideológico? El ministro de Economía la
+    semana pasada reconocía que se habían pasado en recortes y en la política
+    de austeridad. La conclusión es que la creación de empleo habría exigido
+    una apuesta por el crecimiento económico y desde luego no la reforma
+    laboral que ustedes querían hacer sí o sí. Ustedes querían hacer
+    desaparecer el derecho laboral, el modelo de relaciones laborales, los
+    derechos de los trabajadores, y al final la crisis ha sido solamente una
+    excusa y una coartada para imponer su ideología.
+
+    <br /><br />Señorías, termino. Más allá de la propaganda que ustedes han difundido, no
+    hay ni una sola mejora -reitero, ni una sola mejora- ni económica ni
+    social que pueda ser atribuida a un resultado de la reforma laboral.
+
+    <br /><br />Muchas gracias, señorías, señor presidente. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Gutiérrez del Castillo.
+
+    <br /><br />Por el Grupo Popular, tiene la palabra la señora Susinos.
+
+    <br /><br />La señora SUSINOS TARRERO: Muchas gracias, señor presidente.
+
+    <br /><br />Señorías, tomo la palabra en nombre del Grupo Parlamentario Popular en el
+    que es el último trámite del proyecto de ley para la protección de los
+    trabajadores a tiempo parcial y otras medidas urgentes en el
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página12)"><b>Página
+    12</b></a></p><br />
+
+    <br /><br />orden económico y social tras su paso por el Senado. Y quiero comenzar mi
+    intervención agradeciendo a todos los ponentes del proyecto el trabajo y
+    el esfuerzo realizado a lo largo de la tramitación del mismo.
+
+    <br /><br />Señorías, se trata de un proyecto de ley muy importante, que afecta a
+    muchos sectores y que es absolutamente necesario en aras de la seguridad
+    jurídica, del crecimiento y el desarrollo económico y de la creación de
+    oportunidades, proyecto que consta de cuatro capítulos. El capítulo I se
+    encuadra dentro de lo que se establece como otras medidas urgentes en el
+    orden económico y social, capítulo muy importante que contiene
+    modificaciones que afectan a la seguridad en el transporte aéreo y
+    cuestiones relativas al sector ferroviario para dotarle de más
+    competitividad y más eficiencia. También recoge modificaciones para
+    salvaguardar los préstamos vinculados a los planes estatales de vivienda,
+    cuyo titular es la Sareb, al darle la condición de entidad colaboradora
+    del Ministerio de Fomento.
+
+    <br /><br />En el capítulo II se realiza una nueva regulación de la protección social
+    de los trabajadores a tiempo parcial y su contenido ha sido fruto del
+    diálogo social y del consenso que se ha alcanzado entre el Gobierno y los
+    agentes sociales, tanto sindicatos como patronal, y en el seno del Pacto
+    de Toledo. Por ello, el Grupo Popular valora de forma muy positiva este
+    acuerdo alcanzado y felicitamos al Gobierno en la persona de la ministra
+    de Empleo y Seguridad Social por su trabajo bien hecho, por su esfuerzo,
+    por su capacidad de diálogo y de negociación, un acuerdo que pone fin a
+    un sistema que reclamaba a los trabajadores a tiempo parcial, en su
+    inmensa mayoría mujeres, un periodo de vida laboral proporcionalmente
+    mayor al que tienen los trabajadores a tiempo completo para poder acceder
+    a una pensión contributiva. Con la nueva regulación, como todos ustedes
+    conocen, se flexibiliza el requisito de carencia de quince años para
+    acceder a una pensión contributiva, adaptándolo a la parcialidad de cada
+    trabajador. Y asimismo se da cumplimiento, como ya se ha dicho esta
+    mañana, a lo dictado por el Tribunal Constitucional y por el Tribunal de
+    Justicia de la Unión Europea, eliminándose la discriminación que existía
+    al exigir al trabajador a tiempo parcial más años de trabajo que a
+    quienes disfrutaban de un empleo a jornada completa. Señorías, el
+    Gobierno de Mariano Rajoy ha mostrado sensibilidad en este tema y ha
+    apostado por la equidad, la igualdad y la no discriminación: equidad,
+    mediante la equiparación real de las condiciones de trabajo de los
+    trabajadores a tiempo parcial con los que disfrutan de una jornada
+    completa; igualdad y no discriminación sobre todo en lo que afecta a las
+    mujeres. Pero además, señorías, este proyecto de ley, como ya indicó la
+    ministra, ha ido más allá de la aplicación y de la ejecución literal de
+    la sentencia, porque el texto ha acordado lograr salvar algunos aspectos
+    de la regulación anterior que podemos considerar positivos, aspectos como
+    el mantenimiento del coeficiente multiplicador del 1,5 por cada día
+    teórico de cotización o el compromiso de mantener el sistema vigente de
+    complementos a mínimos.
+
+    <br /><br />Señorías, esta nueva regulación será aplicable a las prestaciones de la
+    Seguridad Social que con anterioridad a la entrada en vigor del real
+    decreto-ley hubiesen sido denegadas por no acreditar el periodo mínimo de
+    cotización exigido, así como aquellas prestaciones cuya solicitud se
+    encuentra hoy en tramitación. Este proyecto de ley mejorará las
+    prestaciones sociales de más de 2,5 millones de españoles. El Grupo
+    Parlamentario Popular está convencido del éxito, tanto del contenido de
+    la modificación de las prestaciones para los trabajadores a tiempo
+    parcial como de la forma en que se ha realizado -y quiero volver a
+    reiterarlo-, de acuerdo con todos los agentes sociales y con los
+    representantes de los distintos partidos políticos dentro del Pacto de
+    Toledo.
+
+    <br /><br />El capítulo III introduce una serie de modificaciones que otorgan una
+    mayor seguridad jurídica a los perceptores de prestaciones o subsidios
+    por desempleo. En cuanto a la necesidad de la inscripción para ser
+    demandante de empleo como requisito para al acceso a la prestación, desde
+    el Grupo Parlamentario Popular creemos que es preciso acreditar esa
+    voluntad y que va en la propia naturaleza de esta prestación querer
+    trabajar, por lo que entendemos que la inscripción previa es necesaria.
+    No es una incorporación nueva, no supone una gestión adicional ni ningún
+    menoscabo o perjuicio para los perceptores, todo lo contrario, entendemos
+    que otorga una mayor seguridad jurídica. Lo único que hace es aclarar que
+    para percibir y conservar la prestación o el subsidio los beneficiarios
+    deben estar inscritos y mantener dicha inscripción. Lógicamente, si el
+    desempleado no se mantiene inscrito, se suspenderá la prestación.
+
+    <br /><br />En cuanto a las salidas al extranjero, señorías, hay que tener en cuenta
+    la normativa europea al respecto. El reglamento 883/2004, en materia de
+    Seguridad Social, habla de todas estas posibilidades de desplazamientos
+    al extranjero mediando siempre -dice- información al Servicio Público de
+    Empleo Estatal antes de la partida. Este proyecto también aclara
+    expresamente los supuestos de salida ocasional al extranjero por un
+    periodo máximo de quince días dentro de un año natural. Se mantendrá la
+    condición de beneficiario y se continuará percibiendo la prestación o el
+    subsidio correspondiente.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página13)"><b>Página
+    13</b></a></p><br />
+
+    <br /><br />Finalmente, señorías, el capítulo IV recoge una serie de modificaciones en
+    materia laboral para otorgar mayor seguridad jurídica a las relaciones
+    laborales en materia de despidos colectivos, en el tema de la comisión
+    negociadora del despido colectivo, y se aclara la información que debe
+    facilitar la empresa para otorgar, como les decía, mayor seguridad
+    jurídica al proceso de despido colectivo.
+
+    <br /><br />Con todas estas modificaciones, señorías, y aunque ustedes se atrevan a
+    decir lo contrario, señora Gutiérrez, se otorga mayor seguridad jurídica
+    y una mayor precisión a la reforma laboral, reforma laboral que desde mi
+    grupo parlamentario valoramos de forma muy positiva, y no solo mi grupo
+    parlamentario, señorías, nos lo dicen desde fuera, lo aplauden nuestros
+    socios y hace escasamente unos días lo ha avalado el Tribunal
+    Constitucional. (Aplausos). Los datos están ahí y son muchos, sirvan de
+    ejemplo los siguientes. Último trimestre de 2013: por primera vez durante
+    toda la crisis se ha creado empleo en términos de afiliación media a la
+    Seguridad Social en 52.195 y, si excluimos la tasa de estacionalidad, en
+    106.504; por primera vez el paro registrado se redujo en el mes de
+    diciembre en 107.570 personas respecto al mes anterior. El año 2013 cerró
+    con una reducción de 147.385 parados menos respecto al año anterior. El
+    número de jóvenes parados menores de veinticinco años se ha reducido en
+    un 7%, casi 50.000 jóvenes han encontrado empleo. Los contratos
+    indefinidos de apoyo a emprendedores han sido beneficiosos y se han
+    firmado 162.000. Señorías, son datos constatables, datos positivos
+    gracias a la reforma laboral, reforma laboral que forma parte de ese plan
+    de Gobierno de Rajoy, diseñado para detener el hundimiento, evitar el
+    rescate, recuperar la confianza y poner de nuevo a España en marcha
+    (Aplausos), medidas, reformas, planes que han exigido un gran esfuerzo de
+    todos los españoles y que comienzan a dar buenos resultados.
+
+    <br /><br />Señorías, el actual Gobierno está impulsando desde hace dos años una
+    intensa e importante agenda de reformas con medidas muy necesarias como
+    las que se incluyen en este proyecto. Con estas reformas buscamos -y
+    estamos legitimados para ello- una mejora de las condiciones laborales.
+    Es cierto que hay miles de personas, de hombres y mujeres que lo están
+    pasando mal y que hoy no tienen oportunidades. Ante esto lo que no
+    podíamos hacer era continuar en la inacción que nos precedía. Las
+    propuestas que se incorporan en este proyecto son absolutamente
+    necesarias y para mi grupo parlamentario es una justificación más que
+    suficiente. Hace necesario que sigamos en esta senda, en este camino de
+    reformas impulsadas por el Gobierno del Partido Popular, porque sin
+    faltar a la verdad podemos decir alto y claro que seguiremos trabajando
+    sin descanso en proyectos como este, que estimulan el crecimiento y el
+    empleo, entre otros motivos porque, como decía nuestro presidente Mariano
+    Rajoy, los españoles nos hemos ganado el derecho a la esperanza.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Susinos.
+
+    <br /><br />DICTÁMENES DE LA COMISIÓN DE ASUNTOS EXTERIORES SOBRE CONVENIOS
+    INTERNACIONALES.
+
+    <br /><br />- ACUERDO EUROMEDITERRÁNEO DE AVIACIÓN ENTRE LA UNIÓN EUROPEA Y SUS
+    ESTADOS MIEMBROS, POR UNA PARTE, Y EL GOBIERNO DEL ESTADO DE ISRAEL, POR
+    OTRA, HECHO EN LUXEMBURGO EL 10 DE JUNIO DE 2013. (Número de expediente
+    110/000109).
+
+    <br /><br />- PROTOCOLO DE ENMIENDA AL CONVENIO EUROPEO PARA LA REPRESIÓN DEL
+    TERRORISMO, HECHO EN ESTRASBURGO EL 15 DE MAYO DE 2003, Y DECLARACIÓN QUE
+    ESPAÑA DESEA FORMULAR. (Número de expediente 110/000110).
+
+    <br /><br />- TRATADO SOBRE EL COMERCIO DE ARMAS, HECHO EN NUEVA YORK EL 2 DE ABRIL DE
+    2013. (Número de expediente 110/000111).
+
+    <br /><br />- ACUERDO MARCO DE COLABORACIÓN Y COOPERACIÓN ENTRE LA UNIÓN EUROPEA Y SUS
+    ESTADOS MIEMBROS, POR UNA PARTE, Y MONGOLIA, POR OTRA, HECHO EN
+    ULAN-BATOR EL 30 DE ABRIL DE 2013. (Número de expediente 110/000112).
+
+    <br /><br />El señor PRESIDENTE: Último punto del día relativo a los dictámenes de la
+    Comisión de Asuntos Exteriores sobre convenios internacionales, con
+    números de expediente 110/000109 a 110/000112. Algunos grupos han
+    manifestado su deseo de intervenir. En un turno de hasta cinco minutos,
+    tiene en primer lugar la palabra, por el Grupo de Unión Progreso y
+    Democracia, la señora Lozano.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página14)"><b>Página
+    14</b></a></p><br />
+
+    <br /><br />La señora LOZANO DOMINGO: Muchas gracias, señor presidente.
+
+    <br /><br />En el día que ratificamos este Tratado sobre el comercio de armas creo que
+    es justo felicitarse y felicitarnos por una década de trabajo conjunto de
+    muchas instancias distintas de la sociedad española y de la sociedad
+    internacional. La campaña para sacar adelante este tratado fue iniciada
+    por varias asociaciones internacionales,... (Rumores).
+
+    <br /><br />El señor PRESIDENTE: Por favor, ruego silencio para oír a la oradora.
+
+    <br /><br />Siga, señora Lozano.
+
+    <br /><br />La señora LOZANO DOMINGO:... Amnistía Internacional, Oxfam y la Red de
+    acción internacional contra las armas ligeras, a los que nosotros desde
+    aquí queremos mostrar nuestro agradecimiento, así como al Gobierno
+    anterior, que impulsó el compromiso de España con este tratado, y al
+    Gobierno actual, que ha sido muy activo en la firma y en las últimas
+    negociaciones en la ONU para conseguir que este tratado saliera adelante
+    en ese organismo internacional.
+
+    <br /><br />Con la ratificación de nuestro país volvemos a situarnos en ese primer
+    nivel de países que impulsan el control del comercio de las armas y
+    podemos decir que, desde hoy o, en rigor, desde el día en que se firmó en
+    la ONU y cuando se haya ratificado por un número suficiente de países,
+    muchas personas vivirán de forma mucho más segura. Este tratado introduce
+    una regla de oro que prohíbe a los Estados transferir armas
+    convencionales y de algún otro tipo cuando exista riesgo de uso para
+    cometer crímenes de genocidio, de lesa humanidad y otros crímenes muy
+    graves. Creemos que la adaptación de esta regla de oro a nuestra
+    legislación requerirá ciertos cambios legislativos y confiamos y estamos
+    seguros, dado el compromiso del Gobierno con la ratificación de este
+    tratado, que esos cambios serán llevados a cabo oportunamente.
+
+    <br /><br />Muchas gracias, presidente.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Lozano.
+
+    <br /><br />Por el Grupo de La Izquierda Plural, tiene la palabra el señor Nuet.
+
+    <br /><br />El señor NUET PUJALS: Gracias, presidente.
+
+    <br /><br />Nuestro grupo va a intervenir respecto a dos tratados, en primer lugar,
+    respecto al Acuerdo euromediterráneo de aviación entre la Unión Europea y
+    el Estado de Israel, para manifestar nuestra abstención, básicamente
+    porque creemos que deberíamos introducir una reserva en ese tratado,
+    igual que España introduce reservas en muchos tratados internacionales
+    sobre la situación de Gibraltar. En este caso deberíamos introducir una
+    reserva por el hecho de que el Estado de Israel ocupa de forma ilegal,
+    según las resoluciones de Naciones Unidas, territorios de Siria y
+    Palestina. Concretamente estamos hablando de Cisjordania, de Gaza, de los
+    Altos del Golán y de Jerusalén Este, que según resoluciones de Naciones
+    Unidas no son territorios soberanos de Israel.
+
+    <br /><br />En segundo lugar, me referiré al Tratado sobre comercio de armas, aprobado
+    por Naciones Unidas en abril de 2013. Estamos contentos de que llegue
+    este tratado y de que sea ratificado, porque es el primer instrumento
+    internacional legalmente vinculante que regula las transferencias
+    internacionales de armas y municiones y establece una regla de oro que
+    prohíbe a los Estados transferir armas convencionales a países, si saben
+    que van a ser utilizadas para cometer genocidio, crímenes de lesa
+    humanidad o crímenes de guerra o facilitar su comisión.
+
+    <br /><br />Señoras y señores del Partido Popular, este tratado es la dirección que
+    toma la legislación internacional -tomen ustedes nota- y no es esa
+    dirección el atraco a mano armada que supone el recorte a la justicia
+    universal que ustedes van a cometer en el día de hoy. Tomen nota del
+    Tratado de comercio de armas y abandonen su actitud ante el recorte de
+    justicia universal. Tomen nota de la legislación internacional y de cómo
+    esta está evolucionando y no caminen ustedes hacia atrás con sus
+    propuestas.
+
+    <br /><br />Hay que decir que los Gobiernos deben denegar la autorización de venta si
+    hay graves violaciones que no puedan mitigarse, teniendo en cuenta el
+    riesgo de que se utilicen las armas para graves actos de violencia de
+    género también contra mujeres y contra niños. Recordemos que España en el
+    año 2012 superó los 8.000 millones de euros en venta de armamento. Estas
+    cifras nos convirtieron en el segundo Estado de la Unión Europea en
+    exportación de armas, por detrás de Francia y por delante de Alemania,
+    Italia y el Reino Unido, y que estas operaciones se realizaron en un
+    contexto de clara tensión entre las limitaciones establecidas por la Ley
+    de exportación de armas españolas y la clara voluntad del Gobierno de
+    incrementar la venta al exterior de forma indiscriminada. Hay que decir
+    que países como Colombia,
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página15)"><b>Página
+    15</b></a></p><br />
+
+    <br /><br />Marruecos o Israel utilizan el armamento, la munición y los materiales de
+    doble uso suministrados por España contra su población civil en acciones
+    armadas y de represión.
+
+    <br /><br />De forma clara, queremos señalar que hay un aspecto del tratado que
+    valoramos profundamente. Cada Estado facilitará su lista nacional de
+    control a la secretaría de este tratado para poder tener una clara
+    disposición de cuáles son los armamentos que de alguna forma se están
+    vendiendo. Por lo tanto, desde nuestro grupo parlamentario haremos un
+    seguimiento riguroso de las ventas que España está haciendo. No nos
+    referimos a países democráticos. Nos referimos a situaciones
+    especialmente sangrantes como las que antes he señalado.
+
+    <br /><br />Muchas gracias, señoras y señores diputados. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Nuet.
+
+    <br /><br />Por el Grupo Catalán de Convergència i Unió, tiene la palabra el señor
+    Xuclà.
+
+    <br /><br />El señor XUCLÀ I COSTA: Muchas gracias, señor presidente.
+
+    <br /><br />En nombre del Grupo Parlamentario de Convergència i Unió queremos utilizar
+    este turno de intervención para hacer referencia a dos de los cuatro
+    tratados que se someten a ratificación por parte de este Congreso de los
+    Diputados, al Tratado de comercio de armas y al Acuerdo euromediterráneo
+    de aviación entre la Unión Europea y sus Estados miembros por una parte y
+    el Gobierno del Estado de Israel por otra.
+
+    <br /><br />Señorías, en los años 1996, 1997 y 1998, cuando en el marco del
+    multilateralismo, en el marco de Naciones Unidas se empezó a afrontar una
+    legislación internacional sobre la reducción y la lucha contra las minas
+    antipersonas, en aquel momento ya en Naciones Unidas hubo voces que
+    plantearon la creación y el impulso de un tratado de convenio
+    internacional de armas. Desde el escepticismo, algunos Estados y algunos
+    representantes políticos de esta Cámara decían en aquel momento, hace ya
+    quince años, que era imposible que un día llegáramos a culminar un
+    tratado sobre el convenio internacional de armas. Hoy nos tenemos que
+    congratular, tenemos que saludar muy positivamente, por fin, la adopción
+    de este Tratado internacional de comercio de armas.
+
+    <br /><br />Quiero recordar, señorías, que estas Cortes Generales, este Parlamento
+    tienen ya unos buenos antecedentes de trabajo en este ámbito. Fue en la
+    Legislatura 2004-2008 cuando las Cortes Generales aprobaron una ley de
+    control de comercio de armas y armas de doble uso, en su momento con un
+    papel muy protagonista del Grupo Parlamentario de Convergència i Unió y
+    del diputado Carles Campuzano. Desde aquel momento nosotros,
+    afortunadamente, respecto a determinada legislación que en los próximos
+    meses adoptaremos, podemos presentar ya unas buenas credenciales en
+    cuanto al control del armamento.
+
+    <br /><br />Otro debate es el que nos acaba de plantear el portavoz que me ha
+    precedido en el uso de la palabra sobre la autorización anual del
+    comercio de armas a algunos países, debate que tenemos cada año en la
+    Comisión de Defensa y que al final es un debate maniqueo en el que, con
+    prejuicio ideológico, algunas opciones políticas directamente proponen
+    que no se vendan armas a algunos países y algunos otros países, también
+    con prejuicio ideológico, proponen la no venta de armas a otros países.
+
+    <br /><br />Señorías, todos ustedes conocen nuestro interés por los tratados
+    internacionales y me gustaría hacer una segunda referencia. Hoy
+    ratificamos un acuerdo en materia de aviación entre los Estados de la
+    Unión Europea e Israel. Señorías, este acuerdo es tributario de las
+    conclusiones de la Asociación euromediterránea y de la Declaración de
+    Barcelona... (Rumores).
+
+    <br /><br />El señor PRESIDENTE: Por favor, ruego silencio para que se pueda oír al
+    orador.
+
+    <br /><br />Continúe.
+
+    <br /><br />El señor XUCLÀ I COSTA: Muchas gracias, señor presidente.
+
+    <br /><br />Decía que hoy culminamos un objetivo de liberalización del espacio
+    euromediterráneo que ya se contemplaba como voluntad de las partes en la
+    Declaración de Barcelona de 28 de noviembre de 1995. Algunos dijeron que
+    la Declaración de Barcelona había muerto para mejor causa y que esta
+    mejor causa es la Unión por el Mediterráneo. Nosotros hemos defendido
+    siempre la utilidad, el vigor, el trabajo por objetivos concretos de la
+    Declaración de Barcelona, y la Declaración de Barcelona y sus propósitos
+    de integración euromediterránea se contemplan también en el convenio que
+    ratificamos en este momento. Es importante este convenio entre la Unión
+    Europea y un país democrático del este del Mediterráneo como es Israel.
+    Es importante un convenio que garantiza la liberalización, el intercambio
+    seguro de datos de los pasajeros entre Estados miembros de la Unión
+    Europea e Israel. Es importante un acuerdo que afronta también las
+    medidas de seguridad necesarias para garantizar los vuelos entre los
+    Estados miembros de
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página16)"><b>Página
+    16</b></a></p><br />
+
+    <br /><br />la Unión Europea e Israel y vemos con perplejidad cómo algún grupo
+    parlamentario puede llegar a impugnar el respeto a Israel y a su régimen
+    democrático. Lo vemos con la perplejidad y con la normalidad habitual con
+    la que nos tiene acostumbrados este grupo no altermundista, sino lleno de
+    prejuicios respecto a la democracia de Israel.
+
+    <br /><br />Muchas gracias, señor presidente. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Xuclà.
+
+    <br /><br />Por el Grupo Socialista, tiene la palabra el señor Sáez Jubero.
+
+    <br /><br />El señor SÁEZ JUBERO: Señorías, el Grupo Parlamentario Socialista va a
+    votar afirmativamente la ratificación de estos convenios y voy hacer
+    expresamente mención a dos de ellos. El Acuerdo euromediterráneo de
+    aviación entre la Unión Europea e Israel nos sitúa ante un debate sobre
+    la Europa que queremos, una Europa inclusiva que fortalece sus relaciones
+    con nuestros socios del Mediterráneo. Somos partidarios de reforzar esa
+    relación con estos países y así lo manifestamos en 1995 cuando con un
+    Gobierno socialista se inició el proceso de Barcelona que daría lugar a
+    la Asociación euromediterránea primero y más tarde a la llamada Unión por
+    el Mediterráneo. Creemos que la vecindad mediterránea de la Unión Europea
+    debe ser una política prioritaria de la Unión y debe ser inclusiva. Eso
+    significa que, más allá de las diferencias con los Gobiernos de los
+    países del Mediterráneo, debemos reforzar la cooperación con ellos con el
+    objetivo final de construir un espacio común de paz y seguridad. Así lo
+    planteamos ya en el proceso de Barcelona y por eso hoy en día la
+    concreción institucional de aquel proceso, esto es la Unión por el
+    Mediterráneo, es el único foro oficial en el que se sientan y dialogan
+    israelíes y árabes.
+
+    <br /><br />Señor Nuet, este no es un debate sobre los asentamientos o sobre el
+    proceso de paz de Oriente Próximo, es un debate sobre Europa, sobre qué
+    Europa queremos. El Grupo Socialista apuesta por una Europa abierta al
+    Mediterráneo sin exclusiones. Este mismo acuerdo ya ha sido firmado con
+    Marruecos y con Jordania y en los próximos meses nos tocará abordar la
+    ratificación de acuerdos con Túnez y con Líbano. Para el Grupo Socialista
+    el argumento de la política de vecindad de la Unión Europea, en un asunto
+    tan sensible como el mercado aéreo, es igual en todos los casos: reforzar
+    nuestra vecindad mediterránea y, de manera paralela, continuar el proceso
+    de Barcelona a través de la Unión por el Mediterráneo para contar con un
+    instrumento institucional que nos permita canalizar el diálogo en otras
+    materias.
+
+    <br /><br />El Tratado internacional sobre comercio de armas era una carencia global,
+    así lo manifestó el Grupo Socialista en 2012 al presentar la proposición
+    no de ley que urgía al Gobierno a impulsar un acuerdo internacional sobre
+    esta materia y que defendió mi compañero Juan Moscoso. Así se señalaba en
+    la Ley de 2007 sobre comercio de armas y material de doble uso, en la
+    que, además de establecer obligaciones para España superiores a las
+    recogidas en el código de conducta de la Unión Europea, se adoptaba una
+    posición activa a favor de la elaboración de un tratado internacional
+    sobre comercio de armas que fuera jurídicamente vinculante. Era necesaria
+    una regulación global sobre el comercio de armas para evitar que su
+    comercialización pusiera en peligro la seguridad colectiva, afectara a
+    los derechos humanos o vulnerara el derecho internacional, y este tratado
+    que hoy debatimos para su ratificación colma esa necesidad.
+
+    <br /><br />Para los socialistas el tratado que hoy vamos a ratificar es un objetivo
+    que hemos perseguido desde hace años en esta Cámara y en los foros
+    internacionales, pero este esfuerzo no lo hemos realizado solos. La
+    sociedad civil, asociaciones, fundaciones y muy especialmente Amnistía
+    Internacional nos han ayudado y es justo por ello hacer una mención
+    explícita a su labor. También es justo reconocer que compartimos la
+    visión sobre el Tratado internacional de armas con los demás grupos
+    parlamentarios, como quedó reflejado en el hecho de que, por un lado, la
+    Ley de 2007 fuera aprobada por consenso y, por otro, que la proposición
+    no de ley presentada por el Grupo Socialista fuera respaldada por todos
+    los grupos.
+
+    <br /><br />Nos felicitamos de este paso por parte de España, que se incorpora ya a
+    Estados como Noruega, Costa Rica, Panamá o México, por poner algunos
+    ejemplos de países que lo han ratificado, pero ello no nos impide
+    preguntarnos por qué el Gobierno de España ha tardado en remitirlo a esta
+    Cámara para su ratificación, ya que fue firmado el 3 de junio de 2013 y
+    remitido a esta Cámara el 5 de diciembre, así como por qué no lo ha
+    remitido para su tramitación urgente, en contraposición, señorías, a las
+    prisas que hoy mismo vamos a tener para aprobar la reforma de la
+    jurisdicción universal. Desde el Grupo Socialista pensamos que el impulso
+    de España en la elaboración del tratado debería haberse visto acompañado
+    de una mayor celeridad en su remisión a las Cortes para su ratificación.
+    Para que el tratado entre en vigor se necesita la ratificación de
+    cincuenta Estados firmantes y además la autorización del Consejo de la
+    Unión Europea. Urgimos al Gobierno de España a que, por un lado, deposite
+    el instrumento de ratificación de
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página17)"><b>Página
+    17</b></a></p><br />
+
+    <br /><br />Naciones Unidas tan pronto concluya el trámite parlamentario y, por otro,
+    que asuma el compromiso de impulsar la ratificación de los demás países
+    firmantes y de la aprobación y autorización del Consejo de la Unión
+    Europea para que pueda entrar en vigor cuanto antes.
+
+    <br /><br />Señorías, quisiera hacerles una última reflexión, porque conviene recordar
+    que España vende armas en muchas zonas en conflicto, como en el Sahel, o
+    en países donde se está reprimiendo duramente a la población, como
+    Egipto, Ucrania o Venezuela.
+
+    <br /><br />Muchas gracias, presidente, muchas gracias, señorías. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Sáez Jubero.
+
+    <br /><br />Por el Grupo Popular, tiene la palabra el señor Beneyto.
+
+    <br /><br />El señor BENEYTO PÉREZ: Muchas gracias, señor presidente.
+
+    <br /><br />Intervengo brevemente desde el escaño para señalar que nuestro grupo
+    votará a favor de la ratificación de los cuatro convenios que se
+    presentan a la Cámara: el relativo al Tratado sobre el comercio de armas,
+    el relativo al transporte aéreo con Israel y dos acuerdos mixtos de la
+    Unión Europea, uno con Mongolia y el otro el Protocolo de enmienda al
+    Convenio europeo para la represión del terrorismo, del Consejo de Europa.
+    Respecto al Tratado sobre el comercio de armas, quisiera señalar que ha
+    sido precisamente este Gobierno el 2 de abril de 2013 el que junto a
+    otros ochenta y nueve países copatrocinó una resolución en la Asamblea
+    General de Naciones Unidas que hizo posible que por fin pudiera ser
+    aprobado este Tratado internacional sobre el comercio de armas, largo
+    proceso que se inició en noviembre de 2000, que fue apoyado inicialmente
+    y a lo largo de toda su trayectoria de tramitación por premios Nobel, por
+    ONG, por diversos Gobiernos, también por el anterior Gobierno de España,
+    pero que finalmente ha podido ser concluido en abril de este año con la
+    firma de ciento cincuenta y cuatro países.
+
+    <br /><br />Regula el tráfico ilícito y el doble uso de las armas y por parte de
+    España este Gobierno ha estado particularmente interesado en que se
+    respetaran una serie de criterios: el respeto a los embargos y sanciones
+    de Naciones Unidas; la obligación de respeto al derecho humanitario y a
+    los derechos humanos en los países de destino; la obligación de tener en
+    cuenta, antes de autorizar la exportación, la situación del país de
+    destino; la actitud del Estado receptor hacia al terrorismo, tipos de
+    alianzas y respeto al derecho internacional; el riesgo de que las armas
+    puedan ser desviadas dentro del país receptor hacia grupos violentos o
+    reexportadas hacia terceros países, y la capacidad económica y técnica
+    del país receptor. Por tanto, señor Nuet, este Gobierno ha sido
+    estrictamente respetuoso con los principios que figuraban en el tratado.
+    Ha ido más allá, está señalando los criterios necesarios y por supuesto
+    el principio básico de este tratado, que es el control, la autorización
+    sujeta a control en cada caso, la autorización previa y, como digo, de
+    acuerdo con los criterios y los principios del derecho internacional.
+
+    <br /><br />En lo que hace referencia al Acuerdo euromediterráneo de aviación entre la
+    Unión Europea e Israel, se trata de elevar la cooperación con Israel
+    dentro del marco de la Asociación euromediterránea y no hace ninguna
+    referencia a los territorios ocupados. Por tanto, no es el tema que se
+    debate aquí, como tampoco lo es el principio de jurisdicción universal,
+    que les recordaré, señorías, es limitado en todos los países en donde se
+    reconoce. Por tanto, es absolutamente lógico y coherente con el derecho
+    internacional que se establezcan limitaciones al principio -no
+    unánimemente ni universalmente reconocido- de jurisdicción universal de
+    los jueces nacionales.
+
+    <br /><br />Por último, paso a referirme a los otros dos convenios que vienen a
+    ratificación. Por lo que se refiere al Acuerdo marco de colaboración y
+    cooperación con Mongolia, este país está dando avances sustantivos hacia
+    la estabilidad democrática. Necesita un apoyo económico y en esta área
+    tradicionalmente dominada por China, Rusia y Estados Unidos, la Unión
+    Europea, de acuerdo con su marco estratégico de un partenariado avanzado
+    con Asia, realiza ahora este acuerdo que significa un paso sustancial.
+    Por último, respecto al Protocolo de enmienda al Convenio europeo para la
+    represión del terrorismo, del Consejo de Europa, se trata también de un
+    acuerdo mixto de la Unión Europea con los Estados miembros que amplía la
+    lista de delitos de terrorismo que se introducen en dicho Convenio del
+    Consejo de Europa. Así pues, la ratificación de estos acuerdos tiene todo
+    el sentido y en particular nos satisface que pueda ser ratificado en
+    estos momentos el Tratado internacional sobre el comercio de armas.
+
+    <br /><br />Muchas gracias, señorías. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Beneyto.
+
+    <br /><br />En unos minutos vamos a votar. (Pausa).
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página18)"><b>Página
+    18</b></a></p><br />
+
+    <br /><br />Señorías, ayer falleció Juan Antonio Montesinos, diputado por Alicante
+    durante diez años. Juan Antonio fue sobre todo un hombre comprometido con
+    su tierra, siendo vicepresidente de las Cortes Valencianas en los últimos
+    años. Juan Antonio era padre de nuestra compañera Macarena Montesinos, a
+    quien damos nuestro sentido pésame. Descanse en paz. (Aplausos).
+
+    <br /><br />MOCIONES CONSECUENCIA DE INTERPELACIONES URGENTES. (VOTACIÓN).
+
+    <br /><br />- DEL GRUPO PARLAMENTARIO DE IU, ICV-EUIA, CHA: LA IZQUIERDA PLURAL, SOBRE
+    LA CRIMINALIZACIÓN DE LA PROTESTA SOCIAL Y LAS REFORMAS LEGALES QUE
+    RESTRINGEN LOS DERECHOS FUNDAMENTALES Y LIBERTADES PÚBLICAS DE LOS
+    CIUDADANOS. (Número de expediente 173/000132).
+
+    <br /><br />El señor PRESIDENTE: Vamos a pasar a las votaciones. Comenzamos con la
+    moción consecuencia de interpelación del Grupo de La Izquierda Plural,
+    sobre la criminalización de la protesta social y las reformas legales que
+    restringen los derechos fundamentales y libertades públicas de los
+    ciudadanos. Va a haber tres votaciones. En primer lugar, se votan los
+    puntos 1, 5, 6, 7, 8, 9 y 11 del apartado A).
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 315; a
+    favor, 131; en contra, 169; abstenciones, 15.
+
+    <br /><br />El señor PRESIDENTE: Quedan rechazados.
+
+    <br /><br />Resto de puntos del apartado A).
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 315; a
+    favor, 142; en contra, 168; abstenciones, 5.
+
+    <br /><br />El señor PRESIDENTE: Quedan rechazados.
+
+    <br /><br />Ahora votamos el apartado B).
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 315; a
+    favor, 43; en contra, 170; abstenciones, 102.
+
+    <br /><br />El señor PRESIDENTE. Queda rechazado.
+
+    <br /><br />- DEL GRUPO PARLAMENTARIO SOCIALISTA, AL MINISTRO DE ECONOMÍA Y
+    COMPETITIVIDAD, SOBRE LA POLÍTICA DE GESTIÓN DE ACTIVOS DERIVADOS DEL
+    RESCATE BANCARIO Y, EN CONCRETO, SOBRE LA SITUACIÓN Y GESTIÓN DE LA
+    SAREB. (Número de expediente 173/000133).
+
+    <br /><br />El señor PRESIDENTE: Moción consecuencia de interpelación del Grupo
+    Parlamentario Socialista al ministro de Economía y Competitividad sobre
+    la política de gestión de activos derivados del rescate bancario, y en
+    concreto sobre la situación y gestión de la Sareb. Se vota tal como ha
+    quedado después de la incorporación de la enmienda formulada por el Grupo
+    Parlamentario de Unión Progreso y Democracia, y la segunda enmienda
+    formulada por el Grupo Parlamentario de La Izquierda Plural.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 315; a
+    favor, 131; en contra, 169; abstenciones, 15.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />- DEL GRUPO PARLAMENTARIO DE UNIÓN PROGRESO Y DEMOCRACIA, SOBRE LAS
+    MEDIDAS QUE PIENSA ADOPTAR EL GOBIERNO PARA GARANTIZAR LA PROTECCIÓN DEL
+    INTERÉS GENERAL Y EL CUMPLIMIENTO DE LA LEGALIDAD, QUEBRANTADA POR
+    DIVERSOS ACTOS YA EJECUTADOS EN DESARROLLO DEL PROYECTO SECESIONISTA DE
+    ARTUR MAS. (Número de expediente 173/000134).
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página19)"><b>Página
+    19</b></a></p><br />
+
+    <br /><br />El señor PRESIDENTE: Moción del Grupo Parlamentario de Unión Progreso y
+    Democracia sobre las medidas que piensa adoptar el Gobierno para
+    garantizar la protección del interés general y el cumplimiento de la
+    legalidad, quebrantada por diversos actos ya ejecutados en desarrollo del
+    proyecto secesionista de Artur Mas. Se vota en los términos resultantes
+    de la incorporación de la enmienda del Grupo Parlamentario Socialista.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 316; a
+    favor, 272; en contra, 43; abstenciones, 1.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />ENMIENDAS DEL SENADO. (VOTACIÓN).
+
+    <br /><br />- PROYECTO DE LEY PARA LA PROTECCIÓN DE LOS TRABAJADORES A TIEMPO PARCIAL
+    Y OTRAS MEDIDAS URGENTES EN EL ORDEN ECONÓMICO Y SOCIAL (PROCEDENTE DEL
+    REAL DECRETO-LEY 11/2013, DE 2 DE AGOSTO). (Número de expediente
+    121/000060).
+
+    <br /><br />El señor PRESIDENTE: Pasamos a las enmiendas del Senado. Proyecto de ley
+    para la protección de los trabajadores a tiempo parcial y otras medidas
+    urgentes en el orden económico y social, procedente del Real Decreto-ley
+    11/2013, de 2 de agosto. Vamos a votar en primer lugar la enmienda al
+    artículo 2.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 317; a
+    favor, 296; en contra, 18; abstenciones, 3.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Resto de las enmiendas del Senado.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 317; a
+    favor, 172; en contra, 22; abstenciones, 123.
+
+    <br /><br />El señor PRESIDENTE: Quedan aprobadas.
+
+    <br /><br />DICTÁMENES DE LA COMISIÓN DE ASUNTOS EXTERIORES SOBRE CONVENIOS
+    INTERNACIONALES. (VOTACIÓN).
+
+    <br /><br />- ACUERDO EUROMEDITERRÁNEO DE AVIACIÓN ENTRE LA UNIÓN EUROPEA Y SUS
+    ESTADOS MIEMBROS, POR UNA PARTE, Y EL GOBIERNO DEL ESTADO DE ISRAEL, POR
+    OTRA, HECHO EN LUXEMBURGO EL 10 DE JUNIO DE 2013. (Número de expediente
+    110/000109).
+
+    <br /><br />El señor PRESIDENTE: Dictámenes de la Comisión de Asuntos Exteriores sobre
+    convenios internacionales. En primer lugar, votamos el acuerdo
+    euromediterráneo de aviación entre la Unión Europea y sus Estados
+    miembros, por una parte, y el Gobierno del Estado de Israel, por otra,
+    hecho en Luxemburgo el 10 de junio de 2013.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 314; a
+    favor, 294; en contra, 1; abstenciones, 19.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobado.
+
+    <br /><br />- PROTOCOLO DE ENMIENDA AL CONVENIO EUROPEO PARA LA REPRESIÓN DEL
+    TERRORISMO, HECHO EN ESTRASBURGO EL 15 DE MAYO DE 2003, Y DECLARACIÓN QUE
+    ESPAÑA DESEA FORMULAR. (Número de expediente 110/000110).
+
+    <br /><br />- TRATADO SOBRE EL COMERCIO DE ARMAS, HECHO EN NUEVA YORK EL 2 DE ABRIL DE
+    2013. (Número de expediente 110/000111).
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página20)"><b>Página
+    20</b></a></p><br />
+
+    <br /><br />- ACUERDO MARCO DE COLABORACIÓN Y COOPERACIÓN ENTRE LA UNIÓN EUROPEA Y SUS
+    ESTADOS MIEMBROS, POR UNA PARTE, Y MONGOLIA POR OTRA, HECHO EN ULAN-BATOR
+    EL 30 DE ABRIL DE 2013. (Número de expediente 110/000112).
+
+    <br /><br />El señor PRESIDENTE: Votación conjunta del resto de dictámenes de la
+    Comisión de Asuntos Exteriores que hemos debatido hoy.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 314; a
+    favor, 313; abstenciones, 1.
+
+    <br /><br />El señor PRESIDENTE: Quedan aprobados.
+
+    <br /><br />Señorías, antes de levantar la sesión les anuncio que a las 11
+    comenzaremos el siguiente Pleno.
+
+    <br /><br />Se levanta la sesión.
+
+    <br /><br />Eran las diez y cuarenta y cinco minutos de la mañana.
+
+    <br /><br />http://www.congreso.es Calle Floridablanca, s/n. 28071 Madrid
+
+    <br /><br />D. L.: M-12.580/1961 CONGRESO DE LOS DIPUTADOS Teléf.: 91 390 60 00
+
+    <br /><br />Edición electrónica preparada por la Agencia Estatal Boletín Oficial del
+    Estado - http://boe.es
+    </div>
+<hr size="1" noshade="" /><!-- BRSCGI © 1995-2004 Baratz Servicios de Teledocumentación, S.A. http://www.baratz.es -->
+
+
+<!-- FUNCION PIE -->
+    
+
+
+
+                 
+
+
+
+
+
+
+<script language="JavaScript" type="text/javascript">
+	cargaLegSesion('null')
+</script>
+ 
+<!-- FIN  PIE   -->
+        <div id="PIE_POPUP">
+		<p><span lang="es">Congreso de los Diputados</span> · C/Floridablanca s/n - 28071 - MADRID ·<u> <a style="color:#FFFFFF" href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Publicaciones/Aviso_Legal">Aviso Legal</a></u></p>
+	</div>
+
+</div></div></div></td></tr>
+</tbody></table>
+</div></td></tr>
+<tr>
+<td colspan="1" style="width:100%;"><img src="/images/pobtrans.gif" height="4" width="1" alt="" style="display:block" /></td>
+</tr>
+</tbody></table><!-- show footer template = 1824729544 -->
+</td>
+      </tr>
+    </tbody></table>
+  </td></tr>
+</tbody></table>
+</div>
+
+
+<!-- Page Metadata Generated On: 20-MAR-2015:02:09:20  Time Taken: 30 msecs -->
+</body></html>

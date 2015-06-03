@@ -1,0 +1,1009 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head>
+<style>
+body{float:left;font-size:62.5%;font-family: Arial, Verdana, Helvetica, sans-serif;}
+blockquote{margin:0px;padding:0px;border:0px;list-style-type:none; }
+a{text-decoration:none; color:#626469;}
+a:hover{text-decoration:underline;font-weight:normal;color:#626469;}
+a:active{text-decoration:none;font-weight:normal;color:#000000;}
+</style>
+<title>PopUpCGI</title>
+<link href="/wc/htdocs/web/css/congreso.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/portada.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/prensa.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/apps.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/wc/htdocs/web/js/wc.js" language="JavaScript"></script>
+<style type="text/css">.GroupHeaderid1siteid73{Text-Align:left;Height:20px;Background-Color:#336699;}
+.GroupHeaderLinkid1siteid73{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.GroupHeaderTextid1siteid73{Font-Family:Arial, Helvetica;Color:#FFFFFF;Font-Size:9pt;Font-Weight:Bold;}
+.RegionHeaderid1siteid73{Background-Color:#b29200;Height:20px;Text-Align:left;}
+.RegionHeaderTextid1siteid73{Color:#ffffff;Font-Weight:Bold;Font-Family:Verdana;Font-Size:10px;}
+.Bodyid1siteid73{Background-Color:#FFFFFF;}
+.ArchivoAnuncioid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.AudioFotoNoticiaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.AudioNotaPrensaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.authorid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo1Pieid1siteid73{Font-Family:Arial, Helvetica;Color:#000000;Font-Size:8pt;}
+.Campo1Region3id1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.Campo2Pieid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Campo2Region3id1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.Campo3Pieid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.ComprobacionSelladoid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.Concesionid1siteid73{Font-Family:Arial;Font-Size:11px;Color:#626469;}
+.Convocatoriaid1siteid73{Font-Family:Arial;Font-Size:11px;Color:#626469;}
+.Correcciondeerroresid1siteid73{Color:#626469;Font-Size:11px;Font-Family:Arial;}
+.createdateid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.creatorid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.CuartoPlatoCafeteriaid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.defaultattributeid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescNotaPrensaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.Descripcionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.DescripcionAnuncioid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.DescripcionBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescripcionDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.descriptionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Destinoid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.DiaSemanaAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DiaSemanaCanalid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.documentsizeid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Enlaceid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnlaceAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnlaceURLNovedadid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.EnPortadaAnuncioid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.EnPortadaNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnVentanaNuevaAnuncioid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.EnVentanaNuevaNovedadIntranetid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.EtiquetaArchivoAnuncioid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.EtiquetadelEnlacedelAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EtiquetaEnlaceNovedadIntranetid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.EtiquetaURLNovedadid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.expiredateid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Faxid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Fax2id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaAgendaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.FechaAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaCanalid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.FechaDiarioid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.FechaFotonoticiaid1siteid73{Font-Size:11px;Font-Family:Arial;Color:#b29200;}
+.FechaFotonoticiaPresidenciaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaMenuid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.FechaMenuCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaNotaPrensaid1siteid73{Color:#b29200;Font-Family:Arial;Font-Weight:Bold;Font-Size:11px;}
+.FechaNovedadid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.FechaNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaRuedaPrensaid1siteid73{Font-Weight:Bold;Font-Size:11px;Font-Family:Arial;Color:#b29200;}
+.FotoEmergenteNotaPrensaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.FotoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto1descargaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Foto1emergenteid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto1thumbnailid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Foto2descargaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Foto2emergenteid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Foto2thumbnailid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.GraficoFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.GraficoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Grupoid1siteid73{Color:#626469;Font-Size:11px;Font-Family:Arial;}
+.Horaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.HoraAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.HoraCanalid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.ImagenDiaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.InformacionGeneralid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.inplacedisplayid1siteid73{Color:#000000;Font-Family:Arial;Font-Size:11px;}
+.InstruccinArchivoIIid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.InstruccinArchivo1id1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Intervinienteid1siteid73{Font-Size:11px;Font-Family:Arial;Color:#626469;}
+.itemfunctionid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.JefedeCocinaMenuid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.keywordsid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.LineaAgendaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.LineaCanalid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.listaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.Listadebecariosparticipantesid1siteid73{Font-Family:Arial;Font-Size:11px;Color:#626469;}
+.ListaPuestoMiembroDiputadoid1siteid73{Font-Size:11px;Font-Family:Arial;Color:#626469;}
+.ListaPuestoMiembroSenadoid1siteid73{Font-Size:11px;Color:#626469;Font-Family:Arial;}
+.Lugarid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.LugarAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LugarCanalid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Mail1id1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Mail2id1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.Mail3id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Mail4id1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Nombreid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.NombreBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NombreDiarioid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.NombreMiembroid1siteid73{Color:#626469;Font-Family:Arial;Font-Weight:Bold;Font-Size:11px;}
+.NumeroOrdenAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NumeroOrdenImagenid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NumeroOrdenNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PaginaBOCGBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PDFBoletinid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PDFDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.perspectivesid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PieImagenid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.PrimerPlatoCafeteriaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PrimerPlatoSaludableMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato1Menuid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PrimerPlato2Menuid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PrimerPlato3Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato4Menuid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Programaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PuestoMiembroDiputadoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.PuestoMiembroSenadoid1siteid73{Font-Size:11px;Font-Family:Arial;Color:#626469;Font-Weight:Bold;}
+.QuintoPlatoCafeteriaid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.RefBOEid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.RefBOEIIid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.scoreid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlatoSaludableMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlato1Menuid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.SegundoPlato2Menuid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.SeptimoPlatoCafeteriaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.SextoPlatoCafeteriaid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.SiglasBoletinid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.SiglasDiarioid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.subpagetitleid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.SugerenciaCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TargetNovedadid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.Telefonoid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Telefono2id1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.TemaFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaRuedaPrensaid1siteid73{Color:#000000;Font-Family:Arial;Font-Size:11px;}
+.TercerPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TextoAlternativoFotoNotaPrensaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.TextoAlternativoFoto1Fotonoticiaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.TextoAlternativoFoto2Fotonoticiaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.titleid1siteid73{Font-Family:Arial;Font-Size:11px;Color:#626469;Font-Weight:Bold;}
+.titleorimageid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.TitularFotoNoticiaid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Tituloid1siteid73{Font-Size:11px;Font-Family:Arial, Helvetica;Color:#626469;Font-Weight:Bold;}
+.TituloAnuncioid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.TituloImagendelDiaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.TituloNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TituloNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.URLEnlaceNovedadIntranetid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.VideoFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.VideoNotaPrensaid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.Visitasid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.wwsbr_category_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_charset_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_image_or_title_id1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.wwsbr_img_or_title_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_itemtype_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_mime_type_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_page_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_pagegroup_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_publishdate_id1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.wwsbr_title_and_img_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_updatedate_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_updator_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_version_number_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LeftCurve{}
+.PortletBodyColor{}
+.PortletHeaderColor{Background-Color:#b29200;}
+.PortletHeaderLink{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletHeaderStyle{}
+.PortletHeaderText{Color:#FFFFFF;Font-Weight:Bold;Font-Size:10pt;Font-Family:Arial, Helvetica;}
+.PortletHeading1{Color:#336699;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.PortletHeading2{Color:#336699;Font-Size:8pt;Font-Family:Arial, Helvetica;Font-Weight:Bold;}
+.PortletHeading3{Font-Size:7pt;Font-Family:Arial, Helvetica;Color:#336699;Font-Weight:Bold;}
+.PortletHeading4{Font-Size:7pt;Font-Family:Arial, Helvetica;Color:#336699;Font-Weight:Bold;}
+.PortletSubHeaderColor{Background-Color:#EEEEDD;}
+.PortletSubHeaderLink{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:9pt;}
+.PortletSubHeaderText{Font-Size:9pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PortletText1{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletText2{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletText3{Color:#000000;Font-Size:7pt;Font-Family:Arial, Helvetica;}
+.PortletText4{Font-Family:Arial, Helvetica;Font-Size:7pt;Color:#000000;}
+.RightCurve{}
+.LeftSubTabid1siteid73{Background-Position:left top;Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFsl.gif);Background-Repeat:no-repeat;}
+.LeftTabBgSlantid1siteid73{Background-Position:left top;Background-Image:url(http://www.congreso.es/images/FFFFFFtl.gif);Background-Color:#CCCC99;Background-Attachment:scroll;Background-Repeat:no-repeat;}
+.LeftTabForeSlantid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFtl.gif);Background-Position:left top;Background-Repeat:no-repeat;}
+.RightSubTabid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFsr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.RightTabBgCurveid1siteid73{Background-Image:url(http://www.congreso.es/images/FFFFFFtr.gif);Background-Color:#CCCC99;Background-Attachment:scroll;Background-Position:right top;Background-Repeat:no-repeat;}
+.RightTabForeCurveid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFtr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.SubTabBgTextid1siteid73{Color:#CCCC99;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:11pt;Font-Weight:Bold;}
+.TabBackgroundColorid1siteid73{Background-Color:#CCCC99;}
+.TabBackgroundTextid1siteid73{Color:#003366;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:10pt;}
+.TabForegroundColorid1siteid73{Background-Color:#336699;}
+.TabForegroundTextid1siteid73{Color:#FFFFFF;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:10pt;Font-Weight:Bold;}
+.portlet-font{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-font-dim{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-status{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-info{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-error{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-alert{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-success{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-header{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:9pt;    Font-Weight:Bold;    }
+.portlet-section-body{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-alternate{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-selected{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-subheader{Color:#336699;    Font-Size:8pt;    Font-Family:Arial, Helvetica;    Font-Weight:Bold;    }
+.portlet-section-footer{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-text{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-header{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:9pt;    Font-Weight:Bold;    Background-Color:#EEEEDD;    }
+.portlet-table-body{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-alternate{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-selected{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-subheader{Color:#336699;    Font-Size:8pt;    Font-Family:Arial, Helvetica;    Font-Weight:Bold;    }
+.portlet-table-footer{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-text{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-input-field{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-button{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-icon-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-dlg-icon-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-field-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-field{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.RegionNoBorder{}
+.RegionBorder { border:#b29200  1px solid; }
+.RegionHeaderColor { border:#b29200 0px solid;}
+.PageColor { background-color:#FFFFFF}
+ </style>
+</head>
+<body leftmargin="0" rightmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+<div id="texto_parrafo">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
+  <tbody><tr valign="top"><td align="center" valign="top">
+    <table width="500" cellpadding="0" cellspacing="0" border="0" height="100%">
+      <tbody><tr>
+        <td align="center" width="500" height="100%" valign="top">
+<iframe id="portalIFrame" title="" frameborder="0" width="0" height="0" src="/images/pobtrans.gif"></iframe><script type="text/javascript" src="http://www.congreso.es/portal/pls/portal/PORTAL.wwsbr_javascript.page_js?p_language=e&amp;p_version=10.1.4.2.0.197">
+&lt;!-- Comment out script for old browsers
+//--&gt;
+</script>
+<table width="100%" id="rg88017" border="0" cellpadding="0" cellspacing="0" summary=""><tbody><tr align="LEFT">
+<td valign="top" style="padding:4px 4px 0px 4px;width:100%;"><div id="p73_2138133_73_2138049_2138049"><table border="0" width="100%" cellpadding="0" cellspacing="0" class="RegionNoBorder"><tbody><tr><td class="RegionHeaderColor" width="100%" dir="LTR"><div id="pcnt73_2138133_73_2138049_2138049">
+
+
+
+
+
+
+
+  
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+        <title>Listas de valores</title>
+        <script language="JavaScript" type="text/javascript" src="/wc/htdocs/web/js/wc.js"></script> 
+		<link type="text/css" href="/wc/htdocs/web/css/apps.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/congreso.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/portada.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/prensa.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/texto_integro.css" rel="STYLESHEET" />   
+
+
+<script>
+function opcionesVentana(){
+
+window.resizeTo(630,520);
+}
+
+window.onload = function(){
+    opcionesVentana();
+}
+
+</script>
+	<div id="CONGRESO_TEXTO_INTEGRO_POPUP">
+            <div id="CABECERA_TEXTO_POPUP">
+                    <div class="cabecerah1"><img src="/wc/htdocs/web/img/logo_mini.gif" alt="Congreso de los Diputados" border="0" /></div>
+                    <div class="btn_cerrar" title="Cerrar">
+                        <p><img src="/wc/htdocs/web/img/ico_cerrar.gif" width="9" height="9" alt="Cerrar" /> <a href="javascript:window.close();" title="Cerrar">Cerrar</a></p>                   
+                    </div>
+                    
+                    <div class="fincabecera"> </div>
+            </div>
+
+
+
+    <div id="CONGRESO_TEXTO_INTEGRO_POPUP"> <div id="CABECERA_TEXTO_POPUP"> DS. Congreso de los Diputados, Pleno y Dip. Perm., núm. 180, de 20/02/2014 </div><div id="CABECERA_TEXTO_POPUP">cve:
+    DSCD-10-PL-180 </div> <div class="fincabecera"> </div> </div> <!-- CONGRESO_TEXTO_INTEGRO --> <div id="TEXTOS_POPUP">	<br />
+    	<div class="titular_texto"><br />CORTES GENERALES
+
+    <br />DIARIO DE SESIONES DEL CONGRESO DE LOS DIPUTADOS
+
+    <br />PLENO Y DIPUTACIÓN PERMANENTE
+    </div>
+
+    <div class="subtitular_texto"><br />Año 2014 X LEGISLATURA Núm.  180
+    <br />PRESIDENCIA DEL EXCMO.  SR.  D. JESÚS POSADA MORENO
+    <br />Sesión plenaria núm.  168
+    <br />celebrada el jueves,
+    <br />20 de febrero de 2014</div>
+          	<div class="texto_completo"><br /><br />Página
+
+    <br /><br />ORDEN DEL DÍA:
+
+    <br /><br />Acuerdo de tramitación directa y en lectura única de iniciativas
+    legislativas
+
+    <br /><br />- Acuerdo de tramitación directa y en lectura única de la proposición de
+    ley orgánica de modificación de la Ley orgánica 6/1985, de 1 de julio,
+    del Poder Judicial, relativa a la justicia universal. "BOCG. Congreso de
+    los Diputados", serie B, número 157-1, de 24 de enero de 2014. "BOCG.
+    Congreso de los Diputados", serie B, número 157-2, de 14 de febrero de
+    2014. "BOCG. Congreso de los Diputados", serie B, número 157-3, de 19 de
+    febrero de 2014. (Número de expediente 122/000136) ... <a href="#(Página2)">(Página2)</a>
+
+    <br /><br />SUMARIO
+
+    <br /><br />Se abre la sesión a las once la mañana.
+
+    <br /><br />Página
+
+    <br /><br />Acuerdo de tramitación directa y en lectura única de iniciativas
+    legislativas... <a href="#(Página2)">(Página2)</a>
+
+    <br /><br />Página
+
+    <br /><br />Acuerdo de tramitación directa y en lectura única de la Proposición de Ley
+    Orgánica de modificación de la Ley Orgánica 6/1985, de 1 de julio, del
+    Poder Judicial, relativa a la justicia universal.... <a href="#(Página2)">(Página2)</a>
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página2)"><b>Página
+    2</b></a></p><br />
+
+    <br /><br />Hacen uso de la palabra el señor Baldoví Roda, la señora Fernández Davila
+    y los señores Tardà i Coma y Larreina Valderrama, del Grupo Parlamentario
+    Mixto; el señor Esteban Bravo, del Grupo Parlamentario Vasco (EAJ-PNV);
+    la señora Lozano Domingo, del Grupo Parlamentario de Unión Progreso y
+    Democracia; y los señores Llamazares Trigo, del Grupo Parlamentario de
+    IU, ICV-EUiA, CHA: La Izquierda Plural; Jané i Guasch, del Grupo
+    Parlamentario Catalán (Convergència i Unió); Villarrubia Mediavilla, del
+    Grupo Parlamentario Socialista, y Barreda de los Ríos, del Grupo
+    Parlamentario Popular en el Congreso.
+
+    <br /><br />Vuelven a intervenir los señores Villarrubia Mediavilla y Barreda de los
+    Ríos.
+
+    <br /><br />Sometido a votación el acuerdo de tramitación directa y en lectura única
+    de la iniciativa legislativa de referencia, se aprueba por 177 votos a
+    favor, más 3 votos telemáticos, 180; en contra 1, más 1 voto telemático,
+    2, y 1 abstención.
+
+    <br /><br />De nuevo hace uso de la palabra la señora Fernández Davila.
+
+    <br /><br />Se levanta la sesión a las once y cincuenta minutos de la mañana.
+
+    <br /><br />Se abre la sesión a las once de la mañana.
+
+    <br /><br />PUNTO ÚNICO.
+
+    <br /><br />ACUERDO DE TRAMITACIÓN DIRECTA Y EN LECTURA ÚNICA DE INICIATIVAS
+    LEGISLATIVAS.
+
+    <br /><br />- ACUERDO DE TRAMITACIÓN DIRECTA Y EN LECTURA ÚNICA DE LA PROPOSICIÓN DE
+    LEY ORGÁNICA DE MODIFICACIÓN DE LA LEY ORGÁNICA 6/1985, DE 1 DE JULIO,
+    DEL PODER JUDICIAL, RELATIVA A LA JUSTICIA UNIVERSAL. (Número de
+    expediente 122/000136).
+
+    <br /><br />El señor PRESIDENTE: Señorías, se abre la sesión.
+
+    <br /><br />Esta sesión plenaria tiene un único punto del orden del día, que es la
+    aprobación o no por la Cámara de la tramitación directa y en lectura
+    única de la proposición de ley orgánica de modificación de la Ley
+    Orgánica 6/1985, de 1 de julio, del Poder Judicial, relativa a la
+    justicia universal.
+
+    <br /><br />La intervención de los grupos se producirá de menor a mayor y por cinco
+    minutos. Con absoluto respeto a lo que los intervinientes consideren en
+    cuanto al desarrollo de su intervención, quiero decir que hoy lo que
+    estamos discutiendo es la tramitación directa y en lectura única de esta
+    proposición de ley, si bien habrá un próximo Pleno en el que se discutirá
+    el contenido y las enmiendas que se le formulen.
+
+    <br /><br />Comenzamos por tanto por el Grupo Mixto, teniendo la palabra en primer
+    lugar el señor Baldoví.
+
+    <br /><br />El señor BALDOVÍ RODA: Muchas gracias, señor presidente.
+
+    <br /><br />Compromís Equo anuncia que no va a participar en esta farsa, en esta
+    manera infame de entender la política, que convierte al Parlamento en un
+    mero teatro de guiñol al servicio de los poderosos, y a la justicia
+    universal en un trapo. Por tanto anunciamos que no abandonaremos nuestro
+    escaño, pero no participaremos en una votación que a nuestro modo de
+    entender es una auténtica farsa.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Baldoví.
+
+    <br /><br />Señora Fernández Davila.
+
+    <br /><br />La señora FERNÁNDEZ DAVILA: Gracias, señor presidente.
+
+    <br /><br />Señorías, para el Bloque Nacionalista Galego lo que va a pasar esta mañana
+    en este Pleno es un claro ejemplo de la soberbia y la prepotencia del
+    grupo mayoritario, que utiliza el rodillo para eliminar una ley que nada
+    más y nada menos defiende la justicia universal, y persigue por ejemplo
+    los delitos de lesa humanidad. Nos parece un auténtico golpe bajo a la
+    democracia que se haga además deprisa y corriendo, sin el debate
+    correspondiente, y sin los informes jurídicos también necesarios, incluso
+    interpretando el Reglamento de esta Cámara de la manera más conveniente
+    para el grupo mayoritario. Por lo tanto, señorías, el Bloque Nacionalista
+    Galego tampoco va a participar de esta farsa. (Aplausos).
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página3)"><b>Página
+    3</b></a></p><br />
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Fernández Davila.
+
+    <br /><br />Señor Tardà.
+
+    <br /><br />El señor TARDÀ I COMA: Gracias, señor presidente.
+
+    <br /><br />Señorías, hay un proverbio chino que dice que cuando el dinero habla, la
+    justicia calla, y es evidente que el Partido Popular, el Gobierno, ha
+    decidido no solamente enterrar un valor de civilización del cual
+    estábamos muy orgullosos, la justicia universal, sino también enterrar la
+    democracia de este Parlamento. Nos sentimos violentados, nos sentimos
+    ultrajados, y cuando los republicanos, los diputados decimos esto, lo que
+    decimos es que nuestra ciudadanía, nuestros electores se sienten
+    violentados y ultrajados. Es una vergüenza y una farsa, y quien provoca
+    farsa, tiene un nombre.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Tardà.
+
+    <br /><br />Señor Larreina.
+
+    <br /><br />El señor LARREINA VALDERRAMA: Muchas gracias, señor presidente.
+
+    <br /><br />Aunque digamos que estamos acostumbrados a que por parte de la mayoría del
+    Partido Popular se retuerza el Reglamento, y se prive de derechos a los
+    diputados y diputadas de esta Cámara, y el ejemplo más claro es cuando a
+    Amaiur se le impidió tener grupo parlamentario, cumpliendo todos los
+    requisitos que se habían cumplido con anterioridad en esta Cámara, no
+    pensábamos que se iba a llegar a este extremo en esta ocasión. En esta
+    ocasión nos parece especialmente grave, porque es otro caso claro de
+    retorcimiento, de incumplimiento del Reglamento de la Cámara. Es otro
+    caso claro de privación de los derechos de los diputados y diputadas de
+    esta Cámara, y nos parece que es un atentado directo a las bases de la
+    democracia. Por eso nosotros, que en los temas que normalmente no afectan
+    a nuestro país no solemos participar en la votación, en esta ocasión no
+    vamos a participar en la votación, pero con otro sentido muy diferente,
+    como es expresar nuestra protesta, nuestro rechazo a esta vulneración de
+    los derechos de esta Cámara, a esta vulneración del funcionamiento
+    democrático de esta Cámara, sobre todo en un tema que es especialmente
+    grave como es el de la justicia universal, porque es intentar negar un
+    compromiso activo con la defensa activa de todos los derechos humanos en
+    todas partes, y eso nos parece especialmente grave también por esta
+    cuestión. Por eso mismo anunciamos que esta vez no participaremos en la
+    votación, pero con un sentido muy diferente al de otras ocasiones. Este
+    tema no es que no afecte a nuestro país, sino que afecta a algo muy
+    importante: los derechos democráticos de esta Cámara y los derechos
+    humanos.
+
+    <br /><br />Muchas gracias, señor presidente. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Larreina.
+
+    <br /><br />Por el Grupo Parlamentario Vasco (EAJ-PNV), tiene la palabra el señor
+    Esteban.
+
+    <br /><br />El señor ESTEBAN BRAVO: Gracias, señor presidente.
+
+    <br /><br />Este Pleno no debería haberse convocado nunca, porque se ha convocado en
+    contra del Reglamento, infringiéndolo directa y conscientemente. Es
+    imposible que una proposición de ley del contenido de la que nos ocupa
+    pueda encajar la posibilidad de la lectura única, porque ni la naturaleza
+    del proyecto es la adecuada -una ley orgánica, derechos fundamentales, la
+    jurisdicción de los tribunales- ni la simplicidad -que es la otra razón
+    para que pudiera ser por lectura única- tampoco es aplicable porque la
+    propuesta es abigarrada, complicada, llena de matices, detalles y
+    casuísticas. Por tanto debería haber sido imposible que este Pleno se
+    hubiera convocado. A pesar de que se le ha señalado a la Mesa, por parte
+    de toda la oposición, que sería necesario un informe jurídico, acabamos
+    de recibir un escrito por parte de la Mesa diciendo que no se va a
+    realizar un informe jurídico simplemente porque la Mesa, por mayoría,
+    considera que ha aplicado bien el Reglamento. Nos parece sinceramente
+    inaceptable, aunque comprensible, porque no hay letrado que se precie, no
+    hay letrado que se precie que hubiera firmado un informe diciendo que el
+    artículo 150 era aplicable para este caso. Y esto resulta una vez más del
+    abuso del principio mayoritario que está haciendo el Partido Popular en
+    la Cámara. No para en nada, aunque el resto de la oposición le pida que
+    reflexione y que permita el debate. Pero es que en este caso no es solo
+    que abuse de su mayoría para impedir el debate, sino que lo hace
+    transgrediendo el Reglamento, un Reglamento que a la oposición se le
+    aplica a machamartillo, exigentemente, exigentemente, y sin embargo el
+    grupo mayoritario, simplemente por tener la mayoría absoluta de esta
+    Cámara, se permite saltárselo. Eso unido también a que no entendemos la
+    urgencia que se ha aceptado por parte de la Mesa para tramitar esa
+    cuestión.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página4)"><b>Página
+    4</b></a></p><br />
+
+    <br /><br />¿Dónde está la urgencia? ¿Por qué hace falta liquidar esto en dos semanas
+    y además con lectura única? Incluso la semana que viene vamos a asistir a
+    otro Pleno después de una semana que se suele dedicar única y
+    exclusivamente al debate del estado de la Nación. Es absolutamente un
+    abuso del principio mayoritario y un rompimiento claro de las reglas, que
+    se supone que todos, también la mayoría, y desde luego la Mesa, deberían
+    defender y aplicar. Por tanto, como este Pleno no debería celebrarse, de
+    acuerdo con el Reglamento, le anuncio que mi grupo no va a tomar parte en
+    esta votación. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Esteban.
+
+    <br /><br />Por el Grupo Parlamentario de Unión Progreso y Democracia, tiene la
+    palabra la señora Lozano.
+
+    <br /><br />La señora LOZANO DOMINGO: Muchas gracias, presidente.
+
+    <br /><br />En este Pleno fraudulento, en esta estafa de Pleno al que nos han
+    convocado de forma extraordinaria, me dirijo en primer lugar a usted como
+    presidente de esta Cámara. No es que pensáramos que fuera usted capaz de
+    garantizar la independencia de esta Cámara, puesto que ya hemos tenido
+    sobrados ejemplos de esa incapacidad de hacerlo, pero lo que nos parece
+    la última vuelta de tuerca a esa falta de independencia es que se erija
+    usted en juez y parte para decidir cómo se interpreta el Reglamento, y
+    para decidir que no hace falta un informe jurídico de los letrados sobre
+    cómo se interpreta el Reglamento. De este modo atornillan ustedes
+    doblemente su poder, el poder que el Grupo Parlamentario Popular tiene en
+    esta Cámara. En segundo lugar, me dirijo a ese grupo parlamentario, al
+    que felicito por el grado de sofisticación que consigue en la sintonía
+    con la élite corrupta china. A la élite corrupta china le gusta la
+    política de hijo único, le gusta el partido único, y ustedes les hacen
+    este regalo de la lectura única de una ley que les beneficia, en un Pleno
+    único, con un único punto del orden del día. El grado de sintonía y de
+    armonización que han logrado con la élite corrupta china es asombroso, es
+    absolutamente extraordinario, al precio de sacrificar los principios
+    elementales de la democracia en nuestro país, porque no hemos conseguido
+    todavía que nos expliquen de manera transparente y clara cuáles son las
+    prisas que tienen, y en esas prisas queda delatada su forma de hacer
+    política. Cuando los ciudadanos tienen prisa para que tomen medidas
+    contra la corrupción, se lo piensan; llevan más de un año pensándolo
+    desde que en esta Cámara, con motivo del debate del estado de la Nación,
+    se instó al Gobierno a tomar medidas contra la corrupción. Llevan más de
+    un año pensando cómo hacerlo, y en dos meses han encontrado la manera de
+    satisfacer las exigencias de la oligarquía china, pasando por encima de
+    principios elementales de la democracia. Miren, ustedes con este trámite
+    parlamentario consiguen liquidar de un plumazo todos los principios
+    básicos de la democracia: la separación de poderes, los controles y
+    equilibrios, el debate en libertad, las libertades y los derechos, las
+    garantías de libertades y derechos de todos los ciudadanos, el imperio de
+    la ley, porque la ley en esta Cámara es este Reglamento que hoy se
+    vulnera con la convocatoria de este Pleno, y con la aprobación de este
+    trámite por parte de su mayoría absoluta. Vulneran el principio de
+    participación política, puesto que ni siquiera se permite a los
+    ciudadanos la participación básica en esos debates, poder escucharlos,
+    poder escuchar los argumentos de una parte y otra. Vulneran el principio
+    de transparencia al no revelar las intenciones ocultas que hay detrás de
+    este cambio legal, y pisotean la ley que existe en esta Cámara cuando
+    deberían ser los primeros interesados en defenderla. Y todo ello porque
+    han decidido poner precio a la dignidad del país, esto es lo que
+    significa su reforma jurídica, y son capaces de pasar por encima de todo
+    para llevar adelante esta reforma. Le han puesto precio a la democracia,
+    le han puesto precio a la dignidad del país, pero no van a quedar
+    impunes, no les va a salir gratis. Los ciudadanos se van a dar cuenta de
+    que están convirtiendo esta democracia en una democracia ritual, en que
+    pidieron sus votos en las elecciones para conseguir una mayoría absoluta
+    y, a partir de ahí, despreciar todos los principios y romper todos los
+    equilibrios que el complejo entramado de una democracia contiene. No les
+    va a salir gratis, señores del Partido Popular. Nosotros tampoco vamos a
+    participar de esta farsa. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Lozano.
+
+    <br /><br />Por el Grupo de La Izquierda Plural, tiene la palabra el señor Llamazares.
+
+    <br /><br />El señor LLAMAZARES TRIGO: Gracias, señor presidente.
+
+    <br /><br />Hoy la mayoría parlamentaria del Partido Popular le aplica la pena de
+    muerte a la jurisdicción penal internacional o, en palabras del señor
+    Gallardón, la prisión permanente revisable. Hoy también esa pena de
+    muerte se aplica a través de un mecanismo que no es de las democracias,
+    el mecanismo sumarísimo, el procedimiento sumarísimo por el cual
+    prácticamente la Cámara no tiene voz, tiene una vía única, un
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página5)"><b>Página
+    5</b></a></p><br />
+
+    <br /><br />pensamiento único, una tramitación urgente. Bien, señorías, mi grupo
+    parlamentario no va a participar, ni siquiera de cuerpo presente
+    (Aplausos), en esta medida que, como digo, deroga la legislación penal
+    internacional, mantiene la impunidad de los que vulneran los derechos
+    humanos y avergüenza a esta Cámara. Hoy este Parlamento se convierte en
+    una Cámara colonial en la que el poder del dinero se impone a la
+    democracia. (Aplausos.-Las señoras y señores diputados del Grupo
+    Parlamentario IU, ICV-EUiA, CHA: La Izquierda Plural abandonan el
+    hemiciclo).
+
+    <br /><br />El señor PRESIDENTE: Por el Grupo Catalán de Convergència i Unió, tiene la
+    palabra el señor Jané.
+
+    <br /><br />El señor JANÉ I GUASCH: Gracias, señor presidente.
+
+    <br /><br />Señorías, cuando se redactó el artículo 150 del actual Reglamento y se
+    diseñó el procedimiento legislativo de lectura única, sin ninguna duda
+    quienes redactaron este artículo nunca pensaron que hoy iba a aplicarse
+    para tramitar una reforma de la entidad que tiene la reforma de la Ley
+    Orgánica del Poder Judicial en el ámbito de la jurisdicción universal,
+    porque es una reforma de entidad, es una reforma que no está consensuada,
+    y el propio artículo 150, tal como se redactó, invitaba a que se pudiera
+    utilizar el sistema de lectura única cuando fuera un debate que planteara
+    simplicidad, y para nada es un debate simple, es un debate que tiene
+    muchas aristas, que tiene incluso muchos problemas de interpretación
+    jurídica. La propia disposición transitoria que va a conducir a un
+    sobreseimiento automático de los supuestos de justicia universal que
+    actualmente se están conociendo puede conculcar el artículo 9.3 de la
+    Constitución y el principio de irretroactividad. Por tanto, en absoluto
+    es una reforma que presente simplicidad.
+
+    <br /><br />El otro requisito que establece el artículo 50 es que la naturaleza de la
+    proposición así lo aconseje, y para nada la naturaleza de esta
+    proposición aconseja que se pueda debatir de tal forma que al final ni
+    tan siquiera la Comisión legislativa de Justicia pueda llegar a debatir
+    el texto de esta proposición de ley. No es una buena noticia para los
+    derechos humanos y su protección internacional, no es una buena noticia
+    para esta Cámara que hoy se acuerde por este Pleno -aunque se una
+    potestad suya- utilizar ese sistema previsto en el Reglamento, pero que
+    en ningún caso, cuando se previó, se pensaba que podría utilizarse en
+    supuestos como al que ahora, aplicando dicho Reglamento, la mayoría de
+    esta Cámara nos quiere conducir. Por tanto, Covergència y Unió tampoco
+    participará en esta votación.
+
+    <br /><br />Lamentamos que finalmente hoy el Pleno se pronuncie expresamente a favor
+    de ese procedimiento, un procedimiento que no debería utilizarse para
+    tramitar esta reforma de la Ley Orgánica del Poder Judicial, y lo que
+    reclamamos, señor presidente, es que esta aplicación de la lectura única
+    nos lleve por lo menos a una reflexión serena, ahora que se está
+    debatiendo la reforma del Reglamento de la Cámara, para que en ningún
+    caso de forma expresa, clara y concreta se utilice el procedimiento de
+    lectura única para reformar aspectos que no son de consenso y que
+    reclaman, señor presidente, ser debatidos en esta Cámara con los tiempos
+    marcados, con las enmiendas presentadas, con el informe de la ponencia,
+    con el dictamen de la Comisión y, por tratarse de una proposición de ley
+    orgánica, con el obligado debate final en Pleno, de acuerdo con el
+    artículo 81 de la Constitución. Lo necesitamos y, como lo necesitamos,
+    como lo que pasa hoy no es una buena noticia para este Congreso de los
+    Diputados, ya le adelanto que desde Convergència y Unió vamos a plantear
+    una propuesta concreta que imposibilite que por lectura única puedan
+    debatirse reformas de la entidad, de la naturaleza y de la trascendencia
+    que tiene la que hoy se pretenda abordar.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Jané.
+
+    <br /><br />Como presidente de la ponencia que se ocupa de la reforma del Reglamento
+    tomo nota de su propuesta.
+
+    <br /><br />Por el Grupo Socialista, tiene la palabra el señor Villarrubia.
+
+    <br /><br />El señor VILLARRUBIA MEDIAVILLA: Gracias, señor presidente.
+
+    <br /><br />Mi grupo se opone frontalmente a la liquidación de la justicia universal y
+    también a la celebración de plenos como este, convocado a iniciativa del
+    propio presidente de la Cámara para dar salida a la situación creada por
+    la urgencia del Gobierno de liquidar la justicia universal sin debate,
+    contra el criterio del resto de la Cámara y evidenciando su falta de
+    respeto al Poder Legislativo, al que burla sus competencias mediante
+    sistemas de aprobación de normas que solo formalmente se acomodan a la
+    Constitución y a la ley.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página6)"><b>Página
+    6</b></a></p><br />
+
+    <br /><br />La reforma del artículo 23 de la ley orgánica, que presentó el Grupo
+    Popular vía proposición de ley, prescinde de las exigencias a las que
+    estaría sometido un anteproyecto de ley: ni informes del Consejo General
+    del Poder Judicial ni del Consejo de Estado, exigencias y control a los
+    que no quiere someterse. El Grupo Socialista solicitó a la Mesa del
+    Congreso la remisión de la proposición al Consejo General del Poder
+    Judicial para que emitiera el necesario informe, y lo denegó
+    unilateralmente y solo el Partido Popular, mediante un acuerdo carente de
+    fundamento o justificación alguna.
+
+    <br /><br />Señorías, hasta la presentación de esta iniciativa el Grupo Popular, con
+    mayoría absoluta, no había presentado ni una proposición de ley. Es
+    legítimo hacerlo, pero utilizar este atajo para sortear las exigencias
+    legales que le impone el ordenamiento jurídico para aprobar y presentar
+    un proyecto de ley no es adecuado. A ello hay que añadir que su
+    presentación vino precedida del anuncio a bombo y platillo del Gobierno
+    en los medios de comunicación del compromiso de reformar -y liquidar- la
+    jurisdicción universal en el sentido recogido literalmente en la
+    proposición de ley. Eso es un fraude. No es difícil deducir la urgencia
+    que tiene el Gobierno en llevar al BOE esta reforma.
+
+    <br /><br />Señorías, es verdad, no es la primera vez que una proposición de ley se
+    aprueba por lectura única y en procedimiento de urgencia, se ha hecho
+    antes, pero es la primera vez que se hace para la aprobación de una
+    proposición que solo cuenta con el apoyo de un grupo parlamentario y sin
+    el consenso de la inmensa mayoría de la Cámara.
+
+    <br /><br />El martes 11 de febrero pasado se celebró el debate de la toma en
+    consideración, que fue aprobada exclusivamente con los votos del Partido
+    Popular, como probablemente ocurra hoy también, para liquidar
+    aceleradamente la justicia universal, y lo hacen como han hecho en otras
+    reformas, en solitario, sin consenso, sin complejos y saltándose las
+    reglas del juego y las de procedimiento. ¿Dónde está la interpretación
+    rigurosa, sensata, de sentido común, del artículo 150 del Reglamento de
+    la Cámara, que dice cuándo procede la tramitación urgente y en lectura
+    única en asuntos de consenso, en asuntos de extrema sencillez, de
+    simpleza? ¿Nos estamos refiriendo a eso cuando queremos liquidar la
+    justicia universal en violaciones gravísimas de los derechos humanos?
+    ¿Pero en qué país viven ustedes, señores del Partido Popular?
+
+    <br /><br />Señorías, por el desprecio al Parlamento, por su utilización sectaria y
+    partidista del órgano legislativo por parte del Grupo Parlamentario
+    Popular, por no respetarse los derechos de los parlamentarios y los
+    procedimientos establecidos, el Grupo Parlamentario Socialista no va a
+    participar en esta farsa y no va a votar.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Villarrubia.
+
+    <br /><br />Por el Grupo Popular, tiene la palabra el señor Barreda.
+
+    <br /><br />El señor BARREDA DE LOS RÍOS: Muchas gracias, señor presidente.
+
+    <br /><br />Señorías, no creo sorprender a nadie anunciando que el Grupo Popular
+    respaldará la tramitación directa y en lectura única de la proposición de
+    ley. Saben ustedes -deberían saberlo, aunque algunos no parece que lo
+    recuerden- que el fondo de la cuestión lo debatiremos la próxima semana y
+    que, por tanto, el debate de hoy es un debate procesal. Todos los grupos
+    han tenido ocasión en estos días -primero en la Junta de Portavoces y
+    después en este Pleno- de fijar su posición, y a nosotros lo que nos ha
+    preocupado fundamentalmente ha sido el respeto al Reglamento, que forma
+    parte del bloque de la constitucionalidad, y el respeto a la doctrina
+    establecida en esta cuestión por el Tribunal Constitucional en relación
+    con el artículo 150 del Reglamento, y debo decirles que creemos que
+    nuestra posición se atiene tanto al uno como a la otra, tanto al
+    Reglamento como a la doctrina constitucional, a diferencia de las
+    posiciones que han expresado el resto de los portavoces en la Cámara. Una
+    cosa es, como han hecho ustedes, utilizar argumentos de conveniencia,
+    otra utilizar el debate, como también han hecho la mayoría de ustedes,
+    para, en vez de hablar del procedimiento, argumentar sobre el fondo de la
+    cuestión, y otra bien distinta tratar de ignorar las previsiones
+    reglamentarias o la doctrina del Tribunal Constitucional, porque ustedes
+    no lo ignoran, simplemente se han esforzado en no traerlo a colación.
+
+    <br /><br />Como se ha recordado, ha habido otras reformas de la Ley Orgánica del
+    Poder Judicial tramitadas directamente y en lectura única. Las ha habido
+    tanto con gobiernos del Partido Popular como con gobiernos del Partido
+    Socialista. Lo cierto es que el Tribunal Constitucional ya ha tenido
+    ocasión de pronunciarse y de responder, por tanto, a argumentaciones como
+    las que hoy han esgrimido ustedes en la Cámara y que resultan en esta
+    fecha absolutamente peregrinas. Insisto, no se trata de levantar la voz o
+    de agitar el Reglamento, como hacían el señor Esteban o la señora Lozano.
+    El enfado, las salidas de tono, los
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página7)"><b>Página
+    7</b></a></p><br />
+
+    <br /><br />exabruptos, las enormidades que algún portavoz ha esgrimido hoy no
+    disimulan el descaro de interpretaciones pro domo sua, interpretaciones
+    arrimando el ascua a su sardina por parte de cada uno de los
+    intervinientes. Se trata de argumentar y de hacerlo conociendo el terreno
+    que se pisa, es decir, reconociendo que el Tribunal Constitucional ha
+    rechazado cada uno de los argumentos que han expuesto ustedes en la
+    mañana de hoy, y lo ha hecho en una sentencia bien reciente, de hace
+    apenas un año, la sentencia 238/2012, de 13 de diciembre. Esa sentencia
+    es el mejor informe jurídico con el que podemos contar para pronunciarnos
+    sobre esta cuestión en el día de hoy.
+
+    <br /><br />Nos dicen ustedes, e insisten, que no concurren los requisitos del
+    Reglamento para el trámite de lectura única, que ni la naturaleza de la
+    proposición de ley ni su presunta complejidad permiten este debate.
+    Tendrían ustedes que explicarnos -en un debate, insisto, procesal- dónde
+    limita el Reglamento la posibilidad de que los grupos presenten
+    proposiciones de ley orgánica o dónde excluye lo relativo al Poder
+    Judicial de las materias tramitables de modo directo y en lectura única.
+    Díganmelo; han tenido ocasión de hacerlo. No lo han hecho ni lo harán,
+    porque precisamente el Tribunal Constitucional lo que afirma es que no
+    hay materias vedadas a la tramitación en lectura única, ni siquiera la
+    reforma constitucional, como ya se ha hecho y todos recuerdan en esta
+    Cámara. Ustedes se empeñan simplemente en ignorarlo, que la realidad, que
+    la sentencia del Tribunal Constitucional no les estropee su argumentación
+    ni su posición política. Insisten en que no concurren los requisitos
+    reglamentarios y lo cierto es que esa puede ser su opinión o su
+    conveniencia, pero no es la del Tribunal Constitucional, porque el
+    Tribunal Constitucional, ateniéndose al Reglamento, deja claro que la
+    valoración de cuándo procede y cuándo se dan los requisitos del trámite
+    de lectura única corresponde -supongo que ustedes lo saben- al Pleno de
+    la Cámara, a este Pleno, es decir, al Pleno por mayoría simple, a
+    propuesta de la Mesa y oída la Junta de Portavoces, exactamente lo que
+    estamos haciendo hoy aquí. Es decir, precisamente este acto es el que el
+    Reglamento y el Tribunal Constitucional consideran adecuado para decidir
+    sobre el trámite de lectura única, este y ningún otro y, por tanto,
+    estamos haciendo exactamente aquello que prevé nuestra legislación.
+    Todavía más claro, por si faltaba algo: según la sentencia 238/2012, el
+    voto favorable al trámite propuesto manifiesta que la mayoría entiende
+    que concurren las circunstancias exigidas por el Reglamento para el
+    trámite directo y en lectura única. Es decir, la mayoría expresa que
+    entiende que se cumplen esos requisitos y, por tanto, en ese momento está
+    cumplida la exigencia reglamentaria.
+
+    <br /><br />Riguroso, sensato, como reclamaba el señor Villarrubia, y claro, más bien
+    cristalino. No se puede expresar con más sencillez -por cierto, con una
+    sencillez poco frecuente en resoluciones del Tribunal Constitucional-,
+    pero sencillo o no, lo compartan o no, de obligado cumplimiento para
+    todos, en particular para quienes aquí estamos. Por tanto, opiniones
+    aparte, el Reglamento lo aplica e interpreta el presidente, la Mesa, en
+    último término y en este tema el Pleno de la Cámara, y de la adecuación a
+    la Constitución de esa aplicación del Reglamento se ocupa -se ha ocupado
+    ya- el Tribunal Constitucional. Y lo que ha hecho el Tribunal
+    Constitucional es desautorizar -insisto, desautorizar- a quienes hacen
+    más filibusterismo que parlamentarismo, a quienes desde el teatro, desde
+    la sobreactuación, tratan de obstaculizar el funcionamiento de la Cámara
+    antes que otra cosa. Creo que no es buena práctica en democracia tratar
+    de recurrir a la obstrucción e ignorar al Tribunal Constitucional cuando
+    sus resoluciones simple, lisa y llanamente no les convienen.
+
+    <br /><br />Señores socialistas, señor Villarrubia, en su caso, muy particularmente en
+    su caso, lecciones, pocas, y de procedimiento, desde luego, menos; y
+    lecciones de procedimiento en reformas de justicia universal, simplemente
+    ninguna, señora Villarrubia, ninguna. (La señora Rodríguez Ramos:
+    ¡Todas!). La verdad es que hace falta cuajo, en su caso, hace falta
+    cuajo, es un auténtico alarde de desmemoria y desde luego no debería
+    haber hecho usted esa exhibición en el día de hoy. Me parece que es un
+    modo asombroso de inventar y buscar la paja en ojo ajeno para no ver la
+    viga en el propio. Que no es el trámite adecuado -dice usted-, que
+    hurtamos el debate, que hay poco plazo de enmiendas. ¿Usted recuerda la
+    Ley Orgánica 1/2009, la recuerda usted, complementaria de la Ley de la
+    Nueva Oficina Judicial? No sé cómo calificaría usted eso en el trámite,
+    pero ustedes reformaron la justicia universal en aquella ley y lo
+    hicieron vía enmienda. (El señor Villarrubia Mediavilla hace gestos
+    negativos). Sí, sí, lo hicieron vía enmienda; ni proyecto ni proposición
+    de ley ni informes ni nada que se le parezca. Lo hicieron con una
+    enmienda de contenido orgánico... (Rumores).
+
+    <br /><br />El señor PRESIDENTE: Señor Villarrubia, deje usted hablar al orador y
+    luego, si me pide la palabra y ha sido aludido, se la daré, pero déjele
+    hablar. Continúe.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página8)"><b>Página
+    8</b></a></p><br />
+
+    <br /><br />El señor BARREDA DE LOS RÍOS: Gracias, señor presidente.
+
+    <br /><br />Lo hicieron con una enmienda de contenido orgánico en una ley ordinaria.
+    Usted lo recuerda bien. Por tanto, deprisa y corriendo, sin informes, sin
+    debate de admisión a trámite y sin posibilidad de enmiendas a la
+    enmienda, como es muy evidente. Ese es el precedente parlamentario de
+    reforma de la justicia universal, su precedente y, como usted dice, con
+    nuestra colaboración. Efectivamente, nosotros les ayudamos, participamos
+    de ese acuerdo por sentido del Estado, y lo que hoy le recuerdo es que
+    ese sentido del Estado es el que falta absolutamente en su grupo en el
+    día de hoy. (Aplausos). Hoy les proponemos una nueva reforma, una reforma
+    acorde al Reglamento y la doctrina constitucional, con plazo de enmiendas
+    y con plena disponibilidad al debate. Lo menos que podría haber hecho
+    usted en el día de hoy, señor Villarrubia, es ahorrarnos a todos el
+    espectáculo de su completa falta de pudor político.
+
+    <br /><br />Muchas gracias. (Aplausos.-El señor Villarrubia Mediavilla pide la
+    palabra).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Barreda.
+
+    <br /><br />Señor Villarrubia, ha sido usted aludido, en efecto, y para esa alusión,
+    no para reproducir el debate, tiene usted la palabra.
+
+    <br /><br />El señor VILLARRUBIA MEDIAVILLA: Gracias, señor presidente.
+
+    <br /><br />En absoluto intervengo para reabrir ningún debate, pero se ha hecho una
+    alusión a mi grupo y a mi persona de desmemoria por la tramitación en el
+    año 2009. Tengo que decirle que no hay desmemoria, está en el "Diario de
+    Sesiones". Fue algo que quien estaba interviniendo en la tribuna firmó
+    con el Partido Socialista, con Convergència i Unió y con el PNV
+    (Rumores), lo firmamos todos juntos. Por tanto, ¿cómo que desmemoria y
+    unilateralidad del Partido Socialista? Solo quiero aclarar esto, que el
+    único precedente de unilateralidad y soledad en el trámite, que es lo que
+    yo he afirmado, es este caso que estamos viviendo hoy. Por tanto, nada de
+    desmemoria, está en la hemeroteca, está en el "Diario de Sesiones" y lo
+    firmamos conjuntamente más del 90% de la Cámara, no solo el Partido
+    Socialista. (Varios señores diputados: ¡Muy bien!-Aplausos).
+
+    <br /><br />Muchas gracias.
+
+    <br /><br />El señor PRESIDENTE: Gracias, señor Villarrubia.
+
+    <br /><br />Señor Barreda.
+
+    <br /><br />El señor BARREDA DE LOS RÍOS: Muchas gracias, señor presidente.
+
+    <br /><br />Señor Villarrubia: desmemoria; usted no recuerda una reforma hecha sin
+    informe previo de ningún tipo, realizada vía enmienda. Viene aquí a hacer
+    alarde reclamando informes previos y proyecto de ley cuando ustedes
+    hicieron la reforma como la hicieron. Desmemoria porque no se ha
+    molestado en recordar un solo párrafo ni una línea de la sentencia del
+    Tribunal Constitucional, que desmonta toda su argumentación, y desmemoria
+    porque no recuerda usted que yo no estaba en esta Cámara cuando se firmó
+    aquello. Por tanto, yo estaba en la tribuna y no firmé nada.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Gracias, señor Barreda.
+
+    <br /><br />Se suspende la sesión unos minutos. (Pausa).
+
+    <br /><br />Vamos a proceder a la votación. Hay 4 votos emitidos telemáticamente.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 179,
+    más 4 votos telemáticos, 183; a favor, 177, más 3 votos telemáticos, 180;
+    en contra, 1, más 1 voto telemático, 2; abstenciones, 1.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada la tramitación directa y en lectura
+    única por el Pleno de la citada proposición de ley orgánica. (La señora
+    Fernández Davila pide la palabra).
+
+    <br /><br />Un momento, por favor. La señora Fernández Davila me pide la palabra,
+    probablemente, para explicar algo.
+
+    <br /><br />La señora FERNÁNDEZ DAVILA: Gracias, señor presidente.
+
+    <br /><br />Es que anuncié que no íbamos a participar de esta votación y, por error,
+    aparece una abstención. (Rumores.-Varios señores diputados: ¡No, no!).
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página9)"><b>Página
+    9</b></a></p><br />
+
+    <br /><br />El señor PRESIDENTE: Silencio.
+
+    <br /><br />La señora FERNÁNDEZ DAVILA: Y quiero manifestar que las dos diputadas del
+    Bloque Nacionalista Galego no estamos dispuestas a participar de esta
+    farsa democrática. (Protestas.-Varios señores diputados; ¡Ya ha terminado
+    el Pleno!-Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Gracias, señora Fernández Davila. Que conste que no
+    participa.
+
+    <br /><br />Se levanta la sesión.
+
+    <br /><br />Eran las once y cincuenta minutos de la mañana.
+
+    <br /><br />http://www.congreso.es Calle Floridablanca, s/n. 28071 Madrid
+
+    <br /><br />D. L.: M-12.580/1961 CONGRESO DE LOS DIPUTADOS Teléf.: 91 390 60 00
+
+    <br /><br />Edición electrónica preparada por la Agencia Estatal Boletín Oficial del
+    Estado - http://boe.es
+    </div>
+<hr size="1" noshade="" /><!-- BRSCGI © 1995-2004 Baratz Servicios de Teledocumentación, S.A. http://www.baratz.es -->
+
+
+<!-- FUNCION PIE -->
+    
+
+
+
+                 
+
+
+
+
+
+
+<script language="JavaScript" type="text/javascript">
+	cargaLegSesion('null')
+</script>
+ 
+<!-- FIN  PIE   -->
+        <div id="PIE_POPUP">
+		<p><span lang="es">Congreso de los Diputados</span> · C/Floridablanca s/n - 28071 - MADRID ·<u> <a style="color:#FFFFFF" href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Publicaciones/Aviso_Legal">Aviso Legal</a></u></p>
+	</div>
+
+</div></div></div></td></tr>
+</tbody></table>
+</div></td></tr>
+<tr>
+<td colspan="1" style="width:100%;"><img src="/images/pobtrans.gif" height="4" width="1" alt="" style="display:block" /></td>
+</tr>
+</tbody></table><!-- show footer template = 1824729544 -->
+</td>
+      </tr>
+    </tbody></table>
+  </td></tr>
+</tbody></table>
+</div>
+
+
+<!-- Page Metadata Generated On: 20-MAR-2015:02:07:58  Time Taken: 30 msecs -->
+</body></html>

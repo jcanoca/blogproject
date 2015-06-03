@@ -1,0 +1,970 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head>
+<style>
+body{float:left;font-size:62.5%;font-family: Arial, Verdana, Helvetica, sans-serif;}
+blockquote{margin:0px;padding:0px;border:0px;list-style-type:none; }
+a{text-decoration:none; color:#626469;}
+a:hover{text-decoration:underline;font-weight:normal;color:#626469;}
+a:active{text-decoration:none;font-weight:normal;color:#000000;}
+</style>
+<title>PopUpCGI</title>
+<link href="/wc/htdocs/web/css/congreso.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/portada.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/prensa.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/apps.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/wc/htdocs/web/js/wc.js" language="JavaScript"></script>
+<style type="text/css">.GroupHeaderid1siteid73{Background-Color:#336699;Height:20px;Text-Align:left;}
+.GroupHeaderLinkid1siteid73{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.GroupHeaderTextid1siteid73{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.RegionHeaderid1siteid73{Background-Color:#b29200;Height:20px;Text-Align:left;}
+.RegionHeaderTextid1siteid73{Color:#ffffff;Font-Family:Verdana;Font-Size:10px;Font-Weight:Bold;}
+.Bodyid1siteid73{Background-Color:#FFFFFF;}
+.ArchivoAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.AudioFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.AudioNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo1Pieid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo1Region3id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo2Pieid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo2Region3id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo3Pieid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.ComprobacionSelladoid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Concesionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Convocatoriaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Correcciondeerroresid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.CuartoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescNotaPrensaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.Descripcionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.DescripcionAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescripcionBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescripcionDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Destinoid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DiaSemanaAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DiaSemanaCanalid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnPortadaAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnPortadaNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnVentanaNuevaAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnVentanaNuevaNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Enlaceid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnlaceAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnlaceURLNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EtiquetaArchivoAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EtiquetaEnlaceNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EtiquetaURLNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EtiquetadelEnlacedelAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Faxid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Fax2id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaCanalid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaFotonoticiaid1siteid73{Color:#b29200;Font-Family:Arial;Font-Size:11px;}
+.FechaFotonoticiaPresidenciaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaMenuCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaNotaPrensaid1siteid73{Color:#b29200;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.FechaNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaRuedaPrensaid1siteid73{Color:#b29200;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.Foto1descargaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto1emergenteid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto1thumbnailid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto2descargaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto2emergenteid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto2thumbnailid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FotoEmergenteNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FotoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.GraficoFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.GraficoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Grupoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Horaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.HoraAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.HoraCanalid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.ImagenDiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.InformacionGeneralid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.InstruccinArchivo1id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.InstruccinArchivoIIid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Intervinienteid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.JefedeCocinaMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LineaAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LineaCanalid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.ListaPuestoMiembroDiputadoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.ListaPuestoMiembroSenadoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Listadebecariosparticipantesid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Lugarid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.LugarAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LugarCanalid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Mail1id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Mail2id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Mail3id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Mail4id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Nombreid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.NombreBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NombreDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NombreMiembroid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.NumeroOrdenAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NumeroOrdenImagenid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NumeroOrdenNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PDFBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PDFDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PaginaBOCGBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PieImagenid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato1Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato2Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato3Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato4Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlatoSaludableMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Programaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PuestoMiembroDiputadoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.PuestoMiembroSenadoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.QuintoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.RefBOEid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.RefBOEIIid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlato1Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlato2Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlatoSaludableMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SeptimoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SextoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SiglasBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SiglasDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SugerenciaCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TargetNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Telefonoid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Telefono2id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaRuedaPrensaid1siteid73{Color:#000000;Font-Family:Arial;Font-Size:11px;}
+.TercerPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TextoAlternativoFoto1Fotonoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TextoAlternativoFoto2Fotonoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TextoAlternativoFotoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TitularFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Tituloid1siteid73{Color:#626469;Font-Family:Arial, Helvetica;Font-Size:11px;Font-Weight:Bold;}
+.TituloAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TituloImagendelDiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TituloNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TituloNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.URLEnlaceNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.VideoFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.VideoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Visitasid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.authorid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.createdateid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.creatorid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.defaultattributeid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.descriptionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.documentsizeid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.expiredateid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.inplacedisplayid1siteid73{Color:#000000;Font-Family:Arial;Font-Size:11px;}
+.itemfunctionid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.keywordsid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.listaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.perspectivesid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.scoreid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.subpagetitleid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.titleid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.titleorimageid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.wwsbr_category_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_charset_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_image_or_title_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_img_or_title_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_itemtype_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_mime_type_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_page_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_pagegroup_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_publishdate_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_and_img_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_updatedate_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_updator_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_version_number_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LeftCurve{}
+.PortletBodyColor{}
+.PortletHeaderColor{Background-Color:#b29200;}
+.PortletHeaderLink{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletHeaderStyle{}
+.PortletHeaderText{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:10pt;Font-Weight:Bold;}
+.PortletHeading1{Color:#336699;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.PortletHeading2{Color:#336699;Font-Family:Arial, Helvetica;Font-Size:8pt;Font-Weight:Bold;}
+.PortletHeading3{Color:#336699;Font-Family:Arial, Helvetica;Font-Size:7pt;Font-Weight:Bold;}
+.PortletHeading4{Color:#336699;Font-Family:Arial, Helvetica;Font-Size:7pt;Font-Weight:Bold;}
+.PortletSubHeaderColor{Background-Color:#EEEEDD;}
+.PortletSubHeaderLink{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:9pt;}
+.PortletSubHeaderText{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:9pt;}
+.PortletText1{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletText2{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletText3{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:7pt;}
+.PortletText4{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:7pt;}
+.RightCurve{}
+.LeftSubTabid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFsl.gif);Background-Position:left top;Background-Repeat:no-repeat;}
+.LeftTabBgSlantid1siteid73{Background-Attachment:scroll;Background-Color:#CCCC99;Background-Image:url(http://www.congreso.es/images/FFFFFFtl.gif);Background-Position:left top;Background-Repeat:no-repeat;}
+.LeftTabForeSlantid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFtl.gif);Background-Position:left top;Background-Repeat:no-repeat;}
+.RightSubTabid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFsr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.RightTabBgCurveid1siteid73{Background-Attachment:scroll;Background-Color:#CCCC99;Background-Image:url(http://www.congreso.es/images/FFFFFFtr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.RightTabForeCurveid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFtr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.SubTabBgTextid1siteid73{Color:#CCCC99;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:11pt;Font-Weight:Bold;}
+.TabBackgroundColorid1siteid73{Background-Color:#CCCC99;}
+.TabBackgroundTextid1siteid73{Color:#003366;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:10pt;}
+.TabForegroundColorid1siteid73{Background-Color:#336699;}
+.TabForegroundTextid1siteid73{Color:#FFFFFF;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:10pt;Font-Weight:Bold;}
+.portlet-font{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-font-dim{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-status{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-info{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-error{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-alert{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-success{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-header{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:9pt;    Font-Weight:Bold;    }
+.portlet-section-body{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-alternate{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-selected{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-subheader{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    Font-Weight:Bold;    }
+.portlet-section-footer{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-text{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-header{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:9pt;    Font-Weight:Bold;    Background-Color:#EEEEDD;    }
+.portlet-table-body{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-alternate{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-selected{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-subheader{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    Font-Weight:Bold;    }
+.portlet-table-footer{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-text{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-input-field{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-button{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-icon-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-dlg-icon-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-field-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-field{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.RegionNoBorder{}
+.RegionBorder { border:#b29200  1px solid; }
+.RegionHeaderColor { border:#b29200 0px solid;}
+.PageColor { background-color:#FFFFFF}
+ </style>
+</head>
+<body leftmargin="0" rightmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+<div id="texto_parrafo">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
+  <tbody><tr valign="top"><td align="center" valign="top">
+    <table width="500" cellpadding="0" cellspacing="0" border="0" height="100%">
+      <tbody><tr>
+        <td align="center" width="500" height="100%" valign="top">
+<iframe id="portalIFrame" title="" frameborder="0" width="0" height="0" src="/images/pobtrans.gif"></iframe><script type="text/javascript" src="http://www.congreso.es/portal/pls/portal/PORTAL.wwsbr_javascript.page_js?p_language=e&amp;p_version=10.1.4.2.0.197">
+&lt;!-- Comment out script for old browsers
+//--&gt;
+</script>
+<table width="100%" id="rg88017" border="0" cellpadding="0" cellspacing="0" summary=""><tbody><tr align="LEFT">
+<td valign="top" style="padding:4px 4px 0px 4px;width:100%;"><div id="p73_2138133_73_2138049_2138049"><table border="0" width="100%" cellpadding="0" cellspacing="0" class="RegionNoBorder"><tbody><tr><td class="RegionHeaderColor" width="100%" dir="LTR"><div id="pcnt73_2138133_73_2138049_2138049">
+
+
+
+
+
+
+
+  
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+        <title>Listas de valores</title>
+        <script language="JavaScript" type="text/javascript" src="/wc/htdocs/web/js/wc.js"></script> 
+		<link type="text/css" href="/wc/htdocs/web/css/apps.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/congreso.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/portada.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/prensa.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/texto_integro.css" rel="STYLESHEET" />   
+
+
+<script>
+function opcionesVentana(){
+
+window.resizeTo(630,520);
+}
+
+window.onload = function(){
+    opcionesVentana();
+}
+
+</script>
+	<div id="CONGRESO_TEXTO_INTEGRO_POPUP">
+            <div id="CABECERA_TEXTO_POPUP">
+                    <div class="cabecerah1"><img src="/wc/htdocs/web/img/logo_mini.gif" alt="Congreso de los Diputados" border="0" /></div>
+                    <div class="btn_cerrar" title="Cerrar">
+                        <p><img src="/wc/htdocs/web/img/ico_cerrar.gif" width="9" height="9" alt="Cerrar" /> <a href="javascript:window.close();" title="Cerrar">Cerrar</a></p>                   
+                    </div>
+                    
+                    <div class="fincabecera"> </div>
+            </div>
+
+
+
+    <div id="CONGRESO_TEXTO_INTEGRO_POPUP"> <div id="CABECERA_TEXTO_POPUP"> DS. Congreso de los Diputados, Pleno y Dip. Perm., núm. 227, de 14/10/2014 </div><div id="CABECERA_TEXTO_POPUP">cve:
+    DSCD-10-PL-227 </div> <div class="fincabecera"> </div> </div> <!-- CONGRESO_TEXTO_INTEGRO --> <div id="TEXTOS_POPUP">	<br />
+    	<div class="titular_texto"><br />CORTES GENERALES
+
+    <br />DIARIO DE SESIONES DEL CONGRESO DE LOS DIPUTADOS
+
+    <br />PLENO Y DIPUTACIÓN PERMANENTE
+    </div>
+
+    <div class="subtitular_texto"><br />Año 2014 X LEGISLATURA Núm.  227
+    <br />PRESIDENCIA DEL EXCMO.  SR.  D. JESÚS POSADA MORENO
+    <br />Sesión plenaria núm.  215
+    <br />celebrada el martes,
+    <br />14 de octubre de 2014</div>
+          	<div class="texto_completo"><br /><br />ORDEN DEL DÍA:
+
+    <br /><br />Juramento o promesa de acatamiento de la Constitución por nuevos señores
+    diputados ... <a href="#(Página2)">(Página2)</a>
+
+    <br /><br />Elección de miembros del Consejo de Administración de la Corporación RTVE:
+
+    <br /><br />- Elección de un miembro del Consejo de Administración de la Corporación
+    RTVE. (Número de expediente 276/000001) ... <a href="#(Página2)">(Página2)</a>
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página2)"><b>Página
+    2</b></a></p><br />
+
+    <br /><br />SUMARIO
+
+    <br /><br />Se abre la sesión a las doce del mediodía.
+
+    <br /><br />Juramento o promesa de acatamiento a la Constitución por nuevos señores
+    diputados ... <a href="#(Página2)">(Página2)</a>
+
+    <br /><br />Elección de miembros del Consejo de Administración de la Corporación RTVE
+    ... <a href="#(Página2)">(Página2)</a>
+
+    <br /><br />Elección de un miembro del Consejo de Administración de la Corporación
+    RTVE ... <a href="#(Página2)">(Página2)</a>
+
+    <br /><br />En turno de fijación de posiciones intervienen los señores Baldoví Roda y
+    Larreina Valderrama, del Grupo Parlamentario Mixto; la señora Lozano
+    Domingo, del Grupo Parlamentario de Unión Progreso y Democracia; el señor
+    Sixto Iglesias, del Grupo Parlamentario de IU, ICV-EUiA, CHA: La
+    Izquierda Plural; la señora Surroca i Comas, del Grupo Parlamentario
+    Catalán (Convergència i Unió), y los señores Gordo Pérez, del Grupo
+    Parlamentario Socialista, y Moreno Bustos, del Grupo Parlamentario
+    Popular en el Congreso.
+
+    <br /><br />Sometida a votación la elección de miembros del Consejo de Administración
+    de la Corporación RTVE, y no habiendo alcanzado la mayoría de dos tercios
+    requerida en esta primera votación, se procederá a una segunda votación
+    en sesión plenaria el próximo jueves, una vez transcurridas las
+    veinticuatro horas legalmente previstas.
+
+    <br /><br />Se levanta la sesión a la una y quince minutos de la tarde.
+
+    <br /><br />Se abre la sesión a las doce del mediodía.
+
+    <br /><br />JURAMENTO O PROMESA DE ACATAMIENTO DE LA CONSTITUCIÓN POR NUEVOS SEÑORES
+    DIPUTADOS.
+
+    <br /><br />El señor PRESIDENTE: Se abre la sesión.
+
+    <br /><br />Con carácter previo vamos a proceder al juramento o promesa de acatamiento
+    de la Constitución conforme al artículo 20.1.3.º del Reglamento.
+
+    <br /><br />En sustitución de don Alberto Ruiz-Gallardón Jiménez, pregunto a doña
+    María Valentina Martínez Ferro si jura o promete acatar la Constitución.
+
+    <br /><br />La señora MARTÍNEZ FERRO: Juro.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias. Doña María Valentina Martínez Ferro
+    ha adquirido la condición plena de diputada. Enhorabuena. (Aplausos).
+
+    <br /><br />ELECCIÓN DE MIEMBROS DEL CONSEJO DE ADMINISTRACIÓN DE LA CORPORACIÓN RTVE:
+
+    <br /><br />- ELECCIÓN DE UN MIEMBRO DEL CONSEJO DE ADMINISTRACIÓN DE LA CORPORACIÓN
+    RTVE. (Número de expediente 276/000001).
+
+    <br /><br />El señor PRESIDENTE: La presente sesión tiene como único punto del orden
+    del día la elección de un miembro del Consejo de Administración de
+    Radiotelevisión Española. La elección se hará por el sistema establecido
+    en el artículo 205 en relación con el 204 del Reglamento, resultando
+    elegido aquel candidato que obtenga en primera votación al menos una
+    mayoría de dos tercios, es decir, 234 votos.
+
+    <br /><br />La Comisión Consultiva de Nombramientos, en su reunión del miércoles 8 de
+    octubre, ha emitido criterio mayoritario favorable respecto a la
+    idoneidad de dos candidatos: don Francisco Javier Montemayor
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página3)"><b>Página
+    3</b></a></p><br />
+
+    <br /><br />Ruiz, propuesto por el Grupo de Unión Progreso y Democracia, y don José
+    Antonio Sánchez Domínguez, propuesto por el Grupo Popular. Va a haber un
+    turno de palabra de cinco minutos, quiero recordárselo así a los que
+    intervienen. En primer lugar, por el Grupo Mixto, tiene la palabra el
+    señor Baldoví.
+
+    <br /><br />El señor BALDOVÍ RODA: Muchas gracias, señor presidente.
+
+    <br /><br />Intervengo desde el escaño y muy brevemente. Nos reunieron la semana
+    pasada para hablar de regeneración democrática, tuvimos reunión y
+    estuvimos hablando de consenso, de hacer reuniones para tomar diferentes
+    decisiones que afectaban a un tema tan importante como es la regeneración
+    democrática. (Rumores). Hoy nos traen la propuesta de un señor, el
+    candidato que presenta el Partido Popular, que tiene el honor de haber
+    trabajado para el Partido Popular, de aparecer en los papeles Gürtel...
+    (Continúan los rumores).
+
+    <br /><br />El señor PRESIDENTE: Perdón, señor diputado.
+
+    <br /><br />Por favor, ruego silencio para que se le escuche al señor Baldoví.
+
+    <br /><br />El señor BALDOVÍ RODA: Muchas gracias.
+
+    <br /><br />Insisto, ha trabajado para el Partido Popular, aparece en los papeles
+    Gürtel, ha dirigido Telemadrid, que junto con Canal Nou tienen el triste
+    honor de ser las televisiones más partidistas y más manipuladoras, y
+    además -creo que esto es lo más importante- se trae aquí un candidato que
+    va a presidir en el futuro Radiotelevisión Española sin ningún consenso.
+    A veces cuando se habla de las diferencias entre la BBC y la
+    Radiotelevisión Española, se habla del prestigio, del prestigio que tiene
+    una y del prestigio que no tiene otra, y el prestigio evidentemente
+    comienza con una elección de sus consejeros limpia, imparcial y
+    profesional, todo lo contrario que aquí, que es una elección contaminada,
+    parcial y partidista. Por tanto, los ciudadanos británicos perciben que
+    la BBC está al servicio de los ciudadanos y los ciudadanos españoles
+    percibimos que Radiotelevisión Española está al servicio del Partido
+    Popular. En consecuencia -acabo-, no nos hablen de regeneración
+    democrática cuando siguen queriendo convertir Radiotelevisión Española en
+    su cortijo particular.
+
+    <br /><br />Muchas gracias.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Baldoví.
+
+    <br /><br />También por el Grupo Mixto tiene la palabra el señor Larreina.
+
+    <br /><br />El señor LARREINA VALDERRAMA: Muchas gracias, señor presidente.
+
+    <br /><br />Señorías, estamos ante un trámite que creo que es un triste trámite,
+    porque al final se va a utilizar el procedimiento democrático para
+    devaluar la democracia. Creo que se ha perdido la oportunidad de buscar
+    consensos en un ámbito importante, que es el ámbito de los medios de
+    comunicación pública, porque ahí está en cuestión algo fundamental en
+    democracia, que es la libertad de información y el derecho que tiene toda
+    la ciudadanía a acceder a la información. El otro día asistimos a un
+    espectáculo verdaderamente deplorable, en la presentación de los dos
+    candidatos, por parte de uno de los candidatos. Hay que agradecer a UPyD
+    -espero que no sea una tacha para ustedes- el esfuerzo que hicieron y el
+    procedimiento que llevaron a cabo a la hora de presentar un candidato
+    independiente, que creo que es el esfuerzo que se debería haber hecho por
+    parte del grupo mayoritario.
+
+    <br /><br />Ustedes, el Partido Popular, a quienes tanto se les llena la boca con las
+    palabras ley y el cumplimiento de la ley, están incumpliendo
+    continuamente la ley. Están incumpliendo la Ley de creación del ente de
+    Radiotelevisión Española. Están incumpliendo algo que a ustedes les
+    debería parecer mucho más grave, están incumpliendo su propia
+    Constitución, porque su trayectoria al frente del ente público de
+    Radiotelevisión Española en estos tres años se ha caracterizado por una
+    flagrante vulneración de los derechos y deberes fundamentales recogidos
+    en el artículo 20 de su propia Constitución, en el que dice que se
+    garantizará a los grupos sociales y políticos significativos el acceso a
+    los medios de comunicación social dependientes del Estado o de cualquier
+    ente público. Han incumplido también de forma flagrante los artículos 2 y
+    3 de la Ley de la radio y la televisión de titularidad estatal y los
+    artículos 16.4 y 20.1 referidos al Consejo de Administración y a la
+    presidencia de ese Consejo de Administración. Lo han hecho con total
+    desparpajo, con total descaro y lo han hecho, referente por ejemplo a
+    nuestro grupo, vetándonos el acceso a los medios de comunicación pública
+    y, miren ustedes, la ciudadanía de su país, la ciudadanía del Estado
+    español tiene derecho a conocer de primera mano lo que pensamos para
+    podernos juzgar, para poder decir si están de acuerdo o no están de
+    acuerdo con lo que proponemos, y ustedes están privando a su propia
+    ciudadanía de ese derecho.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página4)"><b>Página
+    4</b></a></p><br />
+
+    <br /><br />Al final, ustedes con su actitud lo que están transmitiendo es que tienen
+    un desprecio muy grande a su propia ciudadanía, porque piensan que son
+    menores de edad, porque piensan que tienen que estar tutelados y porque
+    piensan que la información que reciben tiene que estar pasada por el
+    tamiz de la censura y yo creo que eso es grave en democracia. Por eso,
+    ese acto que se va a producir aquí de votar al presidente del Consejo de
+    Administración, es un acto muy débil desde el punto de vista democrático,
+    por todo lo que hay alrededor. Es una democracia formal, casi una
+    democracia orgánica más que una auténtica democracia. Por eso con mi
+    intervención quiero llevarles a esa reflexión. Tengan ustedes en cuenta
+    que la ciudadanía del Estado español, como la ciudadanía catalana y como
+    la ciudadanía de Euskal Herria, es mayor de edad, no necesita ser
+    tutelada, tiene criterio propio y tiene derecho precisamente a recibir
+    toda la información para juzgar y tomar sus decisiones con libertad, y
+    eso ustedes lo están impidiendo. Por eso nosotros no vamos a participar
+    en esta votación.
+
+    <br /><br />Muchas gracias, señor presidente.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Larreina.
+
+    <br /><br />Por el Grupo de Unión Progreso y Democracia, tiene la palabra la señora
+    Lozano.
+
+    <br /><br />La señora LOZANO DOMINGO: Muchas gracias, señor presidente.
+
+    <br /><br />Señorías, en medio de una crisis sanitaria nacional, el Partido Popular
+    fuerza este Pleno extraordinario y extemporáneo no para referirse a esa
+    crisis sanitaria que preocupa a los ciudadanos y no para referirse a la
+    enfermedad del Ébola que ya tenemos en España también, sino para debatir
+    sobre lo que le preocupa al Partido Popular, que es cómo poner al
+    comisario político de turno a dedo en la radiotelevisión pública para que
+    en el último año, en la recta final hacia las elecciones del año próximo,
+    le rinda los servicios que el Partido Popular espera de una
+    radiotelevisión pública cuyo concepto ya sabemos que no lo tiene
+    demasiado bueno. Una vez más fuerzan el debate sobre lo que les preocupa
+    a ustedes y no sobre lo que preocupa a los ciudadanos. Séptimo año de la
+    crisis y aún no han aprendido a debatir sobre los problemas que preocupan
+    a los ciudadanos, y no para solucionar sus propios problemas como
+    partido, que son amplios y profundos.
+
+    <br /><br />En este debate extraordinario tenemos la posibilidad todos los diputados
+    aquí presentes, en el ejercicio de nuestro derecho individual del voto,
+    de elegir entre dos candidatos que se proponen hoy aquí para votar. Uno
+    es, como decía, el comisario político puesto por el Gobierno o que el
+    Gobierno quiere poner, cuyo principal aval es ser el liquidador de
+    Telemadrid, de la radiotelevisión pública madrileña. Tiene como gran
+    mérito en su currículum haber despedido al 80 % de la plantilla, haber
+    conseguido que la audiencia, del 6,4 %, pase a ser del 3,9 %, es decir,
+    haberla reducido casi a la mitad, y tiene también un mérito añadido, que
+    es figurar en los papeles de Bárcenas, que no sé si es el lugar donde
+    miran ustedes los currículums de sus amigos.
+
+    <br /><br />En contraposición, también existe la posibilidad de votar al candidato que
+    les ofrece hoy Unión Progreso y Democracia. Se trata de Javier
+    Montemayor, un profesional con más de treinta años de experiencia
+    profesional acreditada y al que yo quiero desde esta tribuna agradecer su
+    participación en el proceso de selección de personal que puso en marcha
+    mi partido. Le quiero agradecer a él y al resto de los profesionales que
+    tuvieron la gentileza de enviarnos su currículum para que pudiéramos
+    llevar a cabo ese proceso de selección absolutamente imparcial, basado en
+    criterios profesionales, que permiten que hoy exista un candidato al que
+    votar que garantizaría la independencia y la profesionalidad de esa
+    radiotelevisión pública. Es un hecho insólito en décadas en democracia
+    que en esta Cámara se pueda votar a una persona que ha obtenido el
+    dictamen de idoneidad de la Comisión de Nombramientos por unanimidad,
+    cosa que no le ocurre al comisario político del Gobierno, y que además
+    ustedes tienen hoy la ocasión de votar. Es un hecho insólito que haya
+    llegado hasta aquí su nombre mediante un procedimiento independiente e
+    imparcial de selección de candidatos. El señor Montemayor, como digo,
+    tiene una trayectoria de treinta años de profesión que le avalan y que
+    quedó de manifiesto en su intervención en la Comisión de Nombramientos
+    hasta tal punto que fue señalado por diputados de todos los grupos
+    parlamentarios. Algunos lo dijeron en público y otros lo dijeron en
+    privado, pero su profesionalidad quedó acreditada en esa Comisión con ese
+    dictamen de unanimidad y con el criterio así emitido por parte de
+    numerosos diputados. Por cierto, a pesar de la basura que algunos
+    intentaron lanzar sobre él, el ERE, el haber salido de esa casa, de
+    Radiotelevisión Española, mediante el ERE no le impide ser presidente de
+    esa casa; en todo caso, le pone ciertas restricciones para trabajar, pero
+    no para ser presidente, así que agradecería que no insistieran en ese
+    argumento espurio.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página5)"><b>Página
+    5</b></a></p><br />
+
+    <br /><br />Como digo, una vez que hemos llegado hasta aquí, solo se necesita su voto
+    para que los ciudadanos de este país puedan disfrutar de un profesional
+    al frente de Radiotelevisión Española que tiene acreditados méritos
+    profesionales y que tiene acreditada su independencia, puesto que no le
+    une ninguna relación con este grupo. Hemos llegado al momento en el que
+    los ciudadanos pueden ver con toda claridad que tendríamos un presidente
+    de la radiotelevisión pública independiente si ustedes lo votaran, porque
+    muchos ciudadanos tal vez no sepan cuál es el procedimiento exacto por el
+    que se elige presidente. Pues bien, ya hemos llegado hasta aquí, tenemos
+    dos candidatos a los que se les ha reconocido la idoneidad y en este
+    momento depende solamente de su voto, señorías, que tengamos por primera
+    vez un profesional independiente al frente de la radiotelevisión pública.
+    Les quiero pedir a todos ustedes que voten en conciencia. Apelo a su
+    conciencia porque sé que ustedes, todos, son muy conscientes de lo que
+    nos jugamos en los próximos meses. Son muy conscientes de que en este
+    momento crítico para nuestro país tener una televisión pública y una
+    radio pública que garanticen el derecho a la información de todos los
+    ciudadanos puede resultar crucial para nuestra democracia; que poder
+    ejercitar ese derecho, que los ciudadanos puedan acceder a la información
+    que ofrece una radiotelevisión pública de manera imparcial es crucial
+    para que nuestra democracia salga fortalecida en los próximos meses.
+
+    <br /><br />Muchas gracias, presidente. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Lozano.
+
+    <br /><br />Por el Grupo de La Izquierda Plural, tiene la palabra el señor Sixto.
+
+    <br /><br />El señor SIXTO IGLESIAS: Gracias, señor presidente.
+
+    <br /><br />Desgraciadamente, señora Lozano, hoy estamos aquí ante un mero trámite.
+    Por muy magníficos discursos que hagamos esta mañana ante el Pleno de la
+    Cámara, desgraciadamente la decisión está tomada y el Grupo Popular va a
+    votar lo que va a votar. Hoy no lo conseguirá, porque la norma requiere
+    una mayoría cualificada, que no se va a alcanzar, pero el próximo jueves
+    tendrán la mayoría absoluta que les garantiza que la decisión que ya han
+    tomado la van a sacar adelante. Para nosotros es una vuelta al pasado. Es
+    el triunfo de una parte del Partido Popular, que ha sacrificado al
+    anterior presidente del consejo, al señor Echenique, que por lo visto no
+    estaba haciendo las cosas a plena satisfacción del sector más duro del
+    Partido Popular, que ahora sí que ve triunfar sus tesis aupando otra vez
+    a la presidencia -como miembro del consejo primero y posteriormente a la
+    presidencia del consejo, un consejo que no tiene elegidos todos sus
+    miembros, dicho sea de paso- a la misma persona que protagonizó aquella
+    triste y oscura etapa de 2002 a 2004, una etapa de manipulación, una
+    etapa de oscurantismo, una etapa de medias verdades, que llevó a la
+    condena al ente incluso por manipulación informativa, que terminó, en
+    aquella desgraciada y muy triste etapa de los atentados terroristas del
+    11-M, con el mayor nivel de manipulación informativa que ha conocido la
+    democracia española. Pues bien, al máximo responsable, al máximo
+    protagonista de esa manipulación se le vuelve a presentar -definimos
+    nosotros- con total descaro ante esta Cámara, y digo con total descaro
+    porque la verdad es que esa fue la actitud de don José Antonio Sánchez
+    ante la Comisión de Nombramientos, primero presentándonos un currículum
+    que -ya lo he dicho más de una vez y más de dos- si se enviase a
+    cualquier empresa, se rechazaría y se tiraría directamente a la papelera.
+    Esta no es forma de presentarse ante la Cámara depositaria de la
+    soberanía nacional. Pero luego además, cuando vino a la Comisión, lo hizo
+    con una actitud absolutamente inapropiada para alguien que aspira a
+    formar parte del consejo de la radiotelevisión pública española y después
+    a presidirlo. Vino con una actitud de prepotencia y de autosuficiencia
+    más propia de un diputado del Grupo Popular que pretende hacer oposición
+    al Gobierno anterior que de quien aspira a presidir la radiotelevisión
+    pública con unos mínimos criterios de calidad y de respeto a las normas
+    que fundamentan la casa de la radiotelevisión pública española.
+
+    <br /><br />Don José Antonio Sánchez, que va a ser investido después de todo este
+    proceso -ya lo han dicho otros portavoces- ha sido un mercenario del
+    Partido Popular como periodista y ha cobrado no sabemos si en A o en B,
+    pero lo cierto es que aparece en los papeles de Bárcenas como perceptor
+    de un sueldo. Y en la propia Comisión asumió que mientras había estado
+    trabajando para un medio informativo había cobrado también del Partido
+    Popular, algo que dice muy poco a favor de su ética. Ha sido condenado
+    dos veces, ha sido condenado por manipulación informativa y por la
+    cuestión de los ERE. Ha sido protagonista, en la gestión de Telemadrid,
+    de un ERE que ha tirado a la calle y ha producido una limpieza
+    directamente de todos los que no pensaban como él, porque eso es lo que
+    ha hecho el Partido Popular en Telemadrid, llevándola a los mayores
+    niveles de manipulación informativa que ha conocido una televisión
+    pública en España, incluso mayores que los de Canal Nou, que es otra de
+    las televisiones públicas españolas que el
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página6)"><b>Página
+    6</b></a></p><br />
+
+    <br /><br />Partido Popular se ha preocupado de arruinar, de defenestrar y de
+    finalmente cerrar. Nos tememos que hoy sea ese el camino que va a llevar
+    la radiotelevisión pública española después de esta decisión, de esta
+    triste decisión del Partido Popular de volver a nombrar a don José
+    Antonio Sánchez para esta responsabilidad.
+
+    <br /><br />Como no nos parece alternativa suficiente votar en contra -y la verdad es
+    que puede ser loable el ofrecimiento que ha hecho el Grupo de Unión
+    Progreso y Democracia de presentar a un técnico como oveja en el altar
+    del sacrificio para su votación-, mi grupo parlamentario anuncia su
+    máximo rechazo, que solamente lo puede cifrar en rechazar la
+    participación en esta votación paripé después de que el Partido Popular
+    echa por la borda cualquier posibilidad de llegar a un acuerdo por la tan
+    cacareada regeneración democrática. Una vez más, con este hecho, el
+    Partido Popular vuelve a clavar un nuevo clavo en la tapa del ataúd de
+    ese pacto de la regeneración democrática, así que mi grupo parlamentario,
+    el Grupo de La Izquierda Plural, se ausentará de esta votación y no
+    participará en las sucesivas votaciones, pues ya está marcado el destino
+    final por parte de un Partido Popular que, como en la mayoría de las
+    ocasiones, ni siquiera escucha lo que se dice desde esta tribuna.
+
+    <br /><br />Muchas gracias, señor presidente. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Sixto.
+
+    <br /><br />Por el Grupo Catalán de Convergència i Unió, tiene la palabra la señora
+    Surroca.
+
+    <br /><br />La señora SURROCA I COMAS: Gracias, señor presidente.
+
+    <br /><br />Señorías, hoy, al abordar este debate sobre la elección de un miembro del
+    Consejo de Administración de Radiotelevisión Española, no podemos
+    prescindir de las circunstancias en las que se produce. Como bien saben,
+    ha dimitido el hasta ahora presidente de la Corporación de
+    Radiotelevisión Española, por lo tanto, nos encontramos ante una
+    situación que podríamos calificar como excepcional. (Rumores). Además,
+    las circunstancias que acompañan esta dimisión son también relevantes. En
+    primer lugar, Radiotelevisión Española atraviesa una compleja y muy
+    difícil situación financiera. (Continúan los rumores).
+
+    <br /><br />El señor PRESIDENTE: Perdón, señora diputada.
+
+    <br /><br />Por favor, ruego silencio.
+
+    <br /><br />Continúe.
+
+    <br /><br />La señora SURROCA I COMAS: Gracias, señor presidente.
+
+    <br /><br />En segundo lugar, está la repercusión que tiene esa compleja situación
+    financiera en la competitividad y en la audiencia del ente público. En
+    tercer lugar, desde nuestro punto de vista, Radiotelevisión Española en
+    los últimos tiempos tiene una deriva en la cual falta mucho a la
+    objetividad necesaria en cualquier ente de comunicación público; también
+    falta a la neutralidad informativa y a la necesaria pluralidad. Deja
+    mucho que desear en esos aspectos y podríamos decir, en palabras de uno
+    de los candidatos que se presentó en la Comisión de Nombramientos la
+    semana pasada, que no es la televisión de todos, no es una televisión
+    para todos. Esto nos preocupa. También nos preocupa que el candidato
+    propuesto por el Grupo Popular, cuya elección se va a someter a votación,
+    no nos dio luz sobre todos los interrogantes en los que en estos momentos
+    se encuentra Radiotelevisión Española. Nos preocupó mucho que no nos
+    dijera cuál era su programa, cuáles eran sus planes de futuro ante esa
+    complejidad, qué pensaba hacer ante las dificultades financieras o cómo
+    las iba a abordar, qué iba a hacer el candidato para mejorar la
+    competitividad de Radiotelevisión Española, cómo pensaba abordar la
+    mejora absolutamente imprescindible y necesaria que requiere el ente
+    público en cuanto a la neutralidad y la pluralidad, qué iba a hacer en
+    relación con cuestiones que tradicionalmente preocupan a nuestro grupo
+    parlamentario como por ejemplo el centro de Sant Cugat, qué iba a hacer
+    con Radio 4, si iba a mejorar la programación con desconexiones en
+    catalán. Todas estas cuestiones que preocupan mucho a Convergència i Unió
+    no fueron abordadas por el candidato del Grupo Parlamentario Popular y
+    esta es una cuestión que evidentemente nos preocupa.
+
+    <br /><br />En definitiva, desde nuestro grupo parlamentario no podemos aplaudir ni
+    tampoco podemos apoyar la propuesta que hoy se nos presenta. Por esta
+    razón, en los mismos términos que ya nos expresamos en la Comisión de
+    Nombramientos, queremos poner de manifiesto nuestras serias dudas ante
+    las candidaturas que se nos han presentado.
+
+    <br /><br />Muchas gracias.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página7)"><b>Página
+    7</b></a></p><br />
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Surroca.
+
+    <br /><br />Por el Grupo Parlamentario Socialista, tiene la palabra don Juan Luis
+    Gordo.
+
+    <br /><br />El señor GORDO PÉREZ: Gracias, señor presidente.
+
+    <br /><br />Señoras y señores diputados, y diputadas y diputados especialmente del
+    Grupo Popular, Televisión Española se encuentra en el momento más crítico
+    de su historia. Su credibilidad, la audiencia de sus programas y sus
+    informativos están más bajos que nunca. Está, además, asfixiada
+    económicamente como consecuencia de los recortes del Gobierno.
+    Radiotelevisión Española se ha alejado del modelo europeo de
+    radiotelevisión pública. En estos momentos la independencia, la
+    neutralidad y el pluralismo que hubo durante los Gobiernos socialistas
+    han desaparecido por el control de la radiotelevisión pública por parte
+    del Partido Popular y grupos afines. Por eso les digo especialmente a
+    ustedes que es el momento de subsanar errores. Es el momento de abandonar
+    la televisión de partido. Es el momento, sobre todo, de devolver al
+    Parlamento el control de la radiotelevisión pública, algo que, por otra
+    parte, ha sido nuestro mínimo común denominador en la negociación con
+    ustedes. Pero a ustedes no les interesaba negociar, no han querido
+    negociar porque lo que querían era sacar cuanto antes este nombramiento;
+    un nombramiento que, como el anterior, carece de todo tipo de legitimidad
+    democrática. La propuesta que hoy nos presentan ustedes aquí, la de José
+    Antonio Sánchez, es una vuelta al pasado porque ya ha sido director de
+    Radiotelevisión Española entre los años 2002 y 2004. ¿A quién se le puede
+    borrar de la retina de los ojos aquellas imágenes o aquel tratamiento
+    informativo del señor Urdaci del Prestige, de la guerra de Irak o del
+    11-M, o aquella sentencia en la que se refirió al sindicato Comisiones
+    Obreras como CCOO.
+
+    <br /><br />Señoras y señores -y especialmente me dirijo al Grupo Popular-, don José
+    Antonio Sánchez tiene dos señas claras de identidad: una, la manipulación
+    informativa y, otra, la deuda, y con él vuelven la manipulación y la
+    deuda. (Aplausos). Pero además en estos momentos es el actual director de
+    Telemadrid y él mismo se ha definido como el sonajero del Gobierno
+    autonómico en Telemadrid, lo que es tanto como decir que se considera el
+    títere del Gobierno en Radiotelevisión Española. Creo que esto les
+    debiera hacer recapacitar.
+
+    <br /><br />Por otra parte, ya sabemos que viene a dar una vuelta de tuerca más; viene
+    a difundir, como se está haciendo -pero aún con más intensidad- en los
+    informativos territoriales, la política y a los políticos del Partido
+    Popular y a hacer de portavoz del Gobierno en los informativos
+    nacionales, porque ustedes tienen un temor que es perder las próximas
+    elecciones. Pero les digo más, trae un entusiasmo por el ERE, quiere
+    hacer un ERE a lo bestia, como lo ha hecho en Telemadrid; un ERE que
+    ustedes -y si no, desmiéntalo aquí- le han puesto como condición y que al
+    mismo tiempo es un encargo de La Moncloa. Sin duda alguna el señor
+    Montoro ha tenido buen ojo, porque van a poner ustedes al frente a quien
+    generó nada más y nada menos que una deuda de 7.600 millones de euros en
+    la anterior etapa del Partido Popular. Por todo esto nos oponemos, mucho
+    más cuando entre sus avales está aparecer en los papeles de Bárcenas y
+    ser un claro exponente de la puerta giratoria. Más que nunca viene a
+    cuento aquella frase de Albert Camus de que las personas de su generación
+    descubrieron que en España se puede tener razón y ser derrotado. Porque
+    ustedes, con los votos del Grupo Popular, lo mismo pueden nombrar un
+    presidente de Radiotelevisión Española que un cónsul, mucho más cuando se
+    trata de un ferviente militante del Partido Popular, como es el caso.
+
+    <br /><br />Por tanto, la propuesta que ustedes nos presentan hoy aquí no augura
+    apuesta alguna por enderezar el rumbo para recuperar el prestigio ni la
+    audiencia; una apuesta, por cierto, de Mariano Rajoy, no de ningún otro
+    emperador romano; una apuesta para dar respuesta a aquellos que
+    consideran que con este señor en Televisión pueden mejorar sus
+    expectativas electorales. En consecuencia, les pido que recapaciten, les
+    pido que den marcha atrás en este proceso. Es el momento de buscar el
+    consenso, es el momento de apostar por el futuro de la radiotelevisión
+    pública, por el servicio público, y prueba de ello es que en estos
+    momentos va a comenzar...
+
+    <br /><br />El señor PRESIDENTE: Señor Gordo, debe usted terminar.
+
+    <br /><br />El señor GORDO PÉREZ: ... una manifestación de trabajadores de
+    Radiotelevisión Española, porque están muy preocupados por lo que el
+    Partido Popular puede hacer de una televisión pública que es patrimonio
+    de todos los españoles.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página8)"><b>Página
+    8</b></a></p><br />
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Gordo.
+
+    <br /><br />Por el Grupo Popular, tiene la palabra el señor Moreno Bustos.
+
+    <br /><br />El señor MORENO BUSTOS: Señor presidente, señorías, hoy los aguafiestas
+    están de luto y espero que el desahogo haya sido suficiente. La
+    sustitución al frente de Radiotelevisión Española se va a resolver en un
+    tiempo muy razonable, mal que les pese a algunos, y lo vamos a hacer
+    responsablemente, en cumplimiento de las normas y con la convicción de
+    acertar en la elección. Es verdad que el presidente y el resto del
+    Consejo de Radiotelevisión Española son la figura más llamativa de un
+    gran servicio público en el que trabajan 6.400 personas, pero a nosotros
+    nos interesa destacar que, además de resolver rápidamente una interinidad
+    que en su momento -y así quedó demostrado- produjo un daño considerable
+    en Radiotelevisión Española, vamos a proyectarlo desde la estabilidad
+    institucional y la viabilidad que garantizará su futuro. Lo que hoy
+    estamos votando, señorías, es esa estabilidad y esa viabilidad.
+
+    <br /><br />En el fondo teníamos claro que ningún candidato iba a ser del agrado de
+    los principales partidos de la oposición porque ya tenían preparada la
+    misma bienvenida a todos los nombres que se hubieran barajado, y es que
+    se les veía venir de lejos. De nuevo hemos vuelto a escuchar los mismos
+    argumentos antiguos y desfasados, los del miedo, que nada tienen que ver
+    con la realidad que sí les preocupa a los trabajadores de Radiotelevisión
+    Española. Aquí hoy nadie se ha referido a que con este Gobierno no ha
+    habido ni un solo despido en la corporación; hoy aquí nadie se ha
+    preocupado por la rentabilidad social como razón de ser de esta sociedad
+    pública; hoy aquí ningún grupo parlamentario se ha querido referir a lo
+    verdaderamente importante, que es que Radiotelevisión Española siga
+    siendo un instrumento útil y vertebrador para la sociedad española, que
+    siga manteniendo una oferta plural de cadenas y accesos sin rendir otra
+    cuenta que la del cumplimiento de sus mandatos públicos, que siga
+    ofreciendo calidad y que sus objetivos como medio de comunicación no sean
+    otros que los que marcan sus verdaderos propietarios, es decir, la
+    sociedad española.
+
+    <br /><br />Y mientras unos estamos en lo importante, otros están -y lo acaban de
+    demostrar- en los debates pasados, en las propuestas que posibiliten la
+    interrupción de la vida normal de esta sociedad; están en continuar
+    apostando por la parálisis indefinida que proporcionó una ley con trampa
+    que el tiempo ha demostrado que fue una auténtica chapuza y un fracaso
+    palpable. Pero ahí siguen, rebozándose en su error, porque el futuro de
+    Radiotelevisión Española les importa mucho menos que el que se saque bien
+    a su líder y evitar el siete electoral que se barrunta. Ustedes sabrán
+    -nosotros también- por qué lo hacen.
+
+    <br /><br />En todo caso, quiero aprovechar este breve turno para destacar algunos
+    hechos objetivos. Miren, la interinidad ha durado un mes, y aprovecho
+    para felicitar en esta ocasión al presidente en funciones, don José
+    Manuel Peñalosa, por su capacidad para encauzar este periodo de la forma
+    más ágil y positiva posible. Radiotelevisión Española ha recibido el
+    respaldo del Gobierno para garantizar su viabilidad y su futuro, y solo
+    hay que haber escuchado al ministro Cristóbal Montoro y al ministro José
+    Manuel Soria la semana pasada. Cualquier propuesta o suposición de las
+    que se han hecho en los últimos días y que tanto gustan a la oposición
+    serán muy legítimas, pero no responden en forma alguna a la realidad ni a
+    los proyectos de este Gobierno con respecto a Radiotelevisión Española. A
+    su vez, la idoneidad del candidato, el señor Sánchez, está fuera de toda
+    duda en términos de profesionalidad y conocimiento del medio, con
+    independencia de los términos belicosos, incluso a veces insultantes, con
+    los que algunos lo han recibido y que hemos vuelto a escuchar esta misma
+    mañana en este hemiciclo.
+
+    <br /><br />Por último, y no me cansaré de repetirlo, apostamos por una
+    radiotelevisión fuerte, solvente, influyente y rentable para la sociedad
+    española en su conjunto, y como esas premisas y condiciones coinciden
+    plenamente con el candidato propuesto por el Grupo Parlamentario Popular,
+    vamos a apoyar su nombramiento.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Vamos a proceder a la votación para la elección de un
+    miembro del Consejo de Administración de Radiotelevisión Española. (Los
+    señores diputados del Grupo Parlamentario de IU, ICV-EUiA, CHA: La
+    Izquierda Plural y el señor Larreina Valderrama, la señora Fernández
+    Davila y el señor Baldoví Roda, del Grupo Parlamentario Mixto, se
+    ausentan del hemiciclo).
+
+    <br /><br />La votación se hará por el sistema de papeletas. Cada diputado escribirá
+    en la papeleta un nombre. Les recuerdo que solo serán válidas las
+    papeletas que contengan un solo nombre de entre los dos candidatos
+    propuestos, así como las papeletas en blanco. Se ha emitido un voto
+    telemático en esta votación que yo introduciré en su momento en la urna.
+    Vamos a colocar la urna y los señores secretarios procederán al
+    llamamiento de las señoras y los señores diputados.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página9)"><b>Página
+    9</b></a></p><br />
+
+    <br /><br />Por los señores secretarios de la Mesa se procede al llamamiento de las
+    señoras y los señores diputados, quienes van depositando su papeleta en
+    la urna.
+
+    <br /><br />Terminada la votación, se inicia el escrutinio.
+
+    <br /><br />Terminado el escrutinio, dijo
+
+    <br /><br />El señor PRESIDENTE: El resultado de la votación ha sido el siguiente:
+    votos emitidos, 277; votos a favor de don Francisco Javier Montemayor
+    Ruiz, 5; votos a favor de don José Antonio Sánchez Domínguez, 178; votos
+    en blanco, 89; votos nulos, 5. Al no haberse alcanzado la mayoría de dos
+    tercios requerida en primera votación, se procederá a una segunda
+    votación, en el futuro, no hoy, naturalmente.
+
+    <br /><br />Se levanta la sesión.
+
+    <br /><br />Era la una y quince minutos de la tarde.
+    </div>
+<hr size="1" noshade="" /><!-- BRSCGI © 1995-2004 Baratz Servicios de Teledocumentación, S.A. http://www.baratz.es -->
+
+
+<!-- FUNCION PIE -->
+    
+
+
+
+                 
+
+
+
+
+
+
+<script language="JavaScript" type="text/javascript">
+	cargaLegSesion('null')
+</script>
+ 
+<!-- FIN  PIE   -->
+        <div id="PIE_POPUP">
+		<p><span lang="es">Congreso de los Diputados</span> · C/Floridablanca s/n - 28071 - MADRID ·<u> <a style="color:#FFFFFF" href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Publicaciones/Aviso_Legal">Aviso Legal</a></u></p>
+	</div>
+
+</div></div></div></td></tr>
+</tbody></table>
+</div></td></tr>
+<tr>
+<td colspan="1" style="width:100%;"><img src="/images/pobtrans.gif" height="4" width="1" alt="" style="display:block" /></td>
+</tr>
+</tbody></table><!-- show footer template = 1824729544 -->
+</td>
+      </tr>
+    </tbody></table>
+  </td></tr>
+</tbody></table>
+</div>
+
+
+<!-- Page Metadata Generated On: 20-MAR-2015:02:08:35  Time Taken: 30 msecs -->
+</body></html>

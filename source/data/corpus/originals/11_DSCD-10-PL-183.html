@@ -1,0 +1,3304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head>
+<style>
+body{float:left;font-size:62.5%;font-family: Arial, Verdana, Helvetica, sans-serif;}
+blockquote{margin:0px;padding:0px;border:0px;list-style-type:none; }
+a{text-decoration:none; color:#626469;}
+a:hover{text-decoration:underline;font-weight:normal;color:#626469;}
+a:active{text-decoration:none;font-weight:normal;color:#000000;}
+</style>
+<title>PopUpCGI</title>
+<link href="/wc/htdocs/web/css/congreso.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/portada.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/prensa.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/apps.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/wc/htdocs/web/js/wc.js" language="JavaScript"></script>
+<style type="text/css">.GroupHeaderid1siteid73{Text-Align:left;Height:20px;Background-Color:#336699;}
+.GroupHeaderLinkid1siteid73{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.GroupHeaderTextid1siteid73{Font-Family:Arial, Helvetica;Color:#FFFFFF;Font-Size:9pt;Font-Weight:Bold;}
+.RegionHeaderid1siteid73{Background-Color:#b29200;Height:20px;Text-Align:left;}
+.RegionHeaderTextid1siteid73{Color:#ffffff;Font-Weight:Bold;Font-Family:Verdana;Font-Size:10px;}
+.Bodyid1siteid73{Background-Color:#FFFFFF;}
+.ArchivoAnuncioid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.AudioFotoNoticiaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.AudioNotaPrensaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.authorid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo1Pieid1siteid73{Font-Family:Arial, Helvetica;Color:#000000;Font-Size:8pt;}
+.Campo1Region3id1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.Campo2Pieid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Campo2Region3id1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.Campo3Pieid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.ComprobacionSelladoid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.Concesionid1siteid73{Font-Family:Arial;Font-Size:11px;Color:#626469;}
+.Convocatoriaid1siteid73{Font-Family:Arial;Font-Size:11px;Color:#626469;}
+.Correcciondeerroresid1siteid73{Color:#626469;Font-Size:11px;Font-Family:Arial;}
+.createdateid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.creatorid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.CuartoPlatoCafeteriaid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.defaultattributeid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescNotaPrensaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.Descripcionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.DescripcionAnuncioid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.DescripcionBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescripcionDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.descriptionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Destinoid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.DiaSemanaAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DiaSemanaCanalid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.documentsizeid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Enlaceid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnlaceAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnlaceURLNovedadid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.EnPortadaAnuncioid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.EnPortadaNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnVentanaNuevaAnuncioid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.EnVentanaNuevaNovedadIntranetid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.EtiquetaArchivoAnuncioid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.EtiquetadelEnlacedelAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EtiquetaEnlaceNovedadIntranetid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.EtiquetaURLNovedadid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.expiredateid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Faxid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Fax2id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaAgendaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.FechaAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaCanalid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.FechaDiarioid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.FechaFotonoticiaid1siteid73{Font-Size:11px;Font-Family:Arial;Color:#b29200;}
+.FechaFotonoticiaPresidenciaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaMenuid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.FechaMenuCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaNotaPrensaid1siteid73{Color:#b29200;Font-Family:Arial;Font-Weight:Bold;Font-Size:11px;}
+.FechaNovedadid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.FechaNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaRuedaPrensaid1siteid73{Font-Weight:Bold;Font-Size:11px;Font-Family:Arial;Color:#b29200;}
+.FotoEmergenteNotaPrensaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.FotoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto1descargaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Foto1emergenteid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto1thumbnailid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Foto2descargaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Foto2emergenteid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Foto2thumbnailid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.GraficoFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.GraficoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Grupoid1siteid73{Color:#626469;Font-Size:11px;Font-Family:Arial;}
+.Horaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.HoraAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.HoraCanalid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.ImagenDiaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.InformacionGeneralid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.inplacedisplayid1siteid73{Color:#000000;Font-Family:Arial;Font-Size:11px;}
+.InstruccinArchivoIIid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.InstruccinArchivo1id1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Intervinienteid1siteid73{Font-Size:11px;Font-Family:Arial;Color:#626469;}
+.itemfunctionid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.JefedeCocinaMenuid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.keywordsid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.LineaAgendaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.LineaCanalid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.listaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.Listadebecariosparticipantesid1siteid73{Font-Family:Arial;Font-Size:11px;Color:#626469;}
+.ListaPuestoMiembroDiputadoid1siteid73{Font-Size:11px;Font-Family:Arial;Color:#626469;}
+.ListaPuestoMiembroSenadoid1siteid73{Font-Size:11px;Color:#626469;Font-Family:Arial;}
+.Lugarid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.LugarAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LugarCanalid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Mail1id1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Mail2id1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.Mail3id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Mail4id1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Nombreid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.NombreBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NombreDiarioid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.NombreMiembroid1siteid73{Color:#626469;Font-Family:Arial;Font-Weight:Bold;Font-Size:11px;}
+.NumeroOrdenAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NumeroOrdenImagenid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NumeroOrdenNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PaginaBOCGBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PDFBoletinid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PDFDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.perspectivesid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PieImagenid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.PrimerPlatoCafeteriaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PrimerPlatoSaludableMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato1Menuid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PrimerPlato2Menuid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PrimerPlato3Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato4Menuid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Programaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PuestoMiembroDiputadoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.PuestoMiembroSenadoid1siteid73{Font-Size:11px;Font-Family:Arial;Color:#626469;Font-Weight:Bold;}
+.QuintoPlatoCafeteriaid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.RefBOEid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.RefBOEIIid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.scoreid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlatoSaludableMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlato1Menuid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.SegundoPlato2Menuid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.SeptimoPlatoCafeteriaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.SextoPlatoCafeteriaid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.SiglasBoletinid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.SiglasDiarioid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.subpagetitleid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.SugerenciaCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TargetNovedadid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.Telefonoid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Telefono2id1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.TemaFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaRuedaPrensaid1siteid73{Color:#000000;Font-Family:Arial;Font-Size:11px;}
+.TercerPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TextoAlternativoFotoNotaPrensaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.TextoAlternativoFoto1Fotonoticiaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.TextoAlternativoFoto2Fotonoticiaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.titleid1siteid73{Font-Family:Arial;Font-Size:11px;Color:#626469;Font-Weight:Bold;}
+.titleorimageid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.TitularFotoNoticiaid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Tituloid1siteid73{Font-Size:11px;Font-Family:Arial, Helvetica;Color:#626469;Font-Weight:Bold;}
+.TituloAnuncioid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.TituloImagendelDiaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.TituloNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TituloNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.URLEnlaceNovedadIntranetid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.VideoFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.VideoNotaPrensaid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.Visitasid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.wwsbr_category_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_charset_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_image_or_title_id1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.wwsbr_img_or_title_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_itemtype_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_mime_type_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_page_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_pagegroup_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_publishdate_id1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.wwsbr_title_and_img_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_updatedate_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_updator_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_version_number_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LeftCurve{}
+.PortletBodyColor{}
+.PortletHeaderColor{Background-Color:#b29200;}
+.PortletHeaderLink{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletHeaderStyle{}
+.PortletHeaderText{Color:#FFFFFF;Font-Weight:Bold;Font-Size:10pt;Font-Family:Arial, Helvetica;}
+.PortletHeading1{Color:#336699;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.PortletHeading2{Color:#336699;Font-Size:8pt;Font-Family:Arial, Helvetica;Font-Weight:Bold;}
+.PortletHeading3{Font-Size:7pt;Font-Family:Arial, Helvetica;Color:#336699;Font-Weight:Bold;}
+.PortletHeading4{Font-Size:7pt;Font-Family:Arial, Helvetica;Color:#336699;Font-Weight:Bold;}
+.PortletSubHeaderColor{Background-Color:#EEEEDD;}
+.PortletSubHeaderLink{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:9pt;}
+.PortletSubHeaderText{Font-Size:9pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PortletText1{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletText2{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletText3{Color:#000000;Font-Size:7pt;Font-Family:Arial, Helvetica;}
+.PortletText4{Font-Family:Arial, Helvetica;Font-Size:7pt;Color:#000000;}
+.RightCurve{}
+.LeftSubTabid1siteid73{Background-Position:left top;Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFsl.gif);Background-Repeat:no-repeat;}
+.LeftTabBgSlantid1siteid73{Background-Position:left top;Background-Image:url(http://www.congreso.es/images/FFFFFFtl.gif);Background-Color:#CCCC99;Background-Attachment:scroll;Background-Repeat:no-repeat;}
+.LeftTabForeSlantid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFtl.gif);Background-Position:left top;Background-Repeat:no-repeat;}
+.RightSubTabid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFsr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.RightTabBgCurveid1siteid73{Background-Image:url(http://www.congreso.es/images/FFFFFFtr.gif);Background-Color:#CCCC99;Background-Attachment:scroll;Background-Position:right top;Background-Repeat:no-repeat;}
+.RightTabForeCurveid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFtr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.SubTabBgTextid1siteid73{Color:#CCCC99;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:11pt;Font-Weight:Bold;}
+.TabBackgroundColorid1siteid73{Background-Color:#CCCC99;}
+.TabBackgroundTextid1siteid73{Color:#003366;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:10pt;}
+.TabForegroundColorid1siteid73{Background-Color:#336699;}
+.TabForegroundTextid1siteid73{Color:#FFFFFF;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:10pt;Font-Weight:Bold;}
+.portlet-font{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-font-dim{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-status{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-info{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-error{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-alert{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-success{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-header{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:9pt;    Font-Weight:Bold;    }
+.portlet-section-body{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-alternate{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-selected{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-subheader{Color:#336699;    Font-Size:8pt;    Font-Family:Arial, Helvetica;    Font-Weight:Bold;    }
+.portlet-section-footer{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-text{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-header{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:9pt;    Font-Weight:Bold;    Background-Color:#EEEEDD;    }
+.portlet-table-body{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-alternate{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-selected{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-subheader{Color:#336699;    Font-Size:8pt;    Font-Family:Arial, Helvetica;    Font-Weight:Bold;    }
+.portlet-table-footer{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-text{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-input-field{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-button{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-icon-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-dlg-icon-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-field-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-field{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.RegionNoBorder{}
+.RegionBorder { border:#b29200  1px solid; }
+.RegionHeaderColor { border:#b29200 0px solid;}
+.PageColor { background-color:#FFFFFF}
+ </style>
+</head>
+<body leftmargin="0" rightmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+<div id="texto_parrafo">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
+  <tbody><tr valign="top"><td align="center" valign="top">
+    <table width="500" cellpadding="0" cellspacing="0" border="0" height="100%">
+      <tbody><tr>
+        <td align="center" width="500" height="100%" valign="top">
+<iframe id="portalIFrame" title="" frameborder="0" width="0" height="0" src="/images/pobtrans.gif"></iframe><script type="text/javascript" src="http://www.congreso.es/portal/pls/portal/PORTAL.wwsbr_javascript.page_js?p_language=e&amp;p_version=10.1.4.2.0.197">
+&lt;!-- Comment out script for old browsers
+//--&gt;
+</script>
+<table width="100%" id="rg88017" border="0" cellpadding="0" cellspacing="0" summary=""><tbody><tr align="LEFT">
+<td valign="top" style="padding:4px 4px 0px 4px;width:100%;"><div id="p73_2138133_73_2138049_2138049"><table border="0" width="100%" cellpadding="0" cellspacing="0" class="RegionNoBorder"><tbody><tr><td class="RegionHeaderColor" width="100%" dir="LTR"><div id="pcnt73_2138133_73_2138049_2138049">
+
+
+
+
+
+
+
+  
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+        <title>Listas de valores</title>
+        <script language="JavaScript" type="text/javascript" src="/wc/htdocs/web/js/wc.js"></script> 
+		<link type="text/css" href="/wc/htdocs/web/css/apps.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/congreso.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/portada.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/prensa.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/texto_integro.css" rel="STYLESHEET" />   
+
+
+<script>
+function opcionesVentana(){
+
+window.resizeTo(630,520);
+}
+
+window.onload = function(){
+    opcionesVentana();
+}
+
+</script>
+	<div id="CONGRESO_TEXTO_INTEGRO_POPUP">
+            <div id="CABECERA_TEXTO_POPUP">
+                    <div class="cabecerah1"><img src="/wc/htdocs/web/img/logo_mini.gif" alt="Congreso de los Diputados" border="0" /></div>
+                    <div class="btn_cerrar" title="Cerrar">
+                        <p><img src="/wc/htdocs/web/img/ico_cerrar.gif" width="9" height="9" alt="Cerrar" /> <a href="javascript:window.close();" title="Cerrar">Cerrar</a></p>                   
+                    </div>
+                    
+                    <div class="fincabecera"> </div>
+            </div>
+
+
+
+    <div id="CONGRESO_TEXTO_INTEGRO_POPUP"> <div id="CABECERA_TEXTO_POPUP"> DS. Congreso de los Diputados, Pleno y Dip. Perm., núm. 183, de 27/02/2014 </div><div id="CABECERA_TEXTO_POPUP">cve:
+    DSCD-10-PL-183 </div> <div class="fincabecera"> </div> </div> <!-- CONGRESO_TEXTO_INTEGRO --> <div id="TEXTOS_POPUP">	<br />
+    	<div class="titular_texto"><br />CORTES GENERALES
+
+    <br />DIARIO DE SESIONES DEL CONGRESO DE LOS DIPUTADOS
+
+    <br />PLENO Y DIPUTACIÓN PERMANENTE
+    </div>
+
+    <div class="subtitular_texto"><br />Año 2014 X LEGISLATURA Núm.  183
+    <br />PRESIDENCIA DEL EXCMO.  SR.  D. JESÚS POSADA MORENO
+    <br />Sesión plenaria núm.  171
+    <br />celebrada el jueves,
+    <br />27 de febrero de 2014</div>
+          	<div class="texto_completo"><br /><br />ORDEN DEL DÍA:
+
+    <br /><br />Comunicación del Gobierno. (Continuación).
+
+    <br /><br />- Comunicación del Gobierno en la que solicita la celebración de un debate
+    de política general sobre el estado de la Nación. "BOCG. Congreso de los
+    Diputados", serie D, número 409, de 21 de febrero de 2014. (Número de
+    expediente 200/000002) ... <a href="#(Página2)">(Página2)</a>
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página2)"><b>Página
+    2</b></a></p><br />
+
+    <br /><br />SUMARIO
+
+    <br /><br />Se reanuda la sesión a las diez de la mañana.
+
+    <br /><br />Comunicación del Gobierno. (Continuación).
+
+    <br /><br />- Comunicación del Gobierno en la que solicita la celebración de un debate
+    de política general sobre el estado de la Nación ... <a href="#(Página2)">(Página2)</a>
+
+    <br /><br />Defienden las propuestas de resolución la señora Barkos Berruezo, los
+    señores Salvador Armendáriz, Álvarez Sostres y Baldoví Roda, las señoras
+    Oramas González-Moro, Pérez Fernández, Jordà i Roura y Enbeita Maguregi,
+    del Grupo Parlamentario Mixto; los señores Azpiazu Uriarte, del Grupo
+    Parlamentario Vasco (EAJ-PNV), y Anchuelo Crego, del Grupo Parlamentario
+    de Unión Progreso y Democracia; el señor Centella Gómez, la señora Ortiz
+    Castellví y el señor Yuste Cabello, del Grupo Parlamentario de IU,
+    ICV-EUiA, CHA: La Izquierda Plural; el señor Sánchez i Llibre, del Grupo
+    Parlamentario Catalán (Convergència i Unió); la señora Rodríguez Ramos,
+    del Grupo Parlamentario Socialista, y el señor Bermúdez de Castro
+    Fernández, del Grupo Parlamentario Popular en el Congreso.
+
+    <br /><br />Se procede a las votaciones de las propuestas de resolución defendidas,
+    relativas al debate de política general en torno al estado de la Nación.
+
+    <br /><br />Se levanta la sesión a la una y veinticinco minutos de la tarde.
+
+    <br /><br />Se reanuda la sesión a las diez de la mañana.
+
+    <br /><br />COMUNICACIÓN DEL GOBIERNO. (CONTINUACIÓN):
+
+    <br /><br />- COMUNICACIÓN DEL GOBIERNO PARA EL DEBATE DE POLÍTICA GENERAL SOBRE EL
+    ESTADO DE LA NACIÓN. (Número de expediente 200/000002).
+
+    <br /><br />El señor PRESIDENTE: Se reanuda la sesión.
+
+    <br /><br />Para la defensa de las propuestas de resolución, en primer lugar, en
+    nombre del Grupo Parlamentario Mixto, por el que van a intervenir varios
+    oradores, tiene la palabra la señora Barkos.
+
+    <br /><br />La señora BARKOS BERRUEZO: Gracias, presidente.
+
+    <br /><br />Brevemente y desde el escaño voy a dar por defendida la propuesta de
+    resolución presentada por Geroa Bai.
+
+    <br /><br />Gracias.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Barkos.
+
+    <br /><br />Señor Salvador.
+
+    <br /><br />El señor SALVADOR ARMENDÁRIZ: Gracias, señor presidente.
+
+    <br /><br />Quisiera empezar esta brevísima intervención recordando a un español
+    universal que nos dejó ayer, Paco de Lucía, un genio de la guitarra, un
+    referente mundial de la música, un regalo de Dios, ahora ya un mito.
+    Descanse en paz. (Aplausos).
+
+    <br /><br />Señorías, es verdad que debatimos formalmente 105 propuestas de
+    resolución, pero quisiera hacernos una crítica porque me las he leído
+    todas, he ido desmenuzando cada apartado, cada punto, cada subepígrafe y,
+    al final, me salen 739 propuestas distintas. Me parece que estamos
+    llegando a pervertir este formato porque se hace casi incomprensible y,
+    además, inútil que al final podamos decir sí, no o abstención a algunas
+    enmiendas que tienen, como una de ellas, cuarenta puntos. Deberíamos
+    repensarlo porque este formato está hecho para que podamos debatir sobre
+    argumentos o propuestas concisas, que es lo que nosotros hemos hecho.
+    Tenemos por cupo la posibilidad de presentar una y es lo que hemos hecho.
+    Pedimos al Gobierno y a los grupos que trabajen desde la confianza, la
+    responsabilidad y la lealtad
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página3)"><b>Página
+    3</b></a></p><br />
+
+    <br /><br />en el final del terrorismo y en la derrota política y social de la
+    organización terrorista ETA, evitando todos aquellos objetivos o
+    estrategias que puedan servir para que puedan alcanzar sus fines:
+    instrumentalizar la educación, elaborar un relato amable que justifique
+    su actividad criminal, manipular la historia o modificar el estatus de
+    Navarra como paso a la fragmentación de España. Como decía, es una
+    propuesta que técnicamente responde a ese criterio de concisión -creemos
+    que se la debemos a las víctimas de ETA- y que aporta claridad a quienes
+    todavía puedan estar tentados de querer rentabilizar el final del
+    terrorismo.
+
+    <br /><br />Muchas gracias, señor presidente.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Salvador, pero los criterios
+    sobre cómo se plantean es algo para discutir en Junta de Portavoces o en
+    la ponencia que tenemos para reformar el Reglamento. Hoy por hoy estas
+    son las reglas que hay.
+
+    <br /><br />Señor Álvarez Sostres.
+
+    <br /><br />El señor ÁLVAREZ SOSTRES: Gracias, señor presidente.
+
+    <br /><br />La propuesta de resolución que he presentado en nombre de Foro va referida
+    a la variante de Pajares, en concreto al incremento en la alta velocidad
+    para Asturias. Esa es la única propuesta de resolución, que a su vez
+    conlleva cinco actuaciones muy concretas: la estación de saco de León; el
+    cambio de intercambiador; la línea León-La Robla; lo correspondiente a la
+    puesta en funcionamiento de los túneles de la variante con ancho
+    internacional, y por último, la redacción, el comienzo de los proyectos
+    de la entrada al área metropolitana de Asturias. En este caso, habida
+    cuenta de que se presentó una proposición no de ley sobre esta cuestión
+    ya hace un tiempo, que el Congreso apoyó, y las reiteradas
+    manifestaciones de la ministra al respecto, tengo las buenas sensaciones
+    de que pueda ser apoyada por esta Cámara.
+
+    <br /><br />También quiero decir que la enmienda que me ha presentado el Grupo
+    Parlamentario Popular -y que agradezco enormemente- no la voy a aceptar,
+    porque no me soluciona ninguna de las cuestiones referidas, ya que no
+    entra en este tema, sino que se refiere a la disminución de los tiempos,
+    en una hora y cuarenta minutos, en el trayecto Oviedo-Madrid, cuando la
+    alta velocidad tenía previsto en sus objetivos en el año 2004 un tiempo
+    máximo de dos horas y media. Evidentemente, ni siquiera en el tiempo nos
+    vamos a poner de acuerdo. Es estéril, es inconsistente desde mi punto de
+    vista y, aun agradeciéndola, no puedo aceptarla.
+
+    <br /><br />Muchas gracias.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Álvarez Sostres.
+
+    <br /><br />Señor Baldoví.
+
+    <br /><br />El señor BALDOVÍ RODA: Muchas gracias, señor presidente.
+
+    <br /><br />Desde la constatación no de Compromís, sino del mismo presidente de la
+    Generalitat Valenciana, militante del Partido Popular, de que la
+    situación de infrafinanciación de los valencianos es muy importante,
+    Compromís-Equo presenta una propuesta de resolución con una serie de
+    medidas que, a nuestro juicio, pueden corregir esta situación. En primer
+    lugar, medidas económicas, como una auditoría ciudadana, tanto de las
+    cuentas de la Generalitat como de las entidades, para aclarar el alcance
+    de la deuda ilegítima que estamos pagando todas las valencianas y los
+    valencianos; un reconocimiento y un plan de pago de esa deuda histórica
+    que el mismo comité de expertos nombrado por el Partido Popular cifra en
+    13.500 millones; y una revisión del modelo de financiación absolutamente
+    ineficaz e injusto para con los valencianos. En infraestructuras pedimos
+    el traspaso y la gestión de los aeropuertos y los trenes de cercanías y
+    regionales, con el objetivo tanto de mejorarlos y ampliarlos, como de
+    acometer unas líneas prioritarias en el País Valenciano, como son las
+    líneas Castellón-Vinaroz, Xátiva-Alcoy y Gandía-Oliva-Denia; y el rescate
+    de la autopista A-7, una autopista pagada, repagada y contrarrepagada,
+    que ha obligado a duplicar carreteras que no hacían ninguna falta. En
+    territorio y medio ambiente, no autorizar los expedientes de las
+    prospecciones de petróleo, del fracking, en Castellón; el
+    desmantelamiento de la plataforma Castor; y que el Plan Hidrológico del
+    Júcar otorgue una concesión de agua de boca a los trece pueblos de la
+    ribera y un aumento de las ayudas a la agricultura. Y en última
+    instancia, medidas sociales como una consulta sobre el modelo sanitario
+    que tenemos los valencianos, ampliar la plantilla del Fogasa y el cierre
+    del centro de internamiento de extranjeros. Por último, me gustaría que
+    la Cámara acordara la reapertura de la Radiotelevisión Valenciana.
+
+    <br /><br />Muchas gracias, señor presidente.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página4)"><b>Página
+    4</b></a></p><br />
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Baldoví.
+
+    <br /><br />Señora Oramas.
+
+    <br /><br />La señora ORAMAS GONZÁLEZ-MORO: Gracias, señor presidente.
+
+    <br /><br />Señorías, los nacionalistas canarios discrepamos de muchas cosas de la
+    política del Gobierno del Partido Popular y del señor Rajoy pero
+    coincidimos en dos cosas fundamentales. Coincidimos en que el Régimen
+    Económico y Fiscal de Canarias es importantísimo porque va a determinar
+    las políticas con Canarias hasta 2020 y tenemos que llevar una posición
+    unida tanto las fuerzas políticas, económicas y sociales de Canarias como
+    los diputados en esta Cámara. Históricamente se ha producido ese consenso
+    y siempre que los presidentes de los Gobiernos de España o los ministros
+    de Hacienda de España han ido a Bruselas a negociar lo han hecho con el
+    apoyo del Parlamento de Canarias y del Congreso de los Diputados. En ese
+    sentido, hemos presentado una propuesta de resolución, hemos llegado a un
+    acuerdo con el Partido Popular y esa transaccional se va a presentar en
+    este momento, para que en la línea y con la base del acuerdo unánime del
+    Parlamento de Canarias, hoy el Congreso de los Diputados, todas sus
+    fuerzas políticas, refuerce y avale esa posición ante Bruselas.
+
+    <br /><br />El otro tema que nos une es la situación insostenible de paro que tiene
+    Canarias. Para que lo sepan sus señorías, el 33%, el 62% de paro juvenil.
+    Desde luego, tenemos que tener unas políticas claras de empleo y los
+    fondos de empleo tienen que distribuirse entre las comunidades autónomas
+    en función de los índices de paro de esas comunidades. Quiero agradecer a
+    la ministra de Empleo, doña Fátima Báñez, el esfuerzo que hizo en el día
+    de ayer para que llegáramos a un acuerdo en esa posición que hemos
+    planteado históricamente desde Canarias y que va a ser determinante que
+    se ejecute en los próximos tiempos. Como digo, el empleo y el Régimen
+    Económico y Fiscal son los temas principales en este momento para
+    Canarias y hemos llegado a un acuerdo, de lo que estoy plenamente
+    satisfecha.
+
+    <br /><br />Por último, quiero dar un mensaje al PSOE y al Partido Popular. Yo viví en
+    primera fila el drama de la inmigración en el año 2006 como alcaldesa de
+    La Laguna, con un centro de retención con 8.000 personas, con 80.000
+    personas que llegaron. El drama humanitario de 15 fallecidos es
+    importante, pero más lo fueron los miles de personas que se quedaron
+    entre Canarias y África. Ese tema tiene que ser política de Estado,
+    tenemos que llegar a acuerdos, tenemos que tener una posición unánime
+    ante Europa, tenemos que tener un único discurso y unas únicas políticas
+    consensuadas con África y tenemos que tener una política transparente y
+    clara de apoyo a las Fuerzas y Cuerpos de Seguridad del Estado, a las
+    ONG, y de coordinación entre todas las instituciones, como llegamos a
+    hacer en el año 2006, porque si no lo hubiéramos hecho, aquel drama
+    humanitario no se hubiera podido cortar. Los inmigrantes no vienen a
+    Melilla ni a Canarias, vienen a Europa, y Europa tiene que ser consciente
+    de eso, pero no podemos estar divididos en este asunto que tiene que ser
+    política de Estado. Por eso anuncio que Coalición Canaria va a apoyar las
+    propuestas de resolución en el tema de inmigración, fundamentalmente para
+    reconducir un debate que nunca se debió haber perdido.
+
+    <br /><br />Muchas gracias, señor presidente.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Oramas.
+
+    <br /><br />Señora Pérez Fernández.
+
+    <br /><br />La señora PÉREZ FERNÁNDEZ: Gracias, señor presidente.
+
+    <br /><br />Nuestras propuestas de resolución van básicamente en dos direcciones. Por
+    un lado, las centradas en nuestro país, en sus sectores productivos y en
+    sus infraestructuras. Solicitamos, para empezar y por enésima vez, que se
+    constituya una comisión de investigación parlamentaria sobre uno de los
+    mayores siniestros ferroviarios de la historia, el del tren Alvia en
+    Santiago, y rechazamos desde luego la enmienda que lamentablemente ha
+    presentado el Partido Socialista a esta propuesta del BNG, solicitando
+    que suprimamos precisamente la propuesta de constitución de esa comisión.
+    Creemos que el Grupo Parlamentario Socialista en este tema es poco
+    inteligente y además es absolutamente irresponsable. Queda claro que
+    tanto el Partido Popular como el Partido Socialista tienen mucho que
+    agachar en este tema.
+
+    <br /><br />Por otro lado, proponemos la transferencia de la gestión de nuestros
+    aeropuertos y de la red ferroviaria interior a la comunidad autónoma, y
+    la recuperación de la titularidad pública y un programa de descuentos
+    para los usuarios de la AP-9. También planteamos asegurar la doble vía en
+    el AVE Madrid-Galicia que está ahora mismo en entredicho y la
+    recuperación efectiva del tramo Ferrol-A Coruña en el eixo atlántico, así
+    como un reparto de cuotas para nuestro sector pesquero y de ayudas para
+    nuestro sector agrario que
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página5)"><b>Página
+    5</b></a></p><br />
+
+    <br /><br />sean equitativas y que respondan al peso que estos dos sectores gallegos
+    tienen en realidad. El naval es un sector estratégico y vital para
+    nuestra economía. Proponemos el levantamiento del veto de la Unión
+    Europea sobre la construcción naval civil en NavantiaFene, carga de
+    trabajo para nuestros astilleros y la construcción del prometido mil
+    veces dique flotante.
+
+    <br /><br />Englobamos en nuestro segundo grupo de propuestas de resolución las
+    medidas sociales, económicas y políticas, pero me voy a referir
+    fundamentalmente a las políticas. Frente al contumaz inmovilismo en
+    cuanto a la modificación del actual modelo de Estado, reclamamos el
+    legítimo derecho a decidir de las naciones del Estado y por de pronto,
+    para avanzar en la soberanía financiera, una descentralización de los
+    tributos para que nuestros impuestos reviertan sobre nuestra propia
+    ciudadanía.
+
+    <br /><br />Termino, señor presidente. Las medidas que proponemos respecto del tema
+    social van encaminadas a recuperar los derechos que este Gobierno nos ha
+    quitado y desde luego también a impedir que nos siga quitando derechos
+    como, por ejemplo, con su propuesta de reforma de las leyes del aborto o
+    de seguridad ciudadana.
+
+    <br /><br />Muchas gracias, señor presidente.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Pérez Fernández.
+
+    <br /><br />Señora Jordà.
+
+    <br /><br />La señora JORDÀ I ROURA: Señor presidente, señorías, los altos directivos
+    de las empresas del IBEX 35 han pasado de ganar veintitrés veces más que
+    sus empleados en 2007, a percibir un salario veinticinco veces superior
+    hoy, y todo esto en paralelo a la devaluación de los salarios en general.
+    Es una evidencia, pues, que las clases dirigentes viven absolutamente
+    ajenas a las consecuencias de los discursos recurrentes de austeridad y
+    de sacrificio que predican, un sacrificio que, sea dicho de paso, no
+    afecta para nada a las clases más acomodadas. Por eso, planteamos en
+    nuestra primera propuesta de resolución que haya una limitación de
+    salarios en cada una de las empresas. Proponemos que ningún directivo
+    pueda cobrar más de doce veces lo que cobra el trabajador o trabajadora
+    que menos cobra de la empresa, de manera que los directivos solo puedan
+    aumentar el sueldo si aumentan a la vez el sueldo de los trabajadores.
+
+    <br /><br />Nuestra segunda resolución pretende mostrar nuestro compromiso
+    internacional con los derechos humanos, porque son terriblemente
+    preocupantes leyes homófobas como la de Uganda, que institucionalizan el
+    odio y a la vez la discriminación contra las personas lesbianas, gays,
+    bisexuales, transgénero e intersexuales. Señorías, no podemos quedarnos
+    de ninguna manera impasibles en pleno siglo XXI ante las auténticas cazas
+    de brujas que se han desatado contra las personas por su identidad, o
+    simplemente por su orientación sexual. No podemos quedarnos tampoco
+    impasibles contra leyes que incluso persiguen a los familiares y amigos
+    que no denuncien a los homosexuales. Hemos de hacer algo para frenar esta
+    auténtica vergüenza, este atentado contra los derechos humanos.
+    Planteamos, pues, más allá de que este Congreso condene leyes homófobas,
+    que se tomen a la vez medidas a nivel internacional. De hecho estamos
+    convencidos de que podemos llegar a un acuerdo y la verdad es que en este
+    momento estamos transaccionando.
+
+    <br /><br />Finalmente, para acabar, nuestra tercera propuesta de resolución defiende
+    el derecho a decidir del pueblo de Cataluña sobre su futuro. Esquerra
+    Republicana de Catalunya defiende desde hace muchos años la independencia
+    de Cataluña y esa decisión no corresponde a Esquerra, sino que
+    corresponde al pueblo catalán; a nadie más. Para saber si el pueblo de
+    Cataluña quiere o no la independencia debemos consultarle. Señorías,
+    debemos realizar una consulta, y eso es simplemente lo que pedimos:
+    votar; votar para ver si la mayoría del pueblo de Cataluña quiere
+    continuar en España o si quiere ser independiente. (Pronuncia palabras en
+    catalán). Consultar al pueblo es legal y debe ser legal, como es legal y
+    justo que aceptemos la voluntad del pueblo. Nosotros, señorías, vamos a
+    aceptar el resultado. La pregunta es: ¿Y ustedes? Sinceramente,
+    preferiríamos que el Parlamento español aceptara y defendiera la
+    votación. Por eso presentamos esta propuesta de resolución. Pero no se
+    engañen, voten lo que voten hoy, estén o no dispuestos a que votemos, los
+    partidos políticos catalanes tenemos la obligación de realizar la
+    consulta, y lo vamos a hacer. Lo haremos libremente, lo haremos
+    democráticamente, lo haremos pacíficamente y a la vez alegremente. Nadie
+    debería abstenerse ni oponerse a la voluntad democrática del pueblo de
+    Cataluña. (Pronuncia palabras en catalán).
+
+    <br /><br />Muchas gracias, señor presidente.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página6)"><b>Página
+    6</b></a></p><br />
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Jordà.
+
+    <br /><br />Señora Enbeita.
+
+    <br /><br />La señora ENBEITA MAGUREGI: Gracias, señor presidente.
+
+    <br /><br />Señorías, si antes creíamos que el Gobierno español vivía a años luz de
+    las necesidades de la ciudadanía, estos días ya nos ha quedado clarísimo.
+    Este Gobierno no quiere asumir las realidades nacionales de Euskal
+    Herria, Cataluña o Galicia, por un lado, ni quiere asumir el nuevo
+    escenario político que se ha abierto en Euskal Herria, por otro lado,
+    pero no pasa nada, señorías, porque España va bien. Eso lo demuestran
+    afirmaciones como que es la primera vez en la crisis que podemos decir
+    que el paro ha descendido respecto al año pasado, pero, claro, esto no es
+    una verdad del todo. En número de personas adscritas al paro puede que
+    hayamos bajado, pero esto no se debe a que se haya construido empleo. La
+    juventud se va y los que algún día vinieron o aterrizaron en el Estado
+    español buscando un futuro mejor ya no lo encuentran. Y eso los que
+    llegan, porque ya hemos visto que de Ceuta no todos pasan.
+
+    <br /><br />Señorías, Rajoy dijo que España había estado al borde del abismo y que
+    había dado un paso adelante y, sin que sirva de precedente, estamos de
+    acuerdo. El Estado español ha dado un paso hacia delante, sí, señorías,
+    pero hacia el abismo. El empleo que se crea es absolutamente precario
+    gracias a la maravillosa reforma laboral que ustedes aprobaron; las
+    familias hacen peripecias para llegar a fin de mes; viven ocho y nueve
+    miembros de una familia con una sola pensión y ustedes van y bajan las
+    pensiones y condenan a las familias a no poder darse una ducha caliente,
+    y aprietan y aprietan y aprietan, y si alguien protesta, le aprietan más.
+    Señorías, ¿pero qué pasa con el fraude fiscal? Ah, no, de eso no se
+    habla. Y cuando decimos fraude fiscal no decimos que alguien ha pagado al
+    fontanero una factura sin IVA; hablamos de millones, millones y millones
+    que se han defraudado a la Hacienda pública. Señorías, ¿saben ustedes la
+    de cosas que podríamos hacer con esos millones en sanidad o en educación?
+    Pero, claro, los derechos sociales siempre están en crisis; en cambio,
+    para otras cosas sigue habiendo barra libre.
+
+    <br /><br />Según Rajoy, nadie puede privar de su derecho a decidir al pueblo español,
+    pero, claro, ustedes sí se permiten privar de ese derecho a los catalanes
+    o al pueblo vasco, o a las mujeres, ¡por qué no! Ustedes asumen, y
+    quieren que el resto asumamos, que las mujeres -pobrecitas nosotras-
+    necesitamos un tutelaje para poder tomar las decisiones correctas.
+    Señorías, plantear esto en el siglo XXI es patético, tan patético como
+    hacer el ridículo ridiculizando a verificadores internacionales. ¿Es así
+    como el Gobierno español quiere justificar su inmovilismo? Lejos de
+    cumplir el Acuerdo de Aiete, el Gobierno español hace caso omiso a la
+    comunidad internacional y, por si acaso, los lleva a declarar a la
+    Audiencia Nacional, por si alguien no tenía claras las formas de
+    funcionar que tiene este Estado.
+
+    <br /><br />Señorías, el estado de la nación deja muchísimo que desear, así que
+    déjennos trabajar y construir un marco propio en Euskal Herria, déjennos
+    construir nuestra nación. Nunca nos hemos creído eso de que España es
+    una, grande y libre desde hace siglos. España empezó a construirse con el
+    tanto monta y monta tanto, y para entonces Navarra ya era un reino hecho
+    y derecho; nuestra querida Navarra, señorías, que UPN ha corrompido de
+    arriba abajo. Y otros, que manifiestan que Navarra no se vende, mercadean
+    en Madrid con las decisiones que solo a los navarros corresponden.
+
+    <br /><br />Señorías, es muy fácil resumir lo que Amaiur viene a pedir en sus
+    propuestas de solución: que el Gobierno español cumpla su parte de
+    responsabilidad en el Acuerdo de Aiete -hemos redactado varios puntos en
+    la resolución de la normalización política palabra por palabra-; el
+    respeto a los derechos que nos corresponden como pueblo; queremos que el
+    Gobierno español deje de inventarse leyes y tomar decisiones que lo único
+    que hacen es ahogar a la ciudadanía, y por último y por enésima vez...
+    (Finaliza su intervención pronunciando palabras en euskera).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Enbeita.
+
+    <br /><br />Por el Grupo Parlamentario Vasco (PNV), tiene la palabra el señor Azpiazu.
+    (La señora vicepresidenta, Villalobos Talero, ocupa la Presidencia).
+
+    <br /><br />El señor AZPIAZU URIARTE: Llevamos tres días en esta Cámara intentando
+    debatir sobre la situación económica y sobre aquellas cuestiones
+    políticas que condicionan la vida de los ciudadanos. Por lo tanto,
+    debería suscitar el interés de todos nosotros y de la propia ciudadanía.
+    Sin embargo, si he señalado que lo hemos intentado es porque en realidad
+    no ha sido posible debatir en profundidad, por la falta de voluntad de
+    las partes -especialmente del Gobierno- para avanzar en la resolución de
+    problemas concretos, que son muchos. El excesivo triunfalismo del
+    Gobierno -lo cual es incomprensible con una tasa de paro del 26%- tan
+    solo es explicable en términos electorales; dificulta los puntos de
+    encuentro y compromisos
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página7)"><b>Página
+    7</b></a></p><br />
+
+    <br /><br />entre los grupos parlamentarios sobre las cuestiones económicas y
+    políticas que van a condicionar nuestro futuro. Hoy hemos conocido el
+    dato definitivo del INE del crecimiento del último trimestre del año,
+    revisando a la baja en una décima la previsión anterior. Este dato desde
+    luego va claramente en contra de la euforia económica exhibida por el
+    presidente, indicándonos que la recuperación es más frágil de lo previsto
+    inicialmente. Un auténtico jarro de agua fría para el excesivo optimismo
+    del Gobierno. El monólogo ha primado sobre el diálogo y el lucimiento
+    personal sobre el acuerdo. Por todo ello creo que no va a ser fácil
+    buscar los consensos suficientes para sacar adelante muchas de nuestras
+    propuestas de resolución, por muy consistentes, lógicas y defendibles que
+    sean. Sin embargo, lo intentaremos y así comprobaremos la voluntad del
+    Gobierno para llegar a acuerdos con el Grupo Vasco.
+
+    <br /><br />Siguiendo el ritual y respetando el Reglamento, hemos presentado las
+    quince propuestas de resolución de rigor que, a pesar de lo comentado,
+    son muy importantes para nuestro grupo. Como sabe el Gobierno, el Grupo
+    Vasco siempre ha estado dispuesto a negociar, acordar o pactar temas que
+    consideramos importantes y que tienen implicaciones en Euskadi -pero no
+    solo en Euskadi- y que el Gobierno nos viene planteando a través de
+    proyectos de ley, reales decretos, etcétera. Ahora queremos comprobar esa
+    voluntad y la capacidad del Gobierno para sumarse a nuestras iniciativas.
+    El presidente ya se manifestó ayer dispuesto a llegar a algún acuerdo, al
+    menos en el tema de la Y ferroviaria vasca, y esperamos que el acuerdo
+    sea consistente y sirva para darle un impulso definitivo a dicho
+    proyecto. Hemos agrupado nuestras enmiendas en tres grupos, atendiendo a
+    la naturaleza de las mismas. El primero de ellos, de carácter
+    competencial, incluye básicamente aquellas áreas y cuestiones aún
+    pendientes de transferir o que, como en el caso de la Lomce, colisionan
+    frontalmente con nuestro ámbito competencial. En este apartado incluimos
+    seis propuestas. En el segundo apartado, con cuatro propuestas, recogemos
+    aquellos temas relevantes para Euskadi cuya resolución está en manos del
+    Gobierno del Partido Popular. Y en el tercero incluimos cinco de carácter
+    general, cuya resolución beneficiaría al conjunto de la ciudadanía, vasca
+    y no vasca. Adentrándome en el primero de los apartados, quisiera señalar
+    antes que nada que nos parece un auténtico despropósito que, casi treinta
+    y cinco años después de la aprobación del Estatuto de Gernika, queden aún
+    materias sustanciales pendientes de ser transferidas. No pretendemos ser
+    exhaustivos a través de estas proposiciones e incluso, con el ánimo de
+    buscar un acuerdo amplio, hemos evitado presentar aquellas que puedan ser
+    más controvertidas, como las políticas pasivas de empleo o el régimen
+    económico de la Seguridad Social. Reclamamos que se transfieran las
+    prisiones y la política penitenciara sobre la base de los artículos 10.14
+    y 12.1 del Estatuto de Gernika. No creemos que ello sea imposible; de
+    hecho, la Generalitat de Catalunya lo tiene transferido y pensamos
+    sinceramente que en este momento podría ser útil para colaborar con el
+    fin del terrorismo. De la mano de esta va la segunda de las
+    proposiciones, por la que reclamamos que se proceda a una reducción
+    importante de las Fuerzas y Cuerpos de Seguridad del Estado y que estas
+    actúen en aquellas tareas que estrictamente tienen encomendadas,
+    quedando, como es preceptivo, en manos de la Ertzaintza la protección de
+    las personas y bienes y el mantenimiento del orden público. Hoy, hay más
+    de 4.000 efectivos en el País Vasco, cifra a todas luces exagerada
+    teniendo en cuenta los cambios habidos en la cuestión terrorista.
+
+    <br /><br />En este mismo apartado, solicitamos que se transfieran las autopistas en
+    régimen de concesión en los términos que ya nuestro grupo pactó con el
+    Gobierno anterior socialista en el año 2011. De igual manera creemos que
+    por cuestiones legales y de eficiencia en la gestión se han de transferir
+    a la Comunidad Autónoma de Euskadi las funciones y potestades hasta ahora
+    ejercidas por el Gobierno y la Administración General del Estado sobre
+    líneas, infraestructuras y servicios relacionados con el transporte
+    terrestre por ferrocarril cuyo itinerario discurra íntegramente por el
+    territorio de la comunidad. Aceptaremos en este sentido la enmienda que
+    el PSOE propone, con el matiz o la transaccional que el portavoz del PSOE
+    ha pactado con la portavoz de nuestro grupo.
+
+    <br /><br />Por otra parte, queremos instar al Gobierno a que modifique la Ley del
+    Deporte con el fin de que se reconozca el derecho de las federaciones
+    deportivas autonómicas, como la vasca, para integrarse en las
+    correspondientes federaciones deportivas internacionales y órganos
+    olímpicos a fin de representar a sus respectivos ámbitos geográficos.
+    Creemos y queremos con toda firmeza contar con unas selecciones
+    deportivas, porque eso es lo que quiere una gran mayoría de los
+    ciudadanos vascos. Solicitamos encarecidamente al Gobierno que derogue la
+    Ley orgánica para la mejora de la calidad educativa y proceda a la
+    apertura de un proceso de negociación y diálogo real con el máximo
+    respeto al marco competencial.
+
+    <br /><br />El segundo de los apartados a los que me he referido contiene como
+    proposición central la relativa al tren de alta velocidad, la denominada
+    Y ferroviaria vasca. No es ninguna novedad del Grupo Vasco que
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página8)"><b>Página
+    8</b></a></p><br />
+
+    <br /><br />tratemos a través de esta iniciativa que el Gobierno impulse de manera
+    definitiva este proyecto tan crucial para los ciudadanos y la economía
+    vasca que venimos demandando con insistencia y desde hace ya muchísimo
+    tiempo, especialmente a lo largo de la presente legislatura. Queremos de
+    verdad alcanzar un compromiso inequívoco con el Gobierno para la Y
+    ferroviaria vasca; en ello estamos y esperamos que a lo largo de unas
+    horas lo podamos conseguir. Ayer mismo, en el debate, el portavoz de mi
+    grupo hizo especial hincapié en este tema sobre el que ya no sabemos qué
+    más decir y qué más argumentar. Son ustedes en esta Cámara testigos de
+    ello, especialmente la ministra de Fomento y el propio presidente del
+    Gobierno. Como decía, el señor Rajoy, ayer, se comprometió una vez más a
+    impulsar la Y ferroviaria vasca, a impulsar la ejecución del nudo de
+    Bergara, enclave básico para la culminación del proyecto. No queremos,
+    señores del Grupo Popular, más demoras. Ya se ha demorado en exceso este
+    proyecto que tenía que estar ya en pleno funcionamiento y que, cuando lo
+    esté, facilitará la conexión de viajeros y mercancías con la meseta y con
+    Europa. El coste es perfectamente encajable en los actuales presupuestos
+    y en el horizonte plurianual en el que se ha de ejecutar el nudo de
+    Bergara. Además, a efectos de no demorar en exceso su puesta en
+    funcionamiento, proponemos que se formalice, si así lo prefieren, una
+    nueva encomienda de gestión entre la Administración del Estado, el ADIF y
+    el Gobierno vasco para que sea este último quien asuma la ejecución del
+    proyecto, acordando posteriormente los mecanismos oportunos de
+    financiación. Esperamos que el Grupo Popular y el resto de los grupos de
+    esta Cámara se comprometan, como el señor Rajoy hizo ayer, con la Y vasca
+    para que esta sea una realidad lo antes posible. Voten para ello
+    favorablemente nuestra propuesta de resolución. Esperamos pactar una
+    transaccional a la enmienda presentada por el Grupo Popular que afinque
+    dicho compromiso.
+
+    <br /><br />Señores del Grupo Popular y del Gobierno, tenemos un problema aún no
+    resuelto que está impidiendo que los astilleros, especialmente la naval,
+    tengan dificultades para realizar nuevos contratos Me estoy refiriendo al
+    tax lease denunciado en junio de 2011 y resuelto por la Comisión en julio
+    de 2013, pero pendiente de que el Gobierno recupere definitivamente la
+    parte de ayudas otorgadas y que se consideraron ilegales. El Ministerio
+    de Hacienda está sobre el asunto, me consta, pero, al margen de su
+    trabajo, que compartimos básicamente, instamos al Gobierno a que resuelva
+    un asunto puntual que afecta a la naval y cuya resolución facilitaría la
+    contratación de buques. Solicitamos con nuestra propuesta que, mientras
+    España recupere la ayuda incompatible según la resolución comunitaria
+    sobre el expediente y el tax lease español, se garantice que los
+    beneficiarios no transfieran la carga de la recuperación a los astilleros
+    y que en el caso de haberse producido alguna transferencia los importes
+    retenidos sean liberados de forma inmediata. El PP nos ha presentado una
+    enmienda cuyo contenido nos parece razonable, pero insuficiente para
+    resolver este tema puntual que nos preocupa. Por tanto, no lo
+    aceptaremos, pero estoy seguro de que llegaremos a un acuerdo con el
+    Gobierno al respecto. La resolución está en sus manos, no tiene coste
+    alguno y facilitaría la actividad y el empleo del sector naval de
+    Euskadi. Apoyen, por tanto, esta proposición.
+
+    <br /><br />Reclamamos también el cierre definitivo de la central nuclear de Garoña.
+    Es una central obsoleta, de primera generación, amortizada y que no tiene
+    ni siquiera interés económico para sus propietarios. Además, el exceso de
+    capacidad de generación eléctrica -más de 100.000 megavatios instalados-
+    y la escasa potencia de la central -apenas 400 megavatios- hacen que sea
+    perfectamente prescindible, sin olvidar la oposición frontal de todos los
+    partidos políticos en Euskadi, manifestada tanto en las juntas generales
+    como en el propio Parlamento vasco. Forzar su continuidad solo es
+    entendible en clave de cabezonería política y no de eficiencia ni de
+    racionalidad energética y económica.
+
+    <br /><br />Consideramos importante impulsar las plataformas logísticas de Jundiz y
+    Arasur, así como el aeropuerto de Foronda, para la adecuada gestión de
+    las mercancías. Solicitamos que el puerto de Bilbao acuerde como puerto
+    seco estas infraestructuras logísticas ya construidas. Creemos también
+    necesario garantizar la operatividad de Foronda las veinticuatro horas
+    del día. En este sentido, la enmienda número 68 del Grupo Popular a
+    nuestra propuesta número 46 cumple nuestros planteamientos y por ello la
+    aceptaremos y votaremos favorablemente. Consideramos que es un paso
+    positivo.
+
+    <br /><br />El último de los apartados a los que me he referido al inicio de mi
+    intervención incluye cinco propuestas de gran interés para muchos
+    ciudadanos. Con ellas pretendemos, en materia de dependencia, recuperar
+    las consignaciones presupuestarias de las que unilateralmente se ha
+    desentendido la Administración General del Estado. No es posible generar
+    expectativas y derechos sociales sobre un tema tan sensible como la
+    dependencia y después dejar de financiarla.
+
+    <br /><br />En el ámbito sanitario solicitamos que se derogue el Real Decreto-ley
+    16/2012, de 20 de abril, de Medidas urgentes para garantizar el Sistema
+    Nacional de Salud y mejorar la calidad de sus prestaciones. Este real
+    decreto-ley supone una flagrante invasión competencial y como prueba de
+    ello el Gobierno
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página9)"><b>Página
+    9</b></a></p><br />
+
+    <br /><br />vasco ha presentado un recurso de inconstitucionalidad. No respeta las
+    reglas del juego estatutario y rompe, entre otras cosas, el principio
+    sagrado de la universalidad de la sanidad pública, negando la asistencia
+    sanitaria a aquellos que no tienen aún los papeles, por no hablar de
+    otros temas como el copago, etcétera.
+
+    <br /><br />Instamos también al Gobierno a que redistribuya de manera equilibrada,
+    atendiendo al contenido de las competencias en materia de políticas
+    activas de las comunidades autónomas, la integridad del Fondo social
+    europeo destinado a garantizar el empleo juvenil. El Grupo Socialista nos
+    plantea en este sentido una enmienda que, en principio, si no hay
+    contraindicación, nos parece razonable y la podríamos votar a favor.
+
+    <br /><br />Solicitamos a través de otra propuesta que el Gobierno se manifieste a
+    favor de la convocatoria de un referéndum en los enclaves de Treviño y
+    Villaverde de Trucíos, si así lo solicitan sus ayuntamientos, a fin de
+    conocer la opinión de sus vecinos en cuanto a la pertenencia de sus
+    municipios a la Comunidad Autónoma de Castilla y León y a la de
+    Cantabria, respectivamente, o su integración en la comunidad autónoma
+    vasca. Son territorios que físicamente se encuentran en la comunidad
+    autónoma vasca y cuyo quehacer diario discurre mayormente en dicha
+    comunidad. La voluntad popular de sus ciudadanos ha de ser considerada al
+    efecto. Esto es lo realmente importante. Por ello, la enmienda que
+    plantea el PSOE, recordándonos el contenido del estatuto, no aporta nada
+    sustancial y no la podemos aceptar.
+
+    <br /><br />Hemos presentado una iniciativa, la última, con el propósito de avanzar en
+    la consecución de la paz. A pesar de que este tema no ha sido debatido
+    suficientemente estos días, es innegable que vivimos unos momentos de
+    esperanza, en los que se vislumbra la posibilidad de que finalice
+    definitivamente la violencia. Creemos que es un momento en el que las
+    instituciones y los gobiernos deben dar la talla, por eso queremos que se
+    reconozca que el fin de la violencia por parte de ETA parece consolidado
+    tras dos años de ausencia de atentados, lo que debe conllevar a una
+    readecuación de la política seguida hasta este momento. Instamos al
+    Gobierno a que se desarrolle una nueva orientación de la política
+    penitenciaria y finalmente exigimos a ETA su desarme y disolución
+    definitiva y encomendamos al Gobierno que actúe consensuadamente con
+    otras instituciones para que el proceso culmine con éxito. No podemos
+    aceptar en este sentido la enmienda presentada por el Grupo Popular que,
+    por el momento, se encuentra bastante alejada de nuestra propuesta. Por
+    todo lo comentado, desde el Grupo Vasco queremos solicitar a la Cámara el
+    apoyo a nuestras iniciativas, especialmente a la de la paz, que nos
+    afecta directamente a todos.
+
+    <br /><br />Gracias.
+
+    <br /><br />La señora VICEPRESIDENTA (Villalobos Talero): Gracias, señor Azpiazu.
+
+    <br /><br />Por el Grupo Parlamentario de Unión Progreso y Democracia, señor Anchuelo.
+
+    <br /><br />El señor ANCHUELO CREGO: Gracias, señora presidenta.
+
+    <br /><br />En las dos primeras sesiones de este debate sobre el estado de la Nación,
+    los grupos hemos presentado nuestro diagnóstico de los problemas que
+    aquejan a nuestro país, o al menos lo hemos hecho en los huecos que
+    dejaba el y tú más, tan caro al bipartidismo. En esta tercera y última
+    sesión se nos pide que presentemos nuestras propuestas de resolución,
+    sobre la base de ese diagnóstico de los problemas, para mejorar la
+    situación. Eso es lo que tengo el honor de hacer en nombre de mi grupo,
+    Unión Progreso y Democracia. Nosotros hemos presentado quince propuestas
+    de resolución que se pueden agrupar en tres bloques. Un primer bloque de
+    regeneración democrática, para revitalizar nuestra democracia, para
+    aumentar la calidad de nuestra democracia; un segundo bloque de
+    propuestas económicas para revitalizar nuestra economía, y un tercer
+    bloque con propuestas para dar un futuro a algunos grupos sociales en
+    nuestro país, que hoy día carecen de él. Regeneración democrática,
+    propuestas económicas, propuestas de futuro.
+
+    <br /><br />Comenzando por el primer bloque, medidas de regeneración democrática, son
+    cinco las propuestas de resolución que hacemos en este sentido. Es una
+    perogrullada pero las elecciones son la base de la democracia, y para que
+    la democracia funcione bien los ciudadanos tienen que pensar que su voto
+    vale igual que el de su vecino y los ciudadanos tienen que pensar que su
+    voto cuenta. Eso es lo que les animará a participar, que su voto vale
+    igual que el de su vecino. Para eso hay que reformar la Ley Electoral y
+    nosotros proponemos una reforma que no es ninguna ocurrencia -se basa en
+    el informe del Consejo de Estado del año 2009-, no porque favorezca a
+    este partido o al otro, sino porque los ciudadanos tienen derecho a que
+    su voto cuente, se vea representado. Proponemos combinar el distrito
+    provincial con un distrito único nacional, en la línea indicada por el
+    Consejo de Estado. También proponemos que las listas estén desbloqueadas,
+    es decir, lo contrario que está haciendo el Gobierno en el caso de
+    Castilla-La
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página10)"><b>Página
+    10</b></a></p><br />
+
+    <br /><br />Mancha, donde un 15% de los electores verán cómo su voto no cuenta y cómo
+    no están representados en su Parlamento. Un segundo pilar de la
+    democracia, junto al voto y la participación, son los partidos,
+    instrumentos esenciales de participación democrática; otro pilar, por
+    desgracia, también agrietado en nuestra democracia. Nos lo recordaba hace
+    pocos días ni más ni menos que el Consejo de Europa. Proponemos cambios
+    adicionales en la financiación de los partidos, de forma que se fiscalice
+    con más cuidado el ámbito local y se garantice la independencia del
+    Tribunal de Cuentas, y proponemos una mayor democracia interna en los
+    partidos; la generalización de las primarias, que Unión Progreso y
+    Democracia ya practica. El otro día el presidente del Gobierno estaba
+    preocupado por si queríamos cortarle la mano; es una preocupación
+    freudiana, yo no pude dejar de pensar que tal vez le preocupa su mano
+    porque en esa mano está el dedo que designa los candidatos autonómicos,
+    los candidatos europeos, tal vez el próximo presidente del Gobierno. La
+    tercera propuesta tiene que ver con la corrupción política, un cáncer que
+    corroe nuestras instituciones, que corroe a la mayoría de los partidos.
+    El número de causas de corrupción política es tan enorme que habría que
+    escribir una enciclopedia, es difícil simplemente seguirlas. Proponemos
+    ideas como que los corruptos no puedan ir de ninguna manera en las listas
+    electorales, endurecer más la legislación sobre el enriquecimiento
+    ilícito de los cargos públicos y terminar con anomalías que hay en
+    nuestro país, como la arbitrariedad de los indultos -un residuo casi
+    medieval- y el término del aforamiento; hay 10.000 personas aforadas en
+    nuestro país que no son juzgadas por su juez natural. La cuarta propuesta
+    de regeneración tiene que ver con el Poder Judicial. Es necesaria la
+    separación de poderes, otra base de la democracia, y proponemos algo tan
+    sensato como lo que proponía el Partido Popular en su programa electoral,
+    que en el Consejo General del Poder Judicial los jueces elijan
+    directamente doce vocales en vez del reparto de cuotas que sigue vigente
+    e imposibilita esa independencia esencial del Poder Judicial. Quinta y
+    última medida de regeneración democrática; hay que seguir recordando,
+    combatiendo, la lacra del terrorismo, para ello promovemos incluir el
+    delito de terrorismo como crimen de lesa humanidad en la Corte Penal
+    Internacional. Estas son nuestras medidas de regeneración democrática,
+    nuestras medidas para dar más vitalidad a la democracia y que los
+    ciudadanos se sientan más involucrados en ella.
+
+    <br /><br />El segundo bloque de medidas es también para revitalizar, en este caso
+    para revitalizar nuestra estancada y moribunda economía. Son siete las
+    propuestas de resolución que hacemos. Proponemos condicionar los rescates
+    de las comunidades autónomas. Cuando el Estado rescata una comunidad
+    autónoma debe condicionar esos rescates, igual que hace la Unión Europea
+    cuando rescata a uno de sus Estados miembros; condicionar no para
+    fastidiar, condicionar en el sentido de obligar a que esa ayuda se
+    destine prioritariamente a los servicios sociales esenciales para que se
+    proporcionen en condiciones de igualdad en todo el territorio nacional, y
+    condicionar al recorte de gastos y entes superfluos que siguen
+    proliferando. No tiene sentido hacer recortes en sanidad mientras siguen
+    subsistiendo las embajadas autonómicas o 4.000 entes públicos no
+    administrativos. Segunda propuesta, relacionada con la anterior, una
+    reforma a fondo de las administraciones públicas. Esta es una propuesta
+    muy importante que diferencia esencialmente nuestro proyecto político de
+    el del Partido Popular y otros grupos de la Cámara. El presidente del
+    Gobierno, en el debate de hace dos días, dio por terminada la reforma de
+    las administraciones; dijo que solo tenemos un problema de ingresos y que
+    el gasto superfluo había desaparecido. Nosotros no compartimos en
+    absoluto esa postura. Proponemos la fusión de municipios -son 8.000 y la
+    mayoría muy pequeños- y la eliminación de diputaciones provinciales, la
+    drástica reducción de esos 4.000 entes públicos no administrativos; en
+    las propias administraciones territoriales hay todavía entes
+    innecesarios, consejos económicos y sociales, tribunales de cuentas y
+    consejos consultivos duplicados. No es un problema solo de ingresos, hay
+    gastos superfluos y reformas de las administraciones pendientes, y eso
+    diferencia esencialmente nuestro proyecto político de otros representados
+    en esta Cámara.
+
+    <br /><br />Pasando al ámbito financiero, proponemos exigir responsabilidades a los
+    miembros de la alta dirección de las cajas de ahorro politizadas y
+    quebradas. Se habla de crisis de las entidades financieras, pero fueron
+    unas entidades financieras muy concretas, las cajas de ahorro
+    politizadas, las que quebraron. Otras entidades financieras no lo
+    hicieron. Las consecuencias han sido terribles para el contribuyente -ya
+    van 43.000 millones de euros perdidos-; terribles para los que compraron
+    preferentes mal comercializadas; terribles para los miles de empleados
+    que han perdido su trabajo en esas cajas. Estos efectos suponen un
+    doloroso contraste frente a la situación de los que lo han provocado, que
+    no solo no han sido penalizados, sino que han sido premiados socialmente.
+    Antes del hundimiento de las cajas disfrutaron de sueldos millonarios,
+    viajes exóticos y créditos preferenciales, pero incluso después del
+    hundimiento de las cajas,
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página11)"><b>Página
+    11</b></a></p><br />
+
+    <br /><br />e incluso ahora mismo, hoy en día, siguen disfrutando las indemnizaciones
+    millonarias que cobraron, las prejubilaciones millonarias que se
+    autoconcedieron con las instituciones ya quebradas. Seguimos creyendo
+    esencial exigir responsabilidades -como ha hecho UPyD en el caso Bankia y
+    en el caso Caja Segovia- a los responsables y recuperar esas cantidades
+    cobradas ilegítimamente con efectos retroactivos desde el 1 de enero del
+    año 2008, cuando ya estaba clara cuál era la situación de esas entidades.
+    Nos preocupa también en el ámbito financiero la estafa de las
+    preferentes. No bastan soluciones parciales, tipo arbitraje, controladas
+    por las propias entidades. Todos los estafados, en su inmensa mayoría
+    personas humildes, jubiladas, tienen derecho a la recuperación íntegra de
+    su dinero.
+
+    <br /><br />Por último, tres reformas estructurales. En primer lugar, la reforma
+    laboral. La reforma laboral del Partido Popular ha fracasado. Hoy en día
+    el 93% de los nuevos contratos siguen siendo temporales y del 7% de los
+    indefinidos casi la mitad son a tiempo parcial. En nuestro mercado de
+    trabajo hay una precariedad terrible, no solo paro. Esto va unido a la
+    pérdida de protección de los parados. La tasa de cobertura no deja de
+    caer y hay ya 3 millones de parados sin ninguna protección. Por eso
+    planteamos dos grandes propuestas. Una es el contrato único indefinido,
+    cada vez más justificado. Todos los contratos deberían ser indefinidos,
+    con una indemnización inicialmente similar a la de un contrato temporal
+    de los de hoy, que progresivamente, sin saltos, se convertiría en un
+    contrato indefinido de los de hoy. Eso estabilizaría las relaciones
+    laborales y daría unas perspectivas de futuro a nuestros jóvenes. Segunda
+    propuesta: homogeneizar las rentas mínimas de inserción autonómicas. Son
+    el último escalón de protección y no tiene sentido que los requisitos
+    para acceder a ellas, el número de beneficiarios o su duración, sea tan
+    dispar entre las comunidades autónomas, además, en el sentido opuesto al
+    que sería esperado porque hay más protección en las comunidades más
+    prósperas, donde los problemas son menores. La segunda reforma
+    estructural es la reforma fiscal. Hay una en marcha. Sus grandes líneas,
+    en nuestra opinión, deberían ser el aumento de bases imponibles para que
+    las personas que ahora pagan muy por debajo de su capacidad contribuyan
+    con lo que es justo, según su capacidad de pago, y unido a esto un alivio
+    de la carga de las personas que hoy pagan por encima de lo que deberían,
+    muy especialmente las rentas del trabajo. No se puede disociar la reforma
+    fiscal de la lucha contra el fraude ya que se dejan de recaudar cada año
+    7 u 8 puntos del PIB, 70.000 u 80.000 millones de euros. Para ello hay
+    que dar más medios a la Agencia Tributaria y garantizar su independencia
+    con un nuevo estatuto. Y no queremos olvidar la amnistía fiscal. Eso sí
+    que fue una bajada de impuestos; el 3% pagaron los amnistiados. Al menos
+    deberían revisarse con cuidado todos esos expedientes para evitar que,
+    además de la amnistía fiscal, haya habido blanqueo de capitales ilícitos.
+    La última reforma estructural importante es la reforma energética. La
+    energía es un componente esencial de la competitividad de una economía y
+    un componente esencial del gasto y la calidad de vida de las familias.
+    Hay que acabar con este caos de reforma energética por mes, con la
+    inseguridad jurídica, con los aumentos insostenibles de la factura, y
+    llegar a un marco de estabilidad que tenga en cuenta líneas como el
+    ahorro energético; la rehabilitación de viviendas; el autoconsumo, que se
+    ha penalizado en las reformas del Gobierno; y la lucha contra la pobreza
+    energética.
+
+    <br /><br />Decía al principio de mi intervención que presentábamos un último bloque
+    con medidas de futuro. Aunque todas han sido medidas de futuro, algunas
+    están más directamente relacionadas con dar un futuro a algunos grupos
+    que hoy no lo tienen. En primer lugar, los desahuciados. Es difícil saber
+    las cifras exactas, pero puede haber medio millón de afectados y muchos
+    de estos desahuciados han perdido su vivienda y siguen cargando con la
+    mayor parte de sus deudas. Proponemos una ley de segunda oportunidad, un
+    tratamiento a las personas físicas similar al de las empresas cuando
+    están en un procedimiento concursal para que estas personas puedan
+    rehacer sus vidas. En segundo lugar, la pobreza infantil. Nos sorprendió
+    mucho el otro día el enfado del presidente del Gobierno; no es un tema
+    sensiblero, es literalmente el futuro de nuestro país. Nuestros niños y
+    niñas son el futuro de nuestro país y hay 2.800.000 de ellos, según Save
+    the Children, una tercera parte, en riesgo de pobreza y exclusión, por lo
+    que esto debería ser algo urgente y una tarea compartida entre todos los
+    grupos de esta Cámara, debería ser algo que apelase a nuestra conciencia
+    cada día. No basta con anunciar planes sin resultado; es necesario dotar
+    más recursos, es necesaria la colaboración entre todos los niveles de la
+    Administración y es necesario tener información periódica oficial fiable.
+    Si estas cifras son discutibles, ¿cuáles son las verdaderas? Hay que
+    comprender mejor el problema y hay que combatirlo, y si esto lo
+    consideran demagogia, nos sentimos honrados de estar en el grupo de los
+    demagogos; algún día deberían unirse a él. Tercera y última cuestión, la
+    educación. La educación es un elemento clave para la competitividad de un
+    país y también para la igualdad social, para la movilidad social, y la
+    Lomce no ha resuelto los problemas. Es necesario un marco estable que no
+    cambie con cada Gobierno, que potencie la formación profesional,
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página12)"><b>Página
+    12</b></a></p><br />
+
+    <br /><br />que dé mayor autonomía a los centros y que fomente la movilidad de
+    profesores y alumnos. Estos son algunos de los rasgos que están en
+    nuestra propuesta de resolución.
+
+    <br /><br />Estas son nuestras quince propuestas. Son propuestas constructivas que
+    intentan solucionar los problemas de este país, propuestas que los
+    ciudadanos quieren. Ustedes pueden optar por ignorarlas e incluso por
+    ridiculizarlas o seguir diciendo que no tenemos propuestas, pero lo hacen
+    a su riesgo. La soberbia del poder en todas las tragedias griegas es el
+    inicio de su final y la rueda de la fortuna gira; los clásicos hablaban
+    de la rueda de la fortuna porque lo que hoy está arriba, mañana está
+    abajo, y viceversa. (El señor presidente ocupa la Presidencia). Ustedes
+    pueden reírse de estas propuestas, pueden ignorarlas, pero se acabarán
+    aplicando porque son necesarias, y si no lo hacen ustedes lo acabarán
+    haciendo otros.
+
+    <br /><br />Querría finalizar, señor presidente, diciendo que de las enmiendas
+    presentadas aceptaremos la número 38, del Partido Socialista, y estamos
+    intentando negociar una enmienda transaccional a la 62, del Partido
+    Popular.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Anchuelo.
+
+    <br /><br />Por el Grupo Parlamentario de La Izquierda Plural intervendrán tres
+    oradores, comenzando el señor Centella.
+
+    <br /><br />El señor CENTELLA GÓMEZ: Señor presidente, señorías, nuestro grupo ha
+    presentado una serie de resoluciones coherentes con la intervención de
+    nuestros portavoces el martes pasado. Son resoluciones que tratan de
+    afrontar los problemas reales de quienes sufren directamente la crisis,
+    de quienes están en paro, de quienes son desahuciados y que ya no pueden
+    pagar la luz o sufren las consecuencias de una reforma laboral de la que
+    ustedes están tan orgullosos, pero que ha provocado más despidos, más
+    baratos y una reducción de salario, es decir, peores condiciones
+    laborales.
+
+    <br /><br />Presentamos estas resoluciones porque entendemos que la crisis tiene otra
+    salida; hay otras formas de afrontar la crisis que la reaccionaria, la
+    antisocial y autoritaria que el Partido Popular está tratando de aplicar.
+    Mis compañeros, junto conmigo, desarrollarán algunas de estas propuestas.
+    Yo quiero detenerme en dos. Una, la que plantea la desaprobación de la
+    gestión del Gobierno en este año ya que comprobamos que la mayoría social
+    que lleva años sufriendo la crisis no vive hoy mejor que hace un año,
+    porque comprobamos que solamente una minoría sigue teniendo beneficios.
+    Ustedes pueden, por decreto-ley, que tanto les gusta, decretar el fin de
+    la crisis. Ustedes pueden decretar lo que quieran, pero la realidad es
+    más fuerte que la intervención del presidente el martes. La realidad se
+    impone a su demagogia y hoy los que trabajan lo hacen por más tiempo y
+    cobran menos, y los millones que no trabajan, llevan años buscando
+    trabajo y no pueden seguir esperando a que su macroeconomía les devuelva
+    el trabajo perdido. Por eso, no solo nuestro grupo es quien suspende al
+    Gobierno, no solo nuestro grupo es quien desaprueba al Gobierno; lo
+    reflejan todas las encuestas. No nos arrogamos representar aquí a nadie
+    que no nos haya votado. Solo constatamos una realidad, que hoy la mayoría
+    de la población, según marcan las encuestas, no está de acuerdo con su
+    política y la desaprueba. Eso es lo que constatamos en esta resolución.
+    Este Gobierno ha tratado de convertir este debate en un acto más de una
+    campaña en la que trata de hacer valer aquella máxima de que una mentira
+    si se repite cientos de veces alguien acaba creyéndosela. Cuando estamos
+    hablando de cómo vive la gente, de cómo sufren millones de personas, es
+    muy difícil que eso cuele. No vamos a ponernos de acuerdo, pero queremos
+    poner por testigo a toda aquella gente que, le repito, hoy está peor que
+    hace un año y que son mayoría en este país.
+
+    <br /><br />También voy a defender la resolución que plantea la eliminación de la
+    reforma del artículo 135 de la Constitución que ustedes junto con el
+    Grupo Socialista hicieron un día con nocturnidad y alevosía. Lo hacemos
+    porque esa reforma supuso la puntilla a un acuerdo constitucional. Esa
+    Constitución que ustedes dicen seguir defendiendo, ese día la acabaron de
+    enterrar porque se hizo, como decía, con nocturnidad y alevosía, se hizo
+    al dictado de la troika -por cierto, hay que comprar un libro para
+    conocer la carta que se mandó, hay que gastarse el dinero porque alguien
+    va a cobrar por haber escrito aquella carta y haberla recibido-; pero,
+    sobre todo, porque se hizo sin permitir que se pronunciase el soberano
+    que es el pueblo español y porque ese artículo marca una prioridad que
+    nos divide. Marca a quienes consideran que lo prioritario es pagar la
+    deuda, que lo prioritario es pagar a los bancos, y a quienes consideramos
+    que hay otras prioridades. Significa, ni más ni menos, que se pueden
+    cerrar hospitales, que se puede devaluar la educación, que se puede
+    acabar con la asistencia a la dependencia, pero que no se puede dejar de
+    pagar a la banca. Eso nos parece injusto, inhumano y además inútil. Por
+    eso, esta modificación significa la
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página13)"><b>Página
+    13</b></a></p><br />
+
+    <br /><br />evidencia más clara de nuestra sumisión a los intereses de la banca
+    alemana, de sumisión a una normativa que permite que la banca privada
+    haga su negocio a costa de los Estados porque no pueden pedir créditos al
+    Banco Central Europeo. Blindar en la Constitución esa prioridad impide
+    también el establecimiento de políticas económicas alternativas. Es una
+    losa que va a impedir cualquier política progresista, cualquier salida
+    realmente social de la crisis. Por eso lo confrontamos con esta
+    modificación; lo confrontamos en su día y hoy venimos a plantearlo ya con
+    el tiempo pasado demostrando que teníamos razón, que era inútil, que era
+    inadecuada y que además viene a romper algo de lo que ustedes alardean.
+    Porque ustedes vienen aquí a defender la Constitución, vienen a defender
+    el consenso y luego, en lo más importante, que es la prioridad de en qué
+    se gasta el Estado el dinero, cómo se resuelve la crisis, no hay
+    consenso, no hay acuerdo, simplemente lo que hay es la prioridad de la
+    banca frente a la prioridad de las personas.
+
+    <br /><br />Para terminar, nuestro grupo desaprueba la gestión del Gobierno de este
+    año porque estamos peor. Por mucho que ustedes hagan juegos malabares con
+    las cifras, este país no ha mejorado en este año. Ponemos en primer lugar
+    el artículo 135 de la Constitución. Queremos que hoy se vote aquí y se
+    plantee acabar con esa losa porque, repito, con ella será imposible una
+    política de progreso en este país.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Centella.
+
+    <br /><br />Señora Ortiz.
+
+    <br /><br />La señora ORTIZ CASTELLVÍ: Gracias, presidente.
+
+    <br /><br />En primer lugar, quería lamentar que no esté hoy el presidente ni gran
+    parte del Gobierno, ya que nos exigía propuestas concretas y
+    alternativas. Precisamente cuando hablamos de las propuestas no está para
+    escucharnos.
+
+    <br /><br />Desde la Izquierda Plural presentamos alternativas a la política y a la
+    visión del presidente. Gobernar no consiste en pintar de colores un país
+    y maquillar los rostros de la pobreza para no verlos, sino poner en el
+    centro de las decisiones a la mayoría social. Tras dos años de Gobierno
+    ustedes ayer no quisieron hablar de pobreza ni de desahucios ni de
+    personas mayores o dependientes ni de jóvenes exiliados, porque sus
+    políticos no son para ellos. La mayoría de la ciudadanía está peor: más
+    pobres, más precarios, menos derechos y menos servicios públicos. Esto,
+    por mucho que manipulen, no lo pueden esconder. Desde La Izquierda Plural
+    planteamos alternativas, porque es posible otra política y otra economía.
+    La política económica no es neutra. El país que ustedes pintan es el de
+    las agencias de calificación y los fondos de inversión, pero los
+    indicadores que hay que mirar son los del bienestar, la desigualdad y la
+    pobreza. Planteamos un cambio de rumbo, empezando por una economía al
+    servicio de las personas, economía al servicio de la mayoría, una
+    fiscalidad justa, y eso tiene que ver, por ejemplo, con rebajar el IVA a
+    los servicios esencial es, algo que afecta a las rentas bajas. Es
+    inaceptable que pague más un ciudadano por la luz de su casa que lo que
+    paga Iberdrola en impuesto sobre sociedades. Justicia no es una tarifa
+    plana para hundir la Seguridad Social, sino blindar un sistema público de
+    pensiones. Humanizar la economía es garantizar que las Sicav paguen y que
+    se persiga el fraude fiscal, pero mantengamos un acceso universal a los
+    servicios públicos. Sus políticas destruyen empleo y derechos, y
+    multiplican también el dolor en los hogares. Les planteamos alternativas
+    a los desahucios, que continúan creciendo en nuestro país, mientras
+    alimentan con leyes carroñeras a fondos buitres; dación en pago y segunda
+    oportunidad. ¿No ven que las familias en este país no pueden seguir
+    esperando? Les planteamos también de nuevo alternativas para combatir la
+    pobreza energética; insistimos desde nuestro grupo parlamentario. El
+    presidente quería hablar de energía, pero ni una sola propuesta para
+    garantizar el acceso a la luz y evitar los cortes de suministro. Eso les
+    proponemos: la tregua invernal, precios sociales y afrontar el problema,
+    pero también un cambio de modelo, de fondo, fomentar el ahorro y la
+    eficiencia energética. Les exigimos una auditoría del déficit tarifario y
+    un cambio en la regulación para acabar con el abuso del oligopolio
+    eléctrico; regulación al servicio de la sociedad y del medio ambiente, y
+    no de los que tienen sentados ustedes en los consejos de administración.
+    Apostamos por un cambio de modelo energético basado en energías limpias.
+    Dejen de hundir a las renovables y no castiguen el autoconsumo. No se
+    puede encerrar el sol, no pueden poner peajes al sol para garantizar el
+    pastel de las grandes eléctricas. El sol es nuestro principal recurso; no
+    lo privaticen porque, si no, la desobediencia está servida. Su política
+    energética es un caos y se suma a los desastres anteriores -eso es
+    evidente-, y encima apuestan por un modelo peligroso que atenta contra
+    nuestro patrimonio natural. Paralicen las prospecciones petroleras, el
+    proyecto Castor y prohíban el fracking. Basta de cultura del pelotazo y
+    de la quema de combustibles fósiles. Nuestra biodiversidad, nuestra
+    riqueza natural y el planeta no pueden seguir ese camino. Ese no
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página14)"><b>Página
+    14</b></a></p><br />
+
+    <br /><br />es el camino, lo decimos La Izquierda Plural pero también miles y miles de
+    ciudadanos en Cataluña, en Ibiza, Canarias, Valencia, Andalucía y Aragón.
+    Escuchen a la gente. Ellos piden precisamente un referéndum sobre la
+    agresión que supone esa decisión del Gobierno; quieren decidir. Muchos
+    ciudadanos y ciudadanas exigen democracia.
+
+    <br /><br />Desde La Izquierda Plural también defendemos el derecho a decidir de las
+    mujeres sobre su cuerpo y sobre su maternidad. Ni ustedes ni el
+    fundamentalista del ministro de Justicia tienen derecho a poner en riesgo
+    la salud de las mujeres por su dogma. No queremos ni un paso atrás en
+    nuestros derechos ni en la ley vigente. Queremos poner fin también a la
+    violencia legal e institucional que suponen las reformas de este Gobierno
+    contra las mujeres. Queremos aplicación efectiva de la Ley de Igualdad,
+    ampliar la lucha contra la violencia de género, que el Gobierno no para
+    de recortar, y derogar la reforma laboral que nos precariza y castiga
+    especialmente. Ustedes hablan de soberanía y democracia. ¿El Gobierno del
+    decreto-ley, los protagonistas de la reforma exprés de la Constitución
+    hablan de soberanía de los españoles? Realmente tiene gracia, si no fuera
+    por lo triste que es. No utilicen a Cataluña para cubrir sus vergüenzas y
+    no sigan enfrentando territorios. Ustedes, que negaron la soberanía a
+    Cataluña y a esta Cámara, que representa precisamente al conjunto de los
+    españoles, recurriendo al Estatuto, no busquen excusas en el derecho a
+    decidir, no tienen ninguna credibilidad para hacerlo. (Pronuncia palabras
+    en catalán). Sí, somos una nación y tenemos derecho a decidir, sin
+    perjuicio de ninguna otra persona. Aquí los únicos que niegan la
+    democracia son ustedes con cada decisión. Iniciativa per Catalunya Verds,
+    Esquerra Unida, Izquierda Plural le plantea a este Congreso que delegue
+    la competencia para convocar referéndums según el artículo 150.2 de la
+    Constitución de acuerdo a las leyes, le insta a dialogar y a negociar.
+    Nuestro derecho a decidir no niega el derecho a que el conjunto de la
+    ciudadanía decida sobre el modelo de Estado. La calle pide también un
+    proceso constituyente para el Estado. Aquí quienes no se mueven son
+    ustedes, quienes secuestran la democracia son ustedes; no hay convivencia
+    posible con imposición y sin voluntad de convivir, a eso se le llama
+    secuestro. Exigimos inteligencia y sentido democrático a esta Cámara y
+    reprobamos al Gobierno, dos años han sido suficientes e insoportables.
+    Hablan de que necesitamos regeneración democrática, pero para ello el
+    primer paso es que dimitan y que convoquen elecciones; no hay
+    regeneración posible sin elecciones. Hay alternativa y en las quince
+    resoluciones la planteamos.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Ortiz.
+
+    <br /><br />Señor Yuste.
+
+    <br /><br />El señor YUSTE CABELLO: Muchas gracias, señor presidente.
+
+    <br /><br />Señorías, se quejaban algunos de que en el debate de estos días la
+    oposición no había ofrecido alternativas; debieron de cambiar de canal
+    cuando salimos los portavoces de La Izquierda Plural, porque alguna
+    alternativa dimos. Si les supo a poco, aquí están escuchando muchas más,
+    las que han expuesto mis compañeros José Luis Centella y Laia Ortiz, y
+    que me corresponde completar. Aquí desde luego hay alternativas.
+
+    <br /><br />Dentro del ámbito económico proponemos poner en marcha una política
+    industrial activa que promueva los sectores de alto valor añadido y con
+    una fuerte base tecnológica en el marco de un nuevo modelo de crecimiento
+    basado en la economía productiva y no en la economía especulativa que nos
+    ha embarrancado en esta crisis. No podemos aceptar que el ministro Soria
+    asista impasible a la desindustrialización de nuestros territorios, por
+    eso le exigimos que apoye a las empresas en crisis, a los trabajadores
+    que están defendiendo sus empleos, como los de Coca Cola, Panrico, Inasa
+    Foil y La Naval, entre otros muchos. También necesitamos desarrollar
+    planes de reindustrialización que permitan la consolidación de
+    alternativas económicas industriales en zonas que han sufrido procesos de
+    desindustrialización y de deslocalización, y hacemos una mención singular
+    a las comarcas mineras donde se han incumplido los compromisos de
+    desarrollo alternativo. En este mismo sentido ese nuevo modelo productivo
+    debe fundamentarse en la investigación, el desarrollo y la innovación, y
+    para impulsarlos nos hacemos eco de las propuestas del colectivo Carta
+    por la ciencia, que incluye la recuperación en los próximos tres
+    ejercicios de los niveles de financiación pública de 2009 en I+D+i civil
+    hasta alcanzar la media europea, así como la creación de la agencia
+    estatal de investigación, entre otras medidas.
+
+    <br /><br />Como diputado de Chunta Aragonesista por la coalición de Izquierda de
+    Aragón voy a defender las reivindicaciones del pueblo aragonés, y me
+    atrevo a decirlo así porque casi todas estas propuestas cuentan con el
+    respaldo unánime de todas las instituciones aragonesas. El señor Rajoy
+    exigía ayer a
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página15)"><b>Página
+    15</b></a></p><br />
+
+    <br /><br />Cataluña que cumpliera la ley. Nosotros esperamos que él cumpla la Ley
+    orgánica del Estatuto aragonés, en especial poniendo en marcha el acuerdo
+    bilateral de financiación que le venimos reclamando desde hace ya
+    dieciocho años, las leyes son para cumplirlas. También queremos que en el
+    inminente nuevo plan hidrológico nacional se rechace cualquier nuevo
+    proyecto de trasvase del Ebro y se desarrollen los principios de la nueva
+    política del agua: eficiencia, participación, recurso público básico,
+    control de la demanda, etcétera. El tiempo de los grandes embalses y la
+    voladura de casas por la Guardia Civil ya pasó, por eso el Estado no
+    puede olvidar la deuda que tiene con los vecinos de Jánobas, en el
+    Sobrarbe, desalojados por la fuerza por un pantano que nunca llegó a
+    construirse. Restitución ya. Proponemos defender ante la Unión Europea el
+    reconocimiento de la provincia de Teruel y otros territorios de
+    características similares, como Soria y Cuenca, como zonas escasamente
+    pobladas para recabar ayudas europeas específicas. Queremos un nuevo
+    convenio entre la Comunidad Autónoma de Aragón, Renfe y cualesquiera
+    otros operadores que asegure unos servicios ferroviarios adecuados y
+    dignos, mejorando el material rodante, ajustando horarios y estableciendo
+    abonos y bonificaciones. Es decir, todo lo contrario del vergonzoso
+    funcionamiento que está teniendo el ferrocarril convencional en Aragón
+    durante estos últimos meses.
+
+    <br /><br />También proponemos impulsar los planes de zona de desarrollo rural de
+    Aragón en 2014, así como un plan especial de reactivación económica de
+    las comarcas mineras aragonesas y completar las inversiones pendientes en
+    infraestructura de los sucesivos planes de la minería del carbón.
+    Exigimos dotaciones suficientes y plurianuales para las obras
+    consideradas más urgentes y prioritarias por las instituciones aragonesas
+    unánimemente; son diecisiete entre autovías y ferrocarriles, que ya cité
+    expresamente el pasado martes, y que figuran por escrito en la
+    resolución. Destacaré, como siempre, la reapertura del ferrocarril
+    internacional de Canfranc, exigiendo su puesta en funcionamiento en 2020,
+    como han pactado los Gobiernos de Aragón y Aquitania. Asimismo,
+    demandamos una parada ya del AVE Madrid-Marsella en Zaragoza y que se
+    prevea otra cuando se ponga en servicio el Madrid-París. Reclamamos
+    también la puesta en marcha del denominado aterrizaje verde en el
+    aeropuerto de Zaragoza, con el objetivo de minimizar el impacto acústico,
+    sobre todo en los barrios del sur de la ciudad (Oliver, Valdefierro,
+    Valdespartera, Rosales del Canal, Garrapinillos, Montecanal, Miralbueno y
+    Casablanca). Esta medida que utilizan ya en veinte aeropuertos españoles
+    se retrasa en Zaragoza, por la hipoteca que supone el control militar que
+    padecemos. No vamos a reblar.
+
+    <br /><br />Por otra parte, frente a los pelotazos urbanísticos insostenibles que
+    amenaza con degradar el Pirineo -quiero recordar la reciente sentencia
+    que ha paralizado el proyecto de Castanesa-, proponemos en colaboración
+    con los Gobiernos de los territorios pirenaicos de ambas vertientes
+    desarrollar el proyecto del parque internacional de los Pirineos.
+
+    <br /><br />Finalmente, hablemos de patrimonio cultural en el que los aragoneses somos
+    muy sensibles. Quiero comenzar agradeciendo a los más de 22.000
+    aragoneses que firmaron para evitar la marcha a Madrid de los arcos
+    originales del Palacio de la Aljafería y quiero agradecer también a los
+    60 diputados que me acompañaron en el recurso ante el Tribunal
+    Constitucional contra la discriminatoria y acomplejada ley de no lenguas
+    del Gobierno de la señora Rudi. Surgen nuevas controversias; en este
+    sentido pedimos para el Gobierno de Aragón la transmisión de la plena
+    propiedad del primer libro impreso por la zaragozana Juana Millán,
+    publicado en 1537, y del manuscrito de mediados del siglo XIII, escrito
+    en lengua aragonesa, que contiene una parte del texto de los Fueros de
+    Aragón de 1247. Lo hacemos porque constituyen piezas fundamentales del
+    patrimonio bibliográfico documental e histórico de Aragón. Pido a todos
+    los grupos parlamentarios el voto favorable a todas las propuestas de
+    resolución del Grupo de La Izquierda Plural.
+
+    <br /><br />Muchas gracias.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Yuste.
+
+    <br /><br />Por el Grupo Parlamentario Catalán de Convergència i Unió, tiene la
+    palabra el señor Sánchez i Llibre.
+
+    <br /><br />El señor SÁNCHEZ I LLIBRE: Muchas gracias, señor presidente.
+
+    <br /><br />Señoras y señores diputados (Continúa su intervención en catalán),
+    Cataluña quiere votar, las catalanas y los catalanes queremos votar. Por
+    este motivo el Grupo Parlamentario de Convergència i Unió ha planteado
+    quince propuestas de resolución, las cuales voy a resumir en mi
+    intervención centrándome en tres aspectos fundamentales. Lo dijo nuestro
+    presidente de grupo parlamentario, señor Durán i Lleida, en su
+    intervención: El principal problema político de España ya no es la
+    economía, ya no son los mercados internacionales financieros; el
+    principal problema político que hoy tiene España es Cataluña. Por este
+    motivo, la primera propuesta de resolución la hacemos con referencia a
+    Cataluña. En este contexto,
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página16)"><b>Página
+    16</b></a></p><br />
+
+    <br /><br />señorías, hago una apelación importante al Grupo Parlamentario Popular que
+    da soporte o apoyo al Gobierno y, concretamente, al presidente del señor
+    Rajoy, así como al primer partido de la oposición, señor Pérez Rubalcaba,
+    para que voten favorablemente nuestra propuesta de resolución y eviten
+    que se pudra definitivamente el problema catalán. Lo voy a repetir: pido
+    sinceramente -apelo a sus señorías- que voten hoy afirmativamente la
+    propuesta de resolución que hace referencia a Cataluña -más adelante lo
+    explicaré- para que con este voto puedan evitar que se pudra
+    definitivamente el tema catalán. Probablemente no me van a hacer caso y
+    van a votar que no, pero les animo a que a partir de mañana empiecen a
+    trabajar sigilosamente en la dirección que les propone nuestra moción. La
+    propuesta, señoría, es muy sencilla, muy clara, muy transparente y muy
+    democrática, y ustedes la conocen perfectamente. Va en la siguiente
+    dirección: El Congreso de los Diputados insta al Gobierno a iniciar el
+    diálogo -el diálogo- con el Gobierno de la Generalitat en aras de
+    posibilitar la celebración de una consulta -repito, la celebración de una
+    consulta- a los ciudadanos y ciudadanas de Cataluña para decidir su
+    futuro. Esta es la propuesta de resolución que nosotros presentamos para
+    su votación. Estamos pidiendo, como ustedes observarán, diálogo, diálogo
+    y más diálogo; estamos pidiendo que a través del diálogo tengan la
+    responsabilidad de hacer política, que es la responsabilidad de todos los
+    diputados que estamos hoy presentes en esta Cámara. No se lo pedimos por
+    capricho, señorías; se lo pedimos porque entendemos que va en la misma
+    dirección y porque desde nuestra modesta opinión también hay una
+    abrumadora mayoría de ciudadanos de Cataluña que quieren esta consulta.
+    Por tanto, les pedimos este diálogo para hacer esta consulta dentro de la
+    más estricta legalidad. Señorías, nuestra propuesta no es una imposición
+    pero si, por el contrario, reiteradamente vamos recibiendo negativas a
+    estas propuestas de diálogo, diálogo y diálogo y a determinados
+    planteamientos políticos quizás las interpretemos como una imposición.
+
+    <br /><br />Señorías, pedimos la consulta porque algunos de nosotros creemos que la
+    Constitución no impide su celebración, como también lo creen diferentes
+    ponentes de la Constitución. Es decir, no solamente nosotros pensamos que
+    esta consulta cabe dentro de la Constitución, sino que también hay
+    diferentes ponentes de la misma -algunos de los cuales no son catalanes-
+    que creen también que la Constitución permite esta consulta. Por eso,
+    señores del Grupo Popular y del Grupo Socialista, desde Convergència i
+    Unió les decimos sinceramente que la Constitución no puede ser
+    continuamente un frontón -repito, la Constitución no puede ser
+    reiteradamente un frontón- ni tampoco puede ser un muro infranqueable al
+    diálogo y a la negociación. En este sentido, recordarán que ambos grupos
+    -entonces en la oposición- votaron una modificación de la Constitución.
+    En aquellos momentos España se hundía -hablo concretamente de los años
+    2010 y 2011- y ustedes con nocturnidad y alevosía cambiaron la
+    Constitución. Por tanto, un cambio en la Constitución no debe ser un muro
+    infranqueable para posibilitar el diálogo y para que sea reiteradamente
+    un frontón. La Constitución, señorías, en un Estado de derecho no puede
+    ser un instrumento efectivo para que los ciudadanos de Cataluña no puedan
+    votar.
+
+    <br /><br />Saben perfectamente que hace ahora un año nuestro grupo parlamentario
+    planteó una moción que iba en la misma dirección. Lamentablemente esta
+    moción se ha metido en el cajón de los papeles perdidos y volvemos a
+    estar en una situación similar. Por eso, también instamos a los diputados
+    del Grupo Popular -todavía están a tiempo- a que, tal como se lo planteó
+    nuestro presidente al presidente del Gobierno, el señor Rajoy, reaccionen
+    positivamente al diálogo, que no pierdan ni un minuto más aparcando la
+    cuestión de Cataluña, que, repito, es el principal problema político que
+    hoy existe en España. Están ustedes delante de un problema muy importante
+    -lo he reiterado en tres ocasiones en mi intervención- y que puede
+    afectar negativamente al futuro de la economía española y de la política
+    española. Por lo tanto también en esta cuestión les pediría, no solo a
+    los diputados del Grupo Popular sino también a los del Grupo Socialista,
+    que no piensen únicamente en las próximas elecciones, sino además en las
+    próximas generaciones, para poder resolver esta situación.
+
+    <br /><br />Ahora, señores diputados del Grupo Popular y también del Grupo Socialista,
+    es el momento de la política en mayúsculas. La política es diálogo,
+    señorías; diálogo para resolver una cuestión de primera magnitud como es,
+    desde nuestro punto de vista, que Cataluña es el principal problema
+    político que hoy existe en España. Este no es un problema catalán,
+    señorías; es un problema del Estado español que no tiene su origen en la
+    sentencia del Tribunal Constitucional sino que viene lamentablemente
+    desde hace tres siglos. Solamente se truncó cuando hubo el periodo
+    preconstitucional, y lamentablemente esta atracción del pueblo catalán
+    respecto a España se volvió a truncar con la sentencia del Tribunal
+    Constitucional. Por lo tanto, señorías, hagan una propuesta atractiva
+    desde esta posición, sean sensibles a la petición de nuestro grupo
+    parlamentario de que rápidamente se pongan a negociar, a dialogar y a
+    hacer planteamientos políticos para que este problema político que existe
+    en España, que es un problema
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página17)"><b>Página
+    17</b></a></p><br />
+
+    <br /><br />de España y no de Cataluña, no pueda traer consecuencias que no podamos
+    remediar en un futuro inmediato. No será que este grupo parlamentario no
+    ha avisado en reiteradas ocasiones de que ahora es el momento de
+    resolverlo, quizá en los próximos meses ya no habrá posibilidad de
+    solución.
+
+    <br /><br />Esta es la moción más importante que hemos presentado desde el Grupo
+    Parlamentario de Convergència i Unió y desde esta perspectiva apelo, una
+    vez más, a su sensibilidad para que la voten favorablemente, no solo el
+    partido el Grupo Popular sino también el Grupo Socialista. A esta moción
+    se han presentado algunas enmiendas de diferentes grupos parlamentarios.
+    Vamos aceptar la enmienda de Esquerra Republicana, la de Iniciativa per
+    Catalunya, la de Amaiur, vamos a abstenernos en la enmienda que nos ha
+    planteado el Grupo Socialista y también con la que ha planteado el
+    Bloque, aunque estábamos de acuerdo con ella, porque han incorporado
+    otras cuestiones que van en dirección contraria a nuestros
+    planteamientos. Por lo tanto, queda aquí nuestra posición respecto a las
+    enmiendas que nos han presentado los diferentes grupos parlamentarios.
+
+    <br /><br />También hemos presentado diferentes enmiendas a lo relativo a la economía
+    productiva, la generación de empleo, la política industrial y la política
+    energética, la reforma fiscal, el planteamiento de un IVA cultural
+    competitivo -bajándolo del 21% al 10%-, la Ley de Mecenazgo y las
+    infraestructuras productivas de Cataluña. Estamos negociando con el Grupo
+    Popular una cuestión sobre el planteamiento fiscal, porque entendemos que
+    el que ha hecho el Grupo Popular se queda corto; nosotros quisiéramos
+    ampliarlo más a la economía productiva, a las pequeñas y medianas
+    empresas y a los autónomos. Es cierto que hemos incorporado algo
+    relevante en una propuesta de reforma del Grupo Popular que hace
+    referencia a las infraestructuras, puesto que, gracias a esta enmienda
+    que ha sido aceptada por el Grupo Popular, se van a garantizar los
+    recursos necesarios para que, con las inversiones, las cercanías y los
+    trenes regionales puedan ser competitivos otra vez en nuestro país.
+    También hemos incorporado y consensuado con el Grupo Parlamentario
+    Popular una enmienda que va en la orientación de la regeneración
+    democrática y la transparencia, pues han aceptado un planteamiento de
+    Convergència i Unió de que se puedan incorporar a la regeneración
+    democrática y la transparencia los denominados lobbies, a partir de la
+    definición de la Comisión Europea de todas aquellas actividades
+    realizadas con el objetivo de influir en la formulación de políticas y
+    los procesos de toma de decisiones. También en este caso el Partido
+    Popular ha sido sensible a todos aquellos aspectos que hacen referencia
+    al refuerzo de la Oficina Presupuestaria de las Cortes Generales, así
+    como también a algunas modificaciones para incorporar más agilidad y
+    modernidad en el tema del cambio de Reglamento que se va a aprobar en las
+    próximas fechas.
+
+    <br /><br />Hay otros aspectos que hacen referencia a la generación de empleo, al
+    incremento de la productividad. Nosotros siempre hemos entendido,
+    señorías, que para salir de esta crisis, para que esta recuperación, que
+    ahora es incipiente sea ya definitiva, es necesario creación y generación
+    de empleo, y con las medidas propuestas por el Gobierno yo creo que
+    quedamos, sinceramente, a una distancia abismal de lo que realmente
+    necesitaría la economía española. Por este motivo, hay un sinfín de
+    planteamientos y de elementos que van en la dirección de poder mimar el
+    tejido productivo español, la economía productiva española, a los
+    verdaderos generadores de empleo y de riqueza, como son los autónomos y
+    las pequeñas y medianas empresas, que nos gustaría que, aunque hoy no se
+    pudieran votar favorablemente, a lo largo de esta legislatura se pudieran
+    tener en cuenta, porque no olviden, señorías, que sin una generación de
+    empleo, sin una economía productiva potente, sin un mimo especial a las
+    pequeñas y medianas empresas y a los autónomos, no se va a generar empleo
+    y, si no se genera empleo y continúa existiendo en España por desgracia
+    más de 5,5 millones de parados, no va a ser posible salir de esta
+    situación.
+
+    <br /><br />También hemos planteado algunos aspectos... (Rumores).
+
+    <br /><br />El señor PRESIDENTE: Un momento, señor Sánchez i Llibre. Por favor, ruego
+    silencio y que no se hagan corrillos en los pasillos.
+
+    <br /><br />Continúe, por favor.
+
+    <br /><br />El señor SÁNCHEZ I LLIBRE: Muchas gracias, señor presidente.
+
+    <br /><br />También hemos planteado algunas políticas importantes desde el ámbito
+    social. La política social desgraciadamente ha sido la gran ausente en el
+    discurso del presidente, el señor Rajoy, pero, como no podía ser de otra
+    manera, Convergència i Unió ha hecho un detalle exhaustivo de cuáles eran
+    las problemáticas y las sensibilidades sociales pendientes de resolver en
+    esta situación y hemos propuesto un sinfín de planteamientos que van
+    desde la universalización y la mejora de la sanidad, el incremento del
+    salario mínimo interprofesional, poder resolver algunos aspectos
+    relevantes de la pobreza, queremos también incorporar alma social a los
+    desahucios. En definitiva, hay un sinfín de planteamientos muy
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página18)"><b>Página
+    18</b></a></p><br />
+
+    <br /><br />efectivos que valdría la pena que en un futuro -ya sabemos que hoy no nos
+    los van a votar- pudieran ser tomados en consideración.
+
+    <br /><br />Finalmente, hay algunos aspectos que hacen referencia a invasión de
+    competencias por parte del Estado en esta política de recentralización
+    que ha implementado el Partido Popular a lo largo de estos dos años de
+    legislatura y que nosotros queremos cambiar. Estamos en contra de la Ley
+    de Educación, de la Ley de la reforma de las haciendas públicas, del
+    ahogo sistemático de financiación -en este caso, de la Generalitat-, del
+    actual sistema de financiación. Por lo tanto, también hemos recogido
+    nuestras sensibilidades que ustedes conocen perfectamente y que van en
+    esta dirección.
+
+    <br /><br />Muchísimas gracias, señor presidente, y señoras y señores diputados.
+    (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Sánchez i Llibre.
+
+    <br /><br />Por el Grupo Socialista, tiene la palabra la señora Rodríguez Ramos.
+
+    <br /><br />La señora RODRÍGUEZ RAMOS: Gracias, presidente.
+
+    <br /><br />Señorías, mi grupo parlamentario ha presentado quince propuestas de
+    resolución, consecuencia de este debate sobre el estado de la Nación, que
+    constituyen una verdadera enmienda a la totalidad a la política
+    económica, a la política social y a la política de recortes de derechos
+    fundamentales y libertades públicas de este Gobierno.
+
+    <br /><br />Señorías, pedimos una vez más en nuestras resoluciones la necesaria e
+    inmediata retirada de la reforma laboral, una reforma que no ha frenado
+    la destrucción de puestos de trabajo en nuestro país, porque durante
+    estos dos años de Gobierno de Mariano Rajoy en España se ha destruido más
+    de un millón de puestos de trabajo, destrucción de empleo estable,
+    destrucción de empleo con carácter indefinido, contratos de trabajo con
+    derechos y solamente se han creado empleos a tiempo parcial, empleos
+    temporales, empleos por cuatro horas de trabajo donde hay que trabajar un
+    30% más de horas laborales sin cobrarlas. Señorías, la gran apuesta que
+    hizo el presidente del Gobierno desde la tribuna fue la tarifa plana, y
+    esta tarifa plana para la bonificación de la contratación indefinida nos
+    la presenta ayer el presidente del Gobierno después de que en dos años
+    han eliminado todas las bonificaciones a la contratación que existían en
+    nuestro sistema laboral, y nos presentan una tarifa plana de 100 euros,
+    que supone ir a una cotización por un coste igual -plana de 100 euros-
+    para aquellos contratos laborales cuyo salario sea de 650 euros o para
+    aquellos trabajadores cuyo salario sea de 3.500 euros. Lo dije el otro
+    día y lo reitero hoy, señorías, esta propuesta de tarifa plana es
+    verdaderamente una enmienda a la reforma laboral que ha puesto en marcha
+    el Partido Popular. Señorías, la reforma laboral tiene tantos incentivos
+    a la precariedad, que es imposible enmendarla. La reforma laboral solo
+    exige su retirada y, desde luego, esta propuesta de la tarifa plana es un
+    reconocimiento claro que hace el Gobierno, que hace el presidente del
+    Gobierno, de su gran fracaso en la contratación indefinida, porque
+    durante el año 2013 el volumen de contratos indefinidos en España ha
+    caído en 300.000 respecto al 2012, es decir, un 25% menos de contratación
+    indefinida en España. Por tanto, retiren su reforma laboral, retiren la
+    reforma laboral y vuelvan al diálogo social y a la negociación colectiva.
+    Retiren la reforma laboral para que no estén en la calle como estaban el
+    otro día, mientras aquí se producía la intervención del presidente,
+    trabajadores y trabajadoras de empresas como Coca Cola, que tienen que
+    someterse a un ERE en empresas donde no hay pérdidas, donde hay
+    beneficios, y eso es el marco jurídico que les ha dado a las empresas su
+    reforma laboral. Recuperen la tasa de cobertura por desempleo. Es
+    necesario recuperar la tasa de protección porque es mentira, como dijo el
+    presidente del Gobierno en esta tribuna, que no se hayan reducido las
+    prestaciones por desempleo. La tasa de cobertura por desempleo en este
+    país ha caído 10 puntos, se ha reducido la cuantía de las prestaciones y
+    se han reducido los perceptores, porque se han puesto nuevos requisitos
+    para que haya menos perceptores, menos españolas y españoles en situación
+    de desempleo cobrando prestaciones por desempleo.
+
+    <br /><br />Señorías, se puso claramente de manifiesto en la intervención del
+    presidente del Gobierno que Mariano Rajoy no tiene un proyecto económico
+    para sacar de la crisis a las familias españolas, no lo tiene para las
+    rentas medias de los trabajadores de nuestro país. No tiene otro proyecto
+    que no sea el empobrecimiento del país por la vía de devaluar los
+    salarios y devaluar derechos. Este proyecto de empobrecimiento es el
+    único que conduce a la resignación y al sufrimiento a millones de
+    familias españolas, pero, señorías, sí hay posibilidad de hacer las cosas
+    de otra forma, porque el presente, el futuro de un proyecto económico
+    viable para este país se escribe con palabras que no fueron pronunciadas
+    tampoco en la tribuna por el presidente del Gobierno. No fue pronunciada
+    la palabra conocimiento, no fue pronunciada la palabra innovación, no fue
+    pronunciada la palabra cohesión social como elemento fundamental de
+    incremento de la productividad de un país.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página19)"><b>Página
+    19</b></a></p><br />
+
+    <br /><br />Señorías, uno de los pilares fundamentales para un proyecto económico de
+    futuro viable es la reforma fiscal, una profunda reforma fiscal en
+    nuestro país, que es la que presenta el Grupo Socialista en su propuesta
+    de resolución, una reforma fiscal que tenga en cuenta la capacidad
+    económica de cada cual, una reforma fiscal que tenga en cuenta que el que
+    más tiene más pague y una reforma fiscal que contribuya al crecimiento
+    económico y a la generación de empleo. El presidente del Gobierno nos
+    anunció aquí una reforma fiscal y yo les digo que la reforma fiscal del
+    Partido Popular ya se ha hecho en estos dos años de gobierno, se han
+    subido cincuenta impuestos en este país. (Rumores). Mariano Rajoy será el
+    presidente de la historia de la democracia de este país que en menos
+    tiempo ha subido más la capacidad impositiva de forma muy injusta a
+    todos... (Rumores).
+
+    <br /><br />El señor PRESIDENTE: Perdón, señora diputada.
+
+    <br /><br />Por favor, pido silencio y que se atienda a la interviniente.
+
+    <br /><br />Continúe, señora Rodríguez.
+
+    <br /><br />La señora RODRÍGUEZ RAMOS: Gracias.
+
+    <br /><br />Han sido cincuenta subidas de cincuenta tipos impositivos, esta es la
+    reforma fiscal del Partido Popular después de que en las elecciones de
+    2011 anunciaran una bajada de impuestos. Los ejes fundamentales de
+    nuestra reforma fiscal, señorías, están en modificar profundamente el
+    impuesto sobre la renta, de tal manera que se integren renta y patrimonio
+    como una única figura tributaria; están en reformar profundamente el
+    impuesto sobre sociedades, estableciendo una tributación mínima para las
+    grandes empresas; están en establecer un impuesto a las entidades
+    financieras que grave el pasivo de las entidades, el neto de capital y
+    depósitos, que grave los salarios variables de las entidades y que grave
+    también sus beneficios extraordinarios. Señorías, proponemos un rescate
+    fiscal, pero lo proponemos para aquellos trabajadores y pensionistas con
+    familiares a cargo que ganen menos de 16.000 euros anuales, porque este
+    anuncio que ustedes han hecho de menos de 12.000 euros no afecta a nadie
+    a quien ya no le afecte, porque desde la reforma del Gobierno socialista
+    de 2006, los que ganan 11.500 euros no pagan IRPF. (Aplausos). Señorías,
+    proponemos también una imposición sobre las transacciones financieras
+    internacionales para luchar contra la pobreza en España y contra la
+    pobreza fuera de nuestras fronteras; pobreza, señorías. El presidente del
+    Gobierno no pronunció las palabras pobreza ni desigualdad, solo lo hizo
+    después de que en esta tribuna se le citaran sus escritos de juventud
+    sobre los hijos de la buena estirpe. Después, para contestar a eso, sí
+    habló de pobreza y de desigualdad. Pero da igual, aunque el presidente no
+    lo cite, en este país cada vez hay más pobres, cada vez hay más inequidad
+    y cada vez hay más desigualdad. Por eso, señorías, la lucha contra la
+    pobreza en nuestro país tiene que ser un eje prioritario de la estrategia
+    política de cualquier Gobierno. Reclamamos de forma urgente un plan
+    estratégico de lucha contra la pobreza infantil, el establecimiento de un
+    fondo de emergencia para luchar contra la pobreza dotado con 1.000
+    millones de euros; exigimos la derogación inmediata de la reforma local,
+    que destruye el plan concertado de servicios sociales en los
+    ayuntamientos; exigimos que se pongan en marcha ya medidas para afrontar
+    la pobreza energética, porque la luz, el agua, el gas, son derechos
+    fundamentales de los españoles, son bienes públicos esenciales, y los
+    ciudadanos más vulnerables no pueden prescindir de ellos.
+
+    <br /><br />Señorías -derechos y libertades en nuestro país, derechos fundamentales,
+    libertades públicas-, traemos de nuevo la votación a la Cámara de la
+    retirada del anteproyecto de ley del aborto. Vótenlo hoy, señorías del
+    Partido Popular, no votarán ya solo con el resto de la oposición, con los
+    partidos políticos que estamos en la oposición en este hemiciclo, lo
+    harán también con el informe del Consejo General del Poder Judicial, que
+    les dice que su anteproyecto de ley del aborto va contra los derechos
+    fundamentales de los ciudadanos -las mujeres somos ciudadanas- y que es
+    claramente inconstitucional. Señorías, retiren su proyecto de seguridad
+    ciudadana, también el Consejo General del Poder Judicial les está
+    diciendo que vulnera claramente derechos fundamentales, y no cometan la
+    tropelía que quieren cometer al finalizar este Pleno, convocando un Pleno
+    extraordinario para liquidar la ley de jurisdicción universal en nuestro
+    país. Señorías, los derechos fundamentales no se negocian, los derechos
+    fundamentales no se pueden restringir sin atentar gravemente contra la
+    Constitución. Señorías, un Gobierno tiene la obligación de promover las
+    condiciones necesarias para el ejercicio de la ciudadanía de sus derechos
+    fundamentales, y el primer requisito para un ejercicio del derecho es el
+    acceso a los jueces y tribunales cuando uno estima que su derecho ha sido
+    conculcado. Señorías, los derechos y libertades valen lo que valen sus
+    garantías, y la garantía del derecho es el acceso a la justicia. El
+    Partido Popular ha puesto un precio demasiado elevado para acceder a las
+    puertas de los tribunales, por eso les exigimos la retirada inmediata de
+    su Ley de Tasas Judiciales (Aplausos), que vulnera todos los días un
+    derecho constitucional, el artículo 24.1 de
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página20)"><b>Página
+    20</b></a></p><br />
+
+    <br /><br />la Constitución, de acceso a los jueces y tribunales, dependiendo de la
+    tarjeta de crédito del justiciable. Señorías, derechos para los
+    ciudadanos, derechos para los hombres y mujeres que se acercan a nuestras
+    fronteras. La garantía de que todas aquellas personas que se acercan a
+    nuestro país y piden y ejercen su derecho de asilo, tengan todas las
+    garantías legales y todas las garantías judiciales de que su caso será
+    estudiado y, si reúnen las condiciones, sean realmente aceptados y
+    reconocido su derecho de asilo. No vamos a permitir, señorías, que la
+    tragedia de Ceuta, con 15 muertos, se quiera resolver por parte del
+    Gobierno con un acuerdo sobre la política de inmigración o sobre nuestra
+    modificación de la Ley de Extranjería. No, señorías, la tragedia de Ceuta
+    debe esclarecerse, y solo hay una vía: comisión de investigación en sede
+    parlamentaria y, si no, la responsabilidad política de quien quiera
+    obstruir esa Comisión y quiera eludir el derecho de esta Cámara y de los
+    ciudadanos a conocer la verdad.
+
+    <br /><br />Señorías, finalmente, mi grupo parlamentario presenta una resolución sobre
+    el grave problema, el enorme problema que tiene este país, un grave
+    problema planteado por el reto soberanista propuesto por el Gobierno de
+    la Generalitat de Catalunya y sus socios de Gobierno, ERC. Un reto
+    soberanista al que mi grupo parlamentario ya ha dicho no; no, señorías,
+    no habrá referéndum de autodeterminación en Cataluña. (El señor Tardà i
+    Coma: Sí, sí, sí.-Aplausos). Pero, señorías, decir no de forma clara,
+    manifiesta, explícita no hace que podamos obviar que tenemos un enorme
+    problema, enormes dificultades y enormes tensiones de entendimiento, de
+    convivencia entre Cataluña y el resto de España. Hace un año Alfredo
+    Pérez Rubalcaba dijo en esta tribuna que este problema existía y,
+    señorías, desde hace un año nuestro problema no ha hecho más que
+    aumentar. Hay muchos ciudadanos en Cataluña y en España que quieren
+    seguir juntos, pero cada vez también hay más ciudadanos en Cataluña y
+    fuera de Cataluña que no entienden que no haya una propuesta de diálogo
+    necesario para encontrar una solución de consenso. (Aplausos). Señorías,
+    exigir diálogo es defender la Constitución. Si la Constitución es algo,
+    señorías, es la norma de convivencia básica, de convivencia pacífica
+    entre todos los ciudadanos de un Estado, y es la norma de convivencia
+    básica, nuestro marco de convivencia, porque es la esencia del pacto, del
+    acuerdo, del consenso al que llegamos todos a la hora de promulgarla y
+    aprobarla. Por lo tanto, cuando mi grupo parlamentario exige diálogo
+    necesario y respuestas conjuntas está defendiendo la Constitución.
+    Señorías, cuando mi grupo parlamentario plantea la reforma de la
+    Constitución está defendiendo la Constitución. Por eso, en nombre de la
+    Constitución y desde la defensa de la unidad de España les digo que mi
+    grupo parlamentario votará nuestra propuesta de resolución que propone
+    diálogo, diálogo necesario, sobre lo que sí podemos dialogar, porque
+    sobre la reforma del título VIII de la Constitución, defendiendo la
+    Constitución, todas las fuerzas parlamentarias podemos y debemos
+    dialogar. Señorías, les reitero: no votaremos a favor de un referéndum de
+    autodeterminación en Cataluña. Votaremos no cuando llegue la proposición
+    de ley para que cedamos competencias para la celebración de un referéndum
+    de autodeterminación al amparo del artículo 150.2. Votaremos no, pero no
+    estamos dispuestos, mi grupo parlamentario no está dispuesto, a que
+    ustedes nos traigan a esta Cámara una, otra y otra vez mociones y
+    propuestas de las que ya saben cuál es la respuesta. No estamos
+    dispuestos a participar en un juego en el que ustedes acumulen noes en
+    esta Cámara para llevarlos a Cataluña como un agravio más a Cataluña.
+    (Aplausos). No estamos dispuestos. El Grupo Socialista no dice no a
+    Cataluña. El no, señorías, es uno, es único, no a un referéndum de
+    autodeterminación, pero el no es una parte de la respuesta. En el no,
+    señorías del Partido Popular, estamos profundamente de acuerdo. Ya hemos
+    hecho la primera parte de la respuesta, y les pido, les exijo, que
+    avancemos en la segunda parte de la respuesta, que no les quepa la menor
+    duda de que es el diálogo sobre lo que sí podemos dialogar y sobre lo que
+    tenemos la obligación de consensuar. El Partido Socialista tiene una
+    clara respuesta a Cataluña...
+
+    <br /><br />El señor PRESIDENTE: Señora diputada, le ruego que vaya terminando.
+
+    <br /><br />La señora RODRÍGUEZ RAMOS: Queremos seguir juntos y sabemos que para
+    seguir juntos tenemos que encontrar soluciones juntos. Solamente
+    votaremos nuestra propuesta, que es una propuesta que construye.
+
+    <br /><br />Muchas gracias, señorías. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Rodríguez.
+
+    <br /><br />Por el Grupo Parlamentario Popular, tiene la palabra el señor Bermúdez de
+    Castro.
+
+    <br /><br />El señor BERMÚDEZ DE CASTRO FERNÁNDEZ: Señor presidente, señorías, culmina
+    hoy el debate sobre el estado de la Nación con las propuestas de
+    resolución que los grupos ofrecemos a la sociedad
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página21)"><b>Página
+    21</b></a></p><br />
+
+    <br /><br />para dar respuesta a las necesidades y la situación que vive nuestro país;
+    un debate en el que el presidente demostró que lidera un Gobierno que
+    tiene las ideas claras y camina con paso firme de la mano de la agenda
+    reformista más intensa de la democracia para iniciar una nueva etapa que
+    seguirá siendo difícil, pero que ya será distinta porque hemos dejado
+    atrás la recesión y hemos iniciado un nuevo periodo de crecimiento y
+    creación de empleo. Pues bien, nuestro grupo lo que quiere es que el
+    Gobierno mantenga viva esa iniciativa reformista. Nuestras propuestas
+    pretenden consolidar la recuperación, ganar en modernidad y
+    competitividad y seguir garantizando la solidaridad. Son propuestas
+    realistas, ambiciosas y transversales, desde la mejora de nuestro sistema
+    ferroviario al apoyo también al sector primario, a nuestros agricultores,
+    pescadores y al fomento de la industria agroalimentaria. Son propuestas
+    que pretenden reformar nuestro compromiso con el proceso de construcción
+    europea y no solo en términos económicos, financieros o con la política
+    común de seguridad y defensa, sino también con el impulso de una política
+    común de inmigración que debe ser siempre legal y ordenada y que debería
+    ser también una política de Estado, pero ya vemos que ni siquiera en eso
+    podemos contar con ustedes. Piénsenlo, porque no olviden que cuando
+    ustedes gobernaron también hubo otros sucesos desgraciados y nosotros
+    actuamos siempre con responsabilidad. Ustedes sabrán, pero no nos acusen
+    de oscurantismo, porque mientras ustedes negaron en esta Cámara a
+    Convergència i Unió los vídeos de los sucesos acaecidos en Melilla en el
+    año 2006, ahora el ministerio los ha colgado de la web. Eso es
+    responsabilidad, señorías. (Aplausos).
+
+    <br /><br />Queremos también que el Gobierno continúe avanzando en el proceso de
+    racionalización y simplificación de las administraciones para que sean
+    más austeras, eficaces y transparentes. Todos, señorías, tenemos la
+    obligación de alcanzar un gran acuerdo en materia de regeneración
+    democrática y lucha contra la corrupción; es una necesidad y una demanda
+    de la sociedad y todos tenemos que estar a la altura para alcanzar ese
+    consenso sobre las medidas que sean más útiles y más contundentes para
+    desterrar de la vida pública los comportamientos irregulares que tanto
+    daño han hecho al prestigio de la política y al propio sistema. Son
+    también propuestas para vencer las previsiones más pesimistas; desde
+    luego, las de ustedes, que se pasan todo el día diciendo que las cosas
+    están mal o que lo peor está por llegar porque son incapaces de reconocer
+    que van mejor, porque la realidad de España es distinta de la que ustedes
+    nos pintan, la realidad es que España ha cambiado de rumbo y, además, en
+    la buena dirección. Ahora es un país creíble y solvente, ¿saben por qué?
+    Porque ahora en España se cumple, porque este Gobierno no solo hace
+    previsiones, sino que sobre todo adquiere compromisos y luego los cumple;
+    y eso lo reconoce todo el mundo menos ustedes, que siguen anclados en la
+    pesadilla de su pasado. (Aplausos). ¿Saben cuál es su problema? Su
+    problema es que cuando gobernaban nadie se creía las cuentas de España,
+    que cualquier previsión en ingresos y gastos que hacían siempre quedaba
+    superada por la realidad, y que nos dejaron un déficit oculto de 30.000
+    millones de euros que fue el causante y culpable de muchas de las medidas
+    impopulares que tanto nos han criticado y que hemos tenido necesariamente
+    que adoptar, señorías. Esa es la diferencia entre ustedes y nosotros a la
+    hora de afrontar la crisis, que ustedes disfrazaron la crisis por
+    intereses electorales y este Gobierno ha afrontado con valentía la crisis
+    en defensa de los intereses generales. Esa es la diferencia entre ustedes
+    y nosotros. (Aplausos).
+
+    <br /><br />Ahora siguen instalados en el no y en la contrarreforma. Nos piden en sus
+    propuestas nada menos que retiremos de la tramitación o deroguemos diez
+    leyes, entre ellas también, por supuesto, la reforma laboral, cuando no
+    sé si son conscientes de que gracias a ella se ha frenado la destrucción
+    de empleo en España. El pasado año, con una economía en recesión, se ha
+    cerrado con 147.000 parados menos que el año anterior, cambiando sobre
+    todo la tendencia. (Muestra un gráfico). Cuando ustedes gobernaron, en lo
+    que se refiere a los datos de paro registrado -la media en la pasada
+    legislatura-, de los doce meses del año, el paro subía en ocho meses y
+    bajaba en cuatro, mientras que en el año 2013, el pasado año, el paro
+    registrado ha subido en cuatro meses, pero ha bajado en ocho. Por tanto,
+    se ha invertido la tendencia. Desde luego, queda mucho camino por
+    recorrer y no estamos satisfechos, porque queda un largo recorrido para
+    llegar a la España de las oportunidades que los españoles merecen.
+    Sabemos que la crisis ha castigado con dureza a las familias españolas y
+    que hay mucha gente que lo está pasando mal, lo sabemos, pero hay un
+    cambio de tendencia, y eso es positivo y deberían ustedes reconocerlo,
+    sobre todo este año, en el que el Gobierno ha aumentado sus previsiones
+    de crecimiento y en el que ya se va a poder crear empleo neto en España.
+    A ello sin duda va a ayudar la tasa plana de 100 euros para fomentar la
+    contratación indefinida. Desde luego, el camino hacia la recuperación no
+    pasa por gastar más, sino por gastar mejor. Algunos gastaron en el pasado
+    lo que no teníamos; la pasada legislatura, un déficit de 350.000 millones
+    de euros, incluyendo un déficit tarifario de 26.000 millones. El
+    resultado fue que en vez
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página22)"><b>Página
+    22</b></a></p><br />
+
+    <br /><br />de progresar lo que ocurrió es que retrocedimos y con sus políticas se
+    destruyó gran parte del tejido productivo y mandaron al paro a 3.400.000
+    personas. De ello, podremos sacar una conclusión, y es que de nada sirve
+    pintar una casa si están dañados los cimientos. Esa es la diferencia
+    entre el Plan E para cambiar aceras o el Plan de emprendedores, la
+    diferencia entre el inmovilismo y las reformas, la diferencia entre
+    malgastar o invertir. Por eso nuestra apuesta es recuperar el tejido
+    productivo, que es la mejor inversión de futuro para crear empleo.
+    (Aplausos). Por eso pedimos al Gobierno que impulse medidas para apoyar
+    la financiación y la internacionalización de nuestras empresas.
+
+    <br /><br />Ha llegado el momento de realizar una reforma fiscal que baje los
+    impuestos, especialmente a las familias, que va a ayudar a la
+    reactivación económica. Antes no pudimos hacerlo y tuvimos que pedir un
+    gran esfuerzo a los españoles, en especial a los que más tenían, y a las
+    grandes empresas que antes no pagaban suficientes ingresos. ¿Saben por
+    qué? Para garantizar las prestaciones sociales de los que menos tenían.
+    Por eso tuvimos que hacerlo. El Gobierno, además, ha tenido que impulsar
+    una serie de reformas para garantizar la sostenibilidad de nuestro
+    sistema de bienestar. Ya sabemos que no les ha gustado ninguna porque se
+    han opuesto a todas, pero, por favor, no hagan discursos fáciles con el
+    drama y el sufrimiento de la gente. Los mayores enemigos de las políticas
+    sociales son los malos gestores, y a ustedes en desorden y descontrol en
+    las cuentas públicas no hay quien les gane, señorías. ¿Ahora qué quieren,
+    que sigamos gastando lo que no tenemos, que sigamos gastando el dinero de
+    nuestros hijos?, ¿es eso lo más solidario?, ¿es esa la mejor forma de
+    garantizar nuestro sistema de bienestar? Algunos se llenan la boca de
+    progresismo, pero cuando gobiernan son incapaces de cambiar nada. Se
+    llenan todos los días la boca en defensa de las políticas sociales, pero
+    cuando gobiernan dejan la economía al borde de la ruina.
+    (Aplausos.-Rumores).
+
+    <br /><br />Nosotros no solo hemos conseguido salvar a España de la ruina; es que
+    estamos consiguiendo sacar a España de la crisis, manteniendo en todo
+    este tiempo los pilares de nuestro Estado de bienestar. Han criticado la
+    nueva Ley de Educación cuando su modelo educativo era un fracaso, porque
+    a pesar de aumentar los recursos dejaba en la cuneta a casi uno de cada
+    tres jóvenes españoles en edad escolar. Por eso debemos apostar por la
+    mejora y la calidad educativa y por un nuevo modelo de formación
+    profesional. Han criticado las medidas de sanidad, confundiendo recortes
+    en derechos sociales con políticas de eficiencia y racionalización de
+    gasto, hechas también con criterios de justicia y equidad. ¿O era justo
+    que el abuelo más rico de España no pagara nada por los medicamentos y un
+    parado de larga duración tuviera que hacerse cargo del 40% de su coste?
+    (Aplausos). ¿Eso era lo justo? Ese era el sistema que había, porque ese
+    era su modelo. Ese y dejar en los cajones 16.000 millones de deuda
+    sanitaria sin pagar. Como gobernar es priorizar, ya que pretenden darnos
+    lecciones todos los días en políticas de bienestar y en sanidad, ¿alguno
+    de ustedes me puede explicar la razón por la que Andalucía es la
+    comunidad autónoma de España que menos gasta por habitante y año en
+    sanidad, concretamente 978 euros, cuando todas las demás están por encima
+    de los 1.000 euros por habitante y año?, ¿o es que allí también gobierna
+    el Partido Popular? (Aplausos.-Varios señores diputados: No, no). Sí, sí,
+    tengo el cuadro. Consejos vendo pero para mí no tengo. Por eso les pido
+    que dejen de hacer discursos tan injustos como exagerados. Por criticar
+    han criticado hasta el nuevo sistema de pensiones cuando ustedes las
+    congelaron, mientras que nosotros las hemos subido y con el nuevo sistema
+    garantizamos que subirán siempre. Por eso, critiquen lo que quieran, pero
+    les pediría que tuvieran altura y que tuvieran un poco de mesura en su
+    discurso. Nuestro modelo de bienestar podrá ser todo lo desarrollado que
+    quieran, pero también tendrá que ser viable y sostenible. Es para lo que
+    está trabajando este Gobierno, para crear empleo que es la mayor garantía
+    para mejorar las políticas sociales y para preservar la viabilidad de
+    nuestro sistema de bienestar.
+
+    <br /><br />Algunos grupos han propuesto la revisión del modelo constitucional y otros
+    siguen manteniendo su voluntad de continuar transitando en ese desafío
+    rupturista, contrario a la legalidad vigente, que tanta incertidumbre y
+    tanto daño está haciendo a la convivencia en Cataluña. Sobre esto se ha
+    producido en estos días un intenso debate. Solo les diré que nuestra
+    Constitución no nació desde la imposición, nació desde el consenso, y fue
+    concebida con una vocación de integración y, por tanto, de permanencia.
+    Por eso fue una Constitución de todos y para todos, y además nos ha dado
+    el mayor periodo de libertad, de bienestar y de progreso de nuestra
+    historia. Una Constitución que fue refrendada por el único sujeto
+    constituyente, el pueblo español en su conjunto, y que por tanto ya no
+    pertenece a los políticos, pertenece a los ciudadanos. Por ello, solo a
+    ellos y a todos ellos les correspondería cambiar el actual marco
+    constitucional. Podemos hablar de la Constitución, pero para ello no es
+    necesario crear una subcomisión, un nuevo órgano. Llevamos hablando de la
+    Constitución desde 1978 en la Comisión de la
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página23)"><b>Página
+    23</b></a></p><br />
+
+    <br /><br />ley de leyes, en la Comisión Constitucional, por eso no sé qué necesidad
+    hay de crear una subcomisión o un nuevo órgano. La Constitución se puede
+    reformar pero, escúchenme, solo les pido que piensen si lo que cada uno
+    propone podría ser también de todos y servir para todos; porque de lo
+    contrario, en vez de avanzar, estaríamos retrocediendo siglos, porque no
+    se trata aquí de proponer una reforma para dar salida a un problema
+    interno de partido ni de dar satisfacción a unos pocos contra el criterio
+    de la mayoría, porque correríamos con ello el riesgo de tirar por la
+    borda lo que tanto esfuerzo nos ha costado conseguir.
+
+    <br /><br />No insistan, la secesión no es un derecho. Ni existe el derecho a la
+    secesión ni existe el derecho de romper unilateralmente nuestro marco de
+    convivencia ni mucho menos a vulnerar la ley. Eso sería un comportamiento
+    tan antidemocrático como antijurídico. ¿Saben por qué? Porque el Estado
+    democrático o es también Estado de derecho o no lo es, porque la
+    democracia nace con la libertad pero vive con la ley. Sí, señorías, la
+    ley que nos hace a todos iguales, la ley que a todos ampara, pero que
+    también a todos obliga. (Aplausos). Por eso ni se puede ni se va a
+    celebrar un referéndum ilegal en España, porque en democracia nadie puede
+    ni imponerse ni desafiar a la ley. Y no solo por la ley, sino también
+    porque la soberanía y el poder constituyente son únicos, y corresponde al
+    pueblo español en su conjunto y nunca a una de sus partes. Así lo
+    decidimos entre todos. Precisamente por eso los diputados de esta Cámara
+    representamos al poder constituyente, representamos a todos los españoles
+    y, por eso, en nuestra legitimidad podemos ser de una provincia, nos
+    pueden elegir por una provincia, tenemos esa legitimidad de origen; pero
+    en el ejercicio de nuestra función representativa representamos a todos
+    españoles. Todos y cada uno de nosotros representamos a todos los
+    españoles, y ustedes también, no lo olviden (Aplausos), por eso debaten y
+    deciden todos los días sobre cuestiones que afectan a todos y cada uno de
+    los territorios de España. Y hacen bien, ¿saben por qué? Porque si no lo
+    hicieran estarían renunciando a la función para la que han sido elegidos.
+    Si eso es así, ¿por qué los demás tenemos que renunciar a decidir también
+    sobre lo que nos corresponde? Pues no vamos a renunciar a lo que nos
+    corresponde. Lo que se construyó por voluntad de todos solo podrá
+    cambiarse también por voluntad de todos, señorías. (Aplausos). Pero por
+    algo mucho más importante que esto, porque juntos hemos hecho muchas
+    cosas y juntos es la mejor manera de construir nuestro futuro, porque es
+    la unidad la que nos hace ser más prósperos y fuertes, es la unidad,
+    señorías, la que nos hace ser mejores.
+
+    <br /><br />Sobre el resto de las cuestiones se podrá hablar y negociar; sobre cómo
+    ayudar a los catalanes a mejorar su bienestar y a financiar los servicios
+    sociales, que es precisamente lo que está haciendo este Gobierno; sobre
+    fiscalidad, sobre infraestructuras, sobre políticas sociales y sobre el
+    modelo de financiación, pero ya les adelanto que no podemos ni vamos a
+    negociar ni el cumplimiento de la ley ni la unidad de España ni la
+    cohesión territorial ni la igualdad y la solidaridad entre españoles;
+    para eso no cuenten con el Grupo Parlamentario Popular. (Aplausos).
+
+    <br /><br />Hay un último punto que no puedo pasar por alto, y es esa acusación que se
+    ha vertido en esta tribuna de que este Gobierno está entorpeciendo el
+    proceso de paz en Euskadi porque no ha cumplido su responsabilidad en los
+    acuerdos de Aiete. Pero, ¿de qué paz y responsabilidad hablan? ETA no ha
+    dejado de matar porque se haya arrepentido o porque crea en la democracia
+    frente a su salvaje actividad. ETA ha dejado de matar porque ha sido
+    derrotada por la sociedad española a través de los instrumentos del
+    Estado de derecho, y ahora quiere ser protagonista de su final, un final
+    basado en el olvido y la impunidad disfrazado en lo que algunos llaman un
+    escenario de paz. Eso no lo vamos a aceptar porque la democracia no tiene
+    ninguna deuda por la paz; la paz es un derecho de toda sociedad y nunca
+    un precio que haya que pagar a los terroristas. Por eso el final no lo va
+    a escribir ETA; lo vamos a escribir todos los demócratas y será un final
+    sin condiciones y sin necesidad de mediadores, y pasará por su disolución
+    definitiva e incondicional. Sí, señorías. (Aplausos). Cuando esto pase,
+    cuando terminemos con este cáncer de la democracia, la historia recordará
+    que la única realidad y el único conflicto que existió fue la realidad de
+    una banda terrorista y sus cómplices, que fue la de la amenaza del
+    terror, y la realidad de hombres y mujeres dispuestos a defender la
+    libertad y sus ideas incluso con su vida. Por eso el final no será el
+    final de la impunidad y del olvido, será un final con verdad y con
+    justicia. Por eso la única deuda que tiene la democracia es una deuda
+    permanente e impagable con las víctimas del terrorismo, que nos
+    dignifican a todos y serán siempre un ejemplo para la sociedad.
+    (Aplausos). Eso no lo vamos a olvidar nunca. Se lo repito: nunca.
+    (Prolongados aplausos).
+
+    <br /><br />Termino. En estos años hemos pasado de la España del rescate a la España
+    de la recuperación (Rumores), de una economía a la deriva a una economía
+    competitiva; hemos conseguido transformar las dudas en confianza. Ello se
+    ha producido gracias al esfuerzo de todos los españoles, que son los
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página24)"><b>Página
+    24</b></a></p><br />
+
+    <br /><br />verdaderos protagonistas de este cambio. Sin duda, queda aún mucho camino
+    por recorrer y tendremos que superar nuevos retos y nuevos obstáculos,
+    pero no duden de que si mantenemos el rumbo...
+
+    <br /><br />El señor PRESIDENTE: Señor diputado, tiene usted que terminar.
+
+    <br /><br />El señor BERMÚDEZ DE CASTRO FERNÁNDEZ: Ya termino.
+
+    <br /><br />Decía que si mantenemos el rumbo, los resultados llegarán y serán los que
+    todo el mundo espera. Yo invito a todos a que contribuyan a que ese
+    cambio de tendencia sea lo más rápido e intenso posible, que dialoguemos
+    y busquemos el consenso en los temas esenciales para que los ciudadanos
+    puedan volver a mirar a sus representantes con confianza; la misma
+    confianza que mi grupo parlamentario tiene en un Gobierno que ha sabido
+    actuar con eficacia y valentía ante uno de los momentos económicos más
+    difíciles de nuestra historia, la misma confianza y el mismo orgullo que
+    sentimos de pertenecer a un país, el nuestro, España, que está siendo
+    capaz de vencer a la crisis y que cuando ha caminado unido y con
+    determinación siempre ha conseguido salir adelante, salvar las
+    dificultades y ser un ejemplo de empleo, progreso y bienestar.
+
+    <br /><br />Muchas gracias. (Prolongados aplausos).
+
+    <br /><br />El señor PRESIDENTE: Gracias, señor Bermúdez de Castro.
+
+    <br /><br />En unos minutos procederemos a votar, pero no lo haremos hasta que todos
+    los portavoces me digan que tienen perfectamente claro el cuaderno de
+    votación. (Pausa).
+
+    <br /><br />¿Consideran los portavoces que estamos en condiciones de empezar a votar?
+    (Asentimiento). Vamos a proceder a la votación. Se han acortado los
+    tiempos; son diez segundos, pero son 105 votaciones; por lo tanto, pido
+    paciencia a los diputados.
+
+    <br /><br />Comenzamos con las propuestas resolución del Grupo Socialista.
+
+    <br /><br />Propuesta número 1.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 326; a
+    favor, 105; en contra, 189; abstenciones, 32.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta número 2 del Grupo Socialista.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 135; en contra, 184; abstenciones, 14.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 3 con la enmienda 34 del propio Grupo Socialista.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 135; en contra, 182; abstenciones, 16.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 4.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 331; a
+    favor, 108; en contra, 183; abstenciones, 40.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 5 con la enmienda 1 del Grupo Mixto (CC-NC) y 35 del Grupo
+    Socialista.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 330; a
+    favor, 118; en contra, 180; abstenciones, 32.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página25)"><b>Página
+    25</b></a></p><br />
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 6.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 124; en contra, 180; abstenciones, 29.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 7.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 331; a
+    favor, 149; en contra, 180; abstenciones, 2.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 8.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 331; a
+    favor, 144; en contra, 184; abstenciones, 3.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 9.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 131; en contra, 181; abstenciones, 21.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 10.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 328; a
+    favor, 124; en contra, 181; abstenciones, 23.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 11, con la enmienda 22 del Grupo Vasco, (EAJ-PNV).
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 151; en contra, 181; abstenciones, 1.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 12.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 324; a
+    favor, 106; en contra, 181; abstenciones, 37.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 13.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 134; en contra, 181; abstenciones, 19.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 14.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página26)"><b>Página
+    26</b></a></p><br />
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 121; en contra, 182; abstenciones, 30.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Finalmente, propuesta 15 del Grupo Socialista.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 326; a
+    favor, 105; en contra, 181; abstenciones, 40.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 16, del Grupo Parlamentario Mixto, del señor Baldoví.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 328; a
+    favor, 23; en contra, 181; abstenciones, 124.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 17, del Grupo Parlamentario Mixto, señor Álvarez Sostres.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 327; a
+    favor, 11; en contra, 179; abstenciones, 137.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuestas de resolución del Grupo Parlamentario Mixto, de la señora
+    Oramas y del señor Quevedo conjuntamente. En primer lugar, la propuesta
+    18, en los términos de la enmienda transaccional a la 31 del Grupo
+    Popular. Aprovecho este momento para preguntar a los portavoces si se
+    admiten, en principio, las enmiendas transaccionales, que hay muchas, y
+    si algún grupo se va a oponer a la tramitación de alguna enmienda
+    transaccional. (Denegación). Si no es así, doy por admitidas las
+    enmiendas y las iré enunciando cuando llegue el momento.
+
+    <br /><br />Propuesta 18 -insisto- de la señora Oramas y del señor Quevedo, en los
+    términos de la enmienda transaccional a la 31 del Grupo Popular.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 328; a
+    favor, 326; en contra, 1; abstenciones, 1.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Propuesta 19, que es también de la señora Oramas y del señor Quevedo.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 328; a
+    favor, 327; abstenciones, 1.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Propuesta 20, del Grupo Mixto, de la señora Barkos.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 46; en contra, 185; abstenciones, 102.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuestas de resolución del Grupo Parlamentario Mixto, del señor Bosch.
+    La primera es la propuesta 21.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 43; en contra, 188; abstenciones, 103.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página27)"><b>Página
+    27</b></a></p><br />
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 22, que también es del señor Bosch.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 125; en contra, 192; abstenciones, 17.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 23, también del señor Bosch, en los términos de la enmienda
+    transaccional a la 16 del Grupo Popular y a la 37 del Grupo Socialista.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 333; abstenciones, 1.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Propuestas de resolución del Grupo Parlamentario de Unión Progreso y
+    Democracia. En primer lugar, propuesta 24.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 6; en contra, 313; abstenciones, 14.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 25.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 5; en contra, 208; abstenciones, 121.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 26.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 154; en contra, 178; abstenciones, 2.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 27.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 10; en contra, 313; abstenciones, 11.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 28 del Grupo Parlamentario de Unión Progreso y Democracia, con
+    la enmienda 38 del Grupo Socialista.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 125; en contra, 189; abstenciones, 20.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 29.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 6; en contra, 324; abstenciones, 4.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página28)"><b>Página
+    28</b></a></p><br />
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 30.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 328; a
+    favor, 6; en contra, 322.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 31.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 135; en contra, 181; abstenciones, 17.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 32.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 136; en contra, 181; abstenciones, 17.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 33.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 328; a
+    favor, 5; en contra, 319; abstenciones, 4.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 34.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 325; a
+    favor, 109; en contra, 186; abstenciones, 30.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 35, del Grupo de Unión Progreso y Democracia, en los términos de
+    la enmienda transaccional a la 62 del Grupo Parlamentario Popular.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 289; en contra, 22; abstenciones, 23.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Propuesta 36.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 14; en contra, 188; abstenciones, 131.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 37.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 151; en contra, 182; abstenciones, 1.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 38.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página29)"><b>Página
+    29</b></a></p><br />
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 5; en contra, 326; abstenciones, 2.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Vamos ahora con las propuestas de resolución del Grupo Parlamentario Vasco
+    (EAJ-PNV). En primer lugar, la propuesta 39.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 332; a
+    favor, 43; en contra, 288; abstenciones, 1.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 40.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 332; a
+    favor, 45; en contra, 287.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 41.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 36; en contra, 193; abstenciones, 104.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 42 del PNV, en los términos de la enmienda transaccional con la
+    39 del Grupo Socialista.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 147; en contra, 185; abstenciones, 2.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 43.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 332; a
+    favor, 45; en contra, 287.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 44.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 332; a
+    favor, 146; en contra, 180; abstenciones, 6.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 45 del PNV, con transaccional a la 64 del Grupo Popular.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 309; en contra, 19; abstenciones, 6.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Propuesta 46 del PNV, con transaccional a la 68 del Grupo Popular.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 331; a
+    favor, 312; en contra, 13; abstenciones, 6.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página30)"><b>Página
+    30</b></a></p><br />
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Propuesta 47 del PNV.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 150; en contra, 181; abstenciones 3.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 48.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 332; a
+    favor, 132; en contra, 184; abstenciones, 16.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 49.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 152; en contra, 180; abstenciones, 1.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 50.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 152; en contra, 180; abstenciones, 2.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 51.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 45; en contra, 184; abstenciones, 105.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 52.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 44; en contra, 286; abstenciones, 3.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 53 del PNV.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333: a
+    favor, 39; en contra, 187; abstenciones 107.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuestas de resolución del Grupo Parlamentario Catalán (Convergència i
+    Unió). En primer lugar, la propuesta 54.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 43; en contra, 187; abstenciones, 103.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página31)"><b>Página
+    31</b></a></p><br />
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 55 de CiU, en los términos de la enmienda transaccional a la 12
+    del Grupo Parlamentario Popular, y subsume la propuesta 92.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 331; a
+    favor, 213; en contra, 2; abstenciones, 116.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Propuesta 56, con las enmiendas 23 del Grupo Parlamentario Vasco
+    (EAJ-PNV), y 42 del Grupo Parlamentario Socialista.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 332; a
+    favor, 29; en contra, 181; abstenciones 122.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 57.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 29; en contra, 181; abstenciones, 123.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 58.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 327; a
+    favor, 131; en contra, 186; abstenciones, 10.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 59.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 45; en contra, 288; abstenciones, 1.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 60 de Convergència i Unió, con la enmienda 3 del propio grupo.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 139; en contra, 182; abstenciones, 12.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 61 de CiU, en los términos de la enmienda transaccional a la 63
+    del Grupo Parlamentario Popular, que también lo es a la propuesta 96 del
+    Grupo Parlamentario Popular.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 207; en contra, 107; abstenciones 19.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Propuesta 62 de CiU.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 328; a
+    favor, 40; en contra, 185; abstenciones 103.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página32)"><b>Página
+    32</b></a></p><br />
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 63.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 328; a
+    favor, 40; en contra, 186; abstenciones, 102.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 64 de CiU, en los términos de la enmienda transaccional con la
+    45 del Grupo Socialista.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 327; a
+    favor, 133; en contra, 185; abstenciones, 9.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 65.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 327; a
+    favor, 142; en contra, 180; abstenciones, 5.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 66.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 327; a
+    favor, 138; en contra, 185; abstenciones 4.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 67.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 329; a
+    favor, 133; en contra, 180; abstenciones, 16.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 68, con la enmienda 4 del propio Grupo Catalán de Convergència i
+    Unió.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 151; en contra, 179; abstenciones, 4.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuestas de resolución, dentro del Grupo Mixto, de la señora Fernández
+    Davila y la señora Pérez Fernández. En primer lugar, la Propuesta 69.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 327; a
+    favor, 18; en contra 182; abstenciones, 127.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 70, también de las señoras Pérez Fernández y Fernández Davila.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 331; a
+    favor, 28; en contra, 286; abstenciones, 17.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 71, del Grupo Mixto, señor Salvador.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página33)"><b>Página
+    33</b></a></p><br />
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 186; en contra, 144; abstenciones, 3.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Propuesta 72, del Grupo Mixto, señora Ariztegui.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 325; a
+    favor, 22; en contra, 285; abstenciones, 18.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 73 del Grupo Mixto, señor Larreina.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 22; en contra, 310; abstenciones, 2.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 74 del Grupo Mixto, señor Cuadra.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 331; a
+    favor, 42; en contra, 288; abstenciones, 1.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 75 del Grupo Mixto, señor Iñarritu.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 331; a
+    favor, 33; en contra, 287; abstenciones, 11.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Ahora propuestas de resolución de La Izquierda Plural. Comenzamos con la
+    propuesta 76.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 22; en contra, 289; abstenciones, 23.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 77.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 43; en contra, 186; abstenciones, 104.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 78.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 28; en contra, 183; abstenciones, 122.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 79.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 46; en contra, 181; abstenciones, 107.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página34)"><b>Página
+    34</b></a></p><br />
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 80.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 331; a
+    favor, 134; en contra, 181; abstenciones, 16.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 81.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 331; a
+    favor, 22; en contra, 184; abstenciones, 125.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 82.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 332; a
+    favor, 130; en contra, 200; abstenciones, 2.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 83.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 332; a
+    favor, 129; en contra, 181; abstenciones, 22.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 84 de La Izquierda Plural, con la enmienda 51 del Grupo
+    Socialista.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 331; a
+    favor, 133; en contra, 181; abstenciones, 17.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 85, también de La Izquierda Plural, con la enmienda 52 del Grupo
+    Socialista.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 332; a
+    favor, 139; en contra, 182; abstenciones, 11.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 86, de La Izquierda Plural.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 136; en contra, 182; abstenciones, 16.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 87.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 330; a
+    favor, 15; en contra, 184; abstenciones, 131.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 88.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página35)"><b>Página
+    35</b></a></p><br />
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 331; a
+    favor, 24; en contra, 186; abstenciones, 121.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 89.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 328; a
+    favor, 135; en contra, 185; abstenciones, 8.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuesta 90, de La Izquierda Plural.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 129; en contra, 181; abstenciones, 23.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Propuestas de resolución del Grupo Popular. En primer lugar, la propuesta
+    91.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 182; en contra, 46; abstenciones, 105.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />La propuesta 92 no la votamos, porque ha sido votada antes subsumida en
+    otra.
+
+    <br /><br />Propuesta 93, del Grupo Popular.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 331; a
+    favor, 287; en contra, 8; abstenciones, 36.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Propuesta 94, del Grupo Popular, en los términos de la enmienda
+    transaccional a la 54 del Grupo Socialista.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 310; en contra, 22; abstenciones, 1.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Propuesta 95, del Grupo Popular, con las enmiendas 20 del Grupo Vasco,
+    PNV, y 55 del Grupo Socialista.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 332; a
+    favor, 307; en contra, 22; abstenciones, 3.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />La propuesta 96 no se somete a votación por haber sido votada antes.
+
+    <br /><br />Propuesta 97, del Grupo Popular.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 183; en contra, 133; abstenciones, 18.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Propuesta 98.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página36)"><b>Página
+    36</b></a></p><br />
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 203; en contra, 129; abstenciones, 2.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Propuesta 99.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 199; en contra, 133; abstenciones, 1.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Propuesta 100, del Grupo Popular, con la enmienda 13 del propio grupo.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 182; en contra, 129; abstenciones, 23.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Propuesta 101.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 332; a
+    favor, 181; en contra, 149; abstenciones, 2.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Propuesta 102, con la enmienda 17 del propio Grupo Popular.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 181; en contra, 147; abstenciones, 6.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Propuesta 103, del Grupo Popular.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 332; a
+    favor, 179; en contra, 142; abstenciones, 11.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Propuesta 104, del Grupo Popular.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 334; a
+    favor, 182; en contra, 148; abstenciones, 4.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Antes de la última votación quiero decirles que a la una y media
+    comenzaremos el siguiente Pleno.
+
+    <br /><br />Propuesta 105, con la enmienda 2 del Grupo Catalán de Convergència i Unió
+    y la transaccional a la 28 del Grupo Vasco.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 333; a
+    favor, 203; en contra, 127; abstenciones, 3.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Se levanta la sesión.
+
+    <br /><br />Era la una y veinticinco minutos de la tarde.
+    </div>
+<hr size="1" noshade="" /><!-- BRSCGI © 1995-2004 Baratz Servicios de Teledocumentación, S.A. http://www.baratz.es -->
+
+
+<!-- FUNCION PIE -->
+    
+
+
+
+                 
+
+
+
+
+
+
+<script language="JavaScript" type="text/javascript">
+	cargaLegSesion('null')
+</script>
+ 
+<!-- FIN  PIE   -->
+        <div id="PIE_POPUP">
+		<p><span lang="es">Congreso de los Diputados</span> · C/Floridablanca s/n - 28071 - MADRID ·<u> <a style="color:#FFFFFF" href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Publicaciones/Aviso_Legal">Aviso Legal</a></u></p>
+	</div>
+
+</div></div></div></td></tr>
+</tbody></table>
+</div></td></tr>
+<tr>
+<td colspan="1" style="width:100%;"><img src="/images/pobtrans.gif" height="4" width="1" alt="" style="display:block" /></td>
+</tr>
+</tbody></table><!-- show footer template = 1824729544 -->
+</td>
+      </tr>
+    </tbody></table>
+  </td></tr>
+</tbody></table>
+</div>
+
+
+<!-- Page Metadata Generated On: 20-MAR-2015:02:10:46  Time Taken: 20 msecs -->
+</body></html>

@@ -1,0 +1,2353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head>
+<style>
+body{float:left;font-size:62.5%;font-family: Arial, Verdana, Helvetica, sans-serif;}
+blockquote{margin:0px;padding:0px;border:0px;list-style-type:none; }
+a{text-decoration:none; color:#626469;}
+a:hover{text-decoration:underline;font-weight:normal;color:#626469;}
+a:active{text-decoration:none;font-weight:normal;color:#000000;}
+</style>
+<title>PopUpCGI</title>
+<link href="/wc/htdocs/web/css/congreso.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/portada.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/prensa.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/apps.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/wc/htdocs/web/js/wc.js" language="JavaScript"></script>
+<style type="text/css">.GroupHeaderid1siteid73{Background-Color:#336699;Height:20px;Text-Align:left;}
+.GroupHeaderLinkid1siteid73{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.GroupHeaderTextid1siteid73{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.RegionHeaderid1siteid73{Background-Color:#b29200;Height:20px;Text-Align:left;}
+.RegionHeaderTextid1siteid73{Color:#ffffff;Font-Family:Verdana;Font-Size:10px;Font-Weight:Bold;}
+.Bodyid1siteid73{Background-Color:#FFFFFF;}
+.ArchivoAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.AudioFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.AudioNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo1Pieid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo1Region3id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo2Pieid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo2Region3id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo3Pieid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.ComprobacionSelladoid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Concesionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Convocatoriaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Correcciondeerroresid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.CuartoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescNotaPrensaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.Descripcionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.DescripcionAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescripcionBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescripcionDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Destinoid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DiaSemanaAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DiaSemanaCanalid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnPortadaAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnPortadaNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnVentanaNuevaAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnVentanaNuevaNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Enlaceid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnlaceAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnlaceURLNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EtiquetaArchivoAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EtiquetaEnlaceNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EtiquetaURLNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EtiquetadelEnlacedelAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Faxid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Fax2id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaCanalid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaFotonoticiaid1siteid73{Color:#b29200;Font-Family:Arial;Font-Size:11px;}
+.FechaFotonoticiaPresidenciaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaMenuCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaNotaPrensaid1siteid73{Color:#b29200;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.FechaNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaRuedaPrensaid1siteid73{Color:#b29200;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.Foto1descargaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto1emergenteid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto1thumbnailid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto2descargaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto2emergenteid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto2thumbnailid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FotoEmergenteNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FotoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.GraficoFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.GraficoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Grupoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Horaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.HoraAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.HoraCanalid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.ImagenDiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.InformacionGeneralid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.InstruccinArchivo1id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.InstruccinArchivoIIid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Intervinienteid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.JefedeCocinaMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LineaAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LineaCanalid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.ListaPuestoMiembroDiputadoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.ListaPuestoMiembroSenadoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Listadebecariosparticipantesid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Lugarid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.LugarAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LugarCanalid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Mail1id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Mail2id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Mail3id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Mail4id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Nombreid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.NombreBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NombreDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NombreMiembroid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.NumeroOrdenAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NumeroOrdenImagenid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NumeroOrdenNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PDFBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PDFDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PaginaBOCGBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PieImagenid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato1Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato2Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato3Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato4Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlatoSaludableMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Programaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PuestoMiembroDiputadoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.PuestoMiembroSenadoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.QuintoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.RefBOEid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.RefBOEIIid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlato1Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlato2Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlatoSaludableMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SeptimoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SextoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SiglasBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SiglasDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SugerenciaCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TargetNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Telefonoid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Telefono2id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaRuedaPrensaid1siteid73{Color:#000000;Font-Family:Arial;Font-Size:11px;}
+.TercerPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TextoAlternativoFoto1Fotonoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TextoAlternativoFoto2Fotonoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TextoAlternativoFotoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TitularFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Tituloid1siteid73{Color:#626469;Font-Family:Arial, Helvetica;Font-Size:11px;Font-Weight:Bold;}
+.TituloAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TituloImagendelDiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TituloNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TituloNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.URLEnlaceNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.VideoFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.VideoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Visitasid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.authorid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.createdateid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.creatorid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.defaultattributeid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.descriptionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.documentsizeid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.expiredateid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.inplacedisplayid1siteid73{Color:#000000;Font-Family:Arial;Font-Size:11px;}
+.itemfunctionid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.keywordsid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.listaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.perspectivesid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.scoreid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.subpagetitleid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.titleid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.titleorimageid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.wwsbr_category_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_charset_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_image_or_title_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_img_or_title_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_itemtype_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_mime_type_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_page_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_pagegroup_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_publishdate_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_and_img_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_updatedate_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_updator_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_version_number_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LeftCurve{}
+.PortletBodyColor{}
+.PortletHeaderColor{Background-Color:#b29200;}
+.PortletHeaderLink{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletHeaderStyle{}
+.PortletHeaderText{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:10pt;Font-Weight:Bold;}
+.PortletHeading1{Color:#336699;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.PortletHeading2{Color:#336699;Font-Family:Arial, Helvetica;Font-Size:8pt;Font-Weight:Bold;}
+.PortletHeading3{Color:#336699;Font-Family:Arial, Helvetica;Font-Size:7pt;Font-Weight:Bold;}
+.PortletHeading4{Color:#336699;Font-Family:Arial, Helvetica;Font-Size:7pt;Font-Weight:Bold;}
+.PortletSubHeaderColor{Background-Color:#EEEEDD;}
+.PortletSubHeaderLink{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:9pt;}
+.PortletSubHeaderText{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:9pt;}
+.PortletText1{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletText2{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletText3{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:7pt;}
+.PortletText4{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:7pt;}
+.RightCurve{}
+.LeftSubTabid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFsl.gif);Background-Position:left top;Background-Repeat:no-repeat;}
+.LeftTabBgSlantid1siteid73{Background-Attachment:scroll;Background-Color:#CCCC99;Background-Image:url(http://www.congreso.es/images/FFFFFFtl.gif);Background-Position:left top;Background-Repeat:no-repeat;}
+.LeftTabForeSlantid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFtl.gif);Background-Position:left top;Background-Repeat:no-repeat;}
+.RightSubTabid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFsr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.RightTabBgCurveid1siteid73{Background-Attachment:scroll;Background-Color:#CCCC99;Background-Image:url(http://www.congreso.es/images/FFFFFFtr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.RightTabForeCurveid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFtr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.SubTabBgTextid1siteid73{Color:#CCCC99;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:11pt;Font-Weight:Bold;}
+.TabBackgroundColorid1siteid73{Background-Color:#CCCC99;}
+.TabBackgroundTextid1siteid73{Color:#003366;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:10pt;}
+.TabForegroundColorid1siteid73{Background-Color:#336699;}
+.TabForegroundTextid1siteid73{Color:#FFFFFF;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:10pt;Font-Weight:Bold;}
+.portlet-font{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-font-dim{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-status{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-info{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-error{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-alert{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-success{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-header{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:9pt;    Font-Weight:Bold;    }
+.portlet-section-body{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-alternate{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-selected{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-subheader{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    Font-Weight:Bold;    }
+.portlet-section-footer{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-text{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-header{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:9pt;    Font-Weight:Bold;    Background-Color:#EEEEDD;    }
+.portlet-table-body{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-alternate{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-selected{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-subheader{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    Font-Weight:Bold;    }
+.portlet-table-footer{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-text{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-input-field{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-button{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-icon-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-dlg-icon-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-field-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-field{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.RegionNoBorder{}
+.RegionBorder { border:#b29200  1px solid; }
+.RegionHeaderColor { border:#b29200 0px solid;}
+.PageColor { background-color:#FFFFFF}
+ </style>
+</head>
+<body leftmargin="0" rightmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+<div id="texto_parrafo">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
+  <tbody><tr valign="top"><td align="center" valign="top">
+    <table width="500" cellpadding="0" cellspacing="0" border="0" height="100%">
+      <tbody><tr>
+        <td align="center" width="500" height="100%" valign="top">
+<iframe id="portalIFrame" title="" frameborder="0" width="0" height="0" src="/images/pobtrans.gif"></iframe><script type="text/javascript" src="http://www.congreso.es/portal/pls/portal/PORTAL.wwsbr_javascript.page_js?p_language=e&amp;p_version=10.1.4.2.0.197">
+&lt;!-- Comment out script for old browsers
+//--&gt;
+</script>
+<table width="100%" id="rg88017" border="0" cellpadding="0" cellspacing="0" summary=""><tbody><tr align="LEFT">
+<td valign="top" style="padding:4px 4px 0px 4px;width:100%;"><div id="p73_2138133_73_2138049_2138049"><table border="0" width="100%" cellpadding="0" cellspacing="0" class="RegionNoBorder"><tbody><tr><td class="RegionHeaderColor" width="100%" dir="LTR"><div id="pcnt73_2138133_73_2138049_2138049">
+
+
+
+
+
+
+
+  
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+        <title>Listas de valores</title>
+        <script language="JavaScript" type="text/javascript" src="/wc/htdocs/web/js/wc.js"></script> 
+		<link type="text/css" href="/wc/htdocs/web/css/apps.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/congreso.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/portada.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/prensa.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/texto_integro.css" rel="STYLESHEET" />   
+
+
+<script>
+function opcionesVentana(){
+
+window.resizeTo(630,520);
+}
+
+window.onload = function(){
+    opcionesVentana();
+}
+
+</script>
+	<div id="CONGRESO_TEXTO_INTEGRO_POPUP">
+            <div id="CABECERA_TEXTO_POPUP">
+                    <div class="cabecerah1"><img src="/wc/htdocs/web/img/logo_mini.gif" alt="Congreso de los Diputados" border="0" /></div>
+                    <div class="btn_cerrar" title="Cerrar">
+                        <p><img src="/wc/htdocs/web/img/ico_cerrar.gif" width="9" height="9" alt="Cerrar" /> <a href="javascript:window.close();" title="Cerrar">Cerrar</a></p>                   
+                    </div>
+                    
+                    <div class="fincabecera"> </div>
+            </div>
+
+
+
+    <div id="CONGRESO_TEXTO_INTEGRO_POPUP"> <div id="CABECERA_TEXTO_POPUP"> DS. Congreso de los Diputados, Pleno y Dip. Perm., núm. 176, de 13/02/2014 </div><div id="CABECERA_TEXTO_POPUP">cve:
+    DSCD-10-PL-176 </div> <div class="fincabecera"> </div> </div> <!-- CONGRESO_TEXTO_INTEGRO --> <div id="TEXTOS_POPUP">	<br />
+    	<div class="titular_texto"><br />CORTES GENERALES
+
+    <br />DIARIO DE SESIONES DEL CONGRESO DE LOS DIPUTADOS
+
+    <br />PLENO Y DIPUTACIÓN PERMANENTE
+    </div>
+
+    <div class="subtitular_texto"><br />Año 2014 X LEGISLATURA Núm.  176
+    <br />PRESIDENCIA DEL EXCMO.  SR.  D. JESÚS POSADA MORENO
+    <br />Sesión plenaria núm.  164
+    <br />celebrada el jueves,
+    <br />13 de febrero de 2014</div>
+          	<div class="texto_completo"><br /><br />ORDEN DEL DÍA:
+
+    <br /><br />Convalidación o derogación de reales decretos-leyes:
+
+    <br /><br />- Real Decreto-ley 1/2014, de 24 de enero, de reforma en materia de
+    infraestructuras y de transportes, y otras medidas económicas. ("BOE"
+    núm. 22, de 25 de enero de 2014). (Número de expediente 130/000048) ...
+    <a href="#(Página3)">(Página3)</a>
+
+    <br /><br />Mociones consecuencia de interpelaciones urgentes. (Votación) ... <a href="#(Página23)">(Página23)</a>
+
+    <br /><br />Convalidación o derogación de reales decretos-leyes. (Votación) ... <a href="#(Página24)">(Página24)</a>
+
+    <br /><br />Corrección de error ... <a href="#(Página24)">(Página24)</a>
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página2)"><b>Página
+    2</b></a></p><br />
+
+    <br /><br />SUMARIO
+
+    <br /><br />Se reanuda la sesión a las nueve de la mañana.
+
+    <br /><br />Convalidación o derogación de reales decretos-leyes ... <a href="#(Página3)">(Página3)</a>
+
+    <br /><br />Real Decreto-ley 1/2014, de 24 de enero, de reforma en materia de
+    infraestructuras y de transportes, y otras medidas económicas.
+
+    <br /><br />La señora ministra de Fomento (Pastor Julián) expone a la Cámara las
+    razones que han llevado al Gobierno a la promulgación del real
+    decreto-ley de referencia.
+
+    <br /><br />En turno en contra interviene el señor Simancas Simancas, en nombre del
+    Grupo Parlamentario Socialista.
+
+    <br /><br />En turno de fijación de posiciones intervienen el señor Baldoví Roda, las
+    señoras Oramas González-Moro, Pérez Fernández y Jordà i Roura, y el señor
+    Larreina Valderrama, del Grupo Parlamentario Mixto; la señora Sánchez
+    Robles, del Grupo Parlamentario Vasco (EAJ-PNV); el señor Martínez
+    Gorriarán, del Grupo Parlamentario de Unión Progreso y Democracia; la
+    señora De las Heras Ladera, del Grupo Parlamentario de IU, ICV-EUiA, CHA:
+    La Izquierda Plural; así como los señores Macias i Arau, del Grupo
+    Parlamentario Catalán (Convergència i Unió), y Ayala Sánchez, del Grupo
+    Parlamentario Popular en el Congreso.
+
+    <br /><br />Mociones consecuencia de interpelaciones urgentes. (Votación) ... <a href="#(Página23)">(Página23)</a>
+
+    <br /><br />Sometida a votación la enmienda transaccional presentada por los grupos
+    parlamentarios Socialista, Catalán (Convergència i Unió), de IU,
+    ICV-EUiA, CHA: La Izquierda Plural, Vasco (EAJ-PNV) y Mixto (señor Tardà
+    i Coma, señora Pérez Fernández y señor Quevedo Iturbe), a la moción
+    consecuencia de interpelación urgente del Grupo Parlamentario Socialista
+    a la ministra de Sanidad, Servicios Sociales e Igualdad sobre la política
+    del Gobierno en materia de lucha contra la pobreza y la exclusión social,
+    se rechaza por 143 votos a favor y 171 en contra.
+
+    <br /><br />Sometida a votación la enmienda transaccional presentada por los grupos
+    parlamentarios Socialista, Catalán (Convergència i Unió), de IU,
+    ICV-EUiA, CHA: La Izquierda Plural y Vasco (EAJ-PNV), a la moción
+    consecuencia de interpelación urgente del Grupo Parlamentario Catalán
+    (Convergència i Unió) sobre medidas a adoptar para luchar contra el
+    desempleo y para impulsar la creación de puestos de trabajo, se rechaza
+    por 138 votos a favor, 171 en contra y 5 abstenciones.
+
+    <br /><br />Sometida a votación la moción consecuencia de interpelación urgente del
+    Grupo Parlamentario de IU, ICV-EUiA, CHA: La Izquierda Plural, sobre la
+    política del Gobierno en materia de salud sexual y reproductiva e
+    interrupción voluntaria del embarazo, se rechazan el punto 1 por 125
+    votos a favor, 186 en contra y 1 abstención; y el punto 2 por 136 votos a
+    favor y 175 en contra.
+
+    <br /><br />Convalidación o derogación de reales decretos-leyes. (Votación) ... <a href="#(Página24)">(Página24)</a>
+
+    <br /><br />Sometida a votación la convalidación del Real Decreto-ley 1/2014, de 24 de
+    enero, de reforma en materia de infraestructuras y de transportes, y
+    otras medidas económicas, se aprueba por 175 votos a favor, más 2 votos
+    telemáticos, 177; 183 en contra, más 1 voto telemático, 139; y 1
+    abstención.
+
+    <br /><br />Sometida a votación su tramitación como proyecto de ley por el
+    procedimiento de urgencia, se rechaza por 143 votos a favor, más 1 voto
+    telemático, 144; 171 en contra, más 2 votos telemáticos, 173.
+
+    <br /><br />Se levanta la sesión a las once y quince minutos de la mañana.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página3)"><b>Página
+    3</b></a></p><br />
+
+    <br /><br />Se reanuda la sesión a las nueve de la mañana.
+
+    <br /><br />CONVALIDACIÓN O DEROGACIÓN DE REALES DECRETOS-LEYES:
+
+    <br /><br />- REAL DECRETO-LEY 1/2014, DE 24 DE ENERO, DE REFORMA EN MATERIA DE
+    INFRAESTRUCTURAS Y DE TRANSPORTES, Y OTRAS MEDIDAS ECONÓMICAS. (Número de
+    expediente 130/000048).
+
+    <br /><br />El señor PRESIDENTE: Se reanuda la sesión.
+
+    <br /><br />Punto relativo a la convalidación o derogación del Real Decreto-ley
+    1/2014, de 24 de enero, de reforma en materia de infraestructuras y de
+    transportes, y otras medidas económicas.
+
+    <br /><br />Para presentar el real decreto-ley, tiene la palabra en nombre del
+    Gobierno la ministra de Fomento.
+
+    <br /><br />La señora MINISTRA DE FOMENTO (Pastor Julián): Señor presidente, señorías,
+    comparezco ante esta Cámara para someter a su consideración la
+    convalidación del Real Decreto-ley de reforma en materia de
+    infraestructuras y transportes, y otras medidas económicas, que fue
+    aprobado por el Consejo de Ministros el día 24 de enero. Este real
+    decreto-ley continúa el proceso de reformas que el Gobierno está
+    realizando desde el comienzo de la legislatura. Dichas reformas son
+    tendentes a incrementar la competitividad y eficiencia de numerosos
+    sectores de actividad, lo que en el caso de este real decreto se
+    particulariza especialmente en transportes e infraestructuras. De hecho,
+    cuando comparecí en la Comisión de Fomento de esta Cámara en febrero de
+    2012, para exponer las líneas generales de la política del departamento,
+    ya les indiqué que dos de nuestros objetivos principales eran mejorar la
+    planificación, sobre todo la eficiencia posterior a esa planificación y
+    la gestión de las infraestructuras y el transporte, e impulsar la calidad
+    de todos los servicios que proporcionamos desde el Ministerio de Fomento.
+    Dentro de este último punto, tuve ocasión de decirles que eran
+    fundamentales dos aspectos clave: la seguridad y la calidad en el
+    servicio a los ciudadanos.
+
+    <br /><br />Del mismo modo, cuando comparecí para informar sobre el Plan de
+    infraestructuras, transporte y vivienda, les expliqué que entre sus
+    objetivos se encontraba la mejora de la eficiencia de nuestro sistema
+    global de transporte. Pues bien, dentro del programa de gestión y
+    prestación de los servicios figuran garantizar la seguridad del viajero y
+    asegurar la calidad en la prestación de los servicios. En concreto, los
+    objetivos que enumera el Pitvi son: mejorar la eficiencia del sistema
+    global de transporte, contribuir al desarrollo equilibrado de nuestra
+    economía, promover una movilidad sostenible, reforzar la cohesión
+    territorial y social, y favorecer la intermodalidad para mejorar la
+    integración funcional del sistema de transporte. En este contexto, este
+    ministerio está llevando a cabo una profunda reorganización del sector
+    ferroviario para ser más eficiente, ahorrar costes y dotar a los
+    ciudadanos de servicios de mayor calidad y seguridad.
+
+    <br /><br />Sus principales hitos, como conocen, son: en julio de 2012, el Real
+    Decreto-ley 22/2012, donde se sentaron las bases para reestructurar Renfe
+    en cuatro sociedades mercantiles estatales: viajeros, mercancías,
+    logística y fabricación, mantenimiento y gestión de activos. Asimismo,
+    integramos FEVE en ADIF y en Renfe. Como saben, pusimos también en marcha
+    la incorporación de la red ferroviaria de titularidad del Estado, que se
+    transfirió a ADIF mediante Real Decreto-ley 4/2013. Hemos liberalizado a
+    partir del día 31 de julio de 2013 el transporte ferroviario de viajeros,
+    con la finalidad prioritariamente turística en un primer momento, y en
+    junio de 2013, mediante la Ley 3/2013, la Comisión Nacional de los
+    Mercados y la Competencia ha asumido las funciones de organismo de
+    arbitraje y regulación que anteriormente realizaba el Comité de
+    Regulación Ferroviaria. En agosto de 2013, el Real Decreto-ley 11/2013 ha
+    introducido determinadas modificaciones en relación con los cánones
+    ferroviarios. Se estableció el derecho a una asistencia integral de las
+    víctimas de los accidentes que se produzcan en el ámbito del transporte
+    ferroviario de competencia estatal y sus familiares, garantizándoles una
+    adecuada atención y apoyo. En diciembre de 2013, mediante Real
+    Decreto-ley 15/2013, se ha realizado la segregación entre ADIF y ADIF
+    Alta Velocidad. También se sentaron las bases en la Ley de Presupuestos
+    de 2014 para la creación de lo que hoy trae causa en este real decreto,
+    que es la agencia estatal de seguridad ferroviaria.
+
+    <br /><br />Señor presidente, señorías, para nosotros es fundamental que el servicio
+    que llega a los ciudadanos sea el de mejor calidad. Hemos destinado en
+    este tiempo que llevamos en el Gobierno más de 1.300 millones de euros
+    para garantizar la prestación de los servicios públicos, de lo que
+    denominamos obligación de servicio público. Por último, hemos puesto en
+    marcha una nueva política tarifaria en Renfe, con reducción en los
+    precios, especialmente en alta velocidad, que ha reportado resultados muy
+    positivos
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página4)"><b>Página
+    4</b></a></p><br />
+
+    <br /><br />porque ha aumentado la demanda y sobre todo se han generado, como saben,
+    mayores beneficios. El número de viajeros de AVE y larga distancia se ha
+    incrementado en más de un 14 % en el último ejercicio. Señorías,
+    siguiendo esta línea el artículo primero de este real decreto-ley da
+    rango de ley a los aspectos de seguridad ferroviaria más importantes
+    regulados en la Directiva 2004/49/CE para dotarlos de una mayor
+    fortaleza. Entre estos aspectos que ahora se elevan a la Ley del Sector
+    Ferroviario se encuentra, en primer lugar, la definición de qué aspectos
+    integran la seguridad ferroviaria. En segundo lugar, la identificación de
+    responsabilidades de los diferentes actores del sistema ferroviario. En
+    tercer lugar, la definición de los certificados de seguridad y de las
+    autorizaciones de seguridad que tienen que disponer las empresas
+    ferroviarias y los administradores de infraestructuras, y por supuesto,
+    la definición de la autoridad responsable de seguridad ferroviaria.
+
+    <br /><br />Centrándonos en este último punto, este real decreto-ley aborda la figura
+    de la autoridad responsable de seguridad y la incorpora expresamente en
+    el texto de la legislación ferroviaria. Se le dota de estructura a través
+    de la autorización para la creación de la agencia estatal de seguridad
+    ferroviaria en el artículo segundo del real decreto-ley. Hasta ahora
+    estas funciones de autoridad responsable de seguridad estaban asignadas a
+    la Dirección General de Ferrocarriles. Sin embargo, a nuestro juicio y
+    desde luego conforme a los requerimientos de la Comisión Europea, esta
+    labor exige un grado mayor de independencia. Por ello, siguiendo el
+    planteamiento que ya les avancé en esta misma Cámara el pasado mes de
+    octubre, la agencia se creará empleando como germen la experiencia y el
+    conocimiento tan amplio de profesionales tan cualificados del sector
+    ferroviario que hoy prestan sus servicios en la Dirección General de
+    Ferrocarriles. El primer paso se tomó en el mes de diciembre pasado
+    cuando, tal y como les he mencionado, en la Ley de Presupuestos Generales
+    del Estado para el año 2014 se incluyó una excepción al principio general
+    que nos encontramos cuando llegamos al Gobierno de no creación de
+    agencias. El siguiente paso, como saben, es lo que hoy trae causa en esta
+    Cámara. Europa tiene modelos variados y desde luego todos ellos tienen
+    una gran tradición administrativa en cada uno de los países. Lo más
+    importante y lo principal es que los criterios que se pongan en marcha
+    siempre atiendan a funciones de regulación que desde luego son claves y
+    fundamentales en este mundo que es, como saben, tecnológicamente tan
+    avanzado, pero que es tan importante para garantizar la seguridad de los
+    viajeros. A partir de ahora, con esta modificación de la Ley de Agencias
+    se habilita al Gobierno para que apruebe por real decreto el estatuto de
+    la agencia estatal de seguridad ferroviaria.
+
+    <br /><br />Dicho estatuto deberá tener el siguiente contenido: las funciones a
+    desarrollar por la agencia estatal; los principios básicos del contrato
+    de gestión plurianual y del plan de acción que regirá su funcionamiento;
+    la determinación de sus órganos de gobierno; sus funciones y modos de
+    actuación; la definición y funciones de la comisión de control; los
+    requisitos y competencias del director de la agencia; la estructura
+    orgánica de la agencia, con indicación de departamentos y principales
+    contenidos; los medios personales, materiales y económico-financieros y
+    el patrimonio que se le adscribe; y el régimen en materia de personal.
+    Como les he dicho, esta agencia ejercerá las funciones de autoridad
+    responsable de seguridad en relación con todos los elementos del sistema
+    ferroviario, tanto en relación con las infraestructuras como con el
+    material rodante y el personal ferroviario, como en relación con la
+    operación ferroviaria.
+
+    <br /><br />Sus funciones serán las siguientes. En primer lugar, velar por el
+    mantenimiento general de la seguridad en la circulación sobre la red
+    ferroviaria de interés general mediante la supervisión del cumplimiento
+    de las obligaciones de los diferentes actores en esta materia. En segundo
+    lugar, ejercer la potestad sancionadora en materia de seguridad
+    ferroviaria. En tercer lugar, autorizar la puesta en servicio de los
+    vehículos y las líneas. En cuarto lugar, emitir los certificados de
+    seguridad y las autorizaciones de seguridad de las empresas ferroviarias
+    o administradores de la infraestructura, así como supervisarlos
+    posteriormente. En quinto lugar, proponer y elaborar el marco normativo
+    de seguridad. En sexto lugar, gestionar el registro especial ferroviario.
+    En séptimo lugar, funciones relacionadas con la interoperabilidad del
+    sistema ferroviario de competencia estatal. Y, en último término, el
+    otorgamiento, la suspensión y/o la revocación de licencias de empresas
+    ferroviarias.
+
+    <br /><br />La agencia podrá hacer, y para ello tendrá medios materiales y humanos,
+    todas las inspecciones e investigaciones necesarias para el cumplimiento
+    de sus funciones. Tendrá acceso a todos los documentos, locales,
+    instalaciones y equipos de los administradores de infraestructuras y de
+    las empresas ferroviarias públicas o privadas y tendrá un intercambio
+    activo de conocimientos y experiencia con otras autoridades similares de
+    la Unión Europea. Este real decreto-ley también incorpora una nueva
+    disposición adicional a la Ley del Sector Ferroviario para regular la
+    aprobación del reglamento de circulación ferroviaria mediante real
+    decreto. Así se le dota de un rango legal coherente con la importancia de
+    esta norma y con la que
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página5)"><b>Página
+    5</b></a></p><br />
+
+    <br /><br />tienen normas análogas de otros medios de transporte. Como saben, dentro
+    del paquete de medidas en materia de seguridad ferroviaria que estamos
+    llevando a cabo, una de las principales es la revisión de la
+    reglamentación ferroviaria, que es la empleada por empresas y
+    administradores para gestionar la circulación por la red ferroviaria de
+    interés general. Para ello, ya hemos redactado el nuevo reglamento de
+    circulación ferroviaria, con un trabajo intenso en el que han colaborado
+    decenas de profesionales.
+
+    <br /><br />Este nuevo reglamento de circulación ferroviaria, permite disponer de una
+    única norma que agrupa, unifica y actualiza la normativa de circulación
+    existente hoy en día. La RGC aplicable en red convencional, la normativa
+    de la circulación aplicada en alta velocidad, los RCT utilizados en la
+    red de ancho métrico, etcétera. Y todo ello adaptado a la especificación
+    técnica de interoperabilidad de operaciones. También se adapta al actual
+    marco de separación de competencias y responsabilidades entre
+    administradores de infraestructuras y empresas ferroviarias prestadoras
+    de servicios de transporte y se asignan responsabilidades para el
+    desempeño de funciones de seguridad en la circulación, de conformidad con
+    títulos habilitantes. Finalmente, también me gustaría destacar que
+    incluye y moderniza todo lo que tiene que ver con la incorporación en
+    norma única de todos los elementos que son clave para garantizar la
+    seguridad en la circulación ferroviaria. Este reglamento, que, como todos
+    ustedes conocen, hasta ahora se llevaba a cabo mediante una orden
+    ministerial, ha sido presentado ya por el ministerio a los agentes del
+    sector, a las empresas ferroviarias, a los administradores, a las
+    organizaciones sindicales y a los centros de formación, y continuará su
+    tramitación para que esté aprobado en el plazo más breve posible.
+
+    <br /><br />Señorías, por último, en materia ferroviaria este real decreto-ley también
+    incluye una modificación de la Ley del Sector Ferroviario en materia de
+    cánones que complementa las modificaciones que llevamos a cabo en el Real
+    Decreto-ley 11/2013. Es el administrador de infraestructuras, señoría, el
+    que tiene que establecer las cuantías de los cánones que va a percibir
+    por el servicio que presta a las empresas ferroviarias por el uso de la
+    red -que es una red que hemos financiado entre todos los españoles- en
+    función de la valoración de los costes directamente imputables a esta
+    gestión. De esta manera se puede hacer un uso más eficaz de los recursos
+    dentro del marco de financiación acordado con el Estado. Además, el
+    administrador debe tener una cierta flexibilidad en el establecimiento de
+    dichos cánones que le permita usarlos como una herramienta para impulsar
+    los tráficos y optimizar el uso de la red.
+
+    <br /><br />Estos son precisamente los objetivos que se persiguen con los últimos
+    cambios en el régimen legal de los cánones que modifican el procedimiento
+    de actualización de su importe fijado en el artículo 77 de la Ley del
+    Sector Ferroviario. Dicho proceso consiste en que el administrador
+    redacta anualmente una propuesta de tarifas que somete a consulta del
+    sector y a informe de la Comisión Nacional de los Mercados y la
+    Competencia y que posteriormente se aprueba en esta Cámara en la ley de
+    presupuestos y que se recoge para su declaración de red.
+
+    <br /><br />Señorías, también en este real decreto-ley se aprueba lo que se denomina
+    coordinador nacional de slots, medida que va a servir sin duda para
+    mejorar y contribuir al uso eficiente de nuestros aeropuertos. Como saben
+    ustedes, señorías, señor presidente, para garantizar un uso eficiente de
+    la capacidad disponible en los aeropuertos se asigna a las compañías
+    aéreas franjas horarias aeroportuarias denominadas slots, que son los
+    permisos para aterrizar y despegar en un aeropuerto en una fecha y hora
+    determinadas otorgadas por un coordinador. La coordinación y la
+    asignación de slots condiciona de manera muy relevante la competencia en
+    el sector aéreo y, por tanto, debe realizarse de forma transparente y no
+    discriminatoria. AENA ha realizado hasta ahora las funciones de
+    coordinador de slots; sin embargo, se ha considerado preciso reforzar la
+    independencia formal del coordinador. Por ello, el Consejo de Ministros
+    aprobó el 17 de enero de este año el real decreto en el que se prevé la
+    creación de un ente denominado coordinador nacional de slots. El
+    coordinador nacional de slots va a ser único para todo el Estado y
+    designado por el Ministerio de Fomento. Será una asociación privada
+    integrada por gestores aeroportuarios y compañías aéreas que operan en
+    nuestro país, asegurando el equilibrio de ambas partes. Para ello, en el
+    artículo tercero de este real decreto-ley se crea una prestación
+    patrimonial pública para su financiación, que deberán satisfacer a partes
+    iguales las compañías aéreas usuarias y AENA Aeropuertos. En este
+    sentido, se debe indicar que todos los aeropuertos europeos cobran una
+    cuantía equivalente.
+
+    <br /><br />Señorías, en su artículo cuarto este real decreto-ley introduce un
+    conjunto de medidas destinadas a mejorar el régimen de subvenciones
+    otorgadas a los billetes de transporte de los residentes en territorios
+    no peninsulares. Mediante estas medidas, se facilitará la acreditación de
+    los requisitos para acceder a las bonificaciones y se facilitará la
+    comprobación por parte de las administraciones competentes. Entre estas
+    medidas, me gustaría destacar las siguientes: añadir al pasaporte como
+    documento acreditativo de la identidad, además del DNI -que ya saben que
+    es utilizado con carácter general y así está en la norma
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página6)"><b>Página
+    6</b></a></p><br />
+
+    <br /><br />en todos los embarques en los aeropuertos, para facilitar en este caso la
+    identificación del pasajero-, la obligación de utilizar el sistema
+    telemático de acreditación de residencia, el conocido como SARA, en todos
+    los canales de venta, extendiéndolo a todos los operadores para agilizar
+    y facilitar dicha acreditación; la entrada en vigor se ha establecido el
+    1 de noviembre de 2014. Asimismo, reducir los plazos que tienen las
+    compañías aéreas y marítimas para presentar las liquidaciones mensuales a
+    los centros directivos competentes de seis a dos meses y la antigüedad de
+    los cupones que por causas justificadas pueden ser incluidos en esos
+    ficheros. Además, la obligación de conservar toda la documentación de los
+    billetes bonificados para mejorar el modelo de comprobación de las
+    liquidaciones efectuadas por la compañía de transporte. Y registrar ante
+    el órgano gestor, con anterioridad a la comercialización, las tarifas
+    aéreas que incluyan servicios ajenos al transporte aéreo, desglosando el
+    importe de cada servicio, de manera que cada euro de subvención vaya
+    destinado a quien realmente tiene derecho a ello. Como ven, señorías, se
+    trata de un amplio abanico de nuevas iniciativas que afianzan un modelo
+    de gestión eficiente para garantizar la conectividad de nuestros
+    territorios no peninsulares, pero que perciban las subvenciones solo
+    aquellas personas que tienen el legítimo derecho a recibirlas.
+
+    <br /><br />Señorías, en relación con el artículo quinto, permítanme que en primer
+    lugar les recuerde la importante labor que desarrolla Sasemar en la
+    protección de la vida humana en el mar y en las tareas de prevención y
+    lucha contra la contaminación. Como ejemplo, en los años 2012 y 2013 han
+    realizado 9.893 actuaciones, lo que supone una media de 15 emergencias al
+    día; ha asistido a más de 24.358 personas, de las cuales 6.493 han sido
+    evacuadas y/o rescatadas; ha atendido a 496 embarcaciones con inmigrantes
+    a bordo; ha asistido a más de 7.069 buques; ha controlado el tráfico de
+    más de 590.000 buques y ha respondido en más de 797 casos de
+    contaminación en el mar. Para el desarrollo de esta encomiable labor,
+    Sasemar cuenta con un gran número de profesionales y medios materiales,
+    con un alto grado de especialización y de gran complejidad técnica, y
+    creo que sería un buen momento reconocer hoy en esta Cámara esta labor
+    tan intensa que Sasemar ha venido prestando en estas últimas semanas,
+    como saben, ante el temporal que hemos tenido en nuestras costas y que ha
+    sido sin duda un momento en el que han demostrado su alta profesionalidad
+    y su alta capacitación. Muchas gracias a todos ellos. (Aplausos).
+
+    <br /><br />Señorías, para todo ello es necesario garantizar unos medios de
+    financiación acordes con las actividades y servicios que realiza,
+    permitiendo que los recursos del Estado se orienten hacia su labor
+    fundamental, que es salvar vidas humanas. Dentro de estas medidas se
+    enmarca la modificación de la tasa de ayuda a la navegación. Como saben,
+    las ayudas a la navegación marítima son un conjunto de dispositivos
+    externos al buque cuyo objeto es mejorar la seguridad de la navegación de
+    los buques y facilitar el tráfico marítimo. Estos dispositivos están
+    disponibles en toda la costa española e incluyen faros, balizas costeras,
+    racones, señales GPS diferenciales y los servicios de control y ayuda al
+    tráfico marítimo costero y son proporcionadas por Puertos del Estado y
+    por los centros de control de Sasemar. El pago de la tasa corresponde a
+    todos los buques o embarcaciones independientemente del puerto en el que
+    recalen y, como saben, hay exenciones y bonificaciones para las
+    embarcaciones de menor tamaño, especialmente las embarcaciones pesqueras;
+    quedan exentas de la tasa las embarcaciones más pequeñas y todos los
+    pesqueros tienen bonificaciones. Hasta ahora las embarcaciones solo
+    satisfacían los servicios gestionados a través de las autoridades
+    portuarias. Con esta modificación el hecho imponible de la tasa, que es
+    el que se cambia, contempla los servicios prestados por Sasemar,
+    contribuyendo así esta medida a su sostenibilidad. La labor de Sasemar
+    resulta esencial y contribuye sin duda de manera muy directa a la
+    seguridad de la navegación, pues tiene capacidad de interaccionar con los
+    buques con objeto de minimizar la probabilidad de incidentes y optimizar
+    la eficiencia en sus operaciones.
+
+    <br /><br />Señorías, como saben, otro de los elementos que contempla este real
+    decreto-ley en sus artículos sexto y séptimo es modificar la Ley de
+    Autopistas y el texto refundido de la Ley de Contratos del Sector Público
+    con el fin de evitar que el Estado acabe asumiendo dos veces el pago de
+    las expropiaciones en beneficio del concesionario. Como saben, señorías,
+    el justiprecio de los terrenos expropiados para la construcción de una
+    autopista estatal de peaje en régimen de concesión debe ser abonado por
+    la sociedad concesionaria. Así lo establece el artículo 17 de la Ley
+    8/1972, de 10 mayo, en relación con el artículo 5 del reglamento de
+    expropiación forzosa. Señorías, a pesar de este régimen legal, en el caso
+    de las sociedades concesionarias declaradas en concurso de acreedores, en
+    los últimos meses se han venido produciendo sentencias judiciales que
+    obligan al Estado a hacerse cargo de las expropiaciones en caso de impago
+    por la sociedad. A tal fin en esta norma se reconoce el derecho que tiene
+    el Estado -por cierto, en nombre de los ciudadanos- como resultado del
+    pago por cuenta de otro a subrogarse en el crédito del expropiado frente
+    al concesionario, procediéndose a minorar el correspondiente importe
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página7)"><b>Página
+    7</b></a></p><br />
+
+    <br /><br />de la responsabilidad patrimonial. Con ello se garantiza que el Estado no
+    tenga que hacer frente a los incumplimientos de los concesionarios.
+    Además, esta medida podrá aplicarse respecto a cualesquiera concesiones
+    ya adjudicadas.
+
+    <br /><br />Señorías, para finalizar con las medidas relacionadas con las competencias
+    de mi departamento, esta norma incluye una importante medida para mejorar
+    e incentivar la actividad de nuestros aeropuertos. Como todos ustedes
+    saben, nuestros aeropuertos son infraestructuras determinantes para
+    garantizar la conectividad de nuestro país y para facilitar su
+    crecimiento económico. Señorías, como saben, hay un elemento clave al que
+    se ha dedicado todo el esfuerzo en estos últimos dos años. Ante la caída
+    del tráfico doméstico en nuestro país se tienen que poner en marcha
+    iniciativas que mejoren e incentiven la actividad de nuestros
+    aeropuertos. Dada la evolución de los tráficos registrados en los últimos
+    años, hemos introducido una política de bonificaciones para corregir esa
+    tendencia e incentivar el tráfico, lo que en definitiva ayuda a dinamizar
+    la economía. Así, aplicamos bonificaciones generales para todos los
+    aeropuertos de la red y otras específicas para los aeropuertos insulares
+    que les voy a exponer a continuación. Las generales son las siguientes:
+    en primer lugar, pasajeros en conexión, incremento de la reducción al 30
+    %; en segundo lugar, exención de pago en todas las mercancías que se
+    mueven en conexión en nuestro país; y, en tercer lugar, bonificación del
+    50 % de la tarifa de carga para las aeronaves en tráfico internacional.
+    Señorías, están además las bonificaciones específicas para los
+    aeropuertos insulares, Ceuta y Melilla o bonificaciones por insularidad.
+    Baleares, Canarias, Ceuta y Melilla tienen una bonificación del 15 % para
+    los vuelos con la península y del 70 % para los interinsulares en las
+    tarifas aeroportuarias de aterrizaje, de seguridad y de pasajeros.
+    Subvención para todos los vuelos en Canarias, excepto los interinsulares,
+    de un 50 % del importe de la prestación de aterrizaje y de pasajeros en
+    los días valle de cada aeropuerto, variable según el aeropuerto. Esta
+    medida tiene una vigencia indefinida. También existe la reducción de un
+    20 % en las prestaciones por salida de pasajeros y seguridad en temporada
+    baja para los aeropuertos estacionales. La exención de pago en la
+    mercancía cargada o descargada en tráfico interinsular y la reducción del
+    15 % en las cuantías aplicables tanto a carga directa como en conexión.
+
+    <br /><br />Además, señorías, se ha implantado un nuevo incentivo de crecimiento de
+    pasajeros para impulsar el crecimiento del tráfico aeroportuario y apoyar
+    a otros sectores de especial importancia por su contribución al
+    desarrollo económico, que consiste en lo siguiente. Reducción del 75 % en
+    la tarifa de pasajero para viajeros adicionales en una ruta. Esta
+    bonificación se aplicará siempre que la compañía aérea aumente el número
+    de pasajeros en 2014 en la ruta incentivada y en el conjunto de la red,
+    asegurando así que no se incentiva el número de pasajeros que no genere
+    incremento en una ruta, lógicamente, y que provenga de viajeros captados
+    por otra compañía. El 50 % en 2014, abonado por AENA Aeropuertos en 2015,
+    y el 25 % adicional para el 2016 si esta compañía mantiene o incrementa
+    el tráfico de pasajeros obtenidos en 2014 en la ruta incentivada. O sea,
+    no vale venir y luego irse. Y también, señorías, la reducción del cien
+    por cien -y les digo bien, del cien por cien- de la tarifa de pasajeros
+    en las rutas a nuevos destinos, 75 % en 2014 por la puesta en marcha de
+    una nueva ruta y el 25 % se aplica en 2015 si la compañía mantiene el
+    número de pasajeros en la ruta incentivada en 2014. Con este último
+    incentivo aprobado se favorece el incremento de pasajeros en todos los
+    aeropuertos españoles, apoyando a las compañías aéreas que deciden
+    incrementar su actividad, lo que sin duda redundará en una mejora del
+    sector del transporte aéreo en su conjunto. No obstante, para la
+    aplicación del mismo es necesario contar con la relación de los
+    aeropuertos que están en una misma área de captación de destino para
+    evitar que pueda considerarse un simple cambio de aeropuerto de destino a
+    otro de su misma área. Dicha relación se incorpora a nuestro ordenamiento
+    jurídico mediante la disposición adicional única de este real
+    decreto-ley.
+
+    <br /><br />Todo el conjunto de estas bonificaciones, señorías, en 2012 supusieron 45
+    millones de euros; en 2013, 78 millones de euros y en 2014 estimamos que
+    van a ser 140 millones de euros. Como resultado de la política seguida en
+    materia de gestión aeroportuaria, en 2013 registramos un récord de
+    viajeros internacionales; casi 130 millones de viajeros internacionales,
+    el mayor número de viajeros internacionales que nunca ha tenido la
+    aviación civil española. Asimismo, en enero de 2014 el número de
+    pasajeros en los aeropuertos de la red AENA ha crecido un 2,5 %; en
+    concreto, se registraron cerca de 11 millones de pasajeros. Señorías, el
+    esfuerzo de AENA ha sido posible gracias a sus buenos resultados en
+    materia de gestión empresarial que elevaron el Ebitda hasta los más de
+    1.551 millones de euros en 2013 frente a los 868 millones de euros de
+    2011. Como ustedes saben, la caja en AENA era de menos 600 millones de
+    euros y ahora es, como les digo, de más de 800 millones. (Aplausos).
+
+    <br /><br />Señor presidente, señorías, otra medida relevante incluida en el artículo
+    octavo de este real decreto-ley ha sido la puesta en marcha del plan
+    conocido como PIVE 5. El Gobierno, a través del Ministerio de
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página8)"><b>Página
+    8</b></a></p><br />
+
+    <br /><br />Industria, Energía y Turismo, está apoyando la compra de vehículos
+    eficientes con 175 millones de euros. Su objetivo es la sustitución de
+    otros 175.000 turismos y comerciales ligeros y favorecer la compra de
+    vehículos menos contaminantes. Como en la anterior convocatoria, la
+    adquisición de estos vehículos recibirá un apoyo económico de hasta 3.000
+    euros aportados por el Ministerio de Industria, Energía y Turismo y por
+    el fabricante o punto de venta. También, señorías, en este real
+    decreto-ley, en su artículo noveno se incluye la modificación del IVA
+    aplicable a las entregas de objetos de arte que realicen sus autores. Se
+    pasa de tributar de un 21 % -tipo general del impuesto- a hacerlo al 10 %
+    de tipo reducido. En el artículo décimo se prorroga el tipo de retención
+    del 21 % para dividendos en el impuesto sobre sociedades a 2014. Es el
+    mismo tipo que el aplicado en 2012 y 2013 y la retención del 21 % ya fue
+    prorrogada para este año para el caso de dividendos que deban declararse
+    en el IRPF. De esta forma, Hacienda otorga uniformidad en las retenciones
+    sobre dividendos aplicados a todo tipo de impuestos.
+
+    <br /><br />Para finalizar, en el artículo undécimo del real decreto-ley se recogen
+    las modificaciones de la Ley de Presupuestos Generales del Estado, que
+    permiten introducir determinadas precisiones técnicas relacionadas con la
+    cotización de empresarios autónomos que hayan tenido a trabajadores
+    contratados por cuenta ajena en número igual o superior a diez. En
+    segundo lugar, se introducen los límites de las retribuciones de los
+    miembros de las corporaciones locales atendiendo a su población. Lleva
+    asociada una referencia salarial que tiene en cuenta, entre otros
+    criterios, la retribución de los secretarios de Estado de la
+    Administración General del Estado. En el caso de las corporaciones
+    locales con menos de 1.000 habitantes, no podrán tener dedicación
+    exclusiva y excepcionalmente podrán desempeñar sus cargos con dedicación
+    parcial, percibiendo sus retribuciones dentro de los límites máximos
+    señalados.
+
+    <br /><br />Señorías, concluyo ya. Gracias al contenido del real decreto-ley que les
+    acabo de exponer, se ha conseguido que las medidas alcancen de forma
+    inmediata su plena eficacia, y a su vez hemos complementado las reformas
+    que se habían adaptado, como saben, en todos los ámbitos del transporte y
+    también en otras políticas de carácter económico, algo tan importante
+    para nuestro país como es la fabricación de automóviles y sobre todo que
+    esos nuevos automóviles, mucho más eficientes y menos contaminantes,
+    puedan llegar a los ciudadanos. Por eso, señor presidente, solicito a
+    esta Cámara el voto favorable a la convalidación de este real
+    decreto-ley.
+
+    <br /><br />Muchas gracias, señor presidente. Muchas gracias, señoras y señores
+    diputados. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora ministra.
+
+    <br /><br />Ha solicitado la utilización del turno en contra de este real decreto-ley
+    el Grupo Parlamentario Socialista. En su representación, tiene la palabra
+    el señor Simancas.
+
+    <br /><br />El señor SIMANCAS SIMANCAS: Señor presidente, muchas gracias.
+
+    <br /><br />Señora ministra, reconozco que están ustedes logrando agotar mi reserva de
+    adjetivos para calificar sus actuaciones. Si el Real Decreto-ley de 13 de
+    diciembre teníamos que calificarlo como chapuza, este real decreto-ley de
+    24 de enero hemos de tildarlo como un engendro, señora ministra, tan
+    ininteligible en las formas como inconveniente en sus contenidos. En
+    relación con las formas, señora ministra, diecinueve páginas de
+    decreto-ley, diecinueve páginas para modificar doce leyes. Doce leyes que
+    han sido estudiadas, tratadas, dialogadas y consensuadas a lo largo de
+    meses y de años de trabajo aquí se las carga usted en una tarde de ordeno
+    y mando decretal, un decreto que se carga doce leyes tan importantes como
+    la de Seguridad Aérea, la del Sector Ferroviario, la de Puertos del
+    Estado, la del IVA, la del Impuesto sobre Sociedades, la de los Sueldos
+    de los Concejales, la de las Cotizaciones del Régimen de Autónomos, una
+    docena de leyes que pone usted patas arriba en solo diecinueve páginas.
+    Algunas, como la Ley de Presupuestos Generales del Estado para el año
+    2014, la modifica usted solo veinte días hábiles después de su
+    publicación. Se le ha quedado vieja la Ley de Presupuestos Generales del
+    Estado para 2014 solo tres semanas después de publicarse, y es un avance,
+    porque el anterior decreto, el Decreto de 13 de diciembre, modificaba la
+    Ley de Presupuestos del año 2014 diez días antes de su publicación. Ha
+    escuchado usted bien. Emiten ustedes un real decreto el 13 de diciembre
+    de 2013 para modificar la Ley de Presupuestos de 2014, que se aprueba el
+    23 de diciembre. Modifican las leyes antes incluso de su entrada en
+    vigor. Es todo un récord.
+
+    <br /><br />Justifican ustedes la extraordinaria y urgente necesidad de las
+    regulaciones incluidas en este decreto en decisiones que se tomaron hace
+    año y medio, señora ministra, como la creación de la agencia de seguridad
+    ferroviaria que ya planteaban ustedes en el Pitvi en septiembre de 2012.
+    En septiembre de 2012 nos dicen: hay que crear la agencia de seguridad
+    ferroviaria, se olvidan ustedes de la agencia hasta el día de hoy y hoy
+    por urgente y extraordinaria necesidad la regulan por decreto; no lo
+    podemos hacer a través
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página9)"><b>Página
+    9</b></a></p><br />
+
+    <br /><br />de un proyecto de ley porque han tenido ustedes la sensación urgente de
+    que había que regular esto, aunque ya lo preveían hace año y medio.
+    Urgente necesidad respecto a decisiones que tendrán su efecto no mañana,
+    no la semana próxima sino dentro de diez meses, como la aplicación
+    definitiva del sistema telemático que acredita la residencia para la
+    adquisición de billetes subvencionados en Canarias o Baleares; tendrá su
+    efecto en noviembre pero ustedes sienten una urgente necesidad de
+    decretarlo en el mes de enero.
+
+    <br /><br />El premio gordo, señora ministra, nos lo reservan ustedes para los cambios
+    que proponen en la Ley del Sector Ferroviario sobre los cánones a cobrar
+    por ADIF en el uso de sus infraestructuras. Señora ministra, ayer en un
+    proyecto de ley en el Senado aprobaron ustedes una modificación de los
+    artículos 77 y 81 de la Ley del Sector Ferroviario, al introducir una
+    serie de modificaciones sobre los trámites a llevar a cabo por ADIF para
+    establecer esos cánones, ayer en el Senado; y hoy nos trae usted en un
+    real decreto-ley unas modificaciones de la misma ley en los mismos
+    artículos pero en sentido contrario, ¿con qué me quedo, señora ministra,
+    con lo que aprobaron ustedes ayer en el proyecto de ley que habla de una
+    función del Ministerio de Fomento para comprobar los mandatos de ADIF o
+    me quedo con lo que trae usted hoy aquí dándole autonomía e independencia
+    a ADIF y hablando de la Comisión Nacional del Mercado y de la
+    Competencia? Porque dicen cosas distintas sobre la misma ley, sobre los
+    mismos artículos de la misma ley, con el agravante, señora ministra, de
+    que el real decreto que nos trae usted hoy aquí va a ser derogado por una
+    ley que aprobamos ayer como proyecto en el Senado y que viene la semana
+    que viene, viene el jueves de la semana que viene aquí.
+
+    <br /><br />El proyecto de ley que viene la semana próxima aquí va a derogar el
+    decreto que usted nos ha presentado aquí, ¿esto qué es? Esto es una
+    tomadura de pelo, señora ministra. Regulan ustedes la misma cosa, la
+    misma ley, modificaciones sobre los mismos artículos en un proyecto de
+    ley en un sentido y en un real decreto-ley en otro sentido, y van a tener
+    ustedes que traer un cuarto decreto-ley dentro de unas semanas para
+    derogar lo que la semana que viene vamos a aprobar aquí que viene del
+    Senado, porque no le sirve a usted, nos lo ha contado aquí. Europa le
+    obliga a otorgar cierta autonomía e independencia a ADIF para establecer
+    los cánones. ¿Qué manera de hacer leyes es esta?, ¿quién le lleva a usted
+    estos asuntos en el ministerio? Yo le recomiendo que vaya usted esta
+    tarde y cese a quien sea. No puede ser que ayer en el Senado se apruebe
+    una modificación en un sentido y hoy en un real decreto-ley estemos
+    convalidando medidas en sentido contrario. En fin, señora ministra, esto
+    con relación a las formas.
+
+    <br /><br />En relación con el fondo, nos parece bien que se prorrogue el Plan PIVE,
+    nos parece bien que se regule la estructura, el funcionamiento de la
+    agencia de seguridad ferroviaria, porque la propusimos nosotros entre
+    otras razones, pero es la tercera vez, señora ministra, que usted nos
+    trae una norma, nos trae un texto hablando de cómo prepararnos para crear
+    la agencia de seguridad ferroviaria. Lleva usted año y medio
+    preparándose. ¿Por qué no crea usted la agencia de seguridad ferroviaria
+    ya? Si estamos todos de acuerdo; nos lo anunció usted por primera vez en
+    septiembre del año 2012, nos dijo: vamos a crear la agencia de seguridad
+    ferroviaria porque es muy importante; le decimos: de acuerdo. Sin
+    embargo, lleva usted año y medio preparándose y ahora por urgente y
+    extraordinaria necesidad en un real decreto-ley introduce nuevas
+    regulaciones, pero todavía no tenemos agencia de seguridad ferroviaria.
+    Nos parece bien limitar la responsabilidad patrimonial del Estado en el
+    rescate de concesiones, no pagar dos veces por la misma expropiación,
+    aunque sea una norma que tiene prácticamente nombres y apellidos y aunque
+    nadie sepa aún qué pretende hacer usted con las famosas autopistas de
+    peaje inviables mientras quiebran una tras otra, dañando el prestigio y
+    la reputación de nuestro sector concesional.
+
+    <br /><br />Nos parece bien que bajen ustedes el IVA de las obras de arte del 21 al 10
+    % pero le vamos a pedir, señora ministra, a usted que representa hoy al
+    Gobierno, que haga lo mismo con el IVA del cine, del teatro, de la
+    música, del libro electrónico exactamente por las mismas razones por las
+    que usted hoy justifica bajar el IVA para el mercado de las obras de
+    arte. Se trata de dinamizar una actividad económicamente interesante,
+    crear puestos de trabajo, fomentar la creatividad cultural, no penalizar
+    a los menos favorecidos en el acceso a la cultura. Le vamos a pedir,
+    señora ministra, que no castigue usted al cine y al teatro con un IVA
+    inusitadamente alto simplemente porque el cine y el teatro español no le
+    hacen la ola a su compañero de gabinete, al señor ministro de Educación y
+    cultura, en las ceremonias de entrega de premios. (Aplausos). No castigue
+    usted al cine y al teatro. Desde luego no estamos de acuerdo con que
+    ustedes sigan dando pasos en el sentido de la liberalización exprés del
+    transporte ferroviario de pasajeros en nuestro país. Aquí dan un paso más
+    en relación con las certificaciones de seguridad.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página10)"><b>Página
+    10</b></a></p><br />
+
+    <br /><br />Le voy a pedir otra vez, señora ministra, que no se apresure usted a
+    fomentar un negocio privado con el AVE que hemos pagado entre todos. No
+    se apresure usted al negocio privado porque el negocio privado a veces
+    tiene más coste para el usuario y un peor servicio. Porque en otros
+    países como Francia y Alemania, que no son países menores, que no son
+    países que hacen las cosas mal, están reforzando sus operadores públicos
+    en vez de debilitar sus operadores públicos, pensando en el interés
+    general antes que en el negocio privado en relación con la alta velocidad
+    ferroviaria; y probablemente, señora ministra, porque ni usted misma sepa
+    cómo va afrontar la tan anunciada liberalización del transporte
+    ferroviario de pasajeros. ¿Lo va a hacer usted por surcos, lo va hacer
+    usted por líneas, por tramos o por sectores?, ¿va a introducir un
+    operador privado, dos, tres? Seguramente no lo sabe usted. No siga dando
+    pasos en relación con un asunto sobre el que no saben cómo afrontar y
+    además será contraproducente.
+
+    <br /><br />No estamos de acuerdo, señor ministra, con que ustedes suban las tasas en
+    los aeropuertos españoles y en los puertos españoles. Solo unos días
+    después de reunirse solemnemente ustedes en una convención y decirnos a
+    todos los españoles que no quieren ustedes subirnos los impuestos, solo
+    unos días después de esa promesa solemne a todos reunidos para decir: no
+    vamos a subir los impuestos, aquí nos trae usted unas subidas de tasas
+    extraordinarias. No sabemos qué es lo que quieren, pero sabemos qué es lo
+    que hacen y lo que hacen es subir impuestos. Con la excusa de que Europa
+    requiere un coordinador independiente para el reparto de slots, que es
+    verdad, crean ustedes una nueva tasa a pagar por los operadores de las
+    líneas aéreas, señora ministra, que acabarán repercutiéndose sin lugar a
+    dudas en los billetes que pagan los pasajeros. Europa no le obliga a
+    usted a crear una tasa, Europa le obliga a usted a tener un coordinador
+    independiente para distribuir los slots y las franjas horarias en los
+    aeropuertos. Hasta ahora esto lo pagaba AENA, Europa no nos dice que no
+    lo pague AENA. Crea usted una nueva tasa porque usted quiere crear una
+    nueva tasa en el marco de una estrategia que a nosotros nos parece una
+    estrategia equivocada, porque en la medida, señora ministra, de que bajan
+    los tráficos de pasajeros en AENA ustedes suben las tasas y esta no es
+    una buena política. Ha presumido usted aquí con el aplauso de su bancada
+    de que se han incrementado los viajeros internacionales y es verdad, pero
+    no nos ha dicho usted que el conjunto de los pasajeros que ha
+    transportado AENA en el año 2013 ha caído un 3,5 %, aquí en Barajas casi
+    un 12 %; y a usted para combatir esta caída de tráficos no se le ocurre
+    otra cosa que subir las tasas un 1 % más el IPC este año, un 3 % más el
+    IPC el año que viene, un 5 % más el IPC el 2016, el 2017 y el 2018. Eso
+    es lo que ha pactado usted con las compañías aéreas, sí: IPC más un punto
+    este año, más 3 puntos el año próximo y más 5 puntos dentro de tres años.
+    Esa es la realidad de lo que usted ha pactado y no se hace así, señora
+    ministra. No es lo que hace usted. En relación con el AVE nos lo acaba de
+    explicar. Suben ustedes las tasas y están ustedes espantando los tráficos
+    en lugar de atraerlos. Ahora crean una nueva tasa con la excusa del
+    coordinador de slots y nos dice usted que lo hace para ganar eficiencia;
+    pero si se lee, imagino que se lo habrá leído, el informe que acompaña a
+    este real decreto en materia de impacto económico, se nos dice lo
+    siguiente: cuando AENA gestionaba este servicio en la distribución de los
+    slots se estaba gastando 1 millón de euros, señora ministra, y ahora nos
+    anticipan ustedes que con este nuevo sistema privado y más eficiente se
+    van a gastar 2,5 millones. ¿Dónde está la eficiencia?, ¿por qué hay que
+    gastarse el doble con un sistema privado si AENA lo hacía por la mitad de
+    dinero? Señora ministra, esto no es eficiencia, esto es subida de
+    tributos, esto es subida de impuestos y desistimiento, espanto de los
+    tráficos aéreos en este país.
+
+    <br /><br />No se quedan ustedes ahí, también aumentan las tasas portuarias, duplican
+    ustedes en este real decreto la tasa de ayuda a la navegación para
+    financiar Sasemar. Nosotros también felicitamos a los trabajadores de
+    Sasemar, pero no estamos de acuerdo con que ustedes dupliquen la tasa de
+    ayuda a la navegación. Esta tasa, esta subida, señora ministra, supone un
+    incremento de un 96 %. Si acumula usted la subida que plantea para 2014
+    con la subida que ya ha aplicado en 2013, estamos hablando de una subida
+    del 128 %. Para un partido que quiere bajar los impuestos no está mal
+    subir un 128 % la tasa de ayuda a la navegación. (Aplausos). Señora
+    ministra, hay compañías de cruceros en este país que van a tener que
+    pagar 50.000 euros más el año que viene en función de esta nueva tasa.
+    Esta es una buena excusa para sacar los cruceros de Barcelona, de
+    Valencia o de Palma de Mallorca y llevárselos a Túnez, a Grecia o a
+    Turquía. Señora ministra, un 128 % de subida de tasas a la navegación.
+    ¿Usted cree que esto es razonable?, ¿así se ayuda a captar tráficos de
+    cruceros en nuestro país?, ¿está usted de acuerdo con esto?, ¿pero no
+    eran ustedes los de bajar los impuestos?
+
+    <br /><br />Prolongan ustedes, señora ministra, hasta noviembre el trámite absurdo,
+    engorroso, injustificado de presentar obligatoriamente el certificado de
+    empadronamiento para obtener la bonificación del transporte para
+    residentes en Canarias, Baleares, Ceuta y Melilla, porque eso es lo que
+    trae este decreto que usted
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página11)"><b>Página
+    11</b></a></p><br />
+
+    <br /><br />no nos ha explicado. Lo que trae este decreto es que los ciudadanos de
+    Canarias, de Baleares, de Ceuta y de Melilla van a tener que seguir
+    llevando el certificado de empadronamiento hasta el mes de noviembre.
+    Dicen ustedes que es para combatir el fraude, pero ¿qué fraude? Nos habla
+    usted alguna vez de un 6 %. ¿De dónde se saca esa cifra?, porque le hemos
+    pedido varias veces que nos lo desglose, que nos lo explique, y nunca ha
+    tenido usted posibilidad, capacidad o voluntad de hacerlo. Llevan dos
+    años de gestiones para aplicar un sistema telemático que evite estas
+    molestias a los ciudadanos de las islas, de Ceuta y de Melilla, y llevan
+    ustedes dos años siendo incapaces de hacer funcionar este sistema SARA,
+    señora ministra. Aquí hay ejemplos de diputados y he conocido a
+    ciudadanos y a empresarios que día a día me dicen que ese sistema no
+    funciona. Llevan dos años sin hacerlo funcionar, dos años obligando a los
+    ciudadanos de las islas a ir a su ayuntamiento a pedir un certificado de
+    empadronamiento y, después, solicitar el billete que les corresponde.
+    Esto, además de ser una molestia, señora ministra, es una humillación.
+    Tratan ustedes a los ciudadanos de las islas como ciudadanos de segunda
+    (Aplausos), porque ni usted ni yo, que somos españoles, tenemos que pedir
+    certificado de empadronamiento para viajar; yo no lo necesito, usted no
+    lo necesita, ¿por qué se lo tiene usted que requerir a los ciudadanos de
+    Canarias y de Baleares?, ¿son presuntos defraudadores, más que usted o
+    más que yo los ciudadanos de Canarias o de Baleares?, ¿por qué les
+    castiga usted con este requerimiento? Esto no es justo. No es justo que
+    por su incompetencia, por que ustedes no sean capaces de aplicar un
+    sistema telemático de una manera razonable y eficiente prorroguen hasta
+    el mes de noviembre este requerimiento sobre la base de un fraude que
+    usted no nos ha detectado, no nos ha explicado en ningún momento.
+
+    <br /><br />Señora ministra, no vamos a apoyar este real decreto, como habrá deducido
+    de mis palabras, porque es una falta de respeto en términos de práctica
+    legislativa: doce leyes reformadas, puestas patas arriba en un real
+    decreto de diecinueve páginas, un proyecto de ley que ayer modifica la
+    Ley del Sector Ferroviario en un sentido y hoy un real decreto ley que lo
+    modifica en los mismos artículos en sentido diferente; y porque su
+    contenido es francamente inconveniente. Inconveniente es privatizar el
+    servicio del AVE cuando el coste de la construcción del AVE ha sido
+    público: beneficio privado sobre una inversión pública. Inconveniente es
+    subir las tasas aeroportuarias cuando están cayendo los tráficos.
+    Inconveniente es subir las tasas portuarias cuando queremos captar
+    cruceros para mejorar nuestra industria turística. Inconveniente es
+    maltratar a los ciudadanos españoles residentes en Baleares, en Canarias,
+    en Ceuta y en Melilla por la incompetencia de su ministerio. No vamos a
+    apoyar este real decreto, señora ministra.
+
+    <br /><br />Muchas gracias, señorías. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Simancas.
+
+    <br /><br />Vamos a entrar en el turno de intervención de los grupos, empezando por el
+    Grupo Mixto. En primer lugar, tiene la palabra el señor Baldoví.
+
+    <br /><br />El señor BALDOVÍ RODA: Muchas gracias, señor presidente.
+
+    <br /><br />Señora ministra, sin acritud y de buen rollo, no lo llame decreto-ley,
+    llámelo, sencillamente, popurrí. Le he oído hasta cuatro veces: "para
+    finalizar". Quiere decir que hay aquí un popurrí en el cual se han
+    alterado ni más ni menos doce leyes saltándose la tramitación
+    parlamentaria y vulnerando, en muchos casos, la seguridad jurídica. En
+    tres minutos al diputado de Compromís Equo no le va a dar tiempo a
+    abordar todas estas leyes, pero entendemos que la función del Parlamento
+    se circunscribe, con esta manera de actuar, a ser meros espectadores de
+    esta opereta en la que el Gobierno impone y los diputados del Partido
+    Popular ratifican. Esa es, a nuestro entender, su idea de la democracia,
+    la castración del Poder Legislativo, ni enmiendas ni Senado. Entendemos
+    que el Parlamento les molesta cada vez más.
+
+    <br /><br />Sobre seguridad ferroviaria, tres apuntes. Santiago y Valencia son dos
+    historias paralelas; dos accidentes que, a nuestro juicio, podrían
+    haberse evitado con una mínima inversión. Durante el tiempo que se han
+    dedicado a la elaboración de este real-decreto, en lugar de hablar
+    específicamente de seguridad ferroviaria han preferido montar una
+    subcomisión que hable genéricamente de todo el sistema ferroviario. Sobre
+    las retribuciones de alcaldes y demás, a nuestro juicio, han demostrado
+    que los salarios solo se bajan a los trabajadores, pero no a los cargos
+    públicos; porque poner el límite en 100.000 euros, muy por encima del
+    salario que percibe el presidente del Gobierno, equivale a no poner
+    límite. Con esta tabla han hecho el ridículo. Establecen unos límites
+    para no limitar a nadie. Le pongo un ejemplo: según la declaración de
+    ingresos de la alcaldesa de Valencia ante Las Cortes valencianas, en 2012
+    ganó 152.000 euros brutos, y el dinero procede de cinco pagadores, cuatro
+    de ellos públicos; Ayuntamiento de Valencia, 95.000; Corts y Grupo
+    Popular, entendemos que será sobresueldo del Grupo Popular, 48.000 euros;
+    autoridad portuaria, 1.270; y delegación de Gobierno, que cobra trienios
+    y esto sí que es legal. Por tanto, cobra
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página12)"><b>Página
+    12</b></a></p><br />
+
+    <br /><br />un sobresueldo del Grupo Popular a pesar de cobrar por dedicación
+    exclusiva como alcaldesa y, según ella misma declara, de Les Corts
+    también percibe dinero. ¿Está cumpliendo los límites que ustedes han
+    aprobado la alcaldesa de Valencia? Investíguenlo. ¿Pueden los alcaldes
+    del PP con dedicación exclusiva percibir esos sobresueldos que reparte su
+    partido?
+
+    <br /><br />Sobre el IVA quiero decir que tan necesaria era la bajada para los
+    galeristas como para la industria del cine, del teatro, de los libros de
+    textos. Lo es también para Las Fallas y felicitamos que se haya rebajado.
+    Lo que no entendemos es que esta bajada que, en su día, defendió este
+    diputado de Compromís fue calificada de oportunista por la alcaldesa de
+    Valencia, y hace pocos días fue ella misma la que anunció la bajada al 10
+    % como un gran notición. Es literal: notición. Hay que ser un poco
+    hipócrita.
+
+    <br /><br />El señor PRESIDENTE: Señor Baldoví debe usted terminar.
+
+    <br /><br />El señor BALDOVÍ RODA: Acabo. No lo llamen decreto-ley. Llámenlo popurrí,
+    sin complejos, señora ministra.
+
+    <br /><br />Muchas gracias, señor presidente.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Baldoví.
+
+    <br /><br />Señora Oramas. Va a hablar desde su escaño.
+
+    <br /><br />La señora ORAMAS GONZÁLEZ-MORO: Gracias, señor presidente.
+
+    <br /><br />Señora ministra, señores diputados, este decreto es un decreto muy
+    interesante para haber tenido un debate amplio y, desde luego, los
+    nacionalistas canarios creemos imprescindible que se tramite como
+    proyecto de ley, porque hay muchísimas cosas manifiestamente mejorables.
+    Recuerdo todavía al señor Soria decir que aquellas bonificaciones de las
+    tasas aéreas que se aprobaron para el Gobierno, que habíamos conseguido
+    los nacionalistas canarios en el peor momento de la crisis de Canarias
+    del turismo y que lograron traer 2 millones de turistas más, eran
+    políticas perversas, que con eso no se conseguían más turistas. Pero
+    resulta que cuando la terminal 4 tiene problemas y la realidad se impone
+    hoy traen una serie de bonificaciones aéreas; bonificaciones aéreas que
+    unas sirven y otras no y que desde luego convendría discutir para
+    mejorarlas en ese proyecto de ley. En cualquier caso, tengo que reconocer
+    a doña Ana Pastor, la ministra de Fomento, el esfuerzo que ha hecho de
+    comprensión de que esa política es absolutamente necesaria. Es un primer
+    paso, pero que tenemos que seguir trabajando en lo que es la práctica y
+    el día a día.
+
+    <br /><br />Con respecto a los certificados de residentes, quiero aclarar que no se
+    elimina el certificado de residencia. Esto viene de dos años atrás porque
+    la ministra se había comprometido conmigo, cuando se eliminó en su
+    momento, en que vendría en seis meses pero ahora se está dando de plazo
+    hasta noviembre a las compañías aéreas, plazo que a nosotros nos parece
+    excesivo. Hay determinadas cuestiones que yo estoy segura que en
+    reuniones bilaterales entre el Gobierno de Canarias y el ministerio se
+    podrán resolver como solucionar el tema de los equipos club deportivos,
+    ya que en este decreto no están contempladas determinadas bonificaciones
+    como descuentos, promociones o billetes bajo contrato, por ejemplo, para
+    clubes deportivos, colegios u otros que en este momento están sin
+    resolver. Después hay otra dificultad en cuanto a un posible cambio de un
+    apellido en los certificados de residencia y que no entran en el sistema,
+    pero con buena voluntad se puede resolver. Pediría también, ya que trae
+    el tema de la cultura, que independientemente del fondo del asunto que
+    nos parece escaso, que se incluya el mercado secundario del arte. Anoche
+    tuve una reunión con galeristas y parece ser que es muy importante el
+    mercado secundario del arte y quizás España esté fuera de un mercado que
+    en otros países es principal. Este decreto de bajada del IVA no incluye
+    el mercado secundario del arte, que debería ser fundamental porque va en
+    la línea de todos los países occidentales.
+
+    <br /><br />Desde Coalición Canaria reiteramos la necesidad de tramitar como proyecto
+    de ley este decreto. Por tanto, vamos a anunciar la abstención, en primer
+    lugar, porque hay cosas manifiestamente mejorables aunque estamos seguros
+    de que la ministra de Fomento va a estudiarlo, aunque hay otras partes
+    sobre las que no tenemos esa garantía y, en segundo lugar, no sabemos
+    cómo va a quedar si no se tramita como proyecto de ley y no queremos
+    avalarlo.
+
+    <br /><br />Muchas gracias, señor presidente.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Oramas.
+
+    <br /><br />Señora Pérez Fernández.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página13)"><b>Página
+    13</b></a></p><br />
+
+    <br /><br />La señora PÉREZ FERNÁNDEZ: Señor presidente, señora ministra, señorías,
+    este real decreto-ley supone un conjunto, un conglomerado, un cajón de
+    sastre de medidas de distinto alcance y también de distinta valoración y
+    nosotros no podemos entrar, por falta de tiempo, en todas y cada una de
+    ellas, aunque sí entraré en las que tienen más relevancia.
+
+    <br /><br />Con respecto a las modificaciones de la Ley del Sector Ferroviario, es
+    absolutamente sorprendente que hayan tenido que esperar hasta el año 2014
+    para dar rango de ley a cuestiones contempladas en directivas del año
+    2004, es decir, de hace diez años. Ya sé que se trata de elementos que
+    fueron introducidos en un reglamento en el año 2007 y que el Gobierno
+    entiende ahora mismo que es importante dar rango de ley para, entre otras
+    cosas, determinar qué aspectos son los que integran la seguridad
+    ferroviaria, la identificación de responsabilidades en materia de
+    seguridad ferroviaria, la identificación de la autoridad responsable de
+    seguridad, etcétera. Por lo tanto, si es necesario un rango de ley para
+    determinar todos los aspectos citados significa que el Gobierno está
+    reconociendo que el actual marco normativo no permite la identificación,
+    en materia de seguridad ferroviaria, de la autoridad responsable de
+    seguridad, etcétera. El reconocimiento de esas lagunas en la legislación
+    tiene un efecto directo en la problemática relativa a la seguridad del
+    sistema ferroviario. Este elemento tiene también una especial importancia
+    a la hora de ponderar las responsabilidades del Estado en accidentes
+    ferroviarios como el sucedido en Angrois, en el cual no está
+    suficientemente clarificada la cadena de mando en cuanto a las
+    responsabilidades en materia de seguridad ferroviaria y en el cual
+    además, ustedes, el propio Gobierno, los distintos cargos dependientes
+    del Gobierno no hacen más que poner obstáculos cada día precisamente en
+    lugar de aclarar este siniestro.
+
+    <br /><br />Otro de los elementos que queremos destacar es el fuerte incremento que se
+    produce en las tasas portuarias y en las tasas aeroportuarias. Con
+    respecto a las portuarias suponemos que quieren paliar la ruinosa
+    situación de Sasemar, y esto ya ha recibido críticas fuertes de navieros
+    consignatarios y de la industria náutica; y respecto a las tasas
+    aeroportuarias acabarán recayendo en los usuarios, y creemos que no
+    favorecerán el incremento de pasajeros. Por cierto, me voy a referir a
+    los aeropuertos de Galicia, donde sistemáticamente el descenso de
+    pasajeros ya empieza a resultar escandaloso, sin que las
+    administraciones, sobre todo la del Estado, tomen medidas.
+
+    <br /><br />Voy terminando, señor presidente. No tenemos nada en contra de la
+    ampliación del programa PIVE en 175 millones, pero habría que reflexionar
+    más globalmente sobre la política de estímulos al consumo, sobre el
+    porqué de subvencionar la adquisición de automóviles y no subvencionar
+    otros sectores. En cuanto al IVA una frase nada más. No nos parece de
+    recibo que se favorezca o que se produzca una bajada del IVA en
+    importaciones de objetos de arte y antigüedades y sin embargo se mantenga
+    el IVA de otros productos culturales -cine, teatro, etcétera-, que subió
+    hace un año y medio del 10 al 21 %, o por citar algún otro el IVA del
+    material escolar, que subió del 4 al 21 %. Esto no nos parece de recibo,
+    porque no afecta a una mayoría social.
+
+    <br /><br />El señor PRESIDENTE: Señora diputada, tiene usted que terminar.
+
+    <br /><br />La señora PÉREZ FERNÁNDEZ: Termino, señor presidente, pero tengo que hacer
+    una referencia a la modificación que se produce en el régimen de
+    trabajadores autónomos. Señorías, se aumenta la base de cotización mínima
+    para los trabajadores autónomos que tengan a su cargo más de diez
+    trabajadores por cuenta ajena. Desde luego ninguna medida de las que han
+    aplicado últimamente nos parece favorecedora del fomento del empleo y de
+    los emprendedores, pero esta, señora ministra, es la guinda del pastel.
+    Los trabajadores autónomos no pueden soportar más impuestos, y este es
+    uno más. Por tanto, por todas estas razones y otras que no puedo
+    explicar, vamos a votar en contra de la convalidación del real decreto.
+
+    <br /><br />Gracias.
+
+    <br /><br />El señor PRESIDENTE: Gracias, señora Pérez Fernández.
+
+    <br /><br />Tiene la palabra la señora Jordà.
+
+    <br /><br />La señora JORDÀ I ROURA: Señora ministra, señoras y señores diputados, con
+    este Real Decreto-ley, de 24 de enero, de reforma en materia de
+    infraestructuras y de transporte, esconden -como ya se ha dicho- bajo la
+    coletilla "y otras medidas" un sinfín de revisiones que la verdad es que
+    poco -por no decir nada- tienen que ver con la velocidad o con la
+    logística. Entre ellas una modificación del IVA cultural en la que el
+    ministro Montoro deja claro cuál es su concepto de cultura: el comercio,
+    las galerías de arte y las antigüedades: única y exclusivamente esto.
+    Señorías, la reforma del IVA para el comercio de arte invierte
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página14)"><b>Página
+    14</b></a></p><br />
+
+    <br /><br />absolutamente la propia lógica del IVA. Sigue gravando como productos de
+    lujo el acceso básico a la cultura de toda la ciudadanía mientras va a
+    gravar con el IVA más reducido la cultura más cara y más lujosa, la que
+    solo está al alcance de los más poderosos. Es -si me permiten- tan
+    surrealista que no sabemos si ha sido a instancia del exasesor de la
+    Comunidad de Madrid y actual presidente de Arco Madrid para salvar la
+    feria madrileña, que se va a celebrar dentro de un mes, si lo ha sido de
+    Aznar para intentar colocar los cuadros de su amigo Gerardo Rueda,
+    después de la negociación de Blesa, o si ha sido de algún alto cargo del
+    Partido Popular que -como Bárcenas- invirtió en arte y ahora no podía
+    darle ninguna salida. En cualquier caso, señora ministra, es claramente
+    una bajada elitista y blanqueadora, mientras el escandaloso 21 % sigue
+    aplicándose -como ya se ha dicho- a las entradas de teatro, a las de
+    cine, a los conciertos, a las grabaciones musicales e incluso al material
+    escolar. Y si se me permite y puestos a abrir cajones de sastre como es
+    este real-decreto, este 21 % se aplica también en un producto de
+    primerísima necesidad como los pañales; es absolutamente surrealista.
+
+    <br /><br />Respecto a la seguridad en las infraestructuras y en el transporte a
+    nuestro entender no se trata de hacer modificaciones legislativas, sino
+    de aportar dinero, señora ministra, para modernizar, para resolver las
+    carencias o para hacer un trazado simplemente adecuado. De hecho si no se
+    hubiera regateado dinero en todo ello posiblemente no se hubiera
+    producido el trágico accidente de Galicia. Asimismo la falta de la
+    necesaria inversión en mantener las infraestructuras ferroviarias es
+    justamente la que ha provocado reiterados accidentes en las cercanías
+    barcelonesas. Llevamos ya algunos sustos -no solo uno, unos cuantos, y
+    usted lo sabe perfectamente-, esperemos que no tengamos que lamentar algo
+    mucho más grave, como lo sucedido en Galicia, repito, o como el impune y
+    evitable accidente del metro de Valencia.
+
+    <br /><br />Acabo. Más allá de esto debemos denunciar también públicamente un caso que
+    nos parece gravísimo, la actuación coercitiva de AENA contra un
+    trabajador del aeropuerto de Palma, cuya falta simplemente fue la de
+    notificar a los responsables de la seguridad -como evidentemente es
+    preceptivo- un suceso que podía afectar a la seguridad operacional. No
+    solo se trata de este caso particular -que ya es suficientemente grave,
+    entendemos-, sino que se trata de que actuaciones de este tipo por parte
+    de los altos cargos evidentemente desincentivan a los trabajadores a
+    realizar con eficacia su trabajo. Ahora bien -y con esto ya termino-
+    tenemos que tener claro que cuando hay un accidente siempre se apunta a
+    la parte más débil de la cadena.
+
+    <br /><br />Muchas gracias, señor presidente.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Jordà.
+
+    <br /><br />Tiene la palabra el señor Larreina, dentro del Grupo Mixto.
+
+    <br /><br />El señor LARREINA VALDERRAMA: Muchas gracias, señor presidente.
+
+    <br /><br />Señorías, señora ministra, estamos ante un nuevo real decreto-ley que
+    muestra cuál es la filosofía de gobierno de este Gobierno, que creo que
+    es una filosofía muy negativa, porque al final está funcionando con una
+    política de bote pronto, es decir dando respuesta en el corto plazo y
+    ante las urgencias puntuales, y está evitando la reflexión, el debate y
+    la colaboración de todos los grupos de la Cámara a la hora de
+    perfeccionar las leyes, y creo que eso es muy negativo. Por eso
+    precisamente nosotros, ya de entrada, estamos en contra de la tramitación
+    de los reales decretos-leyes.
+
+    <br /><br />Pero además si entramos en el múltiple contenido de este real decreto-ley
+    muestra falta de coherencia en el Gobierno, como es meter cosas tan
+    diferentes dentro del mismo real decreto-ley. Si vamos a los ámbitos
+    concretos y específicamente los que se refieren a su departamento estamos
+    en total oposición a la filosofía que hay por ejemplo sobre la gestión de
+    la red ferroviaria. Ustedes están impulsando un proceso de privatización
+    que consideramos que es muy negativo, por una razón muy clara: las
+    infraestructuras de transporte, las ferroviarias especialmente, tienen
+    una función de servicio público, tienen una función precisamente de dar
+    posibilidades de comunicación a las zonas que menos posibilidades tienen,
+    porque no son rentables. Y ustedes con la privatización lo que están
+    haciendo es asumir los costes, los déficits de ese servicio público, y
+    sin embargo los beneficios de ese servicio público los dan fuera, con lo
+    cual al final el coste para el Estado es mucho mayor que sin la
+    privatización, ya que esos costes de ese servicio público que son
+    necesarios, ese déficit que es necesario, no se ven compensados con los
+    beneficios de las líneas que puede ser rentables. Por eso nosotros
+    pensamos que esa concepción de la gestión de la red de transportes es muy
+    negativa con este planteamiento de privatización.
+
+    <br /><br />También planteamos desde el punto de vista de nuestro país, de Euskal
+    Herria, la necesidad de gestionar la propia red ferroviaria en Euskal
+    Herria. Pensamos que ese es también un tema importante para garantizar
+    ese servicio público. Usted sabe, por ejemplo, que nosotros allí, en el
+    caso de Álava,
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página15)"><b>Página
+    15</b></a></p><br />
+
+    <br /><br />estamos proponiendo la creación de un tren social que sirva de
+    comunicación de las diferentes zonas de la llanada alavesa, que va desde
+    el límite con Nafarroa, en Alsasua, hasta el límite con Burgos, en
+    Miranda, precisamente para generar y posibilitar que dé un servicio
+    público importante a muchas localidades que realizan su vida de trabajo,
+    comercial, de ocio con la capital de Araba, que es Vitoria-Gasteiz. Eso
+    hoy por hoy es imposible, porque ustedes ni siquiera lo contemplan. Por
+    eso reclamamos también la gestión de esa red ferroviaria en nuestro país
+    precisamente para garantizar ese servicio público, y para que iniciativas
+    como ese tren social que queremos proponer y que promovemos desde Amaiur
+    y Bildu en Álava pueda ser una realidad y dar ese servicio público.
+
+    <br /><br />Estamos hablando también de aquello que se refiere a la seguridad aérea.
+    Nosotros podemos estar de acuerdo con las medidas que usted propone para
+    subvencionar el transporte a los pasajeros de las islas y de Ceuta y
+    Melilla. No estamos de acuerdo con todas esas trabas que se han expuesto
+    por otros intervinientes con anterioridad. Pero quiero plantearle una
+    cuestión muy clara, señora ministra, y es que a la hora de gestionar los
+    horarios de los aeropuertos nosotros le estamos reclamando -y le
+    reclamamos formalmente- que el aeropuerto de Foronda tenga disponibilidad
+    las veinticuatro horas. Lo planteamos también desde un punto de vista de
+    la seguridad aérea y desde una gestión racional de los cinco aeropuertos
+    que hay en nuestro país, en Euskal Herria, es decir, del aeropuerto de
+    Biarritz, de Iruña, de Loiu, de Hondarribia y de Foronda. Consideramos
+    que es necesaria esa disposición para que el aeropuerto de Foronda esté
+    operativo las veinticuatro horas y preste servicio no solo a los otros
+    cuatro aeropuertos de Euskal Herria, sino también a los aeropuertos de
+    zonas limítrofes. Consideramos que esa es una urgencia y lo está
+    manifestando toda esta serie de fenómenos atmosféricos que se están
+    repitiendo últimamente demasiado, y que están generando muchas
+    incomodidades a muchos ciudadanos y ciudadanas y que también pueden
+    originar problemas de seguridad.
+
+    <br /><br />Finalmente -con esto voy acabando, señor presidente- me voy a referir a un
+    ámbito que no es de su departamento, pero que también está metido en esa
+    especie de saco común del real decreto-ley, que es el caso del IVA, que
+    también creo que es una muestra muy clara de cuál es la filosofía de este
+    Gobierno. Es un Gobierno que responde con prontitud, con celeridad a las
+    demandas de los poderosos, a las demandas de las grandes fortunas, a las
+    demandas de las grandes empresas, y es incapaz de responder con esa misma
+    celeridad -sino que, todo lo contrario, responde cuando responde, con una
+    lentitud verdaderamente desesperante- a las necesidades de la gente de la
+    calle, de las pequeñas empresas, de los autónomos. Hace poco decía una
+    persona: soy afortunado porque soy mileurista, porque tengo un puesto de
+    trabajo, aunque con unas deficiencias importantes; soy muy afortunado
+    porque con esta bajada del IVA igual puedo comprar un Picasso. Eso, que
+    suena a chiste, demuestra la filosofía de esta ley, es decir, se da
+    respuesta a las necesidades de las grandes fortunas, de las grandes
+    empresas, y no se da respuesta con la misma prontitud a las necesidades
+    de la gente de la calle que quiere acceder a la cultura, a la compra de
+    un libro, al cine, etcétera, con unos costes razonables, ni tampoco se da
+    respuesta a las necesidades de las pequeñas y medianas empresas y los
+    autónomos, y precisamente la modificación que hacen del régimen de
+    tributación de los autónomos es otra muestra más de que este Gobierno
+    está muy pendiente de las necesidades de la gran empresa, pero está dando
+    la espalda continuamente a las pequeñas y medianas empresas, a los
+    autónomos, a la economía social. Por estas razones vamos a votar en
+    contra del real decreto-ley.
+
+    <br /><br />Muchas gracias.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Larreina.
+
+    <br /><br />Por el Grupo Vasco, PNV, tiene la palabra la señora Sánchez Robles.
+
+    <br /><br />La señora SÁNCHEZ ROBLES: Gracias, señor presidente.
+
+    <br /><br />Señora ministra, procuraré ser breve; la verdad es que su explicación ha
+    sido cumplida. Yo creo que a través de las intervenciones de los
+    diputados de otros grupos políticos se han puesto de manifiesto
+    cuestiones que podemos compartir, pero le diré que no me referiré a lo
+    previsto en materia aeroportuaria. Puedo compartir, con usted bien
+    conoce, la reivindicación de la gestión de los aeropuertos vascos como un
+    único aeropuerto con tres terminales, y por supuesto que Foronda tenga
+    servicio veinticuatro horas. A estas cuestiones, entre otras que creo que
+    podemos tratar igual en cualquier otro momento, no me voy a referir, y
+    tampoco lo haré sobre el rescate marítimo y el régimen concesional.
+
+    <br /><br />Voy a comenzar por destacar lo positivo de este real decreto. Al final la
+    justificación principal de traer este real decreto en materia ferroviaria
+    es la necesidad de dar cumplimiento a la incorporación al ordenamiento
+    jurídico, con el rango suficiente, de determinadas directivas europeas,
+    en concreto la
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página16)"><b>Página
+    16</b></a></p><br />
+
+    <br /><br />Directiva 95/18, del Consejo, y la 2001/14, también del Consejo de Europa,
+    relativa a la adjudicación de la capacidad de infraestructura
+    ferroviaria, y me voy a centrar principalmente en esta. Decía que la
+    justificación de la necesidad de este decreto es evitar ser sancionados
+    económicamente por no dar cumplimiento a las anteriores directivas, y más
+    concretamente -como decía- a la 2001/14, del Consejo de Europa, hecho que
+    ha sido determinado mediante sentencia de 28 de febrero de 2013, del
+    Tribunal de Justicia de la Unión Europea. Señora ministra, me alegro de
+    que hayan procedido a incorporar esto de una manera clara en nuestro
+    ordenamiento, pero le tengo que decir, a usted y al resto de los
+    ministros, igual también a algún otro Gobierno, que llega tarde y mal, es
+    de 2001, ni más ni menos, y lo más preocupante es que esta dinámica de
+    incorporación y cumplimiento en España de las directivas europeas se ha
+    convertido en una excepción. Al final siempre tarde y siempre mal.
+
+    <br /><br />Otra cuestión que quería comentarle es que a nivel de proyectos de
+    subsistemas ferroviarios se indica que se prevé la regulación por
+    normativa de las condiciones técnicas de proyecto y construcción, así
+    como las condicionantes de puesta en funcionamiento de los subsistemas
+    ferroviarios, tanto a nivel estructural como a nivel funcional. Esto es
+    una cosa muy concreta, pero que nos parece muy importante, porque esta
+    regulación de la normativa técnica y de los condicionantes de
+    funcionamiento de los subsistemas ferroviarios se entiende que será de
+    aplicación también a nivel estatal y autonómico en la comunidad autónoma
+    del País Vasco. En consecuencia ya le avanzo que estaremos vigilantes y
+    esperamos que la normativa de desarrollo sea escrupulosamente respetuosa
+    con el régimen constitucional de reparto competencial.
+
+    <br /><br />Por supuesto me quería referir también a los artículos 63, 71, 77 y 81.1,
+    que tienen que ver con las competencias referentes a la gestión,
+    liquidación y recaudación de las tasas por el otorgamiento de licencias y
+    certificados de seguridad, así como las tasas por homologación de centros
+    de formación, de personal ferroviario, y de mantenimiento de material
+    rodante, así como los cánones ferroviarios y especialmente esta última
+    frase: todos ellos serán aplicables a la red ferroviaria de interés
+    general. Señora ministra, quiero aprovechar este momento para recordarle
+    que es absolutamente necesario -como algún otro diputado ha comentado-
+    que se produzca la transferencia, tal y como se establece en la
+    Constitución y en el estatuto de autonomía, de determinados tramos de red
+    que claramente no constituyen interés general, y que nos permitirían
+    gestionar de una manera mucho más adecuada el transporte de pasajeros y
+    de mercancías en nuestro territorio. En este sentido vuelvo a recordarle,
+    ministra, que está recurrido por el Gobierno ante el Tribunal
+    Constitucional el Decreto-ley 4/2013 en el que en genérico se decía que
+    hasta que se apruebe el catálogo de líneas y tramos de la red ferroviaria
+    de interés general a que se refiere, puntos suspensivos, y es toda la red
+    ferroviaria del Estado de interés general, por lo que me ha parecido
+    oportuno aprovechar la ocasión que me ha brindado.
+
+    <br /><br />Señora ministra, para concluir, igual esto no sé si va con usted, pero en
+    vaya jardín que se ha vuelto a meter, qué necesidad hay de ir a buscar
+    peligros: Plan PIVE, IVA, retribuciones en el ámbito de la Administración
+    local, régimen de trabajadores autónomos, Ley de Sociedades, un sinfín de
+    modificaciones de normas de rango superior que se traen aquí a modificar
+    mediante este real decreto-ley, y que solo puedo calificar de
+    impresentables, señora ministra, tanto desde el punto de vista de la
+    ortodoxia legislativa, que además les ha sido afeado reiteradamente por
+    el Tribunal Constitucional, pero también desde el punto de vista del fair
+    play parlamentario, en la medida que están impidiendo de facto el
+    desempeño de nuestra labor como diputados, al tener que andar como
+    pitxipolis -que diríamos en Bilbao- detrás del salpicón de disposiciones
+    que a través de normas que nada tienen que ver con el objeto principal se
+    van introduciendo sistemáticamente. Señora ministra, le voy a decir una
+    cosa. Me parece estupendo que se haya tomado la decisión por fin de
+    incorporar al ordenamiento jurídico estas directivas, para evitar una
+    sanción del tribunal, pero también le voy a decir que debido a este
+    desorden, a este batiburrillo con el que se han presentado otras medidas
+    nos vamos a abstener.
+
+    <br /><br />Muchas gracias.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Sánchez Robles.
+
+    <br /><br />Por el Grupo Parlamentario de Unión Progreso y Democracia tiene la palabra
+    el señor Martínez Gorriarán.
+
+    <br /><br />El señor MARTÍNEZ GORRIARÁN: Gracias, señor presidente.
+
+    <br /><br />Señora ministra, nuestro grupo no puede apoyar este real decreto-ley por
+    una razón de fondo importante, y es la siguiente. Este real decreto-ley
+    vacía de competencias a este Congreso de los Diputados, vacía de
+    significado al Parlamento. ¿Cómo pueden traer ustedes un real decreto-ley
+    que
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página17)"><b>Página
+    17</b></a></p><br />
+
+    <br /><br />introduce dieciocho cambios legislativos en cuestiones que en muchos
+    casos, que aunque son importantes y relevantes, pero no tienen ninguna
+    urgencia. En unos casos modifican una Ley de Presupuestos Generales del
+    Estado al menos en seis casos, si he contado bien, que se aprobó hace
+    menos de meses, y en otros casos lo que tratan es de eludir sanciones de
+    la UE que han abierto al Gobierno: expediente sancionador por
+    trasposición tardía o incompleta de directivas europeas que ya estaban
+    vigentes hace tiempo. Si ustedes querían pasar una radiografía lo más
+    tenebrosa posible de cómo actúa el Gobierno este era el mejor ejemplo de
+    lo que podían hacer. Por una parte, quita iniciativa legislativa al
+    Parlamento. No podemos discutir ni debatir o enmendar cuestiones como los
+    sistemas de privatización de concesión de licencias de las empresas
+    ferroviarias, es decir, de privatización de los ferrocarriles. Se crea
+    una nueva agencia de seguridad sin que podamos discutir sus
+    características y funciones. Todo así. Ustedes mismos se dan cuenta de
+    que este es un real decreto-ley que no tiene un pase constitucional,
+    incluso hay dos párrafos dentro de la exposición de motivos, en la página
+    tercera y luego en la página cuarta, donde tratan de justificar que un
+    real decreto-ley haga cosas que según la Constitución no puede hacer,
+    como cambiar el régimen tributario, cosa que hacen con los autónomos.
+    Modifica la Ley de Concursos Públicos, como si fuera una cuestión menor.
+    En fin, es absolutamente alucinante. Prolongan el Plan PIVE para
+    automóviles sin ninguna explicación más que solo porque nos ha ido muy
+    bien y ahora lo hacemos por real decreto-ley. Modifican el IVA del arte,
+    pero no el cultural en general. Todo así.
+
+    <br /><br />Lo coherente hubiera sido que en vez de usted, aunque tengo de usted una
+    opinión muy buena, creo que es de las ministras más competentes del
+    Gobierno, pero esto me parece una muestra de incompetencia del Gobierno
+    en su conjunto, lo hubiera presentado el señor Montoro que últimamente le
+    gusta mucho venir a discutir con nosotros de cuestiones constitucionales,
+    que no entiende y donde dice auténticas barbaridades. Es el señor Montoro
+    el que tenía que haber venido a justificar este real decreto-ley porque
+    su misión fundamental es de tipo fiscal. Las medidas de mayor impacto
+    tienen que ver con cuestiones de ingresos, tienen que ver con cuestiones
+    tributarias, tienen que ver con los cambios de los Presupuestos Generales
+    del Estado, etcétera. A usted le han dado este encargo, supongo que será
+    porque como ayer ya se dieron un baño de aplausos en Ankara, en el mitin
+    del señor Erdogan, a ver si seguía aquí la racha. Nos ha contado lo del
+    ferrocarril, las cosas que tienen mayor justificación, aunque a mí
+    tampoco me parece que el real decreto-ley sea la manera de aprobar este
+    tipo de cuestiones, pero todo eso encubre al final el verdadero contenido
+    de este real decreto-ley, que como digo por una parte desde el punto de
+    vista de técnica jurídica pretende transformar y cambiar leyes sin dar la
+    oportunidad a este Parlamento de que ejerza sus funciones
+    constitucionales, y precisamente por eso llegamos al fondo del asunto:
+    nos privan ustedes de sentido. ¿Qué hacemos aquí? ¿Para qué estamos si
+    ustedes cambian por real decreto-ley nada menos que leyes aprobadas hace
+    dos meses, cambian leyes fundamentales, arguyen que hay urgencia en lo
+    que no tiene urgencia? Y el resto igual. Es imposible aprobar este real
+    decreto-ley, más allá de que uno esté de acuerdo en que tiene que haber
+    una agencia de seguridad ferroviaria o que hay una directiva europea que
+    lo exige y hay que hacerlo de una vez. No se puede hacer así en un
+    régimen de democracia representativa. ¿A quién representamos? ¿Qué
+    estamos haciendo aquí? No hacemos nada. Ustedes están gobernando por real
+    decreto-ley de una manera absolutamente abusiva. Se criticó mucho al
+    Gobierno de Zapatero por esto, pero ustedes están yendo mucho más allá en
+    estos reales decretos-leyes, que ya no son cajones de sastre, sino que
+    son cajas de Pandora; uno no sabe lo que va a salir de aquí dentro, uno
+    no sabe qué consecuencias políticas van a tener las cosas que se aprueben
+    de esta forma, porque además no hay manera de que ejerzamos, insisto, la
+    iniciativa legislativa, y sobre todo en este caso la función de control
+    del Gobierno, que es una función constitucional del Congreso de los
+    Diputados y del Parlamento en general. Esto está dejando de ser un
+    régimen parlamentario, así de claro, y lo están haciendo ustedes por esta
+    vía. No puede ser, es completamente increíble e inconcebible. Me parece
+    una desfachatez que nos traigan esto para que lo aprobemos.
+
+    <br /><br />Abusen ustedes todo lo que quieran de la mayoría absoluta, con eso lo
+    único que van a conseguir es profundizar en el desprestigio del sistema,
+    de la democracia, en la desafección ciudadana, y en alentar movimientos
+    que hasta ahora en España han sido marginales y no han tenido mayor
+    importancia. Esta es la vía perfecta para que los que suban y estén en
+    auge, como en otros países europeos, sean los antipolíticos, los
+    antisistemas y los que consideran que esto de aquí es una farsa y no
+    sirve para nada, porque ustedes no nos permiten ejercer las funciones
+    para las que nos han elegido los ciudadanos. Esta es la cuestión de fondo
+    y no los pequeños detalles que van aquí. Acabo. Esto es muy desagradable,
+    pero son cosas que hay que decir, lo siento, para eso estamos y para eso
+    nos han votado, aunque ustedes intenten eludir nuestra función de
+    representantes públicos.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página18)"><b>Página
+    18</b></a></p><br />
+
+    <br /><br />Existen dos mitos, uno de ellos a ustedes les ofende mucho, que es el de
+    la supuesta superioridad moral de la izquierda, cosa que siempre
+    reprochan cuando alguien intenta presumir de esa supuesta superioridad
+    moral. Y tienen razón, la izquierda no tiene ninguna superioridad moral.
+    De hecho ninguna corriente ideológica tiene superioridad moral ni
+    moralidad; la moralidad es un atributo de las personas, y somos las
+    personas las que tenemos determinados grados de moralidad en nuestras
+    acciones. Pero hay un segundo mito que ustedes también encarnan muy bien,
+    y es el de la supuesta superioridad de la gestión por parte de la
+    derecha. Pues no señor, este es un ejemplo de incompetencia. ¿Cómo es
+    posible que se hagan unos Presupuestos Generales del Estado que a los dos
+    meses ya estén caducados? ¿Cómo es posible que se discutan reformas de
+    leyes aquí, en el Pleno, en Comisión o en donde sea, y resulte que ya
+    estén muertas al mes y medio de haberse aprobado? ¿Qué es esto? ¿Qué lío?
+    ¿Qué jaleo? ¿Qué hace el Gobierno? ¿Cómo creen ustedes que puede haber
+    confianza de la sociedad en este asunto, aunque luego ustedes se arrogan
+    que gracias a su acción de gobierno baja la prima de riesgo y en este
+    tipo de cosas? Menos mal que existen las instituciones europeas, que son
+    las que consiguen esos efectos, porque desde luego con este caos de
+    gobierno eso sería completamente imposible.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Martínez Gorriarán.
+
+    <br /><br />Por el Grupo de La Izquierda Plural, tiene la palabra la señora De las
+    Heras.
+
+    <br /><br />La señora DE LAS HERAS LADERA: Gracias, señor presidente.
+
+    <br /><br />Señorías, señora ministra, una vez más y en primer lugar tengo que decir
+    que la utilización desmedida por parte del Gobierno de una disposición
+    legislativa, pensada exclusivamente para casos de extraordinaria y
+    urgente necesidad, es un abuso, una indecencia, y un desprecio al
+    Parlamento. Ustedes se están dedicando a legislar de manera compulsiva y
+    chapucera, improvisando de forma reiterada cambios de normas con una
+    falta absoluta de diálogo social y político, y esto es -ya se ha dicho
+    aquí y lo queremos repetir- totalmente inaceptable. De una tacada
+    modifican nada más y nada menos que doce leyes.
+
+    <br /><br />En materia ferroviaria modifican la Ley del Sector Ferroviario para dar
+    cumplimiento a la Directiva 49/2004, del Consejo de Europa, sobre la
+    seguridad de los ferrocarriles comunitarios, así como la Ley de agencias
+    estatales para la mejora de los servicios públicos con el fin de
+    modificar el nombre de las competencias de la Agencia Estatal de
+    Seguridad del Transporte Terrestre, que pasa a denominarse Agencia
+    Estatal de Seguridad Ferroviaria, que ahora asumirá las funciones de
+    autoridad independiente responsable de la seguridad ferroviaria, de
+    acuerdo a la normativa comunitaria. También se adapta el procedimiento de
+    los cánones ferroviarios a la normativa de la Unión Europea, que ahora
+    los va a fijar ADIF; informará a la Comisión Nacional de los Mercados y
+    la Competencia y las empresas afectadas, y se aprobarán por la ley de
+    presupuestos.
+
+    <br /><br />Pues bien, dejando de lado la chapuza legislativa llevada a cabo para dar
+    cumplimiento en tiempo y forma a la trasposición de la directiva europea
+    que nos obliga, so pena de ser sancionados económicamente, que es de nota
+    -aquí ya se ha dicho, pero yo no tengo ese tiempo-, y yendo al meollo de
+    la cuestión, tenemos que decir que las modificaciones en la legislación
+    sobre ferrocarriles tienen el objetivo de preparar la privatización del
+    transporte de pasajeros por ferrocarril. Porque la verdad es que las
+    excusas de los procedimientos abiertos por la Comisión Europea no engañan
+    a nadie, cuando usted, señora ministra, y su Gobierno, como también el
+    anterior Gobierno, han hecho caso omiso, oídos sordos a esos
+    procedimientos cuando les ha convenido o les ha venido bien, porque no es
+    el Tribunal de Justicia de la Unión Europea, como ustedes dicen, sino la
+    necesidad y el empeño que ustedes tienen en privatizar el transporte de
+    pasajeros por ferrocarril antes de que acabe la legislatura; si por
+    ustedes fuera, antes de que acabara el año, pero no van a poder. Este es
+    el verdadero objetivo de estas medidas y por ello se justifica su
+    urgencia, no por otros motivos que dice el decreto.
+
+    <br /><br />Se introducen también modificaciones parciales en el régimen de las
+    subvenciones al transporte regular de pasajeros residentes en Canarias,
+    Islas Baleares, Ceuta y Melilla, y se determinan los aeropuertos que
+    están en la misma área de captación del destino, con el fin de que se les
+    pueda aplicar el incentivo para favorecer el crecimiento del tráfico en
+    los aeropuertos gestionados por AENA, regulados ahora en los Presupuestos
+    Generales de Estado para 2014. Esperamos que esta medida, que supone una
+    importante inversión pública, no sea para dar brillo y esplendor a AENA
+    antes de su venta, que es lo que nos tememos.
+
+    <br /><br />Con respecto a las subvenciones al transporte, tengo que decirle que
+    cuando usted tomó posesión, señora ministra, so pretexto de la existencia
+    de un fraude masivo -era algo que iba a suceder-, modificó
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página19)"><b>Página
+    19</b></a></p><br />
+
+    <br /><br />el régimen de las ayudas a los viajeros de Canarias, Baleares, Ceuta y
+    Melilla, obligando a cada pasajero a llevar encima siempre el certificado
+    de residencia. Se anunció una investigación sobre ese fraude masivo que
+    había, y ni antes ni ahora hemos tenido ningún resultado, pero, eso sí,
+    le sirvió de excusa para recortar las ayudas que facilitaban la movilidad
+    para los residentes en esos territorios. Esto ha dado lugar, señora
+    ministra -usted lo sabe-, a situaciones dramáticas, como pasajeros a los
+    que en la puerta del avión se les ha impedido volver a sus casas por
+    perder el certificado. Y ahora, después de dos años, se anuncia un
+    sistema informático para 2014 que facilitará el uso a nivel telemático
+    pero que no se aplicará -ya se ha dicho aquí- hasta el otoño de este
+    mismo año. Es un remedio, en una situación como esta, que tenemos que
+    calificar de tomadura de pelo, señora ministra.
+
+    <br /><br />Modifican la Ley de construcción, conservación y explotación de autopistas
+    en régimen de concesión para evitar que el Estado asuma dos veces el
+    coste de las expropiaciones en caso de impago por parte de la sociedad
+    concesionaria cuando dicha sociedad es declarada en concurso de
+    acreedores. El problema que quiere abordar el Gobierno, según nos dice,
+    es que, aunque los contratos de concesiones por los que se construyen
+    autopistas de peaje establecen que el justiprecio de los terrenos
+    expropiados para su construcción debe ser abonado por la sociedad
+    concesionaria, hay sentencias judiciales que obligan al Estado a hacerse
+    cargo de esas deudas en caso de impago por la sociedad concesionaria por
+    estar declarada en concurso de acreedores. Hay que recordar que la
+    responsabilidad patrimonial del Estado con las concesionarias de
+    autopistas es la garantía que tienen las concesionarias en caso de
+    resolución anticipada de contratos, y además las concesionarias -esto es
+    importantísimo- tienen esas garantías en prenda en sus acuerdos de
+    financiación con los bancos. En resumidas cuentas, el reconocimiento al
+    Estado del derecho a subrogarse en el crédito del expropiado frente al
+    concesionario, señora ministra, no le asegura el cobro de cantidad alguna
+    en un concurso de acreedores, así que creemos, y se lo adelantamos, que
+    lo que están regulando puede acabar en papel mojado si no se modifica la
+    Ley Concursal para convertir al Estado en estos casos en acreedor
+    privilegiado para asegurarse el cobro y establecer que puedan compensarse
+    esos créditos. Aquí tampoco podemos olvidar, señora ministra, el origen
+    del problema. Son los ciudadanos y ciudadanas que están viendo cómo
+    pierden poder adquisitivo día a día, fruto de la estafa de la crisis y el
+    austericidio, los que ahora tienen que pagar la orgía en la construcción
+    de carreteras que no pueden usar y que en muchos casos eran totalmente
+    innecesarias, mientras las concesionarias de grandes y poderosas
+    constructoras caen en concurso de acreedores y el Estado es quien
+    socializa las pérdidas. Y esto seguirá siendo así por mucho que intenten
+    que estas pérdidas sean de menor cuantía de lo inicialmente planteado, y
+    además puede no dar resultado si no cambian la Ley Concursal, señora
+    ministra. Esto es un asunto, como verá, que nos preocupa, de calado, que
+    merece ser estudiado con detalle y de manera rigurosa. Por eso le pedimos
+    que este real decreto-ley se tramite como proyecto de ley.
+
+    <br /><br />Con respecto al programa PIVE -voy a ir muy deprisa porque tengo muy poco
+    tiempo; doce leyes, doce minutos-, no deja de ser irónico que el Gobierno
+    hable de política medioambiental y de eficiencia energética para
+    justificarlo, cuando a la vez está penalizando al sector de las
+    renovables e hipotecando el futuro energético con sus reformas y
+    destruyendo miles de puestos de trabajo creados en los últimos años en la
+    economía verde.
+
+    <br /><br />En materia fiscal, se reduce del 21 % al 10 % el tipo del IVA aplicable a
+    las importaciones de objetos de arte, antigüedades y objetos de
+    colección. Tenemos que decir que reducir el IVA a estos productos es
+    totalmente elitista, indignante, pues muestra el sesgo del Gobierno hacia
+    la creación de una cultura de lujo al alcance solo de una minoría,
+    mientras desprecia la situación de emergencia social y precariedad que
+    están sufriendo miles y miles de artistas en nuestro país.
+
+    <br /><br />Por último, en cuanto a la regulación en materia de cotizaciones a la
+    Seguridad Social, nos parece indecente la profunda precarización laboral
+    que están imponiendo, fomentando formas contractuales que suponen la
+    libre disposición para el empresario y la esclavitud para el trabajador.
+    El empleo no está creciendo, como ustedes quieren hacernos creer. Lo que
+    está pasando -y pasa con esta medida también- es que están aumentando de
+    manera escandalosa los trabajadores pobres.
+
+    <br /><br />No tengo más tiempo, pero es que es todo así, señora ministra; así es este
+    decreto. Por eso, no cuenten con nosotros para apoyar esta chapuza.
+
+    <br /><br />Gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Gracias, señora De las Heras.
+
+    <br /><br />Por el Grupo Parlamentario Catalán (Convergència i Unió), tiene la palabra
+    el señor Macias.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página20)"><b>Página
+    20</b></a></p><br />
+
+    <br /><br />El señor MACIAS I ARAU: Muchas gracias, señor presidente.
+
+    <br /><br />Señoras y señores diputados, señora ministra, el Gobierno presenta para la
+    ratificación de la Cámara un real decreto-ley que no solo contiene
+    disposiciones relativas al Ministerio de Fomento, sino algunas relativas
+    a otros ministerios. Y voy a empezar con estos. Una de las disposiciones
+    está referida a la rebaja en el IVA aplicable a las importaciones de
+    objetos de arte, entregas y adquisiciones de objetos de arte del 21 % al
+    10 %. Es evidente que a nosotros, que desde el primer día hemos defendido
+    que el IVA cultural debería ser del 10 %, la medida en sí nos parece
+    positiva e incluso podemos comprender que ante la inmediatez de la feria
+    ARCO y la necesidad de que esta feria funcione el Gobierno haya querido
+    echar una mano y rebajar este impuesto. No nos parece mal, creemos que el
+    Gobierno debe fomentar todo la actividad económica y, por tanto,
+    bienvenido sea.
+
+    <br /><br />Lo que pasa, señora ministra -y esto no le compete a usted, compete a
+    otros dos ministros- es que seguramente en el mundo de la cultura pocos
+    ciudadanos comprenden que se rebaje este impuesto y no se rebajen
+    impuestos que castigan duramente a sectores culturales muy importantes.
+    Yo sé que usted comparte el hecho de la trascendencia para un país de la
+    cultura, de los sectores culturales, y que seguramente usted hubiera
+    acudido y hubiera dado la cara en los premios del cine y que lógicamente
+    su comportamiento hubiera sido distinto del comportamiento cobarde de
+    cierto compañero suyo. Pero hay que decir una vez más que es urgente la
+    rebaja del IVA cultural, de todo el IVA cultural, y sería bueno que esto
+    se hiciera ya sin mayor dilación. Si el Gobierno ha sido tan ágil para
+    utilizar esta fórmula para el caso del IVA aplicable a los objetos de
+    arte, me parece que también debería serlo para el resto de sectores
+    culturales, algunos de los cuales lo están pasando bastante mal. Y,
+    repito, un país que no quiere a su cultura me parece que es un país con
+    un bajo nivel de autoestima.
+
+    <br /><br />Otro elemento que nosotros vemos como indudablemente positivo es el de la
+    prórroga del Plan PIVE. Siempre hemos sido fervientes partidarios de
+    políticas sectoriales industriales, nos parece que los puestos de trabajo
+    o los crea la industria o aquí no hay posibilidad de creación real de
+    puestos de trabajo, y para ayudar a la industria como hacen todos los
+    países hay que hacer políticas sectoriales. De hecho, la única política
+    sectorial industrial que conocemos es apoyar al sector del automóvil, que
+    nos parece acertada; y esta medida también nos parece acertada, pero una
+    vez más debemos reclamar para tantos y tantos sectores que cuenten
+    también con el apoyo del Gobierno en forma de políticas sectoriales. Y
+    hay que aprovechar aquí para denunciar de forma contundente cómo en el
+    caso de la energía se está castigando a nuestras industrias de forma muy
+    importante. Los últimos decretos que van en contra de la cogeneración son
+    un ataque directo a buena parte de muchas industrias situadas en todos
+    los territorios españoles. Por tanto, bienvenido sea el Plan PIVE, a
+    nosotros nos parece bien el Plan PIVE, pero lógicamente hay que
+    recordarle al Gobierno que hay que hacer otras políticas sectoriales y
+    que como mínimo no hagan antipolíticas sectoriales, como es el caso de
+    las políticas energéticas.
+
+    <br /><br />Otro de los aspectos que no competen a su ministerio es uno con el que
+    nosotros estamos radicalmente en contra; se trata de la llamada ley de
+    racionalización y sostenibilidad de la Administración local, que supone
+    la introducción de criterios irracionales y de hacer que los
+    ayuntamientos sean insostenibles. Por tanto, como nosotros hemos
+    manifestado y como ha manifestado todo el mundo local, esta ley es una de
+    las auténticas barbaridades perpetradas por este Gobierno. Solo por
+    contener estos elementos nosotros ya deberíamos votar en contra de este
+    real decreto, porque, repito, hay que decirle al Gobierno alto y claro
+    que esto es una auténtica barbaridad, se están cargando ustedes la vida
+    local, se están cargando las competencias que ejercen los ayuntamientos
+    de políticas sociales y esto en el actual contexto es algo que no podemos
+    tolerar. Por tanto, es evidente que, aunque solo contuviera este aspecto,
+    Convergència i Unió no podría votar a favor de este real decreto-ley.
+
+    <br /><br />Vamos ya a los diversos temas de infraestructuras, algunos de los cuales
+    pueden resultar comprensibles y con los cuales nosotros no estamos para
+    nada de acuerdo. En primer lugar, una vuelta de tuerca más en la
+    centralización del sistema aeroportuario. De hecho, este preámbulo es
+    como una especie de compendio de broncas, de castigos de la Comisión
+    Europea al Gobierno español, y alguien debería tomar nota de por qué
+    suceden estas cosas, y casi siempre van en el mismo sentido, les dicen a
+    ustedes: no centralicen, no burocraticen. Se lo está diciendo la Comisión
+    Europea: dejen hacer, dejen respirar, y ustedes dale que dale que dale
+    con todas sus medidas. Además, a pesar de este informe de la CORA, que
+    dice que hay que desburocratizar, seguimos creando organismos y más
+    organismos sin compensarlo con la desaparición de otros organismos. Por
+    tanto, desde el punto de vista del contenido referido a ferrocarriles,
+    del preámbulo parece que se desprendería que si se crea la agencia
+    estatal de seguridad ferroviaria -todos apostamos por la seguridad
+    ferroviaria y parecería incluso lógico que se creara una agencia
+    estatal-, la actual dirección
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página21)"><b>Página
+    21</b></a></p><br />
+
+    <br /><br />general quedaría sin funciones. Estaría bien suprimir la Dirección General
+    de Ferrocarriles y, de esta manera, uno como mínimo desburocratiza algo,
+    le hacemos algo de caso a la famosa CORA de nuestra estimada
+    vicepresidenta primera, pero seguimos creando un nuevo organismo que crea
+    una tasa para subsistir, lógicamente. Por tanto, primera tasa que crea
+    este real decreto-ley.
+
+    <br /><br />Segundo elemento y segunda tasa: Sasemar. Sasemar tiene un coste, parece
+    que tiene alguna lógica y uno puede comprender que quienes de alguna
+    manera son protegidos por Sasemar puedan contribuir a sufragar los
+    costes, pero la tasa que de golpe quiere cargar el 95 % de los costes de
+    Sasemar a determinados tráficos portuarios me parece -la señora ministra
+    lo sabe, al menos lo sabe su presidente de Puertos del Estado- que ha
+    sido muy mal recibida por todas las autoridades portuarias, por muchos
+    sectores. Esto amenaza, por ejemplo, señora ministra -no sé si se lo han
+    dicho- a la industria de cruceros; esto hay que decirlo. En Baleares esto
+    amenaza a toda la industria de tráfico turístico, no solamente de
+    cruceros sino de yates, y supongo que alguien se lo habrá contado. Por
+    tanto, ya sé que esto soluciona un problema que le da algo más de oxígeno
+    presupuestario a su Gobierno, pero es una tasa más. Estamos oyendo un
+    discurso de que vamos a hacer más competitivos nuestros puertos y que
+    vamos a bajar los costes, pero es que los estamos subiendo: con una mano
+    subimos y con la otra decimos -decimos- que los vamos a bajar. Por
+    consiguiente, mal, mal, mal; otra tasa.
+
+    <br /><br />Para culminar, aquí los genios del mal -siempre es el mismo, el tema
+    aeroportuario-, no solo tenemos bastante con la continuidad de esta AENA
+    del Mioceno sino que ahora vamos a crear otro organismo, que supongo que
+    será del Pleistoceno, que es un coordinador de slots único, también
+    consecuencia de que les abroncan en la Comunidad Europea. Pero la
+    solución no es una solución generosa, liberal, de descentralizar, de
+    dejar que cada aeropuerto pueda hacer su propio camino, etcétera, sino
+    que siempre nos apuntamos a la solución de mayor burocratización, de
+    mayor centralización, de más coste y de más ineficacia; siempre, siempre,
+    siempre creando el mismo modelo. Nos parece que un real decreto-ley que,
+    aparte de continuar con el ataque contra nuestros municipios, además de
+    crear tres nuevas tasas, va en la línea de continuar con la
+    centralización del sistema aeroportuario, es un real decreto-ley que no
+    puede contar con nuestro apoyo; es decir, nosotros defendemos -la señora
+    ministra lo sabe- otro modelo totalmente distinto. Compartimos mucho del
+    trabajo excelente que lleva a cabo este ministerio -lo sabe la señora
+    ministra-, pero es que, a veces, cuando uno se descuida, tiene la
+    sensación de que aquí hay un ejército de burócratas centralizadores que
+    va colando, colando y colando más y más medidas para aumentar lo que ya
+    tenemos, que es un Estado excesivamente centralizado, caro, ineficaz y
+    único en el mundo. Por tanto, señora ministra, para todo esto no podrá
+    contar con nuestro voto y me gustaría que contara usted con una
+    reflexión. No se apunte a estas ideas burocráticas y centralizadoras; no
+    les haga caso. Hay otros modelos; discutámoslos. Me gustaría que esto
+    pudiera ser tramitado como proyecto de ley para debatir estos aspectos,
+    porque seguro que encontraríamos otras soluciones diferentes a
+    centralizarlo todo en el paseo de la Castellana.
+
+    <br /><br />Muchas gracias, señor presidente. Muchas gracias, señoras y señores
+    diputados. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Macias.
+
+    <br /><br />Por el Grupo Parlamentario Popular, tiene la palabra el señor Ayala.
+
+    <br /><br />El señor AYALA SÁNCHEZ: Muchas gracias, señor presidente.
+
+    <br /><br />Señoras y señores diputados, tramitamos la convalidación del Real
+    Decreto-ley 1/2014, de 24 de enero, y les adelanto que el Grupo
+    Parlamentario Popular propiciará su convalidación. Estamos ante un real
+    decreto con catorce paquetes de medidas, de los que nueve corresponden a
+    la competencia del Ministerio de Fomento -de los que luego hablaré- y los
+    otros son relativos a otras cuestiones, como la prórroga del Plan PIVE de
+    ayudas a la adquisición de vehículos contaminantes, medida por la que
+    todo el mundo se ha felicitado; la reducción del IVA en la compraventa de
+    objetos de arte solo para los autores, no para los adquirentes -por
+    tanto, esos argumentos acerca de los ricos guárdenselos para otra
+    ocasión, porque aquí no valen-; mantener la retención del impuesto sobre
+    sociedades durante 2014, que parece que no les parece mal; precisiones
+    técnicas a la cotización de los autónomos y retribución de las
+    corporaciones locales, ya que parece adecuado que en una época de
+    restricciones y de verdadera austeridad como en la que estamos no suponga
+    ninguna dificultad. Si las señorías que han intervenido o sus asesores se
+    hubieran leído la memoria de este real decreto, hubieran comprendido y
+    aceptado la urgencia y la necesidad de su tramitación. Es muy fácil venir
+    aquí a criticar la inoportunidad del real decreto sin haberse leído la
+    memoria; memoria que, por cierto, también se podría haber leído el señor
+    Simancas y hubiera comprendido -y tiene capacidad- esa aparente
+    contradicción entre la tramitación de la Ley del Sector Ferroviario en el
+    Senado y en el Congreso. Señor Simancas, léase la memoria. Está explicado
+    perfectamente por qué se hacen estas
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página22)"><b>Página
+    22</b></a></p><br />
+
+    <br /><br />modificaciones, se hacen como consecuencia de la interpretación que hace
+    la Unión Europea de las modificaciones legislativas que habíamos hecho en
+    España.
+
+    <br /><br />En las cuestiones relativas al Ministerio de Fomento, creo que la ministra
+    ha sido suficientemente explícita y solo voy a destacar que en lo que
+    llevamos de legislatura, con cinco reales decretos, se han aprobado
+    modificaciones sustanciales de las distintas normativas del transporte e
+    infraestructuras con un triple objetivo: garantizar la seguridad del
+    viajero, asegurar la calidad de la prestación de los servicios y mejorar
+    la eficiencia de nuestro transporte. No voy a repetir sus argumentos y
+    explicaciones porque han sido claros, precisos y contundentes, pero
+    quiero enfatizar que el Gobierno de España está empeñado en conseguir lo
+    antes posible la salida de la situación económica que nos ha venido
+    atenazando en los últimos años y en adoptar las medidas que otros no se
+    atrevieron, a pesar de de ya eran necesarias y hubieran sido menos
+    traumáticas que cuando la situación ya no tenía salida. En lo que
+    respecta a las materias de este real decreto, tienden a consolidar la
+    sostenibilidad financiera de nuestro sistema de transporte para
+    garantizar nuestra vertebración y competitividad.
+
+    <br /><br />Evidentemente voy a hacer algunos comentarios a las posturas de los grupos
+    políticos. Ya no sorprende que el Grupo Parlamentario Socialista utilice
+    el turno en contra para oponerse a la convalidación. Forma parte de la
+    estrategia política del momento y de la tramoya para intentar desviar la
+    atención de sus males endémicos. Cuando se trata de modificar la
+    regulación de cuestiones básicas, algunas de las cuales ustedes han
+    venido demandando a lo largo de estos años, incluso medidas que ustedes
+    anunciaron cuando gobernaban y que como tantas otras cosas no pusieron en
+    marcha por desidia, desconocimiento u oportunismo irresponsable,
+    sencillamente no es comprensible su postura en contra. Hoy, señor
+    Simancas, usted se ha superado: como en las malas películas, cuanto más
+    sangre, parece que la película es mejor.
+
+    <br /><br />Señor Simancas, no nos cargamos doce leyes; se modifican, se actualizan y
+    se adaptan, y eso se hace bien. Y le he dicho que no hay contradicciones
+    en la Ley de Seguridad Ferroviaria, léase -insisto- la memoria, léasela
+    porque está usted hablando de la tramitación como proyecto de ley del
+    Real Decreto-ley 11/2013, y luego ha habido manifestaciones por escrito
+    de la Unión Europea justificadas en la memoria del real decreto que hoy
+    convalidamos en la que lo explican perfectamente. Por tanto, parece que
+    ustedes lo que quieren es que no cambiemos nada para que no se siga
+    evidenciando el desastre en el que ustedes nos metieron. Porque en esto
+    son ustedes como el perro del hortelano, ni hicieron cuando tuvieron que
+    hacer ni quieren que hagamos ahora aunque estén convencidos de la bondad
+    y la necesidad de las medidas. Y todo para que parezca que el Partido
+    Popular no lo está haciendo bien. Pues no insistan, desengáñense, el
+    Partido Popular es el que está sacando a España del pozo en el que
+    ustedes nos metieron. Eso es así. (Aplausos).
+
+    <br /><br />Señor Simancas, a usted le gustaría que no existiera la historia ni el
+    pasado. Ustedes añoran no vivir en el principio de los tiempos en el que,
+    como no había historia, nadie se la podía recordar. Estoy seguro de que
+    muchos de ustedes son felices leyendo y releyendo la primera página de
+    Cien años de soledad: "El mundo era tan reciente, que muchas cosas
+    carecían de nombre, y para mencionarlas había que señalarlas con el
+    dedo". No creo que sea el dedo de Valenciano. Pues bien, señorías, hay
+    que convalidar este real decreto-ley porque supone otro avance importante
+    y muy serio en el rigor de la actuación del Gobierno.
+
+    <br /><br />Unas pinceladas. La agencia estatal de seguridad ferroviaria, al margen de
+    adaptarse a las necesidades actuales, acoge la figura de la autoridad
+    responsable de seguridad de acuerdo con la normativa europea. Hay que
+    recordar que catorce de los órganos que regulan la seguridad ferroviaria
+    en Europa son órganos independientes como esta agencia y se desarrollan
+    para que el Gobierno pueda aprobar su estatuto. Todos deberíamos estar de
+    acuerdo en la necesidad de racionalizar, unificar y coordinar la
+    operativa ferroviaria, tanto con el reglamento como con los
+    procedimientos de los cánones ferroviarios, a pesar de las críticas.
+    Parece oportuno -y me voy a parar aquí un momento- garantizar la
+    financiación de coordinación nacional de slots integrado de forma
+    paritaria por el gestor aeroportuario y las compañías aéreas, que tiene
+    naturaleza privada y que implanta una tasa que no es un impuesto. Por
+    cierto, señor Simancas, las tasas que ustedes subieron por ley nosotros
+    las bajamos con un acuerdo entre todos, las que ustedes subieron por ley
+    nosotros hemos acordado bajarlas; ustedes las impusieron y nosotros las
+    pactamos, esa es la pequeña diferencia. Por cierto, señor Simancas,
+    Barajas, en enero de 2014, ha vuelto a recuperar su primacía entre todos
+    los aeropuertos españoles con 2.869.248 pasajeros de todas las
+    categorías. Señor Simancas, parece que en esta cuestión también está
+    usted equivocado.
+
+    <br /><br />Parece también oportuno el régimen de incentivos para el crecimiento de
+    pasajeros en aeropuertos de una misma área de captación de destino porque
+    se coordina precisamente con la idea global de lo que es el coste
+    aeroportuario. Eso, señor Simancas, son políticas activas de un Gobierno
+    comprometido que sabe qué es lo que tiene que hacer. La demagogia que se
+    ha empleado con el tema del Sáhara es increíble. Se controla la
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página23)"><b>Página
+    23</b></a></p><br />
+
+    <br /><br />identidad, señor Simancas, porque se da dinero público. Por eso hay que
+    controlar la identidad, porque usted no tiene bonificaciones y los
+    residentes en los archipiélagos sí. ¿Qué quiere, que no se controle y que
+    algunos desaprensivos sigan defraudando, como ustedes han consentido en
+    el pasado? ¿Y por qué entra en vigor cuando entra en vigor? Se lo voy a
+    explicar. Porque coincide más o menos con la temporada de invierno,
+    porque así se da tiempo suficiente al sector para terminar de establecer
+    su sistema y al mismo tiempo exigir la plena integración antes del verano
+    es arriesgado por si hubiera fallos en el sistema que se aplica. Esa
+    cuestión de prudencia es lo que hace que la fecha sea la que se ha
+    establecido, el 1 de noviembre de 2014.
+
+    <br /><br />Con respecto a la opinión sobre el crecimiento de la T0, es decir, la tasa
+    de navegación, también la demagogia que aquí se ha utilizado es
+    increíble. Señores diputados, lo que no se paga por tasa se paga por
+    impuestos de todos. Lo lógico es que quien se beneficia del servicio sea
+    el que lo pague. Y en cuanto a ese crecimiento y a esa incidencia que
+    aquí se ha dicho que se perjudica, señor Simancas y señor Macias, le voy
+    a decir la trascendencia que tiene esta tasa para el total de las tasas
+    que paga una embarcación cuando entra en los puertos españoles. Un
+    granelero, por ejemplo, tiene un total de tasas de 53.066,25 euros y esta
+    tasa de navegación supone 761 euros, el 1,4 %. Otra explicación. El buque
+    de crucero paga 9.528,75 euros, de los cuales 361 euros son para la tasa
+    de navegación. Un pesquero paga 14 euros y una embarcación deportiva de
+    más de 15 metros paga 208 euros al año. Ese es el crecimiento por el que
+    usted dice que se está gravando excesivamente un sector, cuya capacidad
+    puede asumir perfectamente este crecimiento. Y luego, evidentemente, me
+    satisface que todos estén de acuerdo con la modificación del régimen de
+    contabilización de las expropiaciones no pagadas por las concesionarias,
+    que impide el doble pago por parte de la Administración.
+
+    <br /><br />En definitiva, señorías -con esto termino, agradeciendo la atención que me
+    están prestando-, otro conjunto de medidas en la ingente labor del
+    Gobierno para recuperar el bienestar y la felicidad de los españoles.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Ayala.
+
+    <br /><br />En unos minutos procederemos a votar. (Pausa).
+
+    <br /><br />MOCIONES CONSECUENCIA DE INTERPELACIONES URGENTES. (VOTACIÓN):
+
+    <br /><br />- DEL GRUPO PARLAMENTARIO SOCIALISTA, A LA MINISTRA DE SANIDAD, SERVICIOS
+    SOCIALES E IGUALDAD SOBRE LA POLÍTICA DEL GOBIERNO EN MATERIA DE LUCHA
+    CONTRA LA POBREZA Y LA EXCLUSIÓN SOCIAL. (Número de expediente
+    173/000129).
+
+    <br /><br />El señor PRESIDENTE: Vamos a proceder a la votación de las mociones que se
+    debatieron ayer.
+
+    <br /><br />Moción del Grupo Socialista a la ministra de Sanidad, Servicios Sociales e
+    Igualdad sobre la política del Gobierno en materia de lucha contra la
+    pobreza y la exclusión social. Se vota en los términos de una enmienda
+    transaccional presentada por el Grupo Socialista, Convergència i Unió, La
+    Izquierda Plural, Grupo Vasco PNV y, dentro del Grupo Parlamentario
+    Mixto, el señor Tardà, la señora Pérez y el señor Quevedo.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 314; a
+    favor, 143; en contra, 171.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />- DEL GRUPO PARLAMENTARIO CATALÁN (CONVERGÈNCIA I UNIÓ), SOBRE MEDIDAS A
+    ADOPTAR PARA LUCHAR CONTRA EL DESEMPLEO Y PARA IMPULSAR LA CREACIÓN DE
+    PUESTOS DE TRABAJO. (Número de expediente 173/000130).
+
+    <br /><br />El señor PRESIDENTE: Moción del Grupo Catalán de Convergència i Unió sobre
+    medidas a adoptar para luchar contra el desempleo y para impulsar la
+    creación de puestos de trabajo. Hay una enmienda transaccional presentada
+    por el Grupo Socialista, Convergència i Unió, La Izquierda Plural y el
+    Grupo Vasco PNV. Esa enmienda transaccional es la que se somete a
+    votación.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 314; a
+    favor, 138; en contra, 171; abstenciones, 5.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página24)"><b>Página
+    24</b></a></p><br />
+
+    <br /><br />- DEL GRUPO PARLAMENTARIO DE IU, ICV-EUiA, CHA: LA IZQUIERDA PLURAL, SOBRE
+    LA POLÍTICA DEL GOBIERNO EN MATERIA DE SALUD SEXUAL Y REPRODUCTIVA E
+    INTERRUPCIÓN VOLUNTARIA DEL EMBARAZO. (Número de expediente 173/000131).
+
+    <br /><br />El señor PRESIDENTE: Moción del Grupo de La Izquierda Plural sobre la
+    política del Gobierno en materia de salud sexual y reproductiva e
+    interrupción voluntaria del embarazo. Se vota en sus propios términos,
+    pero separadamente los puntos 1 y 2.
+
+    <br /><br />Votación del punto 1.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 312; a
+    favor 125; en contra, 186; abstenciones, 1.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazado.
+
+    <br /><br />Votación del punto 2.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 311; a
+    favor, 136; en contra, 175.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazado.
+
+    <br /><br />CONVALIDACIÓN O DEROGACIÓN DE REALES DECRETOS-LEYES. (VOTACIÓN):
+
+    <br /><br />- REAL DECRETO-LEY 1/2014, DE 24 DE ENERO, DE REFORMA EN MATERIA DE
+    INFRAESTRUCTURAS Y DE TRANSPORTES, Y OTRAS MEDIDAS ECONÓMICAS. (Número de
+    expediente 130/000048).
+
+    <br /><br />El señor PRESIDENTE: Convalidación o derogación del Real Decreto-ley
+    1/2014, de 24 de enero, de reforma en materia de infraestructuras y de
+    transportes, y otras medidas económicas. Han sido emitidos 3 votos
+    telemáticamente.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 314,
+    más 3 votos telemáticos, 317; a favor, 175, más 2 votos telemáticos, 177;
+    en contra, 138, más 1 voto telemático, 139; abstenciones, 1.
+
+    <br /><br />El señor PRESIDENTE: Queda convalidado.
+
+    <br /><br />A petición de varios grupos vamos a votar la tramitación como proyecto de
+    ley por el procedimiento de urgencia de este real decreto-ley. También se
+    han emitido 3 votos telemáticamente.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 314,
+    más 3 votos telemáticos, 317; a favor, 143, más 1 voto telemático, 144;
+    en contra, 171, más 2 votos telemáticos, 173.
+
+    <br /><br />El señor PRESIDENTE: No será tramitado como proyecto de ley.
+
+    <br /><br />Se levanta la sesión.
+
+    <br /><br />Eran las once y quince minutos de la mañana.
+
+    <br /><br />Corrección de error
+
+    <br /><br />En el "Diario de Sesiones" n.º 175, correspondiente a la sesión plenaria
+    celebrada el miércoles 12 de febrero de 2014, en la página 6, tercer
+    párrafo, penúltima línea, donde dice: "Martínez Maniega", debe decir:
+    "Rodríguez Maniega".
+    </div>
+<hr size="1" noshade="" /><!-- BRSCGI © 1995-2004 Baratz Servicios de Teledocumentación, S.A. http://www.baratz.es -->
+
+
+<!-- FUNCION PIE -->
+    
+
+
+
+                 
+
+
+
+
+
+
+<script language="JavaScript" type="text/javascript">
+	cargaLegSesion('null')
+</script>
+ 
+<!-- FIN  PIE   -->
+        <div id="PIE_POPUP">
+		<p><span lang="es">Congreso de los Diputados</span> · C/Floridablanca s/n - 28071 - MADRID ·<u> <a style="color:#FFFFFF" href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Publicaciones/Aviso_Legal">Aviso Legal</a></u></p>
+	</div>
+
+</div></div></div></td></tr>
+</tbody></table>
+</div></td></tr>
+<tr>
+<td colspan="1" style="width:100%;"><img src="/images/pobtrans.gif" height="4" width="1" alt="" style="display:block" /></td>
+</tr>
+</tbody></table><!-- show footer template = 1824729544 -->
+</td>
+      </tr>
+    </tbody></table>
+  </td></tr>
+</tbody></table>
+</div>
+
+
+<!-- Page Metadata Generated On: 20-MAR-2015:02:07:55  Time Taken: 20 msecs -->
+</body></html>

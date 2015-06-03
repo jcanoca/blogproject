@@ -1,0 +1,2022 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head>
+<style>
+body{float:left;font-size:62.5%;font-family: Arial, Verdana, Helvetica, sans-serif;}
+blockquote{margin:0px;padding:0px;border:0px;list-style-type:none; }
+a{text-decoration:none; color:#626469;}
+a:hover{text-decoration:underline;font-weight:normal;color:#626469;}
+a:active{text-decoration:none;font-weight:normal;color:#000000;}
+</style>
+<title>PopUpCGI</title>
+<link href="/wc/htdocs/web/css/congreso.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/portada.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/prensa.css" rel="stylesheet" type="text/css" />
+<link href="/wc/htdocs/web/css/apps.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/wc/htdocs/web/js/wc.js" language="JavaScript"></script>
+<style type="text/css">.GroupHeaderid1siteid73{Text-Align:left;Height:20px;Background-Color:#336699;}
+.GroupHeaderLinkid1siteid73{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.GroupHeaderTextid1siteid73{Font-Family:Arial, Helvetica;Color:#FFFFFF;Font-Size:9pt;Font-Weight:Bold;}
+.RegionHeaderid1siteid73{Background-Color:#b29200;Height:20px;Text-Align:left;}
+.RegionHeaderTextid1siteid73{Color:#ffffff;Font-Weight:Bold;Font-Family:Verdana;Font-Size:10px;}
+.Bodyid1siteid73{Background-Color:#FFFFFF;}
+.ArchivoAnuncioid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.AudioFotoNoticiaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.AudioNotaPrensaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.authorid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Campo1Pieid1siteid73{Font-Family:Arial, Helvetica;Color:#000000;Font-Size:8pt;}
+.Campo1Region3id1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.Campo2Pieid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Campo2Region3id1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.Campo3Pieid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.ComprobacionSelladoid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.Concesionid1siteid73{Font-Family:Arial;Font-Size:11px;Color:#626469;}
+.Convocatoriaid1siteid73{Font-Family:Arial;Font-Size:11px;Color:#626469;}
+.Correcciondeerroresid1siteid73{Color:#626469;Font-Size:11px;Font-Family:Arial;}
+.createdateid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.creatorid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.CuartoPlatoCafeteriaid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.defaultattributeid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescNotaPrensaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.Descripcionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.DescripcionAnuncioid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.DescripcionBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DescripcionDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.descriptionid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.Destinoid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.DiaSemanaAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.DiaSemanaCanalid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.documentsizeid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Enlaceid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnlaceAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnlaceURLNovedadid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.EnPortadaAnuncioid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.EnPortadaNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EnVentanaNuevaAnuncioid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.EnVentanaNuevaNovedadIntranetid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.EtiquetaArchivoAnuncioid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.EtiquetadelEnlacedelAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.EtiquetaEnlaceNovedadIntranetid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.EtiquetaURLNovedadid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.expiredateid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Faxid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Fax2id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaAgendaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.FechaAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaCanalid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.FechaDiarioid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.FechaFotonoticiaid1siteid73{Font-Size:11px;Font-Family:Arial;Color:#b29200;}
+.FechaFotonoticiaPresidenciaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaMenuid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.FechaMenuCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaNotaPrensaid1siteid73{Color:#b29200;Font-Family:Arial;Font-Weight:Bold;Font-Size:11px;}
+.FechaNovedadid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.FechaNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.FechaRuedaPrensaid1siteid73{Font-Weight:Bold;Font-Size:11px;Font-Family:Arial;Color:#b29200;}
+.FotoEmergenteNotaPrensaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.FotoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto1descargaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Foto1emergenteid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Foto1thumbnailid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Foto2descargaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Foto2emergenteid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Foto2thumbnailid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.GraficoFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.GraficoNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Grupoid1siteid73{Color:#626469;Font-Size:11px;Font-Family:Arial;}
+.Horaid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.HoraAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.HoraCanalid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.ImagenDiaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.InformacionGeneralid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.inplacedisplayid1siteid73{Color:#000000;Font-Family:Arial;Font-Size:11px;}
+.InstruccinArchivoIIid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.InstruccinArchivo1id1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Intervinienteid1siteid73{Font-Size:11px;Font-Family:Arial;Color:#626469;}
+.itemfunctionid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.JefedeCocinaMenuid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.keywordsid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.LineaAgendaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.LineaCanalid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.listaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.Listadebecariosparticipantesid1siteid73{Font-Family:Arial;Font-Size:11px;Color:#626469;}
+.ListaPuestoMiembroDiputadoid1siteid73{Font-Size:11px;Font-Family:Arial;Color:#626469;}
+.ListaPuestoMiembroSenadoid1siteid73{Font-Size:11px;Color:#626469;Font-Family:Arial;}
+.Lugarid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.LugarAgendaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LugarCanalid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Mail1id1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Mail2id1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.Mail3id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.Mail4id1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Nombreid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.NombreBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NombreDiarioid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.NombreMiembroid1siteid73{Color:#626469;Font-Family:Arial;Font-Weight:Bold;Font-Size:11px;}
+.NumeroOrdenAnuncioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NumeroOrdenImagenid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.NumeroOrdenNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PaginaBOCGBoletinid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PDFBoletinid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PDFDiarioid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.perspectivesid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PieImagenid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.PrimerPlatoCafeteriaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PrimerPlatoSaludableMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato1Menuid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PrimerPlato2Menuid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PrimerPlato3Menuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PrimerPlato4Menuid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Programaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PuestoMiembroDiputadoid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;Font-Weight:Bold;}
+.PuestoMiembroSenadoid1siteid73{Font-Size:11px;Font-Family:Arial;Color:#626469;Font-Weight:Bold;}
+.QuintoPlatoCafeteriaid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.RefBOEid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.RefBOEIIid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.scoreid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlatoSaludableMenuid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.SegundoPlato1Menuid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.SegundoPlato2Menuid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.SeptimoPlatoCafeteriaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.SextoPlatoCafeteriaid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.SiglasBoletinid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.SiglasDiarioid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.subpagetitleid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.SugerenciaCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TargetNovedadid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.Telefonoid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.Telefono2id1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.TemaFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaNotaPrensaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TemaRuedaPrensaid1siteid73{Color:#000000;Font-Family:Arial;Font-Size:11px;}
+.TercerPlatoCafeteriaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TextoAlternativoFotoNotaPrensaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.TextoAlternativoFoto1Fotonoticiaid1siteid73{Font-Family:Arial, Helvetica;Font-Size:8pt;Color:#000000;}
+.TextoAlternativoFoto2Fotonoticiaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.titleid1siteid73{Font-Family:Arial;Font-Size:11px;Color:#626469;Font-Weight:Bold;}
+.titleorimageid1siteid73{Color:#626469;Font-Family:Arial;Font-Size:11px;}
+.TitularFotoNoticiaid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.Tituloid1siteid73{Font-Size:11px;Font-Family:Arial, Helvetica;Color:#626469;Font-Weight:Bold;}
+.TituloAnuncioid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.TituloImagendelDiaid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.TituloNovedadid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.TituloNovedadIntranetid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.URLEnlaceNovedadIntranetid1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.VideoFotoNoticiaid1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.VideoNotaPrensaid1siteid73{Font-Size:8pt;Color:#000000;Font-Family:Arial, Helvetica;}
+.Visitasid1siteid73{Font-Size:8pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.wwsbr_category_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_charset_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_image_or_title_id1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.wwsbr_img_or_title_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_itemtype_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_mime_type_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_page_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_pagegroup_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_publishdate_id1siteid73{Color:#000000;Font-Size:8pt;Font-Family:Arial, Helvetica;}
+.wwsbr_title_and_img_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_dur_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_title_link_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_updatedate_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_updator_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.wwsbr_version_number_id1siteid73{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.LeftCurve{}
+.PortletBodyColor{}
+.PortletHeaderColor{Background-Color:#b29200;}
+.PortletHeaderLink{Color:#FFFFFF;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletHeaderStyle{}
+.PortletHeaderText{Color:#FFFFFF;Font-Weight:Bold;Font-Size:10pt;Font-Family:Arial, Helvetica;}
+.PortletHeading1{Color:#336699;Font-Family:Arial, Helvetica;Font-Size:9pt;Font-Weight:Bold;}
+.PortletHeading2{Color:#336699;Font-Size:8pt;Font-Family:Arial, Helvetica;Font-Weight:Bold;}
+.PortletHeading3{Font-Size:7pt;Font-Family:Arial, Helvetica;Color:#336699;Font-Weight:Bold;}
+.PortletHeading4{Font-Size:7pt;Font-Family:Arial, Helvetica;Color:#336699;Font-Weight:Bold;}
+.PortletSubHeaderColor{Background-Color:#EEEEDD;}
+.PortletSubHeaderLink{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:9pt;}
+.PortletSubHeaderText{Font-Size:9pt;Font-Family:Arial, Helvetica;Color:#000000;}
+.PortletText1{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletText2{Color:#000000;Font-Family:Arial, Helvetica;Font-Size:8pt;}
+.PortletText3{Color:#000000;Font-Size:7pt;Font-Family:Arial, Helvetica;}
+.PortletText4{Font-Family:Arial, Helvetica;Font-Size:7pt;Color:#000000;}
+.RightCurve{}
+.LeftSubTabid1siteid73{Background-Position:left top;Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFsl.gif);Background-Repeat:no-repeat;}
+.LeftTabBgSlantid1siteid73{Background-Position:left top;Background-Image:url(http://www.congreso.es/images/FFFFFFtl.gif);Background-Color:#CCCC99;Background-Attachment:scroll;Background-Repeat:no-repeat;}
+.LeftTabForeSlantid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFtl.gif);Background-Position:left top;Background-Repeat:no-repeat;}
+.RightSubTabid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFsr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.RightTabBgCurveid1siteid73{Background-Image:url(http://www.congreso.es/images/FFFFFFtr.gif);Background-Color:#CCCC99;Background-Attachment:scroll;Background-Position:right top;Background-Repeat:no-repeat;}
+.RightTabForeCurveid1siteid73{Background-Attachment:scroll;Background-Color:#336699;Background-Image:url(http://www.congreso.es/images/FFFFFFtr.gif);Background-Position:right top;Background-Repeat:no-repeat;}
+.SubTabBgTextid1siteid73{Color:#CCCC99;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:11pt;Font-Weight:Bold;}
+.TabBackgroundColorid1siteid73{Background-Color:#CCCC99;}
+.TabBackgroundTextid1siteid73{Color:#003366;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:10pt;}
+.TabForegroundColorid1siteid73{Background-Color:#336699;}
+.TabForegroundTextid1siteid73{Color:#FFFFFF;Text-Decoration:none;Font-Family:Arial, Helvetica;Font-Size:10pt;Font-Weight:Bold;}
+.portlet-font{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-font-dim{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-status{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-info{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-error{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-alert{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-msg-success{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-header{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:9pt;    Font-Weight:Bold;    }
+.portlet-section-body{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-alternate{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-selected{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-subheader{Color:#336699;    Font-Size:8pt;    Font-Family:Arial, Helvetica;    Font-Weight:Bold;    }
+.portlet-section-footer{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-section-text{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-header{Color:#336699;    Font-Family:Arial, Helvetica;    Font-Size:9pt;    Font-Weight:Bold;    Background-Color:#EEEEDD;    }
+.portlet-table-body{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-alternate{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-selected{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-subheader{Color:#336699;    Font-Size:8pt;    Font-Family:Arial, Helvetica;    Font-Weight:Bold;    }
+.portlet-table-footer{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-table-text{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-input-field{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-button{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-icon-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-dlg-icon-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-field-label{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.portlet-form-field{Color:#000000;    Font-Family:Arial, Helvetica;    Font-Size:8pt;    }
+.RegionNoBorder{}
+.RegionBorder { border:#b29200  1px solid; }
+.RegionHeaderColor { border:#b29200 0px solid;}
+.PageColor { background-color:#FFFFFF}
+ </style>
+</head>
+<body leftmargin="0" rightmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+<div id="texto_parrafo">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
+  <tbody><tr valign="top"><td align="center" valign="top">
+    <table width="500" cellpadding="0" cellspacing="0" border="0" height="100%">
+      <tbody><tr>
+        <td align="center" width="500" height="100%" valign="top">
+<iframe id="portalIFrame" title="" frameborder="0" width="0" height="0" src="/images/pobtrans.gif"></iframe><script type="text/javascript" src="http://www.congreso.es/portal/pls/portal/PORTAL.wwsbr_javascript.page_js?p_language=e&amp;p_version=10.1.4.2.0.197">
+&lt;!-- Comment out script for old browsers
+//--&gt;
+</script>
+<table width="100%" id="rg88017" border="0" cellpadding="0" cellspacing="0" summary=""><tbody><tr align="LEFT">
+<td valign="top" style="padding:4px 4px 0px 4px;width:100%;"><div id="p73_2138133_73_2138049_2138049"><table border="0" width="100%" cellpadding="0" cellspacing="0" class="RegionNoBorder"><tbody><tr><td class="RegionHeaderColor" width="100%" dir="LTR"><div id="pcnt73_2138133_73_2138049_2138049">
+
+
+
+
+
+
+
+  
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+        <title>Listas de valores</title>
+        <script language="JavaScript" type="text/javascript" src="/wc/htdocs/web/js/wc.js"></script> 
+		<link type="text/css" href="/wc/htdocs/web/css/apps.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/congreso.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/portada.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/prensa.css" rel="STYLESHEET" />   
+        <link type="text/css" href="/wc/htdocs/web/css/texto_integro.css" rel="STYLESHEET" />   
+
+
+<script>
+function opcionesVentana(){
+
+window.resizeTo(630,520);
+}
+
+window.onload = function(){
+    opcionesVentana();
+}
+
+</script>
+	<div id="CONGRESO_TEXTO_INTEGRO_POPUP">
+            <div id="CABECERA_TEXTO_POPUP">
+                    <div class="cabecerah1"><img src="/wc/htdocs/web/img/logo_mini.gif" alt="Congreso de los Diputados" border="0" /></div>
+                    <div class="btn_cerrar" title="Cerrar">
+                        <p><img src="/wc/htdocs/web/img/ico_cerrar.gif" width="9" height="9" alt="Cerrar" /> <a href="javascript:window.close();" title="Cerrar">Cerrar</a></p>                   
+                    </div>
+                    
+                    <div class="fincabecera"> </div>
+            </div>
+
+
+
+    <div id="CONGRESO_TEXTO_INTEGRO_POPUP"> <div id="CABECERA_TEXTO_POPUP"> DS. Congreso de los Diputados, Pleno y Dip. Perm., núm. 184, de 27/02/2014 </div><div id="CABECERA_TEXTO_POPUP">cve:
+    DSCD-10-PL-184 </div> <div class="fincabecera"> </div> </div> <!-- CONGRESO_TEXTO_INTEGRO --> <div id="TEXTOS_POPUP">	<br />
+    	<div class="titular_texto"><br />CORTES GENERALES
+
+    <br />DIARIO DE SESIONES DEL CONGRESO DE LOS DIPUTADOS
+
+    <br />PLENO Y DIPUTACIÓN PERMANENTE
+    </div>
+
+    <div class="subtitular_texto"><br />Año 2014 X LEGISLATURA Núm.  184
+    <br />PRESIDENCIA DEL EXCMO.  SR.  D. JESÚS POSADA MORENO
+    <br />Sesión plenaria núm.  172
+    <br />celebrada el jueves,
+    <br />27 de febrero de 2014</div>
+          	<div class="texto_completo"><br /><br />ORDEN DEL DÍA:
+
+    <br /><br />Tramitación directa y en lectura única de iniciativas legislativas:
+
+    <br /><br />- Proposición de ley orgánica de modificación de la Ley orgánica 6/1985,
+    de 1 de julio, del Poder Judicial, relativa a la justicia universal.
+    "BOCG. Congreso de los Diputados", serie B, número 157-1, de 24 de enero
+    de 2014. "BOCG. Congreso de los Diputados", serie B, número 157-2, de 14
+    de febrero de 2014. "BOCG. Congreso de los Diputados", serie B, número
+    157-3, de 19 de febrero de 2014. "BOCG. Congreso de los Diputados", serie
+    B, número 157-4, de 21 de febrero de 2014. (Número de expediente
+    122/000136) ... <a href="#(Página2)">(Página2)</a>
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página2)"><b>Página
+    2</b></a></p><br />
+
+    <br /><br />SUMARIO
+
+    <br /><br />Se abre la sesión a la una y treinta y cinco minutos de la tarde.
+
+    <br /><br />Tramitación directa y en lectura única de iniciativas legislativas ... <a href="#(Página2)">(Página2)</a>
+
+    <br /><br />Proposición de ley orgánica de modificación de la Ley Orgánica 6/1985, de
+    1 de julio, del Poder Judicial, relativa a la justicia universal ... <a href="#(Página2)">(Página2)</a>
+
+    <br /><br />La Presidencia comunica a la Cámara que al tener esta iniciativa carácter
+    de orgánica ha de ser sometida a una votación final que no será antes de
+    las dos y media de la tarde. Asimismo explica el procedimiento de
+    desarrollo del debate.
+
+    <br /><br />En defensa de las enmiendas a la totalidad de texto alternativo y al
+    articulado, y para posicionamiento sobre las enmiendas de los otros
+    grupos parlamentarios, intervienen los señores Tardà i Coma y Baldoví
+    Roda, la señora Fernández Davila y el señor Larreina Valderrama, del
+    Grupo Parlamentario Mixto; el señor Olabarría Muñoz, del Grupo
+    Parlamentario Vasco (EAJ-PNV); la señora Lozano Domingo, del Grupo
+    Parlamentario de Unión Progreso y Democracia; y los señores Llamazares
+    Trigo, del Grupo Parlamentario de IU, ICV-EUiA, CHA: La Izquierda Plural;
+    Jané i Guasch, del Grupo Parlamentario Catalán (Convergència i Unió);
+    Villarrubia Mediavilla, del Grupo Parlamentario Socialista, y Castillo
+    Calvín, del Grupo Parlamentario Popular en el Congreso.
+
+    <br /><br />Sometidas a votación las enmiendas a la totalidad de texto alternativo,
+    son rechazadas.
+
+    <br /><br />Se procede a la votación de las enmiendas al articulado.
+
+    <br /><br />Sometida a votación de conjunto la proposición de ley orgánica de la Ley
+    Orgánica 6/1985, de 1 de julio, del Poder Judicial, relativa a la
+    justicia universal, se aprueba por 178 votos a favor, más 2 votos
+    telemáticos, 180; y 136 en contra, más 1 voto telemático, 137.
+
+    <br /><br />Se levanta la sesión a las tres y treinta y cinco minutos de la tarde.
+
+    <br /><br />Se abre la sesión a la una y treinta y cinco minutos de la tarde.
+
+    <br /><br />TRAMITACIÓN DIRECTA Y EN LECTURA ÚNICA DE INICIATIVAS LEGISLATIVAS:
+
+    <br /><br />- PROPOSICIÓN DE LEY ORGÁNICA DE MODIFICACIÓN DE LA LEY ORGÁNICA 6/1985,
+    DE 1 DE JULIO, DEL PODER JUDICIAL, RELATIVA A LA JUSTICIA UNIVERSAL.
+    (Número de expediente 122/000136).
+
+    <br /><br />El señor PRESIDENTE: Se abre la sesión.
+
+    <br /><br />Debate y aprobación en tramitación directa y en lectura única de la
+    proposición de ley orgánica de modificación de la Ley Orgánica 6/1985, de
+    1 de julio, del Poder Judicial, relativa a la justicia universal. Esta
+    iniciativa tiene carácter de orgánica y debe ser sometida a una votación
+    final de la que, de conformidad con el artículo 131.2 del Reglamento,
+    debo anunciar la hora. Anuncio que no será antes de las dos y media,
+    aunque va a ser probablemente bastante después; antes de las dos y media
+    desde luego no va a ser. Lo digo para que los diputados que tengan que
+    hacer alguna gestión, sepan que pueden hacerla hasta esa hora.
+
+    <br /><br />Se han presentado tres enmiendas a la totalidad y treinta y una enmiendas
+    al articulado. El acuerdo de la Junta de Portavoces fue que para su
+    defensa intervinieran los grupos parlamentarios de menor a mayor y que en
+    cada intervención de quince minutos defendieran sus enmiendas y se
+    posicionaran sobre las enmiendas de los demás grupos de la forma que
+    creyeran oportuna. Vamos a comenzar con el Grupo Mixto y les anuncio que
+    tienen la palabra cuatro oradores. En primer lugar, tiene la palabra el
+    señor Tardà.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página3)"><b>Página
+    3</b></a></p><br />
+
+    <br /><br />El señor TARDÀ I COMA: Gracias, señor presidente.
+
+    <br /><br />Señorías, ¿se imaginan una ley que obligara a cerrar el caso Bárcenas? ¿Se
+    imaginan una ley que obligara a cerrar el caso Urdangarín? Eso es lo que
+    ustedes, señorías del Partido Popular, habrán aprobado con esta ley que
+    obliga al sobreseimiento de las causas abiertas contra genocidas en la
+    justicia española. ¿Acaso se creen jueces? ¿O quizás dioses? Su mayoría
+    absoluta, señorías del Partido Popular, no está por encima de la ley ni
+    por encima de la división de poderes. Queda claro, pues, que ha hablado
+    el dinero y que ha enmudecido la justicia, y queda claro también que
+    entre el ciudadano Couso y su asesino ustedes optarán por la impunidad,
+    porque con esta ley entierran la justicia universal e internacionalizan
+    el modelo español de impunidad; un modelo que ha negado la reparación
+    jurídica de las víctimas del franquismo y ha convertido el Estado español
+    en refugio de torturadores. Y todo rápido, muy rápido, mediante una
+    proposición de ley y no a través de un proyecto de ley, porque sabían que
+    los preceptivos dictámenes del Consejo General del Poder Judicial y del
+    Consejo de Estado hubiesen cuestionado la barbaridad de su iniciativa. No
+    les importa dinamitar el parlamentarismo porque han recibido órdenes de
+    China, como las recibió el Partido Socialista de la señora Merkel en el
+    año 2011 para modificar la Constitución también mediante el mismo
+    procedimiento, a fin y efecto de supeditar los derechos sociales al pago
+    de la deuda pública. Si entonces Partido Popular y Partido Socialista
+    fueron juntos y abrieron el camino del procedimiento de urgencia y
+    lectura única dejando tocada la democracia, ¿qué no iba a hacer hoy un
+    Partido Popular con mayoría absoluta, desmadrado y subido al monte de la
+    intolerancia?
+
+    <br /><br />Señorías, sentimos vergüenza, pena e indignación por su proceder;
+    vergüenza por vender a precio de saldo la impunidad frente a los crímenes
+    internacionales, pena por enterrar un valor de civilización conseguido
+    gracias al sacrificio de generaciones que lucharon en pro de los derechos
+    humanos e indignación al comprobar cómo destruyen un mensaje grabado en
+    el frontispicio de nuestra sociedad dirigido a genocidas y torturadores
+    que reza: Estéis donde estéis, tarde o temprano vais a ser conducidos
+    ante un tribunal. Si ustedes, y no nosotros, siempre han hecho bandera de
+    la sabiduría y de la imparcialidad del Tribunal Constitucional, ¿por qué
+    no respetan sus sentencias? Porque en el año 2005 el Tribunal
+    Constitucional sentenció que el alcance de la jurisdicción universal
+    española no debía limitarse a la vinculación de las víctimas a los
+    intereses españoles y, sin embargo, tanto la reforma del Partido
+    Socialista del año 2009 como la actual se apartan de la jurisprudencia
+    constitucional. Señorías, el principio de justicia universal representa
+    un avance decisivo en la defensa de los derechos humanos universalmente
+    reconocidos en una sociedad global y por ello no deberían ofendernos a
+    todos echando por la borda un sistema de justicia internacional que
+    defiende a la comunidad en su conjunto, más allá de los intereses de los
+    Estados y de los particulares. Y porque esto es así, hemos presentado una
+    enmienda de texto alternativo, porque pretendemos, primero, engrandecer
+    la calidad democrática del sistema judicial en la defensa de los derechos
+    humanos; segundo, superar el paso atrás que ya consumó el Partido
+    Socialista en el año 2009 al ignorar el compromiso de la comunidad
+    internacional en la persecución de los crímenes cuya naturaleza obliga a
+    una persecución universal y, tercero, posibilitar que jueces y tribunales
+    españoles puedan ejercer su jurisdicción independientemente de la
+    nacionalidad de las víctimas o del lugar en el que fueron cometidos los
+    presuntos delitos. Y nos preguntamos: ¿Dónde está, señorías del Partido
+    Popular, su modernidad? ¿Dónde está su compromiso con los derechos
+    humanos? ¿Por qué nos alejan de Bélgica, de Dinamarca, de Suecia, de
+    Italia o de Alemania? Estados, todos ellos, que incorporan la represión
+    de crímenes contra la comunidad internacional a su ámbito de
+    jurisdicción, sin restricciones motivadas por vínculos nacionales, razón
+    por la cual aprobar hoy nuestra propuesta, la de los republicanos
+    catalanes, significaría sumarse a las democracias avanzadas de nuestro
+    entorno.
+
+    <br /><br />Señorías, si las víctimas son universales, discriminarlas por su
+    nacionalidad limita sus posibilidades de exigir justicia e impide poner
+    coto a la impunidad. Con su hachazo solo se podrán investigar delitos de
+    genocidio, crímenes de guerra y crímenes contra la humanidad cuando el
+    procedimiento se dirija contra un ciudadano español o un ciudadano
+    extranjero que resida habitualmente en España; con su hachazo suprimen la
+    acusación popular, dejando la acción penal exclusivamente en manos de la
+    fiscalía; con su hachazo, en definitiva, ustedes establecen víctimas de
+    primera y víctimas de segunda. Por favor, no nos hablen más de Estado de
+    derecho, al menos tengan algo de decencia y no vuelvan a mencionarlo. No
+    somos los catalanes los que quebrantamos el Estado de derecho reclamando
+    ejercer el derecho a decidir, sino ustedes, que han hecho callar a la
+    justicia para que prevaleciera el dinero. Y que sepa el mundo, repito,
+    que sepa el mundo que la república catalana que haremos nacer consagrará
+    en su misma constitución la preeminencia de la justicia universal. Que
+    nadie lo dude.
+
+    <br /><br />Muchas gracias.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página4)"><b>Página
+    4</b></a></p><br />
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Tardà.
+
+    <br /><br />Señor Baldoví.
+
+    <br /><br />El señor BALDOVÍ RODA: Muchas gracias, señor presidente.
+
+    <br /><br />Hoy, muchas personas inocentes se revolverán en sus tumbas; personas
+    anónimas en tumbas ignoradas, en el Sáhara, en el Tíbet, en Guantánamo,
+    en Ruanda. Hoy, personas con nombre se revolverán en sus tumbas: José
+    Couso, Ignacio Ellacuría. Hoy, muchos criminales suspirarán aliviados en
+    sus guaridas. Hoy, muchas personas decentes sentiremos vergüenza;
+    vergüenza de ver cómo esta infamia se aprueba con los únicos votos del
+    Grupo Popular; vergüenza de constatar que van a contribuir a fortificar
+    los paraísos de la impunidad; vergüenza de constatar que con esta reforma
+    obscena se aplasta la jurisdicción universal, se mutila la posibilidad de
+    perseguir crímenes contra los derechos humanos. Señor ministro, señores
+    del Grupo Popular, no lo digo yo, no lo decimos solo todos los diputados
+    de los grupos de la oposición excepto el suyo, se lo dice hoy la Junta de
+    Fiscales de la Audiencia Nacional, que advierte también de la posible
+    inconstitucionalidad de esta reforma.
+
+    <br /><br />Acabo. En la era de la globalización, donde el dinero es global, donde las
+    mercancías son globales, el Partido Popular quiere que la justicia sea
+    local, ciega, sorda, muda, manca y coja con los crímenes cometidos en
+    esos paraísos penales. Por tanto, Compromís-Equo anunciamos nuestro voto
+    contra el despropósito que ha supuesto la tramitación y el procedimiento
+    seguido en esta reforma y contra la infamia que supone lo que en ella se
+    dice.
+
+    <br /><br />Muchas gracias, señor presidente.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Baldoví.
+
+    <br /><br />Señora Fernández.
+
+    <br /><br />La señora FERNÁNDEZ DAVILA: Gracias, señor presidente.
+
+    <br /><br />En primer lugar, quiero decir, en nombre del Bloque Nacionalista Galego,
+    que vamos a votar en contra de esta proposición de ley y, por lo tanto, a
+    favor de todas las enmiendas a la totalidad de texto alternativo. Y,
+    señorías, un par de apuntes por nuestra parte en este breve tiempo que
+    tenemos, para dar algunas razones de por qué votamos en contra de esta
+    proposición de ley. Por un lado, porque las restricciones que se hacen en
+    esta proposición contravienen al menos más de seis tratados
+    internacionales que consagran el principio de enjuiciar o extraditar. Por
+    otro lado, señorías, el hecho de paralizar todos los procesos actualmente
+    incursos, como han dicho expertos juristas, contraviene la obligación de
+    España de llevar a cabo investigaciones efectivas, incluso esta
+    disposición podría interferir con la independencia del sistema judicial.
+    Casos como el de José Couso quedarían en este momento sobreseídos, y digo
+    en este momento porque se va a aprobar la proposición de ley que estamos
+    debatiendo. Con esta ley España rompe con muchos de los tratados
+    firmados, violando, por lo tanto, sus obligaciones internacionales. Esta
+    propuesta es un despropósito tan grande que hasta el grupo proponente
+    tiene que enmendarla para poder seguir investigando y persiguiendo al
+    narcotráfico en altamar, es decir, es un despropósito tan enorme el que
+    hace el Grupo Popular en nombre del Gobierno que, desde luego, no es que
+    nos obligue a no votar, es que nos obliga a echarnos las manos a la
+    cabeza ante unas decisiones tan graves como las que hoy se van a aprobar
+    aquí.
+
+    <br /><br />Señorías, no es de extrañar que algo así se haga por la puerta trasera,
+    como en este momento ha decidido el Gobierno trasladar a este hemiciclo
+    la proposición de ley que estamos debatiendo, porque se evitan de esa
+    manera, como ya se ha dicho en otras ocasiones, los necesarios e
+    imprescindibles informes tanto del Consejo de Estado como del Consejo
+    General del Poder Judicial. Por lo tanto, el Gobierno no ha estado ni
+    siquiera dispuesto a presentar ante esta Cámara un proyecto de ley que
+    contara justamente con unos informes jurídicos que desde nuestro punto de
+    vista son imprescindibles, sobre todo cuando se trata de una legislación
+    que, como esta, tiene por delante algo importante, como es la
+    responsabilidad en relación con la defensa de los derechos humanos. Señor
+    Gallardón, esta vez no ha querido ser usted el centro de la polémica de
+    sus polémicas -valga la redundancia- propuestas de ley, pero
+    evidentemente es el Grupo Popular por mandato del Gobierno, por mandato
+    de usted.
+
+    <br /><br />Muchas gracias, señor presidente.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señora Fernández.
+
+    <br /><br />Señor Larreina.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página5)"><b>Página
+    5</b></a></p><br />
+
+    <br /><br />El señor LARREINA VALDERRAMA: Muchas gracias, señor presidente.
+
+    <br /><br />Señorías, nosotros siempre hemos señalado que su Constitución española era
+    una Constitución muy avanzada en lo que se refiere a los derechos
+    individuales, a la promoción y al respeto y protección de los derechos
+    individuales, y que el fallo que tenía era que no contemplaba el
+    reconocimiento, la protección, el apoyo a los derechos colectivos y, en
+    concreto, al derecho que tiene, en su caso, mi país, Euskal Herria, a
+    decidir su propio futuro y su derecho a la autodeterminación. Pero
+    precisamente en ese ámbito tan positivo que tenía la Constitución
+    española, que era una Constitución puntera en el ámbito internacional
+    seguramente por ser de las últimas que se han aprobado, a lo largo de los
+    años han ido ustedes devaluando ese compromiso con los derechos
+    individuales, con las libertades. Lo han ido devaluando cuando a lo largo
+    de estos años han ido, por ejemplo, promoviendo el cierre de periódicos;
+    dando impunidad, cuando no ocultamiento, a la tortura; y exaltando a los
+    torturadores. Recientemente se cumplía el aniversario del asesinato de
+    José Arregui y quien estuvo condenado por esa tortura y ese asesinato,
+    cuando murió, fue reconocido con todo tipo de honores policiales. Ustedes
+    han ido avanzando en ese ámbito, también han ido reduciendo ese
+    compromiso con los derechos individuales con la ilegalización de partidos
+    políticos, con la ley que ahora promueven de seguridad ciudadana, que
+    también es una ley de recorte de libertades individuales. A lo largo de
+    estos casi 40 años ustedes han ido devaluando, degradando ese compromiso
+    constitucional con los derechos individuales. Y ahora precisamente lo que
+    hacen ustedes es ir hacia la anulación práctica de la justicia universal;
+    un ámbito en el que ustedes van a pasar de estar en cabeza a nivel
+    internacional a estar en la cola; de ser modelo por la persecución de
+    gravísimas violaciones de derechos humanos mediante la aplicación de un
+    principio de justicia universal puro a estar a la cola, a dejar de ser
+    modelo, a ser algo de lo que avergonzarse. De la devaluación ya
+    importante que se produjo con la reforma de la Ley del Poder Judicial en
+    el año 2009 se ha pasado ahora a su práctica anulación con esta
+    modificación, en la que lo que están haciendo es primar los intereses
+    económicos y comerciales por encima de la dignidad de las personas. Al
+    final, priman los intereses y las presiones de Estados Unidos, de China,
+    de Israel, de Marruecos por encima de los derechos individuales de las
+    personas. Al final, lo que ustedes están haciendo es promover espacios de
+    impunidad para las vulneraciones graves de derechos humanos.
+
+    <br /><br />Esta reforma -voy acabando, señor presidente- es contraria al derecho a la
+    tutela judicial efectiva. Es una reforma que es claramente
+    inconstitucional; es una reforma que atenta contra el derecho
+    internacional, que va en contra del Convenio de Ginebra, que al final
+    está dando cobertura a genocidios como los del Tíbet, Guatemala, Sáhara,
+    Ruanda, etcétera. Señoras y señores del Partido Popular, lo que ustedes
+    están haciendo con su texto constitucional es devaluarlo y anularlo en
+    uno de los elementos en los que era ejemplar para el ámbito
+    internacional, que era el compromiso con la defensa activa de los
+    derechos humanos y de las libertades individuales. Yo tengo que decirles
+    simplemente una cosa y es que en materia de derechos humanos no caben
+    excepciones; no se pueden anteponer los intereses económicos y
+    geoestratégicos a los derechos y la dignidad de las personas. Por eso
+    vamos a votar en contra de esta ley.
+
+    <br /><br />Muchas gracias.
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Larreina.
+
+    <br /><br />Por el Grupo Parlamentario Vasco, PNV, tiene la palabra el señor
+    Olabarría.
+
+    <br /><br />El señor OLABARRÍA MUÑOZ: Señor presidente, señorías, señor ministro de
+    Justicia, nosotros hemos presentado varias enmiendas que son de muy fácil
+    justificación. La primera pide la supresión de la exposición de motivos,
+    la siguiente solicita la supresión del texto articulado y la última pide
+    la supresión de la disposición transitoria única. Queda claro que nuestra
+    opinión es renuente, que tenemos severas reservas intelectuales,
+    jurídicas y democráticas respecto a esta iniciativa.
+
+    <br /><br />Señor ministro, yo no sé cómo usted ha presentado una iniciativa de estas
+    características porque, en primer lugar, tenemos que intentar evitar una
+    verdadera felonía parlamentaria, que es la que se va a perpetrar en este
+    momento, entre otras cosas por el procedimiento utilizado para la
+    aprobación de la proposición de ley; iniciativa parlamentaria que adolece
+    de inconstitucionalidad en un doble ámbito. La doctrina científica, la
+    doctrina constitucional, lo ha comentado de forma muy enfática. Si
+    estuviéramos ante la teoría del acto político, si estuviéramos ante un
+    acto político, sería un acto nulo de pleno derecho por haber incumplido
+    manifiesta y absolutamente el procedimiento para su aprobación.
+    Estaríamos ante un acto nulo, con efectos ex tunc. Si estamos ante un
+    acto parlamentario -porque ya no sé ni cómo definir lo que estamos
+    perpetrando hoy-, estaríamos ante un acto parlamentario producido o
+    realizado en fraude
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página6)"><b>Página
+    6</b></a></p><br />
+
+    <br /><br />de ley por no cumplir los requerimientos del Reglamento de la Cámara y de
+    la Constitución. En cuanto a la Constitución, en su capítulo segundo,
+    relativo a la elaboración de las leyes -que se vulnera absolutamente-, y
+    en cuanto al Reglamento, en su artículo 150, respecto de las causas que
+    legitiman para utilizar este peculiar procedimiento de lectura única, que
+    son dos, fundamentalmente; en primer lugar, que la causa sea de tal
+    simplicidad que aconseje que se pueda producir o acometer a través del
+    procedimiento de lectura única. Nadie podrá defender, señor ministro, que
+    estamos ante un problema simple respecto del acto que estamos aquí
+    regulando; estamos hablando de la justicia universal, estamos hablando de
+    la protección en el ámbito universal de los derechos humanos y también de
+    la competencia en el ámbito de la jurisdicción de nuestros tribunales y
+    de los tribunales extranjeros en aquellos crímenes que tienen la
+    dimensión de crímenes de lesa humanidad, de crímenes contra la humanidad.
+    Por tanto, el elemento de la simplicidad para justificar el procedimiento
+    de lectura única lo vamos a descartar. Queda el otro -que a mí me produce
+    terrible confusión y no me gustaría aludirle para provocar, señor
+    ministro, un turno de alusiones; no crea que es una trampa dialéctica-,
+    que la materia aconseje la utilización de este procedimiento. Cuando
+    estamos hablando de una expresión como que la materia aconseje,
+    etimológicamente, uno se pregunta qué aconseja, o mejor dicho, quién
+    aconseja la utilización de este procedimiento, que es el otro elemento de
+    legitimación de utilización del procedimiento de lectura única. ¿Los
+    derechos humanos? No, quedan terriblemente quebrantados desde la
+    perspectiva de su protección jurisdiccional. ¿La justicia? No, también
+    terriblemente quebrantada desde la perspectiva de su protección
+    universal. ¿La democracia? No, esto es un quebranto de los principios
+    democráticos que constituyen uno de los pilares del crecimiento de las
+    libertades democráticas y de la consolidación y la fórmula de tutelar y
+    proteger los derechos humanos en el siglo XX y en lo que llevamos del
+    siglo XXI. Por tanto, ¿quién aconseja? Quizá tenga nombre quien aconseja
+    la utilización de este procedimiento en nombre de algún país o en nombre
+    de alguna potencia de las que no han suscrito el Estatuto de la Corte
+    Penal Internacional en el año 1998. Hay tres muy poderosas, una de las
+    cuales ya está judicializada en nuestros tribunales, en la Audiencia
+    Nacional en concreto, que es la República China en relación con el
+    genocidio del Tíbet, causa que va a ser inmediatamente archivada en
+    cuanto se apruebe y se convierta en ley esta proposición de ley que hoy
+    iniciamos.
+
+    <br /><br />Desde esa perspectiva, quiero evitar la perpetración de un acto
+    manifiestamente inconstitucional y un precedente parlamentario
+    peligrosísimo, una verdadera fechoría -estoy reproduciendo las palabras
+    textuales de ilustres catedráticos de Derecho Constitucional del Estado
+    español- que tendría que ser puesta en conocimiento del Tribunal
+    Constitucional para ver si este procedimiento y el contenido de la
+    proposición de ley de la reforma parcial de la Ley Orgánica del Poder
+    Judicial pueden sortear el filtro de constitucionalidad que provee el
+    Tribunal Constitucional. Ojalá que se pudiera, y yo invito a que se
+    intente. Yo invito a los grupos parlamentarios a que se utilice este
+    procedimiento para regenerar la legalidad brutalmente quebrantada desde
+    la perspectiva procedimental y desde la perspectiva material. Invito a
+    los diputados, mediante los elementos de legitimación procesal, a acudir
+    al Tribunal Constitucional, lo que pasa es que lo hago sin demasiado
+    entusiasmo, señor ministro, para qué le voy a engañar. Aquí se produce
+    una coincidencia curiosa entre las propuestas y resoluciones del Tribunal
+    Constitucional y las mayorías parlamentarias o las correlaciones de
+    fuerzas que suelen existir en este Congreso de los Diputados, en las
+    Cortes Generales del Estado, en definitiva. Pero a veces hay sorpresas, a
+    veces la vida nos da sorpresas y podríamos conseguir regenerar lo que se
+    está en este momento prostituyendo absolutamente, que es la propia noción
+    de justicia internacional, que consiste en la atribución a los tribunales
+    nacionales de la capacidad de perseguir y enjuiciar una serie de graves
+    crímenes -independientemente del lugar de su comisión, de la nacionalidad
+    de los autores o víctimas- que atenten contra la comunidad internacional
+    en su conjunto; crímenes como el genocidio, crímenes contra la humanidad,
+    crímenes de guerra, crímenes de tortura, desaparición forzada, en
+    relación con los cuales el consenso de la comunidad internacional es muy
+    claro. Si estos crímenes golpean indubitadamente la conciencia de la
+    humanidad han de ser castigados, pero han de serlo no de cualquier
+    manera; en cualquier país; por cualquier órgano judicial de cualquier
+    país, cualquiera que sea la nacionalidad del comitente de estos crímenes,
+    cualquiera que sea la legitimación del agraviado, de la víctima de estos
+    crímenes, cualquiera, en definitiva, que sea el lugar de comisión de
+    estos crímenes; en cualquier lugar del mundo que denominamos
+    eufemísticamente democrático. Este Estado empieza a serlo un poco menos
+    con esta proposición de ley, señor ministro.
+
+    <br /><br />¿Cuáles son estos crímenes que deben ser enjuiciados? Ustedes extienden
+    precisamente el único que no debían extender. Son los previstos en los
+    seis grandes tratados internacionales que regulan los
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página7)"><b>Página
+    7</b></a></p><br />
+
+    <br /><br />crímenes contra la humanidad, al que hay que añadir el estatuto que crea
+    el Convenio de la Corte Penal Internacional del año 1968, el Estatuto de
+    Roma. Estamos hablando de la Convención de Ginebra del año 1949; de la
+    Convención contra la tortura y otros tratos o penas crueles, inhumanas o
+    degradantes; de la Convención internacional para la protección de todas
+    las personas contra las desapariciones forzada; el Convenio para la
+    represión de los actos ilícitos contra la navegación marítima; el
+    Convenio para la represión de actos ilícitos contra la seguridad de la
+    aviación civil y la Convención sobre protección física de materiales
+    nucleares e instalaciones nucleares. Estos son los seis tratados que
+    determinan cuáles son los crímenes que han de ser perseguidos. Pero aquí
+    se van a encontrar con un problema respecto a la restricción del ámbito
+    de enjuiciamiento o de posibilidad de enjuiciamiento de los tribunales
+    españoles. En ninguno de los tratados que les he citado están los
+    crímenes de terrorismo. La identificación como crímenes contra la
+    humanidad de los delitos de terrorismo es algo propio de la legislación
+    española, de la última reforma del Código Penal y de la anteúltima, de
+    las reformas de 2002 y de 2010. Ningún tratado internacional prevé que
+    los crímenes de terrorismo, que son los que ustedes amplifican más que
+    cualesquiera otros las posibilidades de entendimiento de los tribunales
+    españoles, están configurados más que por el Código Penal español como
+    crímenes de lesa humanidad o crímenes contra la humanidad. Mire cuál es
+    la paradoja. Ustedes vinculan la capacidad de entendimiento de los
+    tribunales españoles a la existencia de tratados internacionales que
+    identifiquen los crímenes como crímenes contra la humanidad. ¿Qué va a
+    pasar ahora con los delitos de terrorismo, señor ministro, cuando ninguno
+    de los tratados que le he citado establece que los crímenes de terrorismo
+    son crímenes contra la humanidad? Son crímenes gravísimos, son los más
+    graves del ordenamiento jurídico, pero son crímenes de naturaleza
+    ordinaria, no son de lesa humanidad, a pesar de las reformas del Código
+    Penal, en donde se produce una cuestión discutible, por lo menos
+    jurídicamente; la posibilidad de que el ordenamiento jurídico de un
+    Estado pueda elevar a rango de crímenes de lesa humanidad determinados e
+    injustos penales o figuras delictivas. Lo que vamos a conseguir es la
+    subordinación en los tribunales del Estado español a los tribunales
+    extranjeros cuando estén entendiendo, incluida la Corte Penal
+    Internacional, la subordinación, o problemas de legitimación activa y de
+    legitimación pasiva y de postulación para acudir a la justicia universal
+    para la protección de las vulneraciones de derechos humanos, vinculando
+    la nacionalidad. Tiene que ser de nacionalidad española quien ostente
+    legitimación para acudir a los tribunales, o tiene que residir
+    habitualmente en España, o si es un extranjero tiene que ser un
+    extranjero al que se le ha denegado la extradición. Limitaciones en
+    materia de subordinación, como decíamos, y no concurrencia de los
+    tribunales españoles a otros tribunales extranjeros que puedan entender o
+    que estén entendiendo. Vulneración o vinculación de los tipos penales que
+    pueden ser perseguidos en el ámbito de la justicia universal a tratados
+    internacionales suscritos por España, que son solo los que he citado. En
+    definitiva, una serie de limitaciones que hacen referencia a la
+    nacionalidad, a la legitimación activa, en tanto en cuanto la
+    legitimación activa se vincula a la posesión de la nacionalidad española
+    exclusivamente, o si es extranjera, a la negativa de extradición,
+    supuesto improbable -no conozco ninguno- y a la legitimación pasiva, que
+    las víctimas en el extranjero sean víctimas de nacionalidad española.
+    Esto es como nada, esto no es jurisdicción universal. Esto es
+    antijurisdicción universal. Esto es la negación absoluta de la justicia
+    universal. Y con esto nos vamos a quedar.
+
+    <br /><br />No sé si todavía existe tiempo para una reflexión ex post y podemos evitar
+    que a través de esta iniciativa, si se aprueba, queden impunes y se tenga
+    que archivar por la Audiencia Nacional el genocidio producido en el Tíbet
+    por las autoridades chinas. Se habla mucho de China. Yo también tengo
+    sospechas de esa naturaleza. O el genocidio contra el pueblo maya. O los
+    crímenes de la dictadura argentina, que todavía no han prescrito y no
+    prescribirán porque esto sí son crímenes contra la humanidad. O los
+    crímenes cometidos en Guantánamo por la potencia que gobierna el mundo,
+    la que mantiene la batuta del orden y del concierto mundial, por lo que
+    se ve también en el ámbito de las libertades y derechos democráticos. O
+    el genocidio de Ruanda. O el asesinato de los jesuitas de El Salvador. Yo
+    conocí personalmente al profesor Ellacuría, tuve la suerte y la honra de
+    conocerle, y en este momento quedaría impune el enjuiciamiento de los
+    autores de tan salvaje crimen. O el del cámara Couso y el de tantos otros
+    que les podría citar. ¿Por qué hacen esto? ¿Por qué utilizan una
+    proposición de ley? ¿Se trata de evitar los informes preceptivos del
+    Consejo General del Poder Judicial y del Consejo de Estado? Sé que usted
+    tiene la convicción de que no pasaría el filtro de ninguno de estos
+    informes preceptivos. Están trampeando, están utilizando fraudulentamente
+    mecanismos parlamentarios, como el previsto en el artículo 150 del
+    Reglamento de la Cámara, mediante la pretensión de la simpleza de la
+    iniciativa o de la conveniencia. Sí, es eso, señor ministro, es la
+    conveniencia. Ayer, en el debate sobre el estado de la Nación, en su
+    primera intervención,
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página8)"><b>Página
+    8</b></a></p><br />
+
+    <br /><br />el señor Rajoy hizo una invocación a la necesidad de transparencia y lo
+    consideró una asignatura pendiente. ¿Sabe cómo podríamos empezar a ser
+    transparentes en estas materias, señor ministro? Diciendo la verdad. Solo
+    les pediría que reconozcan públicamente qué intereses espurios -por no
+    usar otra expresión seguramente más pertinente- están intentando ocultar
+    mediante la presentación de una iniciativa tan vergonzante como la que
+    estamos analizando.
+
+    <br /><br />Gracias, señor presidente. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Olabarría.
+
+    <br /><br />Por el Grupo de Unión Progreso y Democracia, tiene la palabra la señora
+    Lozano.
+
+    <br /><br />La señora LOZANO DOMINGO: Muchas gracias, señor presidente.
+
+    <br /><br />Señorías, señoras y señores diputados del Grupo Popular, en la tramitación
+    fraudulenta de esta proposición de ley, con este trámite de urgencia y
+    lectura única que ustedes han impuesto, lo más significativo, a nuestro
+    juicio, es que no han sido capaces de dar un solo argumento para defender
+    esta reforma legal que proponen de manera fraudulenta y por la vía
+    rápida. No han dado ni un solo argumento, frente a los que hemos dado
+    desde distintos grupos de la oposición -con los distintos enfoques y
+    discrepancias que podamos tener, tanto en esta materia como en otras-, el
+    acuerdo unánime de que esta reforma legal desampara a muchos ciudadanos
+    españoles y desampara a la sociedad internacional, que encontraba en la
+    jurisdicción universal en España el lugar desde donde al menos conservar
+    la esperanza de hacer justicia en numerosas injusticias que perviven
+    desde hace décadas en el mundo. También les hemos argumentado desde la
+    oposición cómo esta reforma legal favorece la impunidad, no de pequeños
+    crímenes o de pequeños criminales, favorece la impunidad de los
+    genocidas, de los tiranos, de los mafiosos y de los corruptos.
+    Casualmente sus amigos los jerarcas chinos reúnen ellos mismos estas
+    cuatro cualidades al mismo tiempo -genocidas, tiranos, mafiosos y
+    corruptos-, tal y como ha quedado demostrado en las últimas publicaciones
+    de WikiLeaks. Estarán mucho más tranquilos por que no se puedan
+    investigar sus cuentas en paraísos fiscales utilizando hombres de paja,
+    cosa que se podría hacer mediante esta jurisdicción universal. Si toda la
+    oposición estamos de acuerdo, y con distintos tipos de argumentos lo
+    hemos defendido, es muy raro, es muy difícil que todos estemos
+    equivocados, frente a un Grupo Popular que no ha sido capaz de poner un
+    solo argumento sobre la mesa.
+
+    <br /><br />Ustedes entierran hoy la jurisdicción universal y con ello las esperanzas
+    de las víctimas. También las víctimas han dado sus razones y sus
+    argumentos. Ustedes han recibido a algunas de ellas, porque ha habido
+    peticiones de reuniones -no solo han sido a nuestro grupo, sino que nos
+    consta que al suyo también se han dirigido- para venir a clamar por la no
+    aprobación de esta reforma, para poder seguir manteniendo esa esperanza
+    de que se haga justicia respecto a los gravísimos crímenes que
+    padecieron. Tampoco han atendido las razones de las víctimas, que también
+    tenían las suyas. Se entierran sus esperanzas, se entierra la
+    jurisdicción universal. Tampoco han atendido ustedes los argumentos de
+    los profesionales del derecho, los argumentos de los fiscales de la
+    Audiencia Nacional y de las asociaciones profesionales, los argumentos de
+    los jueces a través de sus asociaciones profesionales, y los argumentos
+    en suma de la sociedad civil relacionada con el mundo jurídico, que es
+    muy sensible al gran papel que España estaba desempeñando en el mundo
+    gracias a la jurisdicción universal. No han aportado ni un solo argumento
+    no ya que sea un buen argumento sino que sea veraz; lo único que han
+    dicho desde esta tribuna los distintos portavoces del Grupo Popular que
+    han defendido esta reforma ha sido que ampliaba la jurisdicción
+    universal, cuando todo el mundo coincide en que la liquida; es decir, nos
+    han intentado engañar una vez más. Cuando dicen que amplían derechos o
+    amplían garantías, una vez más los recortan y los reducen; o sea,
+    artimañas, no argumentos; artimañas falaces.
+
+    <br /><br />Uno de los portavoces dijo que, a tenor de las consecuencias de la
+    jurisdicción universal y de que realmente solamente había habido un caso
+    que se hubiera juzgado, no era tan eficaz -se refería al caso de
+    Scilingo- y tampoco valía mucho la pena mantenerla, cosa que es falsa,
+    como han vuelto a recordar a nuestro grupo las víctimas del genocidio de
+    Guatemala. Gracias a que se empezó a investigar ese genocidio en España,
+    se consiguió que se abriera el juicio y se investigara en su propio país,
+    que es como deben ser las cosas; pero hay muchos regímenes que no están
+    dispuestos a investigar sus propios crímenes si no reciben presiones
+    internacionales. (La señora vicepresidenta, Villalobos Talero, ocupa la
+    Presidencia).
+
+    <br /><br />Su enmienda, la enmienda que se presentan ustedes a sí mismos, más que
+    mejorar en algo, con todos los argumentos que nosotros les hemos dado, lo
+    que hace es demostrar una vez más la carga de incompetencia y de
+    arbitrariedad que había en el primer planteamiento que hacían de reforma
+    legal.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página9)"><b>Página
+    9</b></a></p><br />
+
+    <br /><br />Introducen nuevas cuestiones que habían dejado fuera, como la cuestión de
+    la captura de alijos de droga en alta mar, introducen cuestiones
+    relativas a la violencia contra la mujer, a la mutilación genital, pero
+    no se explica por qué esas sí y otras no; es tan arbitrario como lo es
+    toda la propuesta desde el principio. Tampoco han dado ni una sola razón
+    que justifique la urgencia del procedimiento, la lectura única y, por lo
+    tanto, el atropello del funcionamiento parlamentario normal, la
+    excepcionalidad, que es el régimen en el que cada vez más les gusta vivir
+    y el que cada vez más les gusta imponer en este Congreso, la excepción.
+    No han dado ni una sola razón para explicarnos por qué, mediante el
+    proyecto en sí mismo y la manera de tramitarlo, han conseguido liquidar
+    todos los principios de la democracia. Vulneran la separación de poderes
+    porque en esa disposición final se arroga la facultad un Poder
+    Legislativo de sobreseer causas que están abiertas en la Audiencia
+    Nacional, algo que es absolutamente aberrante. Sobreseer es un verbo cuyo
+    sujeto solamente puede ser un juez o un tribunal, no puede ser un Poder
+    Legislativo. Vulneran también los controles y equilibrios existentes
+    entre poderes, vulneran el Poder Judicial por un lado y el Legislativo
+    por otro, porque el Gobierno ni siquiera ha tenido el valor de preguntar
+    al Consejo General del Poder Judicial o al Consejo de Estado qué les
+    parece esta reforma y han utilizado al Grupo Popular para presentarla.
+    Por supuesto, el Grupo Popular se ha ofrecido gustosamente a ser alfombra
+    del Gobierno.
+
+    <br /><br />No han aportado, repito, ni un solo argumento frente a los de la
+    oposición, la sociedad civil, los profesionales y las víctimas. ¿Saben
+    por qué? Porque no lo hay, porque no hay ni un solo argumento, no hay ni
+    una sola razón que justifique que se entierre la jurisdicción universal
+    en España, solo hay presiones de una potencia como es China, a las que se
+    cede por pura debilidad gubernamental. Hay un chantaje de una tiranía,
+    que ha pedido que no se toque a sus hombres, que no se toque a los cinco
+    jerarcas chinos que tienen una orden de detención internacional en la
+    Audiencia Nacional. Yo recuerdo muy bien el día en que Pinochet, cuando
+    estaba empezando a permitir cierta apertura democrática en Chile, dijo
+    aquella frase que se ha convertido en un axioma de la impunidad: en el
+    momento en que toquen a uno de mis hombres, se acaba el Estado de
+    derecho. Esa frase ha pasado a la historia como síntesis de lo que
+    significa la impunidad de los genocidas, los tiranos y los dictadores. Y
+    hoy, en este día que es triste para la justicia y es triste para la
+    política, lo que ustedes vienen a decir es: si tocan a uno de nuestros
+    siniestros amigos chinos, también se cercena el Estado de derecho en
+    España; así hacen suyo el axioma de la impunidad absoluta, de la
+    impunidad internacional. Pero ustedes no pueden hacer lo que quieran, no
+    pueden hacer lo que quieran en una democracia. Hoy mismo la Audiencia
+    Nacional da un varapalo muy severo al Ministerio del Interior por la
+    forma en que tramitó el proceso de asilo del opositor kazajo Alexander
+    Pavlov. Por suerte, nos quedan los jueces; por suerte, en algún momento
+    algún juez parará esto, como paran la extradición de Pavlov y como paran
+    las cosas que pueden parar; por suerte, aún quedan poderes democráticos
+    para frenar la corriente de excepcionalidad que ustedes imponen
+    permanentemente.
+
+    <br /><br />Con esta reforma hoy están mucho más satisfechos los grandes corruptos,
+    los jerifaltes chinos, cuyas cuentas en paraísos fiscales será más
+    difícil investigar -comprendo cierta solidaridad de grupo-, los
+    corruptos, los mafiosos, los genocidas y los tiranos, pero están mucho
+    más desamparadas las víctimas de graves vulneraciones de los derechos
+    humanos. Los demócratas españoles estamos avergonzados, porque los
+    demócratas españoles tenemos una responsabilidad con el mundo. Ser
+    demócrata es una gran exigencia dentro de nuestro propio país y con el
+    resto del mundo, con todas las personas que padecen la falta de
+    democracia y padecen la vulneración de derechos humanos. Los españoles,
+    en general, somos compasivos con las víctimas, y más con las víctimas de
+    derechos humanos, y sobre todo creemos que una de las funciones
+    principales de un Gobierno es preservar algo intangible, pero tan
+    importante, que es la dignidad de un país. Ustedes hoy, con la
+    jurisdicción universal, entierran también la dignidad de España.
+
+    <br /><br />Muchas gracias, presidenta. (Aplausos).
+
+    <br /><br />La señora VICEPRESIDENTA (Villalobos Talero): Gracias, señora Lozano.
+
+    <br /><br />Por el Grupo Parlamentario de La Izquierda Plural, señor Llamazares.
+
+    <br /><br />El señor LLAMAZARES TRIGO: Gracias, señora presidenta.
+
+    <br /><br />Terminamos hoy con este debate de doña Cuaresma el carnaval que inició el
+    presidente del Gobierno, trasladando a los ciudadanos que nos
+    encontrábamos ya en la puerta de salida de la crisis; uno de los
+    carnavales más breves que se han vivido en política y, por supuesto,
+    inapelable en relación con la jurisdicción penal internacional.
+    Terminamos de la peor manera con doña Cuaresma, que nos dice que en
+    condiciones de guerra civil -se decía en el siglo XIX- se suspenden todos
+    los derechos; en condiciones de guerra se suspenden los derechos y
+    aparece el estado de excepción. Hoy asistimos, no a la reforma
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página10)"><b>Página
+    10</b></a></p><br />
+
+    <br /><br />de la jurisdicción penal internacional, no es cierto, asistimos a la
+    derogación de la jurisdicción penal internacional; asistimos a una
+    derogación por una vía espuria, por una vía sumarísima, y en nuestra
+    tradición legal lo sumario es lo contrario a las garantías, lo contrario
+    a la justicia y lo contrario a la democracia. Por otra parte, también lo
+    hacemos con una casi tradición de la derecha en nuestro país, que es el
+    carácter retroactivo de las leyes, con una aplicación retroactiva sobre
+    los sumarios abiertos, proponiendo el archivo de todos y cada uno de
+    ellos hasta tanto se sepa si esta ley afecta a esos sumarios o no.
+
+    <br /><br />Señorías, el papel del Gobierno no puede ser más humillante. Un Gobierno
+    que se pliega a las presiones internacionales, que paga con esta ley la
+    foto con el señor Obama, que paga con esta ley la presión de los
+    empresarios chinos, que se han negado a reunirse con los empresarios
+    españoles en tanto en cuanto no esté aprobada esta ley. Hay una reunión
+    pendiente por esa presión, por ese chantaje, que el Gobierno acepta. El
+    Gobierno, pues, pone a los pies de los que nos presionan nuestra
+    soberanía, nuestra justicia y nuestra democracia. Eso es lo real en
+    relación con esta derogación de la jurisdicción penal internacional.
+    Decía derogación de la jurisdicción penal internacional y, por si no lo
+    tuviéramos claro, la enmienda del Grupo del Partido Popular es clarísima
+    en esa materia. El Grupo Popular presenta una enmienda para solamente
+    reconocer la coordinación penal internacional en la lucha contra los
+    delitos comunes y no contra los delitos contra los derechos humanos. Está
+    clarísimo. El resto, todos y cada uno de los graves delitos contra los
+    derechos humanos (el crimen de lesa humanidad, las torturas, las
+    desapariciones), todos los que tienen que ver con convenios
+    internacionales, con compromisos internacionales de nuestro país quedan
+    claramente derogados. Los requisitos que establece la ley para poder
+    investigar uno de estos crímenes contra los derechos humanos son de
+    imposible cumplimiento. Una víctima española, un victimario español o
+    residente en España que además no haya sido objeto de petición de
+    extradición, ¿qué es? No es jurisdicción penal internacional; si acaso es
+    justicia penal española, nada más y nada menos. Señorías, además, por si
+    hubiera pocos mecanismos de cierre el Gobierno establece que quien
+    solamente puede denunciar es la víctima o la fiscalía. Es muy improbable
+    que sea la víctima porque en la mayor parte de los casos ya no está y la
+    fiscalía no va a actuar contra sus propios actos; la fiscalía va a seguir
+    la orientación del Gobierno y va a intentar molestar lo menos posible a
+    otros Estados, sobre todo a Estados imperiales cuando la política del
+    Gobierno es una política de colonia, que es la que estamos viendo con
+    respecto a la jurisdicción penal internacional.
+
+    <br /><br />A nuestro grupo le preocupa el procedimiento parlamentario seguido, porque
+    deja en muy mal lugar al Parlamento. En la tradición del estado de
+    excepción se dice que en el periodo de entreguerras se estableció una
+    especie de continuum entre el real decreto y la ley de excepción. En
+    nuestro caso el continuum es el real decreto, es decir, el estado de
+    decreto que ha establecido el Gobierno en nuestro país con la excusa de
+    la crisis -prácticamente una cuarentena de decretos en estos momento- y a
+    continuación el estado de excepción parcial -en esta caso de la
+    jurisdicción penal internacional-; nuestro país se constituye en un
+    Estado de excepción para la jurisdicción penal internacional. Antes,
+    después de la reforma de 2009, era una luz tenue, pero ahora se convierte
+    en un agujero negro para la persecución de los delitos contra los
+    derechos humanos. Y luego el Gobierno adopta una iniciativa parcial que
+    de alguna manera anuncia otras de políticas de excepción, por ejemplo, en
+    materia de derechos fundamentales; está encima de la mesa el Código
+    Penal, anunciada la ley de seguridad ciudadana, y todas ellas van también
+    en el sentido de restringir los derechos fundamentales. Por tanto, no es
+    hablar de manera exagerada si digo que vamos del estado de decreto hacia
+    el estado de excepción de manera acelerada, y en este caso el Gobierno
+    utiliza precisamente la jurisdicción penal internacional para probar ese
+    avance -yo diría ese retroceso- hacia el estado de excepción, y lo hace
+    dejando en un muy mal lugar al Parlamento de una manera fraudulenta.
+
+    <br /><br />Lo ha dicho el señor Olabarría en su explicación -yo no lo voy a decir
+    mejor que él-, es el método fraudulento del Grupo Popular y del Gobierno.
+    Cuando se habla del real decreto, se habla de la transmutación de la
+    democracia parlamentaria en democracia gubernamental; pero en este caso
+    pasamos de la democracia parlamentaria a la democracia gubernamental y de
+    la democracia gubernamental a la democracia de partido, porque es un
+    partido político quien presenta una iniciativa para saltarse todas las
+    garantías que tiene una iniciativa del Gobierno, para saltarse todos los
+    órganos consultivos. Ahora ese mismo partido político en el Congreso de
+    los Diputados es quien utiliza una vía espuria, que no tiene nada que ver
+    con el contenido de la norma, para evitar el debate parlamentario, las
+    enmiendas, la negociación y finalmente la deliberación, dejando en mal
+    lugar al Parlamento, utilizándolo únicamente como un trámite a seguir
+    para aprobar una norma que está prácticamente preestablecida. Decía,
+    señorías, que a pesar de
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página11)"><b>Página
+    11</b></a></p><br />
+
+    <br /><br />ello el Gobierno ha mostrado sus cartas en sus enmiendas. Creo que es muy
+    llamativa la chapuza de esta iniciativa que no ha pasado por los órganos
+    consultivos. La chapuza se ha visto en una enmienda de totalidad del
+    grupo proponente, que se presenta a sí mismo como consecuencia de esa
+    falta de participación de los órganos consultivos. Además el Gobierno, en
+    esa enmienda de totalidad, demuestra que por otra parte se había pasado
+    de frenada, que no solamente habían derogado la jurisdicción penal
+    internacional sino que habían derogado la cooperación penal
+    internacional. Han tenido que presentar una enmienda para decir: hay
+    determinados delitos comunes que vamos a perseguir pero hay otros, contra
+    los derechos humanos, que no. Señorías, ¿qué razón hay para luchar juntos
+    contra los grupos que hacen negocio de la droga y para no luchar contra
+    aquellos regímenes que vulneran los derechos humanos más fundamentales?
+    Ustedes me dirán, porque en su enmienda aparece eso. Muestran que
+    recuperan la lucha cooperativa contra los delitos comunes, como el
+    tráfico de drogas, que son delitos que nos escandalizan, pero a un nivel
+    diferente de los delitos contra los derechos humanos, de los delitos de
+    lesa humanidad. Ustedes deciden en esa enmienda que se lucha contra lo
+    menor y no se lucha contra lo mayor; que se suspende o se deroga la
+    legislación penal internacional en todo lo que tiene que ver con la lucha
+    en defensa de los derechos humanos, con la lucha para garantizar que no
+    exista impunidad de los que han vulnerado y vulnerarán en un futuro los
+    derechos humanos. Ese es el resumen, en nuestra opinión, de un
+    procedimiento espurio, que utiliza de mala manera al Parlamento, primero
+    en la proposición de ley y ahora través de la lectura única, que parece
+    también toda una representación de lo que quiere el Grupo Popular en este
+    debate parlamentario, una lectura directa y única en la que los demás
+    sobran; de hecho, la única enmienda es su propia enmienda de totalidad.
+
+    <br /><br />Termino, señorías, refiriéndome a otro de los aspectos de esta norma que
+    es su carácter retroatractivo, que espero que junto a las demás
+    vulneraciones suponga el reconocimiento por parte del Tribunal
+    Constitucional del carácter inconstitucional de una norma que deroga de
+    manera unilateral convenios internacionales en materia de derechos
+    humanos firmados, que modifica la Constitución española en relación con
+    la tutela judicial efectiva, que interviene en el Poder Judicial desde el
+    Poder Ejecutivo, que en definitiva vulnera prácticamente nuestras normas
+    básicas de la Constitución. Esto del efecto retroactivo es un escarnio
+    para las víctimas. Si en esta ley dejamos desprotegidas a las víctimas de
+    vulneración de los derechos humanos -a todas las víctimas, porque los
+    mecanismos de cierre son totales- el carácter retroactivo de la norma
+    ofende a aquellas víctimas que han iniciado un proceso y que tenían
+    expectativas sobre el proceso judicial; las ofende, las deja inermes. Eso
+    es lo que hace el Gobierno con este carácter retroactivo de la norma:
+    cierra la investigación sobre el caso del cámara Couso, cierra la
+    investigación sobre Ellacuría, cierra la investigación sobre el Sáhara,
+    cierra la investigación sobre el Tíbet, cierra la investigación sobre
+    Ruanda; cierra investigaciones importantísimas que tienen efectos desde
+    el punto de vista de la persecución penal internacional contra los que
+    vulneran los derechos humanos, y, como se ha dicho aquí, todos nos han
+    dicho que tienen efectos.
+
+    <br /><br />Señorías, hoy es un día vergonzoso y vergonzante. Me gustaría que el
+    ministro, que es tan gallardo para defender algunas normas y para
+    atribuirse la responsabilidad de ellas, de la misma manera lo fuera en
+    esta iniciativa legislativa; que la hubiera propuesto a través del cauce
+    normal como proyecto de ley, que hubiera permitido la participación de
+    los órganos consultivos del Estado -que seguramente le hubieran enmendado
+    la plana- y que por otra parte hubiera permitido un debate parlamentario
+    a fondo. No ha hecho nada de esto; en ese sentido, es una ley taimada,
+    una ley que se hace a sabiendas de que vulnera no solamente aspectos
+    fundamentales de nuestra Constitución y de los convenios internacionales,
+    sino las formas democráticas más básicas. Por eso, es una ley taimada, en
+    la que el Gobierno y el ministro no dan la cara, en la que quien da la
+    cara es el Grupo Popular a través de una proposición de ley y ahora de la
+    decisión de una lectura directa y prácticamente sumarísima. Por todas
+    estas razones, mi grupo parlamentario va a rechazar esta reforma o esta
+    derogación de la jurisdicción penal internacional.
+
+    <br /><br />Empecé hablando del carnaval, pero no quisiera terminar sin dar un dato
+    con respecto al cabo de Hornos. Quiero recordarles, señorías, que al
+    doblar el cabo de Hornos había más de doscientos tripulantes y finalmente
+    la tripulación quedó diezmada y Magallanes pereció en el intento. Vamos a
+    ver. (Aplausos).
+
+    <br /><br />La señora VICEPRESIDENTA (Villalobos Talero): Gracias, señor Llamazares.
+
+    <br /><br />Por el Grupo Parlamentario de Convergència i Unió, señor Jané.
+
+    <br /><br />El señor JANÉ I GUASCH: Señora presidenta, señoras y señores diputados,
+    hoy es un mal día para la justicia. Hoy es un mal día para la justicia en
+    mayúscula, hoy es un mal día para la justicia como valor superior de
+    nuestro ordenamiento jurídico que proclama el artículo 1 de la
+    Constitución. Proclama que los
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página12)"><b>Página
+    12</b></a></p><br />
+
+    <br /><br />valores superiores son la justicia, la libertad, la igualdad y el
+    pluralismo político. ¿Por qué hoy es un mal día para la justicia? Porque
+    hoy de manera clara se limita la protección internacional de los derechos
+    humanos. Hoy aquí, con la votación de esta proposición de ley orgánica,
+    damos un evidente paso atrás en lo que es y ha sido siempre una
+    regulación difícil; un difícil equilibrio entre la voluntad por todos
+    compartida de que no haya espacios de impunidad -es una voluntad por
+    todos compartida- y los límites que en la extraterritorialidad deben
+    tener todos los países -hay límites a la extraterritorialidad-. Buscar
+    ese equilibrio no es fácil. Ya supuso un paso atrás la reforma de la Ley
+    Orgánica del Poder Judicial que se acometió en la pasada legislatura con
+    la Ley Orgánica 1/2009, que, por cierto, también fue por la puerta de
+    atrás, vía una enmienda. Esa reforma, que también fue apresurada, supuso
+    un equilibrio, repito, siempre difícil pero que intentaba en todo caso
+    que los tribunales españoles pudieran conocer si se daban tres
+    circunstancias, que no eran acumulativas sino alternativas. Se decía
+    entonces, señor ministro, que se podía conocer cuando su responsable se
+    encontrara en España o bien existieran víctimas de nacionalidad española.
+    Se añadía otra posibilidad alternativa y no acumulativa; se decía: cuando
+    se constate algún vínculo de conexión relevante con España. Por tanto,
+    había un límite ya entonces, en 2009. No podían conocer nuestros
+    tribunales de cualquier agresión a los derechos humanos fuera de nuestro
+    territorio. Había un límite, pero estaba acotado a unas circunstancias
+    que se modificaron en 2009 y que fueron objeto de un mínimo consenso en
+    esta Cámara.
+
+    <br /><br />Hoy lamentablemente no se dan esas circunstancias de consenso. Hoy
+    asistimos por la vía de la aprobación con lectura única de esta
+    proposición de ley orgánica a un paso atrás que debería remediarse. Tengo
+    aún esperanzas, porque hemos visto cómo se han introducido enmiendas por
+    el grupo proponente en el trámite de hoy ante el Pleno del Congreso, de
+    que en el trámite en el Senado se aprovechen aquellos mensajes que nos
+    están llegando no ya desde el conjunto de grupos parlamentarios que no
+    forman parte de la mayoría del Gobierno, sino desde la propia Fiscalía de
+    la Audiencia Nacional el pasado día 19. Entonces se reunieron los
+    fiscales de la Audiencia Nacional en junta extraordinaria y expresaron
+    por unanimidad su preocupación; leo textualmente: Ante las consecuencias
+    negativas que tendrá la restricción legislativa al ejercicio de la
+    justicia universal... Nos decían los fiscales de la Audiencia Nacional:
+    de qué forma se va a limitar la investigación y enjuiciamiento de graves
+    delitos cometidos fuera de España. Se ha remitido ese escrito aprobado
+    por unanimidad a la propia Fiscalía General del Estado denunciando que
+    van a existir espacios de impunidad, que incluso puede quedar perjudicada
+    la entrega de delincuentes por el mecanismo de extradición. Nosotros no
+    podemos ser cómplices de esos espacios de impunidad ante lesiones de los
+    derechos humanos que afectan directamente a víctimas españolas, bien
+    porque su presunto autor se encuentra en territorio español o bien porque
+    podamos entender que existe ese vínculo de conexión relevante. Por tanto,
+    podrían actuar los jueces y tribunales tal y como se está haciendo ahora.
+    De ahí que nosotros no podemos hoy dar apoyo a esta proposición de ley.
+
+    <br /><br />Vamos a votar en contra de la misma y hemos presentado enmiendas, señor
+    ministro, señorías, para desandar lo que se pretende hoy andar. No vamos
+    a hacer enmiendas para recuperar aquello que no estaba vigente antes de
+    2009. Vamos a buscar ese equilibrio que ya fue difícil en 2009; vamos a
+    intentarlo por la vía de la supresión y la incorporación de nuevas
+    figuras y nuevos delitos que hoy se incorporan, pero manteniendo ese
+    equilibrio de 2009. Es la mejor contribución que hoy podríamos hacer a
+    ese respeto a los derechos humanos, la mejor contribución que podíamos
+    hacer a ese equilibrio que se nos pide en el ámbito del derecho
+    internacional. Tenemos aquí a nuestro portavoz en la Comisión
+    Internacional, al diputado Jordi Xuclà. Él conoce bien, y nos lo ha
+    explicado en más de una ocasión, cómo deben existir esos límites, pero
+    cómo y de qué forma se ha apreciado de manera positiva la labor y el
+    equilibrio que tras la reforma de 2009 habíamos sido capaces de encontrar
+    y defender. Hoy ese equilibrio, esas reformas y ese consenso dan un paso
+    atrás y aún estamos a tiempo de remediarlo. Por tanto, pedimos al grupo
+    mayoritario esa voluntad de desandar el camino que hoy se pretende andar,
+    de intentar -vía tramitación en el Senado- que esta amputación que hoy
+    vamos a protagonizar de esa justicia universal no acabe produciéndose.
+
+    <br /><br />Se ha dicho por otros portavoces -lo comparte Convergència i Unió- que en
+    este tipo de delitos no debe despreciarse la acción popular. Finalmente
+    las consecuencias de la tramitación de esta proposición de ley van a
+    alejar esa acción popular; se deja a una intervención bien de la fiscalía
+    o bien de las propias víctimas, que en la mayoría de ocasiones ya no van
+    a poder actuar para realizar esa acción de justicia. Por tanto, no
+    compartimos esa limitación, esa acotación a la acción popular, como
+    tampoco la disposición transitoria de esta proposición de ley. La
+    disposición transitoria es un sobreseimiento automático. Que conste que
+    ya existía un sobreseimiento provisional en la normativa aprobada en
+    2009, pero hoy ese
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página13)"><b>Página
+    13</b></a></p><br />
+
+    <br /><br />sobreseimiento provisional se convierte en un sobreseimiento automático.
+    No hace falta analizar nada: de entrada pim, pam, fuera. Estoy conociendo
+    de un delito de justicia universal que se ha cometido fuera de nuestras
+    fronteras, si hay una víctima española o el presunto delincuente está
+    aquí o bien hay ese vínculo de conexión, y de repente dejo de conocerlo,
+    porque automáticamente esa causa queda sobreseída y vamos a analizar
+    después si se dan o no las nuevas circunstancias que la nueva normativa
+    va a establecer. Así queda de entrada cerrada esa defensa de la justicia
+    universal. Por tanto, tampoco podemos compartir esa disposición
+    transitoria que es de dudosa constitucionalidad. El artículo 9.3 de la
+    Constitución establece la irretroactividad de aquellas disposiciones
+    sancionadoras o bien de aquellas que pueda entenderse que limitan
+    derechos. Esta es una norma retroactiva; ese sobreseimiento automático
+    tiene efectos retroactivos y limita derechos. Es evidente que limita
+    derechos, entre ellos uno fundamental en el artículo 24 de la
+    Constitución, el derecho a la tutela judicial efectiva. Por tanto,
+    también entendemos desde Convergència i Unió que no podemos actuar con
+    ese sobreseimiento automático, con esa voluntad de dejar fuera esa lucha
+    que se había realizado en ocasiones de una manera muy amplia -y se
+    acotó-, pero que se seguía realizando y que era apreciada por la
+    comunidad internacional. Hoy estamos dando un mensaje negativo hacia esa
+    comunidad internacional. Convergència i Unió siempre ha estado a favor de
+    los derechos humanos, de una actitud positiva y activa en aquello que
+    pueda suponer en el ámbito internacional que somos protagonistas y nos
+    creemos esos valores que propugnamos en nuestra Constitución y que
+    queremos preservar. Es cierto que existe una Corte Penal Internacional y
+    que sería deseable que muchos de estos delitos fueran conocidos por ella,
+    pero también que muchos de los países y Estados transgresores de los
+    derechos humanos no han firmado los tratados internacionales y no son
+    parte de dicha corte Por tanto, quedan fuera de ella y quedan esos
+    espacios de impunidad que los propios fiscales de la Audiencia Nacional
+    nos denuncian que van a existir si no remediamos hoy la aprobación de
+    esta proposición de ley.
+
+    <br /><br />Hemos recibido muchísimas cartas y propuestas. Quiero recordar hoy aquí al
+    diputado Carles Campuzano, que de manera muy directa ha tenido siempre
+    una vinculación con Amnistía Internacional, con grupos a favor de los
+    derechos humanos. No está en la Comisión de Justicia, pero es el primero
+    que llama al portavoz de Justicia para decirle: se acaba de aprobar una
+    proposición de ley que cuando llegue a tramitarse tenemos que vigilar muy
+    de cerca, porque va a limitar los derechos humanos y la persecución
+    internacional de los derechos humanos. Me lo decía mi compañero Carles
+    Campuzano al día siguiente de haberse registrado. Nunca hubiera pensado
+    este diputado ni Convergència i Unió que, con tanta prontitud, con tanta
+    celeridad, sin tan siquiera hacer una ponencia legislativa, sin tan
+    siquiera hacer una Comisión de Justicia para poder tratar las distintas
+    enmiendas planteadas, de manera directa, con lectura única, en este
+    Pleno, incluso en horas de almuerzo -para entendernos, en las que quizá
+    vamos a pasar desapercibidos-, fuera a tratarse esta situación, porque
+    eso no es bueno.
+
+    <br /><br />Repito lo que decía al iniciar mi intervención: hoy no es un buen día para
+    el valor superior justicia que proclama el artículo 1 de nuestra
+    Constitución; hoy no es un buen día para el valor justicia, en mayúscula,
+    que defendemos y estamos convencidos que todos queremos defender en esta
+    Cámara. Por tanto, como hoy no es un buen día para el valor superior de
+    la justicia, hoy votaremos en contra de esta proposición de ley, aunque
+    todavía -así lo esperamos desde Convergència- estamos a tiempo de
+    rectificar, de no cerrar hoy la puerta a ese valor de la justicia
+    universal que entre todos queremos defender.
+
+    <br /><br />Muchas gracias, señora presidenta. (Aplausos).
+
+    <br /><br />La señora VICEPRESIDENTA (Villalobos Talero): Gracias, señor Jané.
+
+    <br /><br />Por el Grupo Parlamentario Socialista, señor Villarrubia.
+
+    <br /><br />El señor VILLARRUBIA MEDIAVILLA: Señora presidenta, señorías, hoy se
+    consuma por el Grupo Popular la aprobación de su proposición de ley en
+    lectura única y por trámite de urgencia, contra todos y contra el
+    artículo 150 del Reglamento de la Cámara, para liquidar la justicia
+    universal en nuestro país y la posibilidad de perseguir graves ataques a
+    los derechos humanos por parte de los tribunales españoles. Este recorte
+    de derechos y libertades es uno más de los muchos realizados en esta
+    legislatura, lo que está produciendo una enorme pérdida de calidad
+    democrática en nuestro país. La agenda económica, una vez más, prevalece
+    sobre los derechos humanos que solo son vistos por este Gobierno como
+    fuente innecesaria de problemas. Desde 1999, señorías, más de 150
+    miembros de la ONU asumen la doctrina de la responsabilidad de proteger,
+    que proclama el derecho de la comunidad internacional a intervenir en un
+    Estado si sus dirigentes cometen atrocidades contra la población o no
+    están dispuestos a evitarlas.
+
+    <br /><br />Estos avances en la defensa de los derechos humanos, que España apoya, no
+    son compatibles con normas como la que hoy trae el Grupo Popular. La
+    renuncia a la persecución de gravísimos delitos manda
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página14)"><b>Página
+    14</b></a></p><br />
+
+    <br /><br />un mensaje de impunidad a los responsables de los mismos, a la vez que
+    afianza la convicción de otros potenciales autores -que todos tenemos en
+    la cabeza- de que estas conductas es muy posible que queden sin castigo.
+    Sirve de excusa para la reforma el que la misma amplía los supuestos de
+    extraterritorialidad, da cumplimiento a los tratados internacionales y
+    nos equipara a los países de nuestro entorno. La pretendida ampliación no
+    es tal. Señorías, la justicia universal es universal o no es; la
+    extraterritorialidad es otra cosa. Además, dicha supuesta ampliación, una
+    vez más, se hace con un marcado carácter restrictivo al excluir la
+    competencia de la jurisdicción española en los delitos más graves, aunque
+    la víctima sea española, o en otros delitos al vincular incluso, para los
+    supuestos de que la víctima sea española, la necesidad de que el autor
+    del delito se encuentre en España. Respecto al argumento de que esta
+    reforma nos equipara con países de nuestro entorno tampoco es cierto, ya
+    que existe una diversidad de regulaciones en los distintos países
+    europeos y la regulación española estaba sirviendo de modelo a reformas
+    emprendidas -como en Francia- actualmente. Nuestra legislación ha sido
+    referencia para países latinoamericanos que han introducido este
+    principio en sus legislaciones. También se invoca la excusa de que esto
+    afecta a nuestras relaciones internacionales. Les recuerdo que las
+    relaciones internacionales tienen que mantenerse desde un principio de
+    igualdad y de defensa de los derechos humanos y no desde imposiciones de
+    terceros países; como signatarios que somos de los más importantes
+    convenios sobre la materia, no es una opción, es una obligación. Mi grupo
+    aspira a que la marca España también sea unida a la de un país que
+    respeta, defiende y promueve los derechos humanos. Sabemos que Estados
+    como China son tenedores de una importante cantidad de deuda española,
+    pero si por tener deuda española pueden someter al Estado español estamos
+    perdidos, ya que, con los niveles de deuda a los que nos está llevando su
+    Gobierno, ¿cuántos más se van a considerar con derecho a hacernos
+    exigencias contrarias incluso a nuestros principios y valores
+    constitucionales? Y lo que es más, ¿dónde está el límite?, ¿dónde ponemos
+    el límite, señores de la derecha? Sentimos envidia en mi grupo de los
+    nacionales chinos o los estadounidenses, a quienes sus Estados protegen
+    contra todo y contra todos, incluso siendo culpables de grandes crímenes.
+    Cierto es que la aplicación práctica del principio de jurisdicción
+    universal no está exenta de problemas, pero esos riesgos no pueden servir
+    de pretexto para liquidar sin más un principio tutelador de derechos
+    humanos, para impedir la impunidad de los autores de esos crímenes y
+    contribuir con ello a la disuasión de la comisión de otros nuevos
+    crímenes.
+
+    <br /><br />Señorías, el Grupo Parlamentario Socialista ha presentado enmienda de
+    totalidad con texto alternativo y otra serie de enmiendas parciales,
+    fundamentalmente de supresión, para volver a la regulación de 2009.
+    Nuestras enmiendas propugnan esa vuelta en vigor adoptada por un acuerdo
+    mayoritario del Partido Socialista, Partido Popular, Convergència i Unió,
+    PNV; reforma que acomodó la misma a las exigencias que la jurisprudencia
+    había venido recogiendo al considerar aconsejable la concurrencia de
+    víctima o intereses españoles afectados. Nuestras enmiendas recogen
+    aquellos supuestos cuya enunciación específica parece aconsejable. Si
+    bien estaban ya incluidos en la reforma, en el artículo 23.4, pero
+    hablamos en concreto de delitos, señores del PP, regulados en el Convenio
+    del Consejo de Europa de 11 de mayo de 2011 sobre prevención y lucha
+    contra la violencia contra la mujer y la violencia doméstica, que se
+    refiere a delitos de violencia psicológica, acoso, mutilación genital
+    femenina, violencia física, sexual, matrimonios forzosos, abortos,
+    esterilizaciones forzosas, y lo hacemos manteniendo la posibilidad de su
+    persecución en los términos actuales, sin introducir nuevas limitaciones
+    que consideramos inadmisibles. Suprimimos la grave restricción que supone
+    la aceptación como requisito de perseguibilidad -gravísimo- que tenga que
+    ser mediante querella del agraviado o del ministerio fiscal y
+    rehabilitamos la posibilidad de hacerlo por denuncia, lo que no exige
+    para su interposición ni abogado ni procurador, ni concreción de los
+    hechos ni de los responsables que se pide que sean investigados.
+
+    <br /><br />La proposición de ley, puesta en relación con la disposición transitoria
+    única, plantea el sobreseimiento -atención-, sobreseimiento de plano por
+    mandato legal, obviando cualquier intervención judicial, de todas
+    aquellas causas que se encuentran en tramitación por los delitos
+    recogidos en el artículo 23. Esto dará lugar, señorías, a que aquellas
+    causas que se hubieran iniciado -casi todas- por denuncia queden
+    sobreseídas hasta tanto en cuanto se presente la preceptiva querella,
+    paralizando las actuaciones en curso y obligando a las partes a iniciar
+    de nuevo todo, con los costes en todos los órdenes que ello conlleva.
+    Esto supone, además, una intromisión intolerable en la potestad
+    jurisdiccional que el artículo 117 de nuestra Constitución reserva en
+    exclusiva a los juzgados y tribunales. Entendemos, además, que una
+    aplicación retroactiva -estamos convencidos, no solo entendemos- de una
+    norma de carácter procesal vinculada al ejercicio de un derecho
+    fundamental, cual es la tutela judicial efectiva, vulnera los derechos
+    constitucionales de las víctimas. A ustedes que se les llena la boca
+    continuamente de proteger a las
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página15)"><b>Página
+    15</b></a></p><br />
+
+    <br /><br />víctimas, ¿dónde están las declaraciones continuas y demagógicas? La
+    proposición de ley exige el requisito de querella no solamente para los
+    supuestos del artículo 23.4, sino lo que es más sorprendente, señorías,
+    para los del propio 23.3, que son delitos que afectan intereses
+    esenciales del Estado español -patriotas, ¿qué hacen ustedes?-, como
+    pueden ser, por ejemplo, los delitos de traición, contra la paz o la
+    independencia del Estado, o falsificaciones que perjudiquen directamente
+    al crédito o intereses del Estado español e introducción o expedición de
+    lo falsificado.
+
+    <br /><br />Enmendamos también la exposición de motivos ante la falacia de los
+    argumentos con que justifican la reforma, ya que entre ellos citan la
+    ratificación por parte de nuestro país del Estatuto de la Corte Penal
+    Internacional. Señorías, la aceptación de la competencia de la Corte por
+    España no es requisito suficiente para que la misma pueda intervenir, ya
+    que es necesario que para que esta pueda enjuiciar los hechos la
+    aceptación de la competencia de la Corte por los distintos países, y
+    muchos de ellos, como China, Israel y Estados Unidos, no han ratificado
+    este convenio. Defendemos mantener el sistema vigente que exige para la
+    competencia de la jurisdicción de los tribunales españoles la
+    acreditación de que los presuntos responsables de los delitos se
+    encuentran en España, o que existen víctimas de nacionalidad española, o
+    que se constate algún otro vínculo de conexión relevante con España y, en
+    todo caso, que en otro país competente, o en el seno de un tribunal
+    internacional, no se haya iniciado procedimiento que suponga una
+    investigación y una persecución efectiva -entrecomillado persecución
+    efectiva-, lo que ya limita, cierto es, la jurisdicción a la salvaguarda
+    de los intereses de España o a la persecución o protección de sus propios
+    ciudadanos.
+
+    <br /><br />Señorías, para la persecución por los tribunales españoles de delitos de
+    genocidio, lesa humanidad y contra las personas y bienes en caso de
+    conflicto armado no basta la existencia de un vínculo de la entidad de
+    que la víctima fuera española, elemento hasta ahora suficiente y que
+    ignora la proposición, sino que exigen, ustedes, la concurrencia de
+    condiciones tales como la residencia habitual en España de los
+    criminalmente responsables o impone exigencias que no están
+    exclusivamente en la esfera de actuación de España, como que incluso
+    encontrándose en España el delincuente, las autoridades españolas,
+    fíjense, hubieran denegado su extradición; denegación que no será posible
+    si ni siquiera no se le hubiere pedido. A estos absurdos nos conduce el
+    Partido Popular. En definitiva, se dificulta hasta su práctica
+    inviabilidad la competencia de la jurisdicción española, dejando sin
+    tutela a españoles víctimas de graves violaciones de sus derechos.
+    (Rumores).
+
+    <br /><br />La señora VICEPRESIDENTA (Villalobos Talero): Un segundo, señor
+    Villarrubia. Por favor, ruego silencio. Si necesitan mantener
+    conversaciones abandonen el Pleno, porque estamos escuchando al orador.
+
+    <br /><br />Adelante, señor Villarrubia.
+
+    <br /><br />El señor VILLARRUBIA MEDIAVILLA: Gracias, señora presidenta.
+
+    <br /><br />Sin entrar al detalle en el catálogo de delitos, es preciso referirse a lo
+    que es denominador común en todos ellos: la restricción que la propuesta
+    contiene sobre la regulación acordada por amplia mayoría en 2009, al
+    establecer condicionantes a los que se subordina la competencia de los
+    tribunales españoles caso por caso. Señorías, la búsqueda de la exclusión
+    de determinados supuestos y el archivo de sus respectivas causas conduce
+    a una falta absoluta de seguridad jurídica y a resultados indeseables, en
+    tanto puede dejar fuera la posibilidad de persecución de determinados
+    delitos que no es aconsejable excluir y que, en definitiva, desborda
+    hasta la propia finalidad perseguida con la iniciativa. De otra parte,
+    invocar, como hace la exposición de motivos, la necesidad de definir con
+    claridad el principio de subsidiariedad para justificar la impresentable
+    proposición de ley, constituye, cuando menos, una burla cuando ya la ley
+    vigente desde 2009 lo deja claro al someter la competencia al requisito
+    de que un tribunal internacional u otro país competente no haya iniciado
+    procedimiento que constituya una persecución efectiva de estos delitos.
+    Subrayamos persecución efectiva, porque la proposición más allá de fijar
+    el principio de subsidiariedad, lo que hace es introducir un nuevo
+    elemento añadido delimitador en sentido negativo de la competencia y con
+    vocación restrictiva, al eliminar márgenes a la interpretación de los
+    tribunales, ya que recoge lo que debe entenderse entrecomillado por
+    disposición o posibilidad de actuar en un asunto determinado. Además,
+    para apreciar esta disposición o posibilidad de actuar ya no será la
+    Audiencia Nacional la competente para la instrucción y enjuiciamiento de
+    estos delitos, quien valorará, o no, la concurrencia de esta disposición
+    a actuar o posibilidad a hacerlos, será la Sala segunda del Tribunal
+    Supremo.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página16)"><b>Página
+    16</b></a></p><br />
+
+    <br /><br />Señorías, mi grupo votará en contra de la aprobación de la proposición de
+    ley ya que supondrá un retroceso en el combate contra las violaciones de
+    los derechos humanos y una quiebra de la jurisdicción universal, cuyos
+    principios inspiradores no son otros que el castigo de los culpables de
+    crímenes que atentan contra la propia condición y dignidad humana y
+    evitar, hasta donde sea posible al menos, la impunidad. Confiamos que
+    nuestros propios ciudadanos españoles, sí, los españoles, señor
+    Gallardón, puedan ver tutelados sus derechos y satisfechas sus
+    expectativas de justicia que este Gobierno les niega por otros Estados,
+    que no bajen la guardia en la defensa de los derechos humanos, al igual
+    que hizo España durante años, que ha contribuido a la expansión y defensa
+    de la justicia universal. Su propia autoenmienda denota la improvisación,
+    la falta de rigor, la falta de seriedad, la manera de legislar, el
+    desprecio al Parlamento. Señorías, concluyo. Hoy es un día muy triste
+    para los que de verdad creemos en las libertades, en los derechos
+    esenciales, en los derechos humanos. Hoy es un día triste, uno más a los
+    que ya nos va acostumbrando, lamentablemente, este Gobierno de la
+    derecha, este Gobierno del Partido Popular, que no hace más que recortar
+    derechos y libertades en nuestro país y ahora también fuera de nuestro
+    país.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />La señora VICEPRESIDENTA (Villalobos Talero): Gracias, señor Villarrubia.
+
+    <br /><br />Por el Grupo Parlamentario Popular, señor Castillo.
+
+    <br /><br />El señor CASTILLO CALVÍN: Con la venia, señora presidenta.
+
+    <br /><br />Señorías, intentaré no apartarme mucho del objeto de este debate, pero por
+    las críticas que desde algunos grupos se han realizado, voy a abordar, en
+    primer lugar, el aspecto puramente procedimental de la tramitación. Por
+    un lado, nos han acusado de no presentar esta iniciativa como proyecto de
+    ley para evitar precisamente los informes preceptivos que deben emitir
+    los órganos consultivos del Estado. Por otro lado, insisten también en
+    criticar que una proposición de ley se apruebe por lectura única y en
+    procedimiento de urgencia con el apoyo de un solo grupo parlamentario y
+    sin el consenso de la mayoría de la Cámara. A pesar de ello, y por mucha
+    atención que he puesto, lo cierto es que solo he podido escuchar quejas
+    pero no argumentos jurídicos. No han sabido explicarnos en qué artículo
+    del Reglamento se limita o impide la posibilidad de que los grupos
+    presenten proposiciones de leyes orgánicas, o dónde se excluye que estas
+    se tramiten de modo directo y en lectura única. Ustedes no nos lo han
+    dicho, salvo la valoración subjetiva del señor Olabarría sobre la
+    supuesta complejidad de modificar un solo artículo. Y es que la
+    jurisprudencia del Tribunal Constitucional, la sentencia de 13 de
+    diciembre de 2012, recientemente ha reconocido que la lectura única es
+    una figura atípica del derecho parlamentario sin que existan materias
+    vedadas a su tramitación.
+
+    <br /><br />Si hablamos de precedentes, no creo necesario recordarles que en la
+    anterior legislatura el Grupo Parlamentario Socialista presentó trece
+    proposiciones de ley, tres tramitadas por lectura única y cinco
+    presentadas en solitario. Tampoco creo necesario explicar cómo se gestó
+    la anterior reforma del artículo 23.4 de la Ley Orgánica del Poder
+    Judicial mediante la Ley 1/2009, que se tramitó como proyecto de ley pero
+    que no contó con informes ni del Consejo General del Poder Judicial, ni
+    del Consejo Fiscal, ni del Consejo de Estado. La realidad es que, a pesar
+    de lo previsto en el artículo 88 de la Constitución, este proyecto de ley
+    nunca fue aprobado en Consejo de Ministros, ni fue remitido a las Cortes
+    Generales, sino que surgió de forma espontánea, realmente atípica, desde
+    el propio Congreso de los Diputados vía enmienda y durante el transcurso
+    de la tramitación de otro proyecto de ley sobre la implantación de la
+    nueva oficina judicial, y dicen los señores socialistas, lógicamente, que
+    lo hicieron con nuestra colaboración. Efectivamente, se hizo con nuestro
+    acuerdo y con la de otros muchos grupos de esta Cámara por sentido de
+    Estado y de responsabilidad, precisamente ese sentido de Estado y de
+    responsabilidad que le falta absolutamente a su grupo en el día de hoy.
+    (Aplausos.-El señor presidente ocupa la Presidencia). Así que hoy, por
+    hacer exactamente aquello que prevé nuestra legislación, aquello que está
+    previsto en el Reglamento y en la doctrina del Tribunal Constitucional,
+    por hacer aquello que ustedes han hecho docenas de veces, sin embargo nos
+    atacan y hablan de desprecio al Parlamento, de no respetar los
+    procedimientos establecidos, de felonías, de fechorías, con muchas efes,
+    señor Olabarría.
+
+    <br /><br />Señores socialistas, podemos recordar tramitaciones realizadas con
+    celeridad y urgencia. En esto sí que son ustedes todos unos campeones. En
+    el año 2004, fueron protagonistas de un insólito caso digno de ser
+    incluido en el libro de los récords extravagantes. Como Gobierno, como
+    grupo mayoritario y con el apoyo de todos los grupos parlamentarios de la
+    Cámara en aquel momento consumaron el mayor atropello procedimental que
+    se ha perpetrado en esta Cámara desde el inicio de la transición.
+    ¿Recuerdan como
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página17)"><b>Página
+    17</b></a></p><br />
+
+    <br /><br />tramitaron en el año 2004 el proyecto de ley por el que modificaron la Ley
+    Orgánica del Poder Judicial, para cambiar aquellos preceptos relativos a
+    la designación de los magistrados del Tribunal Supremo, se acuerdan?
+    Deben recordarlo, porque fue la tramitación más irregular de toda la
+    historia del parlamentarismo español. Como su proyecto de ley, tramitado
+    -qué casualidad- por vía de urgencia en lectura única, fue rechazado por
+    el único motivo de que muchos de los diputados no vinieron aquel día a
+    votar, y por ello no se alcanzaron los tres quintos que necesitaban,
+    decidieron resolverlo a las bravas, convocar un Consejo de Ministros
+    extraordinario el domingo para aprobar ese mismo proyecto de ley sin
+    cambiar ni una sola coma, y vuelta a las Cortes para que, sin publicar ni
+    nada, se votara otra vez a la semana siguiente. Deben recordarlo, porque
+    algunos portavoces que hoy han intervenido participaron en aquella
+    tramitación. Algunos de ustedes fueron protagonistas de la semana más
+    trepidante de la historia parlamentaria desde las Cortes de León de 1188,
+    una semana con cinco Mesas, cuatro Juntas de Portavoces, dos
+    procedimientos de urgencia, dos lecturas únicas, un cambio del orden del
+    día del Pleno, dos Plenos extraordinarios más, treinta y seis horas de
+    plazo de enmiendas y un Consejo de Ministros extraordinario, en
+    definitiva, un proyecto de ley tramitado en cuatro días hábiles. De
+    estas, señores socialistas, ustedes nos han hecho docenas. Ustedes, que
+    tanto nos critican ahora y que tantas lecciones nos dan, es así como
+    entienden que deben ser las buenas prácticas democráticas, la promoción
+    del consenso y el talante a toneladas.
+
+    <br /><br />Algunos portavoces nos han traído hoy a colación un documento elaborado
+    por la Junta de Fiscales de la Audiencia Nacional, que se hizo público
+    ayer por la tarde. Hablando de fiscales, me viene a la cabeza aquella
+    frase de quien fue fiscal general del Estado, don Cándido Conde-Pumpido
+    -recuerden, señores socialistas, fiscal general del Estado que ustedes
+    nombraron-, que en el año 2009 recordó: la justicia universal no puede
+    convertirse en un juguete en manos de personas que buscan protagonismo.
+    (Aplausos). En todo caso, resulta que estas consideraciones que nos
+    ofrecen los señores fiscales se han elaborado sobre el texto inicial de
+    nuestra iniciativa, sin tener en cuenta las modificaciones que se han
+    incorporado con nuestra enmienda. Sin embargo, el Grupo Parlamentario
+    Popular sí que ha tenido en cuenta las valoraciones que hacen en su
+    comunicado, sugerencias que en gran medida han quedado incorporadas a
+    nuestra enmienda. Por tanto, siento decirles que por ello se trata de un
+    documento que nace desfasado.
+
+    <br /><br />Señorías, en sus enmiendas y en sus intervenciones han traído también a
+    colación numerosas referencias a tratados internacionales. La realidad es
+    que todos esos tratados que establecen la necesidad de protección de los
+    derechos humanos plasman criterios de atribución jurisdiccional que están
+    basados no en el principio universal, sino en el territorio del delito o
+    en la personalidad activa o pasiva, y contemplan, con el fin de evitar la
+    posible impunidad, el compromiso de perseguir los hechos, con
+    independencia del lugar de comisión, cuando el autor se encuentre en su
+    territorio y no pretenda conceder la extradición; es decir, ninguno de
+    los convenios citados por ustedes -ninguno, ni siquiera el resto de los
+    suscritos por España-, por mucho que ustedes digan lo contrario, reconoce
+    el principio de jurisdicción universal, entendido como el derecho de cada
+    Estado a perseguir sin limitación alguna y acogiéndose solamente a su
+    legislación interna, los hecho ocurridos en territorio de otro Estado, ni
+    siquiera cuando este no proceda a su persecución. Estos convenios lo que
+    hacen es establecer criterios de atribución jurisdiccional en cada caso,
+    marcando límites y previsiones, que no son los mismos en cada supuesto.
+    Coherentemente con esta necesidad, que el principio de jurisdicción
+    universal se contemple y se interprete en modo armónico con los
+    principios del derecho internacional público, y especialmente con lo
+    dispuesto en los tratados internacionales, en los países de nuestro
+    entorno se han ido introduciendo ciertas limitaciones al principio. Ha
+    señalado el señor Tardà el caso alemán, el caso italiano, el Código Penal
+    danés o el caso belga. Pues muy bien, le voy a hacer algunas precisiones.
+    El derecho alemán se ha racionalizado, introduciendo un nuevo supuesto
+    especial del principio de oportunidad y vinculando su aplicación a
+    determinados criterios de conexión, entre los que se valora especialmente
+    el hecho de que el autor del delito se encuentre en su territorio. El
+    Código Penal italiano en su artículo 7 establece el principio de
+    universalidad pero con una extensión reducida. Lo mismo ocurre con el
+    Código Penal danés, y más claro aún con el caso belga, el amplio
+    reconocimiento de la jurisdicción universal en Bélgica llevó a la
+    presentación de querellas criminales en este país contra ciudadanos de
+    numerosos países y también contra jefes y ex jefes de Gobierno, como el
+    primer ministro israelí Ariel Sharon, Arafat, Fidel Castro e incluso el
+    mismo presidente de los Estados Unidos, Bush, y otros altos cargos de
+    esta Administración. Ello puso de manifiesto la necesidad de introducir
+    filtros que racionalizaran la aplicación de la jurisdicción universal y
+    ello se hizo en el año 2003 con la reforma de su Código procesal.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página18)"><b>Página
+    18</b></a></p><br />
+
+    <br /><br />En España, señorías, no podemos seguir siendo diferentes. Debemos partir
+    de que la extensión de la jurisdicción penal más allá de los límites de
+    nuestra soberanía tiene un carácter excepcional, y solamente cabe
+    atribuirse esa jurisdicción ampliada en los supuestos en los que exista
+    la base de un tratado internacional. La razón, como señaló el pleno del
+    Tribunal Supremo en la sentencia del caso del genocidio de Guatemala, es
+    que no le corresponde a ningún Estado en particular ocuparse literalmente
+    de estabilizar el orden recurriendo al derecho penal contra todos y en
+    todo el mundo, sino que más bien hace falta un punto de conexión que
+    legitime la extensión extraterritorial de su jurisdicción. Otra solución
+    llevaría, como parece que se ha pretendido durante muchos años, a
+    transformar la Audiencia Nacional española en la práctica en una especie
+    de tribunal penal internacional, algo que nunca ha estado en la letra ni
+    en la finalidad de la norma. Ni la Audiencia Nacional tiene la
+    legitimidad internacional con la que cuentan los tribunales penales
+    internacionales, como la Corte Penal Internacional creada por el Estatuto
+    de Roma en 1998, ni tampoco tiene los medios económicos y personales
+    necesarios que permitan generar una expectativa real de justicia
+    universal en todos los supuestos, como el tiempo y los hechos se han
+    encargado de demostrar. Es por ello por lo que dieciocho años después de
+    aquel 28 de marzo de 1996, fecha en que se interpuso en España la primera
+    denuncia por crímenes cometidos por los responsables de la dictadura
+    militar argentina y tras tramitarse en la Audiencia Nacional numerosos
+    procedimientos por gravísimos delitos internacionales, tan solo se haya
+    podido condenar a un criminal que se presentó voluntariamente para ser
+    procesado por la Audiencia Nacional. Esta es una realidad que no podemos
+    seguir ocultando. Que sirvamos de estímulo a otros países, que sirvamos
+    de ejemplo o inspiración o ser referencia para otros tribunales creo que
+    no es un argumento serio.
+
+    <br /><br />A pesar de ello, ustedes insisten en que España por su papel de liderazgo
+    se ha convertido en un referente mundial que está a la vanguardia de la
+    justicia universal. En todo caso, sin negar el enorme esfuerzo dedicado
+    por jueces y fiscales y muy especialmente por nuestra Audiencia Nacional,
+    lo cierto es que la actual regulación, en cuanto no se ve recompensada
+    por los resultados positivos, no cumple con las expectativas de las
+    víctimas. Si la actual regulación nos coloca a la cabeza de algo es en
+    cuanto al número de archivos y sobreseimientos. Esta es la realidad
+    aunque a todos nos gustaría que fuera de otro modo. Miren ustedes, no se
+    puede seguir creando falsas expectativas ni defraudando a quienes
+    víctimas de atrocidades acuden a nuestros tribunales haciéndoles creer
+    que por el hecho de poner en marcha la maquinaria de la justicia van a
+    poder obtener una tutela eficaz de sus derechos. Así que, tras escuchar
+    atentamente sus intervenciones, me da la impresión de que lo único que
+    les importa es mantener un sistema que ofrece mucho ruido y pocas nueces
+    para presentar así a los ciudadanos su particular mundo estético en el
+    que tan solo cuenta la puesta en escena. Parece que tan solo les preocupa
+    justificar un puñado de pomposos titulares para salir en los periódicos y
+    de paso confundir a la opinión pública, que es más fácil que dar sólidos
+    argumentos jurídicos. Por eso, hoy hablan de que con esta reforma
+    buscamos la impunidad de los asesinos, de los torturadores, de los
+    genocidas; que con esta proposición queremos liquidar la justicia
+    universal en violaciones gravísimas de los derechos humanos.
+    Sinceramente, creo que a nadie en esta Cámara se le debería ocurrir
+    reprochar a ningún grupo político, mucho menos al Grupo Popular, que no
+    esté frontalmente en contra de delitos tan execrables como el genocidio,
+    las torturas, los crímenes de lesa humanidad, el terrorismo, ni de
+    cualquier otro que suponga una violación de los derechos humanos, esté
+    previsto o no en el artículo 23 de la Ley Orgánica del Poder Judicial.
+    Ningún diputado, ningún grupo, tiene derecho a reprochar a ningún otro,
+    ni siquiera a insinuar semejante barbaridad, porque ninguno defiende los
+    derechos humanos con más intensidad que los demás. Todos defendemos con
+    la misma convicción estos valores.
+
+    <br /><br />Además, no era este el objeto del debate. El debate, como el objeto de
+    esta iniciativa, es precisar la competencia extraterritorial de los
+    tribunales españoles en base al principio de jurisdicción universal. Una
+    cuestión que por su complejidad, pero también por su sensibilidad,
+    debería ser tratada con equilibrio y sensatez y también sin negar la
+    realidad; la realidad de una reforma, la que proponemos, que no solo
+    trata de mejorar nuestra regulación para garantizar que la teoría y la
+    práctica sean realmente efectivas, sino que además amplía la lista de
+    delitos que cometidos fuera del territorio nacional son susceptibles de
+    ser perseguidos por la jurisdicción española. Ustedes lo niegan también.
+    Dicen que no ofrecemos soluciones, critican todo y critican que con esta
+    reforma se da un paso hacia atrás en la persecución de delitos como los
+    previstos en el Convenio del Consejo de Europa sobre prevención y lucha
+    contra la violencia contra la mujer y la violencia doméstica, la
+    Convención de Estambul. Nada más lejos de la realidad, en este momento y
+    con la redacción actual no se incluye ni protege la forma de violencia
+    incluidas en el convenio, salvo la mutilación genital femenina, único
+    supuesto de este convenio previsto en el vigente artículo 23.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página19)"><b>Página
+    19</b></a></p><br />
+
+    <br /><br />Ustedes, señores socialistas, no incluyeron estos otros gravísimos
+    delitos, como la violencia doméstica, la violencia psicológica, el acoso,
+    la violencia física, la violencia sexual, incluida la violación,
+    matrimonios forzosos, aborto y esterilización forzosa en su reforma de
+    2009. Nosotros...
+
+    <br /><br />El señor PRESIDENTE: Señor diputado, tiene usted que acabar.
+
+    <br /><br />El señor CASTILLO CALVÍN: Nosotros, sí. ¿No les gusta que ampliemos la
+    competencia de la jurisdicción española para conocer de estos delitos?
+    Pero además si se hubieran leído la enmienda presentada por el Grupo
+    Parlamentario Popular antes de este debate, lo que no es mucho pedir, se
+    habrían dado cuenta de que para estos casos no se añaden más exigencias
+    que la actualmente prevista y autorizada por el convenio para la
+    mutilación genital femenina, es decir, que la persona que se impute la
+    comisión del hecho delictivo se encuentre en España. Si no les gusta este
+    requisito, les recuerdo que fueron ustedes quienes lo incluyeron en la
+    reforma del año 2009 y la inmensa mayoría de la Cámara así lo aprobó.
+    (Aplausos). Este mismo criterio amplio se aplica también a los delitos de
+    trata de seres humanos, de los que son víctimas habituales las mujeres
+    objeto de explotación sexual. En este caso, además, se prevé la extensión
+    de la jurisdicción española a los supuestos en los que el delito se
+    impute a una persona jurídica domiciliada en España. Les recuerdo que
+    incluir esta referencia expresa a la persecución del delito de trata de
+    seres humanos, cuando los hechos hayan sido cometidos fuera del
+    territorio nacional, resuelven el vacío legal que existe en la actual
+    regulación para la persecución de estos delitos. ¿Tampoco les parece
+    adecuada esta modificación?
+
+    <br /><br />El señor PRESIDENTE: Señor diputado, tiene usted que terminar.
+
+    <br /><br />El señor CASTILLO CALVÍN: Termino.
+
+    <br /><br />No puedo extenderme más. (Rumores). Así que para terminar les diré,
+    señorías... (La señora Lozano Domingo pronuncia palabras que no se
+    perciben). No se preocupe, señora Lozano, que ya estoy terminando. Les
+    diré que con la actual regulación se instruye lo que no se puede juzgar.
+    Con nuestra proposición a partir de ahora se instruirá todo aquello que
+    se pueda juzgar. Esa es la diferencia y esa es nuestra propuesta, con
+    realismo y con sentido común, sin demagogia y sin cuentos chinos.
+
+    <br /><br />Muchas gracias. (Aplausos).
+
+    <br /><br />El señor PRESIDENTE: Muchas gracias, señor Castillo.
+
+    <br /><br />Como se ha llamado durante el tiempo suficiente, vamos a proceder ya a las
+    votaciones.
+
+    <br /><br />Proposición de ley orgánica de modificación de la Ley orgánica 6/1985, de
+    1 de julio, del Poder Judicial, relativa a la justicia universal. En
+    primer lugar, votamos la enmienda a la totalidad de texto alternativo
+    número 18 presentada por el Grupo Parlamentario Mixto, señor Tardà. Han
+    sido emitidos tres votos telemáticamente.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 311,
+    más 3 votos telemáticos, 314; a favor, 24; en contra, 179, más 2 votos
+    telemáticos, 181; abstenciones, 108, más 1 voto telemático, 109.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Enmienda a la totalidad de texto alternativo número 19, presentada por el
+    Grupo Parlamentario de Unión Progreso y Democracia. Hay tres votos
+    emitidos telemáticamente.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 312,
+    más 3 votos telemáticos, 315; a favor, 133, más 1 voto telemático, 134;
+    en contra, 179, más 2 votos telemáticos, 181.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Enmienda a la totalidad de texto alternativo número 24, presentada por el
+    Grupo Socialista. Hay tres votos emitidos telemáticamente.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 312,
+    más 3 votos telemáticos, 315; a favor, 133, más 1 voto telemático, 134;
+    en contra, 179, más 2 votos telemáticos, 181.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página20)"><b>Página
+    20</b></a></p><br />
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />A continuación, enmiendas al articulado. Empezamos con las del señor
+    Tardà. Votamos las enmiendas 11, 12 y 15.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 312; a
+    favor, 24; en contra, 179; abstenciones, 109.
+
+    <br /><br />El señor PRESIDENTE: Quedan rechazadas.
+
+    <br /><br />Resto de enmiendas del señor Tardà.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 312; a
+    favor, 38; en contra, 178; abstenciones, 96.
+
+    <br /><br />El señor PRESIDENTE: Quedan rechazadas.
+
+    <br /><br />Votación en bloque de las enmiendas del Grupo Vasco, (EAJ-PNV).
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 313; a
+    favor, 131; en contra, 179; abstenciones, 3.
+
+    <br /><br />El señor PRESIDENTE: Quedan rechazadas.
+
+    <br /><br />Votación en bloque de las enmiendas de Unión Progreso y Democracia.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 311; a
+    favor, 132; en contra, 179.
+
+    <br /><br />El señor PRESIDENTE: Quedan rechazadas.
+
+    <br /><br />Enmiendas de Izquierda Plural. Votamos en primer lugar la enmienda 35.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 313; a
+    favor, 37; en contra, 179; abstenciones, 97.
+
+    <br /><br />El señor PRESIDENTE: Queda rechazada.
+
+    <br /><br />Resto de enmiendas de Izquierda Plural.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 314; a
+    favor, 24; en contra, 179; abstenciones, 111.
+
+    <br /><br />El señor PRESIDENTE: Quedan rechazadas.
+
+    <br /><br />Votación en bloque de las enmiendas del Grupo Parlamentario Catalán
+    (Convergència i Unió).
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 314; a
+    favor, 134; en contra, 178; abstenciones, 2.
+
+    <br /><br />El señor PRESIDENTE: Quedan rechazadas.
+
+    <br /><br />Votación en bloque de las enmiendas presentadas por el Grupo Parlamentario
+    Socialista.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 313; a
+    favor, 134; en contra, 179.
+
+    <br /><br />El señor PRESIDENTE: Quedan rechazadas.
+
+    <br /><br />Enmienda número 32 presentada por el Grupo Popular.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 314; a
+    favor, 181; en contra, 132; abstenciones, 1.
+
+    <br /><br /><br /><p style="text-align:center"><a name="(Página21)"><b>Página
+    21</b></a></p><br />
+
+    <br /><br />El señor PRESIDENTE: Queda aprobada.
+
+    <br /><br />Vamos a hacer ahora la votación de conjunto de la Proposición de ley
+    orgánica de modificación de la Ley Orgánica 6/1985, de 1 de julio, del
+    Poder Judicial. Hay tres votos emitidos telemáticamente.
+
+    <br /><br />Comienza la votación. (Pausa).
+
+    <br /><br />Efectuada la votación, dio el siguiente resultado: votos emitidos, 314,
+    más 3 votos telemáticos, 317; a favor, 178, más 2 votos telemáticos, 180;
+    en contra, 136, más 1 voto telemático, 137.
+
+    <br /><br />El señor PRESIDENTE: Queda aprobado el texto de la proposición de ley
+    orgánica que se debate.
+
+    <br /><br />Se levanta la sesión.
+
+    <br /><br />Eran las tres y treinta y cinco minutos de la tarde.
+    </div>
+<hr size="1" noshade="" /><!-- BRSCGI © 1995-2004 Baratz Servicios de Teledocumentación, S.A. http://www.baratz.es -->
+
+
+<!-- FUNCION PIE -->
+    
+
+
+
+                 
+
+
+
+
+
+
+<script language="JavaScript" type="text/javascript">
+	cargaLegSesion('null')
+</script>
+ 
+<!-- FIN  PIE   -->
+        <div id="PIE_POPUP">
+		<p><span lang="es">Congreso de los Diputados</span> · C/Floridablanca s/n - 28071 - MADRID ·<u> <a style="color:#FFFFFF" href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Publicaciones/Aviso_Legal">Aviso Legal</a></u></p>
+	</div>
+
+</div></div></div></td></tr>
+</tbody></table>
+</div></td></tr>
+<tr>
+<td colspan="1" style="width:100%;"><img src="/images/pobtrans.gif" height="4" width="1" alt="" style="display:block" /></td>
+</tr>
+</tbody></table><!-- show footer template = 1824729544 -->
+</td>
+      </tr>
+    </tbody></table>
+  </td></tr>
+</tbody></table>
+</div>
+
+
+<!-- Page Metadata Generated On: 20-MAR-2015:02:10:56  Time Taken: 20 msecs -->
+</body></html>
