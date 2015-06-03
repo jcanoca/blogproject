@@ -124,7 +124,7 @@ var menu_topics = {
     "educacion":"Educación",
     "guerras":"Guerras",
     "vivienda":"Vivienda",
-    "politica":"Pólitica",
+    "politica":"Política",
     "tecnologia e investigacion":"Tecnología e investigación",
     "cultura":"Cultura",
     "fuerzas armadas":"Fuerzas armadas",
@@ -275,7 +275,7 @@ var initial_selection = ['all'];
 // Load the data.
 function loadAndStart() {
 
-  d3.json("common_nations_list.json", function(data) {
+  d3.json("common_nations_list_es.json", function(data) {
 
   // Add menu options
   if (first_execution) {
@@ -434,7 +434,7 @@ function loadAndStart() {
 			  result += "\nCIS: (" + (100.*x(d)).toFixed(2) + "%)";
 		  }
 		  if (y(d) > 0) {
-			  result += "\nCongrés: (" + (100.*y(d)).toFixed(2) + "%)";
+			  result += "\nCongreso: (" + (100.*y(d)).toFixed(2) + "%)";
 		  }
 		  result += "\nGlobal: (" + (100.*radius(d)).toFixed(2) + "%)";
 		  return result;	  
@@ -564,7 +564,7 @@ function addComments(selected_filter) {
 	for(var i=0; i<selected_filter.length; i++) {
 		if (selected_filter[i]!="all" && par[selected_filter[i]]!=null) {
 			div_topics_comments.append("hr");
-			div_topics_comments.append("p").html("<b>" + par[selected_filter[i]].name + "</b>" + " (Topic: \"" + par[selected_filter[i]].nombre + "\")");
+			div_topics_comments.append("p").html("<b>" + par[selected_filter[i]].name + "</b>" + " (Tópico: \"" + par[selected_filter[i]].nombre + "\")");
 			par[selected_filter[i]].description.forEach(function(d){
 				return d3.select("#topics_comments").append("p").text(d);
 			});
