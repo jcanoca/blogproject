@@ -44,7 +44,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="./index_esp.html">Políticos VS Ciudadanos ¿Hablamos de lo mismo?</a>
+              <a class="navbar-brand" href="./index_esp.html">Políticos vs Ciudadanos ¿Hablamos de lo mismo?</a>
             </div>
 			<div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
@@ -68,7 +68,7 @@
     <div class="container">
 
       <div class="blog-header">
-        <h1 class="blog-title">Políticos VS Ciudadanos<br> ¿Hablamos de lo mismo?</h1>
+        <h1 class="blog-title">Políticos vs Ciudadanos<br> ¿Hablamos de lo mismo?</h1>
         <p class="lead blog-description">El proceso:¿Cómo lo hemos hecho?</p>
       </div>
 
@@ -77,7 +77,7 @@
         <div class="col-sm-8 blog-main">
 
           <div class="blog-post">
-            <h2 class="blog-post-title">¿Cómo funciona el Barómetro del CIS?</h2>
+            <h2 class="blog-post-title" id="cis">¿Cómo funciona el Barómetro del CIS?</h2>
 			<p> <br>  Cada mes 2.500 españoles mayores de edad son seleccionados de forma aleatória proporcional teniendo en cuenta otras variables como sexo, edad, población o hábitat. Los seleccionados son entrevistados por los agentes del CIS personalmente en su casa. Es a partir de estas encuestas de donde se obtienen la información para los barómetros (<a href="http://www.cis.es/cis/export/sites/default/-Archivos/NotasdeInvestigacion/NI004_MetodologiaBarometros_Informe.pdf">más información sobre el método</a>).
 				<br><br>  Estos estudios contienen un bloque de preguntas fijas y otro variable que está orientado a un tema de interés político o social según la ocasión. Dentro de este grupo de preguntas fijas nos centramos en las siguientes preguntas:
 			 <blockquote><ul>
@@ -93,7 +93,7 @@
 		</div><!-- /.blog-post -->
 
 		<div class="blog-post">
-            <h2 class="blog-post-title">¿Cómo funcionan las Sesiones de Control al Gobierno en el Congreso de los Diputados?</h2>
+            <h2 class="blog-post-title" id="congres">¿Cómo funcionan las Sesiones de Control al Gobierno en el Congreso de los Diputados?</h2>
 			<p><br>   Dentro de los diferentes tipos de sesiones que se realizan en el Congreso elegimos las sesiones de control al gobierno, que se celebran actualmente los miércoles. Aunque estas no están definidas en la constitución  ni por los reglamentos parlamentarios, se han consolidado con la práctica debido a que es en estas donde los diferentes partidos políticos explican sus inquietudes respecto a nuevas legislaciones o problemas a solucionar y el presidente del gobierno, junto con sus diferentes ministros, debe dar respuesta a ellas.
 			<br><br> Los diarios de estas sesiones los encontramos en la web del congreso, 100% accesibles desde un <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Publicaciones"> buscador</a>. 
 			<br><br> Podemos encontrar información sobre su funcionamiento en el siguiente <a href="http://www.periodistasparlamentarios.org/?p=834">documento</a>:</p>
@@ -105,7 +105,7 @@
 		</div>
 		
 		<div class="blog-post">
-            <h2 class="blog-post-title">El Scraping</h2>
+            <h2 class="blog-post-title" id="sc">Scraping y Cleaning de los datos</h2>
 			<p><br>  El Scraping es el proceso por el cual extraemos los datos de una página web. En este caso hemos procesado los barómetros del CIS utilizando su banco de datos y los diarios del Congreso a través de su buscador.
 				<br><br> Para esta parte del proceso han sido necesarios los paquetes: <strong>Selenium</strong> y <strong>BeautifulSoup</strong>.</p>
 			<h3> <br>CIS </h3>
@@ -223,7 +223,7 @@
 			</div>	 
 			
 		<div class="blog-post">
-            <h2 class="blog-post-title">¿Cómo se obtienen las palabras clave de cada intervención?</h2>
+            <h2 class="blog-post-title" id="key">¿Cómo se obtienen las palabras clave de cada intervención?</h2>
 			<h3>Extracción de las características y clusterización del texto</h3>
 			<h4><br><strong> El problema </strong></h4>
 			<p>Después de hacer scraping de la página web del Congreso y del CIS, nuestro siguiente objetivo era encontrar la manera de conectarlos. Queríamos construir un puente entre los principales temas procedentes de los documentos del Congreso y los temas principales de la página web del CIS.	
@@ -244,10 +244,10 @@
 			<img src="images/question_kw.jpg" alt="Extraction of keywords">
 			<br><br>Después del proceso de extracción y carga de palabras clave, se descartaron manualmente las palabras clave que no tenían sentido bajo nuestro punto de vista.</p>
 			<h4><br><strong>Acercamiento no supervisado: Clusterizando documentos con k-Means</strong></h4> 
-			<p>Antes de aplicar el algoritmo k-means, construimos la matriz de frecuencia utilizando las palabras clave extraídas como un vocabulario (bag of words).
-			<br><br>Al principio se utilizó la biblioteca de Python scikit-learn para construir la matriz plazo frecuencia pero nos dimos cuenta de que scikit-learn contó las palabras dentro de una palabra clave como unigramas y esto no era lo que queríamos hacer, así que decidimos contar palabras clave usando nuestro propio algoritmo.
-			<br><br>Después de eso, se utilizó la biblioteca scikit-learn para transformar esta matriz en una matriz dispersa (donde los coeficientes se calculan como pesos "TFIDF").
-			<br><br>Finalmente, se aplicó el algoritmo de k-means utilizando "k-means ++" inicialización y ejecutarlo hasta 10 veces para hacer frente a la varianza debido a la inicialización aleatoria de centroides. Comenzamos eligiendo k = 20 en nuestros primeros intentos, donde k es el número de clusters fijos.</p>
+			<p>Antes de aplicar el algoritmo k-means, construimos la matriz de frecuencias de palabras utilizando las palabras clave extraídas como vocabulario (bag-of-the-words).
+			<br><br>Al principio se utilizó la biblioteca de Python scikit-learn para construir la matriz de frecuencia, pero nos dimos cuenta de que scikit-learn contaba las palabras dentro de una palabra clave como unigramas y esto no era lo que pretendíamos, así que decidimos contar palabras clave usando nuestro propio algoritmo.
+			<br><br>A continuación, se utilizó la libreria scikit-learn para transformar esta matriz en una matriz dispersión (donde los coeficientes se calculan como pesos "TFIDF"). Finalmente, aplicamos el algoritmo de k-means inicializando "k-means ++" y ejecutándolo hasta 10 veces para hacer frente a la varianza debido a la aleatoriedad de centroides. Inicialmente, elegimos k = 20, donde k es el número de grupos fijos, pero más tarde lo intentamos con mayores valores de k, por ejemplo, K = 60, 80 y 100.
+			</p>
 			<h4><br><strong>Selección de parámetros de Tuning: Método Grid search y coeficientes de Silhouette</strong></h4>
 			<p>Después de los primeros intentos, no teníamos ni idea sobre el valor de "k", así que probamos algunos valores en combinación con diferentes  frecuencias de términos. Por lo que nos topamos con dos parámetros: término frecuencia y el número de clusters.
 			<br><br>ICon el fin de encontrar la mejor combinación de estos dos valores, construimos un algoritmo de grid-search para ejecutar múltiples  combinaciones, con el fin de evaluar el mejor de ellos. Hemos trabajado los coeficientes de Silhouette para cada combinación y resultando muy cercanos a cero, por lo que los puntos estaban muy cerca uno del otro.
@@ -262,11 +262,16 @@
 			<br><br>Pensamos mucho acerca de este problema, y al final, decidimos que podíamos usar el número de líneas de cada documento para medir la importancia de un tema, ya que cada documento fue etiquetado a un solo tema.
 			<br><br>Se agruparon y se normalizaron los datos por año y mes. Hemos encontrado que algunos meses no teníamos datos, por lo que se aplica la interpolación lineal para hacer frente a estas deficiencias. Estos meses fueron: agosto, y esos meses entre el cambio de legislatura (cuatro meses aproximadamente), que suponemos que los políticos necesitan para empezar de nuevo.</p>
 			<h4><br><strong>Validación del m odelo</strong></h4>
-			<p>Aunque el problema ha sido resuelto por métodos no supervisados, hemos evaluado y medido la robustez de nuestro modelo que ha resultado bastante robusto!
-			<br><br>Lo iteramos un centenar de veces (N = 100) nuestro modelo que consiste en un modelo de k-means (para k = 45) y el proceso de agrupar el clúster más grande, si es necesario. Nuestro objetivo es comprobar si el proceso de etiquetado de los clusters es, al menos, robusto.  
-			<br><br>Después de terminar este proceso, hemos iterado el cluster más grande entre los 100 experimentos. Resultó que la mayoría de los clusters tienen una etiqueta que es el más elegida entre los otros, por lo que este resultado cumplió nuestras expectativas de robustez.
-			<br><br>Podemos ver en las siguientes imágenes lo que hemos calculado,
-			</p><br><br>Hicimos lo mismo para un modelo donde k = 55 con el fin de comprobar si los diferentes valores de k han influido en la robustez del metodo. Como podemos ver en las siguientes imágenes, no hay mucha diferencia entre estos dos modelos (k = 45 y k = 55), e incluso podemos ver que nuestro modelo (k = 45) es ligeramente mejor.
+			<p>Aunque el problema se ha resuelto utilizando métodos no supervisados, hemos evaluado y medido la robustez de nuestro modelo que ha resultado ¡bastante robusto!
+			<br><br>Se iteró 100 veces (N = 100) nuestro proceso. Este consiste en un modelo de k-means (para k = 45) y el proceso de clusterizar el clúster más grande, si es necesario. Nuestro objetivo es comprobar si el proceso de etiquetado de los clusters es, al menos, robusto. Trabajamos cada etiqueta de cada modelo (experimento) y cada documento.
+			<br><br>Después de terminar este proceso, hemos calculado la etiqueta más elegida entre las 100 iteraciones y resultó que la mayoría de los grupos tienen una etiqueta que es más frecuente que las otras, por lo que cumplió nuestras expectativas de robustez del método.
+			<br><br>Hicimos lo mismo para un modelo con k = 55 con el fin de comprobar si los diferentes valores de k han influido en la robustez de la modelo. Como podemos ver en las siguientes imágenes, no hay mucha diferencia entre estos dos modelos (k = 45 y k = 55), e incluso podemos ver que nuestro modelo (k = 45) es ligeramente mejor.
+			<br><br>Queríamos saber que pasaba si cambiamos ligeramente el valor de k en nuestro modelo. ¿Etiquetarían de la misma manera? Si tenemos en cuenta que la etiqueta de un documento es su etiqueta "más frecuente" después de realizar 100 iteraciones, podemos averiguar si los dos modelos se comportan de manera similar comparando la etiqueta de cada documento para cada modelo. Como podemos ver en la siguiente imagen, la mayoría de los documentos están etiquetando la misma manera.
+			<img src="images/sp_differences_between_models.png" alt="Diferencias entre modelos">
+			<br><br>Como hemos visto, ambos modelos etiquetan de manera muy similar los documentos, pero, queremos visualizar cómo utilizan estas etiquetas para etiquetar documentos, y sobre todo si hay una etiqueta ‘’más elegida’’ para cada documento. Esto se puede ver en la siguiente imagen:
+			<img src="images/sp_maxLabel.png" alt="Etiqueta">
+			<br><br>Y, por último, se muestra el número de etiquetas que nuestro modelo ha utilizado para etiquetar cada documento (después de 100 iteraciones).
+			<img src="images/sp_numLabel.png" alt="Etiquetas"></p>
 			<h4><br><strong>Miscelanea</strong></h4>
 			<p>Durante todo este proceso, hemos tratado algunos otros enfoques para hacer frente a este problema, aunque finalmente los descartamos. 
 			<br><br>Algunos de ellos fueron:</p>
@@ -284,7 +289,7 @@
 		 </div><!-- /.blog-post -->	
 		  
 		<div class="blog-post">
-            <h2 class="blog-post-title">Los Gráficos</h2>
+            <h2 class="blog-post-title" id="graficos">Los Gráficos</h2>
 
             <p><br> Podemos diferenciar entre 2 tipos de gráficos: las que comparan el CIS con el Congreso (El Radar, El Análisis y Evolución de Tópicos) y los que son útiles para tener un conocimiento más profundo acerca de lo que se debate en el Congreso (Líneas Políticas y ¿Qué dicen?).
 			<br><br> Hemos visto que en algunos meses no hay datos disponibles (por ejemplo: vacaciones en el Congreso, agosto para la CIS, elecciones o 11S). Para resolver el problema y crear gráficos más dinámicos a veces hemos decidido eliminar ese mes en la tabla (como en el caso del mes de agosto en el radar) o crear una interpolación del mes anterior y siguiente.
@@ -298,8 +303,15 @@
 
 		
 		<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          <div class="sidebar-module sidebar-module-inset">
-            <h4>Python Packages</h4>
+			</div class="sidebar-module sidebar-module-inset">
+			  <h4>Índice de temas</h4><p>
+			  <a href="./blog_esp.html#cis">¿Cómo funciona el Barómetro del CIS?</a>
+			  <br><a href="./blog_esp.html#congres">¿Cómo funcionan las Sesiones de Control al Gobierno en el Congreso de los Diputados?</a>
+			  <br><a href="./blog_esp.html#sc">Scraping y Cleaning de los datos</a>
+			  <br><a href="./blog_esp.html#key">¿Cómo se obtienen las palabras clave de cada intervención?</a>
+			  <br><a href="./blog_esp.html#graficos"> Los Gráficos </a></p>		  
+		  
+            <h4> <br><br>Python Packages</h4>
             <p><a href="https://selenium-python.readthedocs.org/">Selenium</a>
 				<br> <a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a>
 				<br> <a href="http://www.nltk.org/">NLTK</a>
@@ -308,13 +320,15 @@
 				<br> <a href="http://scikit-learn.org/stable/"> Scikit-Learn</a>
 				<br> <a href="http://sujitpal.blogspot.in/2013/03/implementing-rake-algorithm-with-nltk.html">RAKE</a>
 			</p>
-          </div>
+		  </div>
+         
 		</div>  
 		
     </div><!-- /.container -->
 
     <footer class="blog-footer">
-      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>Joan Bosch, <a href="https://es.linkedin.com/pub/javier-cano-candela/3a/559/2a3">Javier Cano</a>, <a href="https://es.linkedin.com/pub/pablo-fernández-sopuerta/3/ba5/627">Pablo Fernández</a>, <a href="https://es.linkedin.com/in/esthermariclapes/">Esther Marí</a> <br><strong>Directores:</strong> <a href="http://www.maia.ub.es/~oriol/Personal/oriol.html">Oriol Pujol</a>, <a href="http://www.cvc.uab.es/people/ssegui/">Santi Seguí</a> 
+			<br> <a  href="./disclaimer_esp.html"> Exclusión de Garantías y Responsabilidad </a></p>
       <p>
         <a href="#">Back to top</a>
       </p>

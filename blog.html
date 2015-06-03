@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>What are they talking about?</title>
+    <title>Politicians vs Citizens. Are we talking about the same?</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -45,7 +45,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="./index.html">Politicians VS Citizens. Are we talking about the same?</a>
+              <a class="navbar-brand" href="./index.html">Politicians vs Citizens. Are we talking about the same?</a>
             </div>
 			<div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
@@ -67,7 +67,7 @@
     <div class="container">
 
       <div class="blog-header">
-        <h1 class="blog-title">Politicians VS Citizens. <br>Are we talking about the same?</h1>
+        <h1 class="blog-title">Politicians vs Citizens. <br>Are we talking about the same?</h1>
         <p class="lead blog-description">The process: How we have done it?</p>
       </div>
 
@@ -76,22 +76,24 @@
         <div class="col-sm-8 blog-main">
 
           <div class="blog-post">
-            <h2 class="blog-post-title">How does the CIS's Barometer work?</h2>
+            <h2 class="blog-post-title" id="cis">How does the CIS's Barometer work?</h2>
 			<p> <br>  Every month 2.500 legal age people are selected randomly and proportional to other variables such as age, sex, population and environment ( <a href="http://www.cis.es/cis/export/sites/default/-Archivos/NotasdeInvestigacion/NI004_MetodologiaBarometros_Informe.pdf"> more information about the method </a>).
 				These people are interviewed personally at home by CIS agents. The result of the surveys is what the barometers show us.
 				<br><br>   In these barometers we see two blocks of questions. The first one is always the same and the other can change and ask about a recent political or social issue. It is from the first block where we have selected two fixed questions for our study:</p>
 			 <blockquote>
-              <li> ¿Cuál es, a su juicio, el principal problema que existe actualmente en España?¿Y el segundo?¿Y el tercero?(RESPUESTA ESPONTÁNEA) -Available since mar'06</li>
+              <p><li> Which is, in your opinion, the main problem that currently exists in Spain? And the second? And the third? (Spontaneous response) </li>
 			  <img src="images/pregunta1_cis.png" alt="Pregunta CIS">
-			  <li> ¿Cuáles son, a su juicio, los tres problemas principales que existen actualmente en España?(MÁXIMO TRES RESPUESTAS) -Available from sep'00 to feb'06</li></p>
+			  -Available since mar'06</p>
+			  <p><li> Which are, in your opinion, the three main problems that currently exist in Spain? (MAXIMUM THREE ANSWERS) </li>
 			  <img src="images/pregunta2_cis.png" alt="Pregunta CIS">	
+			  -Available from sep'00 to feb'06</p>
  		   </blockquote>
 			<p> The answers to these two questions are the three main problems that we have in Spain in the opinion of the Spanish Society and they are what we are going to use for our study.
 			<br><br> We can find all the barometers in the <a href="http://www.cis.es/cis/opencm/EN/11_barometros/depositados.jsp">Data Bank</a>.</p>
 		</div><!-- /.blog-post -->
 
 		<div class="blog-post">
-            <h2 class="blog-post-title">How do the Control Sessions to the Government in the Congress of Deputies work?</h2>
+            <h2 class="blog-post-title" id="congres">How do the Control Sessions to the Government in the Congress of Deputies work?</h2>
 			<p><br>There are many kinds of session done in the Congress, however we selected the Control Sessions that are taking place every Wednesday. Although they are not defined by the Constitution, they have become very popular over the years and now are ones of the most popular. Is in these sessions where the different political groups can ask the Government and Ministers about the new laws that are in process or recently approved or debate about any issue.
 				<br><br> The session diaries are completely available in their web page by a <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Publicaciones">search engine</a>.
 				<br><br> You can find more information about how they work in the following <a href="http://www.periodistasparlamentarios.org/?p=834">link</a>:</p>		
@@ -103,7 +105,7 @@
 		</div>		
 		
 		<div class="blog-post">
-            <h2 class="blog-post-title">The Scraping and Cleaning of the data</h2>
+            <h2 class="blog-post-title" id="sc">The Scraping and Cleaning of the data</h2>
 			<p><br>  The Scraping is the process from which we extract the information from the web. In this case we have achieved CIS barometers using its data bank and the Congress diaries using the Search Engine. 
 				<br><br> For this part of the process we needed <strong>Selenium</strong> and <strong>BeautifulSoup.</strong> </p>
 			<h3> <br> CIS </h3>
@@ -217,7 +219,7 @@
 		</div>
 		
 		<div class="blog-post">
-            <h2 class="blog-post-title">How do we find the keywords of every speech?</h2>
+            <h2 class="blog-post-title" id="key">How do we find the keywords of every speech?</h2>
 			<h3>Feature extraction and text clustering</h3>
 			<h4><br><strong> The problem </strong></h4>
 			<p>After scraping the Congreso's and the CIS’ website, our next goal was to figure out how to connect these two worlds. The problem was that we wanted to build a bridge between the main topics coming from the Congreso’s documents and the main topics from the CIS website. 	
@@ -241,10 +243,11 @@
 			<br><br>After the process of extracting and loading keywords, we discarded manually the keywords that were meaningless from our point of view.</p>
 			
 			<h4><br><strong>Unsupervised approach: Clustering documents with k-Means</strong></h4> 
-			<p>Before applying the k-means algorithm, we built the word-frequency matrix using the extracted keywords as a vocabulary (bag-of-the-words).
+			<p>Before applying the k-means algorithm, we built the word-frequency matrix using the extracted keywords as a vocabulary (bag-of-the-words). 
 			<br><br>At the beginning we used the scikit-learn Python library to build the word-frequency matrix but we noticed that scikit-learn counted the words within a keyword as unigrams and this was not what we wanted to do, so we decided to count keywords using our own algorithm.
-			<br><br>After that, we used scikit-learn library to transform this matrix into a sparse matrix (where the coefficients are calculated as “tfidf” weights). 
-			<br><br>Eventually, we applied the k-means algorithm using the "k-means++" initialization and executing it up to 10 times to deal with variance due to the random initialization of centroids. Initially, we chose k=20 in our first tries, where k is the number of fixed clusters.</p>
+			<br><br>After that, we used scikit-learn library to transform this matrix into a sparse matrix (where the coefficients are calculated as “tf-idf” weights).
+			<br><br>Eventually, we applied the k-means algorithm using the "k-means++" initialization and executing it up to 10 times to deal with variance due to the random initialization of centroids. Initially, we chose k=20 in our first tries, where k is the number of fixed clusters, but later we tried greater values of k, e.g. k= 60, 80 and 100.
+			</p>
 			<h4><br><strong>Tuning parameters selection: Grid search method and Silhouette coefficients</strong></h4>
 			<p>After these first tries, we had no idea about the "k" value, so we tried some values in combination with different word-frequency thresholds. So, we dealt with two parameters: word-frequency and the number of clusters.	
 			<br><br>In order to find the best combination of these two values, we built a grid search algorithm to execute multiple combination, so as to evaluate the best of them. We worked out the Silhouette coefficients for each combination and it turned out that the outcomes were very close to zero, so the points were very close to each other.
@@ -259,17 +262,17 @@
 			<br><br>We thought deeply about this problem, and in the end, we decided that we could use the number of lines of every document as a measure of the importance of a topic, since every document was tagged to a single topic.
 			<br><br>We grouped and normalized our data by year and month. We found that some months had no data, so we applied linear interpolation to deal with these gaps. These months were: August, and those months between the change of legislature (four months approximately), we suppose politics need time to start again.</p>
 			<h4><br><strong>Model Validation</strong></h4>
-			<p>Although the problem has been solved by unsupervised methods, we have evaluated and measured the strength of our model which has turned out rather strong!
-			<br><br>We performed a hundred times (N=100) our model which consists of a k-mean model (for k=45) and the process of clustering the largest cluster, if necessary. Our goal is to check if the process of labelling clusters is, at least, strong. We worked out the label of each model (experiment) and each document.
-			<br><br>After finishing this process, we have computed the label most chosen among the 100 experiments. It turned out that most of the clusters have one label which is the most chosen among the others, so this result fulfilled our expectations of strength of our model. 
-			<br><br>We did the same for a model where k = 55 in order to check if different k values have influenced in the strength of the model. As we can see in the following pictures, there is not much difference between these two models (k=45 and k=55),and we even can see that our model (k=45) it is slightly better.
-			<br><br>We want to know what happen if we change slightly the value of k in our model. Will these models label the same way? If we consider as a document's label its "most chosen" label after performing 100 times our model, we can work out if the two models behave similarly comparing the label of each document for each model. As we can see in the following picture, most of the documents are labeling the same way.
+			<p>Although the problem has been solved by unsupervised methods, we have evaluated and measured the strength or stability of our model which has turned out, as we will see, rather stable!
+			<br><br>We performed our model a hundred times (N=100), this model consists of a k-mean algorithm (k=45) and the process of clustering the largest cluster (if necessary). Our goal is to check if the whole process of labelling clusters is, at least, stable. For each iteration, we worked out the label of each document, in order to compare these results later.
+			<br><br>So, after finishing this process, we have calculated the most chosen label among all iterations. It turned out that most of the clusters have one label which is the most chosen among the others, so this result fulfilled our expectations of strength/stability of our model.
+			<br><br>We did the same for a model for k=55 in order to check if different k values have influence in the strength of the model. As we can see in the following pictures, there is not much difference between these two models (k=45 and k=55),and we can see that our model (k=45) it is slightly better.
+			<br><br>In the following picture we want to show what happen if we change slightly the value of k in our model. Will these models label the same way? If we consider as a document's label its "most chosen" label after performing 100 times our model, we can work out if the two models behave similarly comparing the label of each document for each model. As we can see in the following picture, most of the documents are labeling the same way.
 			<br><br>
 			<img src="images/differences_between_models.png" alt="Difference Between Models">
-			<br><br>As we have seen, the two models label very similarly the documents, but, we want to visualize how many labelsthey use to label documents, and especially if there is a 'most chosen' label for each document. This can be seen in the following picture:
+			<br><br>As we have seen, the two models label very similarly the documents, but, we want to visualize how many labelsthey use to label documents, and especially if there is a 'most chosen' label for each document. This can be seen in the following picture: 
 			<br><br>
 			<img src="images/maxLabel.png" alt="Label">
-			<br><br>And finally, we show how many labels our experiment has used to label each document (after 100 times performed).
+			<br><br>And finally, we show how many labels our experiment has used to label each document (after 100 times performed). 
 			<br><br>
 			<img src="images/numLabel.png" alt="Label">
 			</p>
@@ -290,7 +293,7 @@
 		</div>
 			
 		<div class="blog-post">
-            <h2 class="blog-post-title">The Charts</h2>
+            <h2 class="blog-post-title" id="graficos">The Charts</h2>
 			<p><br> We can differentiate between 2 kinds of charts: those that compare the CIS with the Congress (The Radar, The Analysis and Topic Evolution) and those that are useful to have a deeper knowledge about what is debated in the Congress (PolitiLines and The Words They Used).
 			<br><br> We have seen that on some months there is no data available (ie: holidays in the Congress, August for the CIS, elections or 11S). To solve the problem and create more dynamical charts sometimes we have decided to delete that month in the chart (as in the case of August in the Radar) or to create an interpolation of the previous and next month. 
 			<br><br> Finally, all the charts have some particularities that are explained on each website. Hope you enjoy the experience!
@@ -302,7 +305,14 @@
 		
 		<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
-            <h4>Python Packages</h4>
+            <h4>Index</h4><p>
+			  <a href="./blog.html#cis">How does the CIS's Barometer work?</a>
+			  <br><a href="./blog.html#congres">How do the Control Sessions to the Government in the Congress of Deputies work?</a>
+			  <br><a href="./blog.html#sc">The Scraping and Cleaning of the data</a>
+			  <br><a href="./blog.html#key">How do we find the keywords of every speech?</a>
+			  <br><a href="./blog.html#graficos"> The Charts </a></p>		  
+		  
+            <h4> <br><br>Python Packages</h4>
             <p><a href="https://selenium-python.readthedocs.org/">Selenium</a>
 				<br> <a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a>
 				<br> <a href="http://www.nltk.org/">NLTK</a>
@@ -316,7 +326,8 @@
     </div><!-- /.container -->
 
     <footer class="blog-footer">
-      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p><p>Joan Bosch, <a href="https://es.linkedin.com/pub/javier-cano-candela/3a/559/2a3">Javier Cano</a>, <a href="https://es.linkedin.com/pub/pablo-fernández-sopuerta/3/ba5/627">Pablo Fernández</a>, <a href="https://es.linkedin.com/in/esthermariclapes/">Esther Marí</a>  <br><strong>Directors:</strong> <a href="http://www.maia.ub.es/~oriol/Personal/oriol.html">Oriol Pujol</a>, <a href="http://www.cvc.uab.es/people/ssegui/">Santi Seguí</a> 
+		<br> <a  href="./disclaimer.html"> Disclaimer </a></p>.</p>
       <p>
         <a href="#">Back to top</a>
       </p>
