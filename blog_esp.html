@@ -7,7 +7,7 @@
     <meta name="author" content="">
 
 
-    <title>¿De qué hablan los políticos?</title>
+    <title>Políticos VS Ciudadanos ¿Hablamos de lo mismo?</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -20,7 +20,7 @@
  
 	<style>
 	iframe {
-		width:600px;
+		width:650px;
 		height: 600px;
 		}
 	#borde { border: 2px black solid; }	
@@ -44,14 +44,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand">¿De qué hablan los políticos?</a>
+              <a class="navbar-brand" href="./index_esp.html">Políticos VS Ciudadanos ¿Hablamos de lo mismo?</a>
             </div>
 			<div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-				<li><a href="./index_esp.html">Página Principal</a></li>
 				<li><a href="./el_radar.html">El Radar</a></li>
                 <li><a href="./el_analisis.html">El Análisis</a></li>
-				<li><a href="./evolucion.html">Evolución de los intereses</a></li>
+				<li><a href="./evolucion.html">Evolución de Tópicos</a></li>
 				<li><a href="./lineas_politicas.html">Líneas Políticas</a></li>
 				<li><a href="./que_dicen.html">¿Qué dicen?</a></li>
 				<li class="active"><a>Blog</a></li>
@@ -69,7 +68,7 @@
     <div class="container">
 
       <div class="blog-header">
-        <h1 class="blog-title">¿De qué hablan los políticos?</h1>
+        <h1 class="blog-title">Políticos VS Ciudadanos<br> ¿Hablamos de lo mismo?</h1>
         <p class="lead blog-description">El proceso:¿Cómo lo hemos hecho?</p>
       </div>
 
@@ -82,10 +81,12 @@
 			<p> <br>  Cada mes 2.500 españoles mayores de edad son seleccionados de forma aleatória proporcional teniendo en cuenta otras variables como sexo, edad, población o hábitat. Los seleccionados son entrevistados por los agentes del CIS personalmente en su casa. Es a partir de estas encuestas de donde se obtienen la información para los barómetros (<a href="http://www.cis.es/cis/export/sites/default/-Archivos/NotasdeInvestigacion/NI004_MetodologiaBarometros_Informe.pdf">más información sobre el método</a>).
 				<br><br>  Estos estudios contienen un bloque de preguntas fijas y otro variable que está orientado a un tema de interés político o social según la ocasión. Dentro de este grupo de preguntas fijas nos centramos en las siguientes preguntas:
 			 <blockquote><ul>
-              <p><li>-¿Cuál es, a su juicio, el principal problema que existe actualmente en España?¿Y el segundo?¿Y el tercero?(RESPUESTA ESPONTÁNEA) - Desde mar'06</li></p>
+              <p><li>¿Cuál es, a su juicio, el principal problema que existe actualmente en España?¿Y el segundo?¿Y el tercero?(RESPUESTA ESPONTÁNEA) </li>
 				<img src="images/pregunta1_cis.png" alt="Pregunta CIS" width="750" height="250">
-			    <p><li>-¿Cuáles son, a su juicio, los tres problemas principales que existen actualmente en España?(MÁXIMO TRES RESPUESTAS) - Desde sep'00 a feb'06</li></p>
+				- Desde mar'06 </p>
+			    <p><li>¿Cuáles son, a su juicio, los tres problemas principales que existen actualmente en España?(MÁXIMO TRES RESPUESTAS) </li>
 				<img src="images/pregunta2_cis.png" alt="Pregunta CIS" width="700" height="400">
+				- Desde sep'00 a feb'06</p>
             </ul></blockquote>
 			<p> Estas nos dan información sobre los 3 principales problemas que percibe la población española y son las que utilizaremos para saber que le preocupa.
 			<br><br> Podemos consultar los resultados de los barómetros a lo largo del tiempo en el <a href="http://www.cis.es/cis/opencm/ES/11_barometros/depositados.jsp">banco de datos</a>.</p>
@@ -98,60 +99,218 @@
 			<br><br> Podemos encontrar información sobre su funcionamiento en el siguiente <a href="http://www.periodistasparlamentarios.org/?p=834">documento</a>:</p>
 			<blockquote>
 			<p>"[...] Una sesión plenaria ordinaria dedica por regla general un mínimo de dos horas a debatir preguntas e interpelaciones. Estas sesiones de control se llevan a cabo los martes por la tarde en el Senado y los miércoles por la mañana en el Congreso.
-			<br><br>En primer lugar se debaten las preguntas y, a continuación, las interpelaciones. La respuesta del Gobierno a estas últimas da lugar a una iniciativa del grupo interpelante que recoge las conclusiones de ese debate con el Ejecutivo y las convierte en propuestas (moción consecuencia de interpelación). Estas se debaten en la siguiente sesión plenaria. [...]"</p>
+			<br><br>En primer lugar se debaten las preguntas y, a continuación, las interpelaciones. La respuesta del Gobierno a estas últimas da lugar a una iniciativa del grupo interpelante que recoge las conclusiones de ese debate con el Ejecutivo y las convierte en propuestas (moción consecuencia de interpelación). Estas se debaten en la siguiente sesión plenaria. [...]"
+			<br><br> <Strong> Source: </Strong> <a href="http://www.periodistasparlamentarios.org/?p=834">Asociación de Periodistas Parlamentarios</a></p>
 			</blockquote>
 		</div>
 		
 		<div class="blog-post">
-            <h2 class="blog-post-title">El Scrapping</h2>
-			<p><br>  El Scrapping es el proceso por el cual extraemos los datos de una página web. En este caso hemos procesado los barómetros del CIS utilizando su banco de datos y los diarios del Congreso a través de su buscador.
-				<br><br> Para esta parte del proceso han sido necesarios los paquetes: Selenium y BeautifulSoup.</p>
+            <h2 class="blog-post-title">El Scraping</h2>
+			<p><br>  El Scraping es el proceso por el cual extraemos los datos de una página web. En este caso hemos procesado los barómetros del CIS utilizando su banco de datos y los diarios del Congreso a través de su buscador.
+				<br><br> Para esta parte del proceso han sido necesarios los paquetes: <strong>Selenium</strong> y <strong>BeautifulSoup</strong>.</p>
 			<h3> <br>CIS </h3>
-			<p> Hemos utilizado Selenium para descargar los diferentes Barómetros y BeautifulSoup para extraer la información de las preguntas que nos interesaban. Para su posterior tratamiento lo hemos guardado en una base de datos en MongoDB</p>
-			<p><br>Como respuesta a cada pregunta obtenemos 30 tópicos diferentes, por lo que a lo largo de todo el periodo en el que hemos generado datos (desde sept.'00 hasta feb. '15) hemos encontrado alrededor de 150 tópicos diferentes. Debido a la imposibilidad de visualizar tal cantidad de tópicos y que muchos de ellos eran similares decidimos agruparlos en 14 clusters: Educación, Salud, Corrupción, Medio Ambiente, Servicios Públicos, Ideología, Economía, Empleo, Juventud, Justícia, Social, Terrorismo, Vivienda, Seguridad Ciudadana y Otros. 
-			<br><br> A partir de estos nuevos clusters agruparemos los datos y obtendremos la información necesaria para los gráficos.</p>
+			<p>Los barómetros del CIS se realizan cada mes. Hemos seleccionado el período comprendido entre septiembre de 2000 y febrero de 2015, ya que podemos encontrar las preguntas que buscamos  cada mes, excepto en agosto y excepcionalmente de octubre de 2001 (después de 11S).
+			<br><br>En primer lugar, realizamos una aproximación utilizando Selenium  para saber cuántos barómetros  teníamos disponibles con la información que necesitabamos. Fue aquí donde descubrimos que no teníamos una respuesta  de forma regular hasta septiembre de 2000.
+			<br><br>Una vez que nos dimos cuenta de esto, descargamos el contenido de todos los barómetros con Selenium  y a través de  expresiones regulares con BeautifulSoup creamos una base de datos con los resultados que hemos guardado en MongoDB.
+			<br><br>Como respuesta a cada pregunta tenemos 30 temas diferentes cada mes, lo que significa que durante todo el período encontramos 150 temas diferentes. La mayoría de los cuales eran  similares o conexos por lo que decidimos agruparlos por clusters. Obtuvimos 14 clusters claramente identificados: Educación, Salud, Corrupción, Medio Ambiente, Servicios Públicos, Ideología, Economía, Empleo, Juventud, Justicia, Social, Terrorismo, Vivienda, Seguridad Pública y otros.
+			<br><br>Vamos a encontrar más temas o clusters en los debates del Congreso, pero nunca pensamos que la relación de los temas que iba a ser bidireccional.
+			</p>
 			<h3><br> Congreso de los Diputados </h3>
-			<p> Nos interesan los datos desde septiembre de 2000 a marzo de 2015, por correspondencia de los datos que tenemos del CIS. 
-			<br><br>Las paginas web del Congreso se generan dinámicamente. Para obtener el listado y la descarga de los documentos de los diarios de sesiones utilizamos las herramientas de las librerias Selenium y BeautifulSoap.
-			<br><br> Una vez obtenidos los documentos de los diarios de sesiones procedemos al análisis de la estructura de los textos para diseñar un proceso que nos permita extraer la información deseada. El contenido de los diarios de sesiones se estructura en forma de diálogos en torno a una pregunta o tema previamente registrado (todo tema tiene asociado un número de expediente que la identifica) por lo que cada intervención queda registrada literalmente indicándose al inicio quien la realizó. Sabiendo esto los documentos quedarán divididos en preguntas y respuestas realizadas en la sesión de control, los miembros y los grupos parlamentarios que las realizaron. 
-			<p><br> Para identificar a los miembros del Congreso en sus intervenciones y grupos parlamentarios a los que pertenecen obtenemos la información de otro apartado de la web del congreso: <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=10"> Diputados </a></p>
-			<img src="images/congres2.png" alt="Lista Diputados" width="700" height="700">
-			<p> <br> Recurriremos nuevamente a Selenium y BeautifulSoap para obtener una relación de diputados, grupos parlamentarios y legislaturas del periodo analizado. Nuevamente esta información se guarda en MongoDB para su para usarla posteriormente en el proceso de extraccion de preguntas e intervenciones. 	</p>
-			<h4> <br> Extracción de preguntas e intervenciones </h4>
-			<p> Para la extracción de preguntas e intervenciones utilizamos expresiones regulares. Con ellas analizamos línea a línea el contenido de un diario buscando inicios o finales de preguntas e intervenciones, diputados, grupos parlamentarios...
-			<br><br> El proceso empieza cuando encuentra las marcas que indican el inicio de los textos de preguntas, omitiendo secciones del diario que no se correspondan con las preguntas de la sesión de control, como por ejemplo: "PROPOSICIONES NO DE LEY", "CONVALIDACIÓN O DEROGACIÓN DE REALES DECRETOS-LEYES", "JURAMENTO O PROMESA DE ACATAMIENTO DE LA CONSTITUCIÓN", etc. También se omiten en el proceso de extracción las intervenciones realizadas por el moderador de la cámara.
-			<br><br> A continuación se muestran un ejemplo en el que se ve el texto original y despues del proceso de análisis (con un fondo distinto en función del grupo político al que pertenece el diputado que realiza la intervención: azul, grupo popular; rojo, grupo socialista; gris, grupo mixto, ...):</p>
-			<img src="images/intervencion1.png" alt="Intervención Congreso" width="900" height="600">
-			<p> Utilizamos el método <a href="http://en.wikipedia.org/wiki/String_metric">String Metrics</a>, en el proceso de análisis para detectar posibles errores de transcripción en los diarios de sesiones. 
-			<br><br> A continuación puedes ver como queda un diario de sesiones después de todo el proceso.  Si pasamos el cursor sobre las intervenciones nos da información sobre el interlocutor, grupo político y demás información obtenida durante el análisis.</p>
+			<p>La página web del Congreso se genera dinámicamente. Para obtener la lista y descargar los diarios de sesiones utilizamos herramientas de Selenium  y BeautifulSoap.
+			<br><br>De todos los diarios disponibles entre septiembre de 2000 y marzo de 2015 hemos descargado las sesiones de control, es decir las que se realizan los miércoles y tengan una sección para preguntas en su orden del día.
+			<br><br>A la hora de analizar el número de diarios de sesiones obtenidos, hay que tener en cuenta que en los meses tradicionalmente vacacionales (enero, julio y agosto) no suele haber sesión de control al gobierno. Tampoco se celebra sesión de control en los periodos electorales. De esta manera, en los cambios de legislatura encontramos periodos de cuatro meses sin sesiones de control:
+			<blockquote><ul><p>
+			<li>Enero-abril de 2004 (cambio de legislatura: desde VII a VIII)</li>
+			<li>Enero-abril de 2008 (cambio de legislatura: desde VIII a IX)</li>
+			<li>Octubre-diciembre de 2011 y enero de 2012 (cambio de legislatura: de IX a X)</li></p>
+			</ul></blockquote>
+			<p>Después de descargar todas las sesiones disponibles obtuvimos 311 documentos.</p>
+			<h4> <br><strong>Estructura de los diarios de sesiones</strong> </h4>
+			<p> Una vez obtenidos los diarios, se procedió al análisis de la estructura de los mismos. Este proceso nos permitió extraer la información que queríamos:  preguntas, respuestas, miembros y grupos parlamentarios realizar en la sesión.
+			<br><br> El contenido de las sesiones de diario es un debate en torno a una pregunta o problema previamente registrada una semana antes del control plenaria:</p>
+			<blockquote>
+			<p>"[...] El orden del día de una sesión de control al Gobierno en el Congreso cierra a las 20:00 de la semana anterior, aunque una resolución Presidencial de junio de 1996 abrió la posibilidad de reemplazarlo hasta el mediodía del lunes por cuestiones relativas a las resoluciones adoptadas por el Consejo del Ministro o particularmente temas de actualidad. [...] "
+			<br><br> <strong>Fuente:</strong><a href="http://www.periodistasparlamentarios.org/?p=834"> Asociación de Periodistas Parlamentarios </a>.</p>
+			</blockquote>
+			
+			<p>De esta manera, cada pregunta o problema tiene un número de archivo que la identifica. Todos los discursos se registran, literalmente, en el Diario de sesiones donde se señala el grupo diputado o parlamentario que lo hizo como podemos ver en este diario del 25 de marzo 2015:</p>
+			<img src="images/scraping1.png" alt="Session Journal">
+			
+			<p><br> En adelante, definiremos un <b>documento</b> como una pregunta o interpelación y las intervenciones (respuestas) que generó y la información adicional: fecha del diario de sesiones al que pertenece, qué diputado o grupo realizó la pregunta, el número de expediente de la pregunta, y los diputados que realizaron cada una de las intervenciones.
+			<br><br>Para identificar a los miembros del Congreso de los discursos y a que  grupos parlamentarios pertenecen fue necesario obtener la información de la página web del Congreso. Se utilizaron de nuevo <strong>Selenium</strong> y <strong>BeautifulSoap</strong> para descargar las listas de diputados, grupos parlamentarios y las legislaturas de los períodos que estábamos analizando.</p>
+			<h4> <br><strong>Listas de diputados</strong> </h4>
+			<p><a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=10">Diputados</a> es la sección de la página web del Congreso en la que podemos encontrar la lista de diputados por legislatura. Por ejemplo: <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&letraElegida=A&tipoBusqueda=porLetra&idLegislatura=10"> listado de diputados de la X Legislatura y su grupo parlamentario </a>.</p>
+			<img src="images/congres2.png" alt="Lista Diputados">
+			<p> En total, obtuvimos una lista de 1.374 miembros en nuestro periodo.</p>
+			<h4> <br><strong>Lista de grupos parlamentarios</strong> </h4>
+			<p> En cuanto a los  <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/GruPar">Grupos</a> Grupos podemos encontrar una lista de grupos parlamentarios de cada legislatura, como podemos ver en: <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/GruPar?_piref73_2914053_73_1339199_1339199.next_page=/wc/cambioLegislatura"> listado de los grupos parlamentarios de la X Legislatura</a>.
+			<img src="images/congres3.png" alt="Lista Diputados"></p>
+			<p> En total contamos con una lista de 16 grupos parlamentarios a lo largo del período.  Cada diputado está vinculado a un grupo durante cada legislatura, ya que es posible tener los cambios en la composición de los grupos a lo largo de estas.</p>
+			<h4><br><strong>Lista de Legislaturas </strong></h4>
+			<p> Dentro de miembros  podemos encontrar <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados/Historia">El congreso desde 1977 a 2011</a>, donde hallamos una lista de las legislaturas y sus períodos: <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados/Historia">List of Legislatures</a>.
+			<img src="images/congres4.png" alt="List of Legislatures"></p>
+			<p> Una vez que tenemos todas las listas las almacenamos en  MongoDB  para utilizarlo posteriormente  en el proceso de extracción.</p>
+			<h3><br> Extracción de preguntas e intervenciones </h3>
+			<p> Mediante el uso de expresiones regulares somos capaces de analizar línea por línea el contenido de un diario de sesiones y detectar  el principio o final de las preguntas o aportaciones, diputados, grupos, ...
+			<br><br>Comenzamos el proceso de extracción, cuando nos encontramos con el inicio de las preguntas, dejando de lado otras secciones del diario que no pertenece a las preguntas de las sesiones de control como "PROPOSICIONES NO DE LEY", "CONVALIDACIÓN O DEROGACIÓN DE REALES DECRETOS-LEYES", "JURAMENTO O PROMESA DE ACATAMIENTO DE LA CONSTITUCIÓN", etc.</p>
+			<h4><br><strong> Análisis de preguntas </strong></h4>
+			<p>Una pregunta en una sesión de control  tiene la siguiente estructura:</p>
+			<blockquote><p>
+			<div class="blog-console">
+			["DEL DIPUTADO", "DE LA DIPUTADA", "DEL GRUPO PARLAMENTARIO", "DE DOÑA"] + [name and surname of the deputy] + [parliamentary group] + ["SOBRE", "RELATIVA A", ... ,":",","] + [question text] + [file number]
+			</div>
+			<br>
+			<img src="images/congres5.png" border="2" alt="Question">
+			</p></blockquote>
+			<p>Para determinar el diputado y el grupo de cada pregunta comprobamos la correspondencia del  [nombre diputado] con la lista de diputados y el [grupo político] en la lista de grupos. 
+			<br><br> Como que la lista de de diputados  en la base de datos está en el formato: [[apellido], [nombre]] ha sido necesario un algoritmo para la transformación de nombres y apellidos en este formato:</p>
+			<blockquote><p>
+			<div class="blog-console">
+			[Alberto Ruiz-Gallardón Jiménez] → [RUIZ-GALLARDÓN JIMÉNEZ], [ALBERTO]
+			<br>
+			[Jaime Rodríguez-Arana Muñoz] → [RODRÍGUEZ-ARANA MUÑOZ], [JAIME]
+			</div>
+			</p></blockquote>
+			<p>Entrenamos el proceso con toda la lista de diputados.</p>
+			<h4><br><strong> El análisis de las intervenciones </strong></h4>			
+			<p>Las intervenciones se adhieren a una de las siguientes estructuras en los diarios:
+			<blockquote><p>
+			<div class="blog-console">
+			<ul>
+			<li>["El señor", "La señora",...] + [apellido del diputado] + [":"] + [intervención]</li>
+			<li>["El señor", "La señora",...] + [posición en el gobierno] + ([apellido del diputado]) + [":"] + [intervención]</li>
+			</ul>
+			</div>
+			<br>
+			<img src="images/congres6.png" alt="Discussion">
+			</p></blockquote>
+			<p>Una vez que detectado realizamos el mismo proceso que hemos visto anteriormente para determinar el diputado, el grupo y la legislatura. </p>
+			<h3><br>Observaciones</h3>
+			<blockquote><p>
+			<li> Las intervenciones del  moderador o el Presidente de los debates del Congreso se han eliminado ya que no proporcionan ningún contenido interesante para nosotros. </li>
+			<li> Diferentes elementos pueden actuar como punto de partida de una pregunta o discusión. Es por eso que hemos recopilado los diccionarios de elementos (caracteres, n-gramas de palabras) que han sido entrenados con los documentos recogidos:</p>
+			<blockquote><p>
+			Iniciadores de preguntas: <span class="blog-console">["DEL DIPUTADO", "DE LA DIPUTADA", "DEL GRUPO PARLAMENTARIO", "DE DOÑA", ...]</span>
+			<br>Conectores de pregunta: <span class="blog-console">["SOBRE", "RELATIVA A", ... ,":",","]</span>
+			<br>Iniciadores de intervención: <span class="blog-console">["El señor", "La señora",...]</span>
+			</p></blockquote>
+			<li>En el proceso de identificación de los diputados y los grupos parlamentarios contra nuestra base de datos hemos aplicado de <a href="http://en.wikipedia.org/wiki/String_metric">String Metrics</a> para saltarnos los errores de transcripción frecuentes en los diarios como estos:</li>
+			<blockquote><p>
+			<br>
+			<img src="images/congres7.png" alt="String Metric">
+			<span class="blog-console">"DE LADIPUTADADOÑALEIRE PAJÍN IRAOLA..." → "LEIRE PAJÍN IRAOLA"</span>
+			<br><br>
+			<img src="images/congres8.png" alt="String Metric">
+			<span class="blog-console">"... GRUPO PARLAMENTARIO FEDERAL DE IZQUIEDA UNIDA..." → "GIU" (Grupo Izquierda Unida)</span>
+			</p></blockquote>
+			</p></blockquote>
+			<p> Finalmente, como resultado del proceso de extracción de preguntas e intervenciones se han registrado 7000 <b>documentos</b> en la base de datos. </p>
+			<h3><br>Ejemplos</h3>
+			<p>A continuación se muestran un par de ejemplos en los que se puede ver el texto extraído en el proceso de análisis (pintando el fondo del texto en función del grupo al que pertenece el diputado que realiza la intervención: azul, Grupo Popular; rojo, Grupo Socialista; gris, Grupo Mixto, ...):
+			<br><br>
+			<img src="images/congres9.png" alt="Example">
+			<br><br>
+			<img src="images/congres10.png" alt="Example">
+			</p>
+			<p><br> Y, por último, un ejemplo de diario de sesión de control (HTML) marcado después de pasar por el proceso de análisis (al pasar el cursor sobre una pregunta o intervención se muestra un <i>tooltip</i> con parte de la información obtenida en el proceso de análisis):</p>
 			<p><iframe src="politilines/data/marked/20150311_doc_marked.html" frameborder="0" id="borde"></iframe></p>
+			<h3><br> Test </h3>
+			<p>Para detectar los errores en el proceso de extracción se han llevado a cabo tests que analizan los resultados después de la extracción.
+			<br><br>Por un lado, se ha puesto en marcha un proceso que pone de relieve los documentos originales (HTML) con colores seleccionando los extractos (con cada grupo parlamentario tiene un color asignado). Hemos visto algunos ejemplos en las imágenes anteriores. El resultado nos permite comprobar visualmente los textos. En este sentido, los gráficos Líneas Políticas y ¿Qué dicen? También nos permiten validar la consistencia de los datos.
+			<br><br>Dado el elevado número de diarios de control de sesiones descargados, no es viable utilizar una revisión visual. Por lo tanto, se ha desarrollado una prueba que analiza la coherencia de la información extraída en busca de posibles errores: preguntas vacías, preguntas sin respuesta, preguntas con demasiadas discusiones, intervenciones vacías, preguntas o debates donde no se detecta el diputado o grupo parlamentario que realiza la intervención ...</p>
+		
 			
 			</div>	 
 			
 		<div class="blog-post">
             <h2 class="blog-post-title">¿Cómo se obtienen las palabras clave de cada intervención?</h2>
-
-            <p><br> En la base de datos del Congreso encontramos 311 documentos y 7000 intervenciones, etiquetar esto dentro de los clusters del CIS es un trabajo titánico así que trazamos un plan: extraeriamos las palabras clave de cada intervención y creariamos un diccionario "clasificador" que se iría nutriendo de las palabras clave que fuéramos encontrando con el objetivo de clusterizar el máximo de documentos.
-			<br><br> Definimos como palabra clave o key word cualquier n-grama de palabras (secuencia de una o mas palabras) dentro del documento. Nos dimos cuenta que, en general, estos n-gramas estan compuestos por nombres y adjetivos, así que  nos centramos en estos dentro de nuestros documentos. 
-			<br><br> Para encontrar estas palabras clave utilizamos RAKE (Rapid Automatic Keyword Extraction), un sencillo paquete de Python que utiliza solo un parámetro: una stop-list (o palabras a descartar), en nuestro caso consiste en cualquier palabra que no sea un nombre o un adjetivo. A partir de esto, RAKE generará un grafo de concurrencia de posibles palabras clave. Además, obtenemos una puntuación para cada una de ellas que consiste: grado(pc)/frec(pc).
-			<br><br> Una vez finalizado este proceso construimos una matriz de frecuencia de los terminos utilizando las palabras clave como vocabulario (bag of the words) y mediante la librería scikit-learn transformar esta matriz en una matriz de dispersión. A continuación aplicamos un algoritmo K-means utilizando "k-means++" para crear los clusters. 
-			<br><br> Seguidamente, después de varias iteraciones del K-means conseguimos distinguir una série de clusters que son claramente afines a los clusters del CIS. A partir de aquí cremaos un clasificador simple, y lo entrenamos para clasificar el resto de documentos. 
-			<br><br> Finalmente, después de haber etiquetado los documentos utilizamos el número de líneas de cada intervención como medida de tiempo. Obtendremos una série de tablas y diccionarios que se utilizan mas adelante para la realización de los gráficos.</p>
-			
+			<h3>Extracción de las características y clusterización del texto</h3>
+			<h4><br><strong> El problema </strong></h4>
+			<p>Después de hacer scraping de la página web del Congreso y del CIS, nuestro siguiente objetivo era encontrar la manera de conectarlos. Queríamos construir un puente entre los principales temas procedentes de los documentos del Congreso y los temas principales de la página web del CIS.	
+			<br><br>Hay muchas maneras de hacer frente a este problema. Tras probar algunas de ellas, finalmente, se optó por extraer los temas de los documentos del Congreso y construir un modelo usando el algoritmo k-means con el fin de etiquetar estos documentos utilizando los  temas principales del CIS (con todos los que nos fuera posible!). Así creamos, de alguna manera, un diccionario entre el Congreso y principales temas del CIS. El siguiente paso fue establecer un tipo de métrica con el fin de poder comparar estos dos mundos.
+			<br><br>En los párrafos siguientes, explicaremos cómo nos enfrentamos a este problema paso a paso.</p>
+			<h4><br><strong>Definiendo las "características"</strong></h4>
+			<p> Como estábamos interesados en la extracción de los principales temas de nuestro Corpus, definimos como característica cualquier palabra clave n-grama (secuencia de una o más palabras) en el Corpus.
+			<br><br>Decidimos que sería útil para nuestro propósito dividir el Corpus en pedazos más pequeños para reducir el número de temas por documento. Un pedazo consistirá en un sola "pregunta" y sus "intervenciones". Esto es a lo que llamaremos "documento" en los párrafos siguientes.
+			<br><br>Nos dimos cuenta de que los conceptos, en general, son expresados por nombres, con o sin adjetivos, por lo que nos hemos centrado  en encontrar la manera de extraer los sustantivos y adjetivos de nuestros documentos.</p>
+			<h4><br><strong>Cómo sacamos la característica de nuestro Corpus</strong></h4>
+			<p>Hemos utilizado un algoritmo no supervisado llamado <strong>RAKE</strong> (Rapid Automatic Keyword Extraction) implementado en Python [1]. RAKE es muy simple y tan solo tiene un parámetro. Este parámetro es una lista de stopwords  que RAKE  utiliza para generar el grafo de concurrencia formado por las palabras clave candidatos.
+			<br><br>En este punto, se consideró la construcción de una lista de stopwords personalizada en lugar de utilizar una lista estática. Al principio, nos topamos con este problema como si fuera un problema de NLP (Natural Language Processing), por lo que se utilizó un POS (Part-of-Speech) español como etiquetador para identificar los sustantivos y adjetivos en nuestros documentos. Por lo tanto, hemos construido listas de stopwords con una lista de todas las palabras, excepto los identificados como sustantivos y adjetivos.
+			<br><br>RAKE  también es capaz de asignar un peso a las palabras seleccionadas.  Este peso se define como: grado (palabra clave) / frecuencia (palabra clave).</p>
+			<h4><br><strong>Cleaning y filtrado de palabras clave</strong></h4>
+			<p>Antes de la extracción de palabras clave de cada documento, usamos un diccionario [2] para encontrar falsos positivos de RAKE (en caso de que el POS  hubiese fallado).
+			<br><br>Mientras extraíamos y cargábamos las palabras claves en la base de datos (MongoDB) descaramos las palabras clave con una puntuación por debajo de 1,0
+			<img src="images/intervention_kw.jpg" alt="Extraction of keywords">
+			<img src="images/question_kw.jpg" alt="Extraction of keywords">
+			<br><br>Después del proceso de extracción y carga de palabras clave, se descartaron manualmente las palabras clave que no tenían sentido bajo nuestro punto de vista.</p>
+			<h4><br><strong>Acercamiento no supervisado: Clusterizando documentos con k-Means</strong></h4> 
+			<p>Antes de aplicar el algoritmo k-means, construimos la matriz de frecuencia utilizando las palabras clave extraídas como un vocabulario (bag of words).
+			<br><br>Al principio se utilizó la biblioteca de Python scikit-learn para construir la matriz plazo frecuencia pero nos dimos cuenta de que scikit-learn contó las palabras dentro de una palabra clave como unigramas y esto no era lo que queríamos hacer, así que decidimos contar palabras clave usando nuestro propio algoritmo.
+			<br><br>Después de eso, se utilizó la biblioteca scikit-learn para transformar esta matriz en una matriz dispersa (donde los coeficientes se calculan como pesos "TFIDF").
+			<br><br>Finalmente, se aplicó el algoritmo de k-means utilizando "k-means ++" inicialización y ejecutarlo hasta 10 veces para hacer frente a la varianza debido a la inicialización aleatoria de centroides. Comenzamos eligiendo k = 20 en nuestros primeros intentos, donde k es el número de clusters fijos.</p>
+			<h4><br><strong>Selección de parámetros de Tuning: Método Grid search y coeficientes de Silhouette</strong></h4>
+			<p>Después de los primeros intentos, no teníamos ni idea sobre el valor de "k", así que probamos algunos valores en combinación con diferentes  frecuencias de términos. Por lo que nos topamos con dos parámetros: término frecuencia y el número de clusters.
+			<br><br>ICon el fin de encontrar la mejor combinación de estos dos valores, construimos un algoritmo de grid-search para ejecutar múltiples  combinaciones, con el fin de evaluar el mejor de ellos. Hemos trabajado los coeficientes de Silhouette para cada combinación y resultando muy cercanos a cero, por lo que los puntos estaban muy cerca uno del otro.
+			<br><br>Por último, tomamos k = 45 y tf = 25, donde tf es el umbral de los términos de frecuencia.</p>
+			<h4><br><strong> Aproximación Semisupervisada: Clasificando clusters con Stochastic Gradient Descent</strong></h4>
+			<p>Gracias al algoritmo de k-means, podemos visualizar algunos clusters que son claramente identificables con un tema extraído de la CIS. Nos las arreglamos para crear una lista de palabras clave afín con estos temas con el fin de entrenar a un sencillo clasificador y lo utilizamos para etiquetar el resto de clusters.
+			<br><br>La lista constaba de un diccionario de los temas del CIS y palabras clave de Corpus del Congreso. Este trabajo se realizó con a mano, comprobando clusters manualmente a modo de prueba y error. Este trabajo nos ayudó a decidir qué palabras clave coincidían mejor con algunos conceptos como: la economía, el empleo, el terrorismo, la vivienda, etc.
+			<br><br>Se utilizó un Stochastic Gradient Descent (SGD) como clasificador para ayudar a etiquetar nuestros clusters y por lo tanto nuestros documentos. Por desgracia, solo pudimos utilizar unos pocos documentos para entrenar el clasificador porque estábamos luchando con un problema no supervisado. Sin embargo, nos las arreglamos para encontrar palabras claves importantes de los clusters más identificables para construir un clasificador fiable y etiquetar algunos con suficiente precisión.
+			<br><br>Durante el proceso de clusterización, nos encontramos que la mayor parte del tiempo teníamos un clúster más grande que los otros. Cuando decimos "más grande" queremos decir, más de cuatro sigma de la media! Así que consideramos dividirlo en grupos más pequeños y tratar de etiquetarlos con nuestro clasificador con el fin de resolver este problema. Y esto fue exactamente lo que finalmente hicimos.
+			<h4><br><strong>Construyendo tablas métricas</strong></h4>
+			<p>Después de la agrupación de todos los documentos, el paso final será elaborar un indicador para relacionar los documentos con su importancia en el Congreso.
+			<br><br>Pensamos mucho acerca de este problema, y al final, decidimos que podíamos usar el número de líneas de cada documento para medir la importancia de un tema, ya que cada documento fue etiquetado a un solo tema.
+			<br><br>Se agruparon y se normalizaron los datos por año y mes. Hemos encontrado que algunos meses no teníamos datos, por lo que se aplica la interpolación lineal para hacer frente a estas deficiencias. Estos meses fueron: agosto, y esos meses entre el cambio de legislatura (cuatro meses aproximadamente), que suponemos que los políticos necesitan para empezar de nuevo.</p>
+			<h4><br><strong>Validación del m odelo</strong></h4>
+			<p>Aunque el problema ha sido resuelto por métodos no supervisados, hemos evaluado y medido la robustez de nuestro modelo que ha resultado bastante robusto!
+			<br><br>Lo iteramos un centenar de veces (N = 100) nuestro modelo que consiste en un modelo de k-means (para k = 45) y el proceso de agrupar el clúster más grande, si es necesario. Nuestro objetivo es comprobar si el proceso de etiquetado de los clusters es, al menos, robusto.  
+			<br><br>Después de terminar este proceso, hemos iterado el cluster más grande entre los 100 experimentos. Resultó que la mayoría de los clusters tienen una etiqueta que es el más elegida entre los otros, por lo que este resultado cumplió nuestras expectativas de robustez.
+			<br><br>Podemos ver en las siguientes imágenes lo que hemos calculado,
+			</p><br><br>Hicimos lo mismo para un modelo donde k = 55 con el fin de comprobar si los diferentes valores de k han influido en la robustez del metodo. Como podemos ver en las siguientes imágenes, no hay mucha diferencia entre estos dos modelos (k = 45 y k = 55), e incluso podemos ver que nuestro modelo (k = 45) es ligeramente mejor.
+			<h4><br><strong>Miscelanea</strong></h4>
+			<p>Durante todo este proceso, hemos tratado algunos otros enfoques para hacer frente a este problema, aunque finalmente los descartamos. 
+			<br><br>Algunos de ellos fueron:</p>
+			<blockquote>
+				<li>Topic Model: Latent Dirichlet Analysis y Hierarchical Dirichlet Process como alternative al algoritmo k-Means </li>
+				<li>Algoritmo TextRank como alternativa a RAKE</li>
+				<li>La clusterización de un gráfico que se compone de palabras clave (la matriz de adyacencia de palabras clave de concurrencia). Este enfoque nos dio un pequeño número de comunidades, por lo que decidió desechar este enfoque interesante.</li>
+			</blockquote>
+			</p>
+			<h4><strong><br>Referencias:</strong></h4>
+			<p>	<li>[1] - A Python implementation of the Rapid Automatic Keyword Extraction (RAKE) algorithm as described in: Rose, S., Engel, D., Cramer, N., & Cowley, W. (2010). Automatic Keyword Extraction from Individual Documents. In M. W. Berry & J. Kogan (Eds.), Text Mining: Theory and Applications: John Wiley & Sons.</li>
+				<br><li>[2] - Pattern 2.6, De Smedt, T. & Daelemans, W. (2012). Pattern for Python. Journal of Machine Learning Research, 13: 2031–2035.</li>
+				<br><li>[3] - Lluís Padró— and Evgeny Stanilovsky. FreeLing 3.0: Towards Wider Multilinguality Proceedings of the Language Resources and Evaluation Conference (LREC 2012) ELRA. Istanbul, Turkey. May, 2012.</li>
+			</p>
 		 </div><!-- /.blog-post -->	
 		  
 		<div class="blog-post">
             <h2 class="blog-post-title">Los Gráficos</h2>
 
-            <p><br> Empezamos queriendo imitar a USA, nos encantaba este <a href="http://www.nytimes.com/interactive/2012/09/06/us/politics/convention-word-counts.html">gráfico</a> del NY Times, así que no podía faltar en nuestra presentación final, pero también eramos conscientes de que no cumpliriamos uno de nuestros objetivos principales: explotar la información del CIS.
-			<br><br> Con este objetivo en mente surgieron los gráficos del radar y las diferencias, fantásticos ambos para ver como han ido cambiando nuestras preocupaciones a lo largo del tiempo. Para ello utilizamos el programa D3 y pasamos de gráficos estáticos a dinámicos creando transiciones para ayudar a la visualización. 
-			<br><br> Cuando estabamos a punto de finalizar este proyecto, nos encontramos con el increíble gráfico <a href="http://politilines.periscopic.com/">PolitiLines</a>, teniamos toda la información: los clusters, las keywords, los partidos políticos que habian hablado sobre cada tema así que decidimos crear una versión española de este. </p>
-          </div><!-- /.blog-post -->	  
+            <p><br> Podemos diferenciar entre 2 tipos de gráficos: las que comparan el CIS con el Congreso (El Radar, El Análisis y Evolución de Tópicos) y los que son útiles para tener un conocimiento más profundo acerca de lo que se debate en el Congreso (Líneas Políticas y ¿Qué dicen?).
+			<br><br> Hemos visto que en algunos meses no hay datos disponibles (por ejemplo: vacaciones en el Congreso, agosto para la CIS, elecciones o 11S). Para resolver el problema y crear gráficos más dinámicos a veces hemos decidido eliminar ese mes en la tabla (como en el caso del mes de agosto en el radar) o crear una interpolación del mes anterior y siguiente.
+			<br><br> Por último, todas las gráficas tienen alguna particularidad que se explica en cada sitio web. Espero que disfrutéis de la experiencia!
+			</p>
+			</div><!-- /.blog-post -->	  
 			
 			
 			
         </div><!-- /.blog-main -->
 
+		
+		<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>Python Packages</h4>
+            <p><a href="https://selenium-python.readthedocs.org/">Selenium</a>
+				<br> <a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a>
+				<br> <a href="http://www.nltk.org/">NLTK</a>
+				<br> <a href="http://www.numpy.org/">Numpy</a>
+				<br> <a href="http://pandas.pydata.org/">Pandas</a>
+				<br> <a href="http://scikit-learn.org/stable/"> Scikit-Learn</a>
+				<br> <a href="http://sujitpal.blogspot.in/2013/03/implementing-rake-algorithm-with-nltk.html">RAKE</a>
+			</p>
+          </div>
+		</div>  
+		
     </div><!-- /.container -->
 
     <footer class="blog-footer">

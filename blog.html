@@ -15,6 +15,13 @@
     <!-- Custom styles for this template -->
     <link href="bootstrap/css/blog.css" rel="stylesheet">
 	
+	<style>
+	iframe {
+		width:650px;
+		height: 600px;
+		}
+	#borde { border: 2px black solid; }	
+	</style>
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -38,11 +45,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand">What are they talking about?</a>
+              <a class="navbar-brand" href="./index.html">Politicians VS Citizens. Are we talking about the same?</a>
             </div>
 			<div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-				<li><a href="./index.html">Home</a></li>
 				<li><a href="./the_radar.html">The Radar</a></li>
                 <li><a href="./the_analysis.html">The Analysis</a></li>
 				<li><a href="./topic_evolution.html">Topic Evolution</a></li>
@@ -61,7 +67,7 @@
     <div class="container">
 
       <div class="blog-header">
-        <h1 class="blog-title">What are they talking about?</h1>
+        <h1 class="blog-title">Politicians VS Citizens. <br>Are we talking about the same?</h1>
         <p class="lead blog-description">The process: How we have done it?</p>
       </div>
 
@@ -97,8 +103,8 @@
 		</div>		
 		
 		<div class="blog-post">
-            <h2 class="blog-post-title">The Scrapping and Cleaning of the data</h2>
-			<p><br>  The Scrapping is the process from which we extract the information from the web. In this case we have achieved CIS barometers using its data bank and the Congress diaries using the Search Engine. 
+            <h2 class="blog-post-title">The Scraping and Cleaning of the data</h2>
+			<p><br>  The Scraping is the process from which we extract the information from the web. In this case we have achieved CIS barometers using its data bank and the Congress diaries using the Search Engine. 
 				<br><br> For this part of the process we needed <strong>Selenium</strong> and <strong>BeautifulSoup.</strong> </p>
 			<h3> <br> CIS </h3>
 			<p> CIS' barometers are available each month. We have selected the period from September, 2000 to February, 2015 because we can find the questions we are looking for each month, excepting in August and exceptionally October,2001 (after 11S). 
@@ -110,7 +116,7 @@
 			<h3><br> The Congress of Deputies</h3>
 			<p> The Congress webpage is generated dynamically. To obtain the list and download the session diaries we used tools from Selenium and BeautifulSoap libraries.
 			<br><br> From all the diaries available between September, 2000 and March, 2015  we downloaded the Control Sessions: The ones that are done on Wednesdays and had a questions' section on its agenda.  
-			<br><br> At the time of analyzing the number of Control Sessions obtained, it should be noted that in the traditional holiday months (January, July and August) and during electoral periods, we noted that we had 3 periods of 4 months, there are no sessions:</p>
+			<br><br> At the time of analyzing the number of Control Sessions obtained, it should be noted that in the traditional holiday months (January, July and August) there is usually no session control to the government. Also not control session held at election time. Thus, in the legislature changes we found periods of four months without control sessions:</p>
 			<blockquote><ul><p>
 			<li>   January-April, 2004 (change of term: from VII to VIII)</li>
 			<li>   January-April, 2008 (change of term: from VIII to IX)</li>
@@ -124,16 +130,16 @@
 			<p>"[...] The agenda of a Government control session in the Congress closes at 8pm of the previous week, although a Presidencial resolution on June, 1996 opened the possibility to replace it until Monday noon by questions concerning to resolutions adopted by the Council of Minister or to particulary topical issues. [...]"
 			<br><br> <strong>Source:</strong><a href="http://www.periodistasparlamentarios.org/?p=834"> Asociación de Periodistas Parlamentarios </a>.</p>
 			</blockquote>
-			<p>In this way, every question or issue has a <strong> file number </strong> that identifies it. All the speeches are literally recorded in the Session Journal pointing the deputy or parliamentary group who made it as we can see in this Jornal of March 25th, 2015:</p>
+			<p>In this way, every question or issue has a <strong> file number </strong> that identifies it. All the speeches are literally recorded in the Session Journal pointing the deputy or parliamentary group who made it as we can see in this Journal of March 25th, 2015:</p>
 			<img src="images/scraping1.png" alt="Session Journal">
-			<p> Henceforth, we define a document as a question and interventions (responses) generated and the additional information: date of session journal, deputy or group who asked the question, file number and members who performed every speech. 
-			<br><br> To identify the Congress members in the speeches and to which parliamentary groups they belong it was necessary to obtain the information from the Congress website. We used again <strong>Selenium</strong> and <strong>BeautifulSoap</strong> libraries to scrap lists of deputies, parliamentary groups and legislatures of the periods we were analysing.</p>
+			<p><br> Henceforth, we define a <b>document</b> as a question and interventions (responses) generated and the additional information: date of session journal, deputy or group who asked the question, file number and members who performed every speech. 
+			<br><br> To identify the Congress members in the speeches and which parliamentary groups they belong it was necessary to obtain the information from the other sections of Congress website. We used again <strong>Selenium</strong> and <strong>BeautifulSoap</strong> libraries to scrap lists of deputies, parliamentary groups and legislatures of the periods we were analysing.</p>
 			<h4> <br><strong>List of Congress Deputies</strong> </h4>
-			<p><a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=10">Members</a> is the secton of the Congress website where we can find the list of deputies by legislature. For example:<a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&letraElegida=A&tipoBusqueda=porLetra&idLegislatura=10"> listado de diputados de la X Legislatura y su grupo parlamentario </a>.</p>
+			<p><a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=10">Members</a> is the section of the Congress website where we can find the list of deputies by legislature. For example:<a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&letraElegida=A&tipoBusqueda=porLetra&idLegislatura=10"> listado de diputados de la X Legislatura y su grupo parlamentario </a>.</p>
 			<img src="images/congres2.png" alt="Lista Diputados">
 			<p> In all, we found 1374 members in our period.</p>
 			<h4> <br><strong>Parliamentary groups' List</strong> </h4>
-			<p> Looking at the <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/GruPar">Groups</a> tab we can find the list of parliamentari groups of each term. As we can see in: <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/GruPar?_piref73_2914053_73_1339199_1339199.next_page=/wc/cambioLegislatura"> listado de los grupos parlamentarios de la X Legislatura</a>.
+			<p> Looking at the <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/GruPar">Groups</a> tab we can find the list of parliamentary groups of each term. As we can see in: <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/GruPar?_piref73_2914053_73_1339199_1339199.next_page=/wc/cambioLegislatura"> listado de los grupos parlamentarios de la X Legislatura</a>.
 			<img src="images/congres3.png" alt="Lista Diputados"></p>
 			<p> Altogether we have a list of 16 parliamentary groups all along the period. The deputies that belong to the group are linked to the legislature, because it is possible to have changes in the compositions of the groups. </p>
 			<h4><br><strong>List of Legislatures </strong></h4>
@@ -146,51 +152,67 @@
 			<h4><br><strong> The questions' analysis </strong></h4>
 			<p>A session control question has the following structure:</p>
 			<blockquote><p>
+			<div class="blog-console">
 			["DEL DIPUTADO", "DE LA DIPUTADA", "DEL GRUPO PARLAMENTARIO", "DE DOÑA"] + [name and surname of the deputy] + [parliamentary group] + ["SOBRE", "RELATIVA A", ... ,":",","] + [question text] + [file number]
+			</div>
+			<br>
 			<img src="images/congres5.png" border="2" alt="Question">
 			</p></blockquote>
-			<p>To determine the deputy and the group of each question we sough the coincidence of [name deputy] on the deputies' table and the matching with the [political group] in the grup tabe. 
-			<br> Since the registered list of members in the DB is in the format: [[surname],[name]] it has been necessary an algorithm of names and surnames recognition to make the following transformations:</p>
+			<p>To determine the deputy and the group of each question we sough the coincidence of <span class="blog-console">[name of the deputy]</span> on the deputies' table and the matching with the <span class="blog-console">[political group]</span> in the group table. 
+			<br> Since the registered list of members in the DB is in the format: <span class="blog-console">[[surname],[name]]</span> it has been necessary an algorithm of names and surnames recognition to make the following transformations:</p>
 			<blockquote><p>
+			<div class="blog-console">
 			[Alberto Ruiz-Gallardón Jiménez] → [RUIZ-GALLARDÓN JIMÉNEZ], [ALBERTO]
+			<br>
 			[Jaime Rodríguez-Arana Muñoz] → [RODRÍGUEZ-ARANA MUÑOZ], [JAIME]
+			</div>
 			</p></blockquote>
 			<p>We trained the process with the whole list of deputies.</p>
 			<h4><br><strong> The discussions' analysis </strong></h4>			
 			<p>The discussions have one of the following structures in the journals:
-			<blockquote><p><ul>
+			<blockquote><p>
+			<div class="blog-console">
+			<ul>
 			<li>["El señor", "La señora",...] + [surname of the deputy] + [":"] + [intervention text]</li>
 			<li>["El señor", "La señora",...] + [position in the government] + ([surname of the deputy]) + [":"] + [intervention text]</li>
+			</ul>
+			</div>
+			<br>
 			<img src="images/congres6.png" alt="Discussion">
-			</ul></p></blockquote>
+			</p></blockquote>
 			<p>Once detected we do the same process as we have previously seen to determine the deputy, the group and the legislature. </p>
 			<h3><br>Remarks</h3>
 			<blockquote><p>
 			<li> The Moderator or the President of the Congress discussions have been deleted since they not provide any interesting content for us. </li>
 			<li> Different elements can act as a start of a question or discussion. That is why we have compiled dictionaries of elements (characters, n-grams of words) which have been trained with the collected documents:</p>
 			<blockquote><p>
-			Question initiators: ["DEL DIPUTADO", "DE LA DIPUTADA", "DEL GRUPO PARLAMENTARIO", "DE DOÑA", ...]
-			<br>Connectors within the question: ["SOBRE", "RELATIVA A", ... ,":",","]
-			<br>Interventions initiators: ["El señor", "La señora",...]
+			Question initiators: <span class="blog-console">["DEL DIPUTADO", "DE LA DIPUTADA", "DEL GRUPO PARLAMENTARIO", "DE DOÑA", ...]</span>
+			<br>Connectors within the question: <span class="blog-console">["SOBRE", "RELATIVA A", ... ,":",","]</span>
+			<br>Interventions initiators: <span class="blog-console">["El señor", "La señora",...]</span>
 			</p></blockquote>
-			<li>In the process of identification of deputies and parliamentary groups against our database we have applied <a href="http://en.wikipedia.org/wiki/String_metric">String Metrics</a> to skip frequent transcription errors in the journals as this one:</li>
+			<li>In the process of identification of deputies and parliamentary groups against our database we have applied <a href="http://en.wikipedia.org/wiki/String_metric">String Metrics</a> to skip frequent transcription errors in the journals as these:</li>
 			<blockquote><p>
+			<br>
 			<img src="images/congres7.png" alt="String Metric">
-			"DE LADIPUTADADOÑALEIRE PAJÍN IRAOLA..." → "LEIRE PAJÍN IRAOLA"
+			<span class="blog-console">"DE LADIPUTADADOÑALEIRE PAJÍN IRAOLA..." → "LEIRE PAJÍN IRAOLA"</span>
+			<br><br>
 			<img src="images/congres8.png" alt="String Metric">
-			"... GRUPO PARLAMENTARIO FEDERAL DE IZQUIEDA UNIDA..." → "GIU" (Grupo Izquierda Unida)
+			<span class="blog-console">"... GRUPO PARLAMENTARIO FEDERAL DE IZQUIEDA UNIDA..." → "GIU" (Grupo Izquierda Unida)</span>
 			</p></blockquote>
 			</p></blockquote>
-			<p> As a result of the extraction of questions and interventions<strong>7000 documents</strong> have been registered in the database. </p>
+			<p> As a result of the extraction of questions and interventions <strong>7000 documents</strong> have been registered in the database. </p>
 			<h3><br>Examples</h3>
-			<p>Now we show you a couple of examples where you can see the original text and the one extracted in the process of analysis (painted the background of the text according to the group of the deputy who performs the intervention as blue-Popular group-, red-Socialist-, grey-Mixt group-)	
+			<p>Now we show you a couple of examples where you can see the original text and the one extracted in the process of analysis (painted the background of the text according to the group of the deputy who performs the intervention as blue-Popular group-, red-Socialist-, grey-Mixt group-)
+			<br><br>
 			<img src="images/congres9.png" alt="Example">
-			<img src="images/congres10.png" alt="Example"></p>
+			<br><br>
+			<img src="images/congres10.png" alt="Example">
+			</p>
 			<p><br> Finally, an example from a control session journal (HTML) labeled after going through the analysis process(when you put on a question or discussion a tooltip is shown with some of the information obtained during the analysis):</p>
-			<p><iframe src="politilines/data/marked/20150311_doc_marked.html" frameborder="0" id="borde"></iframe></p>
+			<p><iframe src="politilines/data/marked/20150311_doc_marked.html" frameborder="0" id="borde" width="650" height="250"></iframe></p>
 			<h3><br> Testing </h3>
 			<p>To detect errors in the extraction process we have developed tests that analyze results after extraction.
-			<br><br>On one hand, it has been implemented a process that highlights the original documents(HTML) with colours selecting the extracts (each parliamentary group has an assigned colour). We have seen some examples in previous images. The result allows us to visually check the texts. In this sense, the charts PolitiLines and The Words They Used also allow us to validate the consistency of the data.
+			<br><br>On one hand, it has been implemented a process that highlights the original documents (HTML) with colours selecting the extracts (each parliamentary group has an assigned colour). We have seen some examples in previous images. The result allows us to visually check the texts. In this sense, the charts <a href="./politilines.html">PolitiLines</a> and <a href="./words_they_used.html">Words They Used</a> also allow us to validate the consistency of the data.
 			<br><br>Given the number of downloaded sessions control journals, it is not viable to use a visual review. Therefore, it has been developed a test that analyses the coherence of the information extracted looking for possible errors: Empty questions, unanswered questions, questions with too many discussions, empty interventions, questions or discussions which are not detected the deputy or parliamentary group that performs it...</p>
 		</div>
 		
@@ -206,22 +228,27 @@
 			<br><br>We decided that it would be helpful for our purpose, to split the Corpus into smaller pieces to reduce the number of topics per document, where one piece consists of a single "question" and their "speeches". This is what we call a "document" in the following paragraphs.
 			<br><br>We noticed that concepts, in general, are expressed by nouns, with or without adjectives, so, we focused on finding the way to extract nouns and adjectives from our documents.</p>
 			<h4><br><strong>How we extracted these features from the Corpus</strong></h4>
-			<p>We used an unsupervised algorithm called RAKE (Rapid Automatic Keyword Extraction) implemented in Python [1]. RAKE is very simple and has only one parameter. This parameter is a stop list and RAKE uses it to generate the co-occurrence graph formed by the candidate keywords.
+			<p>We used an unsupervised algorithm called <strong>RAKE</strong> (Rapid Automatic Keyword Extraction) implemented in Python [1]. RAKE is very simple and has only one parameter. This parameter is a stop list and RAKE uses it to generate the co-occurrence graph formed by the candidate keywords.
 			<br><br>At this point, we considered building a customized stop list instead of using a static stop list. At first, we dealt with this problem as if it were a NLP problem (Natural Language Processing), so we used a Spanish POS (Part-of-Speech) tagger to identify nouns and adjectives from our documents. So, we built stop lists as a list of all words except those identified as nouns and adjectives.
 			<br><br>RAKE is also able to score the selected keywords. It works out the weight of each keyword as: deg(kw) / freq(kw)</p>
 			<h4><br><strong>Cleaning and filtering keywords</strong></h4>
 			<p>Before extracting keywords from each document, we used a dictionary [2] to find false positives single out by RAKE (just in case the POS tagger had failed).
 			<br><br>While extracting and loading the keywords into the database (for what we used MongoDB) we discarded keywords with a RAKE's score below 1.0
+			<br><br>
+			<img src="images/intervention_kw.jpg" alt="Extraction of keywords">
+			<br><br>
+			<img src="images/question_kw.jpg" alt="Extraction of keywords">
 			<br><br>After the process of extracting and loading keywords, we discarded manually the keywords that were meaningless from our point of view.</p>
+			
 			<h4><br><strong>Unsupervised approach: Clustering documents with k-Means</strong></h4> 
-			<p>Before applying the k-means algorithm, we built the term-frequency matrix using the extracted keywords as a vocabulary (bag-of-the-words).
-			<br><br>At the beginning we used the scikit-learn Python library to build the term-frequency matrix but we noticed that scikit-learn counted the words within a keyword as unigrams and this was not what we wanted to do, so we decided to count keywords using our own algorithm.
+			<p>Before applying the k-means algorithm, we built the word-frequency matrix using the extracted keywords as a vocabulary (bag-of-the-words).
+			<br><br>At the beginning we used the scikit-learn Python library to build the word-frequency matrix but we noticed that scikit-learn counted the words within a keyword as unigrams and this was not what we wanted to do, so we decided to count keywords using our own algorithm.
 			<br><br>After that, we used scikit-learn library to transform this matrix into a sparse matrix (where the coefficients are calculated as “tfidf” weights). 
 			<br><br>Eventually, we applied the k-means algorithm using the "k-means++" initialization and executing it up to 10 times to deal with variance due to the random initialization of centroids. Initially, we chose k=20 in our first tries, where k is the number of fixed clusters.</p>
 			<h4><br><strong>Tuning parameters selection: Grid search method and Silhouette coefficients</strong></h4>
-			<p>After these first tries, we had no idea about the "k" value, so we tried some values in combination with different term-frequency thresholds. So, we dealt with two parameters: term-frequency and the number of clusters.	
+			<p>After these first tries, we had no idea about the "k" value, so we tried some values in combination with different word-frequency thresholds. So, we dealt with two parameters: word-frequency and the number of clusters.	
 			<br><br>In order to find the best combination of these two values, we built a grid search algorithm to execute multiple combination, so as to evaluate the best of them. We worked out the Silhouette coefficients for each combination and it turned out that the outcomes were very close to zero, so the points were very close to each other.
-			<br><br>Finally, we took k = 45 and tf = 25, where tf is the term-frequency threshold.</p>
+			<br><br>Finally, we took k = 45 and tf = 25, where tf is the word-frequency threshold.</p>
 			<h4><br><strong>Semi-supervised approach: Classifying clusters with Stochastic Gradient Descent</strong></h4>
 			<p>Thanks to the k-means algorithm, we could visualize some clusters that were clearly identifiable with a topic extracted from the CIS. We managed to create a list of keywords affine with these topics in order to train a simple classifier. We used this classifier to label the rest of the clusters. 
 			<br><br>The list consisted of a dictionary of topics from CIS and keywords from the Congreso's Corpus. This work was performed by hand, checking clusters manually as cycle of try and error. This work helped us to decide what keywords matched better some concepts as: economy, employment, terrorism, housing, etc.
@@ -235,8 +262,17 @@
 			<p>Although the problem has been solved by unsupervised methods, we have evaluated and measured the strength of our model which has turned out rather strong!
 			<br><br>We performed a hundred times (N=100) our model which consists of a k-mean model (for k=45) and the process of clustering the largest cluster, if necessary. Our goal is to check if the process of labelling clusters is, at least, strong. We worked out the label of each model (experiment) and each document.
 			<br><br>After finishing this process, we have computed the label most chosen among the 100 experiments. It turned out that most of the clusters have one label which is the most chosen among the others, so this result fulfilled our expectations of strength of our model. 
-			<br><br>We can see in the following pictures what we have calculated,
-			</p><br><br>We did the same for a model where k = 55 in order to check if different k values have influenced in the strength of the model. As we can see in the following pictures, there is not much difference between these two models (k=45 and k=55),and we even can see that our model (k=45) it is slightly better.
+			<br><br>We did the same for a model where k = 55 in order to check if different k values have influenced in the strength of the model. As we can see in the following pictures, there is not much difference between these two models (k=45 and k=55),and we even can see that our model (k=45) it is slightly better.
+			<br><br>We want to know what happen if we change slightly the value of k in our model. Will these models label the same way? If we consider as a document's label its "most chosen" label after performing 100 times our model, we can work out if the two models behave similarly comparing the label of each document for each model. As we can see in the following picture, most of the documents are labeling the same way.
+			<br><br>
+			<img src="images/differences_between_models.png" alt="Difference Between Models">
+			<br><br>As we have seen, the two models label very similarly the documents, but, we want to visualize how many labelsthey use to label documents, and especially if there is a 'most chosen' label for each document. This can be seen in the following picture:
+			<br><br>
+			<img src="images/maxLabel.png" alt="Label">
+			<br><br>And finally, we show how many labels our experiment has used to label each document (after 100 times performed).
+			<br><br>
+			<img src="images/numLabel.png" alt="Label">
+			</p>
 			<h4><br><strong>Miscellanea</strong></h4>
 			<p>During all this process, we tried some other approaches to tackle this problem, although eventually we discarded them. 
 			<br><br>Some of them were:</p>
@@ -256,7 +292,7 @@
 		<div class="blog-post">
             <h2 class="blog-post-title">The Charts</h2>
 			<p><br> We can differentiate between 2 kinds of charts: those that compare the CIS with the Congress (The Radar, The Analysis and Topic Evolution) and those that are useful to have a deeper knowledge about what is debated in the Congress (PolitiLines and The Words They Used).
-			<br><br> We have seen that on some months there is no data available (ie: holidays in the Congress, August for the CIS, elections or 11M). To solve the problem and create more dynamical charts sometimes we have decided to delete that month in the chart (as in the case of August in the Radar) or to create an interpolation of the previous and next month. 
+			<br><br> We have seen that on some months there is no data available (ie: holidays in the Congress, August for the CIS, elections or 11S). To solve the problem and create more dynamical charts sometimes we have decided to delete that month in the chart (as in the case of August in the Radar) or to create an interpolation of the previous and next month. 
 			<br><br> Finally, all the charts have some particularities that are explained on each website. Hope you enjoy the experience!
 			</p>
 		</div>	

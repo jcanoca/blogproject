@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style>
+
+body {
+  font: 16px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.area.above {
+  fill: #1f77b4;
+}
+
+.area.below {
+  fill: #ff7f0e;
+}
+
+.line1 {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.line2 {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.year.label {
+  font: 500 76px "Helvetica Neue";
+  fill: #ddd;
+}
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.js"></script>
+<script>
+
+var margin = {top: 20, right: 20, bottom: 30, left: 50},
+	padWidth = 200,
+    width = 960 - margin.left - margin.right + padWidth,
+    height = 500 - margin.top - margin.bottom;
+
+var tema = "corrupcion";
+var parseDate = d3.time.format("%Y%m%d").parse;
+
+var topics = ["Corruption","Economy","Education","Jobs","Ideology","Crime","Youth","Justice",
+			  "Environment","Others","Health","Public Services","Social","Terrorism","Housing"];
+			  
+var par = {"Corruption":["Algunas palabras clave principales: Agencia Tributaria, Fraude Fiscal, Amnistía Fiscal ",
+"Un tema muy importante en España estos días, hemos descubierto que nuestros políticos no hablan sobre corrupción muy a menudo, al menos en las sesiones de control. A pesar de la fuerte subida del número de casos conocidos estos últimos años, a principios de 2003 sigue siendo el único periodo donde se habla, cuando el gobierno de Aznar redujo los impuestos para hacer frente a los problemas de blanqueo de capitales y la evasión fiscal. Algunos partidos cuestionaron duramente  el momento ya que las elecciones generales de 2004 estaban previstas sólo unos meses después. ",
+"El pueblo, sin embargo, ha reaccionado fuertemente a los múltiples escándalos desde 2010. Podemos ver un fuerte aumento desde ese año en adelante, coincidiendo con el final de la peor parte de la crisis financiera. 2013 vio una nueva oleada de casos de financiación ilegal y evasión fiscal con relación a los principales partidos políticos. Después de esto, la corrupción se ha convertido en el segundo tema más importante para los españoles (después del empleo). ",
+"Sin embargo, la protesta pública no ha hecho eco en el Congreso. La última ola de escándalos, que involucra a casi todos los partidos en el país, no ha logrado a una mayor aparición de la cuestión en las sesiones de control."],
+		   "Economy":["Algunas palabras clave principales: Empresas, Política Industrial, Economía Española",
+"Como era de esperar, 2008 se ve un aumento notable del interés de los políticos y la gente en Economía. La crisis financiera golpeó a España duramente, y provocó una burbuja inmobiliaria cuyos efectos duran hasta hoy (más sobre esto en la vivienda y el empleo)." ,
+"Antes de eso, podemos observar que la introducción del euro en 2002 si molestó a los políticos, mientras que casi no parece haber ningún interés por parte de los españoles. Después de 2012 hay una marcada disminución en el interés de ambos grupos. Una posible razón podría ser que el foco de la crisis ya no está en los bancos o instituciones financieras, sino en problemas de la gente como el desempleo. ",
+"La economía es en realidad el tema sobre el que mejor se refleja el interés del pueblo en los debates políticos."],
+		   "Education":["Algunas palabras clave: Sistema Educativo, Formación Profesional, Fracaso Escolar",
+"A pesar de los aumentos repentinos ocasionales de actividad en el Congreso, Educación ha seguido siendo un tema tranquilo durante los últimos 15 años. Por un lado, una gran parte de la población no tiene ningún interés natural en la educación, ya que ha terminado la suya. Por lo tanto, a pesar de ocasionales demostraciones de gran visibilidad, el CIS da a Educación una pequeña importancia relativa. ",
+"Por otro lado, algunas situaciones de la política hicieron convirtió altamente politizados en los últimos años, lo que explica las breves oleadas de interés por parte del Congreso. La introducción del Plan Bolonia en 2008 se encontró con una fuerte oposición de muchos partidos, que argumentaban que era el primer paso hacia la privatización de las universidades. La resistencia del gobierno catalán a la denominada 'Ley Wert', que pretende reducir el número de horas lectivas en catalán, llevó a algunos acalorados intercambios en 2014, ya que fue visto como una forma de represión contra Cataluña. A pesar de todo esto, la educación nunca se supera un 4% en el barómetro del CIS ."],
+		   "Jobs":["Algunas de las palabras clave principales: Reforma Laboral, Negociación Colectiva, Paro",
+"El desempleo ha sido un problema en España durante muchos años. En los últimos 15 años, el valor del CIS sobre Empleo nunca ha bajado del 20%.",
+"A pesar de ser uno de los problemas más acuciantes en España, la importancia del empleo ha sido en la mayoría moderada en las sesiones de control del Congreso. Puntos altos aislados en 2008 y 2012 podría indicar que el empleo sigue siendo un tema candente antes de las elecciones generales, pero aún en esas ocasiones la brecha sigue siendo marcadamente amplia. "],
+		   "Ideology":["Algunas de las palabras clave principales: Guerra Civil, Memoria Histórica, Vasco",
+"La ideología pertenece a un grupo de problemas que, a pesar de que aparecen en el Congreso de vez en cuando, son de muy poca importancia para la población de acuerdo con la CIS. Pero en medio de una crisis financiera donde  la gente está perdiendo sus empleos y hogares, no debe sorprender a nadie que los españoles no se preocupen sobre temas como la memoria histórica o de las víctimas de la Guerra Civil. A pesar de eso, todavía hay períodos en los que esto importa y mantiene a nuestros representantes ocupados. Nos dimos cuenta que el último tema mencionado, las víctimas de la  Guerra Civil, a menudo salió a la luz en las sesiones de control de a finales de 2003. "],
+		   "Crime":["Algunas de las palabras clave principales: Seguridad Ciudadana, Policía, Guardia Civil",
+"Casi siempre por debajo del 10% de interés, la Seguridad Ciudadana ha visto dos tendencias opuestas en los últimos años. Por un lado, hay un aumento de la presencia del tema en los debates del Congreso. Por otro lado, los españoles no la mencionan de modo alguno como una de sus principales preocupaciones desde 2007. La crisis y los problemas más urgentes que trajo podría ser una explicación para la última tendencia. ",
+"La explicación detrás de la primera tendencia es bastante diferente de lo que uno puede esperar. A partir de 2010, la política de austeridad provocó que se redujera considerablemente el gasto en algunas áreas, una de ellas la fuerza de policial (Guardia Civil). Muy a menudo, los partidos antirecortes usan esta pregunta contra el partido gobernante. Por lo que, la Guardia Civil se convirtió en un tema de discusión en el Congreso ."],
+		   "Youth":["Algunas de las palabras clave principales: Jóvenes, Paro Juvenil, Garantía Juvenil",
+"Una cuestión irregular, pero siempre presente en el Congreso, Juventud cubre temas relacionados, tales como la falta de oportunidades y la emigración masiva de jóvenes altamente cualificados. Después de algunos años de atención reducida, el surgimiento de nuevos partidos políticos desde 2012 ha llevado a un aumentar los temas relacionados con la juventud. Los jóvenes se consideran  la llave en las próxima elecciones generales. ",
+"La juventud está clasificado como un problema muy periférico por los españoles, sin duda, debido a la situación general del país."],
+		   "Justice":["Algunas de las palabras clave principales: General Fiscal, Estatuto Orgánico, Tribunal Supremo",
+"El lento sistema judicial ha sido durante mucho tiempo un tema recurrente en España. El inicio de la crisis en 2008 desplazó la atención hacia otros temas, hasta que los casos de corrupción llevaron de nuevo al asunto. Decidimos tratar la Corrupción y Justicia por separado, ya que podríamos identificar dos grupos claramente. En contra de la corrupción, la Justicia aparece con más frecuencia en el Congreso desde 2012. Al parecer los políticos prefieren hablar de los jueces que sobre los juzgados",
+"De todos modos, los españoles parecen ser capaces de identificar a uno de ellos como un problema real, y es la corrupción, no la justicia."],
+		   "Environment":["Algunas palabras clave son: Energías Renovables, Seguridad Nuclear, Cambio Climático",
+"Una cuestión muy importante en los años de crecimiento económico, cuando la adopción de energías renovables fue un tema candente, el interés se redujo rápidamente cuando la crisis financiera golpeó a España, y no se ha recuperado desde entonces realmente.",
+"Nos dimos cuenta de una caída aislada en el Congreso a finales de 2002, coincidiendo con el único momento en que el Medio Ambiente fue una de las preocupaciones de los ciudadanos. La razón fue el hundimiento del Prestige y el derrame de petróleo que contaminó la costa de Galicia."],
+		   "Others":["Incluye Cultura, Defensa, Internacional. Algunas palabras clave: Investigación, Cultura, Deporte"],
+		   "Health":["Algunas palabras clave principales son: Sanidad Pública, Sistema Sanitaria, Gasto farmacéutico",
+"La salud es uno de los pocos temas, junto con Economía, para el que el Congreso y el CIS muestran tendencias similares. Intereses que rara vez supera el 10% en ambos casos. Mientras que las preocupaciones de la gente acerca de la salud no cambian mucho con el tiempo si lo hacen cuando hay reformas sanitarias o las elecciones son inminentes ,  es entonces cuando se habla del sistema de atención sanitaria por ambas partes. "],
+		   "Public Services":["Incluye Infraestructuras.  Algunas palabras clave principales:. AVE, Red Convencional, Fomento",
+"Los retrasos en la construcción, el crecimiento y los costos inesperados, la elección de las líneas que se construyeron, y la infrautilización de algunas de ellas han hecho que el AVE un tema controvertido estos últimos 15 años. Por lo tanto, ha habido muchas preguntas al respecto en las sesiones de control del Congreso. El gasto público en algunas regiones también se ha convertido en un problema en los últimos años. ",
+"Los españoles no califica a los Servicios Públicos o las Infraestructuras como cuestiones preocupantes, probablemente debido a que no son tan urgentes como los demás."],
+		   "Social":["Algunas palabras clave principales son: Igualdad, Servicios Sociales, Pobreza",
+"Una categoría que incluye la igualdad social y los derechos de las mujeres no obtiene más de 2% del tiempo de nuestros políticos, mientras en las calles algunas personas se preocupan claramente acerca de estos temas. Tenemos que admitir que este fue uno de los gráficos que mas desconcertaron a la mayoría. ",
+"Una posible razón de los bajos valores en el Congreso es que muchas de las palabras clave de la categoría social tienden a ser genéricas. Cuando se encuentra con otras palabras más específicas, los documentos que los contengan serían entonces asignados a otras categorías. Por lo tanto, sólo una pequeña parte de los documentos relacionados con la palabra clave social se clasificaría como 'Social'. ",
+"A modo de ejemplo, la creciente pobreza es un tema vagamente definido mientras que el desempleo y los desalojos, directamente relacionados con él, son más fáciles de etiquetar con palabras clave más específicas."],
+		   "Terrorism":["Algunas palabras clave principales son: ETA, País Vasco, Política Antiterrorista",
+"Durante la década de la década de 1990  ETA perpetró numerosos atentados y asesinatos. Al entrar en la década de 2000 el terrorismo internacional fue también en aumento, por lo que continuó siendo un asunto muy serio para los españoles, como lo ilustran los datos del CIS. En fuerte contraste con esto, pocas preguntas sobre terrorismo se propusieron al gobierno en las sesiones de control. ",
+"Creemos que la razón de ello puede ser bastante única en la política, todas las partes estaban de acuerdo con las medidas adoptadas por el gobierno. Por supuesto el terrorismo tuvo una alta presencia en la agenda de los políticos españoles, pero no había ninguna necesidad de discutir sobre ello. Durante la última década, la gente ha desviado su atención del terrorismo a otros asuntos, pero todavía se puede ver las consecuencias del bombardeo de Atocha, en marzo de 2004 y el bombardeo del aeropuerto de Barajas en diciembre de 2006 en los datos. ",
+"Hoy en día, las personas no se preocupan ya no se preocupan por el terrorismo. A pesar de eso, el asunto tiene todavía  en el Congreso tanta importancia como la tuvo hace una década"],
+		   "Housing":["Algunas palabras clave: Vivienda Protegida, Protección Oficial, Suelo",
+" Hasta mediados de la década pasada teníamos una economía fundada en el creciente precio de los inmuebles destinados a mucha gente que no era capaz de comprar una casa. Hasta 2004, la oposición de la izquierda, sobre todo el PSOE, solía discutir el tema con cierta regularidad . La política del partido gobernante de derechas, el PP, era visto como una de las principales razones por las que los bienes raíces estaba siendo fuertemente especulados. ",
+"Después del cambio de gobierno en 2004, el PP no insistió en el tema a tratar. No obstante, los precios siguieron aumentar pese a los intentos del nuevo gobierno para frenarlos. Según el CIS, la gente sentía que la situación fue a peor hasta 2008. La crisis financiera mundial significó un repentino estallido de la burbuja inmobiliaria española: los precios cayeron y la vivienda se hizo poco a poco más asequible  y los políticos pasaron a los nuevos problemas de la crisis trajo "]}
+var x = d3.time.scale()
+    .range([0, width - padWidth]);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+var line1 = d3.svg.area()
+    .interpolate("basis")
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d["Congreso"]); });
+	
+var line2 = d3.svg.area()
+    .interpolate("basis")
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d["Cis"]); });
+
+var area = d3.svg.area()
+    .interpolate("basis")
+    .x(function(d) { return x(d.date); })
+    .y1(function(d) { return y(d["Congreso"]); });
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+	.append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	
+var titPos = {"Corruption":250,
+			  "Economy":320,
+			  "Education":250,
+			  "Jobs":450,
+			  "Ideology":50,
+			  "Crime":80,
+			  "Youth":250,
+			  "Justice":200,
+			  "Environment":0,
+			  "Others":80,
+			  "Health":250,
+			  "Public Services":50,
+			  "Social":120,
+			  "Terrorism":50,
+			  "Housing":50}
+			  
+var legPos = {"Corruption":40,
+			  "Economy":40,
+			  "Education":40,
+			  "Jobs":40,
+			  "Ideology":300,
+			  "Crime":300,
+			  "Youth":40,
+			  "Justice":40,
+			  "Environment":250,
+			  "Others":40,
+			  "Health":100,
+			  "Public Services":40,
+			  "Social":40,
+			  "Terrorism":200,
+			  "Housing":40}
+			  
+par["Corruption"].forEach(function(d){
+	return d3.select("body").append("p").text(d)
+	});
+	
+
+d3.csv("dataForBiArea4.csv", function(error, data) {
+	data.forEach(function(d) {
+		d.date = parseDate(d.date);
+		d["Congreso"]= +d[tema.concat("Congreso")];
+		d["Cis"] = +d[tema.concat("Cis")];
+	});
+	
+	
+	
+	var legend = ["More important to CIS","More important to Congress"];
+	var title = ["Corruption"];
+	
+	svg.selectAll("rectLeg")
+		.data(legend)
+		.enter()
+		.append("rect")
+		.attr("y",function(d, i){
+			return i*20;
+		})
+		.attr("class", "leg1")
+		.attr("x", legPos[title[0]])
+		.attr("height", 15)
+		.attr("width", 15)
+		.attr("fill", function(d, i){
+			return d3.scale.category10().domain([0,1])(i);
+		});
+		
+	svg.selectAll("textLeg")
+		.data(legend)
+		.enter()
+		.append("text")
+		.attr("y",function(d, i){
+			return i*20 + 12;
+		})
+		.text(function(d){
+					return d;
+				})
+		.attr("class", "leg2")
+		.attr("x", legPos[title[0]] + 20)
+		.attr("font-size", 14)
+		.attr("text-anchor", "left");
+	
+	myTitle = svg.selectAll("Title").data(title)
+		.enter()
+		.append("text")
+		.attr("class", "year label")
+		.attr("text-anchor", "end")
+		.text(function(d){
+			return d;
+		})
+		.attr("x", width - padWidth - titPos[title[0]])
+		.attr("y", 50);
+	
+	var padText = svg.selectAll("padText")
+		.data(topics)
+		.enter()
+		.append('text')
+		.attr("x", width + margin.right - padWidth / 2)
+		.attr("y", function(d,i){
+			return -margin.top + 3 + 20 + i * (height + margin.top + margin.bottom)/15;
+		})
+		.text(function(d){
+			return d;
+		})
+		.attr("text-anchor", "middle")
+		.attr("font-size", 18);
+		
+	var pad = svg.selectAll("pad")
+		.data(topics)
+		.enter()
+		.append('rect')
+		.attr("width", padWidth)
+		.attr("height", (height + margin.top + margin.bottom)/15 - 6)
+		.attr("x", width + margin.right - padWidth)
+		.attr("y", function(d,i){
+			return -margin.top + 3 + i * (height + margin.top + margin.bottom)/15;
+		})
+		.attr("fill","#ddd")
+		.attr("opacity",0.4)
+		.on("click",function(d){
+					return change(d);
+				});
+
+
+	x.domain(d3.extent(data, function(d) { return d.date; }));
+
+	y.domain([
+		d3.min(data, function(d) { return Math.min(d["Congreso"], d["Cis"]); }),
+		d3.max(data, function(d) { return Math.max(d["Congreso"], d["Cis"]); })
+	]);
+
+	svg.datum(data);
+
+	clipPath1 = svg.append("clipPath")
+		.attr("class", "clip")
+		.attr("id", "clip-below")
+		.append("path")
+		.attr("d", area.y0(height));
+
+	clipPath2 = svg.append("clipPath")
+		.attr("class", "clip")
+		.attr("id", "clip-above")
+		.append("path")
+		.attr("d", area.y0(0));
+
+	path1 = svg.append("path")
+		.attr("class", "area above")
+		.attr("clip-path", "url(#clip-above)")
+		.attr("d", area.y0(function(d) { return y(d["Cis"]); }));
+
+	path2 = svg.append("path")
+		.attr("class", "area below")
+		.attr("clip-path", "url(#clip-below)")
+		.attr("d", area);
+
+	l1 = svg.append("path")
+		.attr("class", "line1")
+		.attr("d", line1);
+	  
+	l2 = svg.append("path")
+		.attr("class", "line2")
+		.attr("d", line2);
+
+	svg.append("g")
+		.attr("class", "x axis")
+		.attr("transform", "translate(0," + height + ")")
+		.call(xAxis);
+
+	svg.append("g")
+		.attr("class", "y axis")
+		.call(yAxis)
+		.append("text")
+		.attr("transform", "rotate(-90)")
+		.attr("y", 6)
+		.attr("dy", ".71em")
+		.style("text-anchor", "end")
+		.text("% of importance");  
+	
+
+	function change(Tema){
+		
+		var tema = "";
+		if (Tema == "Corruption"){
+			tema = "corrupcion";
+		} else if (Tema == "Economy"){
+			tema = "economia";
+		} else if (Tema == "Others"){
+			tema = "otros";
+		} else if (Tema == "Justice"){
+			tema = "justicia";
+		} else if (Tema == "Social"){
+			tema = "social";
+		} else if (Tema == "Health"){
+			tema = "salud";
+		} else if (Tema == "Environment"){
+			tema = "ma";
+		} else if (Tema == "Public Services"){
+			tema = "spei";
+		} else if (Tema == "Housing"){
+			tema = "vivienda";
+		} else if (Tema == "Terrorism"){
+			tema = "terrorismo";
+		} else if (Tema == "Jobs"){
+			tema = "empleo";
+		} else if (Tema == "Ideology"){
+			tema = "ideologia";
+		} else if (Tema == "Education"){
+			tema = "educacion";
+		} else if (Tema == "Youth"){
+			tema = "jovenes";
+		} else if (Tema == "Crime"){
+			tema = "ic";
+		}
+		
+		var title = [Tema];
+    
+		data.forEach(function(d) {
+			d["Congreso"]= +d[tema.concat("Congreso")];
+			d["Cis"] = +d[tema.concat("Cis")];
+		});
+	
+		y.domain([
+			d3.min(data, function(d) { return Math.min(d["Congreso"], d["Cis"]); }),
+			d3.max(data, function(d) { return Math.max(d["Congreso"], d["Cis"]); })
+		]);
+
+		path1.transition().duration(750).style("opacity",0);
+		path2.transition().duration(750).style("opacity",0);
+		clipPath1.transition().duration(750).style("opacity",0);
+		clipPath2.transition().duration(750).style("opacity",0);
+		
+		svg.selectAll(".year.label").transition().duration(375).style("opacity",0).remove();
+		
+		myTitle = svg.selectAll("Title").data(title)
+			.enter()
+			.append("text")
+			.attr("class", "year label")
+			.attr("text-anchor", "end")
+			.text(function(d){
+				return d;
+			})
+			.attr("x", width - padWidth - titPos[title[0]])
+			.attr("y", 50)
+			.attr("opacity",0)
+			.transition().duration(375).delay(375)
+			.attr("opacity",1);
+
+	
+		var t1 = svg.transition().duration(750).delay(750);
+		t1.selectAll(".line1").attr("d", line1);
+		t1.selectAll(".line2").attr("d", line2);
+		t1.selectAll(".y.axis").call(yAxis);
+		t1.selectAll(".leg1").attr("x", legPos[Tema]);
+		t1.selectAll(".leg2").attr("x", legPos[Tema] + 20);
+	
+		function pintaAgain(){
+	
+			area = d3.svg.area()
+				.interpolate("basis")
+				.x(function(d) { return x(d.date); })
+				.y1(function(d) { return y(d["Congreso"]); });
+							
+			clipPath1.attr("d", area.y0(height))
+				.style("opacity",1);
+
+			clipPath2.attr("d", area.y0(0))
+				.style("opacity",1);
+
+			path1.attr("d", area.y0(function(d) { return y(d["Cis"]); }))
+				.style("opacity",1);
+
+			path2.attr("d", area)
+				.style("opacity",1);
+		}
+	
+		setTimeout(pintaAgain, 1500);
+		
+		d3.selectAll("p").remove()
+		par[Tema].forEach(function(d){
+			return d3.select("body").append("p").text(d)
+		});
+	}
+
+});
+
+</script>

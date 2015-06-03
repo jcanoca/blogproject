@@ -140,6 +140,11 @@ img {
   color: #999;
 }
 
+.blog-console {
+  font-family: "courier";
+  font-size: 12px;
+}
+
 
 /*
  * Footer
